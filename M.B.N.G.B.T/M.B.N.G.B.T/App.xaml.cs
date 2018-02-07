@@ -13,5 +13,6 @@ namespace M.B.N.G.B.T
     /// </summary>
     public partial class App : Application
     {
+       
     }
 }

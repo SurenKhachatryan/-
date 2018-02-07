@@ -31,5 +31,10 @@ namespace M.B.N.G.B.T
             MessageBox.Show("Hola");
             
         }
+
+        private void Button_Click1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("holo xop");
+        }
     }
 }
