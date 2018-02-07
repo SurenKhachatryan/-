@@ -22,7 +22,14 @@ namespace M.B.N.G.B.T
     {
         public MainWindow()
         {
+            
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Hola");
+            
         }
     }
 }
