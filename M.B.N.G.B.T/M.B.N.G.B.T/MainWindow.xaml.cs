@@ -1,4 +1,5 @@
-﻿using System;
+﻿using M.B.N.G.B.T.AttentivenessTest;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,17 +25,25 @@ namespace M.B.N.G.B.T
         {
             
             InitializeComponent();
+           
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hola");
-            
+         
+
         }
 
         private void Button_Click1(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("holo xop");
+            
+        }
+
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+
+            Main.Focus();
         }
     }
 }

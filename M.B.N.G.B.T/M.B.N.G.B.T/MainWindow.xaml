@@ -9,18 +9,27 @@
     <Window.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/board.jpg"/>
     </Window.Background>
-    <Window.Resources>
-
-    </Window.Resources>
 
 
-    <Grid>
+    <Grid x:Name="GridMenu">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="544*"/>
+        </Grid.RowDefinitions>
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="309"/>
+            <ColumnDefinition Width="295"/>
             <ColumnDefinition />
-            <ColumnDefinition Width="303"/>
         </Grid.ColumnDefinitions>
-        <Button  Margin="30,253,12,430" Click="Button_Click1" Content="Տեսողական Հիշողություն" FontSize="20"  FontFamily="Jokerman"  Foreground="White">
+
+        <Button x:Name="button1" Click="Button_Click" Content="Տեսողական Հիշողություն" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Grid.Row="3" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -28,7 +37,8 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button  Margin="30,169,12,514" Click="Button_Click" Content="Տեսողական Հիշողություն" FontSize="20"  FontFamily="Jokerman"  Foreground="White">
+
+        <Button x:Name="button2" Click="Button_Click1" Content="Տեսողական Հիշողություն" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Grid.Row="5" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -36,7 +46,8 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button  Margin="30,82,12,601" Click="Button_Click" Content="Տեսողական Հիշողություն" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand">
+
+        <Button x:Name="button3" Click="Button_Click2" Content="Տեսողական Հիշողություն" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Grid.Row="7" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -44,10 +55,17 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label Content="Մարդու Բարձրագույն Նյարդային Գործունեության Բաղադրիչների Թեստավորում" FontSize="22"  FontFamily="Microsoft JhengHei UI"  
-               HorizontalAlignment="Left" Margin="186,15,0,0" VerticalAlignment="Top" Width="947" Height="67" Foreground="White" Grid.ColumnSpan="3" FontWeight="Bold" BorderThickness="0" SnapsToDevicePixels="True" BorderBrush="White" />
+        <TextBlock Text="   Մարդու Բարձրագույն Նյարդային Գործունեության Բաղադրիչների Թեստավորում" FontSize="22" Foreground="White" Grid.Row="1"  Margin="175,0,0,0" Grid.ColumnSpan="2" MinHeight="40" MinWidth="960" HorizontalAlignment="Left" Width="960" Height="40" VerticalAlignment="Top">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF102E16" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+
+        <Frame Name="Main" Margin="0,10,0,0" Grid.Row="1" RenderTransformOrigin="0.373,3.5" Grid.RowSpan="8" Grid.ColumnSpan="2"/>
+
     </Grid>
-
-
-
+    
 </Window>
