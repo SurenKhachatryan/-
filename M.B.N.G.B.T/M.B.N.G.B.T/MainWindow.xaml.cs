@@ -42,8 +42,8 @@ namespace M.B.N.G.B.T
 
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
-
-            Main.Focus();
+            Main.Content = new Rule();
+           
         }
     }
 }
