@@ -9,24 +9,22 @@
       Title="Rule">
 
     <Grid x:Name="GridRuleAttentivenessTest" >
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="664*"/>
-            <RowDefinition Height="35*"/>
-            <RowDefinition Height="81*"/>
+            <RowDefinition Height="320*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="53*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="41*"/>
-            <ColumnDefinition Width="181*"/>
-            <ColumnDefinition Width="888"/>
-            <ColumnDefinition Width="147*"/>
-            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="124*"/>
+            <ColumnDefinition Width="834"/>
+            <ColumnDefinition Width="109*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock FontSize="38" Foreground="White" HorizontalAlignment="Left" Margin="79,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="68" Width="1054" Grid.Column="1" Grid.ColumnSpan="3"><Run Text="    "/><Run Text=" "/><Run Text="Տեսողական Հիշողություն Տեստավորման Կանոններ"/></TextBlock>
-        <TextBlock FontSize="28" Foreground="White" Margin="39,122,10,60" Grid.ColumnSpan="4">
-            <TextBlock.Background>
-                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>
-            </TextBlock.Background>
+        <TextBlock FontSize="38" Foreground="White" Margin="149,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="68" Grid.ColumnSpan="3" HorizontalAlignment="Left" Width="1044"><Run Text="    "/><Run Text=" "/><Run Text="Տեսողական Հիշողություն Տեստավորման Կանոններ"/></TextBlock>
+        <TextBlock FontSize="28" Foreground="White" Margin="65,158,53,196" Grid.ColumnSpan="3">
             <Run Text="Թեստը ստուգում է , թե որքան է զարգացած Ձեր տեսողական հիշողությունը ։"/>
             <LineBreak/><Run Text="   Ձեզ տրվում է 10վ․ ժամանակ և պատահական կարգով առարկաների լուսանկարներ ։ "/>
             <LineBreak/><Run Text="Դուք պետք է 10վ․-ում մտապահեք այդ լուսանկարները ձեր մտքում , որից հետո, երբ"/>
@@ -34,7 +32,7 @@
             <LineBreak/><Run Text="գտնեք ձեր մտապահած լուսանկարները և նշեք մկնիկով։"/>
         </TextBlock>
 
-        <Button x:Name="button1" Click="Button_Click" Content="Ետ Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" VerticalAlignment="Top" Grid.Row="1" Margin="39,0,0,0" Grid.ColumnSpan="3" HorizontalAlignment="Left" Width="185">
+        <Button x:Name="button1" Click="Button_Click" Content="Ետ Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" VerticalAlignment="Top" Grid.Row="1" Margin="0,0,832,0" HorizontalAlignment="Right" Width="185" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -43,7 +41,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="button2" Click="Button_Click" Content="Սկսել Թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" HorizontalAlignment="Right" Width="147" Height="35" VerticalAlignment="Top" Grid.Column="3" Grid.Row="1">
+        <Button x:Name="button2" Click="Button_Click" Content="Սկսել Թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" HorizontalAlignment="Left" Width="147" Height="35" VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" Margin="1,0,0,0" Grid.RowSpan="2">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>

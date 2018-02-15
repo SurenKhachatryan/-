@@ -64,7 +64,7 @@
             </TextBlock.Background>
         </TextBlock>
 
-        <Frame Name="Main" Margin="0,10,0,0" Grid.Row="1" RenderTransformOrigin="0.373,3.5" Grid.RowSpan="8" Grid.ColumnSpan="2"/>
+        <Frame Name="Main" Margin="0,0,0,0" Grid.Row="1" RenderTransformOrigin="0.373,3.5" Grid.RowSpan="8" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden"/>
 
     </Grid>
     

@@ -23,12 +23,14 @@ namespace M.B.N.G.B.T.AttentivenessTest
         public Rule()
         {
             InitializeComponent();
+            button2.IsEnabled = false;
             
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("holo xop");
+            GridRuleAttentivenessTest.Visibility = Visibility.Collapsed;
 
         }
+        
     }
 }
