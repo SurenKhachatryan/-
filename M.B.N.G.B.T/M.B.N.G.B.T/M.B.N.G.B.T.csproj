@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AttentivenessTest\AllPictures.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AttentivenessTest\Rule.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -66,6 +70,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttentivenessTest\AllPictures.xaml.cs">
+      <DependentUpon>AllPictures.xaml</DependentUpon>
     </Compile>
     <Compile Include="AttentivenessTest\Rule.xaml.cs">
       <DependentUpon>Rule.xaml</DependentUpon>
@@ -106,6 +113,156 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Doska.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\7.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\8.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\10.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\11.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\12.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\13.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\14.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\15.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\16.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\17.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\18.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\19.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\20.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\21.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\22.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\23.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\24.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\25.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\26.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\27.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\28.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\30.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\31.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\32.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\33.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\34.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\35.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\36.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\37.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\38.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\39.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\40.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\41.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\42.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\43.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\44.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\45.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\46.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\47.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\48.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttentivenssTestPictures\49.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wood-background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
