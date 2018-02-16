@@ -259,9 +259,6 @@
     <None Include="Resources\AttentivenssTestPictures\48.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\49.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\wood-background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

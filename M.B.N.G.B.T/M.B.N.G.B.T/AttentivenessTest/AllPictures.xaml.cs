@@ -24,5 +24,10 @@ namespace M.B.N.G.B.T.AttentivenessTest
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

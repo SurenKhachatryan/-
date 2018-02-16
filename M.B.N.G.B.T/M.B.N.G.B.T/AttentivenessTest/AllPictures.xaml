@@ -11,27 +11,181 @@
         <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/wood-background.jpg"/>
     </Page.Background>
 
-    <Grid>
+    <Grid Margin="0,0,0,0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="29*"/>
-            <RowDefinition Height="38*"/>
-            <RowDefinition Height="39*"/>
-            <RowDefinition Height="39*"/>
-            <RowDefinition Height="38*"/>
-            <RowDefinition Height="42*"/>
-            <RowDefinition Height="35*"/>
+            <RowDefinition Height="121*"/>
+            <RowDefinition Height="130*"/>
+            <RowDefinition Height="129*"/>
+            <RowDefinition Height="127*"/>
+            <RowDefinition Height="128*"/>
+            <RowDefinition Height="145*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="141*"/>
-            <ColumnDefinition Width="153*"/>
-            <ColumnDefinition Width="147*"/>
-            <ColumnDefinition Width="147*"/>
-            <ColumnDefinition Width="147*"/>
-            <ColumnDefinition Width="147*"/>
-            <ColumnDefinition Width="141*"/>
-            <ColumnDefinition Width="150*"/>
-            <ColumnDefinition Width="127*"/>
+            <ColumnDefinition Width="194*"/>
+            <ColumnDefinition Width="132*"/>
+            <ColumnDefinition Width="132*"/>
+            <ColumnDefinition Width="132*"/>
+            <ColumnDefinition Width="132*"/>
+            <ColumnDefinition Width="132*"/>
+            <ColumnDefinition Width="134*"/>
+            <ColumnDefinition Width="133*"/>
+            <ColumnDefinition Width="132*"/>
+            <ColumnDefinition Width="47*"/>
         </Grid.ColumnDefinitions>
+
+        <Image Grid.Column="1" Height="100" Margin="15,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" 
+         Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/1.gif"/>
+
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="16,11,0,0" VerticalAlignment="Top" Width="100"
+                Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/2.gif"/>
+
+        <Image Grid.Column="3" HorizontalAlignment="Left" Height="100" Margin="16,11,0,0" VerticalAlignment="Top" Width="100"
+                Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/3.gif"/>
+
+        <Image Grid.Column="4" HorizontalAlignment="Left" Height="100" Margin="16,11,0,0" VerticalAlignment="Top" Width="100"
+                Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/4.gif"/>
+
+        <Image Grid.Column="5" HorizontalAlignment="Left" Height="100" Margin="16,11,0,0" VerticalAlignment="Top" Width="100"
+                Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/5.gif"/>
+
+        <Image Grid.Column="6" HorizontalAlignment="Left" Height="100" Margin="16,11,0,0" VerticalAlignment="Top" Width="100"
+                Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/6.gif"/>
+
+        <Image Grid.Column="7" HorizontalAlignment="Left" Height="100" Margin="16,11,0,0" VerticalAlignment="Top" Width="100"
+                Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/7.gif"/>
+
+        <Image Grid.Column="8" HorizontalAlignment="Left" Height="100" Margin="16,11,0,0" VerticalAlignment="Top" Width="100"
+                Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/8.gif"/>
+
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/9.gif"/>
+
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/10.gif"/>
+
+        <Image Grid.Column="3" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/11.gif"/>
+
+        <Image Grid.Column="4" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/12.gif"/>
+
+        <Image Grid.Column="5" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/13.gif"/>
+
+        <Image Grid.Column="6" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/14.gif"/>
+
+        <Image Grid.Column="7" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/15.gif"/>
+
+        <Image Grid.Column="8" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/16.gif"/>
+
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="2" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/17.gif"/>
+
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="2" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/18.gif"/>
+
+        <Image Grid.Column="3" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="2" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/19.gif"/>
+
+        <Image Grid.Column="4" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="2" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/20.gif"/>
+
+        <Image Grid.Column="5" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="2" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/21.gif"/>
+
+        <Image Grid.Column="6" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="2" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/22.gif"/>
+
+        <Image Grid.Column="7" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="2" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/23.gif"/>
+
+        <Image Grid.Column="8" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="2" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/24.gif"/>
+
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/25.gif"/>
+
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/26.gif"/>
+
+        <Image Grid.Column="3" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/27.gif"/>
+
+        <Image Grid.Column="4" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/28.gif"/>
+
+        <Image Grid.Column="5" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/29.gif"/>
+
+        <Image Grid.Column="6" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/30.gif"/>
+
+        <Image Grid.Column="7" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/31.gif"/>
+
+        <Image Grid.Column="8" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/32.gif"/>
+
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/33.gif"/>
+
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/34.gif"/>
+
+        <Image Grid.Column="3" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/35.gif"/>
+
+        <Image Grid.Column="4" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/36.gif"/>
+
+        <Image Grid.Column="5" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/37.gif"/>
+
+        <Image Grid.Column="6" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/38.gif"/>
+
+        <Image Grid.Column="7" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/39.gif"/>
+
+        <Image Grid.Column="8" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/40.gif"/>
+
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="5" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/41.gif"/>
+
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="5" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/42.gif"/>
+
+        <Image Grid.Column="3" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="5" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/43.gif"/>
+
+        <Image Grid.Column="4" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="5" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/44.gif"/>
+
+        <Image Grid.Column="5" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="5" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/45.gif"/>
+
+        <Image Grid.Column="6" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="5" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/46.gif"/>
+
+        <Image Grid.Column="7" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="5" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/47.gif"/>
+
+        <Image Grid.Column="8" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="5" VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,,/Resources/AttentivenssTestPictures/48.gif"/>
+        
+        <Button x:Name="button2" Click="Button_Click" Content="Ավարտել Թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" HorizontalAlignment="Left" Width="175" Height="35" VerticalAlignment="Top" Grid.Column="0" Grid.Row="5" Margin="13,32,0,0">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF53270D" Offset="0.74"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
 
     </Grid>
 </Page>
