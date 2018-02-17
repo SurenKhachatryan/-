@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Մ․Բ․Ն․Գ․Բ․Տ․" Height="780" Width="1300" Foreground="{x:Null}" BorderBrush="#FFFBFBFB" FontFamily="Segoe UI Black" >
     <Window.Background>
-        <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/board.jpg"/>
+        <ImageBrush ImageSource="pack://siteoforigin:,,/Resources/board.jpg"/>
     </Window.Background>
 
 
