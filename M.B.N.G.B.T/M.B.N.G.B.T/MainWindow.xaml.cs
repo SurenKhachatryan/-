@@ -45,7 +45,7 @@ namespace M.B.N.G.B.T
 
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Rule();
+            Main.Content = new AllPictures();
            
         }
     }

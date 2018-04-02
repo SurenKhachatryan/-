@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace M.B.N.G.B.T.AttentivenessTest
 {
     /// <summary>
-    /// Логика взаимодействия для TestPage.xaml
+    /// Логика взаимодействия для RandomPicturesPage.xaml
     /// </summary>
-    public partial class TestPage : Page
+    public partial class RandomPicturesPage : Page
     {
-        public TestPage()
+        public RandomPicturesPage()
         {
             InitializeComponent();
         }

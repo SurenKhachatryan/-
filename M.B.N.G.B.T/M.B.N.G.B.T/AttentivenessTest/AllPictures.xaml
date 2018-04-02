@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:M.B.N.G.B.T.AttentivenessTest"
       mc:Ignorable="d" 
-      d:DesignHeight="780" d:DesignWidth="1300"
+      d:DesignHeight="800" d:DesignWidth="1300"
       Title="AllPictures">
     <Page.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,/Resources/wood-background.jpg"/>
@@ -36,8 +36,8 @@
             <ColumnDefinition Width="47*"/>
         </Grid.ColumnDefinitions>
 
-        <Image Grid.Column="1" Height="100" Margin="15,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" 
-         Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/1.gif"/>
+        <Image Grid.Column="1" Height="100" Margin="16,11,0,0" VerticalAlignment="Top" 
+         Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/1.gif" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Left" Width="100"/>
 
         <Image Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="16,11,0,0" VerticalAlignment="Top" Width="100"
                 Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/2.gif"/>
@@ -189,8 +189,57 @@
             </Button.Background>
         </Button>
 
-        <Label x:Name="Timer" Grid.ColumnSpan="1" Grid.RowSpan="2" Margin="27,68,23,32" FontSize="120" Content="15"/>
+        
 
+        <CheckBox  HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="1"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="2"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="3"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="4"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="5"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="6"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="15,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="1" Grid.Row="1"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="15,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="2" Grid.Row="1"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="3" Grid.Row="1"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="17,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="4" Grid.Row="1"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="17,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="5" Grid.Row="1"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="6" Grid.Row="1"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="17,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7" Grid.Row="1"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8" Grid.Row="1"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="1" Grid.Row="2"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="15,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="2" Grid.Row="2"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="15,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="3" Grid.Row="2"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="4" Grid.Row="2"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="5" Grid.Row="2"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="6" Grid.Row="2"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7" Grid.Row="2"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8" Grid.Row="2"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="1" Grid.Row="3"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="2" Grid.Row="3"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="3" Grid.Row="3"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="4" Grid.Row="3"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="5" Grid.Row="3"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="6" Grid.Row="3"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7" Grid.Row="3"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8" Grid.Row="3"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="1" Grid.Row="4"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="2" Grid.Row="4"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="3" Grid.Row="4"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="4" Grid.Row="4"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="5" Grid.Row="4"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="6" Grid.Row="4"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7" Grid.Row="4"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8" Grid.Row="4"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="1" Grid.Row="5"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="2" Grid.Row="5"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="3" Grid.Row="5"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="4" Grid.Row="5"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="5" Grid.Row="5"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="6" Grid.Row="5"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7" Grid.Row="5"/>
+        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8" Grid.Row="5"/>
+        
 
     </Grid>
 </Page>

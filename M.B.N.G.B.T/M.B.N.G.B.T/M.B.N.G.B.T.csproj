@@ -59,11 +59,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AttentivenessTest\Rule.xaml">
+    <Page Include="AttentivenessTest\RandomPicturesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AttentivenessTest\TestPage.xaml">
+    <Page Include="AttentivenessTest\Rule.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -78,11 +78,11 @@
     <Compile Include="AttentivenessTest\AllPictures.xaml.cs">
       <DependentUpon>AllPictures.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AttentivenessTest\RandomPicturesPage.xaml.cs">
+      <DependentUpon>RandomPicturesPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AttentivenessTest\Rule.xaml.cs">
       <DependentUpon>Rule.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="AttentivenessTest\TestPage.xaml.cs">
-      <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
