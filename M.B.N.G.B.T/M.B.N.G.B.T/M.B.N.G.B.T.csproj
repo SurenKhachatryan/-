@@ -269,9 +269,9 @@
     <None Include="Resources\wood-background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\M.B.N.G.B.T.ClassLibrary\M.B.N.G.B.T.ClassLibrary.csproj">
-      <Project>{0655cb5c-cf17-47c1-947c-9e98552022ca}</Project>
-      <Name>M.B.N.G.B.T.ClassLibrary</Name>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{11391d7f-f19c-4cc9-907d-9cc524ea1760}</Project>
+      <Name>ClassLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

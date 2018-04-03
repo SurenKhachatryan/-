@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ClassLibrary;
 
 namespace M.B.N.G.B.T.AttentivenessTest
 {
@@ -20,6 +21,8 @@ namespace M.B.N.G.B.T.AttentivenessTest
     /// </summary>
     public partial class RandomPicturesPage : Page
     {
+        ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
+
         public RandomPicturesPage()
         {
             InitializeComponent();

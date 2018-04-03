@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace M.B.N.G.B.T.ClassLibrary
+namespace ClassLibrary
 {
-    public class ClassLibrary
+    public class ClassLibraryMBNGBT
     {
     }
 }
