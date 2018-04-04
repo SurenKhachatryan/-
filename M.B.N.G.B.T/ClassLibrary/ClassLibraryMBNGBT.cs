@@ -8,5 +8,17 @@ namespace ClassLibrary
 {
     public class ClassLibraryMBNGBT
     {
+        public static bool MatchingNumber(int[] arr, int a)
+        {
+            for (int j = 0; j < arr.Length; j++)
+            {
+                if (arr[j] == a)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }
