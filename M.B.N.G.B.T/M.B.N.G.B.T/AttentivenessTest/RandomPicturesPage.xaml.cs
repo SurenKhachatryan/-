@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ClassLibrary;
+using System.Windows.Threading;
 
 namespace M.B.N.G.B.T.AttentivenessTest
 {
@@ -23,12 +24,521 @@ namespace M.B.N.G.B.T.AttentivenessTest
     {
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
         private Random rnd = new Random();
+        private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
-        private byte stage = 1;
+        private List<int> listvis = new List<int>();
+        private static byte stage = 15;
+        private byte second = 16;
 
         public RandomPicturesPage()
         {
             InitializeComponent();
+            dispatcherTimer.Tick += new EventHandler(LabelTimer);
+            PicCollapsed();
+            dispatcherTimer.Start();
+
+            PicRandomVisibility();
+        }
+
+        private void LabelTimer(object sender, EventArgs e)
+        {
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+
+            if (second != 0)
+            {
+                second--;
+                Timer.Content = second;
+                if (second == 8)
+                {
+                    Timer.Foreground = Brushes.Yellow;
+                }
+                else
+                if (second == 5)
+                {
+                    Timer.Foreground = Brushes.Red;
+                }
+            }
+            else
+            {
+                dispatcherTimer.Stop();
+            }
+
+        }
+
+        private void PicRandomVisibility()
+        {
+            int number = 0;
+            int picpositiondigit = -110;
+            byte top = 150;
+            for (int i = 0; i < stage; i++)
+            {
+                number = rnd.Next(1, 48);
+                var ps = Pic1;
+
+                if (listvis.Count == 0 || !cl.MatchingNumber(listvis.ToArray(), number))
+                {
+                    listvis.Add(number);
+                    if (listvis.Count <=10)
+                    {
+                        picpositiondigit += 110;
+                        switch (number)
+                        {
+                            case 1:
+                                Pic1.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic1, picpositiondigit);
+                                break;
+                            case 2:
+                                Pic2.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic2, picpositiondigit);
+                                break;
+                            case 3:
+                                Pic3.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic3, picpositiondigit);
+                                break;
+                            case 4:
+                                Pic4.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic4, picpositiondigit);
+                                break;
+                            case 5:
+                                Pic5.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic5, picpositiondigit);
+                                break;
+                            case 6:
+                                Pic6.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic6, picpositiondigit);
+                                break;
+                            case 7:
+                                Pic7.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic7, picpositiondigit);
+                                break;
+                            case 8:
+                                Pic8.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic8, picpositiondigit);
+                                break;
+                            case 9:
+                                Pic9.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic9, picpositiondigit);
+                                break;
+                            case 10:
+                                Pic10.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic10, picpositiondigit);
+                                break;
+                            case 11:
+                                Pic11.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic11, picpositiondigit);
+                                break;
+                            case 12:
+                                Pic12.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic12, picpositiondigit);
+                                break;
+                            case 13:
+                                Pic13.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic13, picpositiondigit);
+                                break;
+                            case 14:
+                                Pic14.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic14, picpositiondigit);
+                                break;
+                            case 15:
+                                Pic15.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic15, picpositiondigit);
+                                break;
+                            case 16:
+                                Pic16.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic16, picpositiondigit);
+                                break;
+                            case 17:
+                                Pic17.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic17, picpositiondigit);
+                                break;
+                            case 18:
+                                Pic18.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic18, picpositiondigit);
+                                break;
+                            case 19:
+                                Pic19.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic19, picpositiondigit);
+                                break;
+                            case 20:
+                                Pic20.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic20, picpositiondigit);
+                                break;
+                            case 21:
+                                Pic21.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic21, picpositiondigit);
+                                break;
+                            case 22:
+                                Pic22.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic22, picpositiondigit);
+                                break;
+                            case 23:
+                                Pic23.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic23, picpositiondigit);
+                                break;
+                            case 24:
+                                Pic24.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic24, picpositiondigit);
+                                break;
+                            case 25:
+                                Pic25.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic25, picpositiondigit);
+                                break;
+                            case 26:
+                                Pic26.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic26, picpositiondigit);
+                                break;
+                            case 27:
+                                Pic27.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic27, picpositiondigit);
+                                break;
+                            case 28:
+                                Pic28.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic28, picpositiondigit);
+                                break;
+                            case 29:
+                                Pic29.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic29, picpositiondigit);
+                                break;
+                            case 30:
+                                Pic30.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic30, picpositiondigit);
+                                break;
+                            case 31:
+                                Pic31.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic31, picpositiondigit);
+                                break;
+                            case 32:
+                                Pic32.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic32, picpositiondigit);
+                                break;
+                            case 33:
+                                Pic33.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic33, picpositiondigit);
+                                break;
+                            case 34:
+                                Pic34.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic34, picpositiondigit);
+                                break;
+                            case 35:
+                                Pic35.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic35, picpositiondigit);
+                                break;
+                            case 36:
+                                Pic36.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic36, picpositiondigit);
+                                break;
+                            case 37:
+                                Pic37.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic37, picpositiondigit);
+                                break;
+                            case 38:
+                                Pic38.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic38, picpositiondigit);
+                                break;
+                            case 39:
+                                Pic39.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic39, picpositiondigit);
+                                break;
+                            case 40:
+                                Pic40.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic40, picpositiondigit);
+                                break;
+                            case 41:
+                                Pic41.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic41, picpositiondigit);
+                                break;
+                            case 42:
+                                Pic42.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic42, picpositiondigit);
+                                break;
+                            case 43:
+                                Pic43.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic43, picpositiondigit);
+                                break;
+                            case 44:
+                                Pic44.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic44, picpositiondigit);
+                                break;
+                            case 45:
+                                Pic45.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic45, picpositiondigit);
+                                break;
+                            case 46:
+                                Pic46.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic46, picpositiondigit);
+                                break;
+                            case 47:
+                                Pic47.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic47, picpositiondigit);
+                                break;
+                            case 48:
+                                Pic48.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic48, picpositiondigit);
+                                break;
+                        }
+                       
+                    }
+                    else
+                    {
+                        if (listvis.Count == 11)
+                        {
+                            picpositiondigit = -110;
+                        }
+                        picpositiondigit += 110;
+                        switch (number)
+                        {
+                            case 1:
+                                Pic1.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic1, picpositiondigit);
+                                Canvas.SetTop(Pic1, top);
+                                break;
+                            case 2:
+                                Pic2.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic2, picpositiondigit);
+                                Canvas.SetTop(Pic2, top);
+                                break;
+                            case 3:
+                                Pic3.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic3, picpositiondigit);
+                                Canvas.SetTop(Pic3, top);
+                                break;
+                            case 4:
+                                Pic4.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic4, picpositiondigit);
+                                Canvas.SetTop(Pic4, top);
+                                break;
+                            case 5:
+                                Pic5.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic5, picpositiondigit);
+                                Canvas.SetTop(Pic5, top);
+                                break;
+                            case 6:
+                                Pic6.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic6, picpositiondigit);
+                                Canvas.SetTop(Pic6, top);
+                                break;
+                            case 7:
+                                Pic7.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic7, picpositiondigit);
+                                Canvas.SetTop(Pic7, top);
+                                break;
+                            case 8:
+                                Pic8.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic8, picpositiondigit);
+                                Canvas.SetTop(Pic8, top);
+                                break;
+                            case 9:
+                                Pic9.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic9, picpositiondigit);
+                                Canvas.SetTop(Pic9, top);
+                                break;
+                            case 10:
+                                Pic10.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic10, picpositiondigit);
+                                Canvas.SetTop(Pic10, top);
+                                break;
+                            case 11:
+                                Pic11.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic11, picpositiondigit);
+                                Canvas.SetTop(Pic11, top);
+                                break;
+                            case 12:
+                                Pic12.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic12, picpositiondigit);
+                                Canvas.SetTop(Pic12, top);
+                                break;
+                            case 13:
+                                Pic13.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic13, picpositiondigit);
+                                Canvas.SetTop(Pic13, top);
+                                break;
+                            case 14:
+                                Pic14.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic14, picpositiondigit);
+                                Canvas.SetTop(Pic14, top);
+                                break;
+                            case 15:
+                                Pic15.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic15, picpositiondigit);
+                                Canvas.SetTop(Pic15, top);
+                                break;
+                            case 16:
+                                Pic16.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic16, picpositiondigit);
+                                Canvas.SetTop(Pic16, top);
+                                break;
+                            case 17:
+                                Pic17.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic17, picpositiondigit);
+                                Canvas.SetTop(Pic17, top);
+                                break;
+                            case 18:
+                                Pic18.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic18, picpositiondigit);
+                                Canvas.SetTop(Pic18, top);
+                                break;
+                            case 19:
+                                Pic19.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic19, picpositiondigit);
+                                Canvas.SetTop(Pic19, top);
+                                break;
+                            case 20:
+                                Pic20.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic20, picpositiondigit);
+                                Canvas.SetTop(Pic20, top);
+                                break;
+                            case 21:
+                                Pic21.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic21, picpositiondigit);
+                                Canvas.SetTop(Pic21, top);
+                                break;
+                            case 22:
+                                Pic22.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic22, picpositiondigit);
+                                Canvas.SetTop(Pic22, top);
+                                break;
+                            case 23:
+                                Pic23.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic23, picpositiondigit);
+                                Canvas.SetTop(Pic23, top);
+                                break;
+                            case 24:
+                                Pic24.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic24, picpositiondigit);
+                                Canvas.SetTop(Pic24, top);
+                                break;
+                            case 25:
+                                Pic25.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic25, picpositiondigit);
+                                Canvas.SetTop(Pic25, top);
+                                break;
+                            case 26:
+                                Pic26.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic26, picpositiondigit);
+                                Canvas.SetTop(Pic26, top);
+                                break;
+                            case 27:
+                                Pic27.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic27, picpositiondigit);
+                                Canvas.SetTop(Pic27, top);
+                                break;
+                            case 28:
+                                Pic28.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic28, picpositiondigit);
+                                Canvas.SetTop(Pic28, top);
+                                break;
+                            case 29:
+                                Pic29.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic29, picpositiondigit);
+                                Canvas.SetTop(Pic29, top);
+                                break;
+                            case 30:
+                                Pic30.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic30, picpositiondigit);
+                                Canvas.SetTop(Pic30, top);
+                                break;
+                            case 31:
+                                Pic31.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic31, picpositiondigit);
+                                Canvas.SetTop(Pic31, top);
+                                break;
+                            case 32:
+                                Pic32.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic32, picpositiondigit);
+                                Canvas.SetTop(Pic32, top);
+                                break;
+                            case 33:
+                                Pic33.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic33, picpositiondigit);
+                                Canvas.SetTop(Pic33, top);
+                                break;
+                            case 34:
+                                Pic34.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic34, picpositiondigit);
+                                Canvas.SetTop(Pic34, top);
+                                break;
+                            case 35:
+                                Pic35.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic35, picpositiondigit);
+                                Canvas.SetTop(Pic35, top);
+                                break;
+                            case 36:
+                                Pic36.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic36, picpositiondigit);
+                                Canvas.SetTop(Pic36, top);
+                                break;
+                            case 37:
+                                Pic37.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic37, picpositiondigit);
+                                Canvas.SetTop(Pic37, top);
+                                break;
+                            case 38:
+                                Pic38.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic38, picpositiondigit);
+                                Canvas.SetTop(Pic38, top);
+                                break;
+                            case 39:
+                                Pic39.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic39, picpositiondigit);
+                                Canvas.SetTop(Pic39, top);
+                                break;
+                            case 40:
+                                Pic40.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic40, picpositiondigit);
+                                Canvas.SetTop(Pic40, top);
+                                break;
+                            case 41:
+                                Pic41.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic41, picpositiondigit);
+                                Canvas.SetTop(Pic41, top);
+                                break;
+                            case 42:
+                                Pic42.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic42, picpositiondigit);
+                                Canvas.SetTop(Pic42, top);
+                                break;
+                            case 43:
+                                Pic43.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic43, picpositiondigit);
+                                Canvas.SetTop(Pic43, top);
+                                break;
+                            case 44:
+                                Pic44.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic44, picpositiondigit);
+                                Canvas.SetTop(Pic44, top);
+                                break;
+                            case 45:
+                                Pic45.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic45, picpositiondigit);
+                                Canvas.SetTop(Pic45, top);
+                                break;
+                            case 46:
+                                Pic46.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic46, picpositiondigit);
+                                Canvas.SetTop(Pic46, top);
+                                break;
+                            case 47:
+                                Pic47.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic47, picpositiondigit);
+                                Canvas.SetTop(Pic47, top);
+                                break;
+                            case 48:
+                                Pic48.Visibility = Visibility.Visible;
+                                Canvas.SetLeft(Pic48, picpositiondigit);
+                                Canvas.SetTop(Pic48, top);
+                                break;
+                        }
+
+                    }
+                }
+                else
+                {
+                    i--;
+                }
+            }
+        }
+        private void PicCollapsed()
+        {
             Pic1.Visibility = Visibility.Collapsed;
             Pic2.Visibility = Visibility.Collapsed;
             Pic3.Visibility = Visibility.Collapsed;
@@ -64,177 +574,20 @@ namespace M.B.N.G.B.T.AttentivenessTest
             Pic33.Visibility = Visibility.Collapsed;
             Pic34.Visibility = Visibility.Collapsed;
             Pic35.Visibility = Visibility.Collapsed;
+            Pic36.Visibility = Visibility.Collapsed;
+            Pic37.Visibility = Visibility.Collapsed;
+            Pic38.Visibility = Visibility.Collapsed;
+            Pic39.Visibility = Visibility.Collapsed;
+            Pic40.Visibility = Visibility.Collapsed;
+            Pic41.Visibility = Visibility.Collapsed;
+            Pic42.Visibility = Visibility.Collapsed;
+            Pic43.Visibility = Visibility.Collapsed;
+            Pic44.Visibility = Visibility.Collapsed;
+            Pic45.Visibility = Visibility.Collapsed;
+            Pic46.Visibility = Visibility.Collapsed;
+            Pic47.Visibility = Visibility.Collapsed;
+            Pic48.Visibility = Visibility.Collapsed;
 
-            Canvas.SetTop(Pic36, 100);
-            Canvas.SetLeft(Pic37, 210);
-            Canvas.SetLeft(Pic38, 320);
-            Canvas.SetLeft(Pic39, 430);
-            Canvas.SetLeft(Pic40, 540);
-            Canvas.SetLeft(Pic41, 650);
-            Canvas.SetLeft(Pic42, 760);
-            Canvas.SetLeft(Pic43, 870);
-            Canvas.SetLeft(Pic44, 980);
-            Canvas.SetLeft(Pic45, 1090);
-            Canvas.SetLeft(Pic46, 1200);
-            Canvas.SetLeft(Pic47, 1310);
-            Canvas.SetLeft(Pic38, 1420);
-        }
-        private void timer_Tick(object sender, EventArgs e)
-        {
-            int number = 0;
-
-            for (int i = 0; i < stage; i++)
-            {
-                 number = rnd.Next(1, 48);
-            }
-
-            switch (number)
-            {
-                case 1:
-                    Pic1.Visibility = Visibility.Visible;
-                    break;
-                case 2:
-                    Pic2.Visibility = Visibility.Visible;
-                    break;
-                case 3:
-                    Pic3.Visibility = Visibility.Visible;
-                    break;
-                case 4:
-                    Pic4.Visibility = Visibility.Visible;
-                    break;
-                case 5:
-                    Pic5.Visibility = Visibility.Visible;
-                    break;
-                case 6:
-                    Pic6.Visibility = Visibility.Visible;
-                    break;
-                case 7:
-                    Pic7.Visibility = Visibility.Visible;
-                    break;
-                case 8:
-                    Pic8.Visibility = Visibility.Visible;
-                    break;
-                case 9:
-                    Pic9.Visibility = Visibility.Visible;
-                    break;
-                case 10:
-                    Pic10.Visibility = Visibility.Visible;
-                    break;
-                case 11:
-                    Pic11.Visibility = Visibility.Visible;
-                    break;
-                case 12:
-                    Pic12.Visibility = Visibility.Visible;
-                    break;
-                case 13:
-                    Pic13.Visibility = Visibility.Visible;
-                    break;
-                case 14:
-                    Pic14.Visibility = Visibility.Visible;
-                    break;
-                case 15:
-                    Pic15.Visibility = Visibility.Visible;
-                    break;
-                case 16:
-                    Pic16.Visibility = Visibility.Visible;
-                    break;
-                case 17:
-                    Pic17.Visibility = Visibility.Visible;
-                    break;
-                case 18:
-                    Pic18.Visibility = Visibility.Visible;
-                    break;
-                case 19:
-                    Pic19.Visibility = Visibility.Visible;
-                    break;
-                case 20:
-                    Pic20.Visibility = Visibility.Visible;
-                    break;
-                case 21:
-                    Pic21.Visibility = Visibility.Visible;
-                    break;
-                case 22:
-                    Pic22.Visibility = Visibility.Visible;
-                    break;
-                case 23:
-                    Pic23.Visibility = Visibility.Visible;
-                    break;
-                case 24:
-                    Pic24.Visibility = Visibility.Visible;
-                    break;
-                case 25:
-                    Pic25.Visibility = Visibility.Visible;
-                    break;
-                case 26:
-                    Pic26.Visibility = Visibility.Visible;
-                    break;
-                case 27:
-                    Pic27.Visibility = Visibility.Visible;
-                    break;
-                case 28:
-                    Pic28.Visibility = Visibility.Visible;
-                    break;
-                case 29:
-                    Pic29.Visibility = Visibility.Visible;
-                    break;
-                case 30:
-                    Pic30.Visibility = Visibility.Visible;
-                    break;
-                case 31:
-                    Pic31.Visibility = Visibility.Visible;
-                    break;
-                case 32:
-                    Pic32.Visibility = Visibility.Visible;
-                    break;
-                case 33:
-                    Pic33.Visibility = Visibility.Visible;
-                    break;
-                case 34:
-                    Pic34.Visibility = Visibility.Visible;
-                    break;
-                case 35:
-                    Pic35.Visibility = Visibility.Visible;
-                    break;
-                case 36:
-                    Pic36.Visibility = Visibility.Visible;
-                    break;
-                case 37:
-                    Pic37.Visibility = Visibility.Visible;
-                    break;
-                case 38:
-                    Pic38.Visibility = Visibility.Visible;
-                    break;
-                case 39:
-                    Pic39.Visibility = Visibility.Visible;
-                    break;
-                case 40:
-                    Pic40.Visibility = Visibility.Visible;
-                    break;
-                case 41:
-                    Pic41.Visibility = Visibility.Visible;
-                    break;
-                case 42:
-                    Pic42.Visibility = Visibility.Visible;
-                    break;
-                case 43:
-                    Pic43.Visibility = Visibility.Visible;
-                    break;
-                case 44:
-                    Pic44.Visibility = Visibility.Visible;
-                    break;
-                case 45:
-                    Pic45.Visibility = Visibility.Visible;
-                    break;
-                case 46:
-                    Pic46.Visibility = Visibility.Visible;
-                    break;
-                case 47:
-                    Pic47.Visibility = Visibility.Visible;
-                    break;
-                case 48:
-                    Pic48.Visibility = Visibility.Visible;
-                    break;
-            }
         }
     }
 }

@@ -21,7 +21,7 @@
 
         <Label x:Name="Timer" Margin="18,128,0,0" FontSize="120" Content="15" Foreground="White" Height="172" VerticalAlignment="Top" HorizontalAlignment="Left" Width="152" Grid.ColumnSpan="2" />
 
-        <Canvas Margin="0,156,64,90" Grid.Column="1" HorizontalAlignment="Right" Width="988">
+        <Canvas Margin="80,156,64,90" Grid.Column="1">
             <Image x:Name="Pic37" Height="100" VerticalAlignment="Top" 
          Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/37.gif" Grid.ColumnSpan="2" Grid.RowSpan="2"  Width="100" Canvas.Left="17" Canvas.Top="10"/>
 
