@@ -63,6 +63,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AttentivenessTest\ResultPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AttentivenessTest\Rule.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -80,6 +84,9 @@
     </Compile>
     <Compile Include="AttentivenessTest\RandomPicturesPage.xaml.cs">
       <DependentUpon>RandomPicturesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AttentivenessTest\ResultPage.xaml.cs">
+      <DependentUpon>ResultPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="AttentivenessTest\Rule.xaml.cs">
       <DependentUpon>Rule.xaml</DependentUpon>

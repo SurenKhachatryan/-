@@ -16,25 +16,23 @@ using System.Windows.Shapes;
 namespace M.B.N.G.B.T.AttentivenessTest
 {
     /// <summary>
-    /// Логика взаимодействия для Rule.xaml
+    /// Логика взаимодействия для ResultPage.xaml
     /// </summary>
-    public partial class Rule : Page
+    public partial class ResultPage : Page
     {
-        public Rule()
+        public ResultPage()
         {
             InitializeComponent();
-            
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void button1_Click(object sender, RoutedEventArgs e)
         {
-            TestRule.Visibility = Visibility.Collapsed;
 
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            
-            Main.Content = new RandomPicturesPage();
+            Main.Content = new Rule();
         }
     }
 }

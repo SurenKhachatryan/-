@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:M.B.N.G.B.T.AttentivenessTest"
       mc:Ignorable="d" 
       d:DesignHeight="780" d:DesignWidth="1300"
-      Title="RandomPicturesPage">
+      Title="RandomPicturesPage" x:Name="RandomPicturesPage1">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -166,5 +166,6 @@
             <Image x:Name="Pic20"  HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="99"
                Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/20.gif" Canvas.Left="17" Canvas.Top="10"/>
         </Canvas>
+        <Frame Name="Main" Margin="0,0,0,0" Grid.ColumnSpan="5" Grid.RowSpan="3" />
     </Grid>
 </Page>

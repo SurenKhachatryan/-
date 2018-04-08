@@ -25,16 +25,13 @@ namespace M.B.N.G.B.T
         {
             
             InitializeComponent();
-            button1.IsEnabled = false;
             button2.IsEnabled = false;
-
-
+            button3.IsEnabled = false;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-         
-
+            Main.Content = new Rule();
         }
 
         private void Button_Click1(object sender, RoutedEventArgs e)
@@ -45,7 +42,7 @@ namespace M.B.N.G.B.T
 
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
-            Main.Content = new RandomPicturesPage();
+            
            
         }
     }

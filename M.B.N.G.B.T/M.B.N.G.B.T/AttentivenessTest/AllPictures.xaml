@@ -6,13 +6,13 @@
       xmlns:local="clr-namespace:M.B.N.G.B.T.AttentivenessTest"
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="1300"
-      Title="AllPictures">
+      Title="AllPictures" x:Name="AllPictures1">
     <Page.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,/Resources/wood-background.jpg"/>
     </Page.Background>
 
 
-    <Grid Margin="0,0,0,0">
+    <Grid Margin="0,0,0,0" x:Name="Grid">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="127*"/>
@@ -35,6 +35,7 @@
             <ColumnDefinition Width="132*"/>
             <ColumnDefinition Width="47*"/>
         </Grid.ColumnDefinitions>
+        <Label x:Name="Timer" Margin="18,128,0,0" FontSize="120" Content="15" Foreground="White" Height="172" VerticalAlignment="Top" HorizontalAlignment="Left" Width="166" Grid.RowSpan="3" />
 
         <Image Grid.Column="1" Height="100" Margin="16,11,0,0" VerticalAlignment="Top" 
          Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/1.gif" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Left" Width="100"/>
@@ -239,7 +240,7 @@
         <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="6" Grid.Row="5"/>
         <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7" Grid.Row="5"/>
         <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8" Grid.Row="5"/>
-        
 
+        <Frame Name="Main" Grid.ColumnSpan="10" Grid.RowSpan="6" />
     </Grid>
 </Page>

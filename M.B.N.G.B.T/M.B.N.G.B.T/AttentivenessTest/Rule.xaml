@@ -47,7 +47,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="button2" Click="Button_Click" Content="Սկսել Թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" HorizontalAlignment="Left" Width="147" Height="35" VerticalAlignment="Top" Grid.Column="3" Grid.Row="1" Margin="1,0,0,0" Grid.RowSpan="2">
+        <Button x:Name="button2" Click="button2_Click" Content="Սկսել Թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" HorizontalAlignment="Left" Width="147" Height="35" VerticalAlignment="Top" Grid.Column="3" Grid.Row="1" Margin="1,0,0,0" Grid.RowSpan="2">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -55,5 +55,6 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Frame Name="Main" Margin="0,0,0,0" Grid.ColumnSpan="5" Grid.RowSpan="3" />
     </Grid>
 </Page>
