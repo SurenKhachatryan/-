@@ -9,11 +9,22 @@
       Title="ResultPage" x:Name="ResultPage1">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="646*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="95*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="393*"/>
+            <ColumnDefinition Width="114*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="33*"/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>
         </Grid.Background>
 
-        <Button x:Name="button1" Click="button1_Click" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" VerticalAlignment="Top" Margin="0,650,85,0" HorizontalAlignment="Right" Width="185">
+        <Button x:Name="button1" Click="button1_Click" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" VerticalAlignment="Top" Margin="16,4,0,0" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Width="185">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -22,7 +33,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="button2" Click="button2_Click" Content="Կրկին փորձել" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" VerticalAlignment="Top" Margin="0,650,306,0" HorizontalAlignment="Right" Width="184">
+        <Button x:Name="button2" Click="button2_Click" Content="Կրկին փորձել" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" VerticalAlignment="Top" Margin="24,4,0,0" HorizontalAlignment="Left" Width="184" Grid.Column="1" Grid.Row="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -30,6 +41,6 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Frame Name="Main" Margin="0,0,0,0" Grid.ColumnSpan="5" Grid.RowSpan="3" />
+        <Frame Name="Main" Margin="0,0,0,0" Grid.ColumnSpan="4" Grid.RowSpan="3" />
     </Grid>
 </Page>

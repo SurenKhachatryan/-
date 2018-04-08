@@ -192,54 +192,54 @@
 
         
 
-        <CheckBox  HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="1"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="2"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="3"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="4"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="5"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="6"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="15,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="1" Grid.Row="1"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="15,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="2" Grid.Row="1"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="3" Grid.Row="1"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="17,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="4" Grid.Row="1"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="17,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="5" Grid.Row="1"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="6" Grid.Row="1"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="17,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7" Grid.Row="1"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8" Grid.Row="1"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="1" Grid.Row="2"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="15,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="2" Grid.Row="2"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="15,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="3" Grid.Row="2"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="4" Grid.Row="2"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="5" Grid.Row="2"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="6" Grid.Row="2"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7" Grid.Row="2"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8" Grid.Row="2"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="1" Grid.Row="3"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="2" Grid.Row="3"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="3" Grid.Row="3"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="4" Grid.Row="3"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="5" Grid.Row="3"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="6" Grid.Row="3"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7" Grid.Row="3"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8" Grid.Row="3"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="1" Grid.Row="4"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="2" Grid.Row="4"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="3" Grid.Row="4"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="4" Grid.Row="4"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="5" Grid.Row="4"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="6" Grid.Row="4"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7" Grid.Row="4"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8" Grid.Row="4"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="1" Grid.Row="5"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="2" Grid.Row="5"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="3" Grid.Row="5"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="4" Grid.Row="5"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="5" Grid.Row="5"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="6" Grid.Row="5"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7" Grid.Row="5"/>
-        <CheckBox  HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8" Grid.Row="5"/>
+        <CheckBox Checked="Pic1_Checked" x:Name="Pic1" HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="1"/>
+        <CheckBox Checked="Pic2_Checked" x:Name="Pic2"  HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="2"/>
+        <CheckBox Checked="Pic3_Checked" x:Name="Pic3" HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="3"/>
+        <CheckBox Checked="Pic4_Checked" x:Name="Pic4"  HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="4"/>
+        <CheckBox Checked="Pic5_Checked" x:Name="Pic5" HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="5"/>
+        <CheckBox Checked="Pic6_Checked" x:Name="Pic6" HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="6"/>
+        <CheckBox Checked="Pic7_Checked" x:Name="Pic7" HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7"/>
+        <CheckBox Checked="Pic8_Checked" x:Name="Pic8" HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8"/>
+        <CheckBox Checked="Pic9_Checked" x:Name="Pic9" HorizontalAlignment="Left" Margin="15,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="1" Grid.Row="1"/>
+        <CheckBox Checked="Pic10_Checked" x:Name="Pic10" HorizontalAlignment="Left" Margin="15,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="2" Grid.Row="1"/>
+        <CheckBox Checked="Pic11_Checked" x:Name="Pic11" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="3" Grid.Row="1"/>
+        <CheckBox Checked="Pic12_Checked" x:Name="Pic12" HorizontalAlignment="Left" Margin="17,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="4" Grid.Row="1"/>
+        <CheckBox Checked="Pic13_Checked" x:Name="Pic13" HorizontalAlignment="Left" Margin="17,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="5" Grid.Row="1"/>
+        <CheckBox Checked="Pic14_Checked" x:Name="Pic14" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="6" Grid.Row="1"/>
+        <CheckBox Checked="Pic15_Checked" x:Name="Pic15" HorizontalAlignment="Left" Margin="17,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7" Grid.Row="1"/>
+        <CheckBox Checked="Pic16_Checked" x:Name="Pic16" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8" Grid.Row="1"/>
+        <CheckBox Checked="Pic17_Checked" x:Name="Pic17" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="1" Grid.Row="2"/>
+        <CheckBox Checked="Pic18_Checked" x:Name="Pic18" HorizontalAlignment="Left" Margin="15,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="2" Grid.Row="2"/>
+        <CheckBox Checked="Pic19_Checked" x:Name="Pic19" HorizontalAlignment="Left" Margin="15,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="3" Grid.Row="2"/>
+        <CheckBox Checked="Pic20_Checked" x:Name="Pic20" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="4" Grid.Row="2"/>
+        <CheckBox Checked="Pic21_Checked" x:Name="Pic21" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="5" Grid.Row="2"/>
+        <CheckBox Checked="Pic22_Checked" x:Name="Pic22" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="6" Grid.Row="2"/>
+        <CheckBox Checked="Pic23_Checked" x:Name="Pic23" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7" Grid.Row="2"/>
+        <CheckBox Checked="Pic24_Checked" x:Name="Pic24" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8" Grid.Row="2"/>
+        <CheckBox Checked="Pic25_Checked" x:Name="Pic25" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="1" Grid.Row="3"/>
+        <CheckBox Checked="Pic26_Checked" x:Name="Pic26" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="2" Grid.Row="3"/>
+        <CheckBox Checked="Pic27_Checked" x:Name="Pic27" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="3" Grid.Row="3"/>
+        <CheckBox Checked="Pic28_Checked" x:Name="Pic28" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="4" Grid.Row="3"/>
+        <CheckBox Checked="Pic29_Checked" x:Name="Pic29" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="5" Grid.Row="3"/>
+        <CheckBox Checked="Pic30_Checked" x:Name="Pic30" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="6" Grid.Row="3"/>
+        <CheckBox Checked="Pic31_Checked" x:Name="Pic31" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7" Grid.Row="3"/>
+        <CheckBox Checked="Pic32_Checked" x:Name="Pic32" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8" Grid.Row="3"/>
+        <CheckBox Checked="Pic33_Checked" x:Name="Pic33" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="1" Grid.Row="4"/>
+        <CheckBox Checked="Pic34_Checked" x:Name="Pic34" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="2" Grid.Row="4"/>
+        <CheckBox Checked="Pic35_Checked" x:Name="Pic35" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="3" Grid.Row="4"/>
+        <CheckBox Checked="Pic36_Checked" x:Name="Pic36" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="4" Grid.Row="4"/>
+        <CheckBox Checked="Pic37_Checked" x:Name="Pic37" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="5" Grid.Row="4"/>
+        <CheckBox Checked="Pic38_Checked" x:Name="Pic38" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="6" Grid.Row="4"/>
+        <CheckBox Checked="Pic39_Checked" x:Name="Pic39" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7" Grid.Row="4"/>
+        <CheckBox Checked="Pic40_Checked" x:Name="Pic40" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8" Grid.Row="4"/>
+        <CheckBox Checked="Pic41_Checked" x:Name="Pic41" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="1" Grid.Row="5"/>
+        <CheckBox Checked="Pic42_Checked" x:Name="Pic42" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="2" Grid.Row="5"/>
+        <CheckBox Checked="Pic43_Checked" x:Name="Pic43" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="3" Grid.Row="5"/>
+        <CheckBox Checked="Pic44_Checked" x:Name="Pic44" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="4" Grid.Row="5"/>
+        <CheckBox Checked="Pic45_Checked" x:Name="Pic45" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="5" Grid.Row="5"/>
+        <CheckBox Checked="Pic46_Checked" x:Name="Pic46" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="6" Grid.Row="5"/>
+        <CheckBox Checked="Pic47_Checked" x:Name="Pic47" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7" Grid.Row="5"/>
+        <CheckBox Checked="Pic48_Checked" x:Name="Pic48" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8" Grid.Row="5"/>
 
         <Frame Name="Main" Grid.ColumnSpan="10" Grid.RowSpan="6" />
     </Grid>

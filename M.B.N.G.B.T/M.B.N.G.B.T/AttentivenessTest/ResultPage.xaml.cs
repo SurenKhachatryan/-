@@ -32,6 +32,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
+            RandomPicturesPage.stage = 4;
             Main.Content = new Rule();
         }
     }

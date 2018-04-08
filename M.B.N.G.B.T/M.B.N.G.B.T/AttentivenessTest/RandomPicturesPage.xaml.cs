@@ -33,6 +33,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
         public RandomPicturesPage()
         {
             InitializeComponent();
+
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
             PicCollapsed();
             dispatcherTimer.Start();
