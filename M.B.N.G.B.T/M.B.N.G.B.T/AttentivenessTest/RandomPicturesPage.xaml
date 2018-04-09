@@ -9,19 +9,34 @@
       Title="RandomPicturesPage" x:Name="RandomPicturesPage1">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="45*"/>
-            <ColumnDefinition Width="566*"/>
-            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="217*"/>
+            <ColumnDefinition Width="1000*"/>
+            <ColumnDefinition Width="78*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.Background>
             <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/wood-background.jpg"/>
         </Grid.Background>
 
-        <Label x:Name="Timer" Margin="18,128,0,0" FontSize="120" Content="15" Foreground="White" Height="172" VerticalAlignment="Top" HorizontalAlignment="Left" Width="152" Grid.ColumnSpan="2" />
+        <Label x:Name="Timer" Margin="13,128,52,0" FontSize="120" Content="15" Foreground="White" Height="172" VerticalAlignment="Top" Grid.Column="1" />
 
-        <Canvas Margin="80,156,64,90" Grid.Column="1">
+        <Button x:Name="button2" Click="button_Click" Content="Ավարտել Թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" HorizontalAlignment="Left" Width="175" Height="35" Margin="7,3,0,7" Grid.Row="1" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Canvas Margin="12,156,64,186" Grid.Column="2">
             <Image x:Name="Pic37" Height="100" VerticalAlignment="Top" 
          Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/37.gif" Grid.ColumnSpan="2" Grid.RowSpan="2"  Width="100" Canvas.Left="17" Canvas.Top="10"/>
 
@@ -166,6 +181,6 @@
             <Image x:Name="Pic20"  HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="99"
                Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/20.gif" Canvas.Left="17" Canvas.Top="10"/>
         </Canvas>
-        <Frame Name="Main" Margin="0,0,0,0" Grid.ColumnSpan="5" Grid.RowSpan="3" />
+        <Frame Name="MainRandomPicturesPage" Margin="0,0,0,0" Grid.ColumnSpan="4" Grid.RowSpan="3" />
     </Grid>
 </Page>

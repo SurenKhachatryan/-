@@ -23,6 +23,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
         public AllPictures()
         {
             InitializeComponent();
+
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
             listChecked.Clear();
             dispatcherTimer.Start();
@@ -30,7 +31,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            dispatcherTimer.Stop();
+            MainAllPictures.Content = new ResultPage();
+        }
 
+        public void AllPicturesCollapsed()
+        {
+            AllPictures1.Visibility = Visibility.Collapsed;
         }
 
         private void LabelTimer(object sender, EventArgs e)
@@ -40,29 +47,29 @@ namespace M.B.N.G.B.T.AttentivenessTest
             if (second != 0)
             {
                 second--;
-                Timer.Content = second;
+                timer.Content = second;
                 if (second == 8)
                 {
-                    Timer.Foreground = Brushes.Yellow;
+                    timer.Foreground = Brushes.Yellow;
                 }
                 else
                 if (second == 5)
                 {
-                    Timer.Foreground = Brushes.Red;
+                    timer.Foreground = Brushes.Red;
                 }
             }
             else
             {
                 dispatcherTimer.Stop();
-                if (RandomPicturesPage.stage < 15 && cl.ArrItemsEquals(RandomPicturesPage.listvis.ToArray(), listChecked.ToArray()))
+                if (RandomPicturesPage.startstage < 15 && cl.ArrItemsEquals(RandomPicturesPage.listPicVisibility.ToArray(), listChecked.ToArray()))
                 {
-                    RandomPicturesPage.stage += 1;
-                    Main.Content = new RandomPicturesPage();
+                    RandomPicturesPage.startstage += 1;
+                    MainAllPictures.Content = new RandomPicturesPage();
 
                 }
                 else
                 {
-                    Main.Content = new ResultPage();
+                    MainAllPictures.Content = new ResultPage();
                 }
             }
         }

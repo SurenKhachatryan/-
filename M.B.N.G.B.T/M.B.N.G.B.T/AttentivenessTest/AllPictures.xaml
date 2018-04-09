@@ -35,7 +35,8 @@
             <ColumnDefinition Width="132*"/>
             <ColumnDefinition Width="47*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="Timer" Margin="18,128,0,0" FontSize="120" Content="15" Foreground="White" Height="172" VerticalAlignment="Top" HorizontalAlignment="Left" Width="166" Grid.RowSpan="3" />
+        
+        <Label x:Name="timer" Margin="18,128,0,0" FontSize="120" Content="15" Foreground="White" Height="172" VerticalAlignment="Top" HorizontalAlignment="Left" Width="166" Grid.RowSpan="3" />
 
         <Image Grid.Column="1" Height="100" Margin="16,11,0,0" VerticalAlignment="Top" 
          Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/1.gif" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Left" Width="100"/>
@@ -185,7 +186,7 @@
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FF53270D" Offset="0.74"/>
+                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
@@ -241,6 +242,6 @@
         <CheckBox Checked="Pic47_Checked" x:Name="Pic47" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7" Grid.Row="5"/>
         <CheckBox Checked="Pic48_Checked" x:Name="Pic48" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8" Grid.Row="5"/>
 
-        <Frame Name="Main" Grid.ColumnSpan="10" Grid.RowSpan="6" />
+        <Frame Name="MainAllPictures" Grid.ColumnSpan="10" Grid.RowSpan="6" />
     </Grid>
 </Page>
