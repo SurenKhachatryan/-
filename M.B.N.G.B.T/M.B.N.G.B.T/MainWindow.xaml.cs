@@ -1,4 +1,6 @@
 ﻿using M.B.N.G.B.T.AttentivenessTest;
+using M.B.N.G.B.T.Schulte_Test;
+using M.B.N.G.B.T.V.L.Marshukov_Test;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,8 +27,6 @@ namespace M.B.N.G.B.T
         {
             
             InitializeComponent();
-            button2.IsEnabled = false;
-            button3.IsEnabled = false;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -36,14 +36,12 @@ namespace M.B.N.G.B.T
 
         private void Button_Click1(object sender, RoutedEventArgs e)
         {
-           
-            
+            Main.Content = new SchulteTestRulePage();
         }
 
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
-            
-           
+            Main.Content = new MarshukTestRulePage();
         }
     }
 }

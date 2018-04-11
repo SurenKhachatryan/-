@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:M.B.N.G.B.T"
         mc:Ignorable="d"
-        Title="Մ․Բ․Ն․Գ․Բ․Տ․" WindowState="Maximized" MinHeight="600" MinWidth="800"  Height="780" Width="1300" Foreground="{x:Null}" BorderBrush="#FFFBFBFB" FontFamily="Segoe UI Black" >
+        Title="Մ․Բ․Ն․Գ․Բ․Տ․"  WindowState="Maximized" MinHeight="600" MinWidth="800"  Height="780" Width="1300" Foreground="{x:Null}" BorderBrush="#FFFBFBFB" FontFamily="Segoe UI Black" >
     <Window.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,/Resources/board.jpg"/>
     </Window.Background>
@@ -38,7 +38,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="button2" Click="Button_Click1" Content="Տեսողական Հիշողություն" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Grid.Row="5" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top">
+        <Button x:Name="button2" Click="Button_Click1" Content="Շուլտեի Աղյուսակ" FontSize="20"  FontFamily="Jokerman" Cursor="Hand"  Foreground="White" Grid.Row="5" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -47,7 +47,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="button3" Click="Button_Click2" Content="Տեսողական Հիշողություն" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Grid.Row="7" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top">
+        <Button x:Name="button3" Click="Button_Click2" Content="Վ․Լ․Մարշուկի Թեստ" FontSize="20"  FontFamily="Jokerman" Cursor="Hand" Foreground="White" Grid.Row="7" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
