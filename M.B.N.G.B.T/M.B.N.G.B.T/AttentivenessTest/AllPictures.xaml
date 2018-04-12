@@ -242,6 +242,6 @@
         <CheckBox Checked="Pic47_Checked" x:Name="Pic47" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7" Grid.Row="5"/>
         <CheckBox Checked="Pic48_Checked" x:Name="Pic48" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8" Grid.Row="5"/>
 
-        <Frame Name="MainAllPictures" Grid.ColumnSpan="10" Grid.RowSpan="6" />
+        
     </Grid>
 </Page>

@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace M.B.N.G.B.T.Schulte_Test
+namespace M.B.N.G.B.T.V.L.Marshukov_Test
 {
     /// <summary>
-    /// Логика взаимодействия для SchulteTestRulePage.xaml
+    /// Логика взаимодействия для MarshukTestRulePage.xaml
     /// </summary>
-    public partial class SchulteTestRulePage : Page
+    public partial class MarshukTestRulePage : Page
     {
-        public SchulteTestRulePage()
+        public MarshukTestRulePage()
         {
             InitializeComponent();
         }

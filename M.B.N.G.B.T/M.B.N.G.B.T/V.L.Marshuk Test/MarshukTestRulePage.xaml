@@ -27,7 +27,7 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock FontSize="38" Foreground="White" Margin="99,54,61,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="68" Grid.ColumnSpan="3" Grid.Column="1">
-            <Run  Text="                          Վ․Լ․Մաշկովի Թեստ"/></TextBlock>
+            <Run  Text="                          Վ․Լ․Մարշուկի Թեստ"/></TextBlock>
         <ScrollViewer Margin="15,116,42,12" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Grid.Column="1">
             <ScrollViewer.RenderTransform>
                 <TransformGroup>
@@ -38,9 +38,9 @@
                 </TransformGroup>
             </ScrollViewer.RenderTransform>
             <TextBlock FontSize="28" Foreground="White" Grid.ColumnSpan="3" Grid.Column="1" Width="1114" Height="512">
-              <Run Text="      Ուշադրության որոշման թեստ՝ Վլադիմիր Մաշկով Լվովիչի թեստ"/>
+              <Run Text="         Ուշադրության որոշման թեստ՝ Վ․Լ․Մարշուկի թեստ"/>
               <LineBreak/>
-              <Run Text="      /Շուլտեի աղյուսակների մոդիֆիկացված տարբերակ/"/>
+              <Run Text="         /Շուլտեի աղյուսակների մոդիֆիկացված տարբերակ/"/>
               <LineBreak/>
               <Run Text="Օգտագործվում է ուշադրությունը որոշելու համար։"/>
               <LineBreak/>

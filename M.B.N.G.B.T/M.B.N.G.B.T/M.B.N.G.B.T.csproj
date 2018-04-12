@@ -58,11 +58,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Schulte Test\SchulteTestResultPage.xaml.cs">
+      <DependentUpon>SchulteTestResultPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Schulte Test\SchulteTestTablePage.xaml.cs">
+      <DependentUpon>SchulteTestTablePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Schulte Test\SchulteTestRulePage.xaml.cs">
       <DependentUpon>SchulteTestRulePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="V.L.Marshukov Test\MarshukTestRulePage.xaml.cs">
+    <Compile Include="V.L.Marshuk Test\MarshukTestResultPage.xaml.cs">
+      <DependentUpon>MarshukTestResultPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="V.L.Marshuk Test\MarshukTestRulePage.xaml.cs">
       <DependentUpon>MarshukTestRulePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="V.L.Marshuk Test\MarshukTestTablePage.xaml.cs">
+      <DependentUpon>MarshukTestTablePage.xaml</DependentUpon>
     </Compile>
     <Page Include="AttentivenessTest\AllPictures.xaml">
       <SubType>Designer</SubType>
@@ -104,11 +116,27 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Schulte Test\SchulteTestResultPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Schulte Test\SchulteTestTablePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Schulte Test\SchulteTestRulePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="V.L.Marshukov Test\MarshukTestRulePage.xaml">
+    <Page Include="V.L.Marshuk Test\MarshukTestResultPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="V.L.Marshuk Test\MarshukTestRulePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="V.L.Marshuk Test\MarshukTestTablePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

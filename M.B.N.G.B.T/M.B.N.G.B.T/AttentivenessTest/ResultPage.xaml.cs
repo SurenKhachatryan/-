@@ -15,13 +15,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            
+            NavigationService.Navigate(null);
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
             RandomPicturesPage.startstage = 4;
-            MainResultPage.Content = new Rule();
+            this.NavigationService.Navigate(new Rule());
         }
 
         public void ResultPageCollapsed()

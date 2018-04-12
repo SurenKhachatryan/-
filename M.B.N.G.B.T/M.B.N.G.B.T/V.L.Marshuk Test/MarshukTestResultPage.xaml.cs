@@ -13,26 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace M.B.N.G.B.T.V.L.Marshukov_Test
+namespace M.B.N.G.B.T.V.L.Marshuk_Test
 {
     /// <summary>
-    /// Логика взаимодействия для MarshukTestRulePage.xaml
+    /// Логика взаимодействия для MarshukResaltPage.xaml
     /// </summary>
-    public partial class MarshukTestRulePage : Page
+    public partial class MarshukResaltPage : Page
     {
-        public MarshukTestRulePage()
+        public MarshukResaltPage()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

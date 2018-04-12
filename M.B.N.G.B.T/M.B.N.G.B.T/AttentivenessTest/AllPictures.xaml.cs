@@ -32,7 +32,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             dispatcherTimer.Stop();
-            MainAllPictures.Content = new ResultPage();
+            this.NavigationService.Navigate(new ResultPage());
         }
 
         public void AllPicturesCollapsed()
@@ -64,12 +64,12 @@ namespace M.B.N.G.B.T.AttentivenessTest
                 if (RandomPicturesPage.startstage < 15 && cl.ArrItemsEquals(RandomPicturesPage.listPicVisibility.ToArray(), listChecked.ToArray()))
                 {
                     RandomPicturesPage.startstage += 1;
-                    MainAllPictures.Content = new RandomPicturesPage();
+                    this.NavigationService.Navigate(new RandomPicturesPage());
 
                 }
                 else
                 {
-                    MainAllPictures.Content = new ResultPage();
+                    this.NavigationService.Navigate(new ResultPage());
                 }
             }
         }

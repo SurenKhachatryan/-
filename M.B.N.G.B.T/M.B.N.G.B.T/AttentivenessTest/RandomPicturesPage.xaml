@@ -181,6 +181,5 @@
             <Image x:Name="Pic20"  HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="99"
                Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/20.gif" Canvas.Left="17" Canvas.Top="10"/>
         </Canvas>
-        <Frame Name="MainRandomPicturesPage" Margin="0,0,0,0" Grid.ColumnSpan="4" Grid.RowSpan="3" />
     </Grid>
 </Page>

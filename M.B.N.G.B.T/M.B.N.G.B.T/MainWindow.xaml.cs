@@ -23,15 +23,18 @@ namespace M.B.N.G.B.T
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+
+        
+         public MainWindow()
         {
-            
+           
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Rule();
+            
+            Main.NavigationService.Navigate(new Rule());
         }
 
         private void Button_Click1(object sender, RoutedEventArgs e)

@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace M.B.N.G.B.T.Schulte_Test
 {
     /// <summary>
-    /// Логика взаимодействия для SchulteTestRulePage.xaml
+    /// Логика взаимодействия для SchulteResultPage.xaml
     /// </summary>
-    public partial class SchulteTestRulePage : Page
+    public partial class SchulteResultPage : Page
     {
-        public SchulteTestRulePage()
+        public SchulteResultPage()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(null);
-        }
-
-        private void button2_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

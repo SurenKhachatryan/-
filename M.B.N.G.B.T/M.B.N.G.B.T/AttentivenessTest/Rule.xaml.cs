@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Navigation;
 
 namespace M.B.N.G.B.T.AttentivenessTest
 {
@@ -20,12 +21,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            MainRule.Content = new RandomPicturesPage();
+            RandomPicturesPage.startstage = 4;
+            this.NavigationService.Navigate(new RandomPicturesPage());
         }
         public void TestRuleCollapsed()
         {
-            TestRule.Visibility = Visibility.Collapsed;
+            this.NavigationService.Navigate(null);
         }
-        
+       
     }
 }

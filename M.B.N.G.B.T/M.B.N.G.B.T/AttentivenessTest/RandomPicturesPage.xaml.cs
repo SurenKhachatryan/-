@@ -53,7 +53,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
             else
             {
                 dispatcherTimer.Stop();
-                MainRandomPicturesPage.Content = new AllPictures();
+                this.NavigationService.Navigate(new AllPictures());
             }
 
         }
@@ -66,7 +66,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
         private void button_Click(object sender, RoutedEventArgs e)
         {
             dispatcherTimer.Stop();
-            MainRandomPicturesPage.Content = new ResultPage();
+            this.NavigationService.Navigate(new ResultPage());
         }
 
        
