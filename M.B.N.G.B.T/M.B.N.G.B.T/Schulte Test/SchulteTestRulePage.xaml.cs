@@ -27,12 +27,12 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(null);
+            NavigationService.Navigate(null);
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new SchulteTablePage());
         }
     }
 }

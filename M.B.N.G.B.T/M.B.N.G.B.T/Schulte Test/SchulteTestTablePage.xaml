@@ -7,8 +7,54 @@
       mc:Ignorable="d" 
       d:DesignHeight="780" d:DesignWidth="1300" MinHeight="600" MinWidth="800"
       Title="SchulteTablePage">
+    <Page.Background>
+        <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>
+    </Page.Background>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="231*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="59*"/>
+            <ColumnDefinition Width="852*"/>
+            <ColumnDefinition Width="389*"/>
+        </Grid.ColumnDefinitions>
 
-    <Grid>
-        
+        <Button x:Name="button1" Click="Button_Click" Content="1" FontSize="80" Margin="0,21,451,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button2" Click="Button_Click" Content="2" FontSize="80" Margin="0,21,349,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button3" Click="Button_Click" Content="3" FontSize="80" Margin="0,21,245,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button4" Click="Button_Click" Content="4" FontSize="80" Margin="0,21,143,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button5" Click="Button_Click" Content="5" FontSize="80" Margin="0,21,41,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button6" Click="Button_Click" Content="6" FontSize="80" Margin="0,117,451,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button7" Click="Button_Click" Content="7" FontSize="80" Margin="0,117,349,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button8" Click="Button_Click" Content="8" FontSize="80" Margin="0,117,245,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button9" Click="Button_Click" Content="9" FontSize="80" Margin="0,117,143,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button10" Click="Button_Click" Content="10" FontSize="80" Margin="0,117,41,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button11" Click="Button_Click" Content="11" FontSize="80" Margin="0,213,451,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button12" Click="Button_Click" Content="12" FontSize="80" Margin="0,213,349,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button13" Click="Button_Click" Content="13" FontSize="80" Margin="0,213,245,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button14" Click="Button_Click" Content="14" FontSize="80" Margin="0,213,143,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button15" Click="Button_Click" Content="15" FontSize="80" Margin="0,213,41,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button16" Click="Button_Click" Content="16" FontSize="80" Margin="0,309,451,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button17" Click="Button_Click" Content="17" FontSize="80" Margin="0,309,349,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button18" Click="Button_Click" Content="18" FontSize="80" Margin="0,309,245,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button19" Click="Button_Click" Content="19" FontSize="80" Margin="0,309,143,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button20" Click="Button_Click" Content="20" FontSize="80" Margin="0,309,41,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button21" Click="Button_Click" Content="21" FontSize="80" Margin="0,405,451,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button22" Click="Button_Click" Content="22" FontSize="80" Margin="0,405,349,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button23" Click="Button_Click" Content="23" FontSize="80" Margin="0,405,245,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button24" Click="Button_Click" Content="24" FontSize="80" Margin="0,405,143,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+        <Button x:Name="button25" Click="Button_Click" Content="25" FontSize="80" Margin="0,405,41,0" VerticalAlignment="Top" Height="96"   BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="104"/>
+
+        <Button x:Name="button0" Click="button0_Click" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="36" VerticalAlignment="Top" Margin="33,549,0,0" HorizontalAlignment="Left" Width="186" Grid.Row="1" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
     </Grid>
 </Page>
