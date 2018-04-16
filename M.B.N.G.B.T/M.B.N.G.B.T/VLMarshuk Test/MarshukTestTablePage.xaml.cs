@@ -18,9 +18,9 @@ namespace M.B.N.G.B.T.V.L.Marshuk_Test
     /// <summary>
     /// Логика взаимодействия для V.xaml
     /// </summary>
-    public partial class V : Page
+    public partial class MarshukTestTablePage : Page
     {
-        public V()
+        public MarshukTestTablePage()
         {
             InitializeComponent();
         }

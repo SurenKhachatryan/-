@@ -67,13 +67,13 @@
     <Compile Include="Schulte Test\SchulteTestRulePage.xaml.cs">
       <DependentUpon>SchulteTestRulePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="V.L.Marshuk Test\MarshukTestResultPage.xaml.cs">
+    <Compile Include="VLMarshuk Test\MarshukTestResultPage.xaml.cs">
       <DependentUpon>MarshukTestResultPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="V.L.Marshuk Test\MarshukTestRulePage.xaml.cs">
+    <Compile Include="VLMarshuk Test\MarshukTestRulePage.xaml.cs">
       <DependentUpon>MarshukTestRulePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="V.L.Marshuk Test\MarshukTestTablePage.xaml.cs">
+    <Compile Include="VLMarshuk Test\MarshukTestTablePage.xaml.cs">
       <DependentUpon>MarshukTestTablePage.xaml</DependentUpon>
     </Compile>
     <Page Include="AttentivenessTest\AllPictures.xaml">
@@ -128,15 +128,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="V.L.Marshuk Test\MarshukTestResultPage.xaml">
+    <Page Include="VLMarshuk Test\MarshukTestResultPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="V.L.Marshuk Test\MarshukTestRulePage.xaml">
+    <Page Include="VLMarshuk Test\MarshukTestRulePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="V.L.Marshuk Test\MarshukTestTablePage.xaml">
+    <Page Include="VLMarshuk Test\MarshukTestTablePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

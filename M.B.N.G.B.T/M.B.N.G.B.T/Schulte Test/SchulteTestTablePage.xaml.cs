@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using ClassLibrary;
 
 namespace M.B.N.G.B.T.Schulte_Test
@@ -22,23 +23,69 @@ namespace M.B.N.G.B.T.Schulte_Test
     public partial class SchulteTablePage : Page
     {
         private List<int> lsRndDigite = new List<int>();
+        private List<int> lsIntervalPressButtons = new List<int>();
         private Random rnd = new Random();
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
+        private DispatcherTimer dispatcherTimer = new DispatcherTimer();
+
+        private byte second = 0;
 
         public SchulteTablePage()
         {
             InitializeComponent();
+            timer.Visibility = Visibility.Collapsed;
             ChangeContentButtonRandom();
+
+            dispatcherTimer.Tick += new EventHandler(LabelTimer);
+
+            if (SchulteTestRulePage.clause == 1)
+            {
+                timer.Visibility = Visibility.Visible;
+                dispatcherTimer.Start();
+            }
+            else
+            if (SchulteTestRulePage.clause == 3)
+            {
+                dispatcherTimer.Start();
+            }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void button_Click_Result(object sender, RoutedEventArgs e)
         {
-           
+            NavigationService.Navigate(new SchulteResultPage());
         }
 
-        private void button0_Click(object sender, RoutedEventArgs e)
+        private void LabelTimer(object sender, EventArgs e)
         {
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
 
+            if (SchulteTestRulePage.clause == 1)
+            {
+                if (second != 40)
+                {
+                    second++;
+                    timer.Content = second;
+                    if (second == 30)
+                    {
+                        timer.Foreground = Brushes.Yellow;
+                    }
+                    else
+                    if (second == 35)
+                    {
+                        timer.Foreground = Brushes.Red;
+                    }
+                    else
+                    if (second == 40)
+                    {
+                        timer.Foreground = Brushes.Black;
+                    }
+                }
+            }
+            else
+            if (SchulteTestRulePage.clause == 3)
+            {
+                second++;
+            }
         }
 
         private void ChangeContentButtonRandom()
@@ -47,7 +94,7 @@ namespace M.B.N.G.B.T.Schulte_Test
             for (int i = 1; i <= 25; i++)
             {
                 temp = rnd.Next(1, 26);
-                if (lsRndDigite.Count == 0 || !cl.SerchMatchingNumberInArr(lsRndDigite.ToArray(),temp))
+                if (lsRndDigite.Count == 0 || !cl.SerchMatchingNumberInArr(lsRndDigite.ToArray(), temp))
                 {
                     lsRndDigite.Add(temp);
 
@@ -135,6 +182,132 @@ namespace M.B.N.G.B.T.Schulte_Test
                     i--;
                 }
             }
+        }
+
+        private void Button_Click1(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click3(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click4(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click5(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click6(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click7(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click8(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click9(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click10(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click11(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click12(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click13(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click14(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click15(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click16(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click17(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click18(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click19(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click20(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click21(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click22(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click23(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click24(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
+        }
+        private void Button_Click25(object sender, RoutedEventArgs e)
+        {
+            lsIntervalPressButtons.Add(second);
+            second = 0;
         }
     }
 }

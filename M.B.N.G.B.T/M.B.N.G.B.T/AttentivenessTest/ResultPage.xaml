@@ -5,9 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:M.B.N.G.B.T.AttentivenessTest"
       mc:Ignorable="d" 
-      d:DesignHeight="780" d:DesignWidth="1300"
+      d:DesignHeight="780" d:DesignWidth="1300" MinHeight="600" MinWidth="800"
       Title="ResultPage" x:Name="ResultPage1">
-
+    <Page.Background>
+        <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>
+    </Page.Background>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="646*"/>
@@ -20,9 +23,7 @@
             <ColumnDefinition Width="110*"/>
             <ColumnDefinition Width="33*"/>
         </Grid.ColumnDefinitions>
-        <Grid.Background>
-            <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>
-        </Grid.Background>
+       
 
         <Button x:Name="button1" Click="button1_Click" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" VerticalAlignment="Top" Margin="16,4,0,0" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Width="185">
             <Button.Background>

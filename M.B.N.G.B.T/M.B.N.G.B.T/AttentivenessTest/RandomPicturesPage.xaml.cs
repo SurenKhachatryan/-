@@ -79,7 +79,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
 
             for (int i = 0; i < startstage; i++)
             {
-                number = rnd.Next(1, 48);
+                number = rnd.Next(1, 49);
 
                 if (listPicVisibility.Count == 0 || !cl.SerchMatchingNumberInArr(listPicVisibility.ToArray(), number))
                 {

@@ -13,21 +13,21 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="320*"/>
-            <RowDefinition Height="17*"/>
-            <RowDefinition Height="53*"/>
+            <RowDefinition Height="635*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="106*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*"/>
             <ColumnDefinition Width="99*"/>
-            <ColumnDefinition Width="834"/>
-            <ColumnDefinition Width="86*"/>
+            <ColumnDefinition Width="1006"/>
             <ColumnDefinition Width="23*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock FontSize="38" Foreground="White" Margin="99,54,61,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="68" Grid.ColumnSpan="3" Grid.Column="1">
+        <TextBlock FontSize="38" Foreground="White" Margin="99,54,61,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="68" Grid.ColumnSpan="2" Grid.Column="1">
             <Run  Text="                               Շուլտեի Աղյուսակ"/></TextBlock>
-        <ScrollViewer Margin="22,116,42,12" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Grid.Column="1">
+        <ScrollViewer Margin="22,116,42,7" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Column="1">
             <ScrollViewer.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -61,7 +61,7 @@
             <Run Text="յուրաքանչյուր աղյուսակի համար։" />
             </TextBlock>
         </ScrollViewer>
-        <Button x:Name="button1" Click="Button_Click" Content="Ետ Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" VerticalAlignment="Top" Grid.Row="1" Margin="0,0,832,0" HorizontalAlignment="Right" Width="185" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="1">
+        <Button x:Name="button1" Click="Button_Click" Content="Ետ Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" VerticalAlignment="Top" Grid.Row="2" Margin="7,0,0,0" HorizontalAlignment="Left" Width="185" Grid.RowSpan="2" Grid.Column="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -70,7 +70,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="button2" Click="button2_Click" Content="Սկսել Թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" HorizontalAlignment="Left" Width="147" Height="35" VerticalAlignment="Top" Grid.Column="3" Grid.Row="1" Margin="1,0,0,0" Grid.RowSpan="2">
+        <Button x:Name="button2" Click="button2_Click" Content="1․ Ըստ ժամանակի" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" HorizontalAlignment="Right" Width="185" Grid.Column="2" Margin="0,0,653,0" Grid.RowSpan="2" Grid.Row="2" Height="35" VerticalAlignment="Top">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -78,5 +78,22 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Button x:Name="button3" Click="button3_Click" Content="2․ Ըստ թույլ տված սխալների" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Grid.Column="2" Margin="0,0,352,0" Grid.RowSpan="2" Grid.Row="2" HorizontalAlignment="Right" Width="291" Height="35" VerticalAlignment="Top">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="button4" Click="button4_Click" Content="3․ Ըստ թույլ տված դադարների" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Grid.Column="2" Grid.RowSpan="2" Grid.Row="2" Height="35" VerticalAlignment="Top" Margin="0,0,40,0" HorizontalAlignment="Right" Width="303">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Սկսել թեստը" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Width="132" Height="44" Grid.RowSpan="3" Margin="0,2,843,0" Grid.Row="1"/>
     </Grid>
 </Page>

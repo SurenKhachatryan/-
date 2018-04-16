@@ -20,6 +20,8 @@ namespace M.B.N.G.B.T.Schulte_Test
     /// </summary>
     public partial class SchulteTestRulePage : Page
     {
+        public static byte clause = 0;
+
         public SchulteTestRulePage()
         {
             InitializeComponent();
@@ -32,6 +34,19 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
+            clause = 1;
+            NavigationService.Navigate(new SchulteTablePage());
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            clause = 2;
+            NavigationService.Navigate(new SchulteTablePage());
+        }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            clause = 3;
             NavigationService.Navigate(new SchulteTablePage());
         }
     }
