@@ -18,6 +18,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
         public static List<int> listPicVisibility = new List<int>();
+
         public static byte startstage = 4;
         private byte second = 16;
 
@@ -53,13 +54,15 @@ namespace M.B.N.G.B.T.AttentivenessTest
             else
             {
                 dispatcherTimer.Stop();
-                this.NavigationService.Navigate(new AllPictures());
+                NavigationService.Navigate(new AllPictures());
             }
 
         }
 
         public void RndPicPageGridCollapsed()
         {
+            
+            
             RandomPicturesPage1.Visibility = Visibility.Collapsed;
         }
 
