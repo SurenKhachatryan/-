@@ -61,11 +61,17 @@
     <Compile Include="Schulte Test\SchulteTestResultPage.xaml.cs">
       <DependentUpon>SchulteTestResultPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Schulte Test\SchulteTestTablePage.xaml.cs">
-      <DependentUpon>SchulteTestTablePage.xaml</DependentUpon>
+    <Compile Include="Schulte Test\SchulteTestTablePage1.xaml.cs">
+      <DependentUpon>SchulteTestTablePage1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Schulte Test\SchulteTestRulePage.xaml.cs">
       <DependentUpon>SchulteTestRulePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Schulte Test\SchulteTestTablePage2.xaml.cs">
+      <DependentUpon>SchulteTestTablePage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Schulte Test\SchulteTestTablePage3.xaml.cs">
+      <DependentUpon>SchulteTestTablePage3.xaml</DependentUpon>
     </Compile>
     <Compile Include="VLMarshuk Test\MarshukTestResultPage.xaml.cs">
       <DependentUpon>MarshukTestResultPage.xaml</DependentUpon>
@@ -120,11 +126,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Schulte Test\SchulteTestTablePage.xaml">
+    <Page Include="Schulte Test\SchulteTestTablePage1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Schulte Test\SchulteTestRulePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Schulte Test\SchulteTestTablePage2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Schulte Test\SchulteTestTablePage3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

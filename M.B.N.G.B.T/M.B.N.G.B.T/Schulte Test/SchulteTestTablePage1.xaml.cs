@@ -20,10 +20,9 @@ namespace M.B.N.G.B.T.Schulte_Test
     /// <summary>
     /// Логика взаимодействия для SchulteTablePage.xaml
     /// </summary>
-    public partial class SchulteTablePage : Page
+    public partial class SchulteTestTablePage1 : Page
     {
         private List<int> lsRndDigite = new List<int>();
-        private Dictionary<int, int> listbutton = new Dictionary<int, int>();
         private List<int> lsIntervalPressButtons = new List<int>();
         private Random rnd = new Random();
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
@@ -35,70 +34,214 @@ namespace M.B.N.G.B.T.Schulte_Test
         private bool door = true;
         private static byte stage = 1;
         private bool buttonsIsEnabled = true;
+        private byte buttonNumber = 0;
 
-        public SchulteTablePage()
+        public SchulteTestTablePage1()
         {
-            
-
             InitializeComponent();
-            timer.Visibility = Visibility.Collapsed;
+
             ChangeContentButtonRandom();
             startStage.Content = stage;
-
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
+            dispatcherTimer.Start();
 
-            if (SchulteTestRulePage.clause == 1)
-            {
-                timer.Visibility = Visibility.Visible;
-                dispatcherTimer.Start();
-            }
-            else
-            if (SchulteTestRulePage.clause == 3)
-            {
-                dispatcherTimer.Start();
-            }
         }
 
         private void button_Click_Result(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new SchulteResultPage());
-            stage = 1;
         }
 
         private void LabelTimer(object sender, EventArgs e)
         {
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
 
-            if (SchulteTestRulePage.clause == 1)
+            if (second != 40)
             {
-                if (second != 40)
+                second++;
+                timer.Content = second;
+                if (second == 30)
                 {
-                    second++;
-                    timer.Content = second;
-                    if (second == 30)
-                    {
-                        timer.Foreground = Brushes.Yellow;
-                    }
-                    else
-                    if (second == 35)
-                    {
-                        timer.Foreground = Brushes.Red;
-                    }
-                    else
-                    if (second == 40)
-                    {
-                        timer.Foreground = Brushes.Black;
-                    }
+                    timer.Foreground = Brushes.Yellow;
                 }
                 else
+                if (second == 35)
                 {
-                    dispatcherTimer.Stop();
+                    timer.Foreground = Brushes.Red;
+                }
+                else
+                if (second == 40)
+                {
+                    timer.Foreground = Brushes.Black;
                 }
             }
             else
-            if (SchulteTestRulePage.clause == 3)
             {
-                second++;
+                equalsDigit++;
+                if (equalsDigit != 25)
+                {
+                    dispatcherTimer.Stop();
+                }
+
+                buttonsIsEnabled = false;
+            }
+        }
+
+        private void BrushingButtons()
+        {
+            switch (buttonNumber)
+            {
+                case 1:
+                    if (Convert.ToByte(button1.Content) != equalsDigit)
+                    {
+                        button1.Background = Brushes.Red;
+                    }
+                    break;
+                case 2:
+                    if (Convert.ToByte(button2.Content) != equalsDigit)
+                    {
+                        button2.Background = Brushes.Red;
+                    }
+                    break;
+                case 3:
+                    if (Convert.ToByte(button3.Content) != equalsDigit)
+                    {
+                        button3.Background = Brushes.Red;
+                    }
+                    break;
+                case 4:
+                    if (Convert.ToByte(button4.Content) != equalsDigit)
+                    {
+                        button4.Background = Brushes.Red;
+                    }
+                    break;
+                case 5:
+                    if (Convert.ToByte(button5.Content) != equalsDigit)
+                    {
+                        button5.Background = Brushes.Red;
+                    }
+                    break;
+                case 6:
+                    if (Convert.ToByte(button6.Content) != equalsDigit)
+                    {
+                        button6.Background = Brushes.Red;
+                    }
+                    break;
+                case 7:
+                    if (Convert.ToByte(button7.Content) != equalsDigit)
+                    {
+                        button7.Background = Brushes.Red;
+                    }
+                    break;
+                case 8:
+                    if (Convert.ToByte(button8.Content) != equalsDigit)
+                    {
+                        button8.Background = Brushes.Red;
+                    }
+                    break;
+                case 9:
+                    if (Convert.ToByte(button9.Content) != equalsDigit)
+                    {
+                        button9.Background = Brushes.Red;
+                    }
+                    break;
+                case 10:
+                    if (Convert.ToByte(button10.Content) != equalsDigit)
+                    {
+                        button10.Background = Brushes.Red;
+                    }
+                    break;
+                case 11:
+                    if (Convert.ToByte(button11.Content) != equalsDigit)
+                    {
+                        button11.Background = Brushes.Red;
+                    }
+                    break;
+                case 12:
+                    if (Convert.ToByte(button12.Content) != equalsDigit)
+                    {
+                        button12.Background = Brushes.Red;
+                    }
+                    break;
+                case 13:
+                    if (Convert.ToByte(button13.Content) != equalsDigit)
+                    {
+                        button13.Background = Brushes.Red;
+                    }
+                    break;
+                case 14:
+                    if (Convert.ToByte(button14.Content) != equalsDigit)
+                    {
+                        button14.Background = Brushes.Red;
+                    }
+                    break;
+                case 15:
+                    if (Convert.ToByte(button15.Content) != equalsDigit)
+                    {
+                        button15.Background = Brushes.Red;
+                    }
+                    break;
+                case 16:
+                    if (Convert.ToByte(button16.Content) != equalsDigit)
+                    {
+                        button16.Background = Brushes.Red;
+                    }
+                    break;
+                case 17:
+                    if (Convert.ToByte(button17.Content) != equalsDigit)
+                    {
+                        button17.Background = Brushes.Red;
+                    }
+                    break;
+                case 18:
+                    if (Convert.ToByte(button18.Content) != equalsDigit)
+                    {
+                        button18.Background = Brushes.Red;
+                    }
+                    break;
+                case 19:
+                    if (Convert.ToByte(button19.Content) != equalsDigit)
+                    {
+                        button19.Background = Brushes.Red;
+                    }
+                    break;
+                case 20:
+                    if (Convert.ToByte(button20.Content) != equalsDigit)
+                    {
+                        button20.Background = Brushes.Red;
+                    }
+                    break;
+                case 21:
+                    if (Convert.ToByte(button21.Content) != equalsDigit)
+                    {
+                        button21.Background = Brushes.Red;
+                    }
+                    break;
+                case 22:
+                    if (Convert.ToByte(button22.Content) != equalsDigit)
+                    {
+                        button22.Background = Brushes.Red;
+                    }
+                    break;
+                case 23:
+                    if (Convert.ToByte(button23.Content) != equalsDigit)
+                    {
+                        button23.Background = Brushes.Red;
+                    }
+                    break;
+                case 24:
+                    if (Convert.ToByte(button24.Content) != equalsDigit)
+                    {
+                        button24.Background = Brushes.Red;
+                    }
+                    break;
+                case 25:
+                    if (Convert.ToByte(button25.Content) != equalsDigit)
+                    {
+                        button25.Background = Brushes.Red;
+                    }
+                    break;
+
             }
         }
 
@@ -200,20 +343,16 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void AddlistIntervalPressButtons()
         {
-            if (SchulteTestRulePage.clause == 3)
-            {
-                lsIntervalPressButtons.Add(second);
-                second = 0;
-            }
-            else
-            if (SchulteTestRulePage.clause == 1 && door)
+            if (door)
             {
                 equalsDigit++;
                 if (equalsDigit != buttonContent)
                 {
                     dispatcherTimer.Stop();
-                    NavigationService.Navigate(new SchulteResultPage());
+                    BrushingButtons();
                     stage = 1;
+                    buttonsIsEnabled = false;
+                    timer.Foreground = Brushes.Red;
                 }
                 else
                 if (equalsDigit == 25)
@@ -222,7 +361,7 @@ namespace M.B.N.G.B.T.Schulte_Test
                     dispatcherTimer.Stop();
                     if (stage != 6)
                     {
-                        NavigationService.Navigate(new SchulteTablePage());
+                        NavigationService.Navigate(new SchulteTestTablePage1());
                     }
                 }
             }
@@ -231,9 +370,10 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click1(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 1;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button1.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button1.Content))
                 {
                     buttonContent = Convert.ToByte(button1.Content);
                 }
@@ -243,439 +383,438 @@ namespace M.B.N.G.B.T.Schulte_Test
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(1, Convert.ToInt32(button1.Content));
             }
         }
 
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 2;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button2.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button2.Content))
                 {
                     buttonContent = Convert.ToByte(button2.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button2.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button2.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(2, Convert.ToInt32(button2.Content));
             }
         }
 
         private void Button_Click3(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 3;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button3.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button3.Content))
                 {
                     buttonContent = Convert.ToByte(button3.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button3.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button3.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(3, Convert.ToInt32(button3.Content));
             }
         }
 
         private void Button_Click4(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 4;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button4.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button4.Content))
                 {
                     buttonContent = Convert.ToByte(button4.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button4.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button4.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(4, Convert.ToInt32(button4.Content));
             }
         }
 
         private void Button_Click5(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 5;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button5.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button5.Content))
                 {
                     buttonContent = Convert.ToByte(button5.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button5.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button5.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(5, Convert.ToInt32(button5.Content));
             }
         }
 
         private void Button_Click6(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 6;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button6.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button6.Content))
                 {
                     buttonContent = Convert.ToByte(button6.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button6.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button6.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(6, Convert.ToInt32(button6.Content));
             }
         }
 
         private void Button_Click7(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 7;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button7.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button7.Content))
                 {
                     buttonContent = Convert.ToByte(button7.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button7.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button7.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(7, Convert.ToInt32(button7.Content));
             }
         }
 
         private void Button_Click8(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 8;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button8.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button8.Content))
                 {
                     buttonContent = Convert.ToByte(button8.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button8.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button8.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(8, Convert.ToInt32(button8.Content));
             }
         }
 
         private void Button_Click9(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 9;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button9.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button9.Content))
                 {
                     buttonContent = Convert.ToByte(button9.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button9.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button9.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(9, Convert.ToInt32(button9.Content));
             }
         }
 
         private void Button_Click10(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 10;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button10.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button10.Content))
                 {
                     buttonContent = Convert.ToByte(button10.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button10.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button10.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(10, Convert.ToInt32(button10.Content));
             }
         }
 
         private void Button_Click11(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 11;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button11.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button11.Content))
                 {
                     buttonContent = Convert.ToByte(button11.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button11.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button11.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(11, Convert.ToInt32(button11.Content));
             }
         }
 
         private void Button_Click12(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 12;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button12.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button12.Content))
                 {
                     buttonContent = Convert.ToByte(button12.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button12.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button12.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(12, Convert.ToInt32(button12.Content));
             }
         }
 
         private void Button_Click13(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 13;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button13.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button13.Content))
                 {
                     buttonContent = Convert.ToByte(button13.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button13.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button13.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(13, Convert.ToInt32(button13.Content));
             }
         }
 
         private void Button_Click14(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 14;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button14.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button14.Content))
                 {
                     buttonContent = Convert.ToByte(button14.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button14.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button14.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(14, Convert.ToInt32(button14.Content));
             }
         }
 
         private void Button_Click15(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 15;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button15.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button15.Content))
                 {
                     buttonContent = Convert.ToByte(button15.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button15.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button15.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(15, Convert.ToInt32(button15.Content));
             }
         }
 
         private void Button_Click16(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 16;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button16.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button16.Content))
                 {
                     buttonContent = Convert.ToByte(button16.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button16.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button16.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(16, Convert.ToInt32(button16.Content));
             }
         }
 
         private void Button_Click17(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 17;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button17.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button17.Content))
                 {
                     buttonContent = Convert.ToByte(button17.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button17.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button17.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(17, Convert.ToInt32(button17.Content));
             }
         }
 
         private void Button_Click18(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 18;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button18.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button18.Content))
                 {
                     buttonContent = Convert.ToByte(button18.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button18.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button18.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(18, Convert.ToInt32(button18.Content));
             }
         }
 
         private void Button_Click19(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 19;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button19.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button19.Content))
                 {
                     buttonContent = Convert.ToByte(button19.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button19.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button19.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(19, Convert.ToInt32(button19.Content));
             }
         }
 
         private void Button_Click20(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 20;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button20.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button20.Content))
                 {
                     buttonContent = Convert.ToByte(button20.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button20.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button20.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(20, Convert.ToInt32(button20.Content));
             }
         }
 
         private void Button_Click21(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 21;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button21.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button21.Content))
                 {
                     buttonContent = Convert.ToByte(button21.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button21.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button21.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(21, Convert.ToInt32(button21.Content));
             }
         }
 
         private void Button_Click22(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 22;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button22.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button22.Content))
                 {
                     buttonContent = Convert.ToByte(button22.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button22.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button22.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(22, Convert.ToInt32(button22.Content));
             }
         }
 
         private void Button_Click23(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 23;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button23.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button23.Content))
                 {
                     buttonContent = Convert.ToByte(button23.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button23.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button23.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(23, Convert.ToInt32(button23.Content));
             }
         }
 
         private void Button_Click24(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 24;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button24.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button24.Content))
                 {
                     buttonContent = Convert.ToByte(button24.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button24.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button24.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(24, Convert.ToInt32(button24.Content));
             }
         }
 
         private void Button_Click25(object sender, RoutedEventArgs e)
         {
+            buttonNumber = 25;
             if (buttonsIsEnabled)
             {
-                if (equalsDigit < Convert.ToByte(button25.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit < Convert.ToByte(button25.Content))
                 {
                     buttonContent = Convert.ToByte(button25.Content);
                 }
                 else
-                if (equalsDigit >= Convert.ToByte(button25.Content) && SchulteTestRulePage.clause == 1)
+                if (equalsDigit >= Convert.ToByte(button25.Content))
                 {
                     door = false;
                 }
                 AddlistIntervalPressButtons();
-                listbutton.Add(25, Convert.ToInt32(button25.Content));
             }
         }
     }
