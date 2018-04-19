@@ -35,7 +35,7 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void button_Click_Result(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SchulteResultPage());
+            NavigationService.Navigate(new SchulteTestResultPage());
         }
 
         private void ChangeContentButtonRandom()

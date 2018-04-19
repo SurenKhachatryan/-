@@ -34,6 +34,7 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
+            SchulteTestTablePage1.stage = 1;
             NavigationService.Navigate(new SchulteTestTablePage1());
         }
 

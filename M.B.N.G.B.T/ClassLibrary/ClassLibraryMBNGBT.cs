@@ -8,6 +8,28 @@ namespace ClassLibrary
 {
     public class ClassLibraryMBNGBT
     {
+        public List<int> SortingAndSerchInArrMissingNumbers(int[] arr, int arrLength)
+        {
+            List<int> ls = new List<int>();
+            int index = 0;
+            if (arr.Length != 0)
+            {
+                SortingArr(ref arr);
+            }
+            for (int i = 1; i <= arrLength; i++)
+            {
+                if (index != arr.Length && arr[index] <= i && arr.Length != 0)
+                {
+                    index++;
+                }
+                else
+                {
+                    ls.Add(i);
+                }
+            }
+            return ls;
+        }
+
         public bool SerchMatchingNumberInArr(int[] arr, int a)
         {
             for (int j = 0; j < arr.Length; j++)
@@ -40,21 +62,28 @@ namespace ClassLibrary
 
         public void SortingArr(ref int[] arr)
         {
-            int index = 0;
-            int temp = arr[0];
-            for (int i = 0; i < arr.Length; i++)
+            if (arr.Length != 0)
             {
-                temp = arr[i];
-                for (int j = i; j < arr.Length; j++)
+                int index = 0;
+                int temp = arr[0];
+                for (int i = 0; i < arr.Length; i++)
                 {
-                    if (temp >= arr[j])
+                    temp = arr[i];
+                    for (int j = i; j < arr.Length; j++)
                     {
-                        temp = arr[j];
-                        index = j;
+                        if (temp >= arr[j])
+                        {
+                            temp = arr[j];
+                            index = j;
+                        }
                     }
+                    arr[index] = arr[i];
+                    arr[i] = temp;
                 }
-                arr[index] = arr[i];
-                arr[i] = temp;
+            }
+            else
+            {
+                throw new IndexOutOfRangeException();
             }
         }
     }

@@ -24,6 +24,8 @@ namespace M.B.N.G.B.T.Schulte_Test
     {
         private List<int> lsRndDigite = new List<int>();
         private List<int> lsIntervalPressButtons = new List<int>();
+        private List<int> lsClickButton = new List<int>();
+        private List<int> lsMissingNumbers = new List<int>();
         private Random rnd = new Random();
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
@@ -32,7 +34,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         private byte equalsDigit = 0;
         private byte buttonContent = 0;
         private bool door = true;
-        private static byte stage = 1;
+        public static byte stage = 1;
         private bool buttonsIsEnabled = true;
         private byte buttonNumber = 0;
 
@@ -49,7 +51,7 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void button_Click_Result(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SchulteResultPage());
+            NavigationService.Navigate(new SchulteTestResultPage());
         }
 
         private void LabelTimer(object sender, EventArgs e)
@@ -77,171 +79,96 @@ namespace M.B.N.G.B.T.Schulte_Test
             }
             else
             {
-                equalsDigit++;
-                if (equalsDigit != 25)
-                {
-                    dispatcherTimer.Stop();
-                }
-
+                timer.Foreground = Brushes.Red;
+                lsMissingNumbers = cl.SortingAndSerchInArrMissingNumbers(lsClickButton.ToArray(), 25);
+                BrushingButtons1(lsMissingNumbers.ToArray());
+                dispatcherTimer.Stop();
                 buttonsIsEnabled = false;
             }
         }
 
-        private void BrushingButtons()
+        private void BrushingButtons1(int[] arr)
         {
-            switch (buttonNumber)
+            for (int i = 0; i < arr.Length; i++)
             {
-                case 1:
-                    if (Convert.ToByte(button1.Content) != equalsDigit)
-                    {
+                switch (arr[i])
+                {
+                    case 1:
                         button1.Background = Brushes.Red;
-                    }
-                    break;
-                case 2:
-                    if (Convert.ToByte(button2.Content) != equalsDigit)
-                    {
+                        break;
+                    case 2:
                         button2.Background = Brushes.Red;
-                    }
-                    break;
-                case 3:
-                    if (Convert.ToByte(button3.Content) != equalsDigit)
-                    {
+                        break;
+                    case 3:
                         button3.Background = Brushes.Red;
-                    }
-                    break;
-                case 4:
-                    if (Convert.ToByte(button4.Content) != equalsDigit)
-                    {
+                        break;
+                    case 4:
                         button4.Background = Brushes.Red;
-                    }
-                    break;
-                case 5:
-                    if (Convert.ToByte(button5.Content) != equalsDigit)
-                    {
+                        break;
+                    case 5:
                         button5.Background = Brushes.Red;
-                    }
-                    break;
-                case 6:
-                    if (Convert.ToByte(button6.Content) != equalsDigit)
-                    {
+                        break;
+                    case 6:
                         button6.Background = Brushes.Red;
-                    }
-                    break;
-                case 7:
-                    if (Convert.ToByte(button7.Content) != equalsDigit)
-                    {
+                        break;
+                    case 7:
                         button7.Background = Brushes.Red;
-                    }
-                    break;
-                case 8:
-                    if (Convert.ToByte(button8.Content) != equalsDigit)
-                    {
+                        break;
+                    case 8:
                         button8.Background = Brushes.Red;
-                    }
-                    break;
-                case 9:
-                    if (Convert.ToByte(button9.Content) != equalsDigit)
-                    {
+                        break;
+                    case 9:
                         button9.Background = Brushes.Red;
-                    }
-                    break;
-                case 10:
-                    if (Convert.ToByte(button10.Content) != equalsDigit)
-                    {
+                        break;
+                    case 10:
                         button10.Background = Brushes.Red;
-                    }
-                    break;
-                case 11:
-                    if (Convert.ToByte(button11.Content) != equalsDigit)
-                    {
+                        break;
+                    case 11:
                         button11.Background = Brushes.Red;
-                    }
-                    break;
-                case 12:
-                    if (Convert.ToByte(button12.Content) != equalsDigit)
-                    {
+                        break;
+                    case 12:
                         button12.Background = Brushes.Red;
-                    }
-                    break;
-                case 13:
-                    if (Convert.ToByte(button13.Content) != equalsDigit)
-                    {
+                        break;
+                    case 13:
                         button13.Background = Brushes.Red;
-                    }
-                    break;
-                case 14:
-                    if (Convert.ToByte(button14.Content) != equalsDigit)
-                    {
+                        break;
+                    case 14:
                         button14.Background = Brushes.Red;
-                    }
-                    break;
-                case 15:
-                    if (Convert.ToByte(button15.Content) != equalsDigit)
-                    {
+                        break;
+                    case 15:
                         button15.Background = Brushes.Red;
-                    }
-                    break;
-                case 16:
-                    if (Convert.ToByte(button16.Content) != equalsDigit)
-                    {
+                        break;
+                    case 16:
                         button16.Background = Brushes.Red;
-                    }
-                    break;
-                case 17:
-                    if (Convert.ToByte(button17.Content) != equalsDigit)
-                    {
+                        break;
+                    case 17:
                         button17.Background = Brushes.Red;
-                    }
-                    break;
-                case 18:
-                    if (Convert.ToByte(button18.Content) != equalsDigit)
-                    {
+                        break;
+                    case 18:
                         button18.Background = Brushes.Red;
-                    }
-                    break;
-                case 19:
-                    if (Convert.ToByte(button19.Content) != equalsDigit)
-                    {
+                        break;
+                    case 19:
                         button19.Background = Brushes.Red;
-                    }
-                    break;
-                case 20:
-                    if (Convert.ToByte(button20.Content) != equalsDigit)
-                    {
+                        break;
+                    case 20:
                         button20.Background = Brushes.Red;
-                    }
-                    break;
-                case 21:
-                    if (Convert.ToByte(button21.Content) != equalsDigit)
-                    {
+                        break;
+                    case 21:
                         button21.Background = Brushes.Red;
-                    }
-                    break;
-                case 22:
-                    if (Convert.ToByte(button22.Content) != equalsDigit)
-                    {
+                        break;
+                    case 22:
                         button22.Background = Brushes.Red;
-                    }
-                    break;
-                case 23:
-                    if (Convert.ToByte(button23.Content) != equalsDigit)
-                    {
+                        break;
+                    case 23:
                         button23.Background = Brushes.Red;
-                    }
-                    break;
-                case 24:
-                    if (Convert.ToByte(button24.Content) != equalsDigit)
-                    {
+                        break;
+                    case 24:
                         button24.Background = Brushes.Red;
-                    }
-                    break;
-                case 25:
-                    if (Convert.ToByte(button25.Content) != equalsDigit)
-                    {
+                        break;
+                    case 25:
                         button25.Background = Brushes.Red;
-                    }
-                    break;
-
+                        break;
+                }
             }
         }
 
@@ -349,7 +276,8 @@ namespace M.B.N.G.B.T.Schulte_Test
                 if (equalsDigit != buttonContent)
                 {
                     dispatcherTimer.Stop();
-                    BrushingButtons();
+                    lsMissingNumbers = cl.SortingAndSerchInArrMissingNumbers(lsClickButton.ToArray(), 25);
+                    BrushingButtons1(lsMissingNumbers.ToArray());
                     stage = 1;
                     buttonsIsEnabled = false;
                     timer.Foreground = Brushes.Red;
@@ -363,6 +291,10 @@ namespace M.B.N.G.B.T.Schulte_Test
                     {
                         NavigationService.Navigate(new SchulteTestTablePage1());
                     }
+                    else
+                    {
+                        NavigationService.Navigate(new SchulteTestResultPage());
+                    }
                 }
             }
             door = true;
@@ -370,7 +302,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click1(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 1;
+            if (buttonNumber != 1 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 1);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button1.Content) && equalsDigit + 1 < Convert.ToByte(button1.Content) && buttonsIsEnabled)
+            {
+                button1.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button1.Content))
@@ -388,7 +327,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 2;
+            if (buttonNumber != 2 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 2);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button2.Content) && equalsDigit + 1 < Convert.ToByte(button2.Content) && buttonsIsEnabled)
+            {
+                button2.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button2.Content))
@@ -406,7 +352,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click3(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 3;
+            if (buttonNumber != 3 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 3);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button3.Content) && equalsDigit + 1 < Convert.ToByte(button3.Content) && buttonsIsEnabled)
+            {
+                button3.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button3.Content))
@@ -424,7 +377,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click4(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 4;
+            if (buttonNumber != 4 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 4);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button4.Content) && equalsDigit + 1 < Convert.ToByte(button4.Content) && buttonsIsEnabled)
+            {
+                button4.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button4.Content))
@@ -442,7 +402,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click5(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 5;
+            if (buttonNumber != 5 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 5);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button5.Content) && equalsDigit + 1 < Convert.ToByte(button5.Content) && buttonsIsEnabled)
+            {
+                button5.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button5.Content))
@@ -460,7 +427,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click6(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 6;
+            if (buttonNumber != 6 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 6);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button6.Content) && equalsDigit + 1 < Convert.ToByte(button6.Content) && buttonsIsEnabled)
+            {
+                button6.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button6.Content))
@@ -478,7 +452,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click7(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 7;
+            if (buttonNumber != 7 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 7);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button7.Content) && equalsDigit + 1 < Convert.ToByte(button7.Content) && buttonsIsEnabled)
+            {
+                button7.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button7.Content))
@@ -496,7 +477,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click8(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 8;
+            if (buttonNumber != 8 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 8);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button8.Content) && equalsDigit + 1 < Convert.ToByte(button8.Content) && buttonsIsEnabled)
+            {
+                button8.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button8.Content))
@@ -514,7 +502,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click9(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 9;
+            if (buttonNumber != 9 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 9);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button9.Content) && equalsDigit + 1 < Convert.ToByte(button9.Content) && buttonsIsEnabled)
+            {
+                button9.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button9.Content))
@@ -532,7 +527,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click10(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 10;
+            if (buttonNumber != 10 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 10);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button10.Content) && equalsDigit + 1 < Convert.ToByte(button10.Content) && buttonsIsEnabled)
+            {
+                button10.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button10.Content))
@@ -550,7 +552,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click11(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 11;
+            if (buttonNumber != 11 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 11);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button11.Content) && equalsDigit + 1 < Convert.ToByte(button11.Content) && buttonsIsEnabled)
+            {
+                button11.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button11.Content))
@@ -568,7 +577,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click12(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 12;
+            if (buttonNumber != 12 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 12);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button12.Content) && equalsDigit + 1 < Convert.ToByte(button12.Content) && buttonsIsEnabled)
+            {
+                button12.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button12.Content))
@@ -586,7 +602,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click13(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 13;
+            if (buttonNumber != 13 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 13);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button13.Content) && equalsDigit + 1 < Convert.ToByte(button13.Content) && buttonsIsEnabled)
+            {
+                button13.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button13.Content))
@@ -604,7 +627,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click14(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 14;
+            if (buttonNumber != 14 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 14);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button14.Content) && equalsDigit + 1 < Convert.ToByte(button14.Content) && buttonsIsEnabled)
+            {
+                button14.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button14.Content))
@@ -622,7 +652,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click15(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 15;
+            if (buttonNumber != 15 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 15);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button15.Content) && equalsDigit + 1 < Convert.ToByte(button15.Content) && buttonsIsEnabled)
+            {
+                button15.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button15.Content))
@@ -640,7 +677,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click16(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 16;
+            if (buttonNumber != 16 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 16);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button16.Content) && equalsDigit + 1 < Convert.ToByte(button16.Content) && buttonsIsEnabled)
+            {
+                button16.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button16.Content))
@@ -658,7 +702,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click17(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 17;
+            if (buttonNumber != 17 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 17);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button17.Content) && equalsDigit + 1 < Convert.ToByte(button17.Content) && buttonsIsEnabled)
+            {
+                button17.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button17.Content))
@@ -676,7 +727,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click18(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 18;
+            if (buttonNumber != 18 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 18);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button18.Content) && equalsDigit + 1 < Convert.ToByte(button18.Content) && buttonsIsEnabled)
+            {
+                button18.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button18.Content))
@@ -694,7 +752,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click19(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 19;
+            if (buttonNumber != 19 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 19);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button19.Content) && equalsDigit + 1 < Convert.ToByte(button19.Content) && buttonsIsEnabled)
+            {
+                button19.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button19.Content))
@@ -712,7 +777,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click20(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 20;
+            if (buttonNumber != 20 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 20);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button20.Content) && equalsDigit + 1 < Convert.ToByte(button20.Content) && buttonsIsEnabled)
+            {
+                button20.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button20.Content))
@@ -730,7 +802,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click21(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 21;
+            if (buttonNumber != 21 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 21);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button21.Content) && equalsDigit + 1 < Convert.ToByte(button21.Content) && buttonsIsEnabled)
+            {
+                button21.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button21.Content))
@@ -748,7 +827,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click22(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 22;
+            if (buttonNumber != 22 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 22);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button22.Content) && equalsDigit + 1 < Convert.ToByte(button22.Content) && buttonsIsEnabled)
+            {
+                button22.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button22.Content))
@@ -766,7 +852,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click23(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 23;
+            if (buttonNumber != 23 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 23);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button23.Content) && equalsDigit + 1 < Convert.ToByte(button23.Content) && buttonsIsEnabled)
+            {
+                button23.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button23.Content))
@@ -784,7 +877,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click24(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 24;
+            if (buttonNumber != 24 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 24);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button24.Content) && equalsDigit + 1 < Convert.ToByte(button24.Content) && buttonsIsEnabled)
+            {
+                button24.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button24.Content))
@@ -802,7 +902,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click25(object sender, RoutedEventArgs e)
         {
-            buttonNumber = 25;
+            if (buttonNumber != 25 && buttonsIsEnabled)
+            {
+                lsClickButton.Add(buttonNumber = 25);
+            }
+            if (equalsDigit + 1 != Convert.ToByte(button25.Content) && equalsDigit + 1 < Convert.ToByte(button25.Content) && buttonsIsEnabled)
+            {
+                button25.Background = Brushes.Yellow;
+            }
             if (buttonsIsEnabled)
             {
                 if (equalsDigit < Convert.ToByte(button25.Content))

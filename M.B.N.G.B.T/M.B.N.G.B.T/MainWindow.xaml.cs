@@ -25,7 +25,7 @@ namespace M.B.N.G.B.T
     {
 
         
-         public MainWindow()
+        public MainWindow()
         {
            
             InitializeComponent();

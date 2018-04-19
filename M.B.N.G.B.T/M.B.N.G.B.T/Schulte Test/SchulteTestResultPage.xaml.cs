@@ -18,9 +18,9 @@ namespace M.B.N.G.B.T.Schulte_Test
     /// <summary>
     /// Логика взаимодействия для SchulteResultPage.xaml
     /// </summary>
-    public partial class SchulteResultPage : Page
+    public partial class SchulteTestResultPage : Page
     {
-        public SchulteResultPage()
+        public SchulteTestResultPage()
         {
             InitializeComponent();
         }
