@@ -27,6 +27,8 @@ namespace M.B.N.G.B.T.Schulte_Test
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
+        public static byte stage = 1;
+
         public SchulteTestTablePage3()
         {
             InitializeComponent();

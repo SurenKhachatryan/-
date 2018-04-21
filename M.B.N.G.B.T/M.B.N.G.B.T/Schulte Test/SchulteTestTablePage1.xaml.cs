@@ -1,19 +1,11 @@
-﻿using System;
+﻿using ClassLibrary;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
-using ClassLibrary;
 
 namespace M.B.N.G.B.T.Schulte_Test
 {
@@ -22,21 +14,22 @@ namespace M.B.N.G.B.T.Schulte_Test
     /// </summary>
     public partial class SchulteTestTablePage1 : Page
     {
-        private List<int> lsRndDigite = new List<int>();
-        private List<int> lsIntervalPressButtons = new List<int>();
-        private List<int> lsClickButton = new List<int>();
-        private List<int> lsMissingNumbers = new List<int>();
+        private List<int> listClickButtons = new List<int>();
+        private List<int> listRandomNumbers = new List<int>();
+        private List<int> listMissingNumbers = new List<int>();
+
         private Random rnd = new Random();
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
+        public static byte stage = 1;
+
         private byte second = 0;
         private byte equalsDigit = 0;
-        private byte buttonContent = 0;
-        private bool door = true;
-        public static byte stage = 1;
-        private bool buttonsIsEnabled = true;
         private byte buttonNumber = 0;
+        private byte buttonContent = 0;
+        private bool doorForResultFunction = true;
+        private bool buttonsIsEnabled = true;
 
         public SchulteTestTablePage1()
         {
@@ -80,14 +73,14 @@ namespace M.B.N.G.B.T.Schulte_Test
             else
             {
                 timer.Foreground = Brushes.Red;
-                lsMissingNumbers = cl.SortingAndSerchInArrMissingNumbers(lsClickButton.ToArray(), 25);
-                BrushingButtons1(lsMissingNumbers.ToArray());
+                listMissingNumbers = cl.SortingAndSerchInArrMissingNumbers(listClickButtons.ToArray(), 25);
+                BrushingButtons(listMissingNumbers.ToArray());
                 dispatcherTimer.Stop();
                 buttonsIsEnabled = false;
             }
         }
 
-        private void BrushingButtons1(int[] arr)
+        private void BrushingButtons(int[] arr)
         {
             for (int i = 0; i < arr.Length; i++)
             {
@@ -178,9 +171,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             for (int i = 1; i <= 25; i++)
             {
                 temp = rnd.Next(1, 26);
-                if (lsRndDigite.Count == 0 || !cl.SerchMatchingNumberInArr(lsRndDigite.ToArray(), temp))
+                if (listRandomNumbers.Count == 0 || !cl.SerchMatchingNumberInArr(listRandomNumbers.ToArray(), temp))
                 {
-                    lsRndDigite.Add(temp);
+                    listRandomNumbers.Add(temp);
 
                     switch (i)
                     {
@@ -268,16 +261,16 @@ namespace M.B.N.G.B.T.Schulte_Test
             }
         }
 
-        private void AddlistIntervalPressButtons()
+        private void ResultFunction()
         {
-            if (door)
+            if (doorForResultFunction)
             {
                 equalsDigit++;
                 if (equalsDigit != buttonContent)
                 {
                     dispatcherTimer.Stop();
-                    lsMissingNumbers = cl.SortingAndSerchInArrMissingNumbers(lsClickButton.ToArray(), 25);
-                    BrushingButtons1(lsMissingNumbers.ToArray());
+                    listMissingNumbers = cl.SortingAndSerchInArrMissingNumbers(listClickButtons.ToArray(), 25);
+                    BrushingButtons(listMissingNumbers.ToArray());
                     stage = 1;
                     buttonsIsEnabled = false;
                     timer.Foreground = Brushes.Red;
@@ -297,14 +290,14 @@ namespace M.B.N.G.B.T.Schulte_Test
                     }
                 }
             }
-            door = true;
+            doorForResultFunction = true;
         }
 
         private void Button_Click1(object sender, RoutedEventArgs e)
         {
             if (buttonNumber != 1 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 1);
+                listClickButtons.Add(buttonNumber = 1);
             }
             if (equalsDigit + 1 != Convert.ToByte(button1.Content) && equalsDigit + 1 < Convert.ToByte(button1.Content) && buttonsIsEnabled)
             {
@@ -319,9 +312,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button1.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -329,7 +322,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 2 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 2);
+                listClickButtons.Add(buttonNumber = 2);
             }
             if (equalsDigit + 1 != Convert.ToByte(button2.Content) && equalsDigit + 1 < Convert.ToByte(button2.Content) && buttonsIsEnabled)
             {
@@ -344,9 +337,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button2.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -354,7 +347,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 3 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 3);
+                listClickButtons.Add(buttonNumber = 3);
             }
             if (equalsDigit + 1 != Convert.ToByte(button3.Content) && equalsDigit + 1 < Convert.ToByte(button3.Content) && buttonsIsEnabled)
             {
@@ -369,9 +362,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button3.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -379,7 +372,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 4 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 4);
+                listClickButtons.Add(buttonNumber = 4);
             }
             if (equalsDigit + 1 != Convert.ToByte(button4.Content) && equalsDigit + 1 < Convert.ToByte(button4.Content) && buttonsIsEnabled)
             {
@@ -394,9 +387,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button4.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -404,7 +397,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 5 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 5);
+                listClickButtons.Add(buttonNumber = 5);
             }
             if (equalsDigit + 1 != Convert.ToByte(button5.Content) && equalsDigit + 1 < Convert.ToByte(button5.Content) && buttonsIsEnabled)
             {
@@ -419,9 +412,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button5.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -429,7 +422,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 6 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 6);
+                listClickButtons.Add(buttonNumber = 6);
             }
             if (equalsDigit + 1 != Convert.ToByte(button6.Content) && equalsDigit + 1 < Convert.ToByte(button6.Content) && buttonsIsEnabled)
             {
@@ -444,9 +437,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button6.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -454,7 +447,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 7 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 7);
+                listClickButtons.Add(buttonNumber = 7);
             }
             if (equalsDigit + 1 != Convert.ToByte(button7.Content) && equalsDigit + 1 < Convert.ToByte(button7.Content) && buttonsIsEnabled)
             {
@@ -469,9 +462,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button7.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -479,7 +472,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 8 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 8);
+                listClickButtons.Add(buttonNumber = 8);
             }
             if (equalsDigit + 1 != Convert.ToByte(button8.Content) && equalsDigit + 1 < Convert.ToByte(button8.Content) && buttonsIsEnabled)
             {
@@ -494,9 +487,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button8.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -504,7 +497,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 9 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 9);
+                listClickButtons.Add(buttonNumber = 9);
             }
             if (equalsDigit + 1 != Convert.ToByte(button9.Content) && equalsDigit + 1 < Convert.ToByte(button9.Content) && buttonsIsEnabled)
             {
@@ -519,9 +512,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button9.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -529,7 +522,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 10 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 10);
+                listClickButtons.Add(buttonNumber = 10);
             }
             if (equalsDigit + 1 != Convert.ToByte(button10.Content) && equalsDigit + 1 < Convert.ToByte(button10.Content) && buttonsIsEnabled)
             {
@@ -544,9 +537,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button10.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -554,7 +547,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 11 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 11);
+                listClickButtons.Add(buttonNumber = 11);
             }
             if (equalsDigit + 1 != Convert.ToByte(button11.Content) && equalsDigit + 1 < Convert.ToByte(button11.Content) && buttonsIsEnabled)
             {
@@ -569,9 +562,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button11.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -579,7 +572,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 12 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 12);
+                listClickButtons.Add(buttonNumber = 12);
             }
             if (equalsDigit + 1 != Convert.ToByte(button12.Content) && equalsDigit + 1 < Convert.ToByte(button12.Content) && buttonsIsEnabled)
             {
@@ -594,9 +587,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button12.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -604,7 +597,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 13 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 13);
+                listClickButtons.Add(buttonNumber = 13);
             }
             if (equalsDigit + 1 != Convert.ToByte(button13.Content) && equalsDigit + 1 < Convert.ToByte(button13.Content) && buttonsIsEnabled)
             {
@@ -619,9 +612,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button13.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -629,7 +622,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 14 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 14);
+                listClickButtons.Add(buttonNumber = 14);
             }
             if (equalsDigit + 1 != Convert.ToByte(button14.Content) && equalsDigit + 1 < Convert.ToByte(button14.Content) && buttonsIsEnabled)
             {
@@ -644,9 +637,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button14.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -654,7 +647,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 15 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 15);
+                listClickButtons.Add(buttonNumber = 15);
             }
             if (equalsDigit + 1 != Convert.ToByte(button15.Content) && equalsDigit + 1 < Convert.ToByte(button15.Content) && buttonsIsEnabled)
             {
@@ -669,9 +662,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button15.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -679,7 +672,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 16 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 16);
+                listClickButtons.Add(buttonNumber = 16);
             }
             if (equalsDigit + 1 != Convert.ToByte(button16.Content) && equalsDigit + 1 < Convert.ToByte(button16.Content) && buttonsIsEnabled)
             {
@@ -694,9 +687,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button16.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -704,7 +697,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 17 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 17);
+                listClickButtons.Add(buttonNumber = 17);
             }
             if (equalsDigit + 1 != Convert.ToByte(button17.Content) && equalsDigit + 1 < Convert.ToByte(button17.Content) && buttonsIsEnabled)
             {
@@ -719,9 +712,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button17.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -729,7 +722,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 18 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 18);
+                listClickButtons.Add(buttonNumber = 18);
             }
             if (equalsDigit + 1 != Convert.ToByte(button18.Content) && equalsDigit + 1 < Convert.ToByte(button18.Content) && buttonsIsEnabled)
             {
@@ -744,9 +737,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button18.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -754,7 +747,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 19 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 19);
+                listClickButtons.Add(buttonNumber = 19);
             }
             if (equalsDigit + 1 != Convert.ToByte(button19.Content) && equalsDigit + 1 < Convert.ToByte(button19.Content) && buttonsIsEnabled)
             {
@@ -769,9 +762,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button19.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -779,7 +772,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 20 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 20);
+                listClickButtons.Add(buttonNumber = 20);
             }
             if (equalsDigit + 1 != Convert.ToByte(button20.Content) && equalsDigit + 1 < Convert.ToByte(button20.Content) && buttonsIsEnabled)
             {
@@ -794,9 +787,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button20.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -804,7 +797,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 21 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 21);
+                listClickButtons.Add(buttonNumber = 21);
             }
             if (equalsDigit + 1 != Convert.ToByte(button21.Content) && equalsDigit + 1 < Convert.ToByte(button21.Content) && buttonsIsEnabled)
             {
@@ -819,9 +812,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button21.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -829,7 +822,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 22 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 22);
+                listClickButtons.Add(buttonNumber = 22);
             }
             if (equalsDigit + 1 != Convert.ToByte(button22.Content) && equalsDigit + 1 < Convert.ToByte(button22.Content) && buttonsIsEnabled)
             {
@@ -844,9 +837,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button22.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -854,7 +847,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 23 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 23);
+                listClickButtons.Add(buttonNumber = 23);
             }
             if (equalsDigit + 1 != Convert.ToByte(button23.Content) && equalsDigit + 1 < Convert.ToByte(button23.Content) && buttonsIsEnabled)
             {
@@ -869,9 +862,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button23.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -879,7 +872,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 24 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 24);
+                listClickButtons.Add(buttonNumber = 24);
             }
             if (equalsDigit + 1 != Convert.ToByte(button24.Content) && equalsDigit + 1 < Convert.ToByte(button24.Content) && buttonsIsEnabled)
             {
@@ -894,9 +887,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button24.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
 
@@ -904,7 +897,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             if (buttonNumber != 25 && buttonsIsEnabled)
             {
-                lsClickButton.Add(buttonNumber = 25);
+                listClickButtons.Add(buttonNumber = 25);
             }
             if (equalsDigit + 1 != Convert.ToByte(button25.Content) && equalsDigit + 1 < Convert.ToByte(button25.Content) && buttonsIsEnabled)
             {
@@ -919,9 +912,9 @@ namespace M.B.N.G.B.T.Schulte_Test
                 else
                 if (equalsDigit >= Convert.ToByte(button25.Content))
                 {
-                    door = false;
+                    doorForResultFunction = false;
                 }
-                AddlistIntervalPressButtons();
+                ResultFunction();
             }
         }
     }

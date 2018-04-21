@@ -40,11 +40,14 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
+            SchulteTestTablePage2.stage = 1;
+            SchulteTestTablePage2.listAllStageMistakes.Clear();
             NavigationService.Navigate(new SchulteTestTablePage2());
         }
 
         private void button4_Click(object sender, RoutedEventArgs e)
         {
+            SchulteTestTablePage3.stage = 1;
             NavigationService.Navigate(new SchulteTestTablePage3());
         }
     }
