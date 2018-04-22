@@ -16,7 +16,7 @@ namespace M.B.N.G.B.T.Schulte_Test
     {
         private List<int> listClickButtons = new List<int>();
         private List<int> listRandomNumbers = new List<int>();
-        private List<int> listMissingNumbers = new List<int>();
+        private List<int> listClickMistakesButtons = new List<int>();
 
         private Random rnd = new Random();
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
@@ -25,11 +25,9 @@ namespace M.B.N.G.B.T.Schulte_Test
         public static byte stage = 1;
 
         private byte second = 0;
-        private byte equalsDigit = 0;
-        private byte buttonNumber = 0;
-        private byte buttonContent = 0;
-        private bool doorForResultFunction = true;
-        private bool buttonsIsEnabled = true;
+        private byte counterButtonClick = 0;
+        private byte secondForBrushNullButtons = 0;
+
 
         public SchulteTestTablePage1()
         {
@@ -69,97 +67,185 @@ namespace M.B.N.G.B.T.Schulte_Test
                 {
                     timer.Foreground = Brushes.Black;
                 }
+
+                if (secondForBrushNullButtons != 2)
+                {
+                    secondForBrushNullButtons++;
+                }
+                else
+                {
+                    BrushingButtonsNull();
+                }
             }
             else
             {
                 timer.Foreground = Brushes.Red;
-                listMissingNumbers = cl.SortingAndSerchInArrMissingNumbers(listClickButtons.ToArray(), 25);
-                BrushingButtons(listMissingNumbers.ToArray());
+                listClickMistakesButtons = cl.SortingAndSerchInArrMissingNumbers(listClickButtons.ToArray(), 25);
+                BrushingButtonsRedAndNull(listClickMistakesButtons.ToArray(), 1);
                 dispatcherTimer.Stop();
-                buttonsIsEnabled = false;
             }
         }
+        private void BrushingButtonsNull()
+        {
+            BrushingButtonsRedAndNull(listClickMistakesButtons.ToArray(), 2);
+            secondForBrushNullButtons = 0;
+        }
 
-        private void BrushingButtons(int[] arr)
+        private void BrushingButtonsRedAndNull(int[] arr, byte brushRedandNull)
         {
             for (int i = 0; i < arr.Length; i++)
             {
                 switch (arr[i])
                 {
                     case 1:
-                        button1.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button1.Background = Brushes.Red;
+                        else
+                            button1.Background = null;
                         break;
                     case 2:
-                        button2.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button2.Background = Brushes.Red;
+                        else
+                            button2.Background = null;
                         break;
                     case 3:
-                        button3.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button3.Background = Brushes.Red;
+                        else
+                            button3.Background = null;
                         break;
                     case 4:
-                        button4.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button4.Background = Brushes.Red;
+                        else
+                            button4.Background = null;
                         break;
                     case 5:
-                        button5.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button5.Background = Brushes.Red;
+                        else
+                            button5.Background = null;
                         break;
                     case 6:
-                        button6.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button6.Background = Brushes.Red;
+                        else
+                            button6.Background = null;
                         break;
                     case 7:
-                        button7.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button7.Background = Brushes.Red;
+                        else
+                            button7.Background = null;
                         break;
                     case 8:
-                        button8.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button8.Background = Brushes.Red;
+                        else
+                            button8.Background = null;
                         break;
                     case 9:
-                        button9.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button9.Background = Brushes.Red;
+                        else
+                            button9.Background = null;
                         break;
                     case 10:
-                        button10.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button10.Background = Brushes.Red;
+                        else
+                            button10.Background = null;
                         break;
                     case 11:
-                        button11.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button11.Background = Brushes.Red;
+                        else
+                            button11.Background = null;
                         break;
                     case 12:
-                        button12.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button12.Background = Brushes.Red;
+                        else
+                            button12.Background = null;
                         break;
                     case 13:
-                        button13.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button13.Background = Brushes.Red;
+                        else
+                            button13.Background = null;
                         break;
                     case 14:
-                        button14.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button14.Background = Brushes.Red;
+                        else
+                            button14.Background = null;
                         break;
                     case 15:
-                        button15.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button15.Background = Brushes.Red;
+                        else
+                            button15.Background = null;
                         break;
                     case 16:
-                        button16.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button16.Background = Brushes.Red;
+                        else
+                            button16.Background = null;
                         break;
                     case 17:
-                        button17.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button17.Background = Brushes.Red;
+                        else
+                            button17.Background = null;
                         break;
                     case 18:
-                        button18.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button18.Background = Brushes.Red;
+                        else
+                            button18.Background = null;
                         break;
                     case 19:
-                        button19.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button19.Background = Brushes.Red;
+                        else
+                            button19.Background = null;
                         break;
                     case 20:
-                        button20.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button20.Background = Brushes.Red;
+                        else
+                            button20.Background = null;
                         break;
                     case 21:
-                        button21.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button21.Background = Brushes.Red;
+                        else
+                            button21.Background = null;
                         break;
                     case 22:
-                        button22.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button22.Background = Brushes.Red;
+                        else
+                            button22.Background = null;
                         break;
                     case 23:
-                        button23.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button23.Background = Brushes.Red;
+                        else
+                            button23.Background = null;
                         break;
                     case 24:
-                        button24.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button24.Background = Brushes.Red;
+                        else
+                            button24.Background = null;
                         break;
                     case 25:
-                        button25.Background = Brushes.Red;
+                        if (brushRedandNull == 1)
+                            button25.Background = Brushes.Red;
+                        else
+                            button25.Background = null;
                         break;
                 }
             }
@@ -261,661 +347,471 @@ namespace M.B.N.G.B.T.Schulte_Test
             }
         }
 
-        private void ResultFunction()
+        private void FinalStage()
         {
-            if (doorForResultFunction)
+            if (counterButtonClick == 25)
             {
-                equalsDigit++;
-                if (equalsDigit != buttonContent)
+                stage++;
+                dispatcherTimer.Stop();
+                if (stage != 6)
                 {
-                    dispatcherTimer.Stop();
-                    listMissingNumbers = cl.SortingAndSerchInArrMissingNumbers(listClickButtons.ToArray(), 25);
-                    BrushingButtons(listMissingNumbers.ToArray());
-                    stage = 1;
-                    buttonsIsEnabled = false;
-                    timer.Foreground = Brushes.Red;
+                    NavigationService.Navigate(new SchulteTestTablePage1());
                 }
                 else
-                if (equalsDigit == 25)
                 {
-                    stage++;
-                    dispatcherTimer.Stop();
-                    if (stage != 6)
-                    {
-                        NavigationService.Navigate(new SchulteTestTablePage1());
-                    }
-                    else
-                    {
-                        NavigationService.Navigate(new SchulteTestResultPage());
-                    }
+                    NavigationService.Navigate(new SchulteTestResultPage());
                 }
             }
-            doorForResultFunction = true;
         }
 
         private void Button_Click1(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 1 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button1.Content))
             {
-                listClickButtons.Add(buttonNumber = 1);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(1);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button1.Content) && equalsDigit + 1 < Convert.ToByte(button1.Content) && buttonsIsEnabled)
+            else
+            if (counterButtonClick != Convert.ToByte(button1.Content))
             {
-                button1.Background = Brushes.Yellow;
+                button1.Background = Brushes.Red;
+                listClickMistakesButtons.Add(1);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button1.Content))
-                {
-                    buttonContent = Convert.ToByte(button1.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button1.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 2 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button2.Content))
             {
-                listClickButtons.Add(buttonNumber = 2);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(2);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button2.Content) && equalsDigit + 1 < Convert.ToByte(button2.Content) && buttonsIsEnabled)
+            else
+           if (counterButtonClick != Convert.ToByte(button2.Content))
             {
-                button2.Background = Brushes.Yellow;
+                button2.Background = Brushes.Red;
+                listClickMistakesButtons.Add(2);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button2.Content))
-                {
-                    buttonContent = Convert.ToByte(button2.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button2.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click3(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 3 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button3.Content))
             {
-                listClickButtons.Add(buttonNumber = 3);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(3);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button3.Content) && equalsDigit + 1 < Convert.ToByte(button3.Content) && buttonsIsEnabled)
+            else
+               if (counterButtonClick != Convert.ToByte(button3.Content))
             {
-                button3.Background = Brushes.Yellow;
+                button3.Background = Brushes.Red;
+                listClickMistakesButtons.Add(3);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button3.Content))
-                {
-                    buttonContent = Convert.ToByte(button3.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button3.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click4(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 4 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button4.Content))
             {
-                listClickButtons.Add(buttonNumber = 4);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(4);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button4.Content) && equalsDigit + 1 < Convert.ToByte(button4.Content) && buttonsIsEnabled)
+            else
+             if (counterButtonClick != Convert.ToByte(button4.Content))
             {
-                button4.Background = Brushes.Yellow;
+                button4.Background = Brushes.Red;
+                listClickMistakesButtons.Add(4);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button4.Content))
-                {
-                    buttonContent = Convert.ToByte(button4.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button4.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click5(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 5 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button5.Content))
             {
-                listClickButtons.Add(buttonNumber = 5);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(5);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button5.Content) && equalsDigit + 1 < Convert.ToByte(button5.Content) && buttonsIsEnabled)
+            else
+            if (counterButtonClick != Convert.ToByte(button5.Content))
             {
-                button5.Background = Brushes.Yellow;
+                button5.Background = Brushes.Red;
+                listClickMistakesButtons.Add(5);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button5.Content))
-                {
-                    buttonContent = Convert.ToByte(button5.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button5.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click6(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 6 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button6.Content))
             {
-                listClickButtons.Add(buttonNumber = 6);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(6);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button6.Content) && equalsDigit + 1 < Convert.ToByte(button6.Content) && buttonsIsEnabled)
+            else
+           if (counterButtonClick != Convert.ToByte(button6.Content))
             {
-                button6.Background = Brushes.Yellow;
+                button6.Background = Brushes.Red;
+                listClickMistakesButtons.Add(6);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button6.Content))
-                {
-                    buttonContent = Convert.ToByte(button6.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button6.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click7(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 7 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button7.Content))
             {
-                listClickButtons.Add(buttonNumber = 7);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(7);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button7.Content) && equalsDigit + 1 < Convert.ToByte(button7.Content) && buttonsIsEnabled)
+            else
+            if (counterButtonClick != Convert.ToByte(button7.Content))
             {
-                button7.Background = Brushes.Yellow;
+                button7.Background = Brushes.Red;
+                listClickMistakesButtons.Add(7);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button7.Content))
-                {
-                    buttonContent = Convert.ToByte(button7.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button7.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click8(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 8 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button8.Content))
             {
-                listClickButtons.Add(buttonNumber = 8);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(8);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button8.Content) && equalsDigit + 1 < Convert.ToByte(button8.Content) && buttonsIsEnabled)
+            else
+            if (counterButtonClick != Convert.ToByte(button8.Content))
             {
-                button8.Background = Brushes.Yellow;
+                button8.Background = Brushes.Red;
+                listClickMistakesButtons.Add(8);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button8.Content))
-                {
-                    buttonContent = Convert.ToByte(button8.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button8.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click9(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 9 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button9.Content))
             {
-                listClickButtons.Add(buttonNumber = 9);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(9);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button9.Content) && equalsDigit + 1 < Convert.ToByte(button9.Content) && buttonsIsEnabled)
+            else
+            if (counterButtonClick != Convert.ToByte(button9.Content))
             {
-                button9.Background = Brushes.Yellow;
+                button9.Background = Brushes.Red;
+                listClickMistakesButtons.Add(9);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button9.Content))
-                {
-                    buttonContent = Convert.ToByte(button9.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button9.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click10(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 10 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button10.Content))
             {
-                listClickButtons.Add(buttonNumber = 10);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(10);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button10.Content) && equalsDigit + 1 < Convert.ToByte(button10.Content) && buttonsIsEnabled)
+            else
+             if (counterButtonClick != Convert.ToByte(button10.Content))
             {
-                button10.Background = Brushes.Yellow;
+                button10.Background = Brushes.Red;
+                listClickMistakesButtons.Add(10);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button10.Content))
-                {
-                    buttonContent = Convert.ToByte(button10.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button10.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click11(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 11 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button11.Content))
             {
-                listClickButtons.Add(buttonNumber = 11);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(11);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button11.Content) && equalsDigit + 1 < Convert.ToByte(button11.Content) && buttonsIsEnabled)
+            else
+           if (counterButtonClick != Convert.ToByte(button11.Content))
             {
-                button11.Background = Brushes.Yellow;
+                button11.Background = Brushes.Red;
+                listClickMistakesButtons.Add(11);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button11.Content))
-                {
-                    buttonContent = Convert.ToByte(button11.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button11.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click12(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 12 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button12.Content))
             {
-                listClickButtons.Add(buttonNumber = 12);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(12);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button12.Content) && equalsDigit + 1 < Convert.ToByte(button12.Content) && buttonsIsEnabled)
+            else
+           if (counterButtonClick != Convert.ToByte(button12.Content))
             {
-                button12.Background = Brushes.Yellow;
+                button12.Background = Brushes.Red;
+                listClickMistakesButtons.Add(12);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button12.Content))
-                {
-                    buttonContent = Convert.ToByte(button12.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button12.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click13(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 13 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button13.Content))
             {
-                listClickButtons.Add(buttonNumber = 13);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(13);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button13.Content) && equalsDigit + 1 < Convert.ToByte(button13.Content) && buttonsIsEnabled)
+            else
+            if (counterButtonClick != Convert.ToByte(button13.Content))
             {
-                button13.Background = Brushes.Yellow;
+                button13.Background = Brushes.Red;
+                listClickMistakesButtons.Add(13);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button13.Content))
-                {
-                    buttonContent = Convert.ToByte(button13.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button13.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click14(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 14 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button14.Content))
             {
-                listClickButtons.Add(buttonNumber = 14);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(14);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button14.Content) && equalsDigit + 1 < Convert.ToByte(button14.Content) && buttonsIsEnabled)
+            else
+             if (counterButtonClick != Convert.ToByte(button14.Content))
             {
-                button14.Background = Brushes.Yellow;
+                button14.Background = Brushes.Red;
+                listClickMistakesButtons.Add(14);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button14.Content))
-                {
-                    buttonContent = Convert.ToByte(button14.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button14.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click15(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 15 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button15.Content))
             {
-                listClickButtons.Add(buttonNumber = 15);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(15);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button15.Content) && equalsDigit + 1 < Convert.ToByte(button15.Content) && buttonsIsEnabled)
+            else
+            if (counterButtonClick != Convert.ToByte(button15.Content))
             {
-                button15.Background = Brushes.Yellow;
+                button15.Background = Brushes.Red;
+                listClickMistakesButtons.Add(15);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button15.Content))
-                {
-                    buttonContent = Convert.ToByte(button15.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button15.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click16(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 16 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button16.Content))
             {
-                listClickButtons.Add(buttonNumber = 16);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(16);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button16.Content) && equalsDigit + 1 < Convert.ToByte(button16.Content) && buttonsIsEnabled)
+            else
+             if (counterButtonClick != Convert.ToByte(button16.Content))
             {
-                button16.Background = Brushes.Yellow;
+                button16.Background = Brushes.Red;
+                listClickMistakesButtons.Add(16);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button16.Content))
-                {
-                    buttonContent = Convert.ToByte(button16.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button16.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click17(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 17 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button17.Content))
             {
-                listClickButtons.Add(buttonNumber = 17);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(17);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button17.Content) && equalsDigit + 1 < Convert.ToByte(button17.Content) && buttonsIsEnabled)
+            else
+             if (counterButtonClick != Convert.ToByte(button17.Content))
             {
-                button17.Background = Brushes.Yellow;
+                button17.Background = Brushes.Red;
+                listClickMistakesButtons.Add(17);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button17.Content))
-                {
-                    buttonContent = Convert.ToByte(button17.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button17.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click18(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 18 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button18.Content))
             {
-                listClickButtons.Add(buttonNumber = 18);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(18);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button18.Content) && equalsDigit + 1 < Convert.ToByte(button18.Content) && buttonsIsEnabled)
+            else
+             if (counterButtonClick != Convert.ToByte(button18.Content))
             {
-                button18.Background = Brushes.Yellow;
+                button18.Background = Brushes.Red;
+                listClickMistakesButtons.Add(18);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button18.Content))
-                {
-                    buttonContent = Convert.ToByte(button18.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button18.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click19(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 19 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button19.Content))
             {
-                listClickButtons.Add(buttonNumber = 19);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(19);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button19.Content) && equalsDigit + 1 < Convert.ToByte(button19.Content) && buttonsIsEnabled)
+            else
+            if (counterButtonClick != Convert.ToByte(button19.Content))
             {
-                button19.Background = Brushes.Yellow;
+                button19.Background = Brushes.Red;
+                listClickMistakesButtons.Add(19);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button19.Content))
-                {
-                    buttonContent = Convert.ToByte(button19.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button19.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click20(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 20 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button20.Content))
             {
-                listClickButtons.Add(buttonNumber = 20);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(20);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button20.Content) && equalsDigit + 1 < Convert.ToByte(button20.Content) && buttonsIsEnabled)
+            else
+            if (counterButtonClick != Convert.ToByte(button20.Content))
             {
-                button20.Background = Brushes.Yellow;
+                button20.Background = Brushes.Red;
+                listClickMistakesButtons.Add(20);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button20.Content))
-                {
-                    buttonContent = Convert.ToByte(button20.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button20.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click21(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 21 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button21.Content))
             {
-                listClickButtons.Add(buttonNumber = 21);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(21);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button21.Content) && equalsDigit + 1 < Convert.ToByte(button21.Content) && buttonsIsEnabled)
+            else
+           if (counterButtonClick != Convert.ToByte(button21.Content))
             {
-                button21.Background = Brushes.Yellow;
+                button21.Background = Brushes.Red;
+                listClickMistakesButtons.Add(21);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button21.Content))
-                {
-                    buttonContent = Convert.ToByte(button21.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button21.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click22(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 22 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button22.Content))
             {
-                listClickButtons.Add(buttonNumber = 22);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(22);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button22.Content) && equalsDigit + 1 < Convert.ToByte(button22.Content) && buttonsIsEnabled)
+            else
+              if (counterButtonClick != Convert.ToByte(button22.Content))
             {
-                button22.Background = Brushes.Yellow;
+                button22.Background = Brushes.Red;
+                listClickMistakesButtons.Add(22);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button22.Content))
-                {
-                    buttonContent = Convert.ToByte(button22.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button22.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click23(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 23 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button23.Content))
             {
-                listClickButtons.Add(buttonNumber = 23);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(23);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button23.Content) && equalsDigit + 1 < Convert.ToByte(button23.Content) && buttonsIsEnabled)
+            else
+            if (counterButtonClick != Convert.ToByte(button23.Content))
             {
-                button23.Background = Brushes.Yellow;
+                button23.Background = Brushes.Red;
+                listClickMistakesButtons.Add(23);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button23.Content))
-                {
-                    buttonContent = Convert.ToByte(button23.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button23.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click24(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 24 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button24.Content))
             {
-                listClickButtons.Add(buttonNumber = 24);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(24);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button24.Content) && equalsDigit + 1 < Convert.ToByte(button24.Content) && buttonsIsEnabled)
+            else
+            if (counterButtonClick != Convert.ToByte(button24.Content))
             {
-                button24.Background = Brushes.Yellow;
+                button24.Background = Brushes.Red;
+                listClickMistakesButtons.Add(24);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button24.Content))
-                {
-                    buttonContent = Convert.ToByte(button24.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button24.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
 
         private void Button_Click25(object sender, RoutedEventArgs e)
         {
-            if (buttonNumber != 25 && buttonsIsEnabled)
+            if (counterButtonClick + 1 == Convert.ToByte(button25.Content))
             {
-                listClickButtons.Add(buttonNumber = 25);
+                counterButtonClick++;
+                BrushingButtonsNull();
+                listClickButtons.Add(25);
             }
-            if (equalsDigit + 1 != Convert.ToByte(button25.Content) && equalsDigit + 1 < Convert.ToByte(button25.Content) && buttonsIsEnabled)
+            else
+            if (counterButtonClick != Convert.ToByte(button25.Content))
             {
-                button25.Background = Brushes.Yellow;
+                button25.Background = Brushes.Red;
+                listClickMistakesButtons.Add(25);
+                secondForBrushNullButtons = 0;
             }
-            if (buttonsIsEnabled)
-            {
-                if (equalsDigit < Convert.ToByte(button25.Content))
-                {
-                    buttonContent = Convert.ToByte(button25.Content);
-                }
-                else
-                if (equalsDigit >= Convert.ToByte(button25.Content))
-                {
-                    doorForResultFunction = false;
-                }
-                ResultFunction();
-            }
+            FinalStage();
         }
     }
 }

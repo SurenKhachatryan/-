@@ -24,7 +24,7 @@ namespace M.B.N.G.B.T.Schulte_Test
     public partial class SchulteTestTablePage2 : Page
     {
         private List<int> lsRndDigite = new List<int>();
-        private List<int> listMistakesButtons = new List<int>();
+        private List<int> listClickMistakesButtons = new List<int>();
 
         private Random rnd = new Random();
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
@@ -33,9 +33,9 @@ namespace M.B.N.G.B.T.Schulte_Test
         public static byte stage = 1;
         public static List<int> listAllStageMistakes = new List<int>();
 
-        private byte counterMistakes = 0;
+        private short counterMistakes = 0;
         private byte counterButtonClick = 0;
-        private byte second = 0;
+        private byte secondForBrushNullButtons = 0;
 
         public SchulteTestTablePage2()
         {
@@ -50,15 +50,15 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
 
-            if (second != 2)
+            if (secondForBrushNullButtons != 2)
             {
-                second++;
+                secondForBrushNullButtons++;
             }
             else
             {
                 BrushingButtonsNull();
                 dispatcherTimer.Stop();
-                second = 0;
+                secondForBrushNullButtons = 0;
             }
         }
 
@@ -170,9 +170,9 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             CounterMistakes.Foreground = Brushes.White;
 
-            for (int i = 0; i < listMistakesButtons.Count; i++)
+            for (int i = 0; i < listClickMistakesButtons.Count; i++)
             {
-                switch (listMistakesButtons[i])
+                switch (listClickMistakesButtons[i])
                 {
                     case 1:
                         button1.Background = null;
@@ -251,7 +251,7 @@ namespace M.B.N.G.B.T.Schulte_Test
                         break;
                 }
             }
-            listMistakesButtons.Clear();
+            listClickMistakesButtons.Clear();
         }
 
         private void FinalStage()
@@ -284,10 +284,10 @@ namespace M.B.N.G.B.T.Schulte_Test
             if (counterButtonClick != Convert.ToByte(button1.Content))
             {
                 CounterMistakes.Foreground = Brushes.Red;
-                listMistakesButtons.Add(1);
+                listClickMistakesButtons.Add(1);
                 CounterMistakes.Content = (++counterMistakes);
                 button1.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -305,9 +305,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(2);
+                listClickMistakesButtons.Add(2);
                 button2.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -325,9 +325,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(3);
+                listClickMistakesButtons.Add(3);
                 button3.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -345,9 +345,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(4);
+                listClickMistakesButtons.Add(4);
                 button4.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -365,9 +365,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(5);
+                listClickMistakesButtons.Add(5);
                 button5.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -385,9 +385,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(6);
+                listClickMistakesButtons.Add(6);
                 button6.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -405,9 +405,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(7);
+                listClickMistakesButtons.Add(7);
                 button7.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -425,9 +425,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(8);
+                listClickMistakesButtons.Add(8);
                 button8.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -445,9 +445,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(9);
+                listClickMistakesButtons.Add(9);
                 button9.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -465,9 +465,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(10);
+                listClickMistakesButtons.Add(10);
                 button10.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -485,9 +485,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(11);
+                listClickMistakesButtons.Add(11);
                 button11.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -505,9 +505,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(12);
+                listClickMistakesButtons.Add(12);
                 button12.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -525,9 +525,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(13);
+                listClickMistakesButtons.Add(13);
                 button13.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -545,9 +545,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(14);
+                listClickMistakesButtons.Add(14);
                 button14.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -565,9 +565,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(15);
+                listClickMistakesButtons.Add(15);
                 button15.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -585,9 +585,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(16);
+                listClickMistakesButtons.Add(16);
                 button16.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -605,9 +605,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(17);
+                listClickMistakesButtons.Add(17);
                 button17.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -625,9 +625,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(18);
+                listClickMistakesButtons.Add(18);
                 button18.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -645,9 +645,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(19);
+                listClickMistakesButtons.Add(19);
                 button19.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -665,9 +665,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(20);
+                listClickMistakesButtons.Add(20);
                 button20.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -685,9 +685,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(21);
+                listClickMistakesButtons.Add(21);
                 button21.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -705,9 +705,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(22);
+                listClickMistakesButtons.Add(22);
                 button22.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -725,9 +725,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(23);
+                listClickMistakesButtons.Add(23);
                 button23.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -745,9 +745,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(24);
+                listClickMistakesButtons.Add(24);
                 button24.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
@@ -765,9 +765,9 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 CounterMistakes.Foreground = Brushes.Red;
                 CounterMistakes.Content = (++counterMistakes);
-                listMistakesButtons.Add(25);
+                listClickMistakesButtons.Add(25);
                 button25.Background = Brushes.Red;
-                second = 0;
+                secondForBrushNullButtons = 0;
                 dispatcherTimer.Start();
             }
             FinalStage();
