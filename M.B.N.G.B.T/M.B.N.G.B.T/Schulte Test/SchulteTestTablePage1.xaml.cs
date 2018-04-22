@@ -27,6 +27,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         private byte second = 0;
         private byte counterButtonClick = 0;
         private byte secondForBrushNullButtons = 0;
+        private bool isEnabledButtons = true;
 
 
         public SchulteTestTablePage1()
@@ -54,31 +55,21 @@ namespace M.B.N.G.B.T.Schulte_Test
                 second++;
                 timer.Content = second;
                 if (second == 30)
-                {
                     timer.Foreground = Brushes.Yellow;
-                }
                 else
                 if (second == 35)
-                {
                     timer.Foreground = Brushes.Red;
-                }
                 else
                 if (second == 40)
-                {
                     timer.Foreground = Brushes.Black;
-                }
-
-                if (secondForBrushNullButtons != 2)
-                {
+                
                     secondForBrushNullButtons++;
-                }
-                else
-                {
+                if (secondForBrushNullButtons == 2)
                     BrushingButtonsNull();
-                }
             }
             else
             {
+                isEnabledButtons = false;
                 timer.Foreground = Brushes.Red;
                 listClickMistakesButtons = cl.SortingAndSerchInArrMissingNumbers(listClickButtons.ToArray(), 25);
                 BrushingButtonsRedAndNull(listClickMistakesButtons.ToArray(), 1);
@@ -366,452 +357,527 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click1(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button1.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(1);
+                if (counterButtonClick + 1 == Convert.ToByte(button1.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(1);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button1.Content))
+                {
+                    button1.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(1);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-            if (counterButtonClick != Convert.ToByte(button1.Content))
-            {
-                button1.Background = Brushes.Red;
-                listClickMistakesButtons.Add(1);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button2.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(2);
+                if (counterButtonClick + 1 == Convert.ToByte(button2.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(2);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button2.Content))
+                {
+                    button2.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(2);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-           if (counterButtonClick != Convert.ToByte(button2.Content))
-            {
-                button2.Background = Brushes.Red;
-                listClickMistakesButtons.Add(2);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click3(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button3.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(3);
+                if (counterButtonClick + 1 == Convert.ToByte(button3.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(3);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button3.Content))
+                {
+                    button3.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(3);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-               if (counterButtonClick != Convert.ToByte(button3.Content))
-            {
-                button3.Background = Brushes.Red;
-                listClickMistakesButtons.Add(3);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click4(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button4.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(4);
+                if (counterButtonClick + 1 == Convert.ToByte(button4.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(4);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button4.Content))
+                {
+                    button4.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(4);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-             if (counterButtonClick != Convert.ToByte(button4.Content))
-            {
-                button4.Background = Brushes.Red;
-                listClickMistakesButtons.Add(4);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click5(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button5.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(5);
+                if (counterButtonClick + 1 == Convert.ToByte(button5.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(5);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button5.Content))
+                {
+                    button5.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(5);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-            if (counterButtonClick != Convert.ToByte(button5.Content))
-            {
-                button5.Background = Brushes.Red;
-                listClickMistakesButtons.Add(5);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click6(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button6.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(6);
+                if (counterButtonClick + 1 == Convert.ToByte(button6.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(6);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button6.Content))
+                {
+                    button6.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(6);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-           if (counterButtonClick != Convert.ToByte(button6.Content))
-            {
-                button6.Background = Brushes.Red;
-                listClickMistakesButtons.Add(6);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click7(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button7.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(7);
+                if (counterButtonClick + 1 == Convert.ToByte(button7.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(7);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button7.Content))
+                {
+                    button7.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(7);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-            if (counterButtonClick != Convert.ToByte(button7.Content))
-            {
-                button7.Background = Brushes.Red;
-                listClickMistakesButtons.Add(7);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click8(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button8.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(8);
+                if (counterButtonClick + 1 == Convert.ToByte(button8.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(8);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button8.Content))
+                {
+                    button8.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(8);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-            if (counterButtonClick != Convert.ToByte(button8.Content))
-            {
-                button8.Background = Brushes.Red;
-                listClickMistakesButtons.Add(8);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click9(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button9.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(9);
+                if (counterButtonClick + 1 == Convert.ToByte(button9.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(9);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button9.Content))
+                {
+                    button9.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(9);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-            if (counterButtonClick != Convert.ToByte(button9.Content))
-            {
-                button9.Background = Brushes.Red;
-                listClickMistakesButtons.Add(9);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click10(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button10.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(10);
+                if (counterButtonClick + 1 == Convert.ToByte(button10.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(10);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button10.Content))
+                {
+                    button10.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(10);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-             if (counterButtonClick != Convert.ToByte(button10.Content))
-            {
-                button10.Background = Brushes.Red;
-                listClickMistakesButtons.Add(10);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click11(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button11.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(11);
+                if (counterButtonClick + 1 == Convert.ToByte(button11.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(11);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button11.Content))
+                {
+                    button11.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(11);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-           if (counterButtonClick != Convert.ToByte(button11.Content))
-            {
-                button11.Background = Brushes.Red;
-                listClickMistakesButtons.Add(11);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click12(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button12.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(12);
+                if (counterButtonClick + 1 == Convert.ToByte(button12.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(12);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button12.Content))
+                {
+                    button12.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(12);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-           if (counterButtonClick != Convert.ToByte(button12.Content))
-            {
-                button12.Background = Brushes.Red;
-                listClickMistakesButtons.Add(12);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click13(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button13.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(13);
+                if (counterButtonClick + 1 == Convert.ToByte(button13.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(13);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button13.Content))
+                {
+                    button13.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(13);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-            if (counterButtonClick != Convert.ToByte(button13.Content))
-            {
-                button13.Background = Brushes.Red;
-                listClickMistakesButtons.Add(13);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click14(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button14.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(14);
+                if (counterButtonClick + 1 == Convert.ToByte(button14.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(14);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button14.Content))
+                {
+                    button14.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(14);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-             if (counterButtonClick != Convert.ToByte(button14.Content))
-            {
-                button14.Background = Brushes.Red;
-                listClickMistakesButtons.Add(14);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click15(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button15.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(15);
+                if (counterButtonClick + 1 == Convert.ToByte(button15.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(15);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button15.Content))
+                {
+                    button15.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(15);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-            if (counterButtonClick != Convert.ToByte(button15.Content))
-            {
-                button15.Background = Brushes.Red;
-                listClickMistakesButtons.Add(15);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click16(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button16.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(16);
+                if (counterButtonClick + 1 == Convert.ToByte(button16.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(16);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button16.Content))
+                {
+                    button16.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(16);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-             if (counterButtonClick != Convert.ToByte(button16.Content))
-            {
-                button16.Background = Brushes.Red;
-                listClickMistakesButtons.Add(16);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click17(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button17.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(17);
+                if (counterButtonClick + 1 == Convert.ToByte(button17.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(17);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button17.Content))
+                {
+                    button17.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(17);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-             if (counterButtonClick != Convert.ToByte(button17.Content))
-            {
-                button17.Background = Brushes.Red;
-                listClickMistakesButtons.Add(17);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click18(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button18.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(18);
+                if (counterButtonClick + 1 == Convert.ToByte(button18.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(18);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button18.Content))
+                {
+                    button18.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(18);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-             if (counterButtonClick != Convert.ToByte(button18.Content))
-            {
-                button18.Background = Brushes.Red;
-                listClickMistakesButtons.Add(18);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click19(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button19.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(19);
+                if (counterButtonClick + 1 == Convert.ToByte(button19.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(19);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button19.Content))
+                {
+                    button19.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(19);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-            if (counterButtonClick != Convert.ToByte(button19.Content))
-            {
-                button19.Background = Brushes.Red;
-                listClickMistakesButtons.Add(19);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click20(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button20.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(20);
+                if (counterButtonClick + 1 == Convert.ToByte(button20.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(20);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button20.Content))
+                {
+                    button20.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(20);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-            if (counterButtonClick != Convert.ToByte(button20.Content))
-            {
-                button20.Background = Brushes.Red;
-                listClickMistakesButtons.Add(20);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click21(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button21.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(21);
+                if (counterButtonClick + 1 == Convert.ToByte(button21.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(21);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button21.Content))
+                {
+                    button21.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(21);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-           if (counterButtonClick != Convert.ToByte(button21.Content))
-            {
-                button21.Background = Brushes.Red;
-                listClickMistakesButtons.Add(21);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click22(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button22.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(22);
+                if (counterButtonClick + 1 == Convert.ToByte(button22.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(22);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button22.Content))
+                {
+                    button22.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(22);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-              if (counterButtonClick != Convert.ToByte(button22.Content))
-            {
-                button22.Background = Brushes.Red;
-                listClickMistakesButtons.Add(22);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click23(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button23.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(23);
+                if (counterButtonClick + 1 == Convert.ToByte(button23.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(23);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button23.Content))
+                {
+                    button23.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(23);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-            if (counterButtonClick != Convert.ToByte(button23.Content))
-            {
-                button23.Background = Brushes.Red;
-                listClickMistakesButtons.Add(23);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click24(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button24.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(24);
+                if (counterButtonClick + 1 == Convert.ToByte(button24.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(24);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button24.Content))
+                {
+                    button24.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(24);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-            if (counterButtonClick != Convert.ToByte(button24.Content))
-            {
-                button24.Background = Brushes.Red;
-                listClickMistakesButtons.Add(24);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
 
         private void Button_Click25(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button25.Content))
+            if (isEnabledButtons)
             {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listClickButtons.Add(25);
+                if (counterButtonClick + 1 == Convert.ToByte(button25.Content))
+                {
+                    counterButtonClick++;
+                    BrushingButtonsNull();
+                    listClickButtons.Add(25);
+                }
+                else
+                if (counterButtonClick != Convert.ToByte(button25.Content))
+                {
+                    button25.Background = Brushes.Red;
+                    listClickMistakesButtons.Add(25);
+                    secondForBrushNullButtons = 0;
+                }
+                FinalStage();
             }
-            else
-            if (counterButtonClick != Convert.ToByte(button25.Content))
-            {
-                button25.Background = Brushes.Red;
-                listClickMistakesButtons.Add(25);
-                secondForBrushNullButtons = 0;
-            }
-            FinalStage();
         }
     }
 }

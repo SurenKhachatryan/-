@@ -50,11 +50,8 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
 
-            if (secondForBrushNullButtons != 2)
-            {
-                secondForBrushNullButtons++;
-            }
-            else
+            secondForBrushNullButtons++;
+            if (secondForBrushNullButtons == 2)
             {
                 BrushingButtonsNull();
                 dispatcherTimer.Stop();
@@ -260,7 +257,7 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 listAllStageMistakes.Add(counterMistakes);
                 stage++;
-                if (stage !=6)
+                if (stage != 6)
                 {
                     NavigationService.Navigate(new SchulteTestTablePage2());
                 }
@@ -268,7 +265,7 @@ namespace M.B.N.G.B.T.Schulte_Test
                 {
                     NavigationService.Navigate(new SchulteTestResultPage());
                 }
-                
+
             }
         }
 
@@ -618,7 +615,7 @@ namespace M.B.N.G.B.T.Schulte_Test
             if (counterButtonClick + 1 == Convert.ToByte(button18.Content))
             {
                 counterButtonClick++;
-                BrushingButtonsNull(); 
+                BrushingButtonsNull();
             }
             else
             if (counterButtonClick != Convert.ToByte(button18.Content))
@@ -772,6 +769,6 @@ namespace M.B.N.G.B.T.Schulte_Test
             }
             FinalStage();
         }
-    
+
     }
 }
