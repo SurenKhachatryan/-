@@ -53,7 +53,12 @@ namespace M.B.N.G.B.T.Schulte_Test
             if (second != 40)
             {
                 second++;
-                timer.Content = second;
+
+                if (second < 10)
+                    timer.Content = $"0{second}";
+                else
+                    timer.Content = $"{second}";
+
                 if (second == 30)
                     timer.Foreground = Brushes.Yellow;
                 else
