@@ -340,7 +340,9 @@
       <Name>ClassLibrary</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Bloknot.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Man-04.ico" />
   </ItemGroup>

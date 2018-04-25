@@ -63,6 +63,16 @@ namespace M.B.N.G.B.T.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bloknot {
+            get {
+                object obj = ResourceManager.GetObject("Bloknot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap board {
             get {
                 object obj = ResourceManager.GetObject("board", resourceCulture);

@@ -30,7 +30,7 @@ namespace M.B.N.G.B.T.V.L.Marshuk_Test
 
         }
 
-        private void button0_Click(object sender, RoutedEventArgs e)
+        private void button_Click_Result(object sender, RoutedEventArgs e)
         {
 
         }

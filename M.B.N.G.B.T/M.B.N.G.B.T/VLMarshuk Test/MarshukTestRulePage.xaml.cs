@@ -1,4 +1,5 @@
-﻿using System;
+﻿using M.B.N.G.B.T.V.L.Marshuk_Test;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,12 +28,12 @@ namespace M.B.N.G.B.T.V.L.Marshukov_Test
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(null);
+            NavigationService.Navigate(null);
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new MarshukTestTablePage());
         }
     }
 }
