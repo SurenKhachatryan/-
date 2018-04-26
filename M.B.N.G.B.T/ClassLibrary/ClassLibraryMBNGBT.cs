@@ -30,6 +30,26 @@ namespace ClassLibrary
             return ls;
         }
 
+        public ulong[] FilteringDigitsInTheText(string str)
+        {
+            List<ulong> ls = new List<ulong>();
+            string tamp = string.Empty;
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (Char.IsDigit(str[i]))
+                {
+                    tamp += str[i];
+                    if (str.Length <= i + 1 || !Char.IsDigit(str[i + 1]) && tamp != string.Empty)
+                    {
+                        ls.Add(Convert.ToUInt64(tamp));
+                        tamp = string.Empty;
+                    }
+                }
+            }
+            return ls.ToArray();
+        }
+
         public bool SerchMatchingNumberInArr(int[] arr, int a)
         {
             for (int j = 0; j < arr.Length; j++)

@@ -33,6 +33,7 @@ namespace M.B.N.G.B.T.V.L.Marshukov_Test
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
+            MarshukTestTablePage.stage = 1;
             NavigationService.Navigate(new MarshukTestTablePage());
         }
     }

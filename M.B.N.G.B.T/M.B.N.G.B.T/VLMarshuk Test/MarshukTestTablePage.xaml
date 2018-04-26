@@ -18,12 +18,12 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="59*"/>
-            <ColumnDefinition Width="852*"/>
-            <ColumnDefinition Width="389*"/>
+            <ColumnDefinition Width="947*"/>
+            <ColumnDefinition Width="294*"/>
         </Grid.ColumnDefinitions>
 
-        <Label x:Name="startStage" Margin="91,23,0,0" FontSize="120" Content="1" Foreground="White" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" Grid.Column="2" Grid.Row="1" />
-        <Label Margin="153,21,0,0" FontSize="120" Content="/5" Foreground="White" Height="142" VerticalAlignment="Top" HorizontalAlignment="Left" Width="134" Grid.Column="2" Grid.Row="1" />
+        <Label x:Name="startStage" Margin="0,23,218,0" FontSize="120" Content="1" Foreground="White" Height="140" VerticalAlignment="Top" HorizontalAlignment="Right" Width="80" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" />
+        <Label Margin="0,21,102,0" FontSize="120" Content="/5" Foreground="White" Height="142" VerticalAlignment="Top" HorizontalAlignment="Right" Width="134" Grid.Column="2" Grid.Row="1" />
 
 
         <Rectangle Margin="0,21,451,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
@@ -52,33 +52,33 @@
         <Rectangle Margin="0,405,143,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
         <Rectangle Margin="0,405,41,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
 
-        <Label Content=" 1" Margin="0,21,451,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content=" 2" Margin="0,21,349,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content=" 3" Margin="0,21,245,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content=" 4" Margin="0,21,143,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content=" 5" Margin="0,21,41,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content=" 6" Margin="0,117,451,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content=" 7" Margin="0,117,349,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content=" 8" Margin="0,117,245,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content=" 9" Margin="0,117,143,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content="10" Margin="0,117,41,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content="11" Margin="0,213,451,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content="12" Margin="0,213,349,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content="13" Margin="0,213,245,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content="14" Margin="0,213,143,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content="15" Margin="0,213,41,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content="16" Margin="0,309,451,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content="17" Margin="0,309,349,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content="18" Margin="0,309,245,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content="19" Margin="0,309,143,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content="20" Margin="0,309,41,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content="21" Margin="0,405,451,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content="22" Margin="0,405,349,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content="23" Margin="0,405,245,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content="24" Margin="0,405,143,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label Content="25" Margin="0,405,41,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label1" Content=" 1" Margin="0,21,451,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label2" Content=" 2" Margin="0,21,349,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label3" Content=" 3" Margin="0,21,245,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label4" Content=" 4" Margin="0,21,143,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label5" Content=" 5" Margin="0,21,41,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label6" Content=" 6" Margin="0,117,451,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label7" Content=" 7" Margin="0,117,349,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label8" Content=" 8" Margin="0,117,245,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label9" Content=" 9" Margin="0,117,143,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label10" Content="10" Margin="0,117,41,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label11" Content="11" Margin="0,213,451,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label12" Content="12" Margin="0,213,349,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label13" Content="13" Margin="0,213,245,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label14" Content="14" Margin="0,213,143,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label15" Content="15" Margin="0,213,41,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label16" Content="16" Margin="0,309,451,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label17" Content="17" Margin="0,309,349,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label18" Content="18" Margin="0,309,245,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label19" Content="19" Margin="0,309,143,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label20" Content="20" Margin="0,309,41,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label21" Content="21" Margin="0,405,451,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label22" Content="22" Margin="0,405,349,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label23" Content="23" Margin="0,405,245,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label24" Content="24" Margin="0,405,143,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Label x:Name="Label25" Content="25" Margin="0,405,41,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
 
-        <Button x:Name="button0" Click="button_Click_Result" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Margin="21,0,0,69" HorizontalAlignment="Left" Width="399" Grid.Row="1" Grid.Column="1" Height="36" VerticalAlignment="Bottom">
+        <Button x:Name="buttonClickResult" Click="button_Click_Result" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Margin="21,0,0,78" HorizontalAlignment="Left" Width="399" Grid.Row="1" Grid.Column="1" Height="36" VerticalAlignment="Bottom">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -86,23 +86,23 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" FontSize="25" Height="333" Margin="10,185,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="277" BorderBrush="Black" SelectionBrush="#FF000102">
-            <TextBox.Background>
+        <Button x:Name="buttonNextStage" Click="ButtonNextStage" Content="Անցնել հաջորդ փուլ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Margin="0,0,91,78" Grid.Row="1" Grid.Column="1" Height="36" VerticalAlignment="Bottom" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="219">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        
+        <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="505" Margin="10,23,0,0" Grid.Row="1" Stroke="{x:Null}" VerticalAlignment="Top" Width="367">
+            <Rectangle.Fill>
                 <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Bloknot.png"/>
-            </TextBox.Background>
-            <TextBox.OpacityMask>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="Black" Offset="1"/>
-                </LinearGradientBrush>
-            </TextBox.OpacityMask>
-            <TextBox.CaretBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="Black" Offset="1"/>
-                </LinearGradientBrush>
-            </TextBox.CaretBrush>
-        </TextBox>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBox x:Name="TextBox" Grid.Column="1" FontSize="50"  FontFamily="Bradley Hand ITC" HorizontalAlignment="Left" Height="390" BorderBrush="{x:Null}" Background="{x:Null}" BorderThickness="0" SelectionBrush="#FFB90011" Margin="41,74,0,0" Grid.Row="1"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="307" FontWeight="Bold"/>
+
+
 
     </Grid>
 </Page>
