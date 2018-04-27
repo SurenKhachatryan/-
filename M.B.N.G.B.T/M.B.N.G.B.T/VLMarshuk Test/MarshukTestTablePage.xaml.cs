@@ -28,13 +28,15 @@ namespace M.B.N.G.B.T.V.L.Marshuk_Test
         private Random rnd = new Random();
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
 
+        private byte index = 0;
+
         public static byte stage = 1;
 
 
         public MarshukTestTablePage()
         {
             InitializeComponent();
-            
+
             if (stage + 1 == 6)
             {
                 buttonNextStage.Content = "Ավարտել թեսնը";
@@ -247,6 +249,30 @@ namespace M.B.N.G.B.T.V.L.Marshuk_Test
                 {
                     i--;
                 }
+            }
+        }
+
+        private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if ((!Char.IsDigit(e.Text, 0)))
+            {
+                e.Handled = true;
+
+                string tamp = cl.CopyTheText(TextBox.Text, TextBox.SelectionStart, TextBox.Text.Length);
+
+                if (TextBox.SelectionStart != TextBox.Text.Length)
+                {
+                    int IndexStartSelection = TextBox.SelectionStart;
+                    TextBox.Text = TextBox.Text.Remove(TextBox.SelectionStart, tamp.Length);
+                    TextBox.Text = TextBox.Text + "," + tamp;
+                    TextBox.SelectionStart = IndexStartSelection + 1;
+                }
+                else
+                {
+                    TextBox.Text = TextBox.Text + ",";
+                    TextBox.SelectionStart = TextBox.Text.Length;
+                }
+
             }
         }
     }

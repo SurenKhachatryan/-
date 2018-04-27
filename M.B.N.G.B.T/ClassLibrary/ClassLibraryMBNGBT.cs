@@ -30,6 +30,23 @@ namespace ClassLibrary
             return ls;
         }
 
+        public string CopyTheText(string str, int startLength, int finishLength)
+        {
+            string tamp = string.Empty;
+            try
+            {
+                for (int i = startLength; i < finishLength; i++)
+                {
+                    tamp += str[i];
+                }
+            }
+            catch (Exception)
+            {
+                throw new IndexOutOfRangeException();
+            }
+            return tamp;
+        }
+
         public ulong[] FilteringDigitsInTheText(string str)
         {
             List<ulong> ls = new List<ulong>();
@@ -105,6 +122,31 @@ namespace ClassLibrary
             {
                 throw new IndexOutOfRangeException();
             }
+        }
+
+        private static int[] GetArrayTheExcessNumberInTheArray(int[] theRightArray, int[] nonValidArray)
+        {
+            List<int> ls = new List<int>();
+            int length = theRightArray.Length;
+            int indexchihstarr = 0;
+
+            if (theRightArray.Length < nonValidArray.Length)
+                length = nonValidArray.Length;
+
+            for (int i = 0; i < length; i++)
+            {
+                if (theRightArray[indexchihstarr] == nonValidArray[i])
+                {
+                    if (indexchihstarr + 1 != theRightArray.Length - 1)
+                        indexchihstarr++;
+                }
+                else
+                {
+                    ls.Add(nonValidArray[i]);
+                }
+            }
+
+            return ls.ToArray();
         }
     }
 }
