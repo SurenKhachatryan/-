@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace M.B.N.G.B.T.V.L.Marshuk_Test
 {
@@ -22,16 +23,20 @@ namespace M.B.N.G.B.T.V.L.Marshuk_Test
     public partial class MarshukTestTablePage : Page
     {
         private List<int> lsRndDigite = new List<int>();
-        private static ulong[][] arrAllStageDigits = new ulong[5][];
-        private static int[][] arrAllStageAbsentDisgits = new int[5][];
+
+        public static int[][] arrAllStageDigitsInTextBox = new int[5][];
+        public static int[][] arrAllStageRightNumbers = new int[5][];
+        public static int[][] arrAllStageAbsentNumbers = new int[5][];
+        public static int[][] arrAllStageExtraNumbers = new int[5][];
 
         private Random rnd = new Random();
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
-
-        private byte index = 0;
+        private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
         public static byte stage = 1;
 
+        private int second = 0;
+        private int minute = 0;
 
         public MarshukTestTablePage()
         {
@@ -42,10 +47,14 @@ namespace M.B.N.G.B.T.V.L.Marshuk_Test
                 buttonNextStage.Content = "Ավարտել թեսնը";
                 buttonClickResult.Visibility = Visibility.Collapsed;
             }
+            dispatcherTimer.Start();
+            dispatcherTimer.Tick += new EventHandler(LabelTimer);
 
             startStage.Content = stage;
             TextBox.Focus();
             ChangeContentButtonRandom();
+
+            arrAllStageRightNumbers[stage - 1] = cl.SortingAndSerchInArrMissingNumbers(lsRndDigite.ToArray(), 40).ToArray();
         }
 
         private void button_Click_Result(object sender, RoutedEventArgs e)
@@ -54,16 +63,47 @@ namespace M.B.N.G.B.T.V.L.Marshuk_Test
             NavigationService.Navigate(new MarshukTestResultPage());
         }
 
+        private void LabelTimer(object sender, EventArgs e)
+        {
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+            second++;
+            if (second == 60)
+            {
+                second = 0;
+                minute++;
+            }
+            if (second < 10)
+                timer.Content = $"{minute}:0{second}";
+            else
+                timer.Content = $"{minute}:{second}";
+
+            if (minute == 3 && second == 0)
+            {
+                FinishStage();
+                NavigationService.Navigate(new MarshukTestResultPage());
+            }
+        }
+
         private void FinishStage()
         {
-            arrAllStageAbsentDisgits[stage - 1] = cl.SortingAndSerchInArrMissingNumbers(lsRndDigite.ToArray(), 40).ToArray();
+            dispatcherTimer.Stop();
+
             if (TextBox.Text == "")
             {
-                arrAllStageDigits[stage - 1] = null;
+                arrAllStageDigitsInTextBox[stage - 1] = null;
+                arrAllStageAbsentNumbers[stage - 1] = null;
+                arrAllStageExtraNumbers[stage - 1] = null;
             }
             else
             {
-                arrAllStageDigits[stage - 1] = cl.FilteringDigitsInTheText(TextBox.Text);
+                arrAllStageDigitsInTextBox[stage - 1] = cl.FilteringDigitsInTheText(TextBox.Text);
+                arrAllStageExtraNumbers[stage - 1] = cl.GetArrayMissingNumbersInAnArray(arrAllStageDigitsInTextBox[stage - 1], arrAllStageRightNumbers[stage - 1]);
+                arrAllStageAbsentNumbers[stage - 1] = cl.GetArrayMissingNumbersInAnArray(arrAllStageRightNumbers[stage - 1], arrAllStageDigitsInTextBox[stage - 1]);
+
+                if (arrAllStageAbsentNumbers[stage - 1].Length != 0)
+                    cl.SortingArr(ref arrAllStageAbsentNumbers[stage - 1]);
+                if (arrAllStageExtraNumbers[stage - 1].Length != 0)
+                    cl.SortingArr(ref arrAllStageExtraNumbers[stage - 1]);
             }
         }
 

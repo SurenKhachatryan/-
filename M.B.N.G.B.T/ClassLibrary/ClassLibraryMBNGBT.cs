@@ -47,9 +47,9 @@ namespace ClassLibrary
             return tamp;
         }
 
-        public ulong[] FilteringDigitsInTheText(string str)
+        public Int32[] FilteringDigitsInTheText(string str)
         {
-            List<ulong> ls = new List<ulong>();
+            List<Int32> ls = new List<Int32>();
             string tamp = string.Empty;
 
             for (int i = 0; i < str.Length; i++)
@@ -57,9 +57,13 @@ namespace ClassLibrary
                 if (Char.IsDigit(str[i]))
                 {
                     tamp += str[i];
+                    if (Convert.ToInt64(tamp) > Int32.MaxValue)
+                    {
+                        tamp = Convert.ToString(Int32.MaxValue);
+                    }
                     if (str.Length <= i + 1 || !Char.IsDigit(str[i + 1]) && tamp != string.Empty)
                     {
-                        ls.Add(Convert.ToUInt64(tamp));
+                        ls.Add(Convert.ToInt32(tamp));
                         tamp = string.Empty;
                     }
                 }
@@ -124,28 +128,27 @@ namespace ClassLibrary
             }
         }
 
-        private static int[] GetArrayTheExcessNumberInTheArray(int[] theRightArray, int[] nonValidArray)
+        public int[] GetArrayMissingNumbersInAnArray(int[] exactArray, int[] nonValidArray)
         {
             List<int> ls = new List<int>();
-            int length = theRightArray.Length;
-            int indexchihstarr = 0;
+            int tamp = 0;
 
-            if (theRightArray.Length < nonValidArray.Length)
-                length = nonValidArray.Length;
-
-            for (int i = 0; i < length; i++)
+            for (int i = 0; i < exactArray.Length; i++)
             {
-                if (theRightArray[indexchihstarr] == nonValidArray[i])
+                for (int j = 0; j < nonValidArray.Length; j++)
                 {
-                    if (indexchihstarr + 1 != theRightArray.Length - 1)
-                        indexchihstarr++;
+                    tamp = exactArray[i];
+                    if (exactArray[i] == nonValidArray[j])
+                    {
+                        j = nonValidArray.Length;
+                        tamp = 0;
+                    }
                 }
-                else
+                if (tamp != 0)
                 {
-                    ls.Add(nonValidArray[i]);
+                    ls.Add(tamp);
                 }
             }
-
             return ls.ToArray();
         }
     }
