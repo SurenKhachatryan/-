@@ -12,7 +12,6 @@ namespace M.B.N.G.B.T.AttentivenessTest
         public Rule()
         {
             InitializeComponent();
-            
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -21,13 +20,12 @@ namespace M.B.N.G.B.T.AttentivenessTest
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            RandomPicturesPage.startstage = 4;
-            this.NavigationService.Navigate(new RandomPicturesPage());
+            RandomPicturesPage.picturesCount = 2;
+            NavigationService.Navigate(new RandomPicturesPage());
         }
         public void TestRuleCollapsed()
         {
-            this.NavigationService.Navigate(null);
+           NavigationService.Navigate(null);
         }
-       
     }
 }

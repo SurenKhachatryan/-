@@ -13,305 +13,383 @@ namespace M.B.N.G.B.T.AttentivenessTest
     /// </summary>
     public partial class AllPictures : Page
     {
-        
+
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
-        private List<int> listChecked = new List<int>();
-        private byte second = 16;
+        private int tamp = 0;
+        private int picCountChackted = 0;
+        private int second = 0;
+
 
         public AllPictures()
         {
             InitializeComponent();
-
+            //IsEnabledAllCheckBox(false);
+            
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
-            listChecked.Clear();
-            dispatcherTimer.Start();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            dispatcherTimer.Stop();
-            NavigationService.Navigate(new ResultPage());
-        }
-
-        public void AllPicturesCollapsed()
-        {
-            AllPictures1.Visibility = Visibility.Collapsed;
         }
 
         private void LabelTimer(object sender, EventArgs e)
         {
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-
-            if (second != 0)
+            second++;
+            if (cl.SerchMatchingNumberInArr(RandomPicturesPage.listPicVisibility.ToArray(), tamp))
             {
-                second--;
-                timer.Content = second;
-                if (second == 8)
-                {
-                    timer.Foreground = Brushes.Yellow;
-                }
-                else
-                if (second == 5)
-                {
-                    timer.Foreground = Brushes.Red;
-                }
+                picCountChackted++;
+                tamp = 0;
             }
-            else
-            {
-                dispatcherTimer.Stop();
-                if (RandomPicturesPage.startstage < 15 && cl.ArrItemsEquals(RandomPicturesPage.listPicVisibility.ToArray(), listChecked.ToArray()))
-                {
-                    RandomPicturesPage.startstage += 1;
-                    NavigationService.Navigate(new RandomPicturesPage());
 
-                }
-                else
-                {
-                    NavigationService.Navigate(new ResultPage());
-                }
+            if (second == 1 && picCountChackted == RandomPicturesPage.picturesCount)
+            {
+                RandomPicturesPage.picturesCount += 2;
+                NavigationService.Navigate(new RandomPicturesPage());
             }
+        }
+
+        private void Button_Exit_The_Test_And_View_Result(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ResultPage());
         }
 
         private void Pic1_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(1);
+            tamp = 1;
+            second = 0;
         }
 
         private void Pic2_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(2);
+            tamp = 2;
+            second = 0;
         }
 
         private void Pic3_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(3);
+            tamp = 3;
+            second = 0;
         }
 
         private void Pic4_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(4);
+            tamp = 4;
+            second = 0;
         }
 
         private void Pic5_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(5);
+            tamp = 5;
+            second = 0;
         }
 
         private void Pic6_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(6);
+            tamp = 6;
+            second = 0;
         }
 
         private void Pic7_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(7);
+            tamp = 7;
+            second = 0;
         }
 
         private void Pic8_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(8);
+            tamp = 8;
+            second = 0;
         }
 
         private void Pic9_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(9);
+            tamp = 9;
+            second = 0;
         }
 
         private void Pic10_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(10);
+            tamp = 10;
+            second = 0;
         }
 
         private void Pic11_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(11);
+            tamp = 11;
+            second = 0;
         }
 
         private void Pic12_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(12);
+            tamp = 12;
+            second = 0;
         }
 
         private void Pic13_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(13);
+            tamp = 13;
+            second = 0;
         }
 
         private void Pic14_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(14);
+            tamp = 14;
+            second = 0;
         }
 
         private void Pic15_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(15);
+            tamp = 15;
+            second = 0;
         }
 
         private void Pic16_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(16);
+            tamp = 16;
+            second = 0;
         }
 
         private void Pic17_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(17);
+            tamp = 17;
+            second = 0;
         }
 
         private void Pic18_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(18);
+            tamp = 18;
+            second = 0;
         }
 
         private void Pic19_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(19);
+            tamp = 19;
+            second = 0;
         }
 
         private void Pic20_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(20);
+            tamp = 20;
+            second = 0;
         }
 
         private void Pic21_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(21);
+            tamp = 21;
+            second = 0;
         }
 
         private void Pic22_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(22);
+            tamp = 22;
+            second = 0;
         }
 
         private void Pic23_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(23);
+            tamp = 23;
+            second = 0;
         }
 
         private void Pic24_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(24);
+            tamp = 24;
+            second = 0;
         }
 
         private void Pic25_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(25);
+            tamp = 25;
+            second = 0;
         }
 
         private void Pic26_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(26);
+            tamp = 26;
+            second = 0;
         }
 
         private void Pic27_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(27);
+            tamp = 27;
+            second = 0;
         }
 
         private void Pic28_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(28);
+            tamp = 28;
+            second = 0;
         }
 
         private void Pic29_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(29);
+            tamp = 29;
+            second = 0;
         }
 
         private void Pic30_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(30);
+            tamp = 30;
+            second = 0;
         }
 
         private void Pic31_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(31);
+            tamp = 31;
+            second = 0;
         }
 
         private void Pic32_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(32);
+            tamp = 32;
+            second = 0;
         }
 
         private void Pic33_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(33);
+            tamp = 33;
+            second = 0;
         }
 
         private void Pic34_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(34);
+            tamp = 34;
+            second = 0;
         }
 
         private void Pic35_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(35);
+            tamp = 35;
+            second = 0;
         }
 
         private void Pic36_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(36);
+            tamp = 36;
+            second = 0;
         }
 
         private void Pic37_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(37);
+            tamp = 37;
+            second = 0;
         }
 
         private void Pic38_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(38);
+            tamp = 38;
+            second = 0;
         }
 
         private void Pic39_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(39);
+            tamp = 39;
+            second = 0;
         }
 
         private void Pic40_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(40);
+            tamp = 40;
+            second = 0;
         }
 
         private void Pic41_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(41);
+            tamp = 41;
+            second = 0;
         }
 
         private void Pic42_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(42);
+            tamp = 42;
+            second = 0;
         }
 
         private void Pic43_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(43);
+            tamp = 43;
+            second = 0;
         }
 
         private void Pic44_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(44);
+            tamp = 44;
+            second = 0;
         }
 
         private void Pic45_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(45);
+            tamp = 45;
+            second = 0;
         }
 
         private void Pic46_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(46);
+            tamp = 46;
+            second = 0;
         }
 
         private void Pic47_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(47);
+            tamp = 47;
+            second = 0;
         }
 
         private void Pic48_Checked(object sender, RoutedEventArgs e)
         {
-            listChecked.Add(48);
+            tamp = 48;
+            second = 0;
+        }
+
+        private void IsEnabledAllCheckBox(bool bl)
+        {
+            Pic1.IsEnabled = bl;
+            Pic2.IsEnabled = bl;
+            Pic3.IsEnabled = bl;
+            Pic4.IsEnabled = bl;
+            Pic5.IsEnabled = bl;
+            Pic6.IsEnabled = bl;
+            Pic7.IsEnabled = bl;
+            Pic8.IsEnabled = bl;
+            Pic9.IsEnabled = bl;
+            Pic10.IsEnabled = bl;
+            Pic11.IsEnabled = bl;
+            Pic12.IsEnabled = bl;
+            Pic13.IsEnabled = bl;
+            Pic14.IsEnabled = bl;
+            Pic15.IsEnabled = bl;
+            Pic16.IsEnabled = bl;
+            Pic17.IsEnabled = bl;
+            Pic18.IsEnabled = bl;
+            Pic19.IsEnabled = bl;
+            Pic20.IsEnabled = bl;
+            Pic21.IsEnabled = bl;
+            Pic22.IsEnabled = bl;
+            Pic23.IsEnabled = bl;
+            Pic24.IsEnabled = bl;
+            Pic25.IsEnabled = bl;
+            Pic26.IsEnabled = bl;
+            Pic27.IsEnabled = bl;
+            Pic28.IsEnabled = bl;
+            Pic29.IsEnabled = bl;
+            Pic30.IsEnabled = bl;
+            Pic31.IsEnabled = bl;
+            Pic32.IsEnabled = bl;
+            Pic33.IsEnabled = bl;
+            Pic34.IsEnabled = bl;
+            Pic35.IsEnabled = bl;
+            Pic36.IsEnabled = bl;
+            Pic37.IsEnabled = bl;
+            Pic38.IsEnabled = bl;
+            Pic39.IsEnabled = bl;
+            Pic40.IsEnabled = bl;
+            Pic41.IsEnabled = bl;
+            Pic42.IsEnabled = bl;
+            Pic43.IsEnabled = bl;
+            Pic44.IsEnabled = bl;
+            Pic45.IsEnabled = bl;
+            Pic46.IsEnabled = bl;
+            Pic47.IsEnabled = bl;
+            Pic48.IsEnabled = bl;
         }
     }
 }

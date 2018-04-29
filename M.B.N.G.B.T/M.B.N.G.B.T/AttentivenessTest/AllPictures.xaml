@@ -35,8 +35,8 @@
             <ColumnDefinition Width="132*"/>
             <ColumnDefinition Width="47*"/>
         </Grid.ColumnDefinitions>
-        
-        <Label x:Name="timer" Margin="18,128,0,0" FontSize="120" Content="15" Foreground="White" Height="172" VerticalAlignment="Top" HorizontalAlignment="Left" Width="166" Grid.RowSpan="3" />
+
+        <Label x:Name="StartStage" Margin="13,128,0,0" FontSize="65" Content="1/10" Foreground="White" Height="102" VerticalAlignment="Top" HorizontalAlignment="Left" Width="166" Grid.RowSpan="2" />
 
         <Image Grid.Column="1" Height="100" Margin="16,11,0,0" VerticalAlignment="Top" 
          Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/1.gif" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Left" Width="100"/>
@@ -182,7 +182,7 @@
         <Image Grid.Column="8" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="5" VerticalAlignment="Top" Width="100"
                Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/48.gif"/>
 
-        <Button x:Name="button2" Click="Button_Click" Content="Ավարտել Թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" HorizontalAlignment="Left" Width="175" Height="35" VerticalAlignment="Top" Grid.Column="0" Grid.Row="5" Margin="13,32,0,0">
+        <Button x:Name="buttonExitTheTestAndViewResult" Click="Button_Exit_The_Test_And_View_Result" Content="Ավարտել թեստը&#xD;&#xA;        և տեսնել &#xD;&#xA;   արդյունքները" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" HorizontalAlignment="Left" Width="175" Grid.Column="0" Grid.Row="5" Margin="13,0,0,34" Height="99" VerticalAlignment="Bottom">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -191,7 +191,7 @@
             </Button.Background>
         </Button>
 
-        
+
 
         <CheckBox Checked="Pic1_Checked" x:Name="Pic1" HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="1"/>
         <CheckBox Checked="Pic2_Checked" x:Name="Pic2"  HorizontalAlignment="Left" Margin="16,12,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="2"/>
@@ -242,6 +242,583 @@
         <CheckBox Checked="Pic47_Checked" x:Name="Pic47" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="7" Grid.Row="5"/>
         <CheckBox Checked="Pic48_Checked" x:Name="Pic48" HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="99" Width="99" Grid.Column="8" Grid.Row="5"/>
 
+        <Rectangle x:Name="PicNo1" Visibility="Collapsed"  HorizontalAlignment="Left" Height="99"  Margin="16,12,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo2" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,12,0,0" VerticalAlignment="Top" Width="99" Grid.Column="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo3" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,12,0,0" VerticalAlignment="Top" Width="99" Grid.Column="3">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo4" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,12,0,0" VerticalAlignment="Top" Width="99" Grid.Column="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo5" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,12,0,0" VerticalAlignment="Top" Width="99" Grid.Column="5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo6" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,12,0,0" VerticalAlignment="Top" Width="99" Grid.Column="6">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo7" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,12,0,0" VerticalAlignment="Top" Width="99" Grid.Column="7">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo8" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,12,0,0" VerticalAlignment="Top" Width="99" Grid.Column="8">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo9" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1" Grid.Row="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo10" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="2" Grid.Row="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo11" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="3" Grid.Row="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo12" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="4" Grid.Row="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo13" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="5" Grid.Row="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo14" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="6" Grid.Row="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo15" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="7" Grid.Row="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo16" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="8" Grid.Row="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo17" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,15,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1" Grid.Row="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo18" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,15,0,0" VerticalAlignment="Top" Width="99" Grid.Column="2" Grid.Row="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo19" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,15,0,0" VerticalAlignment="Top" Width="99" Grid.Column="3" Grid.Row="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo20" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,15,0,0" VerticalAlignment="Top" Width="99" Grid.Column="4" Grid.Row="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo21" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="5" Grid.Row="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo22" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,15,0,0" VerticalAlignment="Top" Width="99" Grid.Column="6" Grid.Row="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo23" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,15,0,0" VerticalAlignment="Top" Width="99" Grid.Column="7" Grid.Row="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo24" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="8" Grid.Row="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo25" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1" Grid.Row="3">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo26" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="2" Grid.Row="3">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo27" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="3" Grid.Row="3">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo28" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="4" Grid.Row="3">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo29" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="5" Grid.Row="3">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo30" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="6" Grid.Row="3">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo31" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="7" Grid.Row="3">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo32" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="8" Grid.Row="3">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo33" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1" Grid.Row="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo34" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="2" Grid.Row="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo35" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="3" Grid.Row="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo36" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="4" Grid.Row="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo37" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="5" Grid.Row="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo38" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="6" Grid.Row="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo39" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="7" Grid.Row="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo40" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="8" Grid.Row="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo41" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1" Grid.Row="5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo42" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="2" Grid.Row="5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo43" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="3" Grid.Row="5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo44" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="4" Grid.Row="5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo45" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="5" Grid.Row="5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo46" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="6" Grid.Row="5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo47" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="7" Grid.Row="5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicNo48" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="8" Grid.Row="5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
         
+        
+        
+        
+        <Rectangle x:Name="PicYes1" Visibility="Collapsed"  HorizontalAlignment="Left" Height="99"  Margin="16,12,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes2" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,12,0,0" VerticalAlignment="Top" Width="99" Grid.Column="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes3" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,12,0,0" VerticalAlignment="Top" Width="99" Grid.Column="3">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        
+        <Rectangle x:Name="PicYes4" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,12,0,0" VerticalAlignment="Top" Width="99" Grid.Column="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes5" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,12,0,0" VerticalAlignment="Top" Width="99" Grid.Column="5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes6" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,12,0,0" VerticalAlignment="Top" Width="99" Grid.Column="6">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes7" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,12,0,0" VerticalAlignment="Top" Width="99" Grid.Column="7">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes8" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,12,0,0" VerticalAlignment="Top" Width="99" Grid.Column="8">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes9" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1" Grid.Row="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes10" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="2" Grid.Row="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes11" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="3" Grid.Row="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes12" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="4" Grid.Row="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes13" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="5" Grid.Row="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes14" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="6" Grid.Row="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes15" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="7" Grid.Row="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes16" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="8" Grid.Row="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes17" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,15,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1" Grid.Row="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes18" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,15,0,0" VerticalAlignment="Top" Width="99" Grid.Column="2" Grid.Row="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes19" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,15,0,0" VerticalAlignment="Top" Width="99" Grid.Column="3" Grid.Row="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes20" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,15,0,0" VerticalAlignment="Top" Width="99" Grid.Column="4" Grid.Row="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes21" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="5" Grid.Row="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes22" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,15,0,0" VerticalAlignment="Top" Width="99" Grid.Column="6" Grid.Row="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes23" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,15,0,0" VerticalAlignment="Top" Width="99" Grid.Column="7" Grid.Row="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes24" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="8" Grid.Row="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes25" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1" Grid.Row="3">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes26" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="2" Grid.Row="3">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes27" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="3" Grid.Row="3">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes28" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="4" Grid.Row="3">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes29" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="5" Grid.Row="3">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes30" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="6" Grid.Row="3">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes31" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="7" Grid.Row="3">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes32" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="8" Grid.Row="3">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes33" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1" Grid.Row="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes34" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="2" Grid.Row="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes35" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="3" Grid.Row="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes36" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="4" Grid.Row="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes37" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="5" Grid.Row="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes38" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="6" Grid.Row="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes39" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="7" Grid.Row="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes40" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="8" Grid.Row="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes41" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1" Grid.Row="5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes42" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="2" Grid.Row="5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes43" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="3" Grid.Row="5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes44" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="4" Grid.Row="5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes45" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="5" Grid.Row="5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes46" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="15,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="6" Grid.Row="5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes47" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="7" Grid.Row="5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="PicYes48" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,16,0,0" VerticalAlignment="Top" Width="99" Grid.Column="8" Grid.Row="5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
     </Grid>
 </Page>

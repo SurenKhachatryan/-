@@ -20,7 +20,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            RandomPicturesPage.startstage = 4;
+            RandomPicturesPage.picturesCount = 4;
             this.NavigationService.Navigate(new Rule());
         }
 

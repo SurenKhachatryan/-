@@ -10,9 +10,8 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="44*"/>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"/>
@@ -25,9 +24,19 @@
             <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/wood-background.jpg"/>
         </Grid.Background>
 
-        <Label x:Name="Timer" Margin="13,128,52,0" FontSize="120" Content="15" Foreground="White" Height="172" VerticalAlignment="Top" Grid.Column="1" />
+        <Label x:Name="StartStage" Margin="13,128,31,0" FontSize="65" Content="1/10" Foreground="White" Height="102" VerticalAlignment="Top" Grid.Column="1" />
 
-        <Button x:Name="button2" Click="button_Click" Content="Ավարտել Թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" HorizontalAlignment="Left" Width="175" Height="35" Margin="7,3,0,7" Grid.Row="1" Grid.Column="1">
+        <Button x:Name="buttonExitTheTestAndViewResult" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" HorizontalAlignment="Left" Width="407" Height="35" Margin="13,0,0,54" Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Click="Button_Exit_The_Test_And_View_Result">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+
+        <Button x:Name="buttonStartStage"  Content="Հիշեցի" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" Margin="0,0,19,54" Grid.Row="1" Grid.Column="2" VerticalAlignment="Bottom" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="117" Click="Button_Start_Stage">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
