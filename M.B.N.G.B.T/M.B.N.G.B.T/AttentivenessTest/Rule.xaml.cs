@@ -21,6 +21,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
         private void button2_Click(object sender, RoutedEventArgs e)
         {
             RandomPicturesPage.picturesCount = 2;
+            RandomPicturesPage.stage = 1;
             NavigationService.Navigate(new RandomPicturesPage());
         }
         public void TestRuleCollapsed()

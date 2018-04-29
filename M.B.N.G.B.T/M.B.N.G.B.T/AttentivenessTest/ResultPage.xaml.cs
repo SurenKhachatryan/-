@@ -11,6 +11,11 @@ namespace M.B.N.G.B.T.AttentivenessTest
         public ResultPage()
         {
             InitializeComponent();
+            if (RandomPicturesPage.stage != 1)
+            {
+                LabelPercent.Content = $"{(RandomPicturesPage.stage-1) * 10}%";
+            }
+
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -20,14 +25,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            RandomPicturesPage.picturesCount = 4;
-            this.NavigationService.Navigate(new Rule());
-        }
-
-        public void ResultPageCollapsed()
-        {
-            ResultPage1.Visibility = Visibility.Collapsed;
-           
+            NavigationService.Navigate(new Rule());
         }
     }
 }

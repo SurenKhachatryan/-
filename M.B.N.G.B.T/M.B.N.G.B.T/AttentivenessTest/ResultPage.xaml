@@ -10,7 +10,7 @@
     <Page.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>
     </Page.Background>
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="646*"/>
@@ -23,7 +23,7 @@
             <ColumnDefinition Width="110*"/>
             <ColumnDefinition Width="33*"/>
         </Grid.ColumnDefinitions>
-       
+
 
         <Button x:Name="button1" Click="button1_Click" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" VerticalAlignment="Top" Margin="16,4,0,0" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Width="185">
             <Button.Background>
@@ -42,6 +42,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        
+        <Label Content="Ձեր տեսողական հիշողությունը զարգացած է" Foreground="White" FontSize="25" FontFamily="sylfein" HorizontalAlignment="Left" Margin="109,193,0,0" VerticalAlignment="Top" Height="55" Width="605"/>
+        <Label x:Name="LabelPercent" Content="0%" Foreground="White" FontSize="25" FontFamily="sylfein" HorizontalAlignment="Left" Margin="659,193,0,0" VerticalAlignment="Top" Height="55" Width="85"/>
     </Grid>
 </Page>

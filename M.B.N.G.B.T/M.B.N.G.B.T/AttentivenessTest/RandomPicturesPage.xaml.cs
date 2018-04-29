@@ -20,7 +20,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
         public static List<int> listPicVisibility = new List<int>();
 
         public static byte picturesCount = 2;
-        private static byte stage = 1;
+        public static byte stage = 1;
 
         public RandomPicturesPage()
         {
