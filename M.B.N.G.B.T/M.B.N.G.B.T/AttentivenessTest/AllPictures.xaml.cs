@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
 using System.Windows.Threading;
 
 namespace M.B.N.G.B.T.AttentivenessTest
@@ -13,10 +12,11 @@ namespace M.B.N.G.B.T.AttentivenessTest
     /// </summary>
     public partial class AllPictures : Page
     {
+        private List<int> listCorrectSelectedPictures = new List<int>();
 
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
-        
+
         private int picCountChackted = 0;
         private int second = 0;
         private bool door = false;
@@ -41,8 +41,11 @@ namespace M.B.N.G.B.T.AttentivenessTest
                 dispatcherTimer.Stop();
             }
             else
-            if (second == 2 && door || picCountChackted == 20)
+            if (second == 5 && door || picCountChackted == 20)
             {
+                if (picCountChackted == 20)
+                    RandomPicturesPage.stage += 1;
+
                 NavigationService.Navigate(new ResultPage());
                 dispatcherTimer.Stop();
             }
@@ -61,11 +64,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic1.IsEnabled = false;
+                listCorrectSelectedPictures.Add(1);
                 PicYes1.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo1.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -79,11 +84,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic2.IsEnabled = false;
+                listCorrectSelectedPictures.Add(2);
                 PicYes2.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo2.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -96,11 +103,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic3.IsEnabled = false;
+                listCorrectSelectedPictures.Add(3);
                 PicYes3.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo3.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -113,11 +122,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic4.IsEnabled = false;
+                listCorrectSelectedPictures.Add(4);
                 PicYes4.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo4.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -130,11 +141,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic5.IsEnabled = false;
+                listCorrectSelectedPictures.Add(5);
                 PicYes5.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo5.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -147,11 +160,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic6.IsEnabled = false;
+                listCorrectSelectedPictures.Add(6);
                 PicYes6.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo6.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -164,11 +179,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic7.IsEnabled = false;
+                listCorrectSelectedPictures.Add(7);
                 PicYes7.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo7.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -181,11 +198,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic8.IsEnabled = false;
+                listCorrectSelectedPictures.Add(8);
                 PicYes8.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo8.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -198,11 +217,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic9.IsEnabled = false;
+                listCorrectSelectedPictures.Add(9);
                 PicYes9.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo9.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -215,11 +236,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic10.IsEnabled = false;
+                listCorrectSelectedPictures.Add(10);
                 PicYes10.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo10.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -232,11 +255,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic11.IsEnabled = false;
+                listCorrectSelectedPictures.Add(11);
                 PicYes11.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo11.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -249,11 +274,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic12.IsEnabled = false;
+                listCorrectSelectedPictures.Add(12);
                 PicYes12.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo12.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -266,11 +293,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic13.IsEnabled = false;
+                listCorrectSelectedPictures.Add(13);
                 PicYes13.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo13.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -283,11 +312,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic14.IsEnabled = false;
+                listCorrectSelectedPictures.Add(14);
                 PicYes14.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo14.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -300,11 +331,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic15.IsEnabled = false;
+                listCorrectSelectedPictures.Add(15);
                 PicYes15.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo15.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -317,11 +350,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic16.IsEnabled = false;
+                listCorrectSelectedPictures.Add(16);
                 PicYes16.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo16.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -334,11 +369,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic17.IsEnabled = false;
+                listCorrectSelectedPictures.Add(17);
                 PicYes17.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo17.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -351,11 +388,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic18.IsEnabled = false;
+                listCorrectSelectedPictures.Add(18);
                 PicYes18.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo18.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -368,11 +407,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic19.IsEnabled = false;
+                listCorrectSelectedPictures.Add(19);
                 PicYes19.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo19.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -385,11 +426,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic20.IsEnabled = false;
+                listCorrectSelectedPictures.Add(20);
                 PicYes20.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo20.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -402,11 +445,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic21.IsEnabled = false;
+                listCorrectSelectedPictures.Add(21);
                 PicYes21.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo21.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -419,11 +464,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic22.IsEnabled = false;
+                listCorrectSelectedPictures.Add(22);
                 PicYes22.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo22.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -436,11 +483,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic23.IsEnabled = false;
+                listCorrectSelectedPictures.Add(23);
                 PicYes23.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo23.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -453,11 +502,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic24.IsEnabled = false;
+                listCorrectSelectedPictures.Add(24);
                 PicYes24.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo24.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -470,11 +521,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic25.IsEnabled = false;
+                listCorrectSelectedPictures.Add(25);
                 PicYes25.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo25.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -487,11 +540,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic26.IsEnabled = false;
+                listCorrectSelectedPictures.Add(26);
                 PicYes26.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo26.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -504,11 +559,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic27.IsEnabled = false;
+                listCorrectSelectedPictures.Add(27);
                 PicYes27.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo27.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -521,11 +578,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic28.IsEnabled = false;
+                listCorrectSelectedPictures.Add(28);
                 PicYes28.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo28.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -538,11 +597,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic29.IsEnabled = false;
+                listCorrectSelectedPictures.Add(29);
                 PicYes29.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo29.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -555,11 +616,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic30.IsEnabled = false;
+                listCorrectSelectedPictures.Add(30);
                 PicYes30.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo30.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -572,11 +635,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic31.IsEnabled = false;
+                listCorrectSelectedPictures.Add(31);
                 PicYes31.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo31.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -589,11 +654,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic32.IsEnabled = false;
+                listCorrectSelectedPictures.Add(32);
                 PicYes32.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo32.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -606,11 +673,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic33.IsEnabled = false;
+                listCorrectSelectedPictures.Add(33);
                 PicYes33.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo33.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -623,11 +692,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic34.IsEnabled = false;
+                listCorrectSelectedPictures.Add(34);
                 PicYes34.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo34.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -640,11 +711,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic35.IsEnabled = false;
+                listCorrectSelectedPictures.Add(35);
                 PicYes35.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo35.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -657,11 +730,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic36.IsEnabled = false;
+                listCorrectSelectedPictures.Add(36);
                 PicYes36.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo36.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -674,11 +749,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic37.IsEnabled = false;
+                listCorrectSelectedPictures.Add(37);
                 PicYes37.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo37.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -691,11 +768,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic38.IsEnabled = false;
+                listCorrectSelectedPictures.Add(38);
                 PicYes38.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo38.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -708,11 +787,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic39.IsEnabled = false;
+                listCorrectSelectedPictures.Add(39);
                 PicYes39.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo39.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -725,11 +806,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic40.IsEnabled = false;
+                listCorrectSelectedPictures.Add(40);
                 PicYes40.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo40.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -742,11 +825,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic41.IsEnabled = false;
+                listCorrectSelectedPictures.Add(41);
                 PicYes41.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo41.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -759,11 +844,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic42.IsEnabled = false;
+                listCorrectSelectedPictures.Add(42);
                 PicYes42.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo42.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -776,11 +863,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic43.IsEnabled = false;
+                listCorrectSelectedPictures.Add(43);
                 PicYes43.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo43.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -793,11 +882,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic44.IsEnabled = false;
+                listCorrectSelectedPictures.Add(44);
                 PicYes44.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo44.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -810,11 +901,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic45.IsEnabled = false;
+                listCorrectSelectedPictures.Add(45);
                 PicYes45.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo45.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -827,11 +920,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic46.IsEnabled = false;
+                listCorrectSelectedPictures.Add(46);
                 PicYes46.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo46.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -844,11 +939,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic47.IsEnabled = false;
+                listCorrectSelectedPictures.Add(47);
                 PicYes47.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo47.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
             }
@@ -861,13 +958,177 @@ namespace M.B.N.G.B.T.AttentivenessTest
             {
                 picCountChackted++;
                 Pic48.IsEnabled = false;
+                listCorrectSelectedPictures.Add(48);
                 PicYes48.Visibility = Visibility.Visible;
             }
             else
             {
                 PicNo48.Visibility = Visibility.Visible;
+                VisiblуNotSelected();
                 IsEnabledAllCheckBox(false);
                 door = true;
+            }
+        }
+
+        private void VisiblуNotSelected()
+        {
+            int[] arr;
+
+            if (listCorrectSelectedPictures.Count != 0)
+                arr = cl.GetArrayMissingNumbersInAnArray(RandomPicturesPage.listPicVisibility.ToArray(), listCorrectSelectedPictures.ToArray());
+            else
+                arr = RandomPicturesPage.listPicVisibility.ToArray();
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                switch (arr[i])
+                {
+                    case 1:
+                        PicYes2_1.Visibility = Visibility.Visible;
+                        break;
+                    case 2:
+                        PicYes2_2.Visibility = Visibility.Visible;
+                        break;
+                    case 3:
+                        PicYes2_3.Visibility = Visibility.Visible;
+                        break;
+                    case 4:
+                        PicYes2_4.Visibility = Visibility.Visible;
+                        break;
+                    case 5:
+                        PicYes2_5.Visibility = Visibility.Visible;
+                        break;
+                    case 6:
+                        PicYes2_6.Visibility = Visibility.Visible;
+                        break;
+                    case 7:
+                        PicYes2_7.Visibility = Visibility.Visible;
+                        break;
+                    case 8:
+                        PicYes2_8.Visibility = Visibility.Visible;
+                        break;
+                    case 9:
+                        PicYes2_9.Visibility = Visibility.Visible;
+                        break;
+                    case 10:
+                        PicYes2_10.Visibility = Visibility.Visible;
+                        break;
+                    case 11:
+                        PicYes2_11.Visibility = Visibility.Visible;
+                        break;
+                    case 12:
+                        PicYes2_12.Visibility = Visibility.Visible;
+                        break;
+                    case 13:
+                        PicYes2_13.Visibility = Visibility.Visible;
+                        break;
+                    case 14:
+                        PicYes2_14.Visibility = Visibility.Visible;
+                        break;
+                    case 15:
+                        PicYes2_15.Visibility = Visibility.Visible;
+                        break;
+                    case 16:
+                        PicYes2_16.Visibility = Visibility.Visible;
+                        break;
+                    case 17:
+                        PicYes2_17.Visibility = Visibility.Visible;
+                        break;
+                    case 18:
+                        PicYes2_18.Visibility = Visibility.Visible;
+                        break;
+                    case 19:
+                        PicYes2_19.Visibility = Visibility.Visible;
+                        break;
+                    case 20:
+                        PicYes2_20.Visibility = Visibility.Visible;
+                        break;
+                    case 21:
+                        PicYes2_21.Visibility = Visibility.Visible;
+                        break;
+                    case 22:
+                        PicYes2_22.Visibility = Visibility.Visible;
+                        break;
+                    case 23:
+                        PicYes2_23.Visibility = Visibility.Visible;
+                        break;
+                    case 24:
+                        PicYes2_24.Visibility = Visibility.Visible;
+                        break;
+                    case 25:
+                        PicYes2_25.Visibility = Visibility.Visible;
+                        break;
+                    case 26:
+                        PicYes2_26.Visibility = Visibility.Visible;
+                        break;
+                    case 27:
+                        PicYes2_27.Visibility = Visibility.Visible;
+                        break;
+                    case 28:
+                        PicYes2_28.Visibility = Visibility.Visible;
+                        break;
+                    case 29:
+                        PicYes2_29.Visibility = Visibility.Visible;
+                        break;
+                    case 30:
+                        PicYes2_30.Visibility = Visibility.Visible;
+                        break;
+                    case 31:
+                        PicYes2_31.Visibility = Visibility.Visible;
+                        break;
+                    case 32:
+                        PicYes2_32.Visibility = Visibility.Visible;
+                        break;
+                    case 33:
+                        PicYes2_33.Visibility = Visibility.Visible;
+                        break;
+                    case 34:
+                        PicYes2_34.Visibility = Visibility.Visible;
+                        break;
+                    case 35:
+                        PicYes2_35.Visibility = Visibility.Visible;
+                        break;
+                    case 36:
+                        PicYes2_36.Visibility = Visibility.Visible;
+                        break;
+                    case 37:
+                        PicYes2_37.Visibility = Visibility.Visible;
+                        break;
+                    case 38:
+                        PicYes2_38.Visibility = Visibility.Visible;
+                        break;
+                    case 39:
+                        PicYes2_39.Visibility = Visibility.Visible;
+                        break;
+                    case 40:
+                        PicYes2_40.Visibility = Visibility.Visible;
+                        break;
+                    case 41:
+                        PicYes2_41.Visibility = Visibility.Visible;
+                        break;
+                    case 42:
+                        PicYes2_42.Visibility = Visibility.Visible;
+                        break;
+                    case 43:
+                        PicYes2_43.Visibility = Visibility.Visible;
+                        break;
+                    case 44:
+                        PicYes2_44.Visibility = Visibility.Visible;
+                        break;
+                    case 45:
+                        PicYes2_45.Visibility = Visibility.Visible;
+                        break;
+                    case 46:
+                        PicYes2_46.Visibility = Visibility.Visible;
+                        break;
+                    case 47:
+                        PicYes2_47.Visibility = Visibility.Visible;
+                        break;
+                    case 48:
+                        PicYes2_48.Visibility = Visibility.Visible;
+                        break;
+                }
+
             }
         }
 
