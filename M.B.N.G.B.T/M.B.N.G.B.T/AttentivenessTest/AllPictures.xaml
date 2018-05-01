@@ -36,7 +36,9 @@
             <ColumnDefinition Width="47*"/>
         </Grid.ColumnDefinitions>
 
-        <Label x:Name="StartStage" Margin="13,128,0,0" FontSize="65" Content="1/10" Foreground="White" Height="102" VerticalAlignment="Top" HorizontalAlignment="Left" Width="166" Grid.RowSpan="2" />
+        <Viewbox Margin="13,128,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="166" Grid.RowSpan="2">
+            <Label x:Name="StartStage"  FontSize="65" Content="1/10" Foreground="White" Height="102"  />
+        </Viewbox>
 
         <Image Grid.Column="1" Height="100" Margin="16,11,0,0" VerticalAlignment="Top" 
          Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/1.gif" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Left" Width="100"/>
@@ -182,14 +184,16 @@
         <Image Grid.Column="8" HorizontalAlignment="Left" Height="100" Margin="15,15,0,0" Grid.Row="5" VerticalAlignment="Top" Width="100"
                Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/48.gif"/>
 
-        <Button x:Name="buttonExitTheTestAndViewResult" Click="Button_Exit_The_Test_And_View_Result" Content="Ավարտել թեստը&#xD;&#xA;        և տեսնել &#xD;&#xA;   արդյունքները" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" HorizontalAlignment="Left" Width="175" Grid.Column="0" Grid.Row="5" Margin="13,0,0,34" Height="99" VerticalAlignment="Bottom">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+        <Viewbox Grid.Column="0" Grid.Row="5" Margin="13,8,0,42" MaxHeight="99" HorizontalAlignment="Left" MaxWidth="175" Width="175" >
+            <Button x:Name="buttonExitTheTestAndViewResult" Click="Button_Exit_The_Test_And_View_Result" Content="Ավարտել թեստը&#xD;&#xA;        և տեսնել &#xD;&#xA;   արդյունքները" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand"  VerticalAlignment="Bottom" Width="168">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
 
 
 
@@ -529,10 +533,10 @@
                 <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/No.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        
-        
-        
-        
+
+
+
+
         <Rectangle x:Name="PicYes1" Visibility="Collapsed"  HorizontalAlignment="Left" Height="99"  Margin="16,12,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
@@ -550,7 +554,7 @@
                 <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        
+
         <Rectangle x:Name="PicYes4" Visibility="Collapsed" HorizontalAlignment="Left" Height="99"  Margin="16,12,0,0" VerticalAlignment="Top" Width="99" Grid.Column="4">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
@@ -820,9 +824,9 @@
                 <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        
-        
-        
+
+
+
         <Rectangle x:Name="PicYes2_1" Visibility="Collapsed"  HorizontalAlignment="Left" Height="99"  Margin="16,12,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Yes2.png"/>
@@ -1111,6 +1115,6 @@
             </Rectangle.Fill>
         </Rectangle>
     </Grid>
-    
-    
+
+
 </Page>

@@ -13,17 +13,16 @@ namespace M.B.N.G.B.T.AttentivenessTest
             InitializeComponent();
             if (RandomPicturesPage.stage != 1)
             {
-                LabelPercent.Content = $"{(RandomPicturesPage.stage-1) * 10}%";
+                LabelPercent.Content = $"Ձեր տեսողական հիշողությունը զարգացած է {(RandomPicturesPage.stage-1) * 10}%";
             }
-
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void button_Click_Exit_Main(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(null);
         }
 
-        private void button2_Click(object sender, RoutedEventArgs e)
+        private void button_Click_try_again(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Rule());
         }

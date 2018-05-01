@@ -10,40 +10,45 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="11*"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="683*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="46*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="217*"/>
-            <ColumnDefinition Width="1000*"/>
-            <ColumnDefinition Width="78*"/>
+            <ColumnDefinition Width="1053*"/>
+            <ColumnDefinition Width="25*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.Background>
             <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/wood-background.jpg"/>
         </Grid.Background>
+        <Viewbox MaxHeight="102" VerticalAlignment="Top" Grid.Column="1" Margin="13,128,31,0">
+            <Label x:Name="StartStage"  FontSize="65" Content="1/10" Foreground="White"  />
+        </Viewbox>
 
-        <Label x:Name="StartStage" Margin="13,128,31,0" FontSize="65" Content="1/10" Foreground="White" Height="102" VerticalAlignment="Top" Grid.Column="1" />
+        <Viewbox HorizontalAlignment="Left" MaxWidth="407" MaxHeight="35" Margin="13,0,0,8" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
+            <Button x:Name="buttonExitTheTestAndViewResult" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand"  VerticalAlignment="Bottom"  Click="Button_Exit_The_Test_And_View_Result" Width="396">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
 
-        <Button x:Name="buttonExitTheTestAndViewResult" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" HorizontalAlignment="Left" Width="407" Height="35" Margin="13,0,0,54" Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Click="Button_Exit_The_Test_And_View_Result">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-
-        <Button x:Name="buttonStartStage"  Content="Հիշեցի" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" Margin="0,0,19,54" Grid.Row="1" Grid.Column="2" VerticalAlignment="Bottom" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="117" Click="Button_Start_Stage">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+        <Viewbox MaxHeight="35" Margin="0,0,0,8" Grid.Row="1" Grid.Column="2"  HorizontalAlignment="Right" MaxWidth="117">
+            <Button x:Name="buttonStartStage"  Content="Հիշեցի" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand"  VerticalAlignment="Bottom" Click="Button_Start_Stage" Width="79">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
 
         <Canvas Margin="12,156,64,186" Grid.Column="2">
             <Image x:Name="Pic37" Height="100" VerticalAlignment="Top" 

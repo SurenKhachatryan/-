@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:M.B.N.G.B.T.AttentivenessTest"
       mc:Ignorable="d" 
-      d:DesignHeight="780" d:DesignWidth="1300" MinHeight="600" MinWidth="800"
+      d:DesignHeight="780" d:DesignWidth="1300"
       Title="ResultPage" x:Name="ResultPage1">
     <Page.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>
@@ -17,32 +17,36 @@
             <RowDefinition Height="39*"/>
             <RowDefinition Height="95*"/>
         </Grid.RowDefinitions>
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="393*"/>
-            <ColumnDefinition Width="114*"/>
-            <ColumnDefinition Width="110*"/>
-            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="62*"/>
+            <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
 
+        <Viewbox Margin="0,4,9,0" Grid.Row="1" HorizontalAlignment="Right" Width="185">
+            <Button x:Name="buttonClickExitMain" Click="button_Click_Exit_Main" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35"  Width="185" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
 
-        <Button x:Name="button1" Click="button1_Click" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" VerticalAlignment="Top" Margin="16,4,0,0" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Width="185">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+        <Viewbox Margin="0,4,200,0" Grid.Row="1" HorizontalAlignment="Right" Width="187">
+            <Button x:Name="buttonClicktryagain" Click="button_Click_try_again" Content="Կրկին փորձել" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="32" Width="172" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
 
-        <Button x:Name="button2" Click="button2_Click" Content="Կրկին փորձել" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" VerticalAlignment="Top" Margin="24,4,0,0" HorizontalAlignment="Left" Width="184" Grid.Column="1" Grid.Row="1">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Label Content="Ձեր տեսողական հիշողությունը զարգացած է" Foreground="White" FontSize="25" FontFamily="sylfein" HorizontalAlignment="Left" Margin="109,193,0,0" VerticalAlignment="Top" Height="55" Width="605"/>
-        <Label x:Name="LabelPercent" Content="0%" Foreground="White" FontSize="25" FontFamily="sylfein" HorizontalAlignment="Left" Margin="659,193,0,0" VerticalAlignment="Top" Height="55" Width="85"/>
+        <Viewbox Margin="109,192,7,0" VerticalAlignment="Top" Height="101">
+            <Label x:Name="LabelPercent" Content="Ձեր տեսողական հիշողությունը զարգացած է 0%" Foreground="White" FontSize="25" FontFamily="sylfein"  Height="61" Width="679"/>
+        </Viewbox>
     </Grid>
 </Page>

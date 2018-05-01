@@ -13,35 +13,51 @@
     </Page.Background>
 
     <Grid x:Name="GridRuleAttentivenessTest" >
-        
-        <TextBlock FontSize="38" Foreground="White" Margin="149,54,107,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="68">
-            <Run Text="     Տեսողական Հիշողություն Թեստավորման Կանոններ"/></TextBlock>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="662*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="79*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="58*"/>
+            <ColumnDefinition Width="1183*"/>
+            <ColumnDefinition Width="59*"/>
+        </Grid.ColumnDefinitions>
+        <Viewbox VerticalAlignment="Top" Margin="58,54,63,0" Grid.Column="1" Height="75">
+            <TextBlock FontSize="38" Foreground="White"  TextWrapping="Wrap" Height="68" Width="966">
+            <Run Text="Տեսողական Հիշողություն Թեստավորման Կանոններ"/></TextBlock>
+        </Viewbox>
 
-        <TextBlock FontSize="28" Foreground="White" Margin="65,158,53,336">
+        <Viewbox Margin="11,130,53,0" Grid.Column="1" Grid.ColumnSpan="2" Height="286" VerticalAlignment="Top"  >
+            <TextBlock FontSize="25"  Foreground="White" Height="174" Width="1068" >
             <Run Text="Թեստը ստուգում է , թե որքան է զարգացած Ձեր տեսողական հիշողությունը ։"/>
             <LineBreak/><Run Text="   Ձեզ տրվում է 10վ ժամանակ և պատահական կարգով առարկաների լուսանկարներ ։ "/>
             <LineBreak/><Run Text="Դուք պետք է 10վ-ում մտապահեք այդ լուսանկարները , որից հետո , երբ վերջանա"/>
             <LineBreak/><Run Text="10վ-ը , ձեզ կտրվի նկարների շարք և 10վ ժամանակ ։ Դուք պետք է 10վ-ում գտնեք"/>
             <LineBreak/><Run Text="ձեր մտապահած լուսանկարները և նշեք մկնիկով։"/>
-        </TextBlock>
+            </TextBlock>
+        </Viewbox>
 
-        <Button x:Name="button1" Click="Button_Click" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Margin="69,0,0,82" HorizontalAlignment="Left" Width="150" Height="35" VerticalAlignment="Bottom">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+        <Viewbox Margin="11,1,0,3" HorizontalAlignment="Left" MaxWidth="150" MaxHeight="35" Grid.Column="1" Grid.Row="1" Width="138">
+            <Button x:Name="button1" Click="Button_Click" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Width="134" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
 
-        <Button x:Name="button2" Click="button2_Click" Content="Սկսել Թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" HorizontalAlignment="Right" Width="147" Margin="0,0,70,82" Height="35" VerticalAlignment="Bottom">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
+        <Viewbox Margin="0,1,11,3" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" MaxWidth="147">
+            <Button x:Name="button2" Click="button2_Click" Content="Սկսել Թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Width="143" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
     </Grid>
 </Page>
