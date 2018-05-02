@@ -58,6 +58,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="KrepelinTest\KrepelTestResultPage.xaml.cs">
+      <DependentUpon>KrepelTestResultPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KrepelinTest\KrepelTestRulePage.xaml.cs">
+      <DependentUpon>KrepelTestRulePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KrepelinTest\KrepelTestTablePage.xaml.cs">
+      <DependentUpon>KrepelTestTablePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Schulte Test\SchulteTestResultPage.xaml.cs">
       <DependentUpon>SchulteTestResultPage.xaml</DependentUpon>
     </Compile>
@@ -95,6 +104,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AttentivenessTest\Rule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KrepelinTest\KrepelTestResultPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KrepelinTest\KrepelTestRulePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KrepelinTest\KrepelTestTablePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

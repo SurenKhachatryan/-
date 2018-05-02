@@ -14,14 +14,16 @@
     <Grid x:Name="GridMenu">
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="33*"/>
             <RowDefinition Height="20"/>
             <RowDefinition Height="35"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="35"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="35"/>
-            <RowDefinition Height="17*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="517*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -29,7 +31,7 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <Button x:Name="button1" Click="Button_Click" Content="Տեսողական Հիշողություն" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Grid.Row="3" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top">
+        <Button x:Name="buttonAttentivenessTest" Click="Button_Attentiveness_Test" Content="Տեսողական Հիշողություն" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Grid.Row="3" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -38,7 +40,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="button2" Click="Button_Click1" Content="Շուլտեի Աղյուսակ" FontSize="20"  FontFamily="Jokerman" Cursor="Hand"  Foreground="White" Grid.Row="5" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top">
+        <Button x:Name="buttonSchulteTest" Click="Button_Schulte_Test" Content="Շուլտեի Աղյուսակ" FontSize="20"  FontFamily="Jokerman" Cursor="Hand"  Foreground="White" Grid.Row="5" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -47,7 +49,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="button3" Click="Button_Click2" Content="Վ․Լ․Մարշուկի Թեստ" FontSize="20"  FontFamily="Jokerman" Cursor="Hand" Foreground="White" Grid.Row="7" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top">
+        <Button x:Name="buttonVLMarshukTest" Click="Button_VLMarshuk_Test" Content="Վ․Լ․Մարշուկի Թեստ" FontSize="20"  FontFamily="Jokerman" Cursor="Hand" Foreground="White" Grid.Row="7" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -55,19 +57,28 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        
+
+        <Button x:Name="buttonKrepelinTest" Click="Button_Krepelin_Test" Content="Հաշվարկ ըստ Կրեպելինի" FontSize="20"  FontFamily="Jokerman" Cursor="Hand" Foreground="White" Grid.Row="9" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top" Margin="0,1,0,0" Grid.RowSpan="2">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
 
         <Viewbox Grid.Row="1"  Margin="93,0" Grid.ColumnSpan="2">
-        <TextBlock Text="   Մարդու Բարձրագույն Նյարդային Գործունեության Բաղադրիչների Թեստավորում" FontSize="23" Foreground="White"  MinHeight="22" MinWidth="610" Width="990">
-            <TextBlock.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF102E16" Offset="1"/>
-                </LinearGradientBrush>
-            </TextBlock.Background>
-        </TextBlock>
+            <TextBlock Text="   Մարդու Բարձրագույն Նյարդային Գործունեության Բաղադրիչների Թեստավորում" FontSize="23" Foreground="White"  MinHeight="22" MinWidth="610" Width="990">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FF102E16" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
         </Viewbox>
-        <Frame Name="Main" Margin="0,0,0,0"  RenderTransformOrigin="0,0" Grid.RowSpan="9" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden"/>
+        <Frame Name="Main" Margin="0,0,0,0"  RenderTransformOrigin="0,0" Grid.RowSpan="11" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden"/>
 
     </Grid>
 

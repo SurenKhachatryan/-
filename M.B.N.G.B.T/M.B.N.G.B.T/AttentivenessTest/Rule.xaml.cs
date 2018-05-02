@@ -7,9 +7,9 @@ namespace M.B.N.G.B.T.AttentivenessTest
     /// <summary>
     /// Логика взаимодействия для Rule.xaml
     /// </summary>
-    public partial class Rule : Page
+    public partial class AttentivenessTestRulePage : Page
     {
-        public Rule()
+        public AttentivenessTestRulePage()
         {
             InitializeComponent();
         }

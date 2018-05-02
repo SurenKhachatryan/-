@@ -24,7 +24,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
 
         private void button_Click_try_again(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Rule());
+            NavigationService.Navigate(new AttentivenessTestRulePage());
         }
     }
 }

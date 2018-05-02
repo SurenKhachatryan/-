@@ -1,18 +1,10 @@
 ﻿using ClassLibrary;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 
 namespace M.B.N.G.B.T.V.L.Marshuk_Test
@@ -24,6 +16,7 @@ namespace M.B.N.G.B.T.V.L.Marshuk_Test
     {
         private List<int> lsRndDigite = new List<int>();
 
+        public static int[][] arrAllStageRandomDigits = new int[5][];
         public static int[][] arrAllStageDigitsInTextBox = new int[5][];
         public static int[][] arrAllStageRightNumbers = new int[5][];
         public static int[][] arrAllStageAbsentNumbers = new int[5][];
@@ -77,7 +70,7 @@ namespace M.B.N.G.B.T.V.L.Marshuk_Test
             else
                 timer.Content = $"{minute}:{second}";
 
-            if (minute == 3 && second == 0)
+            if (minute == 5 && second == 0)
             {
                 FinishStage();
                 NavigationService.Navigate(new MarshukTestResultPage());
@@ -290,6 +283,8 @@ namespace M.B.N.G.B.T.V.L.Marshuk_Test
                     i--;
                 }
             }
+            arrAllStageRandomDigits[stage - 1] = lsRndDigite.ToArray();
+            cl.SortingArr(ref arrAllStageRandomDigits[stage - 1]);
         }
 
         private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)

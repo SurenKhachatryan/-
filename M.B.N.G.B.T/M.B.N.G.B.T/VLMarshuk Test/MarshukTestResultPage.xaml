@@ -14,17 +14,21 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="646*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="596*"/>
             <RowDefinition Height="39*"/>
             <RowDefinition Height="95*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="62*"/>
-            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="668*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="498*"/>
+            <ColumnDefinition Width="60*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox Margin="0,4,9,0" Grid.Row="1" HorizontalAlignment="Right" Width="185">
+        <Viewbox Margin="0,4,9,0" Grid.Row="2" HorizontalAlignment="Right" Width="185" Grid.Column="3">
             <Button x:Name="buttonClickExitMain" Click="button_Click_Exit_Main" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35"  Width="185" >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -35,7 +39,7 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Margin="0,4,200,0" Grid.Row="1" HorizontalAlignment="Right" Width="187">
+        <Viewbox Margin="0,4,200,0" Grid.Row="2" HorizontalAlignment="Right" Width="187" Grid.Column="3">
             <Button x:Name="buttonClicktryagain" Click="button_Click_try_again" Content="Կրկին փորձել" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="32" Width="172" >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -44,6 +48,14 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
+        </Viewbox>
+
+
+        <Viewbox Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="1" Margin="10,0,0,0">
+            <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="{x:Null}" FontSize="10" Foreground="White" FontFamily="sylfein" FontStyle="Normal" FontWeight="Bold"/>
+        </Viewbox>
+        <Viewbox Margin="1,0,0,10" Grid.Column="1" Grid.Row="1">
+            <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="{x:Null}" FontSize="10" Foreground="White" FontFamily="sylfein" FontStyle="Normal" FontWeight="Bold"/>
         </Viewbox>
 
     </Grid>
