@@ -23,6 +23,20 @@ namespace M.B.N.G.B.T.KrepelTest
         public KrepelinTestTablePage()
         {
             InitializeComponent();
+            textBox.Focus();
+        }
+
+        private void button_Click_Result(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void textBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if ((!Char.IsDigit(e.Text, 0)) || textBox.Text.Length == 3)
+            {
+                e.Handled = true;
+            }
         }
     }
 }
