@@ -10,7 +10,7 @@
     <Page.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>
     </Page.Background>
-    <Grid>
+    <Grid PreviewKeyDown="Grid_PreviewKeyDown">
         <Grid.RowDefinitions>
             <RowDefinition Height="19*"/>
             <RowDefinition Height="241*"/>
@@ -22,18 +22,11 @@
             <ColumnDefinition Width="52*"/>
         </Grid.ColumnDefinitions>
 
-        <Label Content="Սխալ = 0" FontSize="70" Foreground="White"   HorizontalAlignment="Left" Margin="20,7,0,0" VerticalAlignment="Top" Height="115" Width="328" FontFamily="Kristen ITC" Grid.Column="1" Grid.Row="1"/>
-        <Label Content="Ճիշտ = 0" FontSize="70" Foreground="White"   HorizontalAlignment="Right" Margin="0,7,61,0" VerticalAlignment="Top" Height="115" Width="328" FontFamily="Kristen ITC" Grid.Column="2" Grid.Row="1"/>
-        <Label Content="_____" FontSize="100" Foreground="White" Margin="0,220,273,0" VerticalAlignment="Top" Height="129" FontFamily="Kristen ITC" HorizontalAlignment="Right" Width="132" Grid.Column="1" Grid.Row="1" RenderTransformOrigin="0.5,0.5">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
+        <Label x:Name="lebleFalse" Content="Սխալ = 0" FontSize="70" Foreground="White"   HorizontalAlignment="Left" Margin="20,7,0,0" VerticalAlignment="Top" Height="115" Width="399" FontFamily="Kristen ITC" Grid.Column="1" Grid.Row="1"/>
+
+        <Label x:Name="lebleTrue" Content="Ճիշտ = 0" FontSize="70" Foreground="White"   HorizontalAlignment="Right" Margin="0,7,10,0" VerticalAlignment="Top" Height="115" Width="389" FontFamily="Kristen ITC" Grid.Column="2" Grid.Row="1"/>
+        <Label Content="_____" FontSize="100" Foreground="White" Margin="0,220,273,0" VerticalAlignment="Top" Height="129" FontFamily="Kristen ITC" HorizontalAlignment="Right" Width="132" Grid.Column="1" Grid.Row="1" />
+
         <Label Content="+" FontSize="100" Foreground="White" Margin="0,262,404,0" VerticalAlignment="Top" Height="125" FontFamily="Kristen ITC" HorizontalAlignment="Right" Width="69" Grid.Column="1" Grid.Row="1"/>
         <Label Content="=" FontSize="100" Foreground="White" Margin="0,262,196,0" VerticalAlignment="Top" Height="125" FontFamily="Kristen ITC" HorizontalAlignment="Right" Width="69" Grid.Column="1" Grid.Row="1"/>
         <Label Content="_____" FontSize="100" Foreground="White" Margin="0,248,26,0" VerticalAlignment="Top" Height="163" FontFamily="Kristen ITC" HorizontalAlignment="Right" Width="165" Grid.Column="1" Grid.Row="1"/>
