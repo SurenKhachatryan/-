@@ -16,24 +16,27 @@
             <RowDefinition Height="241*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="60*"/>
-            <ColumnDefinition Width="789*"/>
-            <ColumnDefinition Width="399*"/>
-            <ColumnDefinition Width="52*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="393*"/>
+            <ColumnDefinition Width="201*"/>
+            <ColumnDefinition Width="26*"/>
         </Grid.ColumnDefinitions>
 
-        <Label x:Name="lebleFalse" Content="Սխալ = 0" FontSize="70" Foreground="White"   HorizontalAlignment="Left" Margin="20,7,0,0" VerticalAlignment="Top" Height="115" Width="399" FontFamily="Kristen ITC" Grid.Column="1" Grid.Row="1"/>
+        <Label x:Name="timerStage" Content="30" FontSize="70" Foreground="White"   HorizontalAlignment="Left" Margin="20,122,0,0" VerticalAlignment="Top" Height="118" Width="114" FontFamily="Sylfaen" Grid.Column="1" Grid.Row="1"/>
+        <Label x:Name="lebleTrue" Content="Ճիշտ - 0" FontSize="70" Foreground="White"   HorizontalAlignment="Left" Margin="412,7,0,0" VerticalAlignment="Top" Height="115" Width="374" FontFamily="Sylfaen" Grid.Column="1" Grid.Row="1"/>
 
-        <Label x:Name="lebleTrue" Content="Ճիշտ = 0" FontSize="70" Foreground="White"   HorizontalAlignment="Right" Margin="0,7,10,0" VerticalAlignment="Top" Height="115" Width="389" FontFamily="Kristen ITC" Grid.Column="2" Grid.Row="1"/>
-        <Label Content="_____" FontSize="100" Foreground="White" Margin="0,220,273,0" VerticalAlignment="Top" Height="129" FontFamily="Kristen ITC" HorizontalAlignment="Right" Width="132" Grid.Column="1" Grid.Row="1" />
+        <Label x:Name="lebleFalse" Content="Սխալ - 0" FontSize="70" Foreground="White"   HorizontalAlignment="Left" Margin="18,7,0,0" VerticalAlignment="Top" Height="115" Width="384" FontFamily="Sylfaen" Grid.Column="2" Grid.Row="1"/>
+        <Label Content="_____" FontSize="100" Foreground="White" Margin="0,274,312,0" VerticalAlignment="Top" Height="129" FontFamily="Kristen ITC" HorizontalAlignment="Right" Width="132" Grid.Column="1" Grid.Row="1" />
 
-        <Label Content="+" FontSize="100" Foreground="White" Margin="0,262,404,0" VerticalAlignment="Top" Height="125" FontFamily="Kristen ITC" HorizontalAlignment="Right" Width="69" Grid.Column="1" Grid.Row="1"/>
-        <Label Content="=" FontSize="100" Foreground="White" Margin="0,262,196,0" VerticalAlignment="Top" Height="125" FontFamily="Kristen ITC" HorizontalAlignment="Right" Width="69" Grid.Column="1" Grid.Row="1"/>
-        <Label Content="_____" FontSize="100" Foreground="White" Margin="0,248,26,0" VerticalAlignment="Top" Height="163" FontFamily="Kristen ITC" HorizontalAlignment="Right" Width="165" Grid.Column="1" Grid.Row="1"/>
+        <Label Content="+" FontSize="100" Foreground="White" Margin="0,316,443,0" VerticalAlignment="Top" Height="125" FontFamily="Kristen ITC" HorizontalAlignment="Right" Width="69" Grid.Column="1" Grid.Row="1"/>
+        <Label Content="=" FontSize="100" Foreground="White" Margin="0,316,235,0" VerticalAlignment="Top" Height="125" FontFamily="Kristen ITC" HorizontalAlignment="Right" Width="69" Grid.Column="1" Grid.Row="1"/>
+        <Label Content="_____" FontSize="100" Foreground="White" Margin="0,302,65,0" VerticalAlignment="Top" Height="163" FontFamily="Kristen ITC" HorizontalAlignment="Right" Width="165" Grid.Column="1" Grid.Row="1"/>
+        <Label Content="  ?" FontSize="100" Foreground="White" Margin="0,302,65,0" VerticalAlignment="Top" Height="163" FontFamily="Sylfaen" HorizontalAlignment="Right" Width="165" Grid.Column="1" Grid.Row="1"/>
 
-        <TextBox x:Name="textBox" BorderThickness="0" HorizontalAlignment="Right" Height="129" FontSize="100" Foreground="White"  Margin="0,252,26,0" TextWrapping="Wrap" FontFamily="Kristen ITC" Text="{x:Null}" VerticalAlignment="Top" Width="165" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Grid.Column="1" Grid.Row="1" CaretBrush="White" PreviewTextInput="textBox_PreviewTextInput"/>
-        <Label x:Name="LableCalculatingDown" Content="80" FontSize="100" Foreground="White" Margin="0,312,270,0" VerticalAlignment="Top" Height="131" FontFamily="Kristen ITC" HorizontalAlignment="Right" Width="129" Grid.Column="1" Grid.Row="1"/>
-        <Label x:Name="LableCalculatingUp" Content="80" FontSize="100" Foreground="White"  HorizontalAlignment="Right" Margin="0,220,270,0" VerticalAlignment="Top" Width="129" Height="129" FontFamily="Kristen ITC" Grid.Column="1" Grid.Row="1"/>
+        <Label x:Name="LableStage" Content="Փուլ 1/8" FontSize="70" Foreground="White" Margin="0,7,487,0" VerticalAlignment="Top" Height="115" FontFamily="Sylfaen" HorizontalAlignment="Right" Width="279" Grid.Column="1" Grid.Row="1"/>
+        <TextBox x:Name="textBox"  BorderThickness="0" HorizontalAlignment="Right" Height="129" FontSize="100" Foreground="White"  Margin="0,306,230,0" TextWrapping="Wrap" FontFamily="Kristen ITC" Text="{x:Null}" VerticalAlignment="Top" Width="0" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Grid.Column="1" Grid.Row="1" CaretBrush="White" PreviewTextInput="textBox_PreviewTextInput"/>
+        <Label x:Name="LableCalculatingDown" Content="80" FontSize="100" Foreground="White" Margin="0,366,309,0" VerticalAlignment="Top" Height="131" FontFamily="Sylfaen" HorizontalAlignment="Right" Width="129" Grid.Column="1" Grid.Row="1"/>
+        <Label x:Name="LableCalculatingUp" Content="80" FontSize="100" Foreground="White"  HorizontalAlignment="Right" Margin="0,274,309,0" VerticalAlignment="Top" Width="129" Height="129" FontFamily="Sylfaen" Grid.Column="1" Grid.Row="1"/>
 
         <Button x:Name="buttonClickResult" Click="button_Click_Result" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Margin="20,0,0,75" HorizontalAlignment="Left" Width="399" Height="36" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="1">
             <Button.Background>
@@ -44,5 +47,15 @@
             </Button.Background>
         </Button>
 
+        <Button x:Name="button0" Content="0" Grid.Column="2" FontSize="45" FontWeight="Bold" HorizontalAlignment="Right" Margin="0,0,106,216" Grid.Row="1" VerticalAlignment="Bottom" Width="50" Height="215" Click="Button_Click"/>
+        <Button x:Name="button1" Content="1" Grid.Column="2" FontSize="45" FontWeight="Bold" Margin="0,0,272,363" Grid.Row="1" VerticalAlignment="Bottom" Height="68" HorizontalAlignment="Right" Width="50" Click="Button_Click_1"/>
+        <Button x:Name="button2" Content="2" Grid.Column="2" FontSize="45" FontWeight="Bold" HorizontalAlignment="Right" Margin="0,0,217,363" Grid.Row="1" VerticalAlignment="Bottom" Width="50" Height="68" Click="Button_Click_2"/>
+        <Button x:Name="button3" Content="3" Grid.Column="2" FontSize="45" FontWeight="Bold" HorizontalAlignment="Right" Margin="0,0,162,363" Grid.Row="1" VerticalAlignment="Bottom" Width="50" Height="68" Click="Button_Click_3"/>
+        <Button x:Name="button4" Content="4" Grid.Column="2" FontSize="45" FontWeight="Bold" HorizontalAlignment="Right" Margin="0,0,272,290" Grid.Row="1" Width="50" Height="68" VerticalAlignment="Bottom" Click="Button_Click_4"/>
+        <Button x:Name="button5" Content="5" Grid.Column="2" FontSize="45" FontWeight="Bold" HorizontalAlignment="Right" Margin="0,0,217,290" Grid.Row="1" VerticalAlignment="Bottom" Width="50" Height="68" Click="Button_Click_5"/>
+        <Button x:Name="button6" Content="6" Grid.Column="2" FontSize="45" FontWeight="Bold" HorizontalAlignment="Right" Margin="0,0,162,290" Grid.Row="1" VerticalAlignment="Bottom" Width="50" Height="68" Click="Button_Click_6"/>
+        <Button x:Name="button7" Content="7" Grid.Column="2" FontSize="45" FontWeight="Bold" HorizontalAlignment="Right" Margin="0,0,272,216" Grid.Row="1" VerticalAlignment="Bottom" Width="50" Height="68" Click="Button_Click_7"/>
+        <Button x:Name="button8" Content="8" Grid.Column="2" FontSize="45" FontWeight="Bold" HorizontalAlignment="Right" Margin="0,0,217,216" Grid.Row="1" VerticalAlignment="Bottom" Width="50" Height="68" Click="Button_Click_8"/>
+        <Button x:Name="button9" Content="9" Grid.Column="2" FontSize="45" FontWeight="Bold" HorizontalAlignment="Right" Margin="0,0,162,216" Grid.Row="1" VerticalAlignment="Bottom" Width="50" Height="68" Click="Button_Click_9"/>
     </Grid>
 </Page>

@@ -23,8 +23,11 @@ namespace M.B.N.G.B.T.KrepelTest
     {
         private Random rnd = new Random();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
-        
-        private int second = 0;
+
+        private int second { get; set; } = 30;
+        private int labelFalse { get; set; } = 0;
+        private int labelTrue { get; set; } = 0;
+        private int buttonContent { get; set; }
 
         public KrepelinTestTablePage()
         {
@@ -45,11 +48,19 @@ namespace M.B.N.G.B.T.KrepelTest
         private void LabelTimer(object sender, EventArgs e)
         {
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-            second++;
-            if (textBox.Text != "" && second == 1)
+            if (second != -1)
             {
-                FinishStage();
+                if (second > 9)
+                    timerStage.Content = $"{second}";
+                else
+                    timerStage.Content = $"0{second}";
+                second--;
             }
+            else
+            {
+                dispatcherTimer.Stop();
+            }
+
         }
 
         private void textBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -59,12 +70,11 @@ namespace M.B.N.G.B.T.KrepelTest
             {
                 e.Handled = true;
             }
-            //if (Char.IsDigit(e.Text, 0))
-            //{
-            //    textBox.Text = e.Text;
-            //    FinishStage();
-            //    e.Handled = true;
-            //}
+            if (Char.IsDigit(e.Text, 0))
+            {
+                FinishStage(Convert.ToInt32(e.Text));
+                e.Handled = true;
+            }
         }
 
         private void Grid_PreviewKeyDown(object sender, KeyEventArgs e)
@@ -78,23 +88,77 @@ namespace M.B.N.G.B.T.KrepelTest
         }
         private void Initializator()
         {
-            LableCalculatingUp.Content = $"{rnd.Next(1, 10)}";
-            LableCalculatingDown.Content = $"{rnd.Next(1, 10)}";
+            LableCalculatingUp.Content = $" {rnd.Next(1, 10)}";
+            LableCalculatingDown.Content = $" {rnd.Next(1, 10)}";
             textBox.Text = "";
+            textBox.Focus();
+            buttonContent = -1;
         }
 
-        private void FinishStage()
+        private void FinishStage(int Number)
         {
-            if (Convert.ToInt32(textBox.Text) == ((Convert.ToInt32(LableCalculatingUp.Content) + Convert.ToInt32(LableCalculatingDown.Content)) % 10))
+            if (Number == ((Convert.ToInt32(LableCalculatingUp.Content) + Convert.ToInt32(LableCalculatingDown.Content)) % 10))
             {
-                lebleTrue.Content = $"Ճիշտ = {(Convert.ToInt32(lebleTrue.Content) + 1)}";
+                labelTrue++;
+                lebleTrue.Content = $"Ճիշտ - {labelTrue}";
                 Initializator();
             }
             else
             {
-                lebleFalse.Content = $"Սխալ = {Convert.ToInt32(lebleFalse) + 1}";
+                labelFalse++;
+                lebleFalse.Content = $"Սխալ - {labelFalse}";
                 Initializator();
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            FinishStage(0);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            FinishStage(1);
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            FinishStage(2);
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            FinishStage(3);
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            FinishStage(4);
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            FinishStage(5);
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            FinishStage(6);
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            FinishStage(7);
+        }
+
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {
+            FinishStage(8);
+        }
+
+        private void Button_Click_9(object sender, RoutedEventArgs e)
+        {
+            FinishStage(9);
         }
     }
 }
