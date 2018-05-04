@@ -24,5 +24,15 @@ namespace M.B.N.G.B.T.KrepelTest
         {
             InitializeComponent();
         }
+
+        private void button_Click_try_again(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new KrepelinTestRulePage());
+        }
+
+        private void button_Click_Exit_Main(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(null);
+        }
     }
 }

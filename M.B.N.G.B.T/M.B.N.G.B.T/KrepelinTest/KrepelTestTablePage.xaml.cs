@@ -29,19 +29,28 @@ namespace M.B.N.G.B.T.KrepelTest
         private int labelTrue { get; set; } = 0;
         private int buttonContent { get; set; }
 
+        private List<int> listAllStageRightAnswers { get; set; } = new List<int>();
+        private List<int> listAllStageWrongAnswers { get; set; } = new List<int>();
+
+        public static int stage { get; set; } = 1;
+        public static int[] arrAllStageRightAnswers { get; private set; } = new int[8];
+        public static int[] arrAllStageWrongAnswers { get; private set; } = new int[8];
+
         public KrepelinTestTablePage()
         {
             InitializeComponent();
 
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
+
+            LableStage.Content = $"Փուլ {stage}/8";
             Initializator();
             textBox.Focus();
             dispatcherTimer.Start();
-
         }
 
         private void button_Click_Result(object sender, RoutedEventArgs e)
         {
+            NavigationService.Navigate(new KrepelinTestResultPage());
             dispatcherTimer.Stop();
         }
 
@@ -58,14 +67,21 @@ namespace M.B.N.G.B.T.KrepelTest
             }
             else
             {
+                if (stage != 8)
+                {
+                    stage++;
+                    NavigationService.Navigate(new KrepelinTestTablePage());
+                }
+                else
+                {
+                    NavigationService.Navigate(new KrepelinTestResultPage());
+                }
                 dispatcherTimer.Stop();
             }
-
         }
 
         private void textBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            second = 0;
             if ((!Char.IsDigit(e.Text, 0)) || textBox.Text.Length == 3)
             {
                 e.Handled = true;
@@ -79,13 +95,12 @@ namespace M.B.N.G.B.T.KrepelTest
 
         private void Grid_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            second = 0;
             if (e.Key == Key.Space)
             {
                 e.Handled = true;
             }
-
         }
+
         private void Initializator()
         {
             LableCalculatingUp.Content = $" {rnd.Next(1, 10)}";
