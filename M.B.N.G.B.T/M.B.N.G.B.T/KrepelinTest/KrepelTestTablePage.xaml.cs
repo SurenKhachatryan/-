@@ -1,17 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 
 namespace M.B.N.G.B.T.KrepelTest
@@ -28,13 +21,11 @@ namespace M.B.N.G.B.T.KrepelTest
         private int labelFalse { get; set; } = 0;
         private int labelTrue { get; set; } = 0;
         private int buttonContent { get; set; }
-
-        private List<int> listAllStageRightAnswers { get; set; } = new List<int>();
-        private List<int> listAllStageWrongAnswers { get; set; } = new List<int>();
+        private string _operator { get; set; } = "+";
 
         public static int stage { get; set; } = 1;
-        public static int[] arrAllStageRightAnswers { get; private set; } = new int[8];
-        public static int[] arrAllStageWrongAnswers { get; private set; } = new int[8];
+        public static int[][] arrAllStageRightAnswers { get; set; } = new int[8][];
+        public static int[][] arrAllStageWrongAnswers { get; set; } = new int[8][];
 
         public KrepelinTestTablePage()
         {
@@ -43,40 +34,74 @@ namespace M.B.N.G.B.T.KrepelTest
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
 
             LableStage.Content = $"Փուլ {stage}/8";
+
+            if (stage % 2 != 0)
+                _Operator.Content = (_operator = "+");
+            else
+                _Operator.Content = (_operator = "-");
+
             Initializator();
-            textBox.Focus();
             dispatcherTimer.Start();
         }
 
         private void button_Click_Result(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new KrepelinTestResultPage());
+            arrAllStageRightAnswers[stage - 1] = new int[1];
+            arrAllStageWrongAnswers[stage - 1] = new int[1];
+
+            arrAllStageRightAnswers[stage - 1][0] = labelTrue;
+            arrAllStageWrongAnswers[stage - 1][0] = labelFalse;
+
             dispatcherTimer.Stop();
+
+            NavigationService.Navigate(new KrepelinTestResultPage());
         }
 
         private void LabelTimer(object sender, EventArgs e)
         {
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-            if (second != -1)
+            if (second >= 0)
             {
+                if (second == 10)
+                    timer1.Foreground = Brushes.Yellow;
+                if (second == 5)
+                    timer1.Foreground = Brushes.Red;
+
                 if (second > 9)
-                    timerStage.Content = $"{second}";
+                    timer1.Content = $"{second}";
                 else
-                    timerStage.Content = $"0{second}";
+                    timer1.Content = $"0{second}";
                 second--;
+                if (second == -1 && stage != 8)
+                {
+                    timer2.Visibility = Visibility.Visible;
+                    IsEnabledButtonsAndTextBox(false);
+                    timer2.Content = $"0{(second + 4)}";
+                }
             }
             else
             {
-                if (stage != 8)
+                if (second == -4 || (stage == 8 && second <= 0))
                 {
-                    stage++;
-                    NavigationService.Navigate(new KrepelinTestTablePage());
+                    arrAllStageRightAnswers[stage - 1] = new int[1];
+                    arrAllStageWrongAnswers[stage - 1] = new int[1];
+
+                    arrAllStageRightAnswers[stage - 1][0] = labelTrue;
+                    arrAllStageWrongAnswers[stage - 1][0] = labelFalse;
+
+                    if (stage != 8)
+                    {
+                        stage++;
+                        NavigationService.Navigate(new KrepelinTestTablePage());
+                    }
+                    else
+                    {
+                        NavigationService.Navigate(new KrepelinTestResultPage());
+                    }
+                    dispatcherTimer.Stop();
                 }
-                else
-                {
-                    NavigationService.Navigate(new KrepelinTestResultPage());
-                }
-                dispatcherTimer.Stop();
+                timer2.Content = $"0{(second + 3)}";
+                second--;
             }
         }
 
@@ -88,7 +113,7 @@ namespace M.B.N.G.B.T.KrepelTest
             }
             if (Char.IsDigit(e.Text, 0))
             {
-                FinishStage(Convert.ToInt32(e.Text));
+                FinishStage(Convert.ToInt32(e.Text), _operator);
                 e.Handled = true;
             }
         }
@@ -103,77 +128,125 @@ namespace M.B.N.G.B.T.KrepelTest
 
         private void Initializator()
         {
-            LableCalculatingUp.Content = $" {rnd.Next(1, 10)}";
+            int tamp = 0;
             LableCalculatingDown.Content = $" {rnd.Next(1, 10)}";
+            if (_operator == "-")
+            {
+                do
+                {
+                    tamp = rnd.Next(1, 21);
+                    if (tamp < 10)
+                        LableCalculatingUp.Content = $" {tamp}";
+                    else
+                        LableCalculatingUp.Content = $"{tamp}";
+
+                } while (((Convert.ToInt32(LableCalculatingUp.Content) - Convert.ToInt32(LableCalculatingDown.Content)) % 10) < 1);
+            }
+            else
+                LableCalculatingUp.Content = $" {rnd.Next(1, 10)}";
+
             textBox.Text = "";
             textBox.Focus();
             buttonContent = -1;
         }
 
-        private void FinishStage(int Number)
+        private void InitializatorLabelTrue()
         {
-            if (Number == ((Convert.ToInt32(LableCalculatingUp.Content) + Convert.ToInt32(LableCalculatingDown.Content)) % 10))
+            labelTrue++;
+            lebleTrue.Content = $"Ճիշտ - {labelTrue}";
+            Initializator();
+        }
+
+        private void InitializatorLabelFalse()
+        {
+            labelFalse++;
+            lebleFalse.Content = $"Սխալ - {labelFalse}";
+            Initializator();
+        }
+
+        private void FinishStage(int Number, string _operator)
+        {
+            switch (_operator)
             {
-                labelTrue++;
-                lebleTrue.Content = $"Ճիշտ - {labelTrue}";
-                Initializator();
-            }
-            else
-            {
-                labelFalse++;
-                lebleFalse.Content = $"Սխալ - {labelFalse}";
-                Initializator();
+                case "+":
+                    if (Number == ((Convert.ToInt32(LableCalculatingUp.Content) + Convert.ToInt32(LableCalculatingDown.Content)) % 10))
+                        InitializatorLabelTrue();
+                    else
+                        InitializatorLabelFalse();
+                    break;
+
+                case "-":
+                    if (Number == ((Convert.ToInt32(LableCalculatingUp.Content) - Convert.ToInt32(LableCalculatingDown.Content)) % 10))
+                        InitializatorLabelTrue();
+                    else
+                        InitializatorLabelFalse();
+                    break;
             }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            FinishStage(0);
+            FinishStage(0, _operator);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            FinishStage(1);
+            FinishStage(1, _operator);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            FinishStage(2);
+            FinishStage(2, _operator);
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            FinishStage(3);
+            FinishStage(3, _operator);
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            FinishStage(4);
+            FinishStage(4, _operator);
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            FinishStage(5);
+            FinishStage(5, _operator);
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
-            FinishStage(6);
+            FinishStage(6, _operator);
         }
 
         private void Button_Click_7(object sender, RoutedEventArgs e)
         {
-            FinishStage(7);
+            FinishStage(7, _operator);
         }
 
         private void Button_Click_8(object sender, RoutedEventArgs e)
         {
-            FinishStage(8);
+            FinishStage(8, _operator);
         }
 
         private void Button_Click_9(object sender, RoutedEventArgs e)
         {
-            FinishStage(9);
+            FinishStage(9, _operator);
+        }
+
+        private void IsEnabledButtonsAndTextBox(bool bl)
+        {
+            button0.IsEnabled = bl;
+            button1.IsEnabled = bl;
+            button2.IsEnabled = bl;
+            button3.IsEnabled = bl;
+            button4.IsEnabled = bl;
+            button5.IsEnabled = bl;
+            button6.IsEnabled = bl;
+            button7.IsEnabled = bl;
+            button8.IsEnabled = bl;
+            button9.IsEnabled = bl;
+            textBox.IsEnabled = bl;
         }
     }
 }

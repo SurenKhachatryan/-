@@ -22,13 +22,14 @@
             <ColumnDefinition Width="26*"/>
         </Grid.ColumnDefinitions>
 
-        <Label x:Name="timerStage" Content="30" FontSize="70" Foreground="White"   HorizontalAlignment="Left" Margin="20,122,0,0" VerticalAlignment="Top" Height="118" Width="114" FontFamily="Sylfaen" Grid.Column="1" Grid.Row="1"/>
+        <Label x:Name="timer1" Content="30" FontSize="70" Foreground="White"   HorizontalAlignment="Left" Margin="20,122,0,0" VerticalAlignment="Top" Height="118" Width="114" FontFamily="Sylfaen" Grid.Column="1" Grid.Row="1"/>
+        <Label x:Name="timer2" Content="03" Visibility="Collapsed" FontSize="70" Foreground="#FF03FF03"   HorizontalAlignment="Left" Margin="134,122,0,0" VerticalAlignment="Top" Height="118" Width="114" FontFamily="Sylfaen" Grid.Column="1" Grid.Row="1"/>
         <Label x:Name="lebleTrue" Content="Ճիշտ - 0" FontSize="70" Foreground="White" Margin="0,7,0,0" VerticalAlignment="Top" Height="115" FontFamily="Sylfaen" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" Width="374"/>
 
         <Label x:Name="lebleFalse" Content="Սխալ - 0" FontSize="70" Foreground="White" Margin="0,7,0,0" VerticalAlignment="Top" Height="115" FontFamily="Sylfaen" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Right" Width="384"/>
         <Label Content="_____" FontSize="100" Foreground="White" Margin="0,274,312,0" VerticalAlignment="Top" Height="129" FontFamily="Kristen ITC" HorizontalAlignment="Right" Width="132" Grid.Column="1" Grid.Row="1" />
 
-        <Label Content="+" FontSize="100" Foreground="White" Margin="0,316,443,0" VerticalAlignment="Top" Height="125" FontFamily="Kristen ITC" HorizontalAlignment="Right" Width="69" Grid.Column="1" Grid.Row="1"/>
+        <Label x:Name="_Operator" Content="+" FontSize="100" Foreground="White" Margin="0,316,443,0" VerticalAlignment="Top" Height="125" FontFamily="Kristen ITC" HorizontalAlignment="Right" Width="69" Grid.Column="1" Grid.Row="1"/>
         <Label Content="=" FontSize="100" Foreground="White" Margin="0,316,235,0" VerticalAlignment="Top" Height="125" FontFamily="Kristen ITC" HorizontalAlignment="Right" Width="69" Grid.Column="1" Grid.Row="1"/>
         <Label Content="_____" FontSize="100" Foreground="White" Margin="0,302,65,0" VerticalAlignment="Top" Height="163" FontFamily="Kristen ITC" HorizontalAlignment="Right" Width="165" Grid.Column="1" Grid.Row="1"/>
         <Label Content="  ?" FontSize="100" Foreground="White" Margin="0,302,65,0" VerticalAlignment="Top" Height="163" FontFamily="Sylfaen" HorizontalAlignment="Right" Width="165" Grid.Column="1" Grid.Row="1"/>

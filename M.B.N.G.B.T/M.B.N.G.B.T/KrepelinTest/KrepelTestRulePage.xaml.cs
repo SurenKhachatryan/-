@@ -33,6 +33,8 @@ namespace M.B.N.G.B.T.KrepelTest
         private void Button_Start_Test(object sender, RoutedEventArgs e)
         {
             KrepelinTestTablePage.stage = 1;
+            KrepelinTestTablePage.arrAllStageRightAnswers = new int[8][];
+            KrepelinTestTablePage.arrAllStageWrongAnswers = new int[8][];
             NavigationService.Navigate(new KrepelinTestTablePage());
         }
     }
