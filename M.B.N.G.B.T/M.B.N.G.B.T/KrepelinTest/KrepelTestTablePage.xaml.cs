@@ -52,6 +52,12 @@ namespace M.B.N.G.B.T.KrepelTest
             arrAllStageRightAnswers[stage - 1][0] = labelTrue;
             arrAllStageWrongAnswers[stage - 1][0] = labelFalse;
 
+            for (int i = stage; i < 8; i++)
+            {
+                arrAllStageRightAnswers[i] = new int[1];
+                arrAllStageWrongAnswers[i] = new int[1];
+            }
+
             dispatcherTimer.Stop();
 
             NavigationService.Navigate(new KrepelinTestResultPage());

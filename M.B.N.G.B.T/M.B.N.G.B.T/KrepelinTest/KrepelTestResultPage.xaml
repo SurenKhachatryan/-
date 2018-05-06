@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:M.B.N.G.B.T.KrepelTest"
+      xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
       mc:Ignorable="d" 
       d:DesignHeight="780" d:DesignWidth="1300"
       Title="KrepelTestResultPage">
@@ -18,11 +19,19 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="62*"/>
-            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="127*"/>
+            <ColumnDefinition Width="121*"/>
+            <ColumnDefinition Width="12*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox Margin="0,4,9,0" Grid.Row="1" HorizontalAlignment="Right" Width="185">
+        <DVC:Chart Name="Diagramma" Title="Դիագրամ" Background="LightSteelBlue" Margin="84,72,10,157">
+            <DVC:Chart.Series >
+                <DVC:ColumnSeries Title="ճիշտ պատասխաններ" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
+                <DVC:ColumnSeries Title="Սխալ պատասխաններ"  IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
+            </DVC:Chart.Series>
+        </DVC:Chart>
+
+        <Viewbox Margin="0,4,9,0" Grid.Row="1" HorizontalAlignment="Right" Width="185" Grid.Column="1">
             <Button x:Name="buttonClickExitMain" Click="button_Click_Exit_Main" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35"  Width="185" >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -33,7 +42,7 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Margin="0,4,200,0" Grid.Row="1" HorizontalAlignment="Right" Width="187">
+        <Viewbox Margin="0,4,200,0" Grid.Row="1" HorizontalAlignment="Right" Width="187" Grid.Column="1">
             <Button x:Name="buttonClicktryagain" Click="button_Click_try_again" Content="Կրկին փորձել" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="32" Width="172" >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
