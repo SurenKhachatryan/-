@@ -69,6 +69,11 @@
     <Compile Include="KrepelinTest\KrepelTestTablePage.xaml.cs">
       <DependentUpon>KrepelTestTablePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Schulte Test\SchulteTestResultPage.xaml.cs">
       <DependentUpon>SchulteTestResultPage.xaml</DependentUpon>
     </Compile>
@@ -181,11 +186,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -374,6 +374,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\No.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\KrepelinTest\Diagram.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

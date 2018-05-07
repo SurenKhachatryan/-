@@ -37,5 +37,10 @@ namespace M.B.N.G.B.T.KrepelTest
             KrepelinTestTablePage.arrAllStageWrongAnswers = new int[8][];
             NavigationService.Navigate(new KrepelinTestTablePage());
         }
+
+        private void Image_ImageFailed(object sender, ExceptionRoutedEventArgs e)
+        {
+
+        }
     }
 }

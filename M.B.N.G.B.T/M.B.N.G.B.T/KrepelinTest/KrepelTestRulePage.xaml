@@ -14,35 +14,102 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="320*"/>
-            <RowDefinition Height="17*"/>
-            <RowDefinition Height="53*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="68*"/>
+            <RowDefinition Height="549*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="79*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="25*"/>
-            <ColumnDefinition Width="99*"/>
-            <ColumnDefinition Width="834"/>
-            <ColumnDefinition Width="86*"/>
-            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="1167*"/>
+            <ColumnDefinition Width="66*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock FontSize="38" Foreground="White" Margin="99,54,61,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="68" Grid.ColumnSpan="3" Grid.Column="1">
-            <Run  Text="                         Հաշվարկ ըստ Կրեպելինի"/></TextBlock>
-        <ScrollViewer Margin="15,116,42,12" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Grid.Column="1">
-            <ScrollViewer.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="0.463"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="1.829"/>
-                </TransformGroup>
-            </ScrollViewer.RenderTransform>
-            <TextBlock FontSize="28" Foreground="White" Grid.ColumnSpan="3" Grid.Column="1" Width="1114" Height="512">
-            </TextBlock>
 
-        </ScrollViewer>
+        <Viewbox Margin="99,5,61,6" Grid.Column="1" Grid.Row="1">
+            <TextBlock FontSize="38" Foreground="White"  TextWrapping="Wrap" >
+            <Run  Text="Հաշվարկ ըստ Կրեպելինի"/></TextBlock>
+        </Viewbox>
 
-        <Button x:Name="button1" Click="Button_Exit_the_Main" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" VerticalAlignment="Top" Grid.Row="1" Margin="0,0,832,0" HorizontalAlignment="Right" Width="185" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="1">
+        <Viewbox Margin="22,10,10,23" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="2">
+            <ScrollViewer Width="1245" Height="542" >
+                <ScrollViewer.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.463"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="1.829"/>
+                    </TransformGroup>
+                </ScrollViewer.RenderTransform>
+                <TextBlock FontSize="28" Foreground="White" Grid.ColumnSpan="3" Grid.Column="1" >
+            <Run Text="Նախատեսված է կամքի ուժի վարժվածության ե հոգնածության հետազոտության"/>
+                        <LineBreak/><Run Text="համար: Այն կարելի է օգտագործել նան հոգեբանական տեմպի"/>
+                        <LineBreak/><Run Text="վերադրդունականությունը ուսումնասիրելու համար:"/>
+                        <LineBreak/>
+                        <LineBreak/><Run Text="  Փորձարկվողին աոաջարկում են տպագրված թվերը բազմապատկել և գրել"/>
+                        <LineBreak/><Run Text="պատասխանը ներքևի տողում, դեն գցելով տասնյակը: Այսպես, օրինակ, եթե"/>
+                        <LineBreak/><Run Text="շարքում հանդիպում է 12 , այդ դեպքում պետք է տակից գրել 2, այլ ոչ թէ ամբողջ"/>
+                        <LineBreak/><Run Text="թիվը: Կարելի է փորձարկվողին աոարջարկել գրել ամբողջ թվերը: Այնուհետև"/>
+                        <LineBreak/><Run Text="փորձարկվողին զգուշացնում են այն մասին , որ նա պետք է լուծի օրինակները"/>
+                        <LineBreak/><Run Text="տողերում մինչև այն պահը, երբ հետազոտողը կհրահանգի. «Կանգ» (սովորաբար"/>
+                        <LineBreak/><Run Text="սկսելուց 15 վայրկյան հետո): Դրանից հետո նա պետք է սկսի հաջորդ տողը:"/>
+                        <LineBreak/><Run Text="Փորձարկվողին նան բացատրում են, որ նա պետք է աշխատի արագ և աոանց "/>
+                        <LineBreak/><Run Text="սխալների:"/>
+                        <LineBreak/><Run Text="Նշելով, թե ինչքան գործողություն է կատարել փորձարկվողը 30 վայրկյանի"/>
+                        <LineBreak/><Run Text="ընթացքում և որքանն է ճիշտ գրել, կարելի է կառուցել հոգնածության կոր նրա"/>
+                        <LineBreak/><Run Text="աշխատունակության վերաբերյալ: Որտեղ."/>
+                        <LineBreak/>
+                  <Image  Source="C:\Users\ПК Хачатрян\source\repos\M.B.N.G.B.T\M.B.N.G.B.T\M.B.N.G.B.T\bin\Debug\Resources\KrepelinTest/Diagram.png" />
+                        <LineBreak/>
+                        <LineBreak/><Run Text="                                          Հոգնածության կորագծերի տիպերը"/>
+                        <LineBreak/><Run Text="Կարելի է գրանցել կորագծի հետևյալ տիպերը:"/>
+                        <LineBreak/>
+                        <LineBreak/><Run Text="I.      Հիպերստենիկ- հանձնարարությունը կատարելու սկզբում դիտվում է արագ"/>
+                        <LineBreak/><Run Text="        տեմպ սակայն շուտ նկատվում է ուժասպառություն: Հետագայում "/>
+                        <LineBreak/><Run Text="        կարճատև նկատվում է ցուցանիշի բարելավում, բայց սովորաբար "/>
+                        <LineBreak/><Run Text="        չհասնելով սկզբնական ցուցանիշին:"/>
+                        <LineBreak/><Run Text="II.     Հիպոստենիկ ֊ նշվում է ժամանակի ընթացքում ուժասպառության"/>
+                        <LineBreak/><Run Text="        աստիճանական մեծացում: Նկատվող փոփոխությունները կտրուկ չեն: "/>
+                        <LineBreak/><Run Text="        Ամենացածր արդյունքը գրանցվում է հանձնարարության վերջում: Որքան "/>
+                        <LineBreak/><Run Text="        շատ են ,,պիկերը,, այնքան շատ է կամքի լարումը: Աշխատունակության "/>
+                        <LineBreak/><Run Text="        գործակիցը, հաշվվում է բանաձևով:"/>
+                        <LineBreak/>
+                        <LineBreak/><Run Text="Որտեղ' Տշ - վերջին չորս տողերում ճիշտ պատասխանների թիվն է:"/>
+                        <LineBreak/>
+                        <LineBreak/><Run Text="S1 -աոաջին չորս տողերում ճիշտ պատասխանների թիվը:"/>
+                        <LineBreak/>
+                        <LineBreak/><Run Text="Եթե k աշխ. մոտենում է միավորին, դա նշանակում է, որ գործնականորեն "/>
+                        <LineBreak/><Run Text="հոգնածություն չի առաջանում:"/>
+                        <LineBreak/>
+                        <LineBreak/><Run Text="Եթե մեծ տարբերություն է գրանցվում տողերում առաջադրանքների կատարման "/>
+                        <LineBreak/><Run Text="արդյունքների մեջ, գրանցվում է դժվարադրդունակության ախտանիշ:"/>
+                        <LineBreak/>
+                        <LineBreak/><Run Text="Եթե սխալների թիվը մեծանում է աշխատանքի վերջում, գրանցվում է հոգնածության "/>
+                        <LineBreak/><Run Text="ախտանիշ:"/>
+                        <LineBreak/>
+                        <LineBreak/><Run Text="Եթե սխալները չեն ավելանում այլ տատանվում են, ուրեմն գրանցվում է տատանվող "/>
+                        <LineBreak/><Run Text="ուշադրության ախտանիշ:"/>
+                        <LineBreak/>
+                        <LineBreak/><Run Text="Եթե վերջում սխալները ընդհանրապես անհետանում են, ապա դա խոսում է "/>
+                        <LineBreak/><Run Text="սկզբունքային և արդյունավետ աշխատունակության մասին:"/>
+                </TextBlock>
+            </ScrollViewer>
+        </Viewbox>
+
+        <Viewbox Grid.Row="3" Margin="13,1,0,0" Grid.Column="1" Width="177" HorizontalAlignment="Left">
+            <Button x:Name="button1" Click="Button_Exit_the_Main" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Width="177">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
+        
+        <Viewbox VerticalAlignment="Top" Grid.Column="1" Grid.Row="3" Margin="0,0,4,0" HorizontalAlignment="Right" Width="147">
+        <Button x:Name="button2" Click="Button_Start_Test" Content="Սկսել Թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" Width="147" >
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -50,14 +117,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        </Viewbox>
 
-        <Button x:Name="button2" Click="Button_Start_Test" Content="Սկսել Թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" HorizontalAlignment="Left" Width="147" Height="35" VerticalAlignment="Top" Grid.Column="3" Grid.Row="1" Margin="1,0,0,0" Grid.RowSpan="2">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
     </Grid>
 </Page>

@@ -145,7 +145,6 @@ namespace M.B.N.G.B.T.KrepelTest
                         LableCalculatingUp.Content = $" {tamp}";
                     else
                         LableCalculatingUp.Content = $"{tamp}";
-
                 } while (((Convert.ToInt32(LableCalculatingUp.Content) - Convert.ToInt32(LableCalculatingDown.Content)) % 10) < 1);
             }
             else

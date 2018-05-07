@@ -13,25 +13,29 @@
     </Page.Background>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="646*"/>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="63*"/>
+            <RowDefinition Height="482*"/>
             <RowDefinition Height="39*"/>
             <RowDefinition Height="95*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="127*"/>
-            <ColumnDefinition Width="121*"/>
-            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="383*"/>
+            <ColumnDefinition Width="857*"/>
+            <ColumnDefinition Width="60*"/>
         </Grid.ColumnDefinitions>
 
-        <DVC:Chart Name="Diagramma" Title="Դիագրամ" Background="LightSteelBlue" Margin="84,72,10,157">
+
+        <DVC:Chart Name="Diagramma" Title="Ճիշտ և Սխալ լուծված առաջադրանքների թիվը" Background="LightSteelBlue" Margin="16,75,10,23" Grid.Column="1" Grid.RowSpan="3">
             <DVC:Chart.Series >
                 <DVC:ColumnSeries Title="ճիշտ պատասխաններ" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
                 <DVC:ColumnSeries Title="Սխալ պատասխաններ"  IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
+                <DVC:LineSeries Title="Հոգնածության կորագիծ"  IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
             </DVC:Chart.Series>
         </DVC:Chart>
 
-        <Viewbox Margin="0,4,9,0" Grid.Row="1" HorizontalAlignment="Right" Width="185" Grid.Column="1">
+        <Viewbox Margin="0,4,9,0" Grid.Row="3" HorizontalAlignment="Right" Width="185" Grid.Column="1">
             <Button x:Name="buttonClickExitMain" Click="button_Click_Exit_Main" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35"  Width="185" >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -42,7 +46,7 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Margin="0,4,200,0" Grid.Row="1" HorizontalAlignment="Right" Width="187" Grid.Column="1">
+        <Viewbox Margin="0,4,200,0" Grid.Row="3" HorizontalAlignment="Right" Width="187" Grid.Column="1">
             <Button x:Name="buttonClicktryagain" Click="button_Click_try_again" Content="Կրկին փորձել" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="32" Width="172" >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -52,6 +56,8 @@
                 </Button.Background>
             </Button>
         </Viewbox>
-
+        <Viewbox Margin="81,4,33,0" VerticalAlignment="Top" Grid.Row="1">
+            <Label x:Name="label1" Content="K-աշխ․ = " FontSize="30" Foreground="White" FontWeight="Bold"  Width="237" Height="50"/>
+        </Viewbox>
     </Grid>
 </Page>
