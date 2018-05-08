@@ -22,8 +22,12 @@
             <RowDefinition Height="10"/>
             <RowDefinition Height="35"/>
             <RowDefinition Height="9*"/>
-            <RowDefinition Height="35*"/>
-            <RowDefinition Height="517*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="426*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -31,7 +35,7 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <Button x:Name="buttonAttentivenessTest" Click="Button_Attentiveness_Test" Content="Տեսողական Հիշողություն" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Grid.Row="3" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top">
+        <Button x:Name="buttonVisualMemoryTest" Click="Button_Visual_Memory_Test" Content="Տեսողական Հիշողություն" FontSize="17"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Grid.Row="3" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -40,7 +44,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="buttonSchulteTest" Click="Button_Schulte_Test" Content="Շուլտեի Աղյուսակ" FontSize="20"  FontFamily="Jokerman" Cursor="Hand"  Foreground="White" Grid.Row="5" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top">
+        <Button x:Name="buttonSchulteTest" Click="Button_Schulte_Test" Content="Շուլտեի Աղյուսակ" FontSize="17"  FontFamily="Jokerman" Cursor="Hand"  Foreground="White" Grid.Row="5" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -49,7 +53,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="buttonVLMarshukTest" Click="Button_VLMarshuk_Test" Content="Վ․Լ․Մարշուկի Թեստ" FontSize="20"  FontFamily="Jokerman" Cursor="Hand" Foreground="White" Grid.Row="7" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top">
+        <Button x:Name="buttonVLMarshukTest" Click="Button_VLMarshuk_Test" Content="Վ․Լ․Մարշուկի Թեստ" FontSize="17"  FontFamily="Jokerman" Cursor="Hand" Foreground="White" Grid.Row="7" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -58,7 +62,25 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="buttonKrepelinTest" Click="Button_Krepelin_Test" Content="Հաշվարկ ըստ Կրեպելինի" FontSize="20"  FontFamily="Jokerman" Cursor="Hand" Foreground="White" Grid.Row="9" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top" Margin="0,1,0,0" Grid.RowSpan="2">
+        <Button x:Name="buttonKrepelinTest" Click="Button_Krepelin_Test" Content="Հաշվարկ ըստ Կրեպելինի" FontSize="17"  FontFamily="Jokerman" Cursor="Hand" Foreground="White" Grid.Row="9" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top" Margin="0,1,0,0">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="buttonAttentivenessTest" Click="Button_Attentiveness_Test" Content="ՈՒշադրության Թեստ" FontSize="17"  FontFamily="Jokerman" Cursor="Hand" Foreground="White" Grid.Row="11" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top" Margin="0,1,0,0">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="buttonTestEclecticAttention" Click="Button_Test_Eclectic_Attention" Content="Ընտրության ուշադրության Թեստ" FontSize="16"  FontFamily="Jokerman" Cursor="Hand" Foreground="White" Grid.Row="13" HorizontalAlignment="Right" Width="265" Height="35" VerticalAlignment="Top" Margin="0,1,0,0">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -78,7 +100,7 @@
                 </TextBlock.Background>
             </TextBlock>
         </Viewbox>
-        <Frame Name="Main" Margin="0,0,0,0"  RenderTransformOrigin="0,0" Grid.RowSpan="11" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden"/>
+        <Frame Name="Main" Margin="0,0,0,0"  RenderTransformOrigin="0,0" Grid.RowSpan="15" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden"/>
 
     </Grid>
 

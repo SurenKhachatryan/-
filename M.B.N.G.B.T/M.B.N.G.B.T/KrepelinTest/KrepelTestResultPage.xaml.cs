@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,8 @@ namespace M.B.N.G.B.T.KrepelTest
     /// </summary>
     public partial class KrepelinTestResultPage : Page
     {
+        ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
+
         public KrepelinTestResultPage()
         {
             InitializeComponent();
@@ -36,7 +39,11 @@ namespace M.B.N.G.B.T.KrepelTest
                Convert.ToDouble(KrepelinTestTablePage.arrAllStageRightAnswers[1][0]) +
                Convert.ToDouble(KrepelinTestTablePage.arrAllStageRightAnswers[2][0]) +
                Convert.ToDouble(KrepelinTestTablePage.arrAllStageRightAnswers[3][0]));
-                label1.Content = $"K-աշխ․ = {tamp}";
+
+                if (tamp.ToString().Length > 4)
+                    label1.Content = $"K-աշխ․ = {cl.DecreaseInNumbersAfterTheDecimalPoint(tamp, 2)}";
+                else
+                    label1.Content = $"K-աշխ․ = {tamp}";
             }
             else
                 label1.Content = "K-աշխ․ = 0";
@@ -85,7 +92,7 @@ namespace M.B.N.G.B.T.KrepelTest
             new KeyValuePair<int, int>(7, KrepelinTestTablePage.arrAllStageRightAnswers[6][0]),
             new KeyValuePair<int, int>(8, KrepelinTestTablePage.arrAllStageRightAnswers[7][0])};
 
-         
+
         }
     }
 }

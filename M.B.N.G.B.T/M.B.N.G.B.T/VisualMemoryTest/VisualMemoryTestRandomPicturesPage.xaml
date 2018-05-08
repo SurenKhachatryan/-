@@ -1,0 +1,199 @@
+﻿<Page x:Class="M.B.N.G.B.T.VisualMemoryTest.VisualMemoryTestRandomPicturesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:M.B.N.G.B.T.VisualMemoryTest"
+      mc:Ignorable="d" 
+      d:DesignHeight="780" d:DesignWidth="1300"
+      Title="RandomPicturesPage" x:Name="RandomPicturesPage1">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="683*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="46*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="217*"/>
+            <ColumnDefinition Width="1053*"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/wood-background.jpg"/>
+        </Grid.Background>
+        <Viewbox MaxHeight="102" VerticalAlignment="Top" Grid.Column="1" Margin="13,128,31,0">
+            <Label x:Name="StartStage"  FontSize="65" Content="1/10" Foreground="White"  />
+        </Viewbox>
+
+        <Viewbox HorizontalAlignment="Left" MaxWidth="407" MaxHeight="35" Margin="13,0,0,8" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
+            <Button x:Name="buttonExitTheTestAndViewResult" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand"  VerticalAlignment="Bottom"  Click="Button_Exit_The_Test_And_View_Result" Width="396">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
+
+        <Viewbox MaxHeight="35" Margin="0,0,0,8" Grid.Row="1" Grid.Column="2"  HorizontalAlignment="Right" MaxWidth="117">
+            <Button x:Name="buttonStartStage"  Content="Հիշեցի" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand"  VerticalAlignment="Bottom" Click="Button_Start_Stage" Width="79">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
+
+        <Canvas Margin="12,156,64,186" Grid.Column="2">
+            <Image x:Name="Pic37" Height="100" VerticalAlignment="Top" 
+         Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/37.gif" Grid.ColumnSpan="2" Grid.RowSpan="2"  Width="100" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic41"  HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100"
+                Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/41.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic17" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100"
+                Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/17.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic5"  HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100"
+                Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/5.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic38"  HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100"
+                Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/38.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic23"  HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100"
+                Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/23.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic2"  HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100"
+                Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/2.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic26"  HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100"
+                Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/26.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic7"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/7.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic12"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/12.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic11"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/11.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic32"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/32.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic44"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/44.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic42"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/42.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic47"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/47.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic48"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/48.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic14"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/14.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic24"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/24.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic31"  HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/31.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic45"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/45.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic25"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/25.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic39"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/39.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic8"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/8.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic15"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/15.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic29"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/29.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic1"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/1.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic22"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/22.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic4"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/4.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic21"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/21.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic27"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/27.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic6"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/6.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic13"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/13.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic34"  HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/34.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic18"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/18.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic30"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/30.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic19"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/19.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic10"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/10.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic46"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/46.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic33"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/33.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic43"  HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/43.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic36"  HorizontalAlignment="Left" Height="100"   VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/36.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic40"  HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/40.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic9"  HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/9.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic16"  HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/16.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic3"  HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/3.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic28"  HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/28.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic35"  HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/35.gif" Canvas.Left="17" Canvas.Top="10"/>
+
+            <Image x:Name="Pic20"  HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="99"
+               Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/20.gif" Canvas.Left="17" Canvas.Top="10"/>
+        </Canvas>
+    </Grid>
+</Page>

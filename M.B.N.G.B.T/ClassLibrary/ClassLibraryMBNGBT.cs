@@ -151,5 +151,31 @@ namespace ClassLibrary
             }
             return ls.ToArray();
         }
+
+        public double DecreaseInNumbersAfterTheDecimalPoint(double number, int newLanghtAfterTheDecimalPoint)
+        {
+            string tamp = string.Empty;
+            int index = (GetIndexFirstCommaInTheText(number.ToString()) + 1);
+
+            if ((number.ToString().Length - index) >= newLanghtAfterTheDecimalPoint)
+                for (int i = 0; tamp.Length != (newLanghtAfterTheDecimalPoint + index); i++)
+                {
+                    tamp += number.ToString()[i];
+                }
+            else
+                return number;
+
+            return Convert.ToDouble(tamp);
+        }
+
+        public int GetIndexFirstCommaInTheText(string text)
+        {
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (text[i] == ',')
+                    return i;
+            }
+            return -1;
+        }
     }
 }

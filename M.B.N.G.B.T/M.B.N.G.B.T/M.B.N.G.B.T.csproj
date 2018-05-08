@@ -60,6 +60,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AttentivenessTest\AttentivenessTestResultPage.xaml.cs">
+      <DependentUpon>AttentivenessTestResultPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AttentivenessTest\AttentivenessTestRulePage.xaml.cs">
+      <DependentUpon>AttentivenessTestRulePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AttentivenessTest\AttentivenessTestTablePage.xaml.cs">
+      <DependentUpon>AttentivenessTestTablePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="KrepelinTest\KrepelTestResultPage.xaml.cs">
       <DependentUpon>KrepelTestResultPage.xaml</DependentUpon>
     </Compile>
@@ -89,6 +98,15 @@
     <Compile Include="Schulte Test\SchulteTestTablePage3.xaml.cs">
       <DependentUpon>SchulteTestTablePage3.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TestEclecticAttention\TestEclecticAttentionResultPage.xaml.cs">
+      <DependentUpon>TestEclecticAttentionResultPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TestEclecticAttention\TestEclecticAttentionRulePage.xaml.cs">
+      <DependentUpon>TestEclecticAttentionRulePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TestEclecticAttention\TestEclecticAttentionTablePage.xaml.cs">
+      <DependentUpon>TestEclecticAttentionTablePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VLMarshuk Test\MarshukTestResultPage.xaml.cs">
       <DependentUpon>MarshukTestResultPage.xaml</DependentUpon>
     </Compile>
@@ -98,19 +116,43 @@
     <Compile Include="VLMarshuk Test\MarshukTestTablePage.xaml.cs">
       <DependentUpon>MarshukTestTablePage.xaml</DependentUpon>
     </Compile>
-    <Page Include="AttentivenessTest\AllPictures.xaml">
+    <Page Include="AttentivenessTest\AttentivenessTestResultPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AttentivenessTest\RandomPicturesPage.xaml">
+    <Page Include="AttentivenessTest\AttentivenessTestRulePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AttentivenessTest\ResultPage.xaml">
+    <Page Include="AttentivenessTest\AttentivenessTestTablePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AttentivenessTest\Rule.xaml">
+    <Page Include="TestEclecticAttention\TestEclecticAttentionResultPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TestEclecticAttention\TestEclecticAttentionRulePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TestEclecticAttention\TestEclecticAttentionTablePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisualMemoryTest\VisualMemoryTestAllPicturesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisualMemoryTest\VisualMemoryTestRandomPicturesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisualMemoryTest\VisualMemoryTestResultPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisualMemoryTest\VisualMemoryTestRulePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -134,17 +176,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AttentivenessTest\AllPictures.xaml.cs">
-      <DependentUpon>AllPictures.xaml</DependentUpon>
+    <Compile Include="VisualMemoryTest\VisualMemoryTestAllPicturesPage.xaml.cs">
+      <DependentUpon>VisualMemoryTestAllPicturesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AttentivenessTest\RandomPicturesPage.xaml.cs">
-      <DependentUpon>RandomPicturesPage.xaml</DependentUpon>
+    <Compile Include="VisualMemoryTest\VisualMemoryTestRandomPicturesPage.xaml.cs">
+      <DependentUpon>VisualMemoryTestRandomPicturesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AttentivenessTest\ResultPage.xaml.cs">
-      <DependentUpon>ResultPage.xaml</DependentUpon>
+    <Compile Include="VisualMemoryTest\VisualMemoryTestResultPage.xaml.cs">
+      <DependentUpon>VisualMemoryTestResultPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AttentivenessTest\Rule.xaml.cs">
-      <DependentUpon>Rule.xaml</DependentUpon>
+    <Compile Include="VisualMemoryTest\VisualMemoryTestRulePage.xaml.cs">
+      <DependentUpon>VisualMemoryTestRulePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -378,5 +420,6 @@
   <ItemGroup>
     <Resource Include="Resources\KrepelinTest\Diagram.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
