@@ -27,5 +27,7 @@
             </Button.Background>
         </Button>
 
+        <Label x:Name="LabelWord" Content="Word" Grid.Column="1" FontSize="30" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Margin="110,276,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Page>

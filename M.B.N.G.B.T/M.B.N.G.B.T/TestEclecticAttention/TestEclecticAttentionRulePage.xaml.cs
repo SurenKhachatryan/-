@@ -27,7 +27,7 @@ namespace M.B.N.G.B.T.TestEclecticAttention
 
         private void Button_Exit_the_Main(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(null);
         }
 
         private void Button_Start_Test(object sender, RoutedEventArgs e)

@@ -177,5 +177,17 @@ namespace ClassLibrary
             }
             return -1;
         }
+
+        public bool SearchWordInArr(string word, string[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (word == arr[i])
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

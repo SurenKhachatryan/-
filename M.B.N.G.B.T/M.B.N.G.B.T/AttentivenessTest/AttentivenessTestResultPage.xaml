@@ -45,6 +45,9 @@
                 </Button.Background>
             </Button>
         </Viewbox>
+        
+        
+        <Label Content="{x:Null}" x:Name="LabelResult" FontSize="30" Foreground="White" FontWeight="Bold"   HorizontalAlignment="Left" Margin="167,182,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

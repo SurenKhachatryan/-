@@ -1,8 +1,10 @@
-﻿using M.B.N.G.B.T.VisualMemoryTest;
+﻿using System.Windows;
+using M.B.N.G.B.T.VisualMemoryTest;
 using M.B.N.G.B.T.KrepelTest;
 using M.B.N.G.B.T.Schulte_Test;
 using M.B.N.G.B.T.V.L.Marshukov_Test;
-using System.Windows;
+using M.B.N.G.B.T.AttentivenessTest;
+using M.B.N.G.B.T.TestEclecticAttention;
 
 namespace M.B.N.G.B.T
 {
@@ -38,12 +40,12 @@ namespace M.B.N.G.B.T
 
         private void Button_Attentiveness_Test(object sender, RoutedEventArgs e)
         {
-
+            Main.Content = new AttentivenessTestRulePage();
         }
 
         private void Button_Test_Eclectic_Attention(object sender, RoutedEventArgs e)
         {
-
+            Main.Content = new TestEclecticAttentionRulePage();
         }
     }
 }
