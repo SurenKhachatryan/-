@@ -178,16 +178,161 @@ namespace ClassLibrary
             return -1;
         }
 
-        public bool SearchWordInArr(string word, string[] arr)
+        public bool SearchWordInArr(string[] arrWord, string word)
         {
-            for (int i = 0; i < arr.Length; i++)
+            if (arrWord.Length > 0)
             {
-                if (word == arr[i])
+                for (int i = 0; i < arrWord.Length; i++)
                 {
-                    return true;
+                    if (word == arrWord[i])
+                        return true;
                 }
             }
+            else
+                throw new ArgumentOutOfRangeException();
+
             return false;
+        }
+
+        public string[] GetRandomArrWord(string[] arrWord, int wordsCount)
+        {
+            List<string> ls = new List<string>();
+            Random rnd = new Random();
+            DeleteSpaceInArrWords(ref arrWord);
+            if (arrWord.Length <= 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+            else
+            if (arrWord.Length >= wordsCount)
+            {
+                for (int i = 0; i < wordsCount; i++)
+                {
+                    int index = rnd.Next(arrWord.Length);
+                    if (ls.Count == 0 || !SearchWordInArr(ls.ToArray(), arrWord[index]))
+                        ls.Add(arrWord[index]);
+                    else
+                        i--;
+                }
+            }
+            else
+                throw new IndexOutOfRangeException();
+
+            return ls.ToArray();
+        }
+
+        public void DeleteSpaceInArrWords(ref string[] arrWord)
+        {
+            string tamp = string.Empty;
+            string word = string.Empty;
+            if (arrWord.Length > 0)
+            {
+                for (int i = 0; i < arrWord.Length; i++)
+                {
+                    word = arrWord[i];
+                    for (int j = 0; j < word.Length; j++)
+                    {
+                        if (word[j] != ' ')
+                            tamp += word[j];
+                    }
+                    arrWord[i] = tamp;
+                    tamp = string.Empty;
+                }
+            }
+            else
+                throw new ArgumentOutOfRangeException();
+        }
+
+        public bool ArrItemsEquals(string[] arr1, string[] arr2)
+        {
+            string tamp1 = string.Empty;
+            string tamp2 = string.Empty;
+            if (arr1.Length == arr2.Length)
+            {
+                SortingArrWordsByLength(ref arr1);
+                SortingArrWordsByLength(ref arr2);
+                for (int i = 0; i < arr1.Length; i++)
+                {
+                    if (arr1[i].Length != arr2[i].Length)
+                        return false;
+
+                    tamp1 = arr1[i];
+                    tamp2 = arr2[i];
+                    for (int j = 0; j < tamp1.Length; j++)
+                    {
+                        if (tamp1[j] != tamp2[j])
+                            return false;
+                    }
+                }
+            }
+            else
+                return false;
+
+            return true;
+        }
+
+        public string[] FilteringLetterInTheTextAndGetArrWords(string text)
+        {
+            List<string> ls = new List<string>();
+            string tamp = string.Empty;
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (Char.IsLetter(text[i]))
+                {
+                    tamp += text[i];
+                    if (!Char.IsLetter(text[i + 1]))
+                    {
+                        ls.Add(tamp);
+                        tamp = string.Empty;
+                    }
+                }
+            }
+
+            return ls.ToArray();
+        }
+
+        public void SortingArrWordsByLength(ref string[] arrWord)
+        {
+            string tamp = arrWord[0];
+            int index = 0;
+
+            for (int i = 0; i < arrWord.Length; i++)
+            {
+                tamp = arrWord[i];
+                for (int j = i; j < arrWord.Length; j++)
+                {
+                    if (tamp.Length >= arrWord[j].Length)
+                    {
+                        tamp = arrWord[j];
+                        index = j;
+                    }
+                }
+                arrWord[index] = arrWord[i];
+                arrWord[i] = tamp;
+            }
+        }
+
+        public string[] GetArrayMissingWordsInAnArray(string[] exactArray, string[] nonValidArray)
+        {
+            List<string> ls = new List<string>();
+            int index = 0;
+
+            for (int i = 0; i < exactArray.Length; i++)
+            {
+                index = i;
+                for (int j = 0; j < nonValidArray.Length; j++)
+                {
+                    if (exactArray[i] == nonValidArray[j])
+                    {
+                        index = -1;
+                        j = nonValidArray.Length;
+                    }
+                }
+                if (index != -1)
+                    ls.Add(exactArray[index]);
+            }
+            return ls.ToArray();
         }
     }
 }
