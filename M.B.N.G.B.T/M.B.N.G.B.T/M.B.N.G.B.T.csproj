@@ -60,9 +60,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AttentivenessTest\AttentivenessTestResultPage.xaml.cs">
-      <DependentUpon>AttentivenessTestResultPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="AttentivenessTest\AttentivenessTestRulePage.xaml.cs">
       <DependentUpon>AttentivenessTestRulePage.xaml</DependentUpon>
     </Compile>
@@ -116,10 +113,6 @@
     <Compile Include="VLMarshuk Test\MarshukTestTablePage.xaml.cs">
       <DependentUpon>MarshukTestTablePage.xaml</DependentUpon>
     </Compile>
-    <Page Include="AttentivenessTest\AttentivenessTestResultPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="AttentivenessTest\AttentivenessTestRulePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

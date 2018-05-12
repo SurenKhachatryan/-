@@ -281,7 +281,7 @@ namespace ClassLibrary
                 if (Char.IsLetter(text[i]))
                 {
                     tamp += text[i];
-                    if (!Char.IsLetter(text[i + 1]))
+                    if (text.Length-1 == i || !Char.IsLetter(text[i + 1]))
                     {
                         ls.Add(tamp);
                         tamp = string.Empty;

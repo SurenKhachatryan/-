@@ -23,7 +23,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
     {
         ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
 
+        private string[] arrWordsTextBox { get; set; }
+        private string[] arrRandomWords { get; set; } = new string[10];
+
         public static int stage { get; set; } = 1;
+
+        private int countAbsentWords { get; set; } = 0;
+        private int countWrongWords { get; set; } = 0;
 
         private string[] arrWords { get; set; } = { "մուկ", "պատ", "սպունգ", "մահճակալ", "սեղան", "տիկնիկ", "բառ" ,"վարունգ","կոստյում",
                                                     "ներկ", "միջանցք", "ձյուն" , "փաթիլ", "հատոր" , "ձող", "նախաճաշ" , "բանալի","շերտ",
@@ -37,7 +43,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
                                                     "երկաթ" , "խոռոչ" , "ղեկավար" , "թթվասեր" ,"վարդ" , "արծաթ" ,"յոդ" , "լողավազան" ,"օձ" , "տորթ" ,
                                                     "կայծ" , "մուրճ" ,"ամրոց" ,"ավանակ" , "վերմակ" , "լավաշ" , "օրորոց" , "ձագ" , "խմիչք" , "կետ" };
 
-        private string[] arrRandomWords { get; set; } = new string[10];
+
 
         public AttentivenessTestTablePage()
         {
@@ -61,7 +67,48 @@ namespace M.B.N.G.B.T.AttentivenessTest
 
         private void Button_Exit_The_Test_View_Result(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new AttentivenessTestResultPage());
+            if (textBoxWords.Text.Length != 0)
+            {
+                arrWordsTextBox = cl.FilteringLetterInTheTextAndGetArrWords(textBoxWords.Text);
+                countAbsentWords = cl.GetArrayMissingWordsInAnArray(arrRandomWords, arrWordsTextBox).Length;
+                countWrongWords = cl.GetArrayMissingWordsInAnArray(arrWordsTextBox, arrRandomWords).Length;
+                if (countWrongWords == 0)
+                {
+                    if (countAbsentWords <= 1 && stage < 3)
+                    {
+                        LableInfo.Content = $"Ձեր հիշողությունը գերազանց է";
+                        buttonExitTheTestViewResult.Visibility = Visibility.Collapsed;
+                        buttonSeeWord.Visibility = Visibility.Collapsed;
+                    }
+                    else
+                    if (countAbsentWords <= 1 && stage == 3)
+                    {
+                        LableInfo.Content = $"Ձեր հիշողության հետ ամեն ինչ նորմալ է";
+                        buttonExitTheTestViewResult.Visibility = Visibility.Collapsed;
+                        buttonSeeWord.Visibility = Visibility.Collapsed;
+                    }
+                    else
+                    if (countAbsentWords <= 1 && stage > 3)
+                    {
+                        LableInfo.Content = $"Ձեր մոտ կարճաժամկետ հիշողությունը գերազանց չէ";
+                        buttonExitTheTestViewResult.Visibility = Visibility.Collapsed;
+                        buttonSeeWord.Visibility = Visibility.Collapsed;
+                    }
+                }
+                else
+                {
+                    LableInfo.Content = $"Ձեր մոտ նկատվում է ավելի շատ ուշադրության խնդիր քան հիշողության";
+                    buttonExitTheTestViewResult.Visibility = Visibility.Collapsed;
+                    buttonSeeWord.Visibility = Visibility.Collapsed;
+                }
+            }
+            else
+            {
+                LableInfo.Content = $"Դուք չեք գրել ոչ մի բառ։ Գրել ներքևում տրված դաշտում(արանց տառասխալների և փոքրատառերով)";
+                textBoxWords.Focus();
+            }
+
+
         }
 
         private void Button_View_Word(object sender, RoutedEventArgs e)
@@ -73,6 +120,10 @@ namespace M.B.N.G.B.T.AttentivenessTest
                 LabelWord.Visibility = Visibility.Visible;
                 buttonSeeWord.Content = "Շարունակել";
                 LableTryAgein.Content = $"Փորձ {++stage}";
+
+                if (stage > 1)
+                    LableInfo.Content = null;
+
             }
             else
             {
@@ -80,7 +131,17 @@ namespace M.B.N.G.B.T.AttentivenessTest
                 textBoxWords.Focus();
                 LabelWord.Visibility = Visibility.Collapsed;
                 buttonSeeWord.Content = "Տեսնել բառերը կրկին";
+
+                if (stage == 1)
+                    LableInfo.Content = "Բառերը Գրել ներքևում տրված դաշտում, արանց տառասխալների և փոքրատառերով , այլապես դա կդիտարկվի սխալ";
+                else
+                    LableInfo.Content = null;
             }
+        }
+
+        private void Exit_The_Test(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AttentivenessTestRulePage());
         }
     }
 }

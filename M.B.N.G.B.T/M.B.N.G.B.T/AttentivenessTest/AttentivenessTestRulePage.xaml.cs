@@ -32,6 +32,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
 
         private void Button_Start_Test(object sender, RoutedEventArgs e)
         {
+            AttentivenessTestTablePage.stage = 1;
             NavigationService.Navigate(new AttentivenessTestTablePage());
         }
     }
