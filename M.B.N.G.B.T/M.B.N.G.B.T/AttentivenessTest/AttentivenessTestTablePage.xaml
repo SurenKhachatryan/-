@@ -25,8 +25,8 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="63*"/>
-            <ColumnDefinition Width="251*"/>
-            <ColumnDefinition Width="152*"/>
+            <ColumnDefinition Width="215*"/>
+            <ColumnDefinition Width="188*"/>
             <ColumnDefinition Width="532*"/>
             <ColumnDefinition Width="240*"/>
             <ColumnDefinition Width="62*"/>
@@ -44,7 +44,7 @@
         </Viewbox>
 
         <Viewbox Grid.Column="4" Margin="0,0,0,0" Grid.Row="6" >
-            <Button x:Name="buttonSeeWord" Click="Button_View_Word" Content="Տեսնել բառերը կրկին" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Width="228"  >
+            <Button x:Name="buttonSeeWord" Click="Button_View_Word" Content="Սկսել թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Width="228"  >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -57,10 +57,10 @@
             <Label x:Name="LabelWord" Content="{x:Null}" Grid.Column="1" FontSize="30" Foreground="White" FontWeight="Bold" FontFamily="Sylfaen" />
         </Viewbox>
 
-        <TextBox Grid.Column="1" Grid.Row="4" Margin="37,24,46,25" Grid.ColumnSpan="4"  Text="{x:Null}"  TextWrapping="Wrap" FontSize="20" Foreground="White" FontWeight="Bold" FontFamily="Sylfaen"  Background="#FF36573F" BorderBrush="#FF162A1D"  />
+        <TextBox x:Name="textBoxWords" Grid.Column="1" Grid.Row="4" Margin="37,24,46,25" Grid.ColumnSpan="4"  Text="{x:Null}"  TextWrapping="Wrap" FontSize="20" Foreground="White" FontWeight="Bold" FontFamily="Sylfaen"  Background="#FF36573F" BorderBrush="#FF162A1D"  />
 
         <Viewbox  Margin="1,2,0,0" Grid.Column="1" RenderTransformOrigin="0.56,0.545" Grid.Row="1">
-            <Label Content="Փորձ 1/5"  FontSize="50" Foreground="White" FontFamily="Sylfaen" FontWeight="Bold" />
+            <Label x:Name="LableTryAgein" Content="Փորձ 1"  FontSize="50" Foreground="White" FontFamily="Sylfaen" FontWeight="Bold" />
         </Viewbox>
 
 

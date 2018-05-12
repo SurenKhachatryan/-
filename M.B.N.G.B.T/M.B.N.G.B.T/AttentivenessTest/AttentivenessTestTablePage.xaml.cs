@@ -26,7 +26,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
         public static int stage { get; set; } = 1;
 
         private string[] arrWords { get; set; } = { "մուկ", "պատ", "սպունգ", "մահճակալ", "սեղան", "տիկնիկ", "բառ" ,"վարունգ","կոստյում",
-                                                    "ներկ", "միջանցք", "ձյան" , "փաթիլ", "հատոր" , "ձող", "նախաճաշ" , "բանալի","շերտ",
+                                                    "ներկ", "միջանցք", "ձյուն" , "փաթիլ", "հատոր" , "ձող", "նախաճաշ" , "բանալի","շերտ",
                                                     "գարնուն","կրպակ","ճնճղուկ","շարժիչ","դեղձ","դրոշ","խմորիչ", "միջատ", "ժապավեն","հեծանիվ",
                                                     "ուղղաթիռ" , "մորուք" , "ներարկիչ" , "միավոր" , "ձմեռ" , "անձնակազմ" , "փոխարժեք",
                                                     "աղյուս" , "սպիտակուց", "կոշիկ", "կոճակ" , "ծրար", "անակնկալ" ,"պինգվին" , "թագ" , "հոգի" ,
@@ -43,7 +43,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
         {
             InitializeComponent();
 
-            string[] arrRandomWords = cl.GetRandomArrWord(arrWords, 10);
+            arrRandomWords = cl.GetRandomArrWord(arrWords, 10);
             for (int i = 0; i < 10; i++)
             {
                 if (i == 0)
@@ -54,7 +54,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
                 {
                     LabelWord.Content += $" , {arrRandomWords[i]}";
                 }
-
+                textBoxWords.IsEnabled = false;
             }
 
         }
@@ -66,7 +66,21 @@ namespace M.B.N.G.B.T.AttentivenessTest
 
         private void Button_View_Word(object sender, RoutedEventArgs e)
         {
-
+            if (textBoxWords.IsEnabled)
+            {
+                textBoxWords.IsEnabled = false;
+                textBoxWords.Clear();
+                LabelWord.Visibility = Visibility.Visible;
+                buttonSeeWord.Content = "Շարունակել";
+                LableTryAgein.Content = $"Փորձ {++stage}";
+            }
+            else
+            {
+                textBoxWords.IsEnabled = true;
+                textBoxWords.Focus();
+                LabelWord.Visibility = Visibility.Collapsed;
+                buttonSeeWord.Content = "Տեսնել բառերը կրկին";
+            }
         }
     }
 }
