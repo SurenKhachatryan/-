@@ -61,6 +61,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
                     LabelWord.Content += $" , {arrRandomWords[i]}";
                 }
                 textBoxWords.IsEnabled = false;
+                buttonExitTheTestViewResult.IsEnabled = false;
             }
 
         }
@@ -88,11 +89,33 @@ namespace M.B.N.G.B.T.AttentivenessTest
                         buttonSeeWord.Visibility = Visibility.Collapsed;
                     }
                     else
-                    if (countAbsentWords <= 1 && stage > 3)
+                    if (countAbsentWords == 2 && stage == 3)
                     {
-                        LableInfo.Content = $"Ձեր մոտ կարճաժամկետ հիշողությունը գերազանց չէ";
+                        LableInfo.Content = $"Թույլ զարգացած կարճաժամկետ հիշողություն";
                         buttonExitTheTestViewResult.Visibility = Visibility.Collapsed;
                         buttonSeeWord.Visibility = Visibility.Collapsed;
+                    }
+                    else
+                    if (countAbsentWords >= 3 && stage >= 3)
+                    {
+                        LableInfo.Content = $"կարճաժամկետ հիշողությունը զարգացած չէ";
+                        buttonExitTheTestViewResult.Visibility = Visibility.Collapsed;
+                        buttonSeeWord.Visibility = Visibility.Collapsed;
+                    }
+                    else
+                    if ((countAbsentWords <= 5 || countAbsentWords == 2) && stage == 1)
+                    {
+                        LableInfo.Content = $"նորմալ զարգացած կարճաժամկետ հիշողություն , կարող էք կրկին կարդալ բառերը կամ ուղակի հիշել և գրել";
+                    }
+                    else
+                    if ((countAbsentWords == 3 || countAbsentWords == 2) && stage == 2)
+                    {
+                        LableInfo.Content = $"նորմալ զարգացած կարճաժամկետ հիշողություն , կարող էք կրկին կարդալ բառերը կամ ուղակի հիշել և գրել";
+                    }
+                    else
+                    if (countAbsentWords >= 4 && (stage == 1 || stage == 2))
+                    {
+                        LableInfo.Content = $"Այս պահին բառերի քանակը քիչ է վերլուծություն անելու համար , կարող էք կրկին կարդալ բառերը կամ ուղակի հիշել և գրել" ;
                     }
                 }
                 else
@@ -120,10 +143,17 @@ namespace M.B.N.G.B.T.AttentivenessTest
                 LabelWord.Visibility = Visibility.Visible;
                 buttonSeeWord.Content = "Շարունակել";
                 LableTryAgein.Content = $"Փորձ {++stage}";
+                buttonExitTheTestViewResult.IsEnabled = false;
 
                 if (stage > 1)
                     LableInfo.Content = null;
 
+                if (stage == 5)
+                {
+                    LableInfo.Content = "Վադես Վագռռռ գռ գռ Ռադ եղիր Ստեղից";
+                    buttonExitTheTestViewResult.Visibility = Visibility.Collapsed;
+                    buttonSeeWord.Visibility = Visibility.Collapsed;
+                }
             }
             else
             {
@@ -131,6 +161,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
                 textBoxWords.Focus();
                 LabelWord.Visibility = Visibility.Collapsed;
                 buttonSeeWord.Content = "Տեսնել բառերը կրկին";
+                buttonExitTheTestViewResult.IsEnabled = true;
 
                 if (stage == 1)
                     LableInfo.Content = "Բառերը Գրել ներքևում տրված դաշտում, արանց տառասխալների և փոքրատառերով , այլապես դա կդիտարկվի սխալ";
