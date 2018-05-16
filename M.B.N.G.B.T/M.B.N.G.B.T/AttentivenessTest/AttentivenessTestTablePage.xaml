@@ -70,7 +70,7 @@
             <Label x:Name="LabelWord" Content="{x:Null}" Grid.Column="1" FontSize="30" Foreground="White" FontWeight="Bold" FontFamily="Sylfaen" />
         </Viewbox>
 
-        <TextBox x:Name="textBoxWords" Grid.Column="1" Grid.Row="4" Margin="37,24,46,25" Grid.ColumnSpan="6"  Text="{x:Null}"  TextWrapping="Wrap" FontSize="20" Foreground="White" FontWeight="Bold" FontFamily="Sylfaen"  Background="#FF36573F" BorderBrush="#FF162A1D"  />
+        <TextBox x:Name="textBoxWords" Grid.Column="1" Grid.Row="4" Margin="37,24,46,25" Grid.ColumnSpan="6"  Text="{x:Null}"  TextWrapping="Wrap" FontSize="20" Foreground="White" FontWeight="Bold" FontFamily="Sylfaen"  Background="#FF36573F" BorderBrush="#FF162A1D" PreviewMouseDoubleClick="textBoxWords_PreviewMouseDoubleClick" PreviewMouseRightButtonUp="textBoxWords_PreviewMouseRightButtonUp" PreviewTextInput="textBoxWords_PreviewTextInput"  />
 
         <Viewbox  Margin="0,0,0,0" Grid.Column="1" RenderTransformOrigin="0.56,0.545" Grid.Row="1">
             <Label x:Name="LableTryAgein" Content="Փորձ 1"  FontSize="50" Foreground="White" FontFamily="Sylfaen" FontWeight="Bold" />
