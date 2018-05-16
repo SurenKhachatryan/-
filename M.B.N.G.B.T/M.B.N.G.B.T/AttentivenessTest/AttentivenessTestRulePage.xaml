@@ -16,7 +16,9 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="49*"/>
             <RowDefinition Height="68*"/>
-            <RowDefinition Height="549*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="518*"/>
+            <RowDefinition Height="19*"/>
             <RowDefinition Height="35*"/>
             <RowDefinition Height="79*"/>
         </Grid.RowDefinitions>
@@ -32,8 +34,16 @@
             <Run  Text="ՈՒշադրության թեստ"/></TextBlock>
         </Viewbox>
 
-        <Viewbox Margin="22,10,10,23" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="2">
-            <ScrollViewer Width="1245" Height="542" >
+        <Viewbox Margin="0,0,0,0"  Grid.Column="1" Grid.Row="3" RenderTransformOrigin="0,0">
+            <Viewbox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.315"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Viewbox.RenderTransform>
+            <ScrollViewer  Height="490"  >
                 <ScrollViewer.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -42,12 +52,56 @@
                         <TranslateTransform X="1.829"/>
                     </TransformGroup>
                 </ScrollViewer.RenderTransform>
-                <TextBlock FontSize="28" Foreground="White" Grid.ColumnSpan="3" Grid.Column="1" >
+                <TextBlock FontSize="28" Foreground="White" Grid.ColumnSpan="3" Grid.Column="1" FontFamily="Sylfaen" >
+                   <Run Text="Ծրագիրը պատահականության սկզբունքով տալիս է 10 բառ  փորձարկվողին։ "/>
+                    <LineBreak/><Run Text="Փորձարկվողը ուշադիր կարդում է բարձրաձայն այդ 10 բառերը, փորձելով հիշել: "/>
+                    <LineBreak/><Run Text="Հետո փորձարկվողը սեղմում է (Սկսել թեստը) կոճակը: 10 բառերն անհետանում "/>
+                    <LineBreak/><Run Text="են և ակտիվանում է գրելու դաշտը, որտեղ գրում է այն բառերը, որոնք հիշում է : "/>
+                    <LineBreak/>
+                    <LineBreak/><Run Foreground="#FF930000" FontWeight="Bold"  Text="Պարտադիր պայման" TextDecorations="Underline"/>
+                    <Run Text="- Բառերն առանձնացնել " FontWeight="Bold"/>
+                    <Run Foreground="#FF930000" FontWeight="Bold"  Text="ստորակետերով " />
+                    <Run Text="գրել " FontWeight="Bold"/>
+                    <LineBreak/><Run Foreground="#FF930000" FontWeight="Bold"  Text="փոքրատառերով ,առանց տառասխալների," />
+                    <Run Text="այլապես ծրագիրը դա կդիտարկի" FontWeight="Bold"/>
+                    <LineBreak/><Run Text="որպես սխալ։" FontWeight="Bold"/>
+                    <LineBreak/><Run Text="Օրինակ՝" FontWeight="Bold"/>
+                    <LineBreak/><Run Text="   հաց, տուն, ասեղ, գետ, սեղան, պատուհան,  անձրև, ճանճ, գիրք, ժամանակ" FontWeight="Bold"/>
+                    <LineBreak/>
+                    <LineBreak/><Run Text=" Եթե փորձարկվողը առաջին իսկ փորձից մոռացել է որոշ բառեր, կարող է փորձը "/>
+                    <LineBreak/><Run Text="կրկնել "/>
+                    <Run Text="/ առավելագույնը՝ 4 անգամ /" Foreground="#FF930000" FontWeight="Bold"/>
+                    <Run Text=",  սեղմելով (Տեսնել բառերը կրկին) կոճակը"/>
+                    <LineBreak/><Run Text="որի արդյունքում  փորձարկվողի գրած բառերը կջնջվեն գրելու դաշտից և կրկին "/>
+                    <LineBreak/><Run Text="կհայտնվեն 10 բառերը: Այսպես փորձարկվողը  կրկնում է գործողությունը,  սեղմելով "/>
+                    <LineBreak/><Run Text="(Շարունակել) կոճակը:"/>
+                    <LineBreak/><Run Text=" Հետազոտության արդյունքը կախված է կատարված փորձերի թվից:"/>
+                    <LineBreak/><Run Text="Ավելի մանրամասն կարող եք կարդալ ներքևում գրված Եզրակացություններում։"/>
+                    <LineBreak/>
+                    <LineBreak/><Run Text="                                                        Եզրակացություններ" FontWeight="Bold"/>
+                    <LineBreak/>
+                    <LineBreak/><Run Text="1)Եթե ճիշտ գրված բառերի քանակը աճում է - նորմալ զարգացած կարճաժամկետ "/>
+                    <LineBreak/><Run Text=" հիշողություն:"/>
+                    <LineBreak/>
+                    <LineBreak/><Run Text="2)Աոաջին կամ երկրորդ անգամ կրկնելու ժամանակ գրել է 9-10 բառ - հիշողությունը"/>
+                    <LineBreak/><Run Text=" գերազանց է:"/>
+                    <LineBreak/>
+                    <LineBreak/><Run Text="3)Երրորդ անգամ կրկնելու ժամանակ ճիշտ գրել է 9-10 բառ - Հիշողության հետ "/>
+                    <LineBreak/><Run Text=" ամեն ինչ նորմալ է:"/>
+                    <LineBreak/>
+                    <LineBreak/><Run Text="4)Երրորդ անգամ կրկնելու ժամանակ ճիշտ գրել է 8 բառ - Թույլ զարգացած"/>
+                    <LineBreak/><Run Text=" կարճաժամկետ հիշողություն:"/>
+                    <LineBreak/>
+                    <LineBreak/><Run Text="5)Եթե գրության մեջ հայտնվում են բառեր, որոնք չկային 10 ճիշտ բառերի մեջ - "/>
+                    <LineBreak/><Run Text=" խնդիրը ուշադրության հետ է կապկած,այլ ոչ հիշողության:"/>
+                    <LineBreak/>
+                    <LineBreak/><Run Text="6)Եթե 9-10 ճիշտ բառերը գրում է չորրորդ անգամ - կարճաժամկետ հիշողությունը"/>
+                    <LineBreak/><Run Text=" զարգացած չէ:"/>
                 </TextBlock>
             </ScrollViewer>
         </Viewbox>
 
-        <Viewbox Grid.Row="3" Margin="13,1,0,0" Grid.Column="1" Width="177" HorizontalAlignment="Left">
+        <Viewbox Grid.Row="5" Margin="13,1,0,0" Grid.Column="1" Width="177" HorizontalAlignment="Left">
             <Button x:Name="button1" Click="Button_Exit_the_Main" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Width="177">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -58,7 +112,7 @@
             </Button>
         </Viewbox>
 
-        <Viewbox VerticalAlignment="Top" Grid.Column="1" Grid.Row="3" Margin="0,0,4,0" HorizontalAlignment="Right" Width="147">
+        <Viewbox VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" Margin="0,0,4,0" HorizontalAlignment="Right" Width="147">
             <Button x:Name="button2" Click="Button_Start_Test" Content="Սկսել Թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" Width="147" >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">

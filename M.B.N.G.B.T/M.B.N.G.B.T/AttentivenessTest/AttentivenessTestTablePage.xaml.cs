@@ -1,10 +1,10 @@
-﻿using ClassLibrary;
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Navigation;
 using System.Windows.Threading;
+using ClassLibrary;
 
 namespace M.B.N.G.B.T.AttentivenessTest
 {
@@ -171,17 +171,10 @@ namespace M.B.N.G.B.T.AttentivenessTest
             dispatcherTimer.Stop();
         }
 
-
-
-
-
-
         private void textBoxWords_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             e.Handled = true;
         }
-
-
 
         private void textBoxWords_PreviewMouseRightButtonUp(object sender, MouseButtonEventArgs e)
         {
@@ -190,7 +183,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
 
         private void textBoxWords_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            if ((!Char.IsLetter(Convert.ToChar(e.Text))) || (Convert.ToChar(e.Text) != 44))
+            if (!Char.IsLetter(Convert.ToChar(e.Text)) && Convert.ToChar(e.Text) != 44)
             {
                 e.Handled = true;
             }
