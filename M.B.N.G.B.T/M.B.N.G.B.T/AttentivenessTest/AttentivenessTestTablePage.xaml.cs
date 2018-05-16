@@ -24,7 +24,8 @@ namespace M.B.N.G.B.T.AttentivenessTest
 
         private int countAbsentWords { get; set; } = 0;
         private int countWrongWords { get; set; } = 0;
-        private int second { get; set; }
+        private int second { get; set; } = 0;
+        private int secondForTextBox { get; set; } = 0;
 
         private string[] arrWords { get; set; } = { "մուկ", "պատ", "սպունգ", "մահճակալ", "սեղան", "տիկնիկ", "բառ" ,"վարունգ","կոստյում",
                                                     "ներկ", "միջանցք", "ձյուն" , "փաթիլ", "հատոր" , "ձող", "նախաճաշ" , "բանալի","շերտ",
@@ -62,12 +63,23 @@ namespace M.B.N.G.B.T.AttentivenessTest
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
             if (second == 10)
             {
-                LableInfo.Content = string.Empty;
+                if (LableInfo.Content != "Բառերը Գրել ներքևում տրված դաշտում, առանց տառասխալների և փոքրատառերով, այլապես դա կդիտարկվի որպես սխալ")
+                    LableInfo.Content = string.Empty;
+
                 dispatcherTimer.Stop();
                 second = 0;
             }
             if (buttonExitTheTestViewResult.Visibility != Visibility.Visible)
                 dispatcherTimer.Stop();
+            else
+            if (secondForTextBox == 2 && !textBoxWords.IsEnabled && buttonExitTheTestViewResult.Visibility == Visibility.Visible)
+            {
+                textBoxWords.IsEnabled = true;
+                if (LableInfo.Content == "")
+                    dispatcherTimer.Stop();
+
+            }
+            secondForTextBox++;
             second++;
         }
 
@@ -81,31 +93,37 @@ namespace M.B.N.G.B.T.AttentivenessTest
 
                 if (countWrongWords <= 1)
                 {
-                    if ((countAbsentWords <= 1 && stage < 3) || (countAbsentWords <= 1 && stage == 3) ||
-                       (countAbsentWords == 2 && stage == 3) || (countAbsentWords >= 3 && stage >= 3))
+                    if (cl.GetCuntArrayElementsEqual(arrWordsTextBox) <= 1 || stage == 4)
                     {
-                        buttonExitTheTestViewResult.Visibility = Visibility.Collapsed;
-                        buttonSeeWord.Visibility = Visibility.Collapsed;
-                        LabelWord.Visibility = Visibility.Visible;
+                        if ((countAbsentWords <= 1 && stage < 3) || (countAbsentWords <= 1 && stage == 3) ||
+                           (countAbsentWords == 2 && stage == 3) || (countAbsentWords >= 3 && stage >= 3) || stage == 4)
+                        {
+                            buttonExitTheTestViewResult.Visibility = Visibility.Collapsed;
+                            buttonSeeWord.Visibility = Visibility.Collapsed;
+                            LabelWord.Visibility = Visibility.Visible;
+                            textBoxWords.IsEnabled = false;
+                        }
+                        if (countAbsentWords <= 1 && stage < 3)
+                            LableInfo.Content = $"Ձեր կարճաժամկետ հիշողությունը գերազանց է";
+                        else
+                        if (countAbsentWords <= 1 && stage == 3)
+                            LableInfo.Content = $"Ձեր հիշողության հետ ամեն ինչ նորմալ է";
+                        else
+                        if (countAbsentWords == 2 && stage == 3)
+                            LableInfo.Content = $"Թույլ զարգացած կարճաժամկետ հիշողություն";
+                        else
+                        if ((countAbsentWords >= 3 && stage >= 3) || stage == 4)
+                            LableInfo.Content = $"կարճաժամկետ հիշողությունը զարգացած չէ";
+                        else
+                        if (((countAbsentWords <= 5 || countAbsentWords == 2) && stage == 1) ||
+                            ((countAbsentWords == 3 || countAbsentWords == 2) && stage == 2))
+                            LableInfo.Content = $"նորմալ զարգացած կարճաժամկետ հիշողություն, կարող էք կրկին կարդալ բառերը կամ ուղակի հիշել և գրել";
+                        else
+                        if (countAbsentWords >= 4 && (stage == 1 || stage == 2))
+                            LableInfo.Content = $"Այս պահին բառերի քանակը քիչ է վերլուծություն կատարելու համար, կարող էք կրկին կարդալ բառերը կամ ուղղակի հիշել և գրել";
                     }
-                    if (countAbsentWords <= 1 && stage < 3)
-                        LableInfo.Content = $"Ձեր կարճաժամկետ հիշողությունը գերազանց է";
                     else
-                    if (countAbsentWords <= 1 && stage == 3)
-                        LableInfo.Content = $"Ձեր հիշողության հետ ամեն ինչ նորմալ է";
-                    else
-                    if (countAbsentWords == 2 && stage == 3)
-                        LableInfo.Content = $"Թույլ զարգացած կարճաժամկետ հիշողություն";
-                    else
-                    if (countAbsentWords >= 3 && stage >= 3)
-                        LableInfo.Content = $"կարճաժամկետ հիշողությունը զարգացած չէ";
-                    else
-                    if (((countAbsentWords <= 5 || countAbsentWords == 2) && stage == 1) ||
-                        ((countAbsentWords == 3 || countAbsentWords == 2) && stage == 2))
-                        LableInfo.Content = $"նորմալ զարգացած կարճաժամկետ հիշողություն, կարող էք կրկին կարդալ բառերը կամ ուղակի հիշել և գրել";
-                    else
-                    if (countAbsentWords >= 4 && (stage == 1 || stage == 2))
-                        LableInfo.Content = $"Այս պահին բառերի քանակը քիչ է վերլուծություն կատարելու համար, կարող էք կրկին կարդալ բառերը կամ ուղղակի հիշել և գրել";
+                        LableInfo.Content = $"մեկից ավել բառի կրկնություն, խնդրում եմ ուղղել սխալը";
                 }
                 else
                 {
@@ -113,6 +131,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
                     buttonExitTheTestViewResult.Visibility = Visibility.Collapsed;
                     buttonSeeWord.Visibility = Visibility.Collapsed;
                     LabelWord.Visibility = Visibility.Visible;
+                    textBoxWords.IsEnabled = false;
                 }
             }
             else
@@ -184,9 +203,26 @@ namespace M.B.N.G.B.T.AttentivenessTest
         private void textBoxWords_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             if (!Char.IsLetter(Convert.ToChar(e.Text)) && Convert.ToChar(e.Text) != 44)
-            {
                 e.Handled = true;
+            if (textBoxWords.Text.Length >= 200)
+                e.Handled = true;
+        }
+
+        private void textBoxWords_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (textBoxWords.Text.Length >= 200)
+                e.Handled = true;
+            if (e.Key == Key.LeftCtrl || e.Key == Key.RightCtrl || e.Key == Key.LeftShift || e.Key == Key.RightShift)
+            {
+                textBoxWords.IsEnabled = false;
+                secondForTextBox = 0;
+                dispatcherTimer.Start();
             }
+        }
+
+        private void textBoxWords_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            textBoxWords.SelectionLength = 0;
         }
     }
 }

@@ -334,5 +334,52 @@ namespace ClassLibrary
             }
             return ls.ToArray();
         }
+
+        public bool SearchInArrayEqualElements(string[] arr)
+        {
+            try
+            {
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    for (int j = i + 1; j < arr.Length; j++)
+                    {
+                        if (arr[i] == arr[j])
+                            return true;
+                    }
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        public int GetCuntArrayElementsEqual(string[] arr)
+        {
+            int tamp = 0;
+            try
+            {
+                if (SearchInArrayEqualElements(arr))
+                {
+                    for (int i = 0; i < arr.Length; i++)
+                    {
+                        for (int j = i + 1; j < arr.Length; j++)
+                        {
+                            if (arr[i] == arr[j])
+                            {
+                                tamp++;
+                                break;
+                            }
+                        }
+                    }
+                }
+                return tamp;
+            }
+            catch (Exception)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+        }
     }
 }
