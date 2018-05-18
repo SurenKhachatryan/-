@@ -93,7 +93,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
 
                 if (countWrongWords <= 1)
                 {
-                    if (cl.GetCuntArrayElementsEqual(arrWordsTextBox) <= 1 || stage == 4)
+                    if (cl.GetCuntArrayElementsEqual(arrWordsTextBox) < 1 || stage == 4)
                     {
                         if ((countAbsentWords <= 1 && stage < 3) || (countAbsentWords <= 1 && stage == 3) ||
                            (countAbsentWords == 2 && stage == 3) || (countAbsentWords >= 3 && stage >= 3) || stage == 4)
