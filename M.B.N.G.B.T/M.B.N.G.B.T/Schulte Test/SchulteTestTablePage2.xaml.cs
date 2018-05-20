@@ -33,7 +33,7 @@ namespace M.B.N.G.B.T.Schulte_Test
             InitializeComponent();
 
             ChangeContentButtonRandom();
-            startStage.Content = stage;
+            startStage.Content = $"{stage}/5";
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
         }
 

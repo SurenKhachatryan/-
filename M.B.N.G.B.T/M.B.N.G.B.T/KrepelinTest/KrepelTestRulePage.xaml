@@ -15,24 +15,28 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="49*"/>
-            <RowDefinition Height="68*"/>
-            <RowDefinition Height="549*"/>
-            <RowDefinition Height="35*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="503*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="34*"/>
             <RowDefinition Height="79*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="67*"/>
-            <ColumnDefinition Width="1167*"/>
-            <ColumnDefinition Width="66*"/>
+            <ColumnDefinition Width="179*"/>
+            <ColumnDefinition Width="837*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="67*"/>
         </Grid.ColumnDefinitions>
 
 
-        <Viewbox Margin="99,5,61,6" Grid.Column="1" Grid.Row="1">
+        <Viewbox Margin="61,0,61,0" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5">
             <TextBlock FontSize="38" Foreground="White"  TextWrapping="Wrap" >
             <Run  Text="Հաշվարկ ըստ Կրեպելինի"/></TextBlock>
         </Viewbox>
 
-        <Viewbox Margin="22,10,10,23" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="2">
+        <Viewbox Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3">
             <ScrollViewer Width="1245" Height="542" >
                 <ScrollViewer.RenderTransform>
                     <TransformGroup>
@@ -60,7 +64,9 @@
                         <LineBreak/><Run Text="ընթացքում և որքանն է ճիշտ գրել, կարելի է կառուցել հոգնածության կոր նրա"/>
                         <LineBreak/><Run Text="աշխատունակության վերաբերյալ: Որտեղ."/>
                         <LineBreak/>
-                  <Image  Source="C:\Users\ПК Хачатрян\source\repos\M.B.N.G.B.T\M.B.N.G.B.T\M.B.N.G.B.T\bin\Debug\Resources\KrepelinTest/Diagram.png" />
+                        <LineBreak/>
+                        <Run Text="                                       "/>
+                        <Image  Source="C:\Users\ПК Хачатрян\source\repos\M.B.N.G.B.T\M.B.N.G.B.T\M.B.N.G.B.T\bin\Debug\Resources\KrepelinTest/Diagram.png"  Width="500" Height="250"/>
                         <LineBreak/>
                         <LineBreak/><Run Text="                                          Հոգնածության կորագծերի տիպերը"/>
                         <LineBreak/><Run Text="Կարելի է գրանցել կորագծի հետևյալ տիպերը:"/>
@@ -97,7 +103,7 @@
             </ScrollViewer>
         </Viewbox>
 
-        <Viewbox Grid.Row="3" Margin="13,1,0,0" Grid.Column="1" Width="177" HorizontalAlignment="Left">
+        <Viewbox Grid.Row="5" Margin="0,0,0,0" Grid.Column="1">
             <Button x:Name="button1" Click="Button_Exit_the_Main" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Width="177">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -107,16 +113,16 @@
                 </Button.Background>
             </Button>
         </Viewbox>
-        
-        <Viewbox VerticalAlignment="Top" Grid.Column="1" Grid.Row="3" Margin="0,0,4,0" HorizontalAlignment="Right" Width="147">
-        <Button x:Name="button2" Click="Button_Start_Test" Content="Սկսել Թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" Width="147" >
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+
+        <Viewbox Grid.Column="3" Grid.Row="5" Margin="0,0,0,0">
+            <Button x:Name="button2" Click="Button_Start_Test" Content="Սկսել Թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" Width="147" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
         </Viewbox>
 
     </Grid>
