@@ -38,7 +38,7 @@ namespace M.B.N.G.B.T.KrepelTest
             if (stage % 2 != 0)
                 _Operator.Content = (_operator = "+");
             else
-                _Operator.Content = (_operator = "-");
+                _Operator.Content = (_operator = " -");
 
             Initializator();
             dispatcherTimer.Start();
@@ -136,7 +136,7 @@ namespace M.B.N.G.B.T.KrepelTest
         {
             int tamp = 0;
             LableCalculatingDown.Content = $" {rnd.Next(1, 10)}";
-            if (_operator == "-")
+            if (_operator == " -")
             {
                 do
                 {
@@ -180,7 +180,7 @@ namespace M.B.N.G.B.T.KrepelTest
                         InitializatorLabelFalse();
                     break;
 
-                case "-":
+                case " -":
                     if (Number == ((Convert.ToInt32(LableCalculatingUp.Content) - Convert.ToInt32(LableCalculatingDown.Content)) % 10))
                         InitializatorLabelTrue();
                     else

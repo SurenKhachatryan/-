@@ -43,7 +43,7 @@ namespace M.B.N.G.B.T.V.L.Marshuk_Test
             dispatcherTimer.Start();
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
 
-            startStage.Content = stage;
+            startStage.Content = $"{stage}/5";
             TextBox.Focus();
             ChangeContentButtonRandom();
 

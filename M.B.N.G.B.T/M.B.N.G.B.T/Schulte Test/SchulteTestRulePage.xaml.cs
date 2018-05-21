@@ -20,35 +20,35 @@ namespace M.B.N.G.B.T.Schulte_Test
     /// </summary>
     public partial class SchulteTestRulePage : Page
     {
-        
+
 
         public SchulteTestRulePage()
         {
             InitializeComponent();
+
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Exit_The_Main(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(null);
         }
 
-        private void button2_Click(object sender, RoutedEventArgs e)
+        private void button_Start_Test(object sender, RoutedEventArgs e)
         {
             SchulteTestTablePage1.stage = 1;
-            NavigationService.Navigate(new SchulteTestTablePage1());
-        }
 
-        private void button3_Click(object sender, RoutedEventArgs e)
-        {
-            SchulteTestTablePage2.stage = 1;
-            SchulteTestTablePage2.listAllStageMistakes.Clear();
-            NavigationService.Navigate(new SchulteTestTablePage2());
+            if (Radiobutton1.IsChecked == true)
+                NavigationService.Navigate(new SchulteTestTablePage1());
+            else
+            if (Radiobutton2.IsChecked == true)
+            {
+                SchulteTestTablePage2.listAllStageMistakes.Clear();
+                NavigationService.Navigate(new SchulteTestTablePage2());
+            }
+            else
+            if (Radiobutton3.IsChecked == true)
+                NavigationService.Navigate(new SchulteTestTablePage3());
         }
-
-        private void button4_Click(object sender, RoutedEventArgs e)
-        {
-            SchulteTestTablePage3.stage = 1;
-            NavigationService.Navigate(new SchulteTestTablePage3());
-        }
+    
     }
 }

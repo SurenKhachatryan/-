@@ -13,96 +13,132 @@
     </Page.Background>
     <Grid >
         <Grid.RowDefinitions>
-            <RowDefinition Height="29*"/>
-            <RowDefinition Height="231*"/>
+            <RowDefinition Height="108*"/>
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="151*"/>
+            <RowDefinition Height="167*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="78*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="59*"/>
-            <ColumnDefinition Width="947*"/>
-            <ColumnDefinition Width="294*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="29*"/>
+            <ColumnDefinition Width="308*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="500*"/>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="202*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
+        
+        <Viewbox Grid.Column="9" Grid.Row="3" Grid.RowSpan="2">
+            <Label x:Name="startStage" FontSize="120" Content="1/5" Foreground="White"  Height="159"  Width="202" />
+        </Viewbox>
 
-        <Label x:Name="startStage" Margin="0,147,218,0" FontSize="120" Content="1" Foreground="White" Height="140" VerticalAlignment="Top" HorizontalAlignment="Right" Width="80" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" />
-        <Label Margin="0,145,102,0" FontSize="120" Content="/5" Foreground="White" Height="142" VerticalAlignment="Top" HorizontalAlignment="Right" Width="134" Grid.Column="2" Grid.Row="1" />
-        <Label x:Name="timer" Margin="0,23,91,0" FontSize="100" Content="0:00" Foreground="White" Height="140" VerticalAlignment="Top" HorizontalAlignment="Right" Width="207" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" />
+        <Viewbox Grid.Column="9" Grid.Row="1" Grid.RowSpan="3">
+            <Label x:Name="timer" FontSize="100" Content="0:00" Foreground="White"  Height="126"  Width="202" />
+        </Viewbox>
+        <Viewbox Grid.Row="1" Grid.Column="5" Grid.RowSpan="6" Grid.ColumnSpan="2">
+            <WrapPanel Width="520" >
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
+            </WrapPanel>
+        </Viewbox>
+        <Viewbox Grid.Row="1" Grid.Column="5" Grid.RowSpan="6" Grid.ColumnSpan="2">
+            <WrapPanel Width="520" >
+                <Label x:Name="Label1" Content=" 1" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label2" Content=" 2" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label3" Content=" 3" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label4" Content=" 4" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label5" Content=" 5" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label6" Content=" 6" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label7" Content=" 7" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label8" Content=" 8" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label9" Content=" 9" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label10" Content="10" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label11" Content="11" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label12" Content="12" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label13" Content="13" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label14" Content="14" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label15" Content="15" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label16" Content="16" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label17" Content="17" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label18" Content="18" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label19" Content="19" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label20" Content="20" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label21" Content="21" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label22" Content="22" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label23" Content="23" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label24" Content="24" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label25" Content="25" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+            </WrapPanel>
+        </Viewbox>
 
-        <Rectangle Margin="0,21,451,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,21,349,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,21,245,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,21,143,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,21,41,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,117,451,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,117,349,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,117,245,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,117,143,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,117,41,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,213,451,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,213,349,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,213,245,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,213,143,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,213,41,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,309,451,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,309,349,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,309,245,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,309,143,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,309,41,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,405,451,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,405,349,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,405,245,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,405,143,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
-        <Rectangle Margin="0,405,41,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  Fill="{x:Null}"  Height="96" Width="104"   Stroke="Snow" VerticalAlignment="Top"   />
+        <Viewbox Grid.Row="9" Grid.ColumnSpan="5" Grid.Column="1" >
+            <Button x:Name="buttonClickResult" Click="button_Click_Result" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20" Height="36" FontFamily="Jokerman"  Foreground="White" Cursor="Hand"  Width="399">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
 
-        <Label x:Name="Label1" Content=" 1" Margin="0,21,451,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label2" Content=" 2" Margin="0,21,349,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label3" Content=" 3" Margin="0,21,245,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label4" Content=" 4" Margin="0,21,143,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label5" Content=" 5" Margin="0,21,41,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label6" Content=" 6" Margin="0,117,451,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label7" Content=" 7" Margin="0,117,349,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label8" Content=" 8" Margin="0,117,245,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label9" Content=" 9" Margin="0,117,143,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label10" Content="10" Margin="0,117,41,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label11" Content="11" Margin="0,213,451,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label12" Content="12" Margin="0,213,349,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label13" Content="13" Margin="0,213,245,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label14" Content="14" Margin="0,213,143,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label15" Content="15" Margin="0,213,41,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label16" Content="16" Margin="0,309,451,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label17" Content="17" Margin="0,309,349,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label18" Content="18" Margin="0,309,245,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label19" Content="19" Margin="0,309,143,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label20" Content="20" Margin="0,309,41,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label21" Content="21" Margin="0,405,451,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label22" Content="22" Margin="0,405,349,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label23" Content="23" Margin="0,405,245,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label24" Content="24" Margin="0,405,143,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
-        <Label x:Name="Label25" Content="25" Margin="0,405,41,0" FontFamily="Sylfaen" FontSize="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="96" Width="104" FontWeight="Bold"/>
+        <Viewbox Grid.Row="9" Grid.Column="9" Grid.ColumnSpan="2">
+            <Button x:Name="buttonNextStage" Click="ButtonNextStage" Content="Անցնել հաջորդ փուլ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand"  Height="36" Width="219">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
 
-        <Button x:Name="buttonClickResult" Click="button_Click_Result" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Margin="21,0,0,78" HorizontalAlignment="Left" Width="399" Grid.Row="1" Grid.Column="1" Height="36" VerticalAlignment="Bottom">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button x:Name="buttonNextStage" Click="ButtonNextStage" Content="Անցնել հաջորդ փուլ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Margin="0,0,91,78" Grid.Row="1" Grid.Column="1" Height="36" VerticalAlignment="Bottom" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="219">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+        <Viewbox Margin="0,0,0,0" Grid.Row="1" Grid.RowSpan="7" Grid.ColumnSpan="3" Grid.Column="1">
+            <Rectangle  Stroke="{x:Null}"  Width="367" Height="507" >
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Bloknot.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+        </Viewbox>
 
-        <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="505" Margin="10,23,0,0" Grid.Row="1" Stroke="{x:Null}" VerticalAlignment="Top" Width="367">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Bloknot.png"/>
-            </Rectangle.Fill>
-        </Rectangle>
-        <TextBox x:Name="TextBox" Grid.Column="1" FontSize="50"  FontFamily="Bradley Hand ITC" HorizontalAlignment="Left" Height="390" BorderBrush="{x:Null}" Background="{x:Null}" BorderThickness="0" SelectionBrush="#FFB90011" Margin="41,74,0,0" Grid.Row="1"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="307" FontWeight="Bold" PreviewTextInput="TextBox_PreviewTextInput"/>
-
-
+        <Viewbox Grid.Row="2" Grid.Column="2" Grid.RowSpan="4">
+            <TextBox x:Name="TextBox" FontSize="50"  FontFamily="Sylfaen" BorderBrush="{x:Null}" Background="{x:Null}" BorderThickness="0" SelectionBrush="#FFB90011" TextWrapping="Wrap" Text="" FontWeight="Bold" PreviewTextInput="TextBox_PreviewTextInput"  Height="392"  Width="308"/>
+        </Viewbox>
 
     </Grid>
 </Page>
