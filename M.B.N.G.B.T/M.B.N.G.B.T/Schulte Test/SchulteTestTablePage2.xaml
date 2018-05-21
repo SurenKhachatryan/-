@@ -42,31 +42,31 @@
 
         <Viewbox Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="2">
             <WrapPanel Width="525">
-                <Button x:Name="button1" Click="Button_Click1" Content="1" FontSize="80" VerticalAlignment="Top" Height="96"  BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button2" Click="Button_Click2" Content="2" FontSize="80" VerticalAlignment="Top" Height="96"  BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button3" Click="Button_Click3" Content="3" FontSize="80" VerticalAlignment="Top" Height="96"  BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button4" Click="Button_Click4" Content="4" FontSize="80" VerticalAlignment="Top" Height="96"  BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button5" Click="Button_Click5" Content="5" FontSize="80" VerticalAlignment="Top" Height="96"  BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button6" Click="Button_Click6" Content="6" FontSize="80" VerticalAlignment="Top" Height="96"  BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button7" Click="Button_Click7" Content="7" FontSize="80" VerticalAlignment="Top" Height="96"  BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button8" Click="Button_Click8" Content="8" FontSize="80" VerticalAlignment="Top" Height="96"  BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button9" Click="Button_Click9" Content="9" FontSize="80" VerticalAlignment="Top" Height="96"  BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button10" Click="Button_Click10" Content="10" FontSize="80" VerticalAlignment="Top" Height="96" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button11" Click="Button_Click11" Content="11" FontSize="80" VerticalAlignment="Top" Height="96" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button12" Click="Button_Click12" Content="12" FontSize="80" VerticalAlignment="Top" Height="96" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button13" Click="Button_Click13" Content="13" FontSize="80" VerticalAlignment="Top" Height="96" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button14" Click="Button_Click14" Content="14" FontSize="80" VerticalAlignment="Top" Height="96" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button15" Click="Button_Click15" Content="15" FontSize="80" VerticalAlignment="Top" Height="96" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button16" Click="Button_Click16" Content="16" FontSize="80" VerticalAlignment="Top" Height="96" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button17" Click="Button_Click17" Content="17" FontSize="80" VerticalAlignment="Top" Height="96" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button18" Click="Button_Click18" Content="18" FontSize="80" VerticalAlignment="Top" Height="96" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button19" Click="Button_Click19" Content="19" FontSize="80" VerticalAlignment="Top" Height="96" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button20" Click="Button_Click20" Content="20" FontSize="80" VerticalAlignment="Top" Height="96" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button21" Click="Button_Click21" Content="21" FontSize="80" VerticalAlignment="Top" Height="96" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button22" Click="Button_Click22" Content="22" FontSize="80" VerticalAlignment="Top" Height="96" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button23" Click="Button_Click23" Content="23" FontSize="80" VerticalAlignment="Top" Height="96" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button24" Click="Button_Click24" Content="24" FontSize="80" VerticalAlignment="Top" Height="96" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
-                <Button x:Name="button25" Click="Button_Click25" Content="25" FontSize="80" VerticalAlignment="Top" Height="96" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold"  Width="105" />
+                <Button x:Name="button1" Click="Button_Click1" Content="1" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button2" Click="Button_Click2" Content="2" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button3" Click="Button_Click3" Content="3" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button4" Click="Button_Click4" Content="4" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button5" Click="Button_Click5" Content="5" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button6" Click="Button_Click6" Content="6" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button7" Click="Button_Click7" Content="7" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button8" Click="Button_Click8" Content="8" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button9" Click="Button_Click9" Content="9" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button10" Click="Button_Click10" Content="10" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button11" Click="Button_Click11" Content="11" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button12" Click="Button_Click12" Content="12" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button13" Click="Button_Click13" Content="13" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button14" Click="Button_Click14" Content="14" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button15" Click="Button_Click15" Content="15" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button16" Click="Button_Click16" Content="16" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button17" Click="Button_Click17" Content="17" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button18" Click="Button_Click18" Content="18" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button19" Click="Button_Click19" Content="19" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button20" Click="Button_Click20" Content="20" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button21" Click="Button_Click21" Content="21" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button22" Click="Button_Click22" Content="22" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button23" Click="Button_Click23" Content="23" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button24" Click="Button_Click24" Content="24" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
+                <Button x:Name="button25" Click="Button_Click25" Content="25" FontSize="80" BorderBrush="Snow" Background="{x:Null}" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96"/>
             </WrapPanel>
         </Viewbox>
 
