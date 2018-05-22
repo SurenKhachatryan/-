@@ -34,7 +34,7 @@
         </Grid.ColumnDefinitions>
 
         <Viewbox Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
-            <Label  x:Name="StartStage"  FontSize="65" Content="1/10" Foreground="White"  Width="167" Height="102"/>
+            <Label  x:Name="StartStage"  FontSize="65" Content="1/10" Foreground="White" Height="102"/>
         </Viewbox>
         <Viewbox Grid.ColumnSpan="3" Grid.Row="5" Grid.Column="1">
             <Button  x:Name="buttonExitTheTestAndViewResult" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand"  Click="Button_Exit_The_Test_And_View_Result"  Height="36" Width="394">

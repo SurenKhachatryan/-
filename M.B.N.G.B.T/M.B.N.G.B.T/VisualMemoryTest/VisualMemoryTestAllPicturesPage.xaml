@@ -29,7 +29,7 @@
             <ColumnDefinition Width="100*"/>
         </Grid.ColumnDefinitions>
         <Viewbox Grid.Column="1" Grid.Row="2">
-            <Label x:Name="StartStage"  FontSize="65" Content="1/10" Foreground="White"  Width="167" Height="102"/>
+            <Label x:Name="StartStage"  FontSize="65" Content="1/10" Foreground="White"  Height="102"/>
         </Viewbox>
 
         <Viewbox  Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="4">
@@ -42,7 +42,7 @@
                 </Button.Background>
             </Button>
         </Viewbox>
-        
+
         <Viewbox Grid.Column="4" Grid.RowSpan="4" Grid.Row="1">
             <WrapPanel Height="660" Width="882" >
                 <Image MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/1.gif" />
