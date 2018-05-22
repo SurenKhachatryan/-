@@ -5,40 +5,35 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:M.B.N.G.B.T.VisualMemoryTest"
       mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="1300"
-      Title="AllPictures" x:Name="AllPictures1">
+      d:DesignHeight="780" d:DesignWidth="1300"
+      Title="VisualMemoryTestAllPicturesPage">
     <Page.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>
     </Page.Background>
 
-
-    <Grid Margin="0,0,0,0" x:Name="Grid" RenderTransformOrigin="0.602,0.485">
-
+    <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60*"/>
-            <RowDefinition Height="56*"/>
-            <RowDefinition Height="121*"/>
-            <RowDefinition Height="403*"/>
-            <RowDefinition Height="77*"/>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="103*"/>
+            <RowDefinition Height="422*"/>
+            <RowDefinition Height="65*"/>
             <RowDefinition Height="78*"/>
         </Grid.RowDefinitions>
-
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="70*"/>
             <ColumnDefinition Width="167*"/>
-            <ColumnDefinition Width="62*"/>
-            <ColumnDefinition Width="19*"/>
-            <ColumnDefinition Width="880*"/>
+            <ColumnDefinition Width="59*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="882*"/>
             <ColumnDefinition Width="100*"/>
         </Grid.ColumnDefinitions>
-
         <Viewbox Grid.Column="1" Grid.Row="2">
-            <Label x:Name="StartStage"  FontSize="65" Content="1/10" Foreground="White" Height="102"/>
+            <Label x:Name="StartStage"  FontSize="65" Content="1/10" Foreground="White"  Width="167" Height="102"/>
         </Viewbox>
 
-        <Viewbox Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="4"  Grid.RowSpan="2">
-            <Button x:Name="buttonExitTheTestAndViewResult" Click="Button_Exit_The_Test_And_View_Result" Height="81" Content="Ավարտել թեստը և &#xD;&#xA;տեսնել արդյունքները" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Width="229" >
+        <Viewbox  Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="4">
+            <Button x:Name="buttonExitTheTestAndViewResult" Click="Button_Exit_The_Test_And_View_Result" Content="Ավարտել թեստը և &#xD;&#xA;տեսնել արդյունքները" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Width="226" Height="65">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -47,218 +42,217 @@
                 </Button.Background>
             </Button>
         </Viewbox>
-
+        
         <Viewbox Grid.Column="4" Grid.RowSpan="4" Grid.Row="1">
             <WrapPanel Height="660" Width="882" >
-                <Image MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/1.gif" />
-                <Image MouseLeftButtonDown="Pic2_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/2.gif" />
-                <Image MouseLeftButtonDown="Pic3_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/3.gif" />
-                <Image MouseLeftButtonDown="Pic4_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/4.gif" />
-                <Image MouseLeftButtonDown="Pic5_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/5.gif" />
-                <Image MouseLeftButtonDown="Pic6_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/6.gif" />
-                <Image MouseLeftButtonDown="Pic7_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/7.gif" />
-                <Image MouseLeftButtonDown="Pic8_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/8.gif" />
-                <Image MouseLeftButtonDown="Pic9_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/9.gif" />
-                <Image MouseLeftButtonDown="Pic10_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/10.gif" />
-                <Image MouseLeftButtonDown="Pic11_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/11.gif" />
-                <Image MouseLeftButtonDown="Pic12_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/12.gif" />
-                <Image MouseLeftButtonDown="Pic13_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/13.gif" />
-                <Image MouseLeftButtonDown="Pic14_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/14.gif" />
-                <Image MouseLeftButtonDown="Pic15_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/15.gif" />
-                <Image MouseLeftButtonDown="Pic16_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/16.gif" />
-                <Image MouseLeftButtonDown="Pic17_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/17.gif" />
-                <Image MouseLeftButtonDown="Pic18_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/18.gif" />
-                <Image MouseLeftButtonDown="Pic19_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/19.gif" />
-                <Image MouseLeftButtonDown="Pic20_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/20.gif" />
-                <Image MouseLeftButtonDown="Pic21_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/21.gif" />
-                <Image MouseLeftButtonDown="Pic22_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/22.gif" />
-                <Image MouseLeftButtonDown="Pic23_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/23.gif" />
-                <Image MouseLeftButtonDown="Pic24_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/24.gif" />
-                <Image MouseLeftButtonDown="Pic25_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/25.gif" />
-                <Image MouseLeftButtonDown="Pic26_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/26.gif" />
-                <Image MouseLeftButtonDown="Pic27_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/27.gif" />
-                <Image MouseLeftButtonDown="Pic28_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/28.gif" />
-                <Image MouseLeftButtonDown="Pic29_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/29.gif" />
-                <Image MouseLeftButtonDown="Pic30_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/30.gif" />
-                <Image MouseLeftButtonDown="Pic31_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/31.gif" />
-                <Image MouseLeftButtonDown="Pic32_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/32.gif" />
-                <Image MouseLeftButtonDown="Pic33_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/33.gif" />
-                <Image MouseLeftButtonDown="Pic34_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/34.gif" />
-                <Image MouseLeftButtonDown="Pic35_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/35.gif" />
-                <Image MouseLeftButtonDown="Pic36_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/36.gif" />
-                <Image MouseLeftButtonDown="Pic37_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/37.gif" />
-                <Image MouseLeftButtonDown="Pic38_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/38.gif" />
-                <Image MouseLeftButtonDown="Pic39_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/39.gif" />
-                <Image MouseLeftButtonDown="Pic40_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/40.gif" />
-                <Image MouseLeftButtonDown="Pic41_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/41.gif" />
-                <Image MouseLeftButtonDown="Pic42_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/42.gif" />
-                <Image MouseLeftButtonDown="Pic43_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/43.gif" />
-                <Image MouseLeftButtonDown="Pic44_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/44.gif" />
-                <Image MouseLeftButtonDown="Pic45_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/45.gif" />
-                <Image MouseLeftButtonDown="Pic46_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/46.gif" />
-                <Image MouseLeftButtonDown="Pic47_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/47.gif" />
-                <Image MouseLeftButtonDown="Pic48_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/AttentivenssTestPictures/48.gif" />
+                <Image MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/1.gif" />
+                <Image MouseLeftButtonDown="Pic2_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/2.gif" />
+                <Image MouseLeftButtonDown="Pic3_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/3.gif" />
+                <Image MouseLeftButtonDown="Pic4_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/4.gif" />
+                <Image MouseLeftButtonDown="Pic5_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/5.gif" />
+                <Image MouseLeftButtonDown="Pic6_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/6.gif" />
+                <Image MouseLeftButtonDown="Pic7_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/7.gif" />
+                <Image MouseLeftButtonDown="Pic8_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/8.gif" />
+                <Image MouseLeftButtonDown="Pic9_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/9.gif" />
+                <Image MouseLeftButtonDown="Pic10_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/10.gif" />
+                <Image MouseLeftButtonDown="Pic11_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/11.gif" />
+                <Image MouseLeftButtonDown="Pic12_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/12.gif" />
+                <Image MouseLeftButtonDown="Pic13_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/13.gif" />
+                <Image MouseLeftButtonDown="Pic14_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/14.gif" />
+                <Image MouseLeftButtonDown="Pic15_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/15.gif" />
+                <Image MouseLeftButtonDown="Pic16_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/16.gif" />
+                <Image MouseLeftButtonDown="Pic17_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/17.gif" />
+                <Image MouseLeftButtonDown="Pic18_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/18.gif" />
+                <Image MouseLeftButtonDown="Pic19_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/19.gif" />
+                <Image MouseLeftButtonDown="Pic20_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/20.gif" />
+                <Image MouseLeftButtonDown="Pic21_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/21.gif" />
+                <Image MouseLeftButtonDown="Pic22_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/22.gif" />
+                <Image MouseLeftButtonDown="Pic23_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/23.gif" />
+                <Image MouseLeftButtonDown="Pic24_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/24.gif" />
+                <Image MouseLeftButtonDown="Pic25_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/25.gif" />
+                <Image MouseLeftButtonDown="Pic26_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/26.gif" />
+                <Image MouseLeftButtonDown="Pic27_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/27.gif" />
+                <Image MouseLeftButtonDown="Pic28_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/28.gif" />
+                <Image MouseLeftButtonDown="Pic29_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/29.gif" />
+                <Image MouseLeftButtonDown="Pic30_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/30.gif" />
+                <Image MouseLeftButtonDown="Pic31_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/31.gif" />
+                <Image MouseLeftButtonDown="Pic32_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/32.gif" />
+                <Image MouseLeftButtonDown="Pic33_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/33.gif" />
+                <Image MouseLeftButtonDown="Pic34_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/34.gif" />
+                <Image MouseLeftButtonDown="Pic35_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/35.gif" />
+                <Image MouseLeftButtonDown="Pic36_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/36.gif" />
+                <Image MouseLeftButtonDown="Pic37_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/37.gif" />
+                <Image MouseLeftButtonDown="Pic38_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/38.gif" />
+                <Image MouseLeftButtonDown="Pic39_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/39.gif" />
+                <Image MouseLeftButtonDown="Pic40_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/40.gif" />
+                <Image MouseLeftButtonDown="Pic41_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/41.gif" />
+                <Image MouseLeftButtonDown="Pic42_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/42.gif" />
+                <Image MouseLeftButtonDown="Pic43_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/43.gif" />
+                <Image MouseLeftButtonDown="Pic44_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/44.gif" />
+                <Image MouseLeftButtonDown="Pic45_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/45.gif" />
+                <Image MouseLeftButtonDown="Pic46_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/46.gif" />
+                <Image MouseLeftButtonDown="Pic47_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/47.gif" />
+                <Image MouseLeftButtonDown="Pic48_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/48.gif" />
             </WrapPanel>
         </Viewbox>
 
         <Viewbox Grid.Column="4" Grid.RowSpan="4" Grid.Row="1">
-            <WrapPanel Height="660" Width="882" >
-                <Image x:Name="PicNo1" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo2" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo3" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo4" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo5" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo6" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo7" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo8" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo9" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo10" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo11" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo12" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo13" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo14" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo15" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo16" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo17" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo18" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo19" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo20" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo21" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo22" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo23" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo24" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo25" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo26" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo27" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo28" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo29" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo30" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo31" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo32" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo33" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo34" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo35" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo36" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo37" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo38" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo39" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo40" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo41" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo42" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo43" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo44" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo45" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo46" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo47" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
-                <Image x:Name="PicNo48" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/No.png" />
+            <WrapPanel Width="882" Height="660">
+                <Image x:Name="PicNo1" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo2" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo3" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo4" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo5" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo6" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo7" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo8" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo9" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo10" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo11" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo12" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo13" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo14" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo15" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo16" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo17" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo18" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo19" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo20" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo21" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo22" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo23" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo24" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo25" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo26" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo27" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo28" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo29" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo30" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo31" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo32" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo33" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo34" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo35" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo36" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo37" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo38" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo39" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo40" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo41" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo42" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo43" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo44" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo45" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo46" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo47" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
+                <Image x:Name="PicNo48" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/No.png" />
             </WrapPanel>
         </Viewbox>
 
-        <Viewbox Grid.Column="4" Grid.RowSpan="4" Grid.Row="1">
-            <WrapPanel Height="660" Width="882" >
-                <Image x:Name="PicYes1" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes2" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes3" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes4" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes5" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes6" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes7" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes8" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes9" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes10" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes11" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes12" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes13" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes14" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes15" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes16" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes17" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes18" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes19" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes20" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes21" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes22" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes23" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes24" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes25" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes26" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes27" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes28" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes29" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes30" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes31" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes32" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes33" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes34" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes35" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes36" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes37" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes38" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes39" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes40" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes41" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes42" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes43" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes44" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes45" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes46" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes47" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
-                <Image x:Name="PicYes48" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes.png" />
+        <Viewbox Grid.Column="4"  Grid.RowSpan="4" Grid.Row="1">
+            <WrapPanel Width="882" Height="660">
+                <Image x:Name="PicYes1" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes2" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes3" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes4" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes5" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes6" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes7" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes8" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes9" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes10" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes11" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes12" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes13" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes14" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes15" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes16" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes17" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes18" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes19" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes20" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes21" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes22" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes23" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes24" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes25" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes26" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes27" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes28" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes29" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes30" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes31" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes32" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes33" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes34" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes35" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes36" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes37" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes38" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes39" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes40" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes41" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes42" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes43" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes44" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes45" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes46" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes47" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
+                <Image x:Name="PicYes48" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes.png" />
             </WrapPanel>
         </Viewbox>
 
-        <Viewbox Grid.Column="4" Grid.RowSpan="4" Grid.Row="1">
-            <WrapPanel Height="660" Width="882">
-                <Image x:Name="PicYes2_1" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_2" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_3" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_4" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_5" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_6" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_7" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_8" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_9" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_10" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_11" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_12" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_13" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_14" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_15" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_16" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_17" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_18" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_19" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_20" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_21" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_22" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_23" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_24" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_25" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_26" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_27" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_28" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_29" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_30" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_31" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_32" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_33" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_34" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_35" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_36" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_37" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_38" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_39" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_40" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_41" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_42" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_43" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_44" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_45" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_46" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_47" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
-                <Image x:Name="PicYes2_48" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/Yes2.png"/>
+        <Viewbox Grid.RowSpan="4" Grid.Row="1" Grid.Column="4">
+            <WrapPanel Width="882"  Height="660">
+                <Image x:Name="PicYes2_1" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_2" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_3" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_4" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_5" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_6" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_7" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_8" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_9" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_10" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_11" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_12" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_13" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_14" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_15" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_16" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_17" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_18" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_19" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_20" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_21" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_22" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_23" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_24" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_25" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_26" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_27" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_28" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_29" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_30" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_31" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_32" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_33" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_34" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_35" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_36" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_37" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_38" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_39" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_40" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_41" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_42" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_43" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_44" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_45" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_46" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_47" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
+                <Image x:Name="PicYes2_48" Visibility="Hidden" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/TrueFalse/Yes2.png"/>
             </WrapPanel>
         </Viewbox>
-
     </Grid>
 </Page>

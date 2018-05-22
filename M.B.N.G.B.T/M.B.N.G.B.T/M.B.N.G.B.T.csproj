@@ -104,6 +104,12 @@
     <Compile Include="TestEclecticAttention\TestEclecticAttentionTablePage.xaml.cs">
       <DependentUpon>TestEclecticAttentionTablePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VisualMemoryTest\VisualMemoryTestAllPicturesPage.xaml.cs">
+      <DependentUpon>VisualMemoryTestAllPicturesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisualMemoryTest\VisualMemoryTestRandomPicturesPage.xaml.cs">
+      <DependentUpon>VisualMemoryTestRandomPicturesPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VLMarshuk Test\MarshukTestResultPage.xaml.cs">
       <DependentUpon>MarshukTestResultPage.xaml</DependentUpon>
     </Compile>
@@ -169,12 +175,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="VisualMemoryTest\VisualMemoryTestAllPicturesPage.xaml.cs">
-      <DependentUpon>VisualMemoryTestAllPicturesPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="VisualMemoryTest\VisualMemoryTestRandomPicturesPage.xaml.cs">
-      <DependentUpon>VisualMemoryTestRandomPicturesPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="VisualMemoryTest\VisualMemoryTestResultPage.xaml.cs">
       <DependentUpon>VisualMemoryTestResultPage.xaml</DependentUpon>
     </Compile>
@@ -229,6 +229,7 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -246,151 +247,148 @@
     <None Include="Resources\Doska.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\1.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\1.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\2.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\2.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\3.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\3.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\4.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\4.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\5.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\5.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\6.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\6.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\7.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\7.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\8.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\8.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\9.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\9.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\10.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\10.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\11.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\11.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\12.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\12.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\13.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\13.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\14.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\14.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\15.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\15.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\16.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\16.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\17.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\17.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\18.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\18.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\19.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\19.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\20.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\20.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\21.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\21.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\22.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\22.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\23.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\23.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\24.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\24.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\25.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\25.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\26.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\26.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\27.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\27.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\28.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\28.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\29.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\29.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\30.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\30.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\31.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\31.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\32.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\32.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\33.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\33.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\34.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\34.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\35.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\35.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\36.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\36.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\37.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\37.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\38.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\38.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\39.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\39.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\40.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\40.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\41.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\41.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\42.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\42.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\43.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\43.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\44.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\44.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\45.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\45.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\46.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\46.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\47.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\47.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AttentivenssTestPictures\48.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\wood-background.jpg" />
+    <None Include="Resources\VisualMemoryTestResorces\48.gif" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
@@ -405,13 +403,12 @@
     <Resource Include="Man-04.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Yes.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\No.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\KrepelinTest\Diagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\VisualMemoryTestResorces\TrueFalse\No.png" />
+    <Resource Include="Resources\VisualMemoryTestResorces\TrueFalse\Yes.png" />
+    <Resource Include="Resources\VisualMemoryTestResorces\TrueFalse\Yes2.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

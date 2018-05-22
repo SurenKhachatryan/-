@@ -25,8 +25,7 @@ namespace M.B.N.G.B.T.VisualMemoryTest
         public VisualMemoryTestRandomPicturesPage()
         {
             InitializeComponent();
-            
-            PicCollapsed();
+
             listPicVisibility.Clear();
             PicRandomVisibility();
             StartStage.Content = $"{stage}/10";
@@ -41,11 +40,6 @@ namespace M.B.N.G.B.T.VisualMemoryTest
         private void Button_Start_Stage(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new VisualMemoryTestAllPicturesPage());
-        }
-
-        public void RndPicPageGridCollapsed()
-        {
-            RandomPicturesPage1.Visibility = Visibility.Collapsed;
         }
 
         private void PicRandomVisibility()
@@ -365,58 +359,6 @@ namespace M.B.N.G.B.T.VisualMemoryTest
                     i--;
                 }
             }
-        }
-        private void PicCollapsed()
-        {
-            Pic1.Visibility = Visibility.Collapsed;
-            Pic2.Visibility = Visibility.Collapsed;
-            Pic3.Visibility = Visibility.Collapsed;
-            Pic4.Visibility = Visibility.Collapsed;
-            Pic5.Visibility = Visibility.Collapsed;
-            Pic6.Visibility = Visibility.Collapsed;
-            Pic7.Visibility = Visibility.Collapsed;
-            Pic8.Visibility = Visibility.Collapsed;
-            Pic9.Visibility = Visibility.Collapsed;
-            Pic10.Visibility = Visibility.Collapsed;
-            Pic11.Visibility = Visibility.Collapsed;
-            Pic12.Visibility = Visibility.Collapsed;
-            Pic13.Visibility = Visibility.Collapsed;
-            Pic14.Visibility = Visibility.Collapsed;
-            Pic15.Visibility = Visibility.Collapsed;
-            Pic16.Visibility = Visibility.Collapsed;
-            Pic17.Visibility = Visibility.Collapsed;
-            Pic18.Visibility = Visibility.Collapsed;
-            Pic19.Visibility = Visibility.Collapsed;
-            Pic20.Visibility = Visibility.Collapsed;
-            Pic21.Visibility = Visibility.Collapsed;
-            Pic22.Visibility = Visibility.Collapsed;
-            Pic23.Visibility = Visibility.Collapsed;
-            Pic24.Visibility = Visibility.Collapsed;
-            Pic25.Visibility = Visibility.Collapsed;
-            Pic26.Visibility = Visibility.Collapsed;
-            Pic27.Visibility = Visibility.Collapsed;
-            Pic28.Visibility = Visibility.Collapsed;
-            Pic29.Visibility = Visibility.Collapsed;
-            Pic30.Visibility = Visibility.Collapsed;
-            Pic31.Visibility = Visibility.Collapsed;
-            Pic32.Visibility = Visibility.Collapsed;
-            Pic33.Visibility = Visibility.Collapsed;
-            Pic34.Visibility = Visibility.Collapsed;
-            Pic35.Visibility = Visibility.Collapsed;
-            Pic36.Visibility = Visibility.Collapsed;
-            Pic37.Visibility = Visibility.Collapsed;
-            Pic38.Visibility = Visibility.Collapsed;
-            Pic39.Visibility = Visibility.Collapsed;
-            Pic40.Visibility = Visibility.Collapsed;
-            Pic41.Visibility = Visibility.Collapsed;
-            Pic42.Visibility = Visibility.Collapsed;
-            Pic43.Visibility = Visibility.Collapsed;
-            Pic44.Visibility = Visibility.Collapsed;
-            Pic45.Visibility = Visibility.Collapsed;
-            Pic46.Visibility = Visibility.Collapsed;
-            Pic47.Visibility = Visibility.Collapsed;
-            Pic48.Visibility = Visibility.Collapsed;
-
         }
     }
 }

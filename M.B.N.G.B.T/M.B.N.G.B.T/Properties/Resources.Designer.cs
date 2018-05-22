@@ -93,26 +93,6 @@ namespace M.B.N.G.B.T.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap No {
-            get {
-                object obj = ResourceManager.GetObject("No", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap wood_background {
-            get {
-                object obj = ResourceManager.GetObject("wood_background", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Yes {
             get {
                 object obj = ResourceManager.GetObject("Yes", resourceCulture);
