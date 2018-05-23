@@ -13,97 +13,83 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="53*"/>
-            <RowDefinition Height="91*"/>
-            <RowDefinition Height="11*"/>
-            <RowDefinition Height="468*"/>
-            <RowDefinition Height="11*"/>
-            <RowDefinition Height="32*"/>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="459*"/>
+            <RowDefinition Height="42*"/>
             <RowDefinition Height="36*"/>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="73*"/>
+            <RowDefinition Height="78*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="7*"/>
-            <ColumnDefinition Width="13*"/>
-            <ColumnDefinition Width="33*"/>
-            <ColumnDefinition Width="56*"/>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="13*"/>
-            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="83*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="14*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox Grid.Row="1" Grid.ColumnSpan="7" Grid.Column="0" Margin="100,0,62,0" >
-            <Label Content="Շուլտեի Աղյուսակ" FontSize="38" Foreground="White"  VerticalAlignment="Top" FontFamily="Sylfaen"  Width="336"/>
+        <Viewbox  VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="6">
+            <Label Content="Շուլտեի Աղյուսակ" FontSize="48" Foreground="Snow"  FontFamily="Sylfaen"  Height="80" Width="418"/>
         </Viewbox>
 
+        <Viewbox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left">
+            <Button Click="Button_Exit_The_Main" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Width="185" Height="36" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
 
+        <Viewbox Grid.Row="5" Grid.Column="4" HorizontalAlignment="Right" >
+            <Button Click="Button_Start_Test" Content="Սկսել Թեստը" FontSize="20" Width="185" Height="36" FontFamily="Sylfaen"  Foreground="White" Cursor="Hand">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
 
-
-        <Viewbox RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="3">
-            <ScrollViewer >
-                <ScrollViewer.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleX="0.463"/>
-                        <RotateTransform/>
-                        <TranslateTransform X="1.829"/>
-                    </TransformGroup>
-                </ScrollViewer.RenderTransform>
-                <TextBlock FontSize="28" Foreground="White" Grid.ColumnSpan="3" Grid.Column="1" >
-            <Run Text="Շուլտեի աղյուսակի օգնությամբ կարելի է որոշել բարձրագույն նյարդային"/>
-            <LineBreak/>
-            <Run Text="գործունեության հետևյալ բաղադրիչնեը"/>
-            <LineBreak/>
-            <Run Text=" 1․  Հոգեբանական ռիթմը"/>
-            <LineBreak/>
-            <Run Text=" 2.  Հայացքի կողմնորոշիչ շարժումների զարգացումը"/>
-            <LineBreak/>
-            <Run Text=" 3.  Տեսողական գրգռիչների նկատմամբ ուշադրուքյան ծավալը։"/>
-            <LineBreak/>
-            <Run FontStyle="Oblique" Text="Անցկացման կարգը" TextDecorations="Underline" />
-            <LineBreak/>
-            <Run Text="Հետազոտվողին տրվում է 5*5 աղյուսակներ, ուր պատահական հերթականությամբ"/>
-            <LineBreak/>
-            <Run Text="գրված են 1-25 թվերն ըստ հերթականության։"/>
-            <LineBreak/>
-            <Run FontStyle="Oblique"  Text="Հրահանգավորում։" TextDecorations="Underline"/>
-            <Run Text=" Մկնիկով նշել աղյուսակի բոլոր թվերն ըստ հերթականության,"/>
-            <LineBreak/>
-            <Run Text="որքան հնարավոր է արագ և առանց սխալների։ Հետազոտությունն անցկացվում է" />
-            <LineBreak/>
-            <Run Text="յուրաքանչյուր աղյուսակի համար։" />
+        <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4">
+            <ScrollViewer  Width="1160" Height="459">
+                <TextBlock TextWrapping="Wrap"  Foreground="Snow" FontSize="30" FontFamily="Sylfaen">
+                 <Run Text="Շուլտեի աղյուսակի օգնությամբ կարելի է որոշել բարձրագույն նյարդային"/>
+                 <LineBreak/>
+                 <Run Text="գործունեության հետևյալ բաղադրիչնեը"/>
+                 <LineBreak/>
+                 <Run Text=" 1․  Հոգեբանական ռիթմը"/>
+                 <LineBreak/>
+                 <Run Text=" 2.  Հայացքի կողմնորոշիչ շարժումների զարգացումը"/>
+                 <LineBreak/>
+                 <Run Text=" 3.  Տեսողական գրգռիչների նկատմամբ ուշադրուքյան ծավալը։"/>
+                 <LineBreak/>
+                 <Run FontStyle="Oblique" Text="Անցկացման կարգը" TextDecorations="Underline" />
+                 <LineBreak/>
+                 <Run Text="Հետազոտվողին տրվում է 5*5 աղյուսակներ, ուր պատահական հերթականությամբ"/>
+                 <LineBreak/>
+                 <Run Text="գրված են 1-25 թվերն ըստ հերթականության։"/>
+                 <LineBreak/>
+                 <Run FontStyle="Oblique"  Text="Հրահանգավորում։" TextDecorations="Underline"/>
+                 <Run Text=" Մկնիկով նշել աղյուսակի բոլոր թվերն ըստ հերթականության,"/>
+                 <LineBreak/>
+                 <Run Text="որքան հնարավոր է արագ և առանց սխալների։ Հետազոտությունն անցկացվում է" />
+                 <LineBreak/>
+                 <Run Text="յուրաքանչյուր աղյուսակի համար։" />
                 </TextBlock>
             </ScrollViewer>
         </Viewbox>
 
-        <Viewbox Grid.Row="6" Grid.Column="1">
-            <Button  x:Name="button1" Click="Button_Exit_The_Main" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand"  Width="130" Height="36">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="1"/>
-                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-        </Viewbox>
-
-        <Viewbox Grid.Row="6" Grid.Column="5">
-            <Button  x:Name="button2" Click="button_Start_Test" Content="Սկսել թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand"  Height="36"  Width="130">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="1"/>
-                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-        </Viewbox>
-
-        <Viewbox Grid.Column="3" Grid.Row="5" Grid.RowSpan="3">
-            <WrapPanel  Height="73"  Width="560">
-                <RadioButton x:Name="Radiobutton1" Content="1․ Ըստ ժամանակի" FontSize="20" IsChecked="True" Foreground="Snow" Margin="5"/>
-                <RadioButton x:Name="Radiobutton2" Content="2․ Ըստ թույլ տված սխալների թվի"  Foreground="Snow" FontSize="20" Margin="5"/>
-                <RadioButton x:Name="Radiobutton3" Content="3․ Ըստ թույլ տված դադարների թվի" Foreground="Snow" FontSize="20" Margin="5" />
+        <Viewbox Grid.Column="3" Grid.Row="4" Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Right">
+            <WrapPanel Width="560" Height="78">
+                <RadioButton x:Name="Radiobutton1" FontFamily="Sylfaen" Content="1․ Ըստ ժամանակի" FontSize="20" IsChecked="True" Foreground="Snow" Margin="5"/>
+                <RadioButton x:Name="Radiobutton2" FontFamily="Sylfaen" Content="2․ Ըստ թույլ տված սխալների թվի"  Foreground="Snow" FontSize="20" Margin="5"/>
+                <RadioButton x:Name="Radiobutton3" FontFamily="Sylfaen" Content="3․ Ըստ թույլ տված դադարների թվի" Foreground="Snow" FontSize="20" Margin="5" />
             </WrapPanel>
         </Viewbox>
 

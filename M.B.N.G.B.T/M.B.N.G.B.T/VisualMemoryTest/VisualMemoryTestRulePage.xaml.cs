@@ -13,12 +13,12 @@ namespace M.B.N.G.B.T.VisualMemoryTest
         {
             InitializeComponent();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Exit_The_Main(object sender, RoutedEventArgs e)
         {
             TestRuleCollapsed();
         }
 
-        private void button2_Click(object sender, RoutedEventArgs e)
+        private void Button_Start_Test(object sender, RoutedEventArgs e)
         {
             VisualMemoryTestRandomPicturesPage.picturesCount = 2;
             VisualMemoryTestRandomPicturesPage.stage = 1;

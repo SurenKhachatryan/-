@@ -29,11 +29,11 @@
             <ColumnDefinition Width="100*"/>
         </Grid.ColumnDefinitions>
         <Viewbox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left">
-            <Label x:Name="StartStage"  FontSize="65" Content="1/10" Foreground="White"  Width="167" Height="102"/>
+            <Label x:Name="StartStage"  FontSize="65" Content="1/10" FontFamily="Sylfaen" Foreground="White"  Width="167" Height="102"/>
         </Viewbox>
 
         <Viewbox  Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left">
-            <Button x:Name="buttonExitTheTestAndViewResult" Click="Button_Exit_The_Test_And_View_Result" Content="Ավարտել թեստը և &#xD;&#xA;տեսնել արդյունքները" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Width="226" Height="65">
+            <Button x:Name="buttonExitTheTestAndViewResult" Click="Button_Exit_The_Test_And_View_Result" Content="Ավարտել թեստը և &#xD;&#xA;տեսնել արդյունքները" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Width="226" Height="65">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>

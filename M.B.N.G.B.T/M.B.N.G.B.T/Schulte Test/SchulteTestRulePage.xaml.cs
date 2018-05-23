@@ -33,7 +33,7 @@ namespace M.B.N.G.B.T.Schulte_Test
             NavigationService.Navigate(null);
         }
 
-        private void button_Start_Test(object sender, RoutedEventArgs e)
+        private void Button_Start_Test(object sender, RoutedEventArgs e)
         {
             SchulteTestTablePage1.stage = 1;
 

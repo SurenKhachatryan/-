@@ -34,11 +34,11 @@
         </Grid.ColumnDefinitions>
 
         <Viewbox Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Left">
-            <Label  x:Name="StartStage"  FontSize="65" Content="1/10" Foreground="White"  Width="167" Height="102"/>
+            <Label  x:Name="StartStage"  FontSize="65" Content="1/10" FontFamily="Sylfaen" Foreground="White"  Width="167" Height="102"/>
         </Viewbox>
         
         <Viewbox Grid.ColumnSpan="3" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left">
-            <Button  x:Name="buttonExitTheTestAndViewResult" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand"  Click="Button_Exit_The_Test_And_View_Result"  Height="36" Width="394">
+            <Button  x:Name="buttonExitTheTestAndViewResult" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand"  Click="Button_Exit_The_Test_And_View_Result"  Height="36" Width="394">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -49,7 +49,7 @@
         </Viewbox>
 
         <Viewbox Grid.Column="6" Grid.Row="5" HorizontalAlignment="Right">
-            <Button x:Name="buttonStartStage"   Content="Հիշեցի" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Click="Button_Start_Stage" Width="103" Height="36">
+            <Button x:Name="buttonStartStage"   Content="Հիշեցի" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Click="Button_Start_Stage" Width="103" Height="36">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
