@@ -12,9 +12,7 @@ namespace M.B.N.G.B.T.VisualMemoryTest
         {
             InitializeComponent();
             if (VisualMemoryTestRandomPicturesPage.stage != 1)
-            {
-                LabelPercent.Content = $"Ձեր տեսողական հիշողությունը զարգացած է {(VisualMemoryTestRandomPicturesPage.stage-1) * 10}%";
-            }
+                LabelPercent.Content = $"Ձեր տեսողական հիշողության զարգացվածության ցուցանիշը - {(VisualMemoryTestRandomPicturesPage.stage - 1) * 10}%";
         }
 
         private void button_Click_Exit_Main(object sender, RoutedEventArgs e)

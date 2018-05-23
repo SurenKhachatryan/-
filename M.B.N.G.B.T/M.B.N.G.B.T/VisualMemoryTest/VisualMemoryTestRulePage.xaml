@@ -14,32 +14,29 @@
 
     <Grid x:Name="GridRuleAttentivenessTest" >
         <Grid.RowDefinitions>
-            <RowDefinition Height="662*"/>
-            <RowDefinition Height="39*"/>
-            <RowDefinition Height="79*"/>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="459*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="78*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="58*"/>
-            <ColumnDefinition Width="1183*"/>
-            <ColumnDefinition Width="59*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="185*"/>
+            <ColumnDefinition Width="789*"/>
+            <ColumnDefinition Width="185*"/>
+            <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
-        <Viewbox VerticalAlignment="Top" Margin="58,54,63,0" Grid.Column="1" Height="75">
-            <TextBlock FontSize="38" Foreground="White"  TextWrapping="Wrap" Height="68" Width="966">
-            <Run Text="Տեսողական Հիշողություն Թեստավորման Կանոններ"/></TextBlock>
+
+        <Viewbox  VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="5">
+            <Label Content="Տեսողական Հիշողություն" FontSize="48" Foreground="Snow"  FontFamily="Sylfaen"  Height="80" Width="572"/>
         </Viewbox>
 
-        <Viewbox Margin="11,130,53,0" Grid.Column="1" Grid.ColumnSpan="2" Height="286" VerticalAlignment="Top"  >
-            <TextBlock FontSize="25"  Foreground="White" Height="174" Width="1068" >
-            <Run Text="Թեստը ստուգում է , թե որքան է զարգացած Ձեր տեսողական հիշողությունը ։"/>
-            <LineBreak/><Run Text="   Ձեզ տրվում է 10վ ժամանակ և պատահական կարգով առարկաների լուսանկարներ ։ "/>
-            <LineBreak/><Run Text="Դուք պետք է 10վ-ում մտապահեք այդ լուսանկարները , որից հետո , երբ վերջանա"/>
-            <LineBreak/><Run Text="10վ-ը , ձեզ կտրվի նկարների շարք և 10վ ժամանակ ։ Դուք պետք է 10վ-ում գտնեք"/>
-            <LineBreak/><Run Text="ձեր մտապահած լուսանկարները և նշեք մկնիկով։"/>
-            </TextBlock>
-        </Viewbox>
 
-        <Viewbox Margin="11,1,0,3" HorizontalAlignment="Left" MaxWidth="150" MaxHeight="35" Grid.Column="1" Grid.Row="1" Width="138">
-            <Button x:Name="button1" Click="Button_Click" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Width="134" >
+        <Viewbox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left">
+            <Button x:Name="button1" Click="Button_Click" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Width="185" Height="36" >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -49,8 +46,8 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Margin="0,1,11,3" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" MaxWidth="147">
-            <Button x:Name="button2" Click="button2_Click" Content="Սկսել Թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Width="143" >
+        <Viewbox Grid.Row="5" Grid.Column="3" HorizontalAlignment="Right" >
+            <Button  x:Name="button2" Click="button2_Click" Content="Սկսել Թեստը" FontSize="20" Width="185" Height="36" FontFamily="Jokerman"  Foreground="White" Cursor="Hand">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -58,6 +55,31 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
+        </Viewbox>
+        
+        <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3">
+            <ScrollViewer  Width="1160" Height="459">
+                <TextBlock TextWrapping="Wrap"  Foreground="Snow" FontSize="30" FontFamily="Sylfaen">
+                <Run Text="  Թեստը  ստուգում  է,  թե   որքանով  է    զարգացած   փորձարկվողի   տեսողական "/>
+                <LineBreak/><Run Text="հիշողությունը։"/>
+                <LineBreak/>
+                <LineBreak/><Run Text="Ծրագիրը  պատահականության  կարգով  տալիս  է  առարկաների  լուսանկարներ։"/>
+                <LineBreak/><Run Text="փորձարկվողը   պետք   է   մտապահի  այդ   լուսանկարները,  որից  հետո  պետք  է "/>
+                <LineBreak/><Run Text="սեղմի  (Հիշեցի)  կոճակը։ Այնուհետև հայտնվում է   լուսանկարների ցանկը, որտեղ "/>
+                <LineBreak/><Run Text="փորձարկվողը  մկնիկի   օգնությամբ   պետք   է   նշի   այն   լուսանկարները   որոնք"/>
+                <LineBreak/><Run Text="հիշում  է ։  Փորձարկվողը    այդպես   կարող   է   անցնել  10  փուլ։  Լուսանկարների"/>
+                <LineBreak/><Run Text="քանակը  սկսվում  2-ից  և  ամեն  փուլում  երկուսով  ավելանում  է ։  Փորձարկվողը"/>
+                <LineBreak/><Run Text="պետք  է   փորձի   անցնել   առավելագույն   փուլեր,   որքան   կկարողանա։"/>
+                <LineBreak/><Run Text="  Եթե  որևէ   փուլում   փորձարկվողը   պատահաբար  կամ  միտումնավոր  սեղմել է " Foreground="#FF930000"/>
+                <LineBreak/><Run Text="սխալ  լուսանկար,  թեստը   ավարտվում  է  և  ցույց  է  տալիս  այն  լուսանկարները," Foreground="#FF930000"/>
+                <LineBreak/><Run Text="որոնք չեն նշվել։" Foreground="#FF930000"/> <Run Text=" Փորձարկվողն  ունի 1  րոպե  ժամանակ  տեսնելու  իր  սխալները։"/>
+                <LineBreak/><Run Text=" 1   րոպե    անց    ավտոմատ    բացվում  է   արդյունքների  էջը։  Եթե  փորձարկվողը "/>
+                <LineBreak/><Run Text="ուզում   է   տեսնել    արդյունքները   1   րոպեից   շուտ,    այդ    դեպքում   սեղմում  է "/>
+                <LineBreak/><Run Text=" (Ավարտել  թեստը  և   տեսնել   արդյունքները)   կոճակը,   որտեղ   ցույց   է   տալիս"/>
+                <LineBreak/><Run Text="փորձարկվողի    տեսողական     հիշողության     զարգացվածության     աստիճանը"/>
+                <LineBreak/><Run Text="տոկոսային    հարաբերությամբ։"/>
+                </TextBlock>
+            </ScrollViewer>
         </Viewbox>
     </Grid>
 </Page>
