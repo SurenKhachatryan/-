@@ -1235,7 +1235,6 @@ namespace M.B.N.G.B.T.VisualMemoryTest
                         PicYes2_48.Visibility = Visibility.Visible;
                         break;
                 }
-
             }
         }
     }
