@@ -25,7 +25,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
             InitializeComponent();
         }
 
-        private void Button_Exit_the_Main(object sender, RoutedEventArgs e)
+        private void Button_Exit_The_Main(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(null);
         }

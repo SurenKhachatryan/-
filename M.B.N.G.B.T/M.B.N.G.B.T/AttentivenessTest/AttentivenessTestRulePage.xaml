@@ -14,46 +14,53 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="49*"/>
-            <RowDefinition Height="68*"/>
-            <RowDefinition Height="12*"/>
-            <RowDefinition Height="518*"/>
-            <RowDefinition Height="19*"/>
-            <RowDefinition Height="35*"/>
-            <RowDefinition Height="79*"/>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="459*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="78*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="67*"/>
-            <ColumnDefinition Width="1167*"/>
-            <ColumnDefinition Width="66*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="185*"/>
+            <ColumnDefinition Width="789*"/>
+            <ColumnDefinition Width="185*"/>
+            <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
 
-
-        <Viewbox Margin="99,5,61,6" Grid.Column="1" Grid.Row="1">
-            <TextBlock FontSize="38" Foreground="White"  TextWrapping="Wrap" >
-            <Run  Text="ՈՒշադրության թեստ"/></TextBlock>
+        <Viewbox  VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="5">
+            <Label Content="ՈՒշադրության թեստ" FontSize="48" Foreground="Snow"  FontFamily="Sylfaen"  Height="80" Width="481"/>
         </Viewbox>
 
-        <Viewbox Margin="0,0,0,0"  Grid.Column="1" Grid.Row="3" RenderTransformOrigin="0,0">
-            <Viewbox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.315"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Viewbox.RenderTransform>
-            <ScrollViewer  Height="490"  >
-                <ScrollViewer.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleX="0.463"/>
-                        <RotateTransform/>
-                        <TranslateTransform X="1.829"/>
-                    </TransformGroup>
-                </ScrollViewer.RenderTransform>
-                <TextBlock FontSize="28" Foreground="White" Grid.ColumnSpan="3" Grid.Column="1" FontFamily="Sylfaen" >
-                   <Run Text="Ծրագիրը պատահականության սկզբունքով տալիս է 10 բառ  փորձարկվողին։ "/>
+
+        <Viewbox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left">
+            <Button Click="Button_Exit_The_Main" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Width="185" Height="36" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
+
+        <Viewbox Grid.Row="5" Grid.Column="3" HorizontalAlignment="Right" >
+            <Button Click="Button_Start_Test" Content="Սկսել Թեստը" FontSize="20" Width="185" Height="36" FontFamily="Sylfaen"  Foreground="White" Cursor="Hand">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
+
+        <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3">
+            <ScrollViewer  Width="1160" Height="459">
+                <TextBlock TextWrapping="Wrap"  Foreground="Snow" FontSize="30" FontFamily="Sylfaen">
+                           <Run Text="Ծրագիրը պատահականության սկզբունքով տալիս է 10 բառ  փորձարկվողին։ "/>
                     <LineBreak/><Run Text="Փորձարկվողը ուշադիր կարդում է բարձրաձայն այդ 10 բառերը, փորձելով հիշել: "/>
                     <LineBreak/><Run Text="Հետո փորձարկվողը սեղմում է (Սկսել թեստը) կոճակը: 10 բառերն անհետանում "/>
                     <LineBreak/><Run Text="են և ակտիվանում է գրելու դաշտը, որտեղ գրում է այն բառերը, որոնք հիշում է : "/>
@@ -99,28 +106,6 @@
                     <LineBreak/><Run Text=" զարգացած չէ:"/>
                 </TextBlock>
             </ScrollViewer>
-        </Viewbox>
-
-        <Viewbox Grid.Row="5" Margin="13,1,0,0" Grid.Column="1" Width="177" HorizontalAlignment="Left">
-            <Button x:Name="button1" Click="Button_Exit_the_Main" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Width="177">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="1"/>
-                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-        </Viewbox>
-
-        <Viewbox VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" Margin="0,0,4,0" HorizontalAlignment="Right" Width="147">
-            <Button x:Name="button2" Click="Button_Start_Test" Content="Սկսել Թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" Width="147" >
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="1"/>
-                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
         </Viewbox>
 
     </Grid>
