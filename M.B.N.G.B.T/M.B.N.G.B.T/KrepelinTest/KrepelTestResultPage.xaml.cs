@@ -49,12 +49,12 @@ namespace M.B.N.G.B.T.KrepelTest
                 label1.Content = "K-աշխ․ = 0";
         }
 
-        private void button_Click_try_again(object sender, RoutedEventArgs e)
+        private void Button_Click_Try_Again(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new KrepelinTestRulePage());
         }
 
-        private void button_Click_Exit_Main(object sender, RoutedEventArgs e)
+        private void Button_Click_Exit_Main(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(null);
         }

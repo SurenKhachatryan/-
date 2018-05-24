@@ -14,19 +14,19 @@ namespace M.B.N.G.B.T.Schulte_Test
     /// </summary>
     public partial class SchulteTestTablePage3 : Page
     {
-        private List<int> lsRndDigite = new List<int>();
-        private List<int> listClickMistakesButtons = new List<int>();
-        private List<int> listIntervalClickButtons = new List<int>();
+        private List<int> lsRndDigite { get; set; } = new List<int>();
+        private List<int> listClickMistakesButtons { get; set; } = new List<int>();
+        private List<int> listIntervalClickButtons { get; set; } = new List<int>();
 
         private Random rnd = new Random();
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
-        public static byte stage = 1;
+        public static byte stage { get; set; } = 1;
 
-        private byte second = 0;
-        private byte counterButtonClick;
-        private byte secondForBrushNullButtons = 0;
+        private byte second { get; set; } = 0;
+        private byte counterButtonClick { get; set; } = 0;
+        private byte secondForBrushNullButtons { get; set; } = 0;
 
 
         public SchulteTestTablePage3()
@@ -65,7 +65,7 @@ namespace M.B.N.G.B.T.Schulte_Test
             }
         }
 
-        private void button_Click_Result(object sender, RoutedEventArgs e)
+        private void Button_Exit_The_Test_View_Result(object sender, RoutedEventArgs e)
         {
             dispatcherTimer.Stop();
             NavigationService.Navigate(new SchulteTestResultPage());

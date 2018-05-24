@@ -14,12 +14,12 @@ namespace M.B.N.G.B.T.Schulte_Test
             InitializeComponent();
         }
 
-        private void button_Click_try_again(object sender, RoutedEventArgs e)
+        private void Button_Click_Try_Again(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new SchulteTestRulePage());
         }
 
-        private void button_Click_Exit_Main(object sender, RoutedEventArgs e)
+        private void Button_Click_Exit_Main(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(null);
         }

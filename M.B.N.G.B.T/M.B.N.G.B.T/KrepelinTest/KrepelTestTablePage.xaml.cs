@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -44,7 +43,7 @@ namespace M.B.N.G.B.T.KrepelTest
             dispatcherTimer.Start();
         }
 
-        private void button_Click_Result(object sender, RoutedEventArgs e)
+        private void Button_Exit_The_Test_View_Result(object sender, RoutedEventArgs e)
         {
             arrAllStageRightAnswers[stage - 1] = new int[1];
             arrAllStageWrongAnswers[stage - 1] = new int[1];
@@ -134,17 +133,17 @@ namespace M.B.N.G.B.T.KrepelTest
 
         private void Initializator()
         {
-            int tamp = 0;
+            int temp = 0;
             LableCalculatingDown.Content = $" {rnd.Next(1, 10)}";
             if (_operator == " -")
             {
                 do
                 {
-                    tamp = rnd.Next(1, 21);
-                    if (tamp < 10)
-                        LableCalculatingUp.Content = $" {tamp}";
+                    temp = rnd.Next(1, 21);
+                    if (temp < 10)
+                        LableCalculatingUp.Content = $" {temp}";
                     else
-                        LableCalculatingUp.Content = $"{tamp}";
+                        LableCalculatingUp.Content = $"{temp}";
                 } while (((Convert.ToInt32(LableCalculatingUp.Content) - Convert.ToInt32(LableCalculatingDown.Content)) % 10) < 1);
             }
             else

@@ -6,77 +6,80 @@
       xmlns:local="clr-namespace:M.B.N.G.B.T.V.L.Marshukov_Test"
       mc:Ignorable="d" 
       d:DesignHeight="780" d:DesignWidth="1300"
-      Title="MarshukTestRulePage"> 
-    
+      Title="MarshukTestRulePage">
+
     <Page.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>
     </Page.Background>
-    
+
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="320*"/>
-            <RowDefinition Height="17*"/>
-            <RowDefinition Height="53*"/>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="459*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="78*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="25*"/>
-            <ColumnDefinition Width="99*"/>
-            <ColumnDefinition Width="834"/>
-            <ColumnDefinition Width="86*"/>
-            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="185*"/>
+            <ColumnDefinition Width="789*"/>
+            <ColumnDefinition Width="185*"/>
+            <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
+        <Viewbox  VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="5">
+            <Label Content="Վ․Լ․Մարշուկի Թեստ" FontSize="48" Foreground="Snow"  FontFamily="Sylfaen"  Height="80" Width="472"/>
+        </Viewbox>
 
-        <TextBlock FontSize="38" Foreground="White" Margin="99,54,61,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="68" Grid.ColumnSpan="3" Grid.Column="1">
-            <Run  Text="                          Վ․Լ․Մարշուկի Թեստ"/></TextBlock>
-        <ScrollViewer Margin="15,116,42,12" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Grid.Column="1">
-            <ScrollViewer.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="0.463"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="1.829"/>
-                </TransformGroup>
-            </ScrollViewer.RenderTransform>
-            <TextBlock FontSize="28" Foreground="White" Grid.ColumnSpan="3" Grid.Column="1" Width="1114" Height="512">
-              <Run Text="         Ուշադրության որոշման թեստ՝ Վ․Լ․Մարշուկի թեստ"/>
-              <LineBreak/>
-              <Run Text="         /Շուլտեի աղյուսակների մոդիֆիկացված տարբերակ/"/>
-              <LineBreak/>
-              <Run Text="Օգտագործվում է ուշադրությունը որոշելու համար։"/>
-              <LineBreak/>
-              <Run Text="Ձեզ տրվում է 5*5 աղյուսակներ , որտեղ պանահական հերթականությամբ"/>
-              <LineBreak/>
-              <Run Text="գրված են 1-40 թվեր և բացակայում են 15 թվեր։"/>
-                <LineBreak/>
-                <LineBreak/>
-              <Run Text="Հրահանգավորում" TextDecorations="Underline" FontWeight="Bold"/>
-                <LineBreak/>
-              <Run Text="Ուշադիր նայեք աղյուսակների թվերին և աղյուսակների ներգևում տրված"/>
-                   <LineBreak/>
-              <Run Text="հատվածում հաջորդաբար լրացնել 1-40 այն թվերը , որոնք բացակայում են"/>
-                   <LineBreak/>
-              <Run Text="աղյուսակուներում։"/>
-              <Run Text="Բացակայող թվի բացթողումը համարվում է սխալ։" FontWeight="Bold" Foreground="#FF800505" TextDecorations="Underline"/>
-            </TextBlock>
-            
-        </ScrollViewer>
-        
-        <Button x:Name="button1" Click="Button_Click" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Height="35" VerticalAlignment="Top" Grid.Row="1" Margin="0,0,832,0" HorizontalAlignment="Right" Width="185" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="1">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+        <Viewbox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left">
+            <Button Click="Button_Exit_The_Main" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Width="185" Height="36" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
 
-        <Button x:Name="button2" Click="button2_Click" Content="Սկսել Թեստը" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" HorizontalAlignment="Left" Width="147" Height="35" VerticalAlignment="Top" Grid.Column="3" Grid.Row="1" Margin="1,0,0,0" Grid.RowSpan="2">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+        <Viewbox Grid.Row="5" Grid.Column="3" HorizontalAlignment="Right" >
+            <Button Click="Button_Start_Test" Content="Սկսել Թեստը" FontSize="20" Width="185" Height="36" FontFamily="Sylfaen"  Foreground="White" Cursor="Hand">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
+
+        <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3">
+            <ScrollViewer  Width="1160" Height="459">
+                <TextBlock TextWrapping="Wrap"  Foreground="Snow" FontSize="30" FontFamily="Sylfaen">
+                  <Run Text="         Ուշադրության որոշման թեստ՝ Վ․Լ․Մարշուկի թեստ"/>
+                  <LineBreak/>
+                  <Run Text="         /Շուլտեի աղյուսակների մոդիֆիկացված տարբերակ/"/>
+                  <LineBreak/>
+                  <Run Text="Օգտագործվում է ուշադրությունը որոշելու համար։"/>
+                  <LineBreak/>
+                  <Run Text="Ձեզ տրվում է 5*5 աղյուսակներ , որտեղ պանահական հերթականությամբ"/>
+                  <LineBreak/>
+                  <Run Text="գրված են 1-40 թվեր և բացակայում են 15 թվեր։"/>
+                  <LineBreak/>
+                  <LineBreak/>
+                  <Run Text="Հրահանգավորում" TextDecorations="Underline" FontWeight="Bold"/>
+                  <LineBreak/>
+                  <Run Text="Ուշադիր նայեք աղյուսակների թվերին և աղյուսակների ներգևում տրված"/>
+                  <LineBreak/>
+                  <Run Text="հատվածում հաջորդաբար լրացնել 1-40 այն թվերը , որոնք բացակայում են"/>
+                  <LineBreak/>
+                  <Run Text="աղյուսակուներում։"/>
+                  <Run Text="Բացակայող թվի բացթողումը համարվում է սխալ։" FontWeight="Bold" Foreground="#FF800505" TextDecorations="Underline"/>
+                </TextBlock>
+            </ScrollViewer>
+        </Viewbox>
+
     </Grid>
 </Page>

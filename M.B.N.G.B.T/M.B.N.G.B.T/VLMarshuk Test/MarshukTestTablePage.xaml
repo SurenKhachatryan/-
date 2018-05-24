@@ -31,21 +31,21 @@
             <ColumnDefinition Width="308*"/>
             <ColumnDefinition Width="30*"/>
             <ColumnDefinition Width="13*"/>
-            <ColumnDefinition Width="19*"/>
-            <ColumnDefinition Width="500*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="505*"/>
             <ColumnDefinition Width="32*"/>
             <ColumnDefinition Width="10*"/>
             <ColumnDefinition Width="202*"/>
             <ColumnDefinition Width="17*"/>
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
-        
-        <Viewbox Grid.Column="9" Grid.Row="3" Grid.RowSpan="2">
-            <Label x:Name="startStage" FontSize="120" Content="1/5" Foreground="White"  Height="159"  Width="202" />
+
+        <Viewbox Grid.Column="9" Grid.Row="3" Grid.RowSpan="2" HorizontalAlignment="Right">
+            <Label x:Name="startStage" FontSize="120" Content="1/5" Foreground="White"  FontFamily="Sylfaen" Height="159"  Width="202" />
         </Viewbox>
 
-        <Viewbox Grid.Column="9" Grid.Row="1" Grid.RowSpan="3">
-            <Label x:Name="timer" FontSize="100" Content="0:00" Foreground="White"  Height="126"  Width="202" />
+        <Viewbox Grid.Column="9" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Right">
+            <Label x:Name="timer" FontSize="100" Content="0:00" Foreground="White" FontFamily="Sylfaen"  Height="126"  Width="202" />
         </Viewbox>
         <Viewbox Grid.Row="1" Grid.Column="5" Grid.RowSpan="6" Grid.ColumnSpan="2">
             <WrapPanel Width="520" >
@@ -106,8 +106,8 @@
             </WrapPanel>
         </Viewbox>
 
-        <Viewbox Grid.Row="9" Grid.ColumnSpan="5" Grid.Column="1" >
-            <Button x:Name="buttonClickResult" Click="button_Click_Result" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20" Height="36" FontFamily="Jokerman"  Foreground="White" Cursor="Hand"  Width="399">
+        <Viewbox Grid.Row="9" Grid.ColumnSpan="5" Grid.Column="1" HorizontalAlignment="Left">
+            <Button x:Name="buttonClickResult" Click="button_Click_Result" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20" Height="36" FontFamily="Sylfaen"  Foreground="White" Cursor="Hand"  Width="394">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -117,8 +117,8 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Row="9" Grid.Column="9" Grid.ColumnSpan="2">
-            <Button x:Name="buttonNextStage" Click="ButtonNextStage" Content="Անցնել հաջորդ փուլ" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand"  Height="36" Width="219">
+        <Viewbox Grid.Row="9" Grid.Column="9" Grid.ColumnSpan="2" HorizontalAlignment="Right">
+            <Button x:Name="buttonNextStage" Click="ButtonNextStage" Content="Անցնել հաջորդ փուլ" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand"  Height="36" Width="219">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -128,7 +128,7 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Margin="0,0,0,0" Grid.Row="1" Grid.RowSpan="7" Grid.ColumnSpan="3" Grid.Column="1">
+        <Viewbox Grid.Row="1" Grid.RowSpan="7" Grid.ColumnSpan="3" Grid.Column="1">
             <Rectangle  Stroke="{x:Null}"  Width="367" Height="507" >
                 <Rectangle.Fill>
                     <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Bloknot.png"/>

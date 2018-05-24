@@ -25,7 +25,7 @@ namespace M.B.N.G.B.T.TestEclecticAttention
             InitializeComponent();
         }
 
-        private void button_Click_Result(object sender, RoutedEventArgs e)
+        private void Button_Exit_The_Test_View_Result(object sender, RoutedEventArgs e)
         {
 
         }

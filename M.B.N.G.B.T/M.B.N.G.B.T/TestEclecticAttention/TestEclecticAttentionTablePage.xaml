@@ -13,19 +13,27 @@
     </Page.Background>
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="111*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="13*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="63*"/>
-            <ColumnDefinition Width="1237*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="197*"/>
+            <ColumnDefinition Width="418*"/>
         </Grid.ColumnDefinitions>
 
-        <Button x:Name="button0" Click="button_Click_Result" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Margin="13,0,0,69" HorizontalAlignment="Left" Width="399" Height="36" VerticalAlignment="Bottom" Grid.Column="1">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+        <Viewbox Grid.Row="1" Grid.Column="1">
+            <Button x:Name="buttonClickResult" Click="Button_Exit_The_Test_View_Result" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand"  Width="394" Height="36">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
 
     </Grid>
 </Page>

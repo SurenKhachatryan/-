@@ -25,12 +25,12 @@ namespace M.B.N.G.B.T.TestEclecticAttention
             InitializeComponent();
         }
 
-        private void button_Click_try_again(object sender, RoutedEventArgs e)
+        private void Button_Click_Try_Again(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void button_Click_Exit_Main(object sender, RoutedEventArgs e)
+        private void Button_Click_Exit_Main(object sender, RoutedEventArgs e)
         {
 
         }

@@ -15,12 +15,12 @@ namespace M.B.N.G.B.T.V.L.Marshukov_Test
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Exit_The_Main(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(null);
         }
 
-        private void button2_Click(object sender, RoutedEventArgs e)
+        private void Button_Start_Test(object sender, RoutedEventArgs e)
         {
             MarshukTestTablePage.arrAllStageRandomDigits = new int[5][];
             MarshukTestTablePage.arrAllStageDigitsInTextBox = new int[5][];

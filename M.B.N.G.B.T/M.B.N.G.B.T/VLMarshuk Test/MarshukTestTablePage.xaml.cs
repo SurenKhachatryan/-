@@ -16,20 +16,20 @@ namespace M.B.N.G.B.T.V.L.Marshuk_Test
     {
         private List<int> lsRndDigite = new List<int>();
 
-        public static int[][] arrAllStageRandomDigits = new int[5][];
-        public static int[][] arrAllStageDigitsInTextBox = new int[5][];
-        public static int[][] arrAllStageRightNumbers = new int[5][];
-        public static int[][] arrAllStageAbsentNumbers = new int[5][];
-        public static int[][] arrAllStageExtraNumbers = new int[5][];
+        public static int[][] arrAllStageRandomDigits { get; set; } = new int[5][];
+        public static int[][] arrAllStageDigitsInTextBox { get; set; } = new int[5][];
+        public static int[][] arrAllStageRightNumbers { get; set; } = new int[5][];
+        public static int[][] arrAllStageAbsentNumbers { get; set; } = new int[5][];
+        public static int[][] arrAllStageExtraNumbers { get; set; } = new int[5][];
 
         private Random rnd = new Random();
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
-        public static byte stage = 1;
+        public static byte stage { get; set; } = 1;
 
-        private int second = 0;
-        private int minute = 0;
+        private int second { get; set; } = 0;
+        private int minute { get; set; } = 0;
 
         public MarshukTestTablePage()
         {
