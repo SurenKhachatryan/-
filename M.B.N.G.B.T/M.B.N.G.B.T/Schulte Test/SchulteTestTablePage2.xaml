@@ -10,7 +10,7 @@
     <Page.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>
     </Page.Background>
-    
+
     <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="114*"/>
@@ -22,21 +22,21 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="66*"/>
-            <ColumnDefinition Width="275*"/>
-            <ColumnDefinition Width="46*"/>
-            <ColumnDefinition Width="78*"/>
-            <ColumnDefinition Width="447*"/>
+            <ColumnDefinition Width="266*"/>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="452*"/>
             <ColumnDefinition Width="117*"/>
             <ColumnDefinition Width="200*"/>
             <ColumnDefinition Width="71*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox Grid.Row="1" Grid.Column="1">
-            <Label   x:Name="CounterMistakes" FontSize="120" Content="0" Foreground="White" Height="161" Width="266"/>
+        <Viewbox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left">
+            <Label   x:Name="CounterMistakes" FontSize="120" Content="0" Foreground="White" FontFamily="Sylfaen" Height="161" Width="266"/>
         </Viewbox>
 
-        <Viewbox Grid.Column="6" Grid.Row="1">
-            <Label x:Name="startStage" FontSize="120" Content="1/5" Foreground="White" Height="161" Width="200"  />
+        <Viewbox Grid.Column="6" Grid.Row="1" HorizontalAlignment="Right">
+            <Label x:Name="startStage" FontSize="120" Content="1/5" Foreground="White" FontFamily="Sylfaen" Height="161" Width="200"  />
         </Viewbox>
 
 
@@ -70,8 +70,8 @@
             </WrapPanel>
         </Viewbox>
 
-        <Viewbox Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="4">
-            <Button x:Name="button0" Click="button_Click_Result" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Width="399"  Height="36" >
+        <Viewbox Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left">
+            <Button x:Name="button0" Click="button_Click_Result" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Width="394"  Height="36" >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
