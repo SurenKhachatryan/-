@@ -15,27 +15,47 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="36*"/>
-            <RowDefinition Height="41*"/>
-            <RowDefinition Height="55*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="57*"/>
             <RowDefinition Height="59*"/>
             <RowDefinition Height="107*"/>
-            <RowDefinition Height="33*"/>
-            <RowDefinition Height="19*"/>
-            <RowDefinition Height="40*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="39*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="62*"/>
-            <ColumnDefinition Width="235*"/>
-            <ColumnDefinition Width="167*"/>
-            <ColumnDefinition Width="15*"/>
-            <ColumnDefinition Width="222*"/>
-            <ColumnDefinition Width="266*"/>
-            <ColumnDefinition Width="236*"/>
-            <ColumnDefinition Width="62*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="187*"/>
+            <ColumnDefinition Width="445*"/>
+            <ColumnDefinition Width="300*"/>
+            <ColumnDefinition Width="228*"/>
+            <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox  Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2">
-            <Button  x:Name="buttonExitTheTestViewResult" Click="Button_Exit_The_Test_View_Result" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Width="402" >
+        <Viewbox Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left">
+            <WrapPanel Width="632">
+                <Button  x:Name="buttonSeeWord" Click="Button_View_Word" Content="Սկսել թեստը"  FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="228" >
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="1"/>
+                            <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+
+                <Button Margin="10,0,0,0" x:Name="buttonExitTheTestViewResult" Click="Button_Exit_The_Test_View_Result" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="394" >
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="1"/>
+                            <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </WrapPanel>
+        </Viewbox>
+
+        <Viewbox Grid.Column="4" Grid.Row="6" HorizontalAlignment="Right" >
+            <Button x:Name="exitTheTest" Click="Exit_The_Test" Content="Դուրս գալ թեստից" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="228"  >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -45,39 +65,18 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Column="6" Margin="0,0,0,0" Grid.Row="6" >
-            <Button x:Name="exitTheTest" Click="Exit_The_Test" Content="Դուրս գալ թեստից" FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand" Width="228"  >
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="1"/>
-                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+        <Viewbox Margin="35,0,35,10" Grid.Row="3" Grid.ColumnSpan="4" Grid.Column="1"  VerticalAlignment="Bottom">
+            <Label x:Name="LabelWord" Content="{x:Null}" Grid.Column="1" FontSize="30" Height="98" Foreground="White" FontWeight="Bold" FontFamily="Sylfaen" />
         </Viewbox>
 
-        <Viewbox Grid.Row="6" Grid.Column="4">
-            <Button  x:Name="buttonSeeWord" Click="Button_View_Word" Content="Սկսել թեստը"  FontSize="20"  FontFamily="Jokerman"  Foreground="White" Cursor="Hand"  Width="228" >
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="1"/>
-                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-        </Viewbox>
-        <Viewbox Margin="37,10,46,10" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="6">
-            <Label x:Name="LabelWord" Content="{x:Null}" Grid.Column="1" FontSize="30" Foreground="White" FontWeight="Bold" FontFamily="Sylfaen" />
+        <TextBox x:Name="textBoxWords" Grid.Row="4" Margin="15,0,15,25" Grid.ColumnSpan="4"  Text="{x:Null}"  TextWrapping="Wrap" FontSize="20" Foreground="White" FontWeight="Bold" FontFamily="Sylfaen"  Background="#FF36573F" BorderBrush="#FF162A1D" PreviewMouseDoubleClick="textBoxWords_PreviewMouseDoubleClick" PreviewMouseRightButtonUp="textBoxWords_PreviewMouseRightButtonUp" PreviewTextInput="textBoxWords_PreviewTextInput" PreviewKeyDown="textBoxWords_PreviewKeyDown" PreviewMouseLeftButtonUp="textBoxWords_PreviewMouseLeftButtonUp" Grid.Column="1" Height="165" VerticalAlignment="Bottom"  />
+
+        <Viewbox  Grid.Row="1" HorizontalAlignment="Left"  Grid.Column="1">
+            <Label x:Name="LableTryAgein" Content="Փորձ 4"  FontSize="50" Foreground="White" Width="187" FontFamily="Sylfaen" FontWeight="Bold" />
         </Viewbox>
 
-        <TextBox x:Name="textBoxWords"  Grid.Column="1" Grid.Row="4" Margin="37,24,46,25" Grid.ColumnSpan="6"  Text="{x:Null}"  TextWrapping="Wrap" FontSize="20" Foreground="White" FontWeight="Bold" FontFamily="Sylfaen"  Background="#FF36573F" BorderBrush="#FF162A1D" PreviewMouseDoubleClick="textBoxWords_PreviewMouseDoubleClick" PreviewMouseRightButtonUp="textBoxWords_PreviewMouseRightButtonUp" PreviewTextInput="textBoxWords_PreviewTextInput" PreviewKeyDown="textBoxWords_PreviewKeyDown" PreviewMouseLeftButtonUp="textBoxWords_PreviewMouseLeftButtonUp"  />
-
-        <Viewbox  Margin="0,0,0,0" Grid.Column="1" RenderTransformOrigin="0.56,0.545" Grid.Row="1">
-            <Label x:Name="LableTryAgein" Content="Փորձ 1"  FontSize="50" Foreground="White" FontFamily="Sylfaen" FontWeight="Bold" />
-        </Viewbox>
-
-        <Viewbox Grid.ColumnSpan="6" Margin="37,10,46,31" Grid.Column="1" Grid.Row="2">
-            <Label x:Name="LableInfo" Content="կարդացեք և փորձեք հիշել բառերը"  FontSize="45" Foreground="White" FontFamily="Sylfaen" FontWeight="Bold"  />
+        <Viewbox Grid.ColumnSpan="4" Margin="10,15,15,0" Grid.Row="2" Grid.Column="1"  VerticalAlignment="Top">
+            <Label x:Name="LableInfo" Content="կարդացեք և փորձեք հիշել բառերը"  FontSize="45" Height="89" Foreground="White" FontFamily="Sylfaen" FontWeight="Bold"  />
         </Viewbox>
 
     </Grid>
