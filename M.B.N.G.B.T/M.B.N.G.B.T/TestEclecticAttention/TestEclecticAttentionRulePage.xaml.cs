@@ -32,7 +32,7 @@ namespace M.B.N.G.B.T.TestEclecticAttention
 
         private void Button_Start_Test(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new TestEclecticAttentionTablePage());
         }
     }
 }

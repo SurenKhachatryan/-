@@ -93,7 +93,7 @@
         </Viewbox>
 
         <Viewbox Grid.Row="13" Grid.Column="1" HorizontalAlignment="Left">
-            <Button x:Name="buttonTestEclecticAttention" IsEnabled="False" Click="Button_Test_Eclectic_Attention" Content="Ընտրության ուշադրության Թեստ" FontSize="16"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White"  Height="35"  Width="263">
+            <Button x:Name="buttonTestEclecticAttention" IsEnabled="True" Click="Button_Test_Eclectic_Attention" Content="Ընտրության ուշադրության Թեստ" FontSize="16"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White"  Height="35"  Width="263">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
