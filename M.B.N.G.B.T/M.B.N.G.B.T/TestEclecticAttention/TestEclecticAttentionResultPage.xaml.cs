@@ -27,12 +27,12 @@ namespace M.B.N.G.B.T.TestEclecticAttention
 
         private void Button_Click_Try_Again(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new TestEclecticAttentionRulePage());
         }
 
         private void Button_Click_Exit_Main(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(null);
         }
     }
 }

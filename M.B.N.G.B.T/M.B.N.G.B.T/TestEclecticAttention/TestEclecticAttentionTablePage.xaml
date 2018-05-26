@@ -46,11 +46,11 @@
         </Viewbox>
 
         <Viewbox Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="3">
-            <Label Content="Գտնել հետևյալ թվերը ներքևում տրված ցանկում և նշել մկիկի օգնությամբ"  FontFamily="Sylfaen" FontSize="31" Foreground="Snow"  Height="62"/>
+            <Label Content="Գտնել հետևյալ թվերը ներքևում տրված ցանկում և նշել մկնիկի օգնությամբ"  FontFamily="Sylfaen" FontSize="31" Foreground="Snow"  Height="62"/>
         </Viewbox>
 
-        <Viewbox x:Name="LabelTrueNumbers" Grid.ColumnSpan="7" Grid.Column="1" Grid.Row="4">
-            <Label Content="999   999   999   999   999   999   999   999   999   999" Foreground="Snow" FontFamily="Sylfaen" FontSize="31" Height="62"/>
+        <Viewbox Grid.ColumnSpan="7" Grid.Column="1" Grid.Row="4">
+            <Label x:Name="LabelTrueNumbers" Content="999   999   999   999   999   999   999   999   999   999" Foreground="Snow" FontFamily="Sylfaen" FontSize="31" Height="62"/>
         </Viewbox>
 
         <Viewbox Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Left">
@@ -65,7 +65,7 @@
         </Viewbox>
 
         <Viewbox Grid.Column="5" Grid.Row="8" Grid.ColumnSpan="3" HorizontalAlignment="Right">
-            <Button  x:Name="buttonViewResult" Visibility="Collapsed" Click="Button_View_Result" Content="Տեսնել արձյունքները" FontSize="20" Width="223" Height="36"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand">
+            <Button  x:Name="buttonViewResult" Visibility="Collapsed" Click="Button_View_Result" Content="Տեսնել արդյունքները" FontSize="20" Width="223" Height="36"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>

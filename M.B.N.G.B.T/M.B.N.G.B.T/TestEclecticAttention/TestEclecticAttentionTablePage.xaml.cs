@@ -1,18 +1,11 @@
 ﻿using ClassLibrary;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 
 namespace M.B.N.G.B.T.TestEclecticAttention
@@ -24,6 +17,7 @@ namespace M.B.N.G.B.T.TestEclecticAttention
 
         private Label[] arrAllLabels { get; set; } = new Label[105];
         private List<int> listAllLabelsContent { get; set; } = new List<int>();
+        private List<int> listTrueNumbers { get; set; } = new List<int>();
 
         private byte counterVibronicNumbers { get; set; } = 0;
         private int second { get; set; } = 0;
@@ -34,16 +28,19 @@ namespace M.B.N.G.B.T.TestEclecticAttention
             InitializeLabels();
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
             dispatcherTimer.Start();
+
         }
 
         private void Button_View_Result(object sender, RoutedEventArgs e)
         {
             dispatcherTimer.Stop();
+            NavigationService.Navigate(new TestEclecticAttentionResultPage());
         }
 
         private void Button_Exit_The_Test(object sender, RoutedEventArgs e)
         {
             dispatcherTimer.Stop();
+            NavigationService.Navigate(new TestEclecticAttentionRulePage());
         }
 
         private void LabelNumberAll_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -60,6 +57,7 @@ namespace M.B.N.G.B.T.TestEclecticAttention
                 dispatcherTimer.Stop();
                 LabelVibronicNumbers.Foreground = Brushes.Red;
                 Timer.Foreground = Brushes.Red;
+                buttonExitTheTest.Visibility = Visibility.Collapsed;
             }
         }
 
@@ -103,6 +101,14 @@ namespace M.B.N.G.B.T.TestEclecticAttention
                     i--;
                 }
             }
+            LabelTrueNumbers.Content = "";
+            for (int i = 0; i < 10; i++)
+            {
+                temp = (int)arrAllLabels[rnd.Next(1, 105)].Content;
+                listTrueNumbers.Add(temp);
+                LabelTrueNumbers.Content += $"{temp}   ";
+            }
+
         }
 
         private void LabelNumberAll_MouseEnter(object sender, MouseEventArgs e)
