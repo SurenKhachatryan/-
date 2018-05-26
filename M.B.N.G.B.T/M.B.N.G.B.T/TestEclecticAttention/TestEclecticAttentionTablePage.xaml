@@ -16,9 +16,9 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="60*"/>
             <RowDefinition Height="84*"/>
-            <RowDefinition Height="13*"/>
+            <RowDefinition Height="19*"/>
             <RowDefinition Height="62*"/>
-            <RowDefinition Height="62*"/>
+            <RowDefinition Height="56*"/>
             <RowDefinition Height="19*"/>
             <RowDefinition Height="344*"/>
             <RowDefinition Height="22*"/>
@@ -30,9 +30,11 @@
             <ColumnDefinition Width="28*"/>
             <ColumnDefinition Width="138*"/>
             <ColumnDefinition Width="28*"/>
-            <ColumnDefinition Width="743*"/>
-            <ColumnDefinition Width="79*"/>
-            <ColumnDefinition Width="117*"/>
+            <ColumnDefinition Width="77*"/>
+            <ColumnDefinition Width="282*"/>
+            <ColumnDefinition Width="336*"/>
+            <ColumnDefinition Width="48*"/>
+            <ColumnDefinition Width="196*"/>
             <ColumnDefinition Width="27*"/>
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
@@ -41,19 +43,33 @@
             <Label x:Name="Timer" Content="0 վ"  FontFamily="Sylfaen" FontSize="55" Foreground="Snow" Height="84" Width="166"/>
         </Viewbox>
 
-        <Viewbox Grid.Column="6" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Right" >
-            <Label x:Name="LabelVibronicNumbers" Content="0/10"  FontFamily="Sylfaen" FontSize="55" Foreground="Snow" Height="84" Width="144"/>
+        <Viewbox Grid.Column="6" Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Right">
+            <WrapPanel Width="607" Height="84">
+                <Label x:Name="LabelVibronicFalseNumbers" Margin="0,0,9,0" Content="Սխալ 0/10"  FontFamily="Sylfaen" FontSize="55" Foreground="Snow" Height="84" Width="309"/>
+                <Label x:Name="LabelVibronicTrueNumbers" Content="Ճիշտ 0/10"  FontFamily="Sylfaen" FontSize="55" Foreground="Snow" Height="84" Width="289"/>
+            </WrapPanel>
         </Viewbox>
 
-        <Viewbox Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="3">
+        <Viewbox Grid.Column="1" Grid.ColumnSpan="9" Grid.Row="3">
             <Label Content="Գտնել հետևյալ թվերը ներքևում տրված ցանկում և նշել մկնիկի օգնությամբ"  FontFamily="Sylfaen" FontSize="31" Foreground="Snow"  Height="62"/>
         </Viewbox>
 
-        <Viewbox Grid.ColumnSpan="7" Grid.Column="1" Grid.Row="4">
-            <Label x:Name="LabelTrueNumbers" Content="999   999   999   999   999   999   999   999   999   999" Foreground="Snow" FontFamily="Sylfaen" FontSize="31" Height="62"/>
+        <Viewbox Grid.Column="5" Grid.Row="4" Grid.ColumnSpan="2">
+            <WrapPanel Width="620"  Height="56">
+                <Label Margin="0,0,6,0" x:Name="LabelTrueNumber1" Content="999" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"/>
+                <Label Margin="0,0,6,0" x:Name="LabelTrueNumber2" Content="999" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"/>
+                <Label Margin="0,0,6,0" x:Name="LabelTrueNumber3" Content="999" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"/>
+                <Label Margin="0,0,6,0" x:Name="LabelTrueNumber4" Content="999" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"/>
+                <Label Margin="0,0,6,0" x:Name="LabelTrueNumber5" Content="999" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"/>
+                <Label Margin="0,0,6,0" x:Name="LabelTrueNumber6" Content="999" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"/>
+                <Label Margin="0,0,6,0" x:Name="LabelTrueNumber7" Content="999" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"/>
+                <Label Margin="0,0,6,0" x:Name="LabelTrueNumber8" Content="999" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"/>
+                <Label Margin="0,0,6,0" x:Name="LabelTrueNumber9" Content="999" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"/>
+                <Label Margin="0,0,0,0" x:Name="LabelTrueNumber10" Content="999" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"/>
+            </WrapPanel>
         </Viewbox>
 
-        <Viewbox Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Left">
+        <Viewbox Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Left" Width="194">
             <Button   x:Name="buttonExitTheTest" Click="Button_Exit_The_Test" Content="Դուրս գալ թեստից" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" HorizontalAlignment="Left" Height="36" Width="194">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -64,8 +80,8 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Column="5" Grid.Row="8" Grid.ColumnSpan="3" HorizontalAlignment="Right">
-            <Button  x:Name="buttonViewResult" Visibility="Collapsed" Click="Button_View_Result" Content="Տեսնել արդյունքները" FontSize="20" Width="223" Height="36"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand">
+        <Viewbox Grid.Column="8" Grid.Row="8" HorizontalAlignment="Right" Grid.ColumnSpan="2" Width="223">
+            <Button  x:Name="buttonViewResult" Visibility="Hidden" Click="Button_View_Result" Content="Տեսնել արդյունքները" FontSize="20" Width="223" Height="36"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -74,8 +90,8 @@
                 </Button.Background>
             </Button>
         </Viewbox>
-
-        <Viewbox Grid.Column="2" Grid.ColumnSpan="5" Grid.Row="6">
+      
+        <Viewbox Grid.Column="2" Grid.ColumnSpan="7" Grid.Row="6">
             <WrapPanel  Width="1105" Height="344">
                 <Label x:Name="LabelNumber1" Content="999" Margin="0,0,20,5" FontFamily="Sylfaen" Foreground="Snow" Cursor="Hand" FontSize="30" Height="43" Width="55" MouseEnter="LabelNumberAll_MouseEnter" MouseLeave="LabelNumberAll_MouseLeave" PreviewMouseLeftButtonUp="LabelNumberAll_PreviewMouseLeftButtonUp"/>
                 <Label x:Name="LabelNumber2" Content="999" Margin="0,0,20,5" FontFamily="Sylfaen" Foreground="Snow" Cursor="Hand" FontSize="30" Height="43" Width="55" MouseEnter="LabelNumberAll_MouseEnter" MouseLeave="LabelNumberAll_MouseLeave" PreviewMouseLeftButtonUp="LabelNumberAll_PreviewMouseLeftButtonUp"/>
@@ -184,6 +200,10 @@
                 <Label x:Name="LabelNumber105" Content="999" Margin="0,0,0,5" FontFamily="Sylfaen" Foreground="Snow" Cursor="Hand" FontSize="30" Height="43" Width="55" MouseEnter="LabelNumberAll_MouseEnter" MouseLeave="LabelNumberAll_MouseLeave" PreviewMouseLeftButtonUp="LabelNumberAll_PreviewMouseLeftButtonUp"/>
             </WrapPanel>
         </Viewbox>
-
+        <!--<WrapPanel>
+            <RadioButton Content="RadioButton" />
+            <RadioButton Content="RadioButton"/>
+            <RadioButton Content="RadioButton"/>
+        </WrapPanel>-->
     </Grid>
 </Page>

@@ -16,19 +16,32 @@ namespace M.B.N.G.B.T.TestEclecticAttention
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
         private Label[] arrAllLabels { get; set; } = new Label[105];
+        private Label[] arrAllLabelsTrueNumbers { get; set; } = new Label[10];
         private List<int> listAllLabelsContent { get; set; } = new List<int>();
-        private List<int> listTrueNumbers { get; set; } = new List<int>();
 
-        private byte counterVibronicNumbers { get; set; } = 0;
-        private int second { get; set; } = 0;
+        public static List<int> listVibronicTrueNumbers { get; private set; } = new List<int>();
+        public static List<int> listVibronicFalseNumbers { get; private set; } = new List<int>();
+        public static List<int> listTrueNumbers { get; private set; } = new List<int>();
+        public static byte counterVibronicaFalseNumbers { get; private set; } = 0;
+        public static int second { get; private set; } = 0;
+
+        private byte counterVibronicTrueNumbers { get; set; } = 0;
+        private int secondForBrushingLabels { get; set; } = 0;
 
         public TestEclecticAttentionTablePage()
         {
+            listVibronicTrueNumbers.Clear();
+            listVibronicFalseNumbers.Clear();
+            listTrueNumbers.Clear();
+            counterVibronicaFalseNumbers = 0;
+            second = 0;
+
             InitializeComponent();
+
             InitializeLabels();
+
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
             dispatcherTimer.Start();
-
         }
 
         private void Button_View_Result(object sender, RoutedEventArgs e)
@@ -45,19 +58,45 @@ namespace M.B.N.G.B.T.TestEclecticAttention
 
         private void LabelNumberAll_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-
-            LabelVibronicNumbers.Content = $"{++counterVibronicNumbers}/10";
-            if (counterVibronicNumbers == 10)
+            secondForBrushingLabels = 0;
+            if (cl.SerchMatchingNumberInArr(listTrueNumbers.ToArray(), Convert.ToInt32(((Label)sender).Content))
+                && !cl.SerchMatchingNumberInArr(listVibronicTrueNumbers.ToArray(), Convert.ToInt32(((Label)sender).Content)))
             {
-                buttonViewResult.Visibility = Visibility.Visible;
-                for (int i = 0; i < arrAllLabels.Length; i++)
+                listVibronicTrueNumbers.Add(Convert.ToInt32(((Label)sender).Content));
+                LabelVibronicTrueNumbers.Content = $"Ճիշտ {++counterVibronicTrueNumbers}/10";
+                LabelVibronicTrueNumbers.Foreground = Brushes.LightGreen;
+                if (counterVibronicTrueNumbers == 10)
                 {
-                    arrAllLabels[i].IsEnabled = false;
+                    for (int i = 0; i < arrAllLabels.Length; i++)
+                    {
+                        arrAllLabels[i].IsEnabled = false;
+                    }
+
+                    dispatcherTimer.Stop();
+                    Timer.Foreground = Brushes.Red;
+                    buttonExitTheTest.Visibility = Visibility.Collapsed;
+                    buttonViewResult.Visibility = Visibility.Visible;
                 }
-                dispatcherTimer.Stop();
-                LabelVibronicNumbers.Foreground = Brushes.Red;
-                Timer.Foreground = Brushes.Red;
-                buttonExitTheTest.Visibility = Visibility.Collapsed;
+                for (int i = 0; i < arrAllLabelsTrueNumbers.Length; i++)
+                {
+                    if (Convert.ToInt32(arrAllLabelsTrueNumbers[i].Content) == Convert.ToInt32(((Label)sender).Content))
+                    {
+                        arrAllLabelsTrueNumbers[i].Foreground = Brushes.LightGreen;
+                        i = arrAllLabelsTrueNumbers.Length;
+                    }
+                }
+            }
+            else
+            {
+                LabelVibronicFalseNumbers.Foreground = Brushes.Red;
+                LabelVibronicFalseNumbers.Content = $"Սխալ {++counterVibronicaFalseNumbers}/10";
+                BrushingLabels(((FrameworkElement)sender).Name, Brushes.Red);
+
+                if (counterVibronicaFalseNumbers == 10)
+                {
+                    dispatcherTimer.Stop();
+                    NavigationService.Navigate(new TestEclecticAttentionResultPage());
+                }
             }
         }
 
@@ -67,10 +106,16 @@ namespace M.B.N.G.B.T.TestEclecticAttention
             if (second == 999)
             {
                 dispatcherTimer.Stop();
+                NavigationService.Navigate(new TestEclecticAttentionRulePage());
+            }
+            if (secondForBrushingLabels == 2)
+            {
+                LabelVibronicFalseNumbers.Foreground = Brushes.Snow;
+                LabelVibronicTrueNumbers.Foreground = Brushes.Snow;
             }
             Timer.Content = (++second);
+            secondForBrushingLabels++;
         }
-
 
         private void InitializeLabels()
         {
@@ -88,6 +133,8 @@ namespace M.B.N.G.B.T.TestEclecticAttention
                                     LabelNumber91, LabelNumber92, LabelNumber93, LabelNumber94, LabelNumber95, LabelNumber96, LabelNumber97, LabelNumber98, LabelNumber99, LabelNumber100,
                                     LabelNumber101, LabelNumber102, LabelNumber103, LabelNumber104, LabelNumber105, };
 
+            arrAllLabelsTrueNumbers = new[] { LabelTrueNumber1, LabelTrueNumber2, LabelTrueNumber3, LabelTrueNumber4, LabelTrueNumber5, LabelTrueNumber6, LabelTrueNumber7, LabelTrueNumber8, LabelTrueNumber9, LabelTrueNumber10 };
+
             for (int i = 0; i < arrAllLabels.Length; i++)
             {
                 temp = rnd.Next(100, 1000);
@@ -97,39 +144,41 @@ namespace M.B.N.G.B.T.TestEclecticAttention
                     listAllLabelsContent.Add(temp);
                 }
                 else
-                {
                     i--;
-                }
             }
-            LabelTrueNumbers.Content = "";
+
             for (int i = 0; i < 10; i++)
             {
                 temp = (int)arrAllLabels[rnd.Next(1, 105)].Content;
-                listTrueNumbers.Add(temp);
-                LabelTrueNumbers.Content += $"{temp}   ";
+                if (!cl.SerchMatchingNumberInArr(listTrueNumbers.ToArray(), temp))
+                {
+                    listTrueNumbers.Add(temp);
+                    arrAllLabelsTrueNumbers[i].Content = temp;
+                }
+                else
+                    i--;
             }
-
         }
 
         private void LabelNumberAll_MouseEnter(object sender, MouseEventArgs e)
         {
-            for (int i = 0; i < arrAllLabels.Length; i++)
-            {
-                if (arrAllLabels[i].Name == ((FrameworkElement)sender).Name)
-                {
-                    arrAllLabels[i].Foreground = Brushes.YellowGreen;
-                    i = arrAllLabels.Length;
-                }
-            }
+            BrushingLabels(((FrameworkElement)sender).Name, Brushes.YellowGreen);
         }
 
         private void LabelNumberAll_MouseLeave(object sender, MouseEventArgs e)
         {
+            BrushingLabels(((FrameworkElement)sender).Name, Brushes.Snow);
+            LabelVibronicTrueNumbers.Foreground = Brushes.Snow;
+            LabelVibronicFalseNumbers.Foreground = Brushes.Snow;
+        }
+
+        private void BrushingLabels(string name, Brush color)
+        {
             for (int i = 0; i < arrAllLabels.Length; i++)
             {
-                if (arrAllLabels[i].Name == ((FrameworkElement)sender).Name)
+                if (arrAllLabels[i].Name == name)
                 {
-                    arrAllLabels[i].Foreground = Brushes.Snow;
+                    arrAllLabels[i].Foreground = color;
                     i = arrAllLabels.Length;
                 }
             }
