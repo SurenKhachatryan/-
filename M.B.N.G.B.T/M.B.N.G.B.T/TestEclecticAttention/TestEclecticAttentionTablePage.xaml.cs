@@ -24,6 +24,7 @@ namespace M.B.N.G.B.T.TestEclecticAttention
         public static List<int> listTrueNumbers { get; private set; } = new List<int>();
         public static byte counterVibronicaFalseNumbers { get; private set; } = 0;
         public static int second { get; private set; } = 0;
+        public static int chekedRadioButton { get; private set; } = 0;
 
         private byte counterVibronicTrueNumbers { get; set; } = 0;
         private int secondForBrushingLabels { get; set; } = 0;
@@ -34,6 +35,7 @@ namespace M.B.N.G.B.T.TestEclecticAttention
             listVibronicFalseNumbers.Clear();
             listTrueNumbers.Clear();
             counterVibronicaFalseNumbers = 0;
+            chekedRadioButton = 0;
             second = 0;
 
             InitializeComponent();
@@ -68,14 +70,13 @@ namespace M.B.N.G.B.T.TestEclecticAttention
                 if (counterVibronicTrueNumbers == 10)
                 {
                     for (int i = 0; i < arrAllLabels.Length; i++)
-                    {
                         arrAllLabels[i].IsEnabled = false;
-                    }
 
                     dispatcherTimer.Stop();
                     Timer.Foreground = Brushes.Red;
-                    buttonExitTheTest.Visibility = Visibility.Collapsed;
-                    buttonViewResult.Visibility = Visibility.Visible;
+                    AllLabels.Visibility = Visibility.Collapsed;
+                    LabelLastStep.Visibility = Visibility.Visible;
+                    viewBoxRadioButtonsLastStep.Visibility = Visibility.Visible;
                 }
                 for (int i = 0; i < arrAllLabelsTrueNumbers.Length; i++)
                 {
@@ -182,6 +183,24 @@ namespace M.B.N.G.B.T.TestEclecticAttention
                     i = arrAllLabels.Length;
                 }
             }
+        }
+
+        private void radioButton1_Checked(object sender, RoutedEventArgs e)
+        {
+            switch (((RadioButton)sender).Name)
+            {
+                case "radioButton1":
+                    chekedRadioButton = 1;
+                    break;
+                case "radioButton2":
+                    chekedRadioButton = 2;
+                    break;
+                case "radioButton3":
+                    chekedRadioButton = 3;
+                    break;
+            }
+            buttonViewResult.Visibility = Visibility.Visible;
+            buttonExitTheTest.Visibility = Visibility.Collapsed;
         }
     }
 }

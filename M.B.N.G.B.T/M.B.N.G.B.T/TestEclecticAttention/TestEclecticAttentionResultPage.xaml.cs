@@ -23,6 +23,46 @@ namespace M.B.N.G.B.T.TestEclecticAttention
         public TestEclecticAttentionResultPage()
         {
             InitializeComponent();
+            if (TestEclecticAttentionTablePage.counterVibronicaFalseNumbers == 10)
+            {
+                ViewboxResult1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                ViewboxResult2.Visibility = Visibility.Visible;
+                ViewboxResult3.Visibility = Visibility.Visible;
+                switch (TestEclecticAttentionTablePage.chekedRadioButton)
+                {
+                    case 1:
+                        LabelResult2.Content = "Ձեր աշխատանքային ոճը համակարգված է։";
+                        break;
+                    case 2:
+                        LabelResult2.Content = "Ձեր աշխատանքային ոճը օպտիմալ է։";
+                        break;
+                    case 3:
+                        LabelResult2.Content = "Ձեր աշխատանքային ոճը քաոսաին է։";
+                        break;
+                }
+                LabelResult3.Content += $"Ձեր ցուցանիշը  {TestEclecticAttentionTablePage.second} վրկ";
+                if (TestEclecticAttentionTablePage.second <= 100)
+                {
+                    LabelResult3.Content += ", որը համարվում է գերազանց ցուցանիշ։";
+                }
+                else
+                if(TestEclecticAttentionTablePage.second <= 150)
+                {
+                    LabelResult3.Content += ", որը համարվում է լավ ցուցանիշ։";
+                }
+                else
+                if (TestEclecticAttentionTablePage.second <= 211)
+                {
+                    LabelResult3.Content += ", որը համարվում է նորմալ ցուցանիշ։";
+                }
+                else
+                {
+                    LabelResult3.Content += ", որը համարվում է վատ ցուցանիշ, կարող եք կրկին \nփորցել ձեր ուժերը։";
+                }
+            }
         }
 
         private void Button_Click_Try_Again(object sender, RoutedEventArgs e)

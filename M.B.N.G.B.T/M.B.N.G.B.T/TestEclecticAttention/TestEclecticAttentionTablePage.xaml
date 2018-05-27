@@ -20,7 +20,10 @@
             <RowDefinition Height="62*"/>
             <RowDefinition Height="56*"/>
             <RowDefinition Height="19*"/>
-            <RowDefinition Height="344*"/>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="211*"/>
+            <RowDefinition Height="55*"/>
             <RowDefinition Height="22*"/>
             <RowDefinition Height="36*"/>
             <RowDefinition Height="78*"/>
@@ -39,8 +42,8 @@
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" >
-            <Label x:Name="Timer" Content="0 վ"  FontFamily="Sylfaen" FontSize="55" Foreground="Snow" Height="84" Width="166"/>
+        <Viewbox Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left">
+            <Label x:Name="Timer" Content="0"  FontFamily="Sylfaen" FontSize="55" Foreground="Snow" Height="84" Width="166"/>
         </Viewbox>
 
         <Viewbox Grid.Column="6" Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Right">
@@ -69,7 +72,7 @@
             </WrapPanel>
         </Viewbox>
 
-        <Viewbox Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Left" Width="194">
+        <Viewbox Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Left">
             <Button   x:Name="buttonExitTheTest" Click="Button_Exit_The_Test" Content="Դուրս գալ թեստից" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" HorizontalAlignment="Left" Height="36" Width="194">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -80,7 +83,7 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Column="8" Grid.Row="8" HorizontalAlignment="Right" Grid.ColumnSpan="2" Width="223">
+        <Viewbox Grid.Column="8" Grid.Row="11" HorizontalAlignment="Right" Grid.ColumnSpan="2">
             <Button  x:Name="buttonViewResult" Visibility="Hidden" Click="Button_View_Result" Content="Տեսնել արդյունքները" FontSize="20" Width="223" Height="36"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -90,8 +93,21 @@
                 </Button.Background>
             </Button>
         </Viewbox>
-      
-        <Viewbox Grid.Column="2" Grid.ColumnSpan="7" Grid.Row="6">
+
+        <Viewbox x:Name="LabelLastStep" Grid.Column="5" Grid.Row="6" Grid.ColumnSpan="2" Margin="0,1" Visibility="Collapsed">
+            <Label  Content="Աշխատանքային ոճի վերլուծություն"  FontFamily="Sylfaen" FontSize="30" Foreground="Snow" Height="53" Width="514"/>
+        </Viewbox>
+
+        <Viewbox x:Name="viewBoxRadioButtonsLastStep" Grid.ColumnSpan="3" Grid.Column="4" Grid.Row="8" Visibility="Collapsed">
+            <WrapPanel  Height="211" Width="695">
+                <Label Margin="0,0,0,12" Content="Նշեք, խնդրեմ, թե ինչ ոճով անցաք թեստը"  FontFamily="Sylfaen" FontSize="25" Foreground="Snow" Height="53"/>
+                <RadioButton x:Name="radioButton1" Content="1) Հերթով դիտեցի բոլոր թվերը: " FontFamily="Sylfaen" Foreground="Snow" FontSize="18" Margin="0,0,0,12" Checked="radioButton1_Checked"/>
+                <RadioButton x:Name="radioButton2" Content="2) Առաջարկված թվերի մեջ փնտրեցի որևէ օրինաչափություն և գիտակցաբար &#xD;&#xA;ու կարգավորված փնտրեցի թվերը ելնելով այդ օրինաչափությունից:" FontFamily="Sylfaen" Foreground="Snow" FontSize="18" Height="50" Margin="0,0,0,12" Checked="radioButton1_Checked"/>
+                <RadioButton x:Name="radioButton3" Content="3) Պատահականորեն փնտրեցի թվերը շարքերի տարբեր մասերից:" FontFamily="Sylfaen" Foreground="Snow" FontSize="18" Checked="radioButton1_Checked"/>
+            </WrapPanel>
+        </Viewbox>
+
+        <Viewbox x:Name="AllLabels" Grid.Column="2" Grid.ColumnSpan="7" Grid.Row="6" Grid.RowSpan="4">
             <WrapPanel  Width="1105" Height="344">
                 <Label x:Name="LabelNumber1" Content="999" Margin="0,0,20,5" FontFamily="Sylfaen" Foreground="Snow" Cursor="Hand" FontSize="30" Height="43" Width="55" MouseEnter="LabelNumberAll_MouseEnter" MouseLeave="LabelNumberAll_MouseLeave" PreviewMouseLeftButtonUp="LabelNumberAll_PreviewMouseLeftButtonUp"/>
                 <Label x:Name="LabelNumber2" Content="999" Margin="0,0,20,5" FontFamily="Sylfaen" Foreground="Snow" Cursor="Hand" FontSize="30" Height="43" Width="55" MouseEnter="LabelNumberAll_MouseEnter" MouseLeave="LabelNumberAll_MouseLeave" PreviewMouseLeftButtonUp="LabelNumberAll_PreviewMouseLeftButtonUp"/>
@@ -200,10 +216,6 @@
                 <Label x:Name="LabelNumber105" Content="999" Margin="0,0,0,5" FontFamily="Sylfaen" Foreground="Snow" Cursor="Hand" FontSize="30" Height="43" Width="55" MouseEnter="LabelNumberAll_MouseEnter" MouseLeave="LabelNumberAll_MouseLeave" PreviewMouseLeftButtonUp="LabelNumberAll_PreviewMouseLeftButtonUp"/>
             </WrapPanel>
         </Viewbox>
-        <!--<WrapPanel>
-            <RadioButton Content="RadioButton" />
-            <RadioButton Content="RadioButton"/>
-            <RadioButton Content="RadioButton"/>
-        </WrapPanel>-->
+
     </Grid>
 </Page>
