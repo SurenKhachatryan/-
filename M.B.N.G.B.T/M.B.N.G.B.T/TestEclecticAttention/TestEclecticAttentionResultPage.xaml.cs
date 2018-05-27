@@ -23,7 +23,7 @@ namespace M.B.N.G.B.T.TestEclecticAttention
         public TestEclecticAttentionResultPage()
         {
             InitializeComponent();
-            if (TestEclecticAttentionTablePage.counterVibronicaFalseNumbers == 10)
+            if (TestEclecticAttentionTablePage.counterVibronicaFalseNumbers == 11)
             {
                 ViewboxResult1.Visibility = Visibility.Visible;
             }

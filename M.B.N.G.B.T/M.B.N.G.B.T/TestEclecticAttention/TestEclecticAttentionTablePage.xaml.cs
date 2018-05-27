@@ -93,7 +93,7 @@ namespace M.B.N.G.B.T.TestEclecticAttention
                 LabelVibronicFalseNumbers.Content = $"Սխալ {++counterVibronicaFalseNumbers}/10";
                 BrushingLabels(((FrameworkElement)sender).Name, Brushes.Red);
 
-                if (counterVibronicaFalseNumbers == 10)
+                if (counterVibronicaFalseNumbers == 11)
                 {
                     dispatcherTimer.Stop();
                     NavigationService.Navigate(new TestEclecticAttentionResultPage());
