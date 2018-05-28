@@ -30,8 +30,8 @@
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox  VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="5">
-            <Label Content="Թորնդայքի թեստ" FontSize="48" Foreground="Snow"  FontFamily="Sylfaen"  Height="80" Width="399"/>
+        <Viewbox  VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="1">
+            <Label Content="Ընտրողական ուշադրության ստուգման թեստ" FontSize="48" Foreground="Snow"  FontFamily="Sylfaen"  Height="80" Width="1018"/>
         </Viewbox>
 
 
@@ -60,7 +60,21 @@
         <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3">
             <ScrollViewer  Width="1160" Height="459">
                 <TextBlock TextWrapping="Wrap"  Foreground="Snow" FontSize="30" FontFamily="Sylfaen">
-                    
+                    <Run Text="/Թորնդայքի թեստ - " FontWeight="Bold"/><Run Text="Ընտրողական ուշադրության ստուգման թեստ/"/>
+                    <LineBreak/>
+                    <LineBreak/><Run Text=" Ծրագիրը   պատահականության  սկզբունքով  տալիս  է  10   եռանիշ  թիվ և եռանիշ"/>
+                    <LineBreak/><Run Text="թվերի մեծ ցանկ ։"/>
+                    <LineBreak/><Run Text=" Փորձարկվողը   պետք   է   այդ   10  թվերը  փնտրի   թվերի  մեծ  ցանկում  և  մկնիկի"/>
+                    <LineBreak/><Run Text="օգնությամբ    նշի   որքան   հնարավոր  է  արագ:  Այդ  ընթացքում   վարկյանաչափը"/>
+                    <LineBreak/><Run Text="կհաշվի,  թե  որքան  ժամանակում   է  փորձարկվողը   նշել  բոլոր  10   թվերը։ Որից"/>
+                    <LineBreak/><Run Text="հետո,   երբ    փորձարկվողը    կնշի   բոլոր    տրված    10   ճիշտ    թվերը,    ծրագիրը"/>
+                    <LineBreak/><Run Text="կկանգնեցնի  վայրկյանաչափը, կանհետանա  թվերի  մեծ  ցանկը,  և փորձարկվողը "/>
+                    <LineBreak/><Run Text="կտեսնի  իր  արդյունքները :"/>
+                    <LineBreak/><Run Text=" Փորձարկվողն     ունի    սխալ   թիվ   նշելու   10   հնարավորություն,   սակայն,   եթե" Foreground="#FF930000"/>
+                    <LineBreak/><Run Text="գերազանցում   է   սխալների   սահմանը,   ծրագիրը   կանգեցնում   է   թեստը,  որից" Foreground="#FF930000"/>
+                    <LineBreak/><Run Text="հետո փորձարկվողը կարող է թեստն  անցնել կրկին։ " Foreground="#FF930000"/>
+                    <LineBreak/><Run Text=" Թեստն   անցնելու  առավելագույն  ժամանակը  1000վրկ է,  որից  հետո  ավտոմատ"/>
+                    <LineBreak/><Run Text="կերպով  թեստն   ավարտվում  է:"/>
                 </TextBlock>
             </ScrollViewer>
         </Viewbox>
