@@ -60,50 +60,50 @@
         <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3">
             <ScrollViewer  Width="1160" Height="459">
                 <TextBlock TextWrapping="Wrap"  Foreground="Snow" FontSize="30" FontFamily="Sylfaen">
-                           <Run Text="Ծրագիրը պատահականության սկզբունքով տալիս է 10 բառ  փորձարկվողին։ "/>
-                    <LineBreak/><Run Text="Փորձարկվողը ուշադիր կարդում է բարձրաձայն այդ 10 բառերը, փորձելով հիշել: "/>
-                    <LineBreak/><Run Text="Հետո փորձարկվողը սեղմում է (Սկսել թեստը) կոճակը: 10 բառերն անհետանում "/>
-                    <LineBreak/><Run Text="են և ակտիվանում է գրելու դաշտը, որտեղ գրում է այն բառերը, որոնք հիշում է : "/>
+                           <Run Text="  Ծրագիրը  պատահականության   սկզբունքով  տալիս   է  10  բառ   փորձարկվողին։ "/>
+                    <LineBreak/><Run Text="Փորձարկվողը  ուշադիր  կարդում  է  բարձրաձայն  այդ 10 բառերը, փորձելով հիշել: "/>
+                    <LineBreak/><Run Text="Հետո  փորձարկվողը  սեղմում   է  (Սկսել թեստը) կոճակը: 10 բառերն անհետանում "/>
+                    <LineBreak/><Run Text="են  և  ակտիվանում  է  գրելու  դաշտը,  որտեղ  գրում է այն բառերը, որոնք հիշում է : "/>
                     <LineBreak/>
-                    <LineBreak/><Run Foreground="#FF930000" FontWeight="Bold"  Text="Պարտադիր պայման" TextDecorations="Underline"/>
-                    <Run Text="- Բառերն առանձնացնել " FontWeight="Bold"/>
-                    <Run Foreground="#FF930000" FontWeight="Bold"  Text="ստորակետերով " />
-                    <Run Text="գրել " FontWeight="Bold"/>
-                    <LineBreak/><Run Foreground="#FF930000" FontWeight="Bold"  Text="փոքրատառերով ,առանց տառասխալների," />
-                    <Run Text="այլապես ծրագիրը դա կդիտարկի" FontWeight="Bold"/>
-                    <LineBreak/><Run Text="որպես սխալ։" FontWeight="Bold"/>
-                    <LineBreak/><Run Text="Օրինակ՝" FontWeight="Bold"/>
-                    <LineBreak/><Run Text="   հաց, տուն, ասեղ, գետ, սեղան, պատուհան,  անձրև, ճանճ, գիրք, ժամանակ" FontWeight="Bold"/>
+                    <LineBreak/><Run Text="  "/><Run Foreground="#FF930000" FontWeight="Bold"  Text="Պարտադիր   պայման" TextDecorations="Underline"/>
+                    <Run Text="  -   Բառերն      առանձնացնել " FontWeight="Bold"/>
+                    <Run Foreground="#FF930000" FontWeight="Bold"  Text="   ստորակետերով  " />
+                    <Run Text="  գրել " FontWeight="Bold"/>
+                    <LineBreak/><Run Foreground="#FF930000" FontWeight="Bold"  Text="փոքրատառերով,  առանց   տառասխալների," />
+                    <Run Text="այլապես  ծրագիրը  դա  կդիտարկի" FontWeight="Bold"/>
+                    <LineBreak/><Run Text="որպես   սխալ։" FontWeight="Bold"/>
+                    <LineBreak/><Run Text=" Օրինակ՝" FontWeight="Bold"/>
+                    <LineBreak/><Run Text="       հաց, տուն, ասեղ, գետ, սեղան, պատուհան,  անձրև, ճանճ, գիրք, ժամանակ" FontWeight="Bold"/>
                     <LineBreak/>
-                    <LineBreak/><Run Text=" Եթե փորձարկվողը առաջին իսկ փորձից մոռացել է որոշ բառեր, կարող է փորձը "/>
-                    <LineBreak/><Run Text="կրկնել "/>
-                    <Run Text="/ առավելագույնը՝ 4 անգամ /" Foreground="#FF930000" FontWeight="Bold"/>
-                    <Run Text=",  սեղմելով (Տեսնել բառերը կրկին) կոճակը"/>
-                    <LineBreak/><Run Text="որի արդյունքում  փորձարկվողի գրած բառերը կջնջվեն գրելու դաշտից և կրկին "/>
-                    <LineBreak/><Run Text="կհայտնվեն 10 բառերը: Այսպես փորձարկվողը  կրկնում է գործողությունը,"/>
-                    <LineBreak/><Run Text="սեղմելով (Շարունակել) կոճակը:"/>
-                    <LineBreak/><Run Text=" Հետազոտության արդյունքը կախված է կատարված փորձերի թվից:"/>
-                    <LineBreak/><Run Text="Ավելի մանրամասն կարող եք կարդալ ներքևում գրված Եզրակացություններում։"/>
+                    <LineBreak/><Run Text=" Եթե  փորձարկվողը  առաջին  իսկ  փորձից մոռացել է որոշ բառեր, կարող է փորձը "/>
+                    <LineBreak/><Run Text="կրկնել  "/>
+                    <Run Text="/ առավելագույնը՝ 4 անգամ / " Foreground="#FF930000" FontWeight="Bold"/>
+                    <Run Text=",  սեղմելով  (Տեսնել բառերը կրկին)   կոճակը"/>
+                    <LineBreak/><Run Text="որի  արդյունքում   փորձարկվողի  գրած  բառերը  կջնջվեն  գրելու  դաշտից և կրկին "/>
+                    <LineBreak/><Run Text="կհայտնվեն    10  բառերը:  Այսպես    փորձարկվողը     կրկնում   է    գործողությունը,"/>
+                    <LineBreak/><Run Text="սեղմելով   (Շարունակել)   կոճակը:"/>
+                    <LineBreak/><Run Text="  Հետազոտության     արդյունքը     կախված     է     կատարված     փորձերի     թվից:"/>
+                    <LineBreak/><Run Text="Ավելի  մանրամասն  կարող  եք  կարդալ  ներքևում  գրված Եզրակացություններում։"/>
                     <LineBreak/>
                     <LineBreak/><Run Text="                                                        Եզրակացություններ" FontWeight="Bold"/>
                     <LineBreak/>
-                    <LineBreak/><Run Text="1)Եթե ճիշտ գրված բառերի քանակը աճում է - նորմալ զարգացած կարճաժամկետ "/>
+                    <LineBreak/><Run Text="1) Եթե  ճիշտ գրված բառերի քանակը աճում է - նորմալ  զարգացած կարճաժամկետ "/>
                     <LineBreak/><Run Text=" հիշողություն:"/>
                     <LineBreak/>
-                    <LineBreak/><Run Text="2)Աոաջին կամ երկրորդ անգամ կրկնելու ժամանակ գրել է 9-10 բառ -"/>
-                    <LineBreak/><Run Text="հիշողությունը գերազանց է:"/>
+                    <LineBreak/><Run Text="2) Աոաջին    կամ    երկրորդ    անգամ   կրկնելու   ժամանակ   գրել   է    9-10    բառ  -"/>
+                    <LineBreak/><Run Text=" հիշողությունը  գերազանց  է:"/>
                     <LineBreak/>
-                    <LineBreak/><Run Text="3)Երրորդ անգամ կրկնելու ժամանակ ճիշտ գրել է 9-10 բառ - Հիշողության հետ "/>
-                    <LineBreak/><Run Text=" ամեն ինչ նորմալ է:"/>
+                    <LineBreak/><Run Text="3) Երրորդ  անգամ  կրկնելու  ժամանակ  ճիշտ  գրել է  9-10 բառ  -  Հիշողության հետ "/>
+                    <LineBreak/><Run Text=" ամեն  ինչ  նորմալ  է:"/>
                     <LineBreak/>
-                    <LineBreak/><Run Text="4)Երրորդ անգամ կրկնելու ժամանակ ճիշտ գրել է 8 բառ - Թույլ զարգացած"/>
-                    <LineBreak/><Run Text=" կարճաժամկետ հիշողություն:"/>
+                    <LineBreak/><Run Text="4) Երրորդ  անգամ  կրկնելու   ժամանակ   ճիշտ   գրել  է  8  բառ  -  Թույլ   զարգացած"/>
+                    <LineBreak/><Run Text=" կարճաժամկետ   հիշողություն:"/>
                     <LineBreak/>
-                    <LineBreak/><Run Text="5)Եթե գրության մեջ հայտնվում են բառեր, որոնք չկային 10 ճիշտ բառերի մեջ - "/>
-                    <LineBreak/><Run Text=" խնդիրը ուշադրության հետ է կապկած,այլ ոչ հիշողության:"/>
+                    <LineBreak/><Run Text="5)Եթե  գրության  մեջ  հայտնվում  են  բառեր,  որոնք  չկային  10  ճիշտ բառերի մեջ - "/>
+                    <LineBreak/><Run Text=" խնդիրը   ուշադրության   հետ   է   կապկած,  այլ   ոչ   հիշողության:"/>
                     <LineBreak/>
-                    <LineBreak/><Run Text="6)Եթե 9-10 ճիշտ բառերը գրում է չորրորդ անգամ - կարճաժամկետ հիշողությունը"/>
-                    <LineBreak/><Run Text=" զարգացած չէ:"/>
+                    <LineBreak/><Run Text="6) Եթե  9-10 ճիշտ բառերը գրում է չորրորդ անգամ -  կարճաժամկետ հիշողությունը"/>
+                    <LineBreak/><Run Text=" զարգացած   չէ:"/>
                 </TextBlock>
             </ScrollViewer>
         </Viewbox>

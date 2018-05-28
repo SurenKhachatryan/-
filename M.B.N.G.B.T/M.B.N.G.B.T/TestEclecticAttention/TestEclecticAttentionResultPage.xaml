@@ -30,11 +30,11 @@
         </Grid.ColumnDefinitions>
 
         <Viewbox x:Name="ViewboxResult1" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Visibility="Hidden">
-            <Label  Content="Անցել եք սխալների առավելագույն քանակը, կարող եք թեստն անցնել կրկին։" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1104" Height="64"/>
+            <Label  Content="Անցել եք սխալների թուլատրելի սահմանը, կարող եք թեստն անցնել կրկին։" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1104" Height="64"/>
         </Viewbox>
         <Viewbox x:Name="ViewboxResult2" Visibility="Hidden" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1"  HorizontalAlignment="Left">
             <WrapPanel  Height="221" Width="1160">
-                <Label x:Name="LabelInfo"  Content="Միջին ժամանակի նորման 10 թիվ փնտրելու դեպքում 190-211 վրկ։" Foreground="Snow" FontFamily="Sylfaen" FontSize="31" Width="1104" Height="64"/>
+                <Label x:Name="LabelInfo"  Content="Միջին ժամանակի նորման 10 թիվ փնտրելու դեպքում՝ 190-211 վրկ։" Foreground="Snow" FontFamily="Sylfaen" FontSize="31" Width="1104" Height="64"/>
                 <Label x:Name="LabelResult2" Foreground="Snow" FontFamily="Sylfaen" FontSize="31" Width="1104" Height="64"/>
                 <Label x:Name="LabelResult3" Foreground="Snow" FontFamily="Sylfaen" FontSize="31" Height="93" Width="1160"/>
             </WrapPanel>

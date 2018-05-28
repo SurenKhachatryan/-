@@ -33,15 +33,15 @@ namespace M.B.N.G.B.T.TestEclecticAttention
                 }
 
                 if (TestEclecticAttentionTablePage.second <= 100)
-                    LabelResult3.Content = $"Ձեր ցուցանիշը  {TestEclecticAttentionTablePage.second} վրկ, որը համարվում է գերազանց ցուցանիշ։";
+                    LabelResult3.Content = $"Ձեր ցուցանիշն է - {TestEclecticAttentionTablePage.second} վրկ, որը համարվում է գերազանց ցուցանիշ։";
                 else
-                if (TestEclecticAttentionTablePage.second <= 150)
-                    LabelResult3.Content = $"Ձեր ցուցանիշը  {TestEclecticAttentionTablePage.second} վրկ, որը համարվում է լավ ցուցանիշ։";
+                if (TestEclecticAttentionTablePage.second <= 190)
+                    LabelResult3.Content = $"Ձեր ցուցանիշն է - {TestEclecticAttentionTablePage.second} վրկ, որը համարվում է լավ ցուցանիշ։";
                 else
                 if (TestEclecticAttentionTablePage.second <= 211)
-                    LabelResult3.Content = $"Ձեր ցուցանիշը  {TestEclecticAttentionTablePage.second} վրկ, որը համարվում է նորմալ ցուցանիշ։";
+                    LabelResult3.Content = $"Ձեր ցուցանիշ է - {TestEclecticAttentionTablePage.second} վրկ, որը համարվում է նորմալ ցուցանիշ։";
                 else
-                    LabelResult3.Content = $"Ձեր ցուցանիշը  {TestEclecticAttentionTablePage.second} վրկ, որը համարվում է վատ ցուցանիշ, կարող եք կրկին \nփորձել ձեր ուժերը։";
+                    LabelResult3.Content = $"Ձեր ցուցանիշը է - {TestEclecticAttentionTablePage.second} վրկ, որը համարվում է վատ ցուցանիշ, կարող եք \nկրկնել թեստը ։";
             }
         }
 
