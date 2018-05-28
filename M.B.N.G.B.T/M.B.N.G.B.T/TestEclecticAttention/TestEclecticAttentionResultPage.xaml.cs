@@ -34,13 +34,13 @@ namespace M.B.N.G.B.T.TestEclecticAttention
                 switch (TestEclecticAttentionTablePage.chekedRadioButton)
                 {
                     case 1:
-                        LabelResult2.Content = "Ձեր աշխատանքային ոճը համակարգված է։";
+                        LabelResult2.Content = "Դուք աշխատել եք համակարգված ոճով։";
                         break;
                     case 2:
-                        LabelResult2.Content = "Ձեր աշխատանքային ոճը օպտիմալ է։";
+                        LabelResult2.Content = "Դուք աշխատել եք օպտիմալ ոճով։";
                         break;
                     case 3:
-                        LabelResult2.Content = "Ձեր աշխատանքային ոճը քաոսաին է։";
+                        LabelResult2.Content = "Դուք աշխատել եք քաոսաին ոճով։";
                         break;
                 }
                 LabelResult3.Content += $"Ձեր ցուցանիշը  {TestEclecticAttentionTablePage.second} վրկ";
