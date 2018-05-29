@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Navigation;
 using System.Windows.Threading;
@@ -14,9 +15,10 @@ namespace M.B.N.G.B.T.Schulte_Test
     /// </summary>
     public partial class SchulteTestTablePage3 : Page
     {
-        private List<int> lsRndDigite { get; set; } = new List<int>();
+        private List<int> listRandomNumbers { get; set; } = new List<int>();
         private List<int> listClickMistakesButtons { get; set; } = new List<int>();
         private List<int> listIntervalClickButtons { get; set; } = new List<int>();
+        private Button[] arrAllButtons { get; set; } = new Button[25];
 
         private Random rnd = new Random();
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
@@ -27,7 +29,7 @@ namespace M.B.N.G.B.T.Schulte_Test
         private byte second { get; set; } = 0;
         private byte counterButtonClick { get; set; } = 0;
         private byte secondForBrushNullButtons { get; set; } = 0;
-
+        private int indexButton { get; set; } = 0;
 
         public SchulteTestTablePage3()
         {
@@ -73,186 +75,33 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void ChangeContentButtonRandom()
         {
+            arrAllButtons = new[] {button1 , button2 , button3 , button4 , button5 , button6 , button7 , button8 , button9 , button10,
+                                   button11 , button12 , button13 , button14 , button15 , button16 , button17 , button18 , button19 , button20,
+                                   button21 , button22 , button23 , button24 , button25 };
+
             int temp = 0;
-            for (int i = 1; i <= 25; i++)
+            for (int i = 0; i < 25; i++)
             {
                 temp = rnd.Next(1, 26);
-                if (lsRndDigite.Count == 0 || !cl.SerchMatchingNumberInArr(lsRndDigite.ToArray(), temp))
+                if (listRandomNumbers.Count == 0 || !cl.SerchMatchingNumberInArr(listRandomNumbers.ToArray(), temp))
                 {
-                    lsRndDigite.Add(temp);
-
-                    switch (i)
-                    {
-                        case 1:
-                            button1.Content = temp;
-                            break;
-                        case 2:
-                            button2.Content = temp;
-                            break;
-                        case 3:
-                            button3.Content = temp;
-                            break;
-                        case 4:
-                            button4.Content = temp;
-                            break;
-                        case 5:
-                            button5.Content = temp;
-                            break;
-                        case 6:
-                            button6.Content = temp;
-                            break;
-                        case 7:
-                            button7.Content = temp;
-                            break;
-                        case 8:
-                            button8.Content = temp;
-                            break;
-                        case 9:
-                            button9.Content = temp;
-                            break;
-                        case 10:
-                            button10.Content = temp;
-                            break;
-                        case 11:
-                            button11.Content = temp;
-                            break;
-                        case 12:
-                            button12.Content = temp;
-                            break;
-                        case 13:
-                            button13.Content = temp;
-                            break;
-                        case 14:
-                            button14.Content = temp;
-                            break;
-                        case 15:
-                            button15.Content = temp;
-                            break;
-                        case 16:
-                            button16.Content = temp;
-                            break;
-                        case 17:
-                            button17.Content = temp;
-                            break;
-                        case 18:
-                            button18.Content = temp;
-                            break;
-                        case 19:
-                            button19.Content = temp;
-                            break;
-                        case 20:
-                            button20.Content = temp;
-                            break;
-                        case 21:
-                            button21.Content = temp;
-                            break;
-                        case 22:
-                            button22.Content = temp;
-                            break;
-                        case 23:
-                            button23.Content = temp;
-                            break;
-                        case 24:
-                            button24.Content = temp;
-                            break;
-                        case 25:
-                            button25.Content = temp;
-                            break;
-                    }
+                    listRandomNumbers.Add(temp);
+                    arrAllButtons[i].Content = temp;
                 }
                 else
-                {
                     i--;
-                }
             }
         }
 
 
         private void BrushingButtonsNull()
         {
-            timer.Foreground = Brushes.White;
-
             for (int i = 0; i < listClickMistakesButtons.Count; i++)
             {
-                switch (listClickMistakesButtons[i])
-                {
-                    case 1:
-                        button1.Background = null;
-                        break;
-                    case 2:
-                        button2.Background = null;
-                        break;
-                    case 3:
-                        button3.Background = null;
-                        break;
-                    case 4:
-                        button4.Background = null;
-                        break;
-                    case 5:
-                        button5.Background = null;
-                        break;
-                    case 6:
-                        button6.Background = null;
-                        break;
-                    case 7:
-                        button7.Background = null;
-                        break;
-                    case 8:
-                        button8.Background = null;
-                        break;
-                    case 9:
-                        button9.Background = null;
-                        break;
-                    case 10:
-                        button10.Background = null;
-                        break;
-                    case 11:
-                        button11.Background = null;
-                        break;
-                    case 12:
-                        button12.Background = null;
-                        break;
-                    case 13:
-                        button13.Background = null;
-                        break;
-                    case 14:
-                        button14.Background = null;
-                        break;
-                    case 15:
-                        button15.Background = null;
-                        break;
-                    case 16:
-                        button16.Background = null;
-                        break;
-                    case 17:
-                        button17.Background = null;
-                        break;
-                    case 18:
-                        button18.Background = null;
-                        break;
-                    case 19:
-                        button19.Background = null;
-                        break;
-                    case 20:
-                        button20.Background = null;
-                        break;
-                    case 21:
-                        button21.Background = null;
-                        break;
-                    case 22:
-                        button22.Background = null;
-                        break;
-                    case 23:
-                        button23.Background = null;
-                        break;
-                    case 24:
-                        button24.Background = null;
-                        break;
-                    case 25:
-                        button25.Background = null;
-                        break;
-                }
+                arrAllButtons[listClickMistakesButtons[i]].Background = (Brush)new BrushConverter().ConvertFrom("#FF567962");
+                arrAllButtons[listClickMistakesButtons[i]].Foreground = Brushes.Black;
             }
+            timer.Foreground = Brushes.White;
             listClickMistakesButtons.Clear();
         }
 
@@ -262,13 +111,10 @@ namespace M.B.N.G.B.T.Schulte_Test
             {
                 stage++;
                 if (stage != 6)
-                {
                     NavigationService.Navigate(new SchulteTestTablePage3());
-                }
                 else
-                {
                     NavigationService.Navigate(new SchulteTestResultPage());
-                }
+
                 dispatcherTimer.Stop();
             }
         }
@@ -276,7 +122,8 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         private void Button_Click1(object sender, RoutedEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button1.Content))
+            indexButton = GetButtonIndex(((Button)sender).Name);
+            if (counterButtonClick + 1 == Convert.ToByte(arrAllButtons[indexButton].Content))
             {
                 counterButtonClick++;
                 BrushingButtonsNull();
@@ -285,518 +132,37 @@ namespace M.B.N.G.B.T.Schulte_Test
                 timer.Content = "00";
             }
             else
-            if (counterButtonClick != Convert.ToByte(button1.Content))
+            if (counterButtonClick != Convert.ToByte(arrAllButtons[indexButton].Content))
             {
                 timer.Foreground = Brushes.Red;
-                button1.Background = Brushes.Red;
+                arrAllButtons[indexButton].Foreground = Brushes.Red;
+                arrAllButtons[indexButton].Background = Brushes.Red;
                 secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(1);
+                listClickMistakesButtons.Add(indexButton);
             }
             FinalStage();
         }
 
-        private void Button_Click2(object sender, RoutedEventArgs e)
+        private void button1_MouseEnter(object sender, MouseEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button2.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button2.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button2.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(2);
-            }
-            FinalStage();
+            indexButton = GetButtonIndex(((Button)sender).Name);
+            if (arrAllButtons[indexButton].Background == Brushes.Red)
+                arrAllButtons[indexButton].Foreground = Brushes.Red;
         }
 
-        private void Button_Click3(object sender, RoutedEventArgs e)
+        private void button1_MouseLeave(object sender, MouseEventArgs e)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button3.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button3.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button3.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(3);
-            }
-            FinalStage();
+            int index = GetButtonIndex(((Button)sender).Name);
+            if (arrAllButtons[indexButton].Background == Brushes.Red)
+                arrAllButtons[indexButton].Foreground = Brushes.Black;
         }
 
-        private void Button_Click4(object sender, RoutedEventArgs e)
+        private int GetButtonIndex(string buttonName)
         {
-            if (counterButtonClick + 1 == Convert.ToByte(button4.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button4.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button4.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(4);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click5(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button5.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button5.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button5.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(5);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click6(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button6.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button6.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button6.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(6);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click7(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button7.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button7.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button7.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(7);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click8(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button8.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button8.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button8.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(8);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click9(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button9.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button9.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button9.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(9);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click10(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button10.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button10.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button10.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(10);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click11(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button11.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button11.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button11.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(11);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click12(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button12.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button12.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button12.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(12);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click13(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button13.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button13.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button13.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(13);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click14(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button14.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button14.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button14.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(14);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click15(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button15.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button15.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button15.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(15);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click16(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button16.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button16.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button16.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(16);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click17(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button17.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button17.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button17.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(17);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click18(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button18.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button18.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button18.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(18);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click19(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button19.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button19.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button19.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(19);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click20(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button20.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button20.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button20.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(20);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click21(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button21.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button21.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button21.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(21);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click22(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button22.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button22.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button22.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(22);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click23(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button23.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button23.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button23.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(23);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click24(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button24.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button24.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button24.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(24);
-            }
-            FinalStage();
-        }
-
-        private void Button_Click25(object sender, RoutedEventArgs e)
-        {
-            if (counterButtonClick + 1 == Convert.ToByte(button25.Content))
-            {
-                counterButtonClick++;
-                BrushingButtonsNull();
-                listIntervalClickButtons.Add(second);
-                second = 0;
-                timer.Content = "00";
-            }
-            else
-            if (counterButtonClick != Convert.ToByte(button25.Content))
-            {
-                timer.Foreground = Brushes.Red;
-                button25.Background = Brushes.Red;
-                secondForBrushNullButtons = 0;
-                listClickMistakesButtons.Add(25);
-            }
-            FinalStage();
+            for (int i = 0; i < arrAllButtons.Length; i++)
+                if (buttonName == arrAllButtons[i].Name)
+                    return i;
+            return -1;
         }
     }
 }
