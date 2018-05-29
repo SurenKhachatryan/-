@@ -146,6 +146,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
                     LableInfo.Content = $"խորհուրդ է տրվում թեստն անցնել սկզբից";
                     buttonExitTheTestViewResult.Visibility = Visibility.Collapsed;
                     buttonSeeWord.Visibility = Visibility.Collapsed;
+                    textBoxWords.IsEnabled = false;
                 }
             }
             if (buttonExitTheTestViewResult.Visibility == Visibility.Visible)
