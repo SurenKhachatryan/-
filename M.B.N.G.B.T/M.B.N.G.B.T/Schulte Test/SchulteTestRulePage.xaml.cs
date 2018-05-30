@@ -36,19 +36,20 @@ namespace M.B.N.G.B.T.Schulte_Test
         private void Button_Start_Test(object sender, RoutedEventArgs e)
         {
             SchulteTestTablePage1.stage = 1;
+            SchulteTestTablePage2.stage = 1;
+            SchulteTestTablePage3.stage = 1;
 
             if (Radiobutton1.IsChecked == true)
                 NavigationService.Navigate(new SchulteTestTablePage1());
             else
             if (Radiobutton2.IsChecked == true)
             {
-                SchulteTestTablePage2.listAllStageMistakes.Clear();
                 NavigationService.Navigate(new SchulteTestTablePage2());
             }
             else
             if (Radiobutton3.IsChecked == true)
                 NavigationService.Navigate(new SchulteTestTablePage3());
         }
-    
+
     }
 }
