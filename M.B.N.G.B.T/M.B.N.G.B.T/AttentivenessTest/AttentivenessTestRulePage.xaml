@@ -30,8 +30,8 @@
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox  VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="5">
-            <Label Content="ՈՒշադրության թեստ" FontSize="48" Foreground="Snow"  FontFamily="Sylfaen"  Height="80" Width="481"/>
+        <Viewbox  VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="1">
+            <Label Content="Կարճաժամկետ և Երկարաժամկետ Հիշողության Թեստ" FontSize="48" Foreground="Snow"  FontFamily="Sylfaen"  Height="83" Width="1226"/>
         </Viewbox>
 
 

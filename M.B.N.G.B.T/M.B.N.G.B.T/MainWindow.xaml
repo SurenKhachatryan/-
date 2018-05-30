@@ -25,10 +25,10 @@
             <RowDefinition Height="9*"/>
             <RowDefinition Height="35*"/>
             <RowDefinition Height="9*"/>
-            <RowDefinition Height="35*"/>
+            <RowDefinition Height="51*"/>
             <RowDefinition Height="9*"/>
             <RowDefinition Height="35*"/>
-            <RowDefinition Height="429*"/>
+            <RowDefinition Height="413*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -38,7 +38,7 @@
         </Grid.ColumnDefinitions>
 
         <Viewbox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left">
-            <Button x:Name="buttonVisualMemoryTest" Click="Button_Visual_Memory_Test" Content="Տեսողական Հիշողություն" FontSize="17"  FontFamily="Sylfaen" Foreground="White" Cursor="Hand"  Height="35"  Width="263">
+            <Button x:Name="buttonVisualMemoryTest" Click="Button_Visual_Memory_Test" Content="Տեսողական Հիշողության Թեստ" FontSize="17"  FontFamily="Sylfaen" Foreground="White" Cursor="Hand"  Height="35"  Width="263">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -60,7 +60,7 @@
         </Viewbox>
 
         <Viewbox Grid.Row="7" Grid.Column="1" HorizontalAlignment="Left">
-            <Button x:Name="buttonVLMarshukTest" Click="Button_VLMarshuk_Test" Content="Վ․Լ․Մարշուկի Թեստ" FontSize="17"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White"  Height="35"  Width="263" >
+            <Button x:Name="buttonVLMarshukTest" Click="Button_VLMarshuk_Test" Content="ՈՒշադրության Որոշման Թեստ" FontSize="17"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White"  Height="35"  Width="263" >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -82,7 +82,7 @@
         </Viewbox>
 
         <Viewbox Grid.Column="1" Grid.Row="11" HorizontalAlignment="Left">
-            <Button x:Name="buttonAttentivenessTest" Click="Button_Attentiveness_Test" Content="ՈՒշադրության Թեստ" FontSize="16"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White"  Height="35"  Width="263">
+            <Button x:Name="buttonAttentivenessTest" Click="Button_Attentiveness_Test" Content="Կարճաժամկետ և Երկարաժամկետ &#xD;&#xA;              Հիշողության Թեստ" FontSize="15"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White"  Height="51"  Width="263">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -93,7 +93,7 @@
         </Viewbox>
 
         <Viewbox Grid.Row="13" Grid.Column="1" HorizontalAlignment="Left">
-            <Button x:Name="buttonTestEclecticAttention" IsEnabled="True" Click="Button_Test_Eclectic_Attention" Content="Ընտրության ուշադրության Թեստ" FontSize="16"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White"  Height="35"  Width="263">
+            <Button x:Name="buttonTestEclecticAttention" IsEnabled="True" Click="Button_Test_Eclectic_Attention" Content="Ընտրողական ՈՒշադրության Թեստ" FontSize="15"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White"  Height="35"  Width="263">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -103,7 +103,7 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Row="1" Margin="35,0,35,0"  Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Top">
+        <Viewbox Grid.Row="1" Margin="3,0,35,0"  Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Top">
             <TextBlock   Text="  Մարդու Բարձրագույն Նյարդային Գործունեության Բաղադրիչների Թեստավորում" FontFamily="Sylfaen" FontSize="24" Foreground="White" Height="35" Width="933">
                 <TextBlock.Background>
                     <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,0">
@@ -114,7 +114,7 @@
             </TextBlock>
         </Viewbox>
 
-        <Frame Name="Main" Margin="0,0,0,0"  RenderTransformOrigin="0,0" Grid.RowSpan="15" Grid.ColumnSpan="3" NavigationUIVisibility="Hidden"/>
+        <Frame Name="Main"  RenderTransformOrigin="0,0" Grid.RowSpan="15" NavigationUIVisibility="Hidden" Grid.ColumnSpan="3"/>
 
     </Grid>
 

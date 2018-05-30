@@ -66,6 +66,15 @@
     <Compile Include="AttentivenessTest\AttentivenessTestTablePage.xaml.cs">
       <DependentUpon>AttentivenessTestTablePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ConcentrationDefinitionTest\ConcentrationDefinitionTestResultPage.xaml.cs">
+      <DependentUpon>ConcentrationDefinitionTestResultPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConcentrationDefinitionTest\ConcentrationDefinitionTestRulePage.xaml.cs">
+      <DependentUpon>ConcentrationDefinitionTestRulePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConcentrationDefinitionTest\ConcentrationDefinitionTestTablePage.xaml.cs">
+      <DependentUpon>ConcentrationDefinitionTestTablePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="KrepelinTest\KrepelTestResultPage.xaml.cs">
       <DependentUpon>KrepelTestResultPage.xaml</DependentUpon>
     </Compile>
@@ -110,20 +119,23 @@
     <Compile Include="VisualMemoryTest\VisualMemoryTestRandomPicturesPage.xaml.cs">
       <DependentUpon>VisualMemoryTestRandomPicturesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VLMarshuk Test\MarshukTestResultPage.xaml.cs">
-      <DependentUpon>MarshukTestResultPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="VLMarshuk Test\MarshukTestRulePage.xaml.cs">
-      <DependentUpon>MarshukTestRulePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="VLMarshuk Test\MarshukTestTablePage.xaml.cs">
-      <DependentUpon>MarshukTestTablePage.xaml</DependentUpon>
-    </Compile>
     <Page Include="AttentivenessTest\AttentivenessTestRulePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AttentivenessTest\AttentivenessTestTablePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConcentrationDefinitionTest\ConcentrationDefinitionTestResultPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConcentrationDefinitionTest\ConcentrationDefinitionTestRulePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConcentrationDefinitionTest\ConcentrationDefinitionTestTablePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -202,18 +214,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Schulte Test\SchulteTestTablePage3.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="VLMarshuk Test\MarshukTestResultPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="VLMarshuk Test\MarshukTestRulePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="VLMarshuk Test\MarshukTestTablePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

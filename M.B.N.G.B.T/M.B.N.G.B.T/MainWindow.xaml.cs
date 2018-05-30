@@ -2,9 +2,9 @@
 using M.B.N.G.B.T.VisualMemoryTest;
 using M.B.N.G.B.T.KrepelTest;
 using M.B.N.G.B.T.Schulte_Test;
-using M.B.N.G.B.T.V.L.Marshukov_Test;
 using M.B.N.G.B.T.AttentivenessTest;
 using M.B.N.G.B.T.TestEclecticAttention;
+using M.B.N.G.B.T.ConcentrationDefinitionTest;
 
 namespace M.B.N.G.B.T
 {
@@ -30,7 +30,7 @@ namespace M.B.N.G.B.T
 
         private void Button_VLMarshuk_Test(object sender, RoutedEventArgs e)
         {
-            Main.Content = new MarshukTestRulePage();
+            Main.Content = new ConcentrationDefinitionTestRulePage();
         }
 
         private void Button_Krepelin_Test(object sender, RoutedEventArgs e)
