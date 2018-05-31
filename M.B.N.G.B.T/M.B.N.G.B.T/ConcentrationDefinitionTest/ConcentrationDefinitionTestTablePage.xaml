@@ -104,7 +104,11 @@
                 <Label x:Name="Label25" Content="25" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
             </WrapPanel>
         </Viewbox>
-
+        
+        <Viewbox x:Name="ViewboxWarning" Grid.ColumnSpan="10" Grid.Row="7" Grid.RowSpan="2" Grid.Column="1" HorizontalAlignment="Left" Visibility="Hidden">
+            <Label Content="Տեկստում կա 40-ից մեծ թիվ, խնդրում եմ ուղղել սխալը։" Foreground="DarkRed" FontFamily="Sylfaen" FontSize="50"  Width="1618" Height="109"/>
+        </Viewbox>
+        
         <Viewbox Grid.Row="9" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left">
             <Button x:Name="buttonExitTheTest" Click="Button_Exit_The_Test" Content="Դուրս գալ թեստից" FontSize="20" Height="36" FontFamily="Sylfaen"  Foreground="White" Cursor="Hand"  Width="194">
                 <Button.Background>
@@ -117,7 +121,7 @@
         </Viewbox>
 
         <Viewbox Grid.Row="9" Grid.Column="9" Grid.ColumnSpan="2" HorizontalAlignment="Right">
-            <Button x:Name="buttonNextStage" Click="ButtonNextStage" Content="Անցնել հաջորդ փուլ" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand"  Height="36" Width="219">
+            <Button x:Name="buttonNextStage" Click="ButtonNextStage" Content="Անցնել հաջորդ փուլ" Visibility="Hidden" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand"  Height="36" Width="219">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -136,7 +140,7 @@
         </Viewbox>
 
         <Viewbox Grid.Row="2" Grid.Column="2" Grid.RowSpan="4" Grid.ColumnSpan="2">
-            <TextBox x:Name="textBox" FontSize="50"  FontFamily="Sylfaen" BorderBrush="{x:Null}" Background="{x:Null}" BorderThickness="0" SelectionBrush="#FFB90011" TextWrapping="Wrap" Text="" FontWeight="Bold" PreviewTextInput="TextBox_PreviewTextInput"  Height="392"  Width="308"/>
+            <TextBox x:Name="textBox" FontSize="50"  FontFamily="Sylfaen" BorderBrush="{x:Null}" Background="{x:Null}" BorderThickness="0" SelectionBrush="#FFB90011" TextWrapping="Wrap" Text="" FontWeight="Bold" PreviewTextInput="TextBox_PreviewTextInput"  Height="392"  Width="308" PreviewKeyUp="textBox_PreviewKeyUp" PreviewKeyDown="textBox_PreviewKeyDown"/>
         </Viewbox>
     </Grid>
 </Page>

@@ -23,30 +23,15 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         public ConcentrationDefinitionTestResultPage()
         {
             InitializeComponent();
-            InitializeComponent();
+            if (ConcentrationDefinitionTestTablePage.AllStageTime[(ConcentrationDefinitionTestTablePage.stage - 2)] == "5:00")
+                ViewboxResult1.Visibility = Visibility.Visible;
+            else
+            {
 
-            textBlock1.Text += $"{ new string('-', 80)}\n" +
-                "Ցանկի թվերը ըստ փուլերի\n";
-            textBlock1.Text += WriteTextBlock(ConcentrationDefinitionTestTablePage.arrAllStageRandomDigits);
+            }
 
-            textBlock1.Text += $"{ new string('-', 80)}\n"
-                + "ճիշտ պատասխանները ըստ փուլերի\n";
-            textBlock1.Text += WriteTextBlock(ConcentrationDefinitionTestTablePage.arrAllStageRightNumbers);
-
-            textBlock.Text += $"{ new string('-', 55)}\n"
-                + "Ձեր պատասխանները ըստ փուլերի\n";
-            textBlock.Text += WriteTextBlock(ConcentrationDefinitionTestTablePage.arrAllStageDigitsInTextBox);
-
-            textBlock.Text += $"{ new string('-', 55)}" +
-                "\nՍխալ պատասխանները ըստ փուլերի \n" +
-                $"{ new string('-', 55)}\n" +
-                "Ավելորդ թվերը որոնք ցանկում կային\n";
-            textBlock.Text += WriteTextBlock(ConcentrationDefinitionTestTablePage.arrAllStageExtraNumbers);
-
-            textBlock.Text += $"{ new string('-', 55)}\n" +
-                "Բացթողնված թվերը որոնք ցանկում չկային\n";
-            textBlock.Text += WriteTextBlock(ConcentrationDefinitionTestTablePage.arrAllStageAbsentNumbers);
         }
+
         private string WriteTextBlock(int[][] arr)
         {
             string str = $"\n";

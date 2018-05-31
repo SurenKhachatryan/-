@@ -13,23 +13,26 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="57*"/>
-            <RowDefinition Height="569*"/>
-            <RowDefinition Height="40*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="492*"/>
             <RowDefinition Height="36*"/>
             <RowDefinition Height="78*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="65*"/>
-            <ColumnDefinition Width="550*"/>
-            <ColumnDefinition Width="48*"/>
-            <ColumnDefinition Width="186*"/>
-            <ColumnDefinition Width="381*"/>
+            <ColumnDefinition Width="796*"/>
+            <ColumnDefinition Width="369*"/>
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox Grid.Row="3" Grid.Column="4" HorizontalAlignment="Right">
-            <WrapPanel  Height="36"  Width="381">
-                <Button Margin="12,0" x:Name="buttonClickExitMain" Click="Button_Click_Exit_Main" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36"  Width="185" >
+        <Viewbox x:Name="ViewboxResult1" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Visibility="Hidden" >
+            <Label  Content="Դուք անցել եք առավելագույն ժամանակը (5 րոպեն)։&#xD;&#xA;Ամեն փուլն անցնելու նորման 01:30 րոպեն է։ Կարող եք թեստն անցնել կրկին։" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1104" Height="92"/>
+        </Viewbox>
+
+        <Viewbox Grid.Row="4" Grid.Column="2" HorizontalAlignment="Right">
+            <WrapPanel  Height="36"  Width="369">
+                <Button Margin="0,0,12,0" x:Name="buttonClicktryagain" Click="Button_Click_Try_Again" Content="Կրկին փորձել" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="172" >
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                             <GradientStop Color="Black" Offset="1"/>
@@ -37,7 +40,7 @@
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>
-                <Button  x:Name="buttonClicktryagain" Click="Button_Click_Try_Again" Content="Կրկին փորձել" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="172" >
+                <Button x:Name="buttonClickExitMain" Click="Button_Click_Exit_Main" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36"  Width="185" >
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                             <GradientStop Color="Black" Offset="1"/>
@@ -47,13 +50,5 @@
                 </Button>
             </WrapPanel>
         </Viewbox>
-
-        <Viewbox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" >
-            <TextBlock x:Name="textBlock" Height="569" Width="550" TextWrapping="Wrap" Text="{x:Null}" FontSize="18" Foreground="White" FontFamily="Sylfaen" FontStyle="Normal" FontWeight="Bold"/>
-        </Viewbox>
-        <Viewbox Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Left"  >
-            <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="{x:Null}" Height="569" Width="567" FontSize="18" Foreground="White" FontFamily="Sylfaen" FontStyle="Normal" FontWeight="Bold"/>
-        </Viewbox>
-
     </Grid>
 </Page>

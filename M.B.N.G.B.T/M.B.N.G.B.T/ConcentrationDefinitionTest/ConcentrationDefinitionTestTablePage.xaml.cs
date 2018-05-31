@@ -17,29 +17,37 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         private List<int> lsRndDigite { get; set; } = new List<int>();
         private Label[] arrAllLabels { get; set; } = new Label[25];
 
-        public static int[][] arrAllStageRandomDigits { get; set; } = new int[5][];
-        public static int[][] arrAllStageDigitsInTextBox { get; set; } = new int[5][];
-        public static int[][] arrAllStageRightNumbers { get; set; } = new int[5][];
-        public static int[][] arrAllStageAbsentNumbers { get; set; } = new int[5][];
-        public static int[][] arrAllStageExtraNumbers { get; set; } = new int[5][];
+        public static int[][] arrAllStageRandomDigits { get; private set; } = new int[5][];
+        public static int[][] arrAllStageDigitsInTextBox { get; private set; } = new int[5][];
+        public static int[][] arrAllStageRightNumbers { get; private set; } = new int[5][];
+        public static int[][] arrAllStageAbsentNumbers { get; private set; } = new int[5][];
+        public static int[][] arrAllStageExtraNumbers { get; private set; } = new int[5][];
+        public static string[] AllStageTime { get; private set; } = new string[5];
+        public static byte stage { get; set; } = 1;
 
         private Random rnd = new Random();
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
-        public static byte stage { get; set; } = 1;
-
         private int second { get; set; } = 0;
         private int minute { get; set; } = 0;
-
+        private int warningSecond { get; set; } = 0;
+        private bool warningDoor { get; set; } = false;
 
         public ConcentrationDefinitionTestTablePage()
         {
             InitializeComponent();
-            if (stage + 1 == 6)
-            {
+            if (stage == 5)
                 buttonNextStage.Content = "Ավարտել թեսնը";
-                buttonExitTheTest.Visibility = Visibility.Collapsed;
+
+            if (stage == 1)
+            {
+                arrAllStageRandomDigits = new int[5][];
+                arrAllStageDigitsInTextBox = new int[5][];
+                arrAllStageRightNumbers = new int[5][];
+                arrAllStageAbsentNumbers = new int[5][];
+                arrAllStageExtraNumbers = new int[5][];
+                AllStageTime = new string[5];
             }
             dispatcherTimer.Start();
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
@@ -52,7 +60,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         }
         private void Button_Exit_The_Test(object sender, RoutedEventArgs e)
         {
-            FinishStage();
+            dispatcherTimer.Stop();
             NavigationService.Navigate(new ConcentrationDefinitionTestRulePage());
         }
 
@@ -72,42 +80,50 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
 
             if (minute == 5 && second == 0)
             {
-                FinishStage();
+                dispatcherTimer.Stop();
                 NavigationService.Navigate(new ConcentrationDefinitionTestResultPage());
             }
+            if (warningSecond == 10 && warningDoor)
+            {
+                warningDoor = false;
+                ViewboxWarning.Visibility = Visibility.Hidden;
+            }
+            warningSecond++;
         }
 
-        private void FinishStage()
+        private void ButtonNextStage(object sender, RoutedEventArgs e)
         {
-            dispatcherTimer.Stop();
-
-            if (textBox.Text == "")
+            textBox.Focus();
+            int[] temp = cl.FilteringDigitsInTheText(textBox.Text);
+            if (!cl.SearchBigNumberInArr(temp, 40))
             {
-                arrAllStageDigitsInTextBox[stage - 1] = null;
-                arrAllStageAbsentNumbers[stage - 1] = null;
-                arrAllStageExtraNumbers[stage - 1] = null;
-            }
-            else
-            {
-                arrAllStageDigitsInTextBox[stage - 1] = cl.FilteringDigitsInTheText(textBox.Text);
+                dispatcherTimer.Stop();
+                arrAllStageDigitsInTextBox[stage - 1] = temp;
                 arrAllStageExtraNumbers[stage - 1] = cl.GetArrayMissingNumbersInAnArray(arrAllStageDigitsInTextBox[stage - 1], arrAllStageRightNumbers[stage - 1]);
                 arrAllStageAbsentNumbers[stage - 1] = cl.GetArrayMissingNumbersInAnArray(arrAllStageRightNumbers[stage - 1], arrAllStageDigitsInTextBox[stage - 1]);
+
+                if (second < 10)
+                    AllStageTime[stage - 1] = $"{minute}:0{second}";
+                else
+                    AllStageTime[stage - 1] = $"{minute}:0{second}";
 
                 if (arrAllStageAbsentNumbers[stage - 1].Length != 0)
                     cl.SortingArr(ref arrAllStageAbsentNumbers[stage - 1]);
                 if (arrAllStageExtraNumbers[stage - 1].Length != 0)
                     cl.SortingArr(ref arrAllStageExtraNumbers[stage - 1]);
-            }
-        }
 
-        private void ButtonNextStage(object sender, RoutedEventArgs e)
-        {
-            FinishStage();
-            stage++;
-            if (stage != 6)
-                NavigationService.Navigate(new ConcentrationDefinitionTestTablePage());
+                stage++;
+                if (stage != 6)
+                    NavigationService.Navigate(new ConcentrationDefinitionTestTablePage());
+                else
+                    NavigationService.Navigate(new ConcentrationDefinitionTestResultPage());
+            }
             else
-                NavigationService.Navigate(new ConcentrationDefinitionTestResultPage());
+            {
+                ViewboxWarning.Visibility = Visibility.Visible;
+                warningSecond = 0;
+                warningDoor = true;
+            }
         }
 
         private void ChangeContentButtonRandom()
@@ -137,25 +153,51 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
 
         private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            if ((!Char.IsDigit(e.Text, 0)))
+            if (textBox.Text.Length <= 77)
             {
-                e.Handled = true;
+                if (textBox.Text.Length == 29)
+                    buttonNextStage.Visibility = Visibility.Visible;
 
-                string tamp = cl.CopyTheText(textBox.Text, textBox.SelectionStart, textBox.Text.Length);
+                int IndexStartSelection = textBox.SelectionStart;
 
-                if (textBox.SelectionStart != textBox.Text.Length)
+                if ((!Char.IsDigit(e.Text, 0)))
                 {
-                    int IndexStartSelection = textBox.SelectionStart;
-                    textBox.Text = textBox.Text.Remove(textBox.SelectionStart, tamp.Length);
-                    textBox.Text = textBox.Text + "," + tamp;
-                    textBox.SelectionStart = IndexStartSelection + 1;
-                }
-                else
-                {
-                    textBox.Text = textBox.Text + ",";
-                    textBox.SelectionStart = textBox.Text.Length;
+                    e.Handled = true;
+                    string tamp = cl.CopyTheText(textBox.Text, textBox.SelectionStart, textBox.Text.Length);
+
+                    if (textBox.Text != string.Empty && IndexStartSelection != 0)
+                    {
+                        if ((textBox.SelectionStart != textBox.Text.Length)
+                            && textBox.Text[(IndexStartSelection - 1)] != ','
+                            && textBox.Text[(IndexStartSelection)] != ',')
+                        {
+                            textBox.Text = textBox.Text.Remove(textBox.SelectionStart, tamp.Length);
+                            textBox.Text = textBox.Text + "," + tamp;
+                            textBox.SelectionStart = IndexStartSelection + 1;
+                        }
+                        else
+                        if (textBox.Text[(textBox.Text.Length - 1)] != ',' && IndexStartSelection == textBox.Text.Length)
+                        {
+                            textBox.Text = textBox.Text + ",";
+                            textBox.SelectionStart = textBox.Text.Length;
+                        }
+                    }
                 }
             }
+            else
+                e.Handled = true;
+        }
+
+        private void textBox_PreviewKeyUp(object sender, KeyEventArgs e)
+        {
+            if (textBox.Text.Length < 29)
+                buttonNextStage.Visibility = Visibility.Hidden;
+        }
+
+        private void textBox_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+                e.Handled = true;
         }
     }
 }

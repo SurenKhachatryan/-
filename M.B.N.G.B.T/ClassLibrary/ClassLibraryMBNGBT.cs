@@ -281,7 +281,7 @@ namespace ClassLibrary
                 if (Char.IsLetter(text[i]))
                 {
                     tamp += text[i];
-                    if (text.Length-1 == i || !Char.IsLetter(text[i + 1]))
+                    if (text.Length - 1 == i || !Char.IsLetter(text[i + 1]))
                     {
                         ls.Add(tamp);
                         tamp = string.Empty;
@@ -380,6 +380,14 @@ namespace ClassLibrary
             {
                 throw new ArgumentOutOfRangeException();
             }
+        }
+
+        public bool SearchBigNumberInArr(int[] arr, int number)
+        {
+            for (int i = 0; i < arr.Length; i++)
+                if (arr[i] > number)
+                    return true;
+            return false;
         }
     }
 }
