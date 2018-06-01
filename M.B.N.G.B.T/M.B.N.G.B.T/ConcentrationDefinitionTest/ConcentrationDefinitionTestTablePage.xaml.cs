@@ -33,6 +33,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         private int minute { get; set; } = 0;
         private int warningSecond { get; set; } = 0;
         private bool warningDoor { get; set; } = false;
+        private int index { get; set; } = 0;
 
         public ConcentrationDefinitionTestTablePage()
         {
@@ -155,7 +156,8 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         {
             if (textBox.Text.Length <= 77)
             {
-                if (textBox.Text.Length == 29)
+
+                if (cl.GetCountTheSimbolInText(textBox.Text, ',') == 14)
                     buttonNextStage.Visibility = Visibility.Visible;
 
                 int IndexStartSelection = textBox.SelectionStart;
@@ -190,12 +192,19 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
 
         private void textBox_PreviewKeyUp(object sender, KeyEventArgs e)
         {
-            if (textBox.Text.Length < 29)
+            textBox.Text = cl.DeleteExtraCommaInText(textBox.Text);
+            if (cl.GetCountTheSimbolInText(textBox.Text,',') < 14)
                 buttonNextStage.Visibility = Visibility.Hidden;
-        }
 
+            if (e.Key == Key.Back)
+            {
+                textBox.SelectionStart = (index - 1);
+            }
+        }
+        
         private void textBox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+            index = textBox.SelectionStart;
             if (e.Key == Key.Space)
                 e.Handled = true;
         }

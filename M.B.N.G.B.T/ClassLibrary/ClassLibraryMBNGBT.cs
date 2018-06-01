@@ -355,7 +355,7 @@ namespace ClassLibrary
             }
         }
 
-        public int GetCuntArrayElementsEqual(string[] arr)
+        public int GetCountArrayElementsEqual(string[] arr)
         {
             int tamp = 0;
             try
@@ -388,6 +388,52 @@ namespace ClassLibrary
                 if (arr[i] > number)
                     return true;
             return false;
+        }
+
+        public int GetCountTheSimbolInText(string text, char simbol)
+        {
+            int counter = 0;
+            for (int i = 0; i < text.Length; i++)
+                if (text[i] == simbol)
+                    counter++;
+
+            return counter;
+        }
+
+        public int GetIndexLastSimbolInText(string text, char simbol)
+        {
+            int index = 0;
+            for (int i = 0; i < text.Length; i++)
+                if (text[i] == simbol)
+                    index = i;
+
+            return index;
+        }
+
+        public string DeleteExtraCommaInText(string text)
+        {
+            string temp = string.Empty;
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (temp != string.Empty || text[i] != ',')
+                {
+                    if (text[i] == ',')
+                    {
+                        for (int j = i; j < text.Length; j++)
+                        {
+                            if ((text.Length - 1) == j || text[j + 1] != ',')
+                            {
+                                temp += text[i];
+                                i = j;
+                                j = text.Length;
+                            }
+                        }
+                    }
+                    else
+                        temp += text[i];
+                }
+            }
+            return temp;
         }
     }
 }

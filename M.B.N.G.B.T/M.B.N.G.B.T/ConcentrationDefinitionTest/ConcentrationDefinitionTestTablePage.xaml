@@ -16,8 +16,10 @@
             <RowDefinition Height="52*"/>
             <RowDefinition Height="66*"/>
             <RowDefinition Height="8*"/>
-            <RowDefinition Height="151*"/>
-            <RowDefinition Height="167*"/>
+            <RowDefinition Height="108*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="160*"/>
+            <RowDefinition Height="44*"/>
             <RowDefinition Height="36*"/>
             <RowDefinition Height="27*"/>
             <RowDefinition Height="51*"/>
@@ -39,14 +41,17 @@
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox Grid.Column="9" Grid.Row="3" Grid.RowSpan="2" HorizontalAlignment="Right">
+        <Viewbox Grid.Column="9" Grid.Row="6" HorizontalAlignment="Right">
             <Label x:Name="startStage" FontSize="120" Content="1/5" Foreground="White"  FontFamily="Sylfaen" Height="159"  Width="202" />
+        </Viewbox>
+        <Viewbox Grid.Column="9" Grid.Row="4" HorizontalAlignment="Right">
+            <Label x:Name="LabelCountNumbers" FontSize="80" Content="0/15" Foreground="White"  FontFamily="Sylfaen" Height="104"  Width="190" />
         </Viewbox>
 
         <Viewbox Grid.Column="9" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Right">
             <Label x:Name="timer" FontSize="100" Content="0:00" Foreground="White" FontFamily="Sylfaen"  Height="126"  Width="202" />
         </Viewbox>
-        <Viewbox Grid.Row="1" Grid.Column="6" Grid.RowSpan="6">
+        <Viewbox Grid.Row="1" Grid.Column="6" Grid.RowSpan="8">
             <WrapPanel Width="520" >
                 <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
                 <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
@@ -75,7 +80,7 @@
                 <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
             </WrapPanel>
         </Viewbox>
-        <Viewbox Grid.Row="1" Grid.Column="6" Grid.RowSpan="6">
+        <Viewbox Grid.Row="1" Grid.Column="6" Grid.RowSpan="8">
             <WrapPanel Width="520" >
                 <Label x:Name="Label1" Content=" 1" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
                 <Label x:Name="Label2" Content=" 2" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
@@ -104,12 +109,12 @@
                 <Label x:Name="Label25" Content="25" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
             </WrapPanel>
         </Viewbox>
-        
-        <Viewbox x:Name="ViewboxWarning" Grid.ColumnSpan="10" Grid.Row="7" Grid.RowSpan="2" Grid.Column="1" HorizontalAlignment="Left" Visibility="Hidden">
+
+        <Viewbox x:Name="ViewboxWarning" Grid.ColumnSpan="10" Grid.Row="9" Grid.RowSpan="2" Grid.Column="1" HorizontalAlignment="Left" Visibility="Hidden">
             <Label Content="Տեկստում կա 40-ից մեծ թիվ, խնդրում եմ ուղղել սխալը։" Foreground="DarkRed" FontFamily="Sylfaen" FontSize="50"  Width="1618" Height="109"/>
         </Viewbox>
-        
-        <Viewbox Grid.Row="9" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left">
+
+        <Viewbox Grid.Row="11" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left">
             <Button x:Name="buttonExitTheTest" Click="Button_Exit_The_Test" Content="Դուրս գալ թեստից" FontSize="20" Height="36" FontFamily="Sylfaen"  Foreground="White" Cursor="Hand"  Width="194">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -120,7 +125,7 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Row="9" Grid.Column="9" Grid.ColumnSpan="2" HorizontalAlignment="Right">
+        <Viewbox Grid.Row="11" Grid.Column="9" Grid.ColumnSpan="2" HorizontalAlignment="Right">
             <Button x:Name="buttonNextStage" Click="ButtonNextStage" Content="Անցնել հաջորդ փուլ" Visibility="Hidden" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand"  Height="36" Width="219">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -131,7 +136,7 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Row="1" Grid.RowSpan="7" Grid.ColumnSpan="4" Grid.Column="1">
+        <Viewbox Grid.Row="1" Grid.RowSpan="9" Grid.ColumnSpan="4" Grid.Column="1">
             <Rectangle  Stroke="{x:Null}"  Width="367" Height="507" >
                 <Rectangle.Fill>
                     <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Bloknot.png"/>
@@ -139,7 +144,7 @@
             </Rectangle>
         </Viewbox>
 
-        <Viewbox Grid.Row="2" Grid.Column="2" Grid.RowSpan="4" Grid.ColumnSpan="2">
+        <Viewbox Grid.Row="2" Grid.Column="2" Grid.RowSpan="6" Grid.ColumnSpan="2">
             <TextBox x:Name="textBox" FontSize="50"  FontFamily="Sylfaen" BorderBrush="{x:Null}" Background="{x:Null}" BorderThickness="0" SelectionBrush="#FFB90011" TextWrapping="Wrap" Text="" FontWeight="Bold" PreviewTextInput="TextBox_PreviewTextInput"  Height="392"  Width="308" PreviewKeyUp="textBox_PreviewKeyUp" PreviewKeyDown="textBox_PreviewKeyDown"/>
         </Viewbox>
     </Grid>
