@@ -23,7 +23,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         public ConcentrationDefinitionTestResultPage()
         {
             InitializeComponent();
-            if (ConcentrationDefinitionTestTablePage.AllStageTime[(ConcentrationDefinitionTestTablePage.stage - 2)] == "5:00")
+            if (ConcentrationDefinitionTestTablePage.AllStageTime[(ConcentrationDefinitionTestTablePage.stage - 1)] == "5:00")
                 ViewboxResult1.Visibility = Visibility.Visible;
             else
             {

@@ -6,6 +6,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Navigation;
 using System.Windows.Threading;
+using System.Windows.Media;
 
 namespace M.B.N.G.B.T.ConcentrationDefinitionTest
 {
@@ -32,6 +33,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         private int second { get; set; } = 0;
         private int minute { get; set; } = 0;
         private int warningSecond { get; set; } = 0;
+        private int secondCTRL { get; set; } = 0;
         private bool warningDoor { get; set; } = false;
         private int index { get; set; } = 0;
 
@@ -81,6 +83,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
 
             if (minute == 5 && second == 0)
             {
+                AllStageTime[stage - 1] = $"{minute}:0{second}";
                 dispatcherTimer.Stop();
                 NavigationService.Navigate(new ConcentrationDefinitionTestResultPage());
             }
@@ -89,6 +92,12 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 warningDoor = false;
                 ViewboxWarning.Visibility = Visibility.Hidden;
             }
+            if (secondCTRL == 1)
+            {
+                textBox.IsEnabled = true;
+                textBox.Focus();
+            }
+            secondCTRL++;
             warningSecond++;
         }
 
@@ -96,7 +105,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         {
             textBox.Focus();
             int[] temp = cl.FilteringDigitsInTheText(textBox.Text);
-            if (!cl.SearchBigNumberInArr(temp, 40))
+            if (!cl.SearchBigNumberInArr(temp, 40) )
             {
                 dispatcherTimer.Stop();
                 arrAllStageDigitsInTextBox[stage - 1] = temp;
@@ -156,10 +165,6 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         {
             if (textBox.Text.Length <= 77)
             {
-
-                if (cl.GetCountTheSimbolInText(textBox.Text, ',') == 14)
-                    buttonNextStage.Visibility = Visibility.Visible;
-
                 int IndexStartSelection = textBox.SelectionStart;
 
                 if ((!Char.IsDigit(e.Text, 0)))
@@ -192,21 +197,43 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
 
         private void textBox_PreviewKeyUp(object sender, KeyEventArgs e)
         {
-            textBox.Text = cl.DeleteExtraCommaInText(textBox.Text);
-            if (cl.GetCountTheSimbolInText(textBox.Text,',') < 14)
-                buttonNextStage.Visibility = Visibility.Hidden;
+            int countNumbers = cl.GetCountNumbersAfterSimbols(textBox.Text);
 
-            if (e.Key == Key.Back)
-            {
+            textBox.Text = cl.DeleteExtraCommaInText(textBox.Text);
+            LabelCountNumbers.Content = $"{countNumbers}/15";
+
+            if (countNumbers > 15)
+                LabelCountNumbers.Foreground = Brushes.Red;
+            else
+                LabelCountNumbers.Foreground = Brushes.Snow;
+
+            if (countNumbers < 15)
+                buttonNextStage.Visibility = Visibility.Hidden;
+            else
+            if (countNumbers >= 15)
+                buttonNextStage.Visibility = Visibility.Visible;
+
+            if (e.Key == Key.Back && textBox.Text != string.Empty)
                 textBox.SelectionStart = (index - 1);
-            }
         }
-        
+
         private void textBox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             index = textBox.SelectionStart;
             if (e.Key == Key.Space)
                 e.Handled = true;
+
+            if (e.Key == Key.LeftCtrl || e.Key == Key.RightCtrl
+                || e.Key == Key.LeftShift || e.Key == Key.RightShift)
+            {
+                textBox.IsEnabled = false;
+                secondCTRL = 0;
+            }
+        }
+
+        private void textBox_PreviewMouseRightButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

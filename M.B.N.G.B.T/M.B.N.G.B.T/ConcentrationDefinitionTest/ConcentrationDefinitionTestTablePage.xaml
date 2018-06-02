@@ -145,7 +145,7 @@
         </Viewbox>
 
         <Viewbox Grid.Row="2" Grid.Column="2" Grid.RowSpan="6" Grid.ColumnSpan="2">
-            <TextBox x:Name="textBox" FontSize="50"  FontFamily="Sylfaen" BorderBrush="{x:Null}" Background="{x:Null}" BorderThickness="0" SelectionBrush="#FFB90011" TextWrapping="Wrap" Text="" FontWeight="Bold" PreviewTextInput="TextBox_PreviewTextInput"  Height="392"  Width="308" PreviewKeyUp="textBox_PreviewKeyUp" PreviewKeyDown="textBox_PreviewKeyDown"/>
+            <TextBox x:Name="textBox" FontSize="56"  FontFamily="Sylfaen" BorderBrush="{x:Null}" Background="{x:Null}" BorderThickness="0" SelectionBrush="#FFB90011" TextWrapping="Wrap" Text="" FontWeight="Bold" PreviewTextInput="TextBox_PreviewTextInput"  Height="392"  Width="308" PreviewKeyUp="textBox_PreviewKeyUp" PreviewKeyDown="textBox_PreviewKeyDown" PreviewMouseRightButtonUp="textBox_PreviewMouseRightButtonUp"/>
         </Viewbox>
     </Grid>
 </Page>

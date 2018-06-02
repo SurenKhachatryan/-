@@ -410,6 +410,17 @@ namespace ClassLibrary
             return index;
         }
 
+        public int GetCountNumbersAfterSimbols(string text)
+        {
+            int counter = 0;
+            for (int i = 0; i < text.Length; i++)
+                if (Char.IsDigit(text[i]))
+                    if (i == text.Length - 1 || !Char.IsDigit(text[i + 1]))
+                        counter++;
+
+            return counter;
+        }
+
         public string DeleteExtraCommaInText(string text)
         {
             string temp = string.Empty;
