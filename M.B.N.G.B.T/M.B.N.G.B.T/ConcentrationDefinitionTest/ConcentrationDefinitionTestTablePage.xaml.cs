@@ -104,11 +104,11 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         private void ButtonNextStage(object sender, RoutedEventArgs e)
         {
             textBox.Focus();
-            int[] temp = cl.FilteringDigitsInTheText(textBox.Text);
-            if (!cl.SearchBigNumberInArr(temp, 40) )
+            int[] tamp = cl.FilteringDigitsInTheText(textBox.Text);
+            if (!cl.SearchBigNumberInArr(tamp, 40) )
             {
                 dispatcherTimer.Stop();
-                arrAllStageDigitsInTextBox[stage - 1] = temp;
+                arrAllStageDigitsInTextBox[stage - 1] = tamp;
                 arrAllStageExtraNumbers[stage - 1] = cl.GetArrayMissingNumbersInAnArray(arrAllStageDigitsInTextBox[stage - 1], arrAllStageRightNumbers[stage - 1]);
                 arrAllStageAbsentNumbers[stage - 1] = cl.GetArrayMissingNumbersInAnArray(arrAllStageRightNumbers[stage - 1], arrAllStageDigitsInTextBox[stage - 1]);
 
