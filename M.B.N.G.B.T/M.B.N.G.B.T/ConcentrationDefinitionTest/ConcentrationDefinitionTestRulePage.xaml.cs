@@ -21,7 +21,6 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
 
         private void Button_Start_Test(object sender, RoutedEventArgs e)
         {
-            ConcentrationDefinitionTestTablePage.stage = 1;
             NavigationService.Navigate(new ConcentrationDefinitionTestTablePage());
         }
     }

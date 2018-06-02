@@ -18,49 +18,47 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         private List<int> lsRndDigite { get; set; } = new List<int>();
         private Label[] arrAllLabels { get; set; } = new Label[25];
 
-        public static int[][] arrAllStageRandomDigits { get; private set; } = new int[5][];
-        public static int[][] arrAllStageDigitsInTextBox { get; private set; } = new int[5][];
-        public static int[][] arrAllStageRightNumbers { get; private set; } = new int[5][];
-        public static int[][] arrAllStageAbsentNumbers { get; private set; } = new int[5][];
-        public static int[][] arrAllStageExtraNumbers { get; private set; } = new int[5][];
-        public static string[] AllStageTime { get; private set; } = new string[5];
-        public static byte stage { get; set; } = 1;
+        public static int[] arrAllDigitsInTextBox { get; private set; } = new int[5];
+        public static int[] arrAllRightNumbers { get; private set; } = new int[5];
+        private static int[] arrAllRandomDigits = new int[5];
+        private static int[] arrAllAbsentNumbers = new int[5];
+        private static int[] arrAllExtraNumbers = new int[5];
+
+        public int[] ArrAllRandomDigits { get { return arrAllRandomDigits; } }
+        public int[] ArrAllAbsentNumbers { get { return arrAllAbsentNumbers; } }
+        public int[] ArrAllExtraNumbers { get { return arrAllExtraNumbers; } }
 
         private Random rnd = new Random();
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
+        private int index { get; set; } = 0;
         private int second { get; set; } = 0;
         private int minute { get; set; } = 0;
-        private int warningSecond { get; set; } = 0;
         private int secondCTRL { get; set; } = 0;
+        private int warningSecond { get; set; } = 0;
         private bool warningDoor { get; set; } = false;
-        private int index { get; set; } = 0;
+
 
         public ConcentrationDefinitionTestTablePage()
         {
             InitializeComponent();
-            if (stage == 5)
-                buttonNextStage.Content = "Ավարտել թեսնը";
 
-            if (stage == 1)
-            {
-                arrAllStageRandomDigits = new int[5][];
-                arrAllStageDigitsInTextBox = new int[5][];
-                arrAllStageRightNumbers = new int[5][];
-                arrAllStageAbsentNumbers = new int[5][];
-                arrAllStageExtraNumbers = new int[5][];
-                AllStageTime = new string[5];
-            }
-            dispatcherTimer.Start();
+            arrAllRandomDigits = new int[5];
+            arrAllDigitsInTextBox = new int[5];
+            arrAllRightNumbers = new int[5];
+            arrAllAbsentNumbers = new int[5];
+            arrAllExtraNumbers = new int[5];
+
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
+            dispatcherTimer.Start();
 
-            startStage.Content = $"{stage}/5";
             textBox.Focus();
             ChangeContentButtonRandom();
 
-            arrAllStageRightNumbers[stage - 1] = cl.SortingAndSerchInArrMissingNumbers(lsRndDigite.ToArray(), 40).ToArray();
+            arrAllRightNumbers = cl.SortingAndSerchInArrMissingNumbers(lsRndDigite.ToArray(), 40).ToArray();
         }
+
         private void Button_Exit_The_Test(object sender, RoutedEventArgs e)
         {
             dispatcherTimer.Stop();
@@ -70,28 +68,43 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         private void LabelTimer(object sender, EventArgs e)
         {
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-            second++;
+
             if (second == 60)
             {
                 second = 0;
                 minute++;
+                timer.Foreground = Brushes.Yellow;
             }
+
+            if (minute == 1 && second == 15)
+                timer.Foreground = Brushes.Red;
+
             if (second < 10)
                 timer.Content = $"{minute}:0{second}";
             else
                 timer.Content = $"{minute}:{second}";
 
-            if (minute == 5 && second == 0)
+            if (minute == 1 && second == 30)
             {
-                AllStageTime[stage - 1] = $"{minute}:0{second}";
-                dispatcherTimer.Stop();
-                NavigationService.Navigate(new ConcentrationDefinitionTestResultPage());
+                if (textBox.Text != string.Empty)
+                {
+                    dispatcherTimer.Stop();
+                    textBox.IsEnabled = false;
+                    timer.Foreground = Brushes.Black;
+                    buttonFinishTest.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    NavigationService.Navigate(new ConcentrationDefinitionTestResultPage());
+                }
             }
+
             if (warningSecond == 10 && warningDoor)
             {
                 warningDoor = false;
                 ViewboxWarning.Visibility = Visibility.Hidden;
             }
+
             if (secondCTRL == 1)
             {
                 textBox.IsEnabled = true;
@@ -99,34 +112,22 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
             }
             secondCTRL++;
             warningSecond++;
+            second++;
         }
 
-        private void ButtonNextStage(object sender, RoutedEventArgs e)
+        private void Button_Finish_Test(object sender, RoutedEventArgs e)
         {
-            textBox.Focus();
             int[] temp = cl.FilteringDigitsInTheText(textBox.Text);
-            if (!cl.SearchBigNumberInArr(temp, 40) )
+            if (!cl.SearchBigNumberInArr(temp, 40))
             {
-                dispatcherTimer.Stop();
-                arrAllStageDigitsInTextBox[stage - 1] = temp;
-                arrAllStageExtraNumbers[stage - 1] = cl.GetArrayMissingNumbersInAnArray(arrAllStageDigitsInTextBox[stage - 1], arrAllStageRightNumbers[stage - 1]);
-                arrAllStageAbsentNumbers[stage - 1] = cl.GetArrayMissingNumbersInAnArray(arrAllStageRightNumbers[stage - 1], arrAllStageDigitsInTextBox[stage - 1]);
+                arrAllDigitsInTextBox = temp;
+                arrAllExtraNumbers = cl.GetArrayMissingNumbersInAnArray(arrAllDigitsInTextBox, arrAllRightNumbers);
+                arrAllAbsentNumbers = cl.GetArrayMissingNumbersInAnArray(arrAllRightNumbers, arrAllDigitsInTextBox);
 
-                if (second < 10)
-                    AllStageTime[stage - 1] = $"{minute}:0{second}";
-                else
-                    AllStageTime[stage - 1] = $"{minute}:0{second}";
+                cl.SortingArr(ref arrAllAbsentNumbers);
+                cl.SortingArr(ref arrAllExtraNumbers);
 
-                if (arrAllStageAbsentNumbers[stage - 1].Length != 0)
-                    cl.SortingArr(ref arrAllStageAbsentNumbers[stage - 1]);
-                if (arrAllStageExtraNumbers[stage - 1].Length != 0)
-                    cl.SortingArr(ref arrAllStageExtraNumbers[stage - 1]);
-
-                stage++;
-                if (stage != 6)
-                    NavigationService.Navigate(new ConcentrationDefinitionTestTablePage());
-                else
-                    NavigationService.Navigate(new ConcentrationDefinitionTestResultPage());
+                NavigationService.Navigate(new ConcentrationDefinitionTestResultPage());
             }
             else
             {
@@ -157,13 +158,13 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 else
                     i--;
             }
-            arrAllStageRandomDigits[stage - 1] = lsRndDigite.ToArray();
-            cl.SortingArr(ref arrAllStageRandomDigits[stage - 1]);
+            arrAllRandomDigits = lsRndDigite.ToArray();
+            cl.SortingArr(ref arrAllRandomDigits);
         }
 
         private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            if (textBox.Text.Length <= 77)
+            if (textBox.Text.Length <= 77 && e.Text != string.Empty)
             {
                 int IndexStartSelection = textBox.SelectionStart;
 
@@ -206,12 +207,6 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 LabelCountNumbers.Foreground = Brushes.Red;
             else
                 LabelCountNumbers.Foreground = Brushes.Snow;
-
-            if (countNumbers < 15)
-                buttonNextStage.Visibility = Visibility.Hidden;
-            else
-            if (countNumbers >= 15)
-                buttonNextStage.Visibility = Visibility.Visible;
 
             if (e.Key == Key.Back && textBox.Text != string.Empty)
                 textBox.SelectionStart = (index - 1);
