@@ -35,7 +35,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         private int index { get; set; } = 0;
         private int second { get; set; } = 0;
         private int minute { get; set; } = 0;
-        private int secondCTRL { get; set; } = 0;
+        private int secondCtrL { get; set; } = 0;
         private int warningSecond { get; set; } = 0;
         private bool warningDoor { get; set; } = false;
 
@@ -105,12 +105,12 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 ViewboxWarning.Visibility = Visibility.Hidden;
             }
 
-            if (secondCTRL == 1)
+            if (secondCtrL == 1)
             {
                 textBox.IsEnabled = true;
                 textBox.Focus();
             }
-            secondCTRL++;
+            secondCtrL++;
             warningSecond++;
             second++;
         }
@@ -222,7 +222,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 || e.Key == Key.LeftShift || e.Key == Key.RightShift)
             {
                 textBox.IsEnabled = false;
-                secondCTRL = 0;
+                secondCtrL = 0;
             }
         }
 
