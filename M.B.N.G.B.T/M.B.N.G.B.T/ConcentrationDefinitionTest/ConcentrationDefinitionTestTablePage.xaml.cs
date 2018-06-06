@@ -24,6 +24,9 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         private static int[] arrAllAbsentNumbers = new int[5];
         private static int[] arrAllExtraNumbers = new int[5];
 
+        public static bool IsEmptyTextBox { get; private set; } = true;
+        public static bool IsBigNumbersInTextBox { get; private set; } = false;
+
         public int[] ArrAllRandomDigits { get { return arrAllRandomDigits; } }
         public int[] ArrAllAbsentNumbers { get { return arrAllAbsentNumbers; } }
         public int[] ArrAllExtraNumbers { get { return arrAllExtraNumbers; } }
@@ -36,9 +39,6 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         private int second { get; set; } = 0;
         private int minute { get; set; } = 0;
         private int secondCtrL { get; set; } = 0;
-        private int warningSecond { get; set; } = 0;
-        private bool warningDoor { get; set; } = false;
-
 
         public ConcentrationDefinitionTestTablePage()
         {
@@ -49,6 +49,8 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
             arrAllRightNumbers = new int[5];
             arrAllAbsentNumbers = new int[5];
             arrAllExtraNumbers = new int[5];
+            IsEmptyTextBox = true;
+            IsBigNumbersInTextBox = false;
 
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
             dispatcherTimer.Start();
@@ -86,7 +88,10 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
 
             if (minute == 1 && second == 30)
             {
-                if (textBox.Text != string.Empty)
+                IsEmptyTextBox = (textBox.Text == string.Empty) ? true : false;
+                IsBigNumbersInTextBox = (cl.SearchBigNumberInArr(cl.FilteringDigitsInTheText(textBox.Text), 40)) ? true : false;
+
+                if (!IsBigNumbersInTextBox && !IsEmptyTextBox)
                 {
                     dispatcherTimer.Stop();
                     textBox.IsEnabled = false;
@@ -94,47 +99,27 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                     buttonFinishTest.Visibility = Visibility.Visible;
                 }
                 else
-                {
                     NavigationService.Navigate(new ConcentrationDefinitionTestResultPage());
-                }
             }
-
-            if (warningSecond == 10 && warningDoor)
-            {
-                warningDoor = false;
-                ViewboxWarning.Visibility = Visibility.Hidden;
-            }
-
+            
             if (secondCtrL == 1)
             {
                 textBox.IsEnabled = true;
                 textBox.Focus();
             }
-            secondCtrL++;
-            warningSecond++;
             second++;
         }
 
         private void Button_Finish_Test(object sender, RoutedEventArgs e)
         {
-            int[] temp = cl.FilteringDigitsInTheText(textBox.Text);
-            if (!cl.SearchBigNumberInArr(temp, 40))
-            {
-                arrAllDigitsInTextBox = temp;
-                arrAllExtraNumbers = cl.GetArrayMissingNumbersInAnArray(arrAllDigitsInTextBox, arrAllRightNumbers);
-                arrAllAbsentNumbers = cl.GetArrayMissingNumbersInAnArray(arrAllRightNumbers, arrAllDigitsInTextBox);
+            arrAllDigitsInTextBox = cl.FilteringDigitsInTheText(textBox.Text);
+            arrAllExtraNumbers = cl.GetArrayMissingNumbersInAnArray(arrAllDigitsInTextBox, arrAllRightNumbers);
+            arrAllAbsentNumbers = cl.GetArrayMissingNumbersInAnArray(arrAllRightNumbers, arrAllDigitsInTextBox);
 
-                cl.SortingArr(ref arrAllAbsentNumbers);
-                cl.SortingArr(ref arrAllExtraNumbers);
+            cl.SortingArr(ref arrAllAbsentNumbers);
+            cl.SortingArr(ref arrAllExtraNumbers);
 
-                NavigationService.Navigate(new ConcentrationDefinitionTestResultPage());
-            }
-            else
-            {
-                ViewboxWarning.Visibility = Visibility.Visible;
-                warningSecond = 0;
-                warningDoor = true;
-            }
+            NavigationService.Navigate(new ConcentrationDefinitionTestResultPage());
         }
 
         private void ChangeContentButtonRandom()
@@ -198,6 +183,11 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
 
         private void textBox_PreviewKeyUp(object sender, KeyEventArgs e)
         {
+            if (cl.SearchBigNumberInArr(cl.FilteringDigitsInTheText(textBox.Text), 40))
+                ViewboxWarning.Visibility = Visibility.Visible;
+            else
+                ViewboxWarning.Visibility = Visibility.Hidden;
+
             int countNumbers = cl.GetCountNumbersAfterSimbols(textBox.Text);
 
             textBox.Text = cl.DeleteExtraCommaInText(textBox.Text);
