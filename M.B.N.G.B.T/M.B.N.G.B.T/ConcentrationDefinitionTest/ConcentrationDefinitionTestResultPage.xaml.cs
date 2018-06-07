@@ -32,7 +32,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
             if(ConcentrationDefinitionTestTablePage.IsBigNumbersInTextBox)
             {
                 labelInfo.Visibility = Visibility.Visible;
-                labelInfo.Content = "Տեկստում կային 40-ից մեծ թվեր հնարավոր է դուք թվերը չեք արանձնացրել \nստորակետերով   խնդրում   եմ   ծանոթանալ   կանոներին  և  թեստն \nանցնել սկզբից:";
+                labelInfo.Content = "Տեկստում կային 40-ից մեծ թվեր հնարավոր է դուք թվերը չեք արանձնացրել \nստորակետերով   խնդրում   եմ   ծանոթանալ    կանոներին  և  թեստն \nանցնել սկզբից:";
             }
 
         }
