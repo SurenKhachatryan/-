@@ -23,7 +23,17 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         public ConcentrationDefinitionTestResultPage()
         {
             InitializeComponent();
-          
+            if (ConcentrationDefinitionTestTablePage.IsEmptyTextBox)
+            {
+                labelInfo.Visibility = Visibility.Visible;
+                labelInfo.Content = "Դուք ոչինչ չեք լրացրել,խնդրում եմ անցնել թեստը կրկին";
+            }
+            else
+            if(ConcentrationDefinitionTestTablePage.IsBigNumbersInTextBox)
+            {
+                labelInfo.Visibility = Visibility.Visible;
+                labelInfo.Content = "Տեկստում կային 40-ից մեծ թվեր հնարավոր է դուք թվերը չեք արանձնացրել \nստորակետերով   խնդրում   եմ   ծանոթանալ   կանոներին  և  թեստն \nանցնել սկզբից:";
+            }
 
         }
 
