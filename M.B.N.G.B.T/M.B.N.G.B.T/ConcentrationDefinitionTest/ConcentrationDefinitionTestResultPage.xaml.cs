@@ -29,10 +29,16 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 labelInfo.Content = "Դուք ոչինչ չեք լրացրել,խնդրում եմ անցնել թեստը կրկին";
             }
             else
-            if(ConcentrationDefinitionTestTablePage.IsBigNumbersInTextBox)
+            if (ConcentrationDefinitionTestTablePage.IsBigNumbersInTextBox && ConcentrationDefinitionTestTablePage.countBigNambers > 1)
             {
                 labelInfo.Visibility = Visibility.Visible;
-                labelInfo.Content = "Տեկստում կային 40-ից մեծ թվեր հնարավոր է դուք թվերը չեք արանձնացրել \nստորակետերով   խնդրում   եմ   ծանոթանալ    կանոներին  և  թեստն \nանցնել սկզբից:";
+                labelInfo.Content = "Տեկստում կա 40-ից մեծ թվեր հնարավոր է դուք թվերը չեք արանձնացրել \nստորակետերով   խնդրում   եմ   ծանոթանալ    կանոներին  և  թեստն \nանցնել սկզբից:";
+            }
+            else
+            if(ConcentrationDefinitionTestTablePage.IsBigNumbersInTextBox && ConcentrationDefinitionTestTablePage.countBigNambers == 1)
+            {
+                labelInfo.Visibility = Visibility.Visible;
+                labelInfo.Content = "Տեկստում կա 40-ից մեծ թիվ հնարավոր է դուք թվերը չեք արանձնացրել \nստորակետերով   խնդրում   եմ   ծանոթանալ    կանոներին  և  թեստն \nանցնել սկզբից:";
             }
 
         }

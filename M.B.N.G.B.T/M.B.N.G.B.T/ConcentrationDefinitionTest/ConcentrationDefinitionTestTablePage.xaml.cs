@@ -20,13 +20,16 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
 
         public static int[] arrAllDigitsInTextBox { get; private set; } = new int[5];
         public static int[] arrAllRightNumbers { get; private set; } = new int[5];
+        private static int[] arrBigNumbers = new int[0];
         private static int[] arrAllRandomDigits = new int[5];
         private static int[] arrAllAbsentNumbers = new int[5];
         private static int[] arrAllExtraNumbers = new int[5];
 
         public static bool IsEmptyTextBox { get; private set; } = true;
         public static bool IsBigNumbersInTextBox { get; private set; } = false;
+        public static int countBigNambers { get; private set; } = 0;
 
+        public int[] ArrBigNumbers { get { return arrBigNumbers; } }
         public int[] ArrAllRandomDigits { get { return arrAllRandomDigits; } }
         public int[] ArrAllAbsentNumbers { get { return arrAllAbsentNumbers; } }
         public int[] ArrAllExtraNumbers { get { return arrAllExtraNumbers; } }
@@ -36,8 +39,8 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
         private int index { get; set; } = 0;
-        private int second { get; set; } = 0;
-        private int minute { get; set; } = 0;
+        private int second { get; set; } = 25;
+        private int minute { get; set; } = 1;
         private int secondCtrL { get; set; } = 0;
 
         public ConcentrationDefinitionTestTablePage()
@@ -51,6 +54,8 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
             arrAllExtraNumbers = new int[5];
             IsEmptyTextBox = true;
             IsBigNumbersInTextBox = false;
+            countBigNambers = 0;
+            arrBigNumbers = new int[0];
 
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
             dispatcherTimer.Start();
@@ -90,6 +95,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
             {
                 IsEmptyTextBox = (textBox.Text == string.Empty) ? true : false;
                 IsBigNumbersInTextBox = (cl.SearchBigNumberInArr(cl.FilteringDigitsInTheText(textBox.Text), 40)) ? true : false;
+                countBigNambers = cl.GetCountAndArrBigDigits(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40, out arrBigNumbers);
 
                 if (!IsBigNumbersInTextBox && !IsEmptyTextBox)
                 {
@@ -101,7 +107,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 else
                     NavigationService.Navigate(new ConcentrationDefinitionTestResultPage());
             }
-            
+
             if (secondCtrL == 1)
             {
                 textBox.IsEnabled = true;

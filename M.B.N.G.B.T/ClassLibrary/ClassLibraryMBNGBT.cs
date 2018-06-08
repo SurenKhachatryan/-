@@ -446,5 +446,41 @@ namespace ClassLibrary
             }
             return temp;
         }
+
+        public int[] GetArrFiltringNumbersInTheText(string text)
+        {
+            List<int> ls = new List<int>();
+            string temp = string.Empty;
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (Char.IsDigit(text[i]))
+                {
+                    temp += text[i];
+                    if (i == text.Length - 1 || !Char.IsDigit(text[i + 1]))
+                    {
+                        ls.Add(Convert.ToInt32(temp));
+                        temp = string.Empty;
+                    }
+                }
+            }
+            return ls.ToArray();
+        }
+
+        public int GetCountAndArrBigDigits(int[] arr, int minNumber, out int[] arrOut)
+        {
+            int count = 0;
+            List<int> ls = new List<int>();
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (minNumber < arr[i])
+                {
+                    ls.Add(arr[i]);
+                    count++;
+                }
+            }
+            arrOut = ls.ToArray();
+            return count;
+        }
     }
 }
