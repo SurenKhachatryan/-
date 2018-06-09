@@ -94,8 +94,8 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
             if (minute == 1 && second == 30)
             {
                 IsEmptyTextBox = (textBox.Text == string.Empty) ? true : false;
-                IsBigNumbersInTextBox = (cl.SearchBigNumberInArr(cl.FilteringDigitsInTheText(textBox.Text), 40)) ? true : false;
-                countBigNambers = cl.GetCountAndArrBigDigits(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40, out arrBigNumbers);
+                IsBigNumbersInTextBox = (cl.SearchBigNumberInArr(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40)) ? true : false;
+                countBigNambers = cl.GetCountAndArrBigNumbers(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40, out arrBigNumbers);
 
                 if (!IsBigNumbersInTextBox && !IsEmptyTextBox)
                 {
@@ -118,7 +118,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
 
         private void Button_Finish_Test(object sender, RoutedEventArgs e)
         {
-            arrAllDigitsInTextBox = cl.FilteringDigitsInTheText(textBox.Text);
+            arrAllDigitsInTextBox = cl.GetArrFiltringNumbersInTheText(textBox.Text);
             arrAllExtraNumbers = cl.GetArrayMissingNumbersInAnArray(arrAllDigitsInTextBox, arrAllRightNumbers);
             arrAllAbsentNumbers = cl.GetArrayMissingNumbersInAnArray(arrAllRightNumbers, arrAllDigitsInTextBox);
 
@@ -189,7 +189,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
 
         private void textBox_PreviewKeyUp(object sender, KeyEventArgs e)
         {
-            if (cl.SearchBigNumberInArr(cl.FilteringDigitsInTheText(textBox.Text), 40))
+            if (cl.SearchBigNumberInArr(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40))
                 ViewboxWarning.Visibility = Visibility.Visible;
             else
                 ViewboxWarning.Visibility = Visibility.Hidden;

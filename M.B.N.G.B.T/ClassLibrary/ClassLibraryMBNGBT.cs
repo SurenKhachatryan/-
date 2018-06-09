@@ -47,7 +47,7 @@ namespace ClassLibrary
             return tamp;
         }
 
-        public Int32[] FilteringDigitsInTheText(string str)
+        public Int32[] GetArrFiltringNumbersInTheText(string str)
         {
             List<Int32> ls = new List<Int32>();
             string tamp = string.Empty;
@@ -447,26 +447,7 @@ namespace ClassLibrary
             return temp;
         }
 
-        public int[] GetArrFiltringNumbersInTheText(string text)
-        {
-            List<int> ls = new List<int>();
-            string temp = string.Empty;
-            for (int i = 0; i < text.Length; i++)
-            {
-                if (Char.IsDigit(text[i]))
-                {
-                    temp += text[i];
-                    if (i == text.Length - 1 || !Char.IsDigit(text[i + 1]))
-                    {
-                        ls.Add(Convert.ToInt32(temp));
-                        temp = string.Empty;
-                    }
-                }
-            }
-            return ls.ToArray();
-        }
-
-        public int GetCountAndArrBigDigits(int[] arr, int minNumber, out int[] arrOut)
+        public int GetCountAndArrBigNumbers(int[] arr, int minNumber, out int[] arrOut)
         {
             int count = 0;
             List<int> ls = new List<int>();
