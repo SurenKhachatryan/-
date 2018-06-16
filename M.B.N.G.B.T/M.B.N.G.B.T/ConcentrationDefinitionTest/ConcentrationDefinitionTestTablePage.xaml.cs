@@ -39,9 +39,9 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
         private int index { get; set; } = 0;
-        private int second { get; set; } = 25;
-        private int minute { get; set; } = 1;
-        private int secondCtrL { get; set; } = 0;
+        private int second { get; set; } = 0;
+        private int minute { get; set; } = 0;
+        private int secondCTRL { get; set; } = 0;
 
         public ConcentrationDefinitionTestTablePage()
         {
@@ -108,7 +108,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                     NavigationService.Navigate(new ConcentrationDefinitionTestResultPage());
             }
 
-            if (secondCtrL == 1)
+            if (secondCTRL == 1)
             {
                 textBox.IsEnabled = true;
                 textBox.Focus();
@@ -218,7 +218,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 || e.Key == Key.LeftShift || e.Key == Key.RightShift)
             {
                 textBox.IsEnabled = false;
-                secondCtrL = 0;
+                secondCTRL = 0;
             }
         }
 
