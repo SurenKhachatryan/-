@@ -107,7 +107,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 else
                     NavigationService.Navigate(new ConcentrationDefinitionTestResultPage());
             }
-
+            
             if (secondCTRL == 1)
             {
                 textBox.IsEnabled = true;

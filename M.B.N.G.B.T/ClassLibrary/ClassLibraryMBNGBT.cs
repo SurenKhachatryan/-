@@ -463,5 +463,15 @@ namespace ClassLibrary
             arrOut = ls.ToArray();
             return count;
         }
+
+        public bool SearchEqualNumbersInALineAfterAComma(string text)
+        {
+            var arrNumbers = GetArrFiltringNumbersInTheText(text);
+            for (int i = 0; i < arrNumbers.Length; i++)
+                for (int j = i + 1; j < arrNumbers.Length; j++)
+                    if (arrNumbers[i] == arrNumbers[j])
+                        return true;
+            return false;
+        }
     }
 }
