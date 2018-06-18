@@ -42,7 +42,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         private int second { get; set; } = 0;
         private int minute { get; set; } = 0;
         private int secondCTRL { get; set; } = 0;
-        private int newsecond { get; set; } = 0;
+        private int repeatNumbersSecond { get; set; } = 0;
 
         public ConcentrationDefinitionTestTablePage()
         {
@@ -82,6 +82,19 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 second = 0;
                 minute++;
                 timer.Foreground = Brushes.Yellow;
+            }
+
+            if (cl.SearchEqualNumbersInALineAfterAComma(textBox.Text))
+            {
+                if (repeatNumbersSecond == 2)
+                {
+                    if (cl.SearchBigNumberInArr(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40) && cl.SearchEqualNumbersInALineAfterAComma(textBox.Text))
+                        LabelWarning.Content = "Տեկստում կա 40-ից մեծ թիվ և կրկնվող թիվ:";
+                    else
+                        LabelWarning.Content = "Տեկստում կա կրկնվող թիվ:";
+                }
+                if (repeatNumbersSecond != 2)
+                    repeatNumbersSecond++;
             }
 
             if (minute == 1 && second == 15)
@@ -156,6 +169,9 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
 
         private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
+            if (cl.GetCountNumbersAfterSimbols(textBox.Text) == 15 && !Char.IsDigit(Convert.ToChar(e.Text)))
+                e.Handled = true;
+            else
             if (textBox.Text.Length <= 77 && e.Text != string.Empty)
             {
                 int IndexStartSelection = textBox.SelectionStart;
@@ -190,27 +206,27 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
 
         private void textBox_PreviewKeyUp(object sender, KeyEventArgs e)
         {
-            if (!cl.SearchBigNumberInArr(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40) && !cl.SearchEqualNumbersInALineAfterAComma(textBox.Text))
+            int countNumbers = cl.GetCountNumbersAfterSimbols(textBox.Text);
+            bool bigNumbers = cl.SearchBigNumberInArr(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40);
+            bool repeatNumbers = cl.SearchEqualNumbersInALineAfterAComma(textBox.Text);
+
+            if (repeatNumbers != true)
+                repeatNumbersSecond = 0;
+
+            if (!bigNumbers && !repeatNumbers)
                 LabelWarning.Content = string.Empty;
             else
-            if (cl.SearchBigNumberInArr(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40) && cl.SearchEqualNumbersInALineAfterAComma(textBox.Text))
-                LabelWarning.Content = "Տեկստում կա 40-ից մեծ թիվ և կրկնվող թիվ խնդրում եմ ուղղել սխալը";
+            if (bigNumbers && repeatNumbers && repeatNumbersSecond == 2)
+                LabelWarning.Content = "Տեկստում կա 40-ից մեծ թիվ և կրկնվող թիվ:";
             else
-            if (cl.SearchBigNumberInArr(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40))
-                LabelWarning.Content = "Տեկստում կա 40-ից մեծ թիվ խնդրում եմ ուղղել սխալը";
+            if (bigNumbers)
+                LabelWarning.Content = "Տեկստում կա 40-ից մեծ թիվ:";
             else
-            if (cl.SearchEqualNumbersInALineAfterAComma(textBox.Text))
-                LabelWarning.Content = "Տեկստում կա կրկնվող թիվ խնդրում եմ ուղղել սխալը";
-
-            int countNumbers = cl.GetCountNumbersAfterSimbols(textBox.Text);
+            if (repeatNumbers && repeatNumbersSecond == 2)
+                LabelWarning.Content = "Տեկստում կա կրկնվող թիվ:";
 
             textBox.Text = cl.DeleteExtraCommaInText(textBox.Text);
             LabelCountNumbers.Content = $"{countNumbers}/15";
-
-            if (countNumbers > 15)
-                LabelCountNumbers.Foreground = Brushes.Red;
-            else
-                LabelCountNumbers.Foreground = Brushes.Snow;
 
             if (e.Key == Key.Back && textBox.Text != string.Empty)
                 textBox.SelectionStart = (index - 1);

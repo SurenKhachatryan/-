@@ -41,7 +41,7 @@
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
 
-       
+
         <Viewbox Grid.Column="9" Grid.Row="4" HorizontalAlignment="Right">
             <Label x:Name="LabelCountNumbers" FontSize="80" Content="0/15" Foreground="White"  FontFamily="Sylfaen" Height="104"  Width="190" />
         </Viewbox>
@@ -109,9 +109,11 @@
         </Viewbox>
 
         <Viewbox  Grid.ColumnSpan="10" Grid.Row="9" Grid.RowSpan="2" Grid.Column="1" HorizontalAlignment="Left">
-            <Label x:Name="LabelWarning" Content="" Foreground="DarkRed" FontFamily="Sylfaen" FontSize="50"  Width="1618" Height="109"/>
+            <Label x:Name="LabelWarning" Content="" Foreground="Yellow" FontFamily="Sylfaen" FontSize="50"  Width="1618" Height="109"/>
         </Viewbox>
-
+        <Viewbox x:Name="ViewboxWarning" Grid.Column="8" Grid.ColumnSpan="3" Grid.Row="6" HorizontalAlignment="Right" Visibility="Hidden">
+            <Label  Content="Գերազանցել եք&#xD;&#xA;առավելագույն &#xD;&#xA;թվերի քանակը" Foreground="Yellow" FontFamily="Sylfaen" FontSize="30"  Width="229" Height="160"/>
+        </Viewbox>
         <Viewbox Grid.Row="11" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left">
             <Button x:Name="buttonExitTheTest" Click="Button_Exit_The_Test" Content="Դուրս գալ թեստից" FontSize="20" Height="36" FontFamily="Sylfaen"  Foreground="White" Cursor="Hand"  Width="194">
                 <Button.Background>
