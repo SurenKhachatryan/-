@@ -108,8 +108,8 @@
             </WrapPanel>
         </Viewbox>
 
-        <Viewbox x:Name="ViewboxWarning" Grid.ColumnSpan="10" Grid.Row="9" Grid.RowSpan="2" Grid.Column="1" HorizontalAlignment="Left" Visibility="Hidden">
-            <Label Content="Տեկստում կա 40-ից մեծ թիվ, խնդրում եմ ուղղել սխալը։" Foreground="DarkRed" FontFamily="Sylfaen" FontSize="50"  Width="1618" Height="109"/>
+        <Viewbox  Grid.ColumnSpan="10" Grid.Row="9" Grid.RowSpan="2" Grid.Column="1" HorizontalAlignment="Left">
+            <Label x:Name="LabelWarning" Content="" Foreground="DarkRed" FontFamily="Sylfaen" FontSize="50"  Width="1618" Height="109"/>
         </Viewbox>
 
         <Viewbox Grid.Row="11" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left">

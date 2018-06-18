@@ -42,6 +42,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         private int second { get; set; } = 0;
         private int minute { get; set; } = 0;
         private int secondCTRL { get; set; } = 0;
+        private int newsecond { get; set; } = 0;
 
         public ConcentrationDefinitionTestTablePage()
         {
@@ -107,7 +108,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 else
                     NavigationService.Navigate(new ConcentrationDefinitionTestResultPage());
             }
-            
+
             if (secondCTRL == 1)
             {
                 textBox.IsEnabled = true;
@@ -189,10 +190,17 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
 
         private void textBox_PreviewKeyUp(object sender, KeyEventArgs e)
         {
-            if (cl.SearchBigNumberInArr(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40))
-                ViewboxWarning.Visibility = Visibility.Visible;
+            if (!cl.SearchBigNumberInArr(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40) && !cl.SearchEqualNumbersInALineAfterAComma(textBox.Text))
+                LabelWarning.Content = string.Empty;
             else
-                ViewboxWarning.Visibility = Visibility.Hidden;
+            if (cl.SearchBigNumberInArr(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40) && cl.SearchEqualNumbersInALineAfterAComma(textBox.Text))
+                LabelWarning.Content = "Տեկստում կա 40-ից մեծ թիվ և կրկնվող թիվ խնդրում եմ ուղղել սխալը";
+            else
+            if (cl.SearchBigNumberInArr(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40))
+                LabelWarning.Content = "Տեկստում կա 40-ից մեծ թիվ խնդրում եմ ուղղել սխալը";
+            else
+            if (cl.SearchEqualNumbersInALineAfterAComma(textBox.Text))
+                LabelWarning.Content = "Տեկստում կա կրկնվող թիվ խնդրում եմ ուղղել սխալը";
 
             int countNumbers = cl.GetCountNumbersAfterSimbols(textBox.Text);
 
