@@ -464,6 +464,17 @@ namespace ClassLibrary
             return count;
         }
 
+        public bool IsSortedNumbers(int[] arr)
+        {
+            int[] arrTemp = new int[arr.Length];
+            Array.Copy(arr, arrTemp, arr.Length);
+            SortingArr(ref arr);
+            for (int i = 0; i < arr.Length; i++)
+                if (arr[i] != arrTemp[i])
+                    return false;
+            return true;
+        }
+
         public bool SearchEqualNumbersInALineAfterAComma(string text)
         {
             var arrNumbers = GetArrFiltringNumbersInTheText(text);
@@ -472,6 +483,30 @@ namespace ClassLibrary
                     if (arrNumbers[i] == arrNumbers[j])
                         return true;
             return false;
+        }
+
+        public int[] DeleteItmesInArr(int[] arr, int startIndex, int finishIndex)
+        {
+            List<int> ls = new List<int>();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                ls.Add(arr[i]);
+                if (i == startIndex - 2)
+                    i = finishIndex - 1;
+            }
+            return ls.ToArray();
+        }
+
+        public int[] DeleteItmesInArr(int[] arr, int index)
+        {
+            List<int> ls = new List<int>();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                ls.Add(arr[i]);
+                if (i != index - 2)
+                    i = arr.Length;
+            }
+            return ls.ToArray();
         }
     }
 }
