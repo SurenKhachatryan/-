@@ -13,19 +13,14 @@ namespace ClassLibrary
             List<int> ls = new List<int>();
             int index = 0;
             if (arr.Length != 0)
-            {
                 SortingArr(ref arr);
-            }
+
             for (int i = 1; i <= arrLength; i++)
             {
                 if (index != arr.Length && arr[index] <= i && arr.Length != 0)
-                {
                     index++;
-                }
                 else
-                {
                     ls.Add(i);
-                }
             }
             return ls;
         }
@@ -74,12 +69,8 @@ namespace ClassLibrary
         public bool SerchMatchingNumberInArr(int[] arr, int a)
         {
             for (int j = 0; j < arr.Length; j++)
-            {
                 if (arr[j] == a)
-                {
                     return true;
-                }
-            }
             return false;
         }
 
@@ -90,12 +81,8 @@ namespace ClassLibrary
                 SortingArr(ref arr1);
                 SortingArr(ref arr2);
                 for (int i = 0; i < arr1.Length; i++)
-                {
                     if (arr1[i] != arr2[i])
-                    {
                         return false;
-                    }
-                }
                 return true;
             }
             return false;
@@ -145,9 +132,7 @@ namespace ClassLibrary
                     }
                 }
                 if (tamp != 0)
-                {
                     ls.Add(tamp);
-                }
             }
             return ls.ToArray();
         }
@@ -507,6 +492,32 @@ namespace ClassLibrary
                     i = arr.Length;
             }
             return ls.ToArray();
+        }
+
+        public int GetCountNumberOfEqualDigits(int[] arr)
+        {
+            int counter = 0;
+            int[] arrNew = new int[arr.Length];
+            Array.Copy(arr, arrNew, arr.Length);
+            SortingArr(ref arrNew);
+            for (int i = 0; i < arrNew.Length; i++)
+            {
+                if (i + 1 != arrNew.Length)
+                    if (arrNew[i] == arrNew[i + 1])
+                        counter++;
+            }
+            return counter;
+        }
+
+        public string GetOneTextArrItemsSeparationCommas(int[] arr)
+        {
+            string temp = string.Empty;
+            for (int i = 0; i < arr.Length; i++)
+                if (i != arr.Length - 1)
+                    temp += $"{arr[i]},";
+                else
+                    temp += $"{arr[i]}";
+            return temp;
         }
     }
 }

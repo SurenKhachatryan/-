@@ -15,7 +15,8 @@
             <RowDefinition Height="57*"/>
             <RowDefinition Height="17*"/>
             <RowDefinition Height="159*"/>
-            <RowDefinition Height="433*"/>
+            <RowDefinition Height="72*"/>
+            <RowDefinition Height="361*"/>
             <RowDefinition Height="36*"/>
             <RowDefinition Height="78*"/>
         </Grid.RowDefinitions>
@@ -26,11 +27,13 @@
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox x:Name="ViewboxResult1" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Visibility="Visible"  >
+        <Viewbox x:Name="ViewboxResult1" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Visibility="Hidden"  >
             <Label x:Name="labelInfo" Content="" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="159"/>
         </Viewbox>
-
-        <Viewbox Grid.Row="4" Grid.Column="2" HorizontalAlignment="Right" Width="369">
+        <Viewbox x:Name="ViewboxResult2" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="3" Visibility="Hidden" HorizontalAlignment="Left" >
+        <Label x:Name="labelInfo2" Content="" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" />
+        </Viewbox>
+        <Viewbox Grid.Row="5" Grid.Column="2" HorizontalAlignment="Right">
             <WrapPanel  Height="36"  Width="369">
                 <Button Margin="0,0,12,0" x:Name="buttonClicktryagain" Click="Button_Click_Try_Again" Content="Կրկին փորձել" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="172" >
                     <Button.Background>
