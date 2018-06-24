@@ -18,23 +18,25 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         private List<int> lsRndDigite { get; set; } = new List<int>();
         private Label[] arrAllLabels { get; set; } = new Label[25];
 
-        public static int[] arrAllDigitsInTextBox { get; private set; } = new int[5];
+        public static int[] arrAllDigitsInTextBox { get; private set; } = new int[0];
         public static string TextBoxText { get; private set; } = string.Empty;
-        public static int[] arrAllRightNumbers { get; private set; } = new int[5];
+        public static int[] arrAllRightNumbers { get; private set; } = new int[0];
         private static int[] arrBigNumbers = new int[0];
-        private static int[] arrAllRandomDigits = new int[5];
-        private static int[] arrAllAbsentNumbers = new int[5];
-        private static int[] arrAllExtraNumbers = new int[5];
+        private static int[] arrAllRandomDigits = new int[0];
+        private static int[] arrAllAbsentNumbers = new int[0];
+        private static int[] arrAllExtraNumbers = new int[0];
+        private static int[] arrAllRightNumbersUser = new int[0];
 
         public static bool IsEmptyTextBox { get; private set; } = true;
         public static bool IsBigNumbersInTextBox { get; private set; } = false;
         public static int CountBigNumbers { get; private set; } = 0;
         public static int CountNumberOfEqualDigits { get; private set; }
 
-        public int[] ArrBigNumbers { get { return arrBigNumbers; } }
-        public int[] ArrAllRandomDigits { get { return arrAllRandomDigits; } }
-        public int[] ArrAllAbsentNumbers { get { return arrAllAbsentNumbers; } }
-        public int[] ArrAllExtraNumbers { get { return arrAllExtraNumbers; } }
+        public static int[] ArrBigNumbers { get { return arrBigNumbers; } }
+        public static int[] ArrAllRandomDigits { get { return arrAllRandomDigits; } }
+        public static int[] ArrAllAbsentNumbers { get { return arrAllAbsentNumbers; } }
+        public static int[] ArrAllExtraNumbers { get { return arrAllExtraNumbers; } }
+        public static int[] ArrAllRightNumbersUser { get { return arrAllRightNumbersUser; } }
 
         private Random rnd = new Random();
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
@@ -172,9 +174,12 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
             arrAllDigitsInTextBox = cl.GetArrFiltringNumbersInTheText(textBox.Text);
             arrAllExtraNumbers = cl.GetArrayMissingNumbersInAnArray(arrAllDigitsInTextBox, arrAllRightNumbers);
             arrAllAbsentNumbers = cl.GetArrayMissingNumbersInAnArray(arrAllRightNumbers, arrAllDigitsInTextBox);
+            arrAllRightNumbersUser = cl.GetRightNumbersInAnArray(arrAllRightNumbers, arrAllDigitsInTextBox);
 
-            cl.SortingArr(ref arrAllAbsentNumbers);
-            cl.SortingArr(ref arrAllExtraNumbers);
+            if (arrAllAbsentNumbers.Length != 0)
+                cl.SortingArr(ref arrAllAbsentNumbers);
+            if (arrAllExtraNumbers.Length != 0)
+                cl.SortingArr(ref arrAllExtraNumbers);
 
             NavigationService.Navigate(new ConcentrationDefinitionTestResultPage());
         }

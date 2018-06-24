@@ -10,19 +10,20 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
     /// </summary>
     public partial class ConcentrationDefinitionTestResultPage : Page
     {
+        private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
 
         public ConcentrationDefinitionTestResultPage()
         {
             InitializeComponent();
-            if (ConcentrationDefinitionTestTablePage.IsEmptyTextBox)
+
+            if (ConcentrationDefinitionTestTablePage.IsBigNumbersInTextBox ||
+                ConcentrationDefinitionTestTablePage.IsEmptyTextBox ||
+                ConcentrationDefinitionTestTablePage.CountNumberOfEqualDigits > 0)
             {
                 ViewboxResult1.Visibility = Visibility.Visible;
-                labelInfo.Content = "Դուք ոչինչ չեք լրացրել,կարող եք թեստը անցնել կրկին";
-            }
-            else
-            if (ConcentrationDefinitionTestTablePage.IsBigNumbersInTextBox || ConcentrationDefinitionTestTablePage.CountNumberOfEqualDigits >= 1)
-            {
-                ViewboxResult1.Visibility = Visibility.Visible;
+                if (ConcentrationDefinitionTestTablePage.IsEmptyTextBox)
+                    labelInfo.Content = "Դուք ոչինչ չեք լրացրել,կարող եք թեստը անցնել կրկին";
+                else
                 if (ConcentrationDefinitionTestTablePage.CountBigNumbers > 1 && ConcentrationDefinitionTestTablePage.CountNumberOfEqualDigits == 1)
                     labelInfo.Content = "Տեկստում կա 40-ից մեծ թվեր և կրկնվող թիվ հնարավոր է դուք թվերը չեք \nարանձնացրել ստորակետերով խնդրում եմ ծանոթանալ կանոներին և \nթեստն անցնել սկզբից:";
                 else
@@ -47,8 +48,17 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 if (ConcentrationDefinitionTestTablePage.CountBigNumbers == 0 && ConcentrationDefinitionTestTablePage.CountNumberOfEqualDigits == 1)
                     labelInfo.Content = "Տեկստում կա կրկնվող թիվ խնդրում եմ ծանոթանալ կանոներին և թեստն \nանցնել սկզբից:";
 
-                ViewboxResult2.Visibility = Visibility.Visible;
-                labelInfo2.Content = ConcentrationDefinitionTestTablePage.TextBoxText;
+                if (!ConcentrationDefinitionTestTablePage.IsEmptyTextBox)
+                {
+                    ViewboxTextBoxText1.Visibility = Visibility.Visible;
+                    labelTextBoxText1.Content = ConcentrationDefinitionTestTablePage.TextBoxText;
+                }
+            }
+            else
+            {
+                labelListNumbers.Content += $"\n{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllRandomDigits)}";
+                labelRightNumbers.Content += $"\n{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.arrAllRightNumbers)}";
+
 
             }
 

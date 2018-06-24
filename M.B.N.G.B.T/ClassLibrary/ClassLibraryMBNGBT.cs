@@ -122,9 +122,9 @@ namespace ClassLibrary
 
             for (int i = 0; i < exactArray.Length; i++)
             {
+                tamp = exactArray[i];
                 for (int j = 0; j < nonValidArray.Length; j++)
                 {
-                    tamp = exactArray[i];
                     if (exactArray[i] == nonValidArray[j])
                     {
                         j = nonValidArray.Length;
@@ -518,6 +518,24 @@ namespace ClassLibrary
                 else
                     temp += $"{arr[i]}";
             return temp;
+        }
+
+        public int[] GetRightNumbersInAnArray(int[] exactArray, int[] nonValidArray)
+        {
+            List<int> ls = new List<int>();
+            for (int i = 0; i < nonValidArray.Length; i++)
+            {
+                for (int j = 0; j < exactArray.Length; j++)
+                {
+                    if (nonValidArray[i] == exactArray[j])
+                    {
+                        ls.Add(nonValidArray[i]);
+                        j = exactArray.Length;
+                    }
+                }
+            }
+            ls.Sort();
+            return ls.ToArray();
         }
     }
 }
