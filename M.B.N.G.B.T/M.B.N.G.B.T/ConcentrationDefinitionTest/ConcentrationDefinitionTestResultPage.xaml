@@ -38,39 +38,39 @@
             <Label x:Name="labelTextBoxText1" Content="" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" />
         </Viewbox>
 
-        <Viewbox Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="1" Grid.Column="1">
+        <Viewbox Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="1" Grid.Column="1" x:Name="ViewBoxLabels2" Visibility="Hidden">
             <WrapPanel  Width="1165">
                 <Label x:Name="labelListNumbers" Content="Աղյուսակի թվերը" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="87"/>
                 <Label x:Name="labelRightNumbers" Content="Աղյուսակում բացակայող թվերը" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="89"/>
             </WrapPanel>
         </Viewbox>
-        
-        <Viewbox Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="1" Grid.Column="1">
+
+        <Viewbox Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="1" Grid.Column="1" x:Name="ViewBoxRectangles2" Visibility="Hidden">
             <WrapPanel   Width="1165">
-                <Rectangle Grid.ColumnSpan="4" Fill="{x:Null}" HorizontalAlignment="Left" Width="1165" Height="87" Stroke="Black" StrokeThickness="3"/>
-                <Rectangle Grid.ColumnSpan="4" Fill="{x:Null}" HorizontalAlignment="Left" Width="1165" Height="89" Stroke="Black" StrokeThickness="3"/>
+                <Rectangle Fill="{x:Null}"  Width="1165" Height="87" Stroke="Black" StrokeThickness="3"/>
+                <Rectangle Fill="{x:Null}"  Width="1165" Height="89" Stroke="Black" StrokeThickness="3"/>
             </WrapPanel>
         </Viewbox>
-        <Viewbox Grid.Column="2" Grid.Row="3">
-            <Label Content="Արդյունքներ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35"/>
+        <Viewbox x:Name="LabelTitleResult" Grid.Column="2" Grid.Row="3" Visibility="Hidden">
+            <Label Content="Արդյունքներ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35" />
         </Viewbox>
-        <Viewbox Grid.ColumnSpan="4" Grid.Row="4" Grid.Column="1">
+        <Viewbox x:Name="ViewBoxLabels1" Visibility="Hidden" Grid.ColumnSpan="4" Grid.Row="4" Grid.Column="1"  VerticalAlignment="Top">
             <WrapPanel  Width="1165">
-                <Label x:Name="labelResult1" Content="Ճիշտ թվերը&#xD;&#xA;1,2,3,4,5,6,7,8,9,10,11,12,13,14,15" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="89"/>
-                <Label x:Name="labelResult2" Content="Բաց թողնված թվեր որոնք դուք չեք նկատել&#xD;&#xA;1,2,3,4,5,6,7,8,9,10,11,12,13,14,15" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="89" />
-                <Label x:Name="labelResult3" Content="Ավելորդ թվերը որոնք աղյուսակում կային&#xD;&#xA;1,2,3,4,5,6,7,8,9,10,11,12,13,14,15" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="89" />
-                <Label x:Name="labelResult4" Content="Ուշադրության արդյունավետության ցուցանիշը&#xD;&#xA;100%" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="89" />
+                <Label x:Name="LabelResult1" Content="Ճիշտ թվերը" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="89"/>
+                <Label x:Name="LabelResult2" Content="" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="89" Visibility="Hidden" />
+                <Label x:Name="LabelResult3" Content="" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="89" Visibility="Hidden" />
+                <Label x:Name="LabelResult4" Content="" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="89"  Visibility="Hidden"/>
             </WrapPanel>
         </Viewbox>
-        <Viewbox Grid.ColumnSpan="4" Grid.Row="4" Grid.Column="1">
+        <Viewbox Grid.ColumnSpan="4" Grid.Row="4" Grid.Column="1" x:Name="ViewBoxRectangles1" Visibility="Hidden">
             <WrapPanel  Width="1165">
-                <Rectangle Grid.Column="1" Fill="{x:Null}" Stroke="Black"  Width="1165" Height="89" StrokeThickness="3"/>
-                <Rectangle Grid.Column="1" Fill="{x:Null}" Stroke="Black"  Width="1165" Height="89" StrokeThickness="3"/>
-                <Rectangle Grid.Column="1" Fill="{x:Null}" Stroke="Black" Width="1165" Height="89" StrokeThickness="3"/>
-                <Rectangle Grid.Column="1" Fill="{x:Null}" Stroke="Black" Width="1165" Height="89" StrokeThickness="3"/>
+                <Rectangle x:Name="RectangleResult1" Fill="{x:Null}" Stroke="Black" Width="1165" Height="89" StrokeThickness="3"/>
+                <Rectangle x:Name="RectangleResult2" Fill="{x:Null}" Stroke="Black" Width="1165" Height="89" StrokeThickness="3" Visibility="Hidden"/>
+                <Rectangle x:Name="RectangleResult3" Fill="{x:Null}" Stroke="Black" Width="1165" Height="89" StrokeThickness="3" Visibility="Hidden"/>
+                <Rectangle x:Name="RectangleResult4" Fill="{x:Null}" Stroke="Black" Width="1165" Height="89" StrokeThickness="3" Visibility="Hidden"/>
             </WrapPanel>
         </Viewbox>
-        
+
         <Viewbox Grid.Row="6" Grid.Column="4" HorizontalAlignment="Right">
             <WrapPanel  Height="36"  Width="369">
                 <Button Margin="0,0,12,0" x:Name="buttonClicktryagain" Click="Button_Click_Try_Again" Content="Կրկին փորձել" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="172" >
