@@ -56,25 +56,48 @@
         <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3">
             <ScrollViewer  Width="1160" Height="459">
                 <TextBlock TextWrapping="Wrap"  Foreground="Snow" FontSize="30" FontFamily="Sylfaen">
-                  <Run Text="         Ուշադրության որոշման թեստ՝ Վ․Լ․Մարշուկի թեստ"/>
+                  <Run Text="                            Ուշադրության որոշման թեստ՝ Վ․Լ․Մարշուկի թեստ"/>
                   <LineBreak/>
-                  <Run Text="         /Շուլտեի աղյուսակների մոդիֆիկացված տարբերակ/"/>
+                  <Run Text="                            /Շուլտեի աղյուսակների մոդիֆիկացված տարբերակ/"/>
                   <LineBreak/>
                   <Run Text="Օգտագործվում է ուշադրությունը որոշելու համար։"/>
                   <LineBreak/>
-                  <Run Text="Ձեզ տրվում է 5*5 աղյուսակներ , որտեղ պանահական հերթականությամբ"/>
+                  <Run Text="   Ծրագիրը    տալիս   է   5x5   աղյուսակ,  որտեղ  գրված   են   25   տարբեր   թվեր   և"/>
                   <LineBreak/>
-                  <Run Text="գրված են 1-40 թվեր և բացակայում են 15 թվեր։"/>
+                  <Run Text="90վ   ժամանակ։   Փորձարկվողը    պետք   է   ուշադիր    նայի    աղյուսակի   թվերին  "/>
+                  <LineBreak/>
+                  <Run Text="և   հաջորդաբար    գրի    (համապատասխան դաշտում)   1-40   այն    թվերը,   որոնք "/>
+                  <LineBreak/>
+                  <Run Text="բացակայում   են    աղյուսակում,    իսկ    այդ    ընթացքում   ծրագիրը    կհաշվի,  թե"/>
+                  <LineBreak/>
+                  <Run Text="քանի    թիվ    է    գրել    փորձարկվողը։   Գրելու    դաշտում   առավելագույն   թվերի "/>
+                  <LineBreak/>
+                  <Run Text="քանակը    15-ն   է։   Յուրաքանչյուր   թիվ   գրելուց    հետո    փորձարկվողը   կարող"/>
+                  <LineBreak/>
+                  <Run Text="է  տեսնել  իր  գրած  թվերի  քանակը   պատուհանի  աջ  կողմում։  Երբ  կավարտվի"/>
+                  <LineBreak/>
+                  <Run Text="ժամանակը,   կհայտնվի   (Տեսնել  արդյունքները)    կոճակը։"/>
+                  <LineBreak/>
+                  <Run Text="  Պարտադիր     պայման " FontStyle="Italic" FontWeight="Bold" Foreground="#FFF7C900"/>
+                  <Run Text=" -  Թվերն    առանձնացնել     ստորակետերով,    այլապես" Foreground="#FFF7C900"/>  
+                  <Run Text="ծրագիրը    կհամարի    սխալ" Foreground="#FFF7C900"/> 
+                  <LineBreak/>
+                  <Run Text="   Օրինակ՝" FontWeight="Bold"/>
+                  <LineBreak/>
+                  <Run Text="         1,5,8,12,15,18,20,21,24,27,28,29,30,35,37"/> 
                   <LineBreak/>
                   <LineBreak/>
-                  <Run Text="Հրահանգավորում" TextDecorations="Underline" FontWeight="Bold"/>
+                  <Run Text="  Եթե    փորձարկվողը    թվերն    անուշադրաբար    գրել    է    միասին   կամ   գրված" Foreground="#FFF7C900"/> 
                   <LineBreak/>
-                  <Run Text="Ուշադիր նայեք աղյուսակների թվերին և աղյուսակների ներգևում տրված"/>
+                  <Run Text="թվերում     առկա     է     կրկնություն,    ծրագիրը     կտեղեկացնի     սխալի     մասին։" Foreground="#FFF7C900"/> 
                   <LineBreak/>
-                  <Run Text="հատվածում հաջորդաբար լրացնել 1-40 այն թվերը , որոնք բացակայում են"/>
+                  <Run Text="Եթե    մինչ    ժամանակի    ավարտը    փորձարկվողը   չուղղի    իր   սխալը,   թեստը"/> 
                   <LineBreak/>
-                  <Run Text="աղյուսակուներում։"/>
-                  <Run Text="Բացակայող թվի բացթողումը համարվում է սխալ։" FontWeight="Bold" Foreground="#FF800505" TextDecorations="Underline"/>
+                  <Run Text="կավարտվի,    որի    դեպքում    նա    ստիպված    կլին    թեստն     անցնել     կրկին։"/> 
+                  <LineBreak/>
+                  <Run Text="   Բացի    թվերից    ցանկացած     այլ    սիմվոլ    փոխարինված    են    ստորակետով," Foreground="#FFF7C900"/> 
+                  <LineBreak/>
+                  <Run Text="որպես    հարմարություն     փորձարկվողի     համար։" Foreground="#FFF7C900"/>
                 </TextBlock>
             </ScrollViewer>
         </Viewbox>

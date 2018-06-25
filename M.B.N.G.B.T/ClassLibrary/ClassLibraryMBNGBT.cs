@@ -453,7 +453,8 @@ namespace ClassLibrary
         {
             int[] arrTemp = new int[arr.Length];
             Array.Copy(arr, arrTemp, arr.Length);
-            SortingArr(ref arr);
+            if (arr.Length != 0)
+                SortingArr(ref arr);
             for (int i = 0; i < arr.Length; i++)
                 if (arr[i] != arrTemp[i])
                     return false;
@@ -499,7 +500,8 @@ namespace ClassLibrary
             int counter = 0;
             int[] arrNew = new int[arr.Length];
             Array.Copy(arr, arrNew, arr.Length);
-            SortingArr(ref arrNew);
+            if (arrNew.Length != 0)
+                SortingArr(ref arrNew);
             for (int i = 0; i < arrNew.Length; i++)
             {
                 if (i + 1 != arrNew.Length)

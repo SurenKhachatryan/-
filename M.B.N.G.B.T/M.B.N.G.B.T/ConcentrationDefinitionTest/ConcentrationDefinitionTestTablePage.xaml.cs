@@ -52,11 +52,12 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         {
             InitializeComponent();
 
-            arrAllRandomDigits = new int[5];
-            arrAllDigitsInTextBox = new int[5];
-            arrAllRightNumbers = new int[5];
-            arrAllAbsentNumbers = new int[5];
-            arrAllExtraNumbers = new int[5];
+            arrAllRandomDigits = new int[0];
+            arrAllDigitsInTextBox = new int[0];
+            arrAllRightNumbers = new int[0];
+            arrAllAbsentNumbers = new int[0];
+            arrAllExtraNumbers = new int[0];
+            arrAllRightNumbersUser = new int[0];
             IsEmptyTextBox = true;
             IsBigNumbersInTextBox = false;
             CountBigNumbers = 0;
@@ -93,9 +94,9 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 if (repeatNumbersSecond == 2)
                 {
                     if (cl.SearchBigNumberInArr(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40) && cl.SearchEqualNumbersInALineAfterAComma(textBox.Text))
-                        LabelWarning.Content = "Տեկստում կա 40-ից մեծ թիվ և կրկնվող թիվ:";
+                        LabelWarning.Content = "Տեքստում կա 40-ից մեծ թիվ և կրկնվող թիվ:";
                     else
-                        LabelWarning.Content = "Տեկստում կա կրկնվող թիվ:";
+                        LabelWarning.Content = "Տեքստում կա կրկնվող թիվ:";
                 }
                 if (repeatNumbersSecond != 2)
                     repeatNumbersSecond++;
@@ -117,10 +118,9 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 CountBigNumbers = cl.GetCountAndArrBigNumbers(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40, out arrBigNumbers);
                 CountNumberOfEqualDigits = cl.GetCountNumberOfEqualDigits(arr);
 
-                if (Char.IsDigit(Convert.ToChar(textBox.Text[textBox.Text.Length - 1])) &&
+                if (!IsEmptyTextBox && Char.IsDigit(Convert.ToChar(textBox.Text[textBox.Text.Length - 1])) &&
                     !Char.IsDigit(Convert.ToChar(textBox.Text[textBox.Text.Length - 2])) &&
-                    !IsBigNumbersInTextBox && !IsEmptyTextBox && textBox.Text.Length > 5 &&
-                    CountNumberOfEqualDigits <= 1)
+                    !IsBigNumbersInTextBox &&  textBox.Text.Length > 5 && CountNumberOfEqualDigits <= 1)
                 {
                     int[] arrNew = cl.DeleteItmesInArr(arr, arr.Length - 1);
                     int temp = arr[arr.Length - 1];
@@ -160,7 +160,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 }
             }
 
-            if (secondCTRL == 1)
+            if (secondCTRL == 2)
             {
                 textBox.IsEnabled = true;
                 textBox.Focus();
@@ -259,13 +259,13 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 LabelWarning.Content = string.Empty;
             else
             if (bigNumbers && repeatNumbers && repeatNumbersSecond == 2)
-                LabelWarning.Content = "Տեկստում կա 40-ից մեծ թիվ և կրկնվող թիվ:";
+                LabelWarning.Content = "Տեքստում կա 40-ից մեծ թիվ և կրկնվող թիվ:";
             else
             if (bigNumbers)
-                LabelWarning.Content = "Տեկստում կա 40-ից մեծ թիվ:";
+                LabelWarning.Content = "Տեքստում կա 40-ից մեծ թիվ:";
             else
             if (repeatNumbers && repeatNumbersSecond == 2)
-                LabelWarning.Content = "Տեկստում կա կրկնվող թիվ:";
+                LabelWarning.Content = "Տեքստում կա կրկնվող թիվ:";
 
             textBox.Text = cl.DeleteExtraCommaInText(textBox.Text);
             LabelCountNumbers.Content = $"{countNumbers}/15";
