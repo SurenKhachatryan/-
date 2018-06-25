@@ -62,7 +62,7 @@
                 <Label x:Name="LabelResult4" Content="" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="89"  Visibility="Hidden"/>
             </WrapPanel>
         </Viewbox>
-        <Viewbox Grid.ColumnSpan="4" Grid.Row="4" Grid.Column="1" x:Name="ViewBoxRectangles1" Visibility="Hidden">
+        <Viewbox Grid.ColumnSpan="4" Grid.Row="4" Grid.Column="1" x:Name="ViewBoxRectangles1" Visibility="Hidden" VerticalAlignment="Top">
             <WrapPanel  Width="1165">
                 <Rectangle x:Name="RectangleResult1" Fill="{x:Null}" Stroke="Black" Width="1165" Height="89" StrokeThickness="3"/>
                 <Rectangle x:Name="RectangleResult2" Fill="{x:Null}" Stroke="Black" Width="1165" Height="89" StrokeThickness="3" Visibility="Hidden"/>

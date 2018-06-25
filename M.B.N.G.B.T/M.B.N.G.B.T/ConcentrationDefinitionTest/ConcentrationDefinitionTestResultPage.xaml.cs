@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 using ClassLibrary;
@@ -22,31 +23,31 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
             {
                 ViewboxResult1.Visibility = Visibility.Visible;
                 if (ConcentrationDefinitionTestTablePage.IsEmptyTextBox)
-                    labelInfo.Content = "Դուք ոչինչ չեք լրացրել,կարող եք թեստը անցնել կրկին";
+                    labelInfo.Content = "Դուք ոչինչ չեք լրացրել,կարող եք թեստն անցնել կրկին";
                 else
                 if (ConcentrationDefinitionTestTablePage.CountBigNumbers > 1 && ConcentrationDefinitionTestTablePage.CountNumberOfEqualDigits == 1)
-                    labelInfo.Content = "Տեկստում կա 40-ից մեծ թվեր և կրկնվող թիվ հնարավոր է դուք թվերը չեք \nարանձնացրել ստորակետերով խնդրում եմ ծանոթանալ կանոներին և \nթեստն անցնել սկզբից:";
+                    labelInfo.Content = "Տեքստում կան 40-ից մեծ թվեր և կրկնվող թիվ։ Հնարավոր է դուք թվերը չեք \nառանձնացրել ստորակետերով, խնդրում եմ ծանոթանալ կանոններին և \nթեստն անցնել սկզբից:";
                 else
                 if (ConcentrationDefinitionTestTablePage.CountBigNumbers == 1 && ConcentrationDefinitionTestTablePage.CountNumberOfEqualDigits > 1)
-                    labelInfo.Content = "Տեկստում կա 40-ից մեծ թիվ և կրկնվող թվեր հնարավոր է դուք թվերը չեք \nարանձնացրել ստորակետերով խնդրում եմ ծանոթանալ կանոներին և \nթեստն անցնել սկզբից:";
+                    labelInfo.Content = "Տեքստում կա 40-ից մեծ թիվ և կրկնվող թվեր։ Հնարավոր է դուք թվերը չեք \nառանձնացրել ստորակետերով, խնդրում եմ ծանոթանալ կանոններին և \nթեստն անցնել սկզբից:";
                 else
                 if (ConcentrationDefinitionTestTablePage.CountBigNumbers == 1 && ConcentrationDefinitionTestTablePage.CountNumberOfEqualDigits == 1)
-                    labelInfo.Content = "Տեկստում կա 40-ից մեծ թիվ և կրկնվող թիվ հնարավոր է դուք թվերը չեք \nարանձնացրել ստորակետերով խնդրում եմ ծանոթանալ կանոներին և \nթեստն անցնել սկզբից:";
+                    labelInfo.Content = "Տեքստում կա 40-ից մեծ թիվ և կրկնվող թիվ։ Հնարավոր է դուք թվերը չեք \nառանձնացրել ստորակետերով, խնդրում եմ ծանոթանալ կանոններին և \nթեստն անցնել սկզբից:";
                 else
                 if (ConcentrationDefinitionTestTablePage.CountBigNumbers > 1 && ConcentrationDefinitionTestTablePage.CountNumberOfEqualDigits > 1)
-                    labelInfo.Content = "Տեկստում կա 40-ից մեծ թվեր և կրկնվող թվեր հնարավոր է դուք թվերը չեք \nարանձնացրել ստորակետերով խնդրում եմ ծանոթանալ կանոներին և \nթեստն անցնել սկզբից:";
+                    labelInfo.Content = "Տեքստում կան 40-ից մեծ թվեր և կրկնվող թվեր։ Հնարավոր է դուք թվերը չեք \nառանձնացրել ստորակետերով, խնդրում եմ ծանոթանալ կանոններին և \nթեստն անցնել սկզբից:";
                 else
                 if (ConcentrationDefinitionTestTablePage.CountBigNumbers > 1 && ConcentrationDefinitionTestTablePage.CountNumberOfEqualDigits == 0)
-                    labelInfo.Content = "Տեկստում կա 40-ից մեծ թվեր հնարավոր է դուք թվերը չեք արանձնացրել \nստորակետերով խնդրում եմ ծանոթանալ կանոներին և թեստն անցնել \nսկզբից:";
+                    labelInfo.Content = "Տեքստում կան 40-ից մեծ թվեր։ Հնարավոր է դուք թվերը չեք առանձնացրել \nստորակետերով, խնդրում եմ ծանոթանալ կանոններին և թեստն անցնել \nսկզբից:";
                 else
                 if (ConcentrationDefinitionTestTablePage.CountBigNumbers == 0 && ConcentrationDefinitionTestTablePage.CountNumberOfEqualDigits > 1)
-                    labelInfo.Content = "Տեկստում կա կրկնվող թվեր խնդրում եմ ծանոթանալ կանոներին և թեստն \nանցնել սկզբից:";
+                    labelInfo.Content = "Տեքստում կան կրկնվող թվեր։ Խնդրում եմ ծանոթանալ կանոններին և թեստն \nանցնել սկզբից:";
                 else
                 if (ConcentrationDefinitionTestTablePage.CountBigNumbers == 1 && ConcentrationDefinitionTestTablePage.CountNumberOfEqualDigits == 0)
-                    labelInfo.Content = "Տեկստում կա 40-ից մեծ թիվ հնարավոր է դուք թվերը չեք արանձնացրել \nստորակետերով խնդրում եմ ծանոթանալ կանոներին և թեստն անցնել \nսկզբից:";
+                    labelInfo.Content = "Տեքստում կա 40-ից մեծ թիվ, հնարավոր է դուք թվերը չեք առանձնացրել \nստորակետերով, խնդրում եմ ծանոթանալ կանոններին և թեստն անցնել \nսկզբից:";
                 else
                 if (ConcentrationDefinitionTestTablePage.CountBigNumbers == 0 && ConcentrationDefinitionTestTablePage.CountNumberOfEqualDigits == 1)
-                    labelInfo.Content = "Տեկստում կա կրկնվող թիվ խնդրում եմ ծանոթանալ կանոներին և թեստն \nանցնել սկզբից:";
+                    labelInfo.Content = "Տեքստում կա կրկնվող թիվ, խնդրում եմ ծանոթանալ կանոններին և թեստն \nանցնել սկզբից:";
 
                 if (!ConcentrationDefinitionTestTablePage.IsEmptyTextBox)
                 {
@@ -62,9 +63,10 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 ViewBoxRectangles1.Visibility = Visibility.Visible;
                 ViewBoxRectangles2.Visibility = Visibility.Visible;
 
-                labelListNumbers.Content += $"\n{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllRandomDigits)}";
-                labelRightNumbers.Content += $"\n{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.arrAllRightNumbers)}";
-                LabelResult1.Content += $"\n{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllRightNumbersUser)}";
+                labelListNumbers.Content += $"\n {cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllRandomDigits)}";
+                labelRightNumbers.Content += $"\n {cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.arrAllRightNumbers)}";
+                LabelResult1.Content += $"\n {cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllRightNumbersUser)}";
+                double finishResultOfPercent = (Convert.ToDouble(ConcentrationDefinitionTestTablePage.ArrAllRightNumbersUser.Length) / Convert.ToDouble(15)) * 100;
 
                 if (ConcentrationDefinitionTestTablePage.ArrAllAbsentNumbers.Length > 0 && ConcentrationDefinitionTestTablePage.ArrAllExtraNumbers.Length > 0)
                 {
@@ -75,9 +77,9 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                     LabelResult4.Visibility = Visibility.Visible;
                     RectangleResult4.Visibility = Visibility.Visible;
 
-                    LabelResult2.Content = $"Բաց թողնված թվեր որոնք դուք չեք նկատել \n{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllAbsentNumbers)}";
-                    LabelResult3.Content = $"Ավելորդ թվերը որոնք աղյուսակում կային \n{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllExtraNumbers)}";
-                    LabelResult4.Content = $"Ուշադրության արդյունավետության ցուցանիշը \n{ (ConcentrationDefinitionTestTablePage.ArrAllRightNumbersUser.Length / 15) * 100 }%";
+                    LabelResult2.Content = $"Բաց թողած թվեր, որոնք դուք չեք նկատել \n {cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllAbsentNumbers)}";
+                    LabelResult3.Content = $"Թվեր, որոնք աղյուսակում կային \n {cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllExtraNumbers)}";
+                    LabelResult4.Content = $"Ուշադրության արդյունավետության ցուցանիշը \n {Convert.ToInt32(finishResultOfPercent)}%";
                 }
                 else
                 if (ConcentrationDefinitionTestTablePage.ArrAllAbsentNumbers.Length > 0 && ConcentrationDefinitionTestTablePage.ArrAllExtraNumbers.Length == 0)
@@ -87,8 +89,8 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                     LabelResult3.Visibility = Visibility.Visible;
                     RectangleResult3.Visibility = Visibility.Visible;
 
-                    LabelResult2.Content = $"Բաց թողնված թվեր որոնք դուք չեք նկատել \n{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllAbsentNumbers)}";
-                    LabelResult3.Content = $"Ուշադրության արդյունավետության ցուցանիշը \n{ (ConcentrationDefinitionTestTablePage.ArrAllRightNumbersUser.Length / 15) * 100 }%";
+                    LabelResult2.Content = $"Բաց թողած թվեր, որոնք դուք չեք նկատել \n {cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllAbsentNumbers)}";
+                    LabelResult3.Content = $"Ուշադրության արդյունավետության ցուցանիշը \n { Convert.ToInt32(finishResultOfPercent)}%";
                 }
                 else
                 if (ConcentrationDefinitionTestTablePage.ArrAllExtraNumbers.Length > 0 && ConcentrationDefinitionTestTablePage.ArrAllAbsentNumbers.Length == 0)
@@ -98,18 +100,17 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                     LabelResult3.Visibility = Visibility.Visible;
                     RectangleResult3.Visibility = Visibility.Visible;
 
-                    LabelResult2.Content = $"Ավելորդ թվերը որոնք աղյուսակում կային \n{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllExtraNumbers)}";
-                    LabelResult3.Content = $"Ուշադրության արդյունավետության ցուցանիշը \n{ (ConcentrationDefinitionTestTablePage.ArrAllRightNumbersUser.Length / 15) * 100 }%";
+                    LabelResult2.Content = $"Թվեր, որոնք աղյուսակում կային \n {cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllExtraNumbers)}";
+                    LabelResult3.Content = $"Ուշադրության արդյունավետության ցուցանիշը \n {Convert.ToInt32(finishResultOfPercent)}%";
                 }
                 else
                 if (ConcentrationDefinitionTestTablePage.ArrAllAbsentNumbers.Length == 0 && ConcentrationDefinitionTestTablePage.ArrAllExtraNumbers.Length == 0)
                 {
                     LabelResult2.Visibility = Visibility.Visible;
                     RectangleResult2.Visibility = Visibility.Visible;
-                    LabelResult2.Content = $"Ուշադրության արդյունավետության ցուցանիշը \n{ (ConcentrationDefinitionTestTablePage.ArrAllRightNumbersUser.Length / 15) * 100 }%";
+                    LabelResult2.Content = $"Ուշադրության արդյունավետության ցուցանիշը \n { Convert.ToInt32(finishResultOfPercent)}%";
                 }
             }
-
         }
 
         private void Button_Click_Try_Again(object sender, RoutedEventArgs e)
