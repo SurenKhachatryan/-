@@ -14,6 +14,10 @@ namespace M.B.N.G.B.T.VisualMemoryTest
     public partial class VisualMemoryTestAllPicturesPage : Page
     {
         private List<int> listCorrectSelectedPictures { get; set; } = new List<int>();
+        private Image[] arrAllPics = new Image[48];
+        private Image[] arrAllPicsYes1 = new Image[48];
+        private Image[] arrAllPicsYes2 = new Image[48];
+        private Image[] arrAllPicsNo = new Image[48];
 
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
