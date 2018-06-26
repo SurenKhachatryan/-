@@ -45,54 +45,54 @@
 
         <Viewbox Grid.Column="4" Grid.RowSpan="4" Grid.Row="1">
             <WrapPanel Height="660" Width="882" >
-                <Image MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/1.gif" />
-                <Image MouseLeftButtonDown="Pic2_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/2.gif" />
-                <Image MouseLeftButtonDown="Pic3_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/3.gif" />
-                <Image MouseLeftButtonDown="Pic4_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/4.gif" />
-                <Image MouseLeftButtonDown="Pic5_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/5.gif" />
-                <Image MouseLeftButtonDown="Pic6_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/6.gif" />
-                <Image MouseLeftButtonDown="Pic7_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/7.gif" />
-                <Image MouseLeftButtonDown="Pic8_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/8.gif" />
-                <Image MouseLeftButtonDown="Pic9_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/9.gif" />
-                <Image MouseLeftButtonDown="Pic10_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/10.gif" />
-                <Image MouseLeftButtonDown="Pic11_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/11.gif" />
-                <Image MouseLeftButtonDown="Pic12_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/12.gif" />
-                <Image MouseLeftButtonDown="Pic13_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/13.gif" />
-                <Image MouseLeftButtonDown="Pic14_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/14.gif" />
-                <Image MouseLeftButtonDown="Pic15_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/15.gif" />
-                <Image MouseLeftButtonDown="Pic16_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/16.gif" />
-                <Image MouseLeftButtonDown="Pic17_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/17.gif" />
-                <Image MouseLeftButtonDown="Pic18_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/18.gif" />
-                <Image MouseLeftButtonDown="Pic19_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/19.gif" />
-                <Image MouseLeftButtonDown="Pic20_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/20.gif" />
-                <Image MouseLeftButtonDown="Pic21_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/21.gif" />
-                <Image MouseLeftButtonDown="Pic22_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/22.gif" />
-                <Image MouseLeftButtonDown="Pic23_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/23.gif" />
-                <Image MouseLeftButtonDown="Pic24_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/24.gif" />
-                <Image MouseLeftButtonDown="Pic25_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/25.gif" />
-                <Image MouseLeftButtonDown="Pic26_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/26.gif" />
-                <Image MouseLeftButtonDown="Pic27_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/27.gif" />
-                <Image MouseLeftButtonDown="Pic28_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/28.gif" />
-                <Image MouseLeftButtonDown="Pic29_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/29.gif" />
-                <Image MouseLeftButtonDown="Pic30_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/30.gif" />
-                <Image MouseLeftButtonDown="Pic31_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/31.gif" />
-                <Image MouseLeftButtonDown="Pic32_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/32.gif" />
-                <Image MouseLeftButtonDown="Pic33_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/33.gif" />
-                <Image MouseLeftButtonDown="Pic34_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/34.gif" />
-                <Image MouseLeftButtonDown="Pic35_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/35.gif" />
-                <Image MouseLeftButtonDown="Pic36_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/36.gif" />
-                <Image MouseLeftButtonDown="Pic37_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/37.gif" />
-                <Image MouseLeftButtonDown="Pic38_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/38.gif" />
-                <Image MouseLeftButtonDown="Pic39_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/39.gif" />
-                <Image MouseLeftButtonDown="Pic40_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/40.gif" />
-                <Image MouseLeftButtonDown="Pic41_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/41.gif" />
-                <Image MouseLeftButtonDown="Pic42_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/42.gif" />
-                <Image MouseLeftButtonDown="Pic43_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/43.gif" />
-                <Image MouseLeftButtonDown="Pic44_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/44.gif" />
-                <Image MouseLeftButtonDown="Pic45_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/45.gif" />
-                <Image MouseLeftButtonDown="Pic46_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/46.gif" />
-                <Image MouseLeftButtonDown="Pic47_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/47.gif" />
-                <Image MouseLeftButtonDown="Pic48_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/48.gif" />
+                <Image x:Name="Pic1" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/1.gif" />
+                <Image x:Name="Pic2" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/2.gif" />
+                <Image x:Name="Pic3" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/3.gif" />
+                <Image x:Name="Pic4" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/4.gif" />
+                <Image x:Name="Pic5" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/5.gif" />
+                <Image x:Name="Pic6" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/6.gif" />
+                <Image x:Name="Pic7" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/7.gif" />
+                <Image x:Name="Pic8" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/8.gif" />
+                <Image x:Name="Pic9" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/9.gif" />
+                <Image x:Name="Pic10" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/10.gif" />
+                <Image x:Name="Pic11" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/11.gif" />
+                <Image x:Name="Pic12" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/12.gif" />
+                <Image x:Name="Pic13" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/13.gif" />
+                <Image x:Name="Pic14" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/14.gif" />
+                <Image x:Name="Pic15" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/15.gif" />
+                <Image x:Name="Pic16" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/16.gif" />
+                <Image x:Name="Pic17" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/17.gif" />
+                <Image x:Name="Pic18" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/18.gif" />
+                <Image x:Name="Pic19" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/19.gif" />
+                <Image x:Name="Pic20" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/20.gif" />
+                <Image x:Name="Pic21" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/21.gif" />
+                <Image x:Name="Pic22" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/22.gif" />
+                <Image x:Name="Pic23" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/23.gif" />
+                <Image x:Name="Pic24" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/24.gif" />
+                <Image x:Name="Pic25" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/25.gif" />
+                <Image x:Name="Pic26" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/26.gif" />
+                <Image x:Name="Pic27" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/27.gif" />
+                <Image x:Name="Pic28" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/28.gif" />
+                <Image x:Name="Pic29" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/29.gif" />
+                <Image x:Name="Pic30" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/30.gif" />
+                <Image x:Name="Pic31" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/31.gif" />
+                <Image x:Name="Pic32" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/32.gif" />
+                <Image x:Name="Pic33" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/33.gif" />
+                <Image x:Name="Pic34" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/34.gif" />
+                <Image x:Name="Pic35" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/35.gif" />
+                <Image x:Name="Pic36" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/36.gif" />
+                <Image x:Name="Pic37" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/37.gif" />
+                <Image x:Name="Pic38" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/38.gif" />
+                <Image x:Name="Pic39" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/39.gif" />
+                <Image x:Name="Pic40" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/40.gif" />
+                <Image x:Name="Pic41" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/41.gif" />
+                <Image x:Name="Pic42" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/42.gif" />
+                <Image x:Name="Pic43" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/43.gif" />
+                <Image x:Name="Pic44" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/44.gif" />
+                <Image x:Name="Pic45" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/45.gif" />
+                <Image x:Name="Pic46" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/46.gif" />
+                <Image x:Name="Pic47" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/47.gif" />
+                <Image x:Name="Pic48" MouseLeftButtonDown="Pic1_MouseLeftButtonDown" Margin="5,5" Height="100" Width="100" Source="pack://siteoforigin:,,/Resources/VisualMemoryTestResorces/48.gif" />
             </WrapPanel>
         </Viewbox>
 
