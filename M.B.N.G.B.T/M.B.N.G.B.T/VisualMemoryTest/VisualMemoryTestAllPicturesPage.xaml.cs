@@ -90,7 +90,7 @@ namespace M.B.N.G.B.T.VisualMemoryTest
                 isEnabledPics = false;
         }
 
-        private void Pic1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Pics_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             if (isEnabledPics)
             {

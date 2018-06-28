@@ -65,11 +65,11 @@
                     <LineBreak/><Run Text="Հետո  փորձարկվողը  սեղմում   է  (Սկսել թեստը) կոճակը: 10 բառերն անհետանում "/>
                     <LineBreak/><Run Text="են  և  ակտիվանում  է  գրելու  դաշտը,  որտեղ  գրում է այն բառերը, որոնք հիշում է : "/>
                     <LineBreak/>
-                    <LineBreak/><Run Text="  "/><Run Foreground="#FF930000" FontWeight="Bold"  Text="Պարտադիր   պայման" TextDecorations="Underline"/>
+                    <LineBreak/><Run Text="  "/><Run Foreground="#FFF7C900" FontWeight="Bold"  Text="Պարտադիր   պայման" TextDecorations="Underline"/>
                     <Run Text="  -   Բառերն      առանձնացնել " FontWeight="Bold"/>
-                    <Run Foreground="#FF930000" FontWeight="Bold"  Text="   ստորակետերով  " />
+                    <Run Foreground="#FFF7C900" FontWeight="Bold"  Text="   ստորակետերով  " />
                     <Run Text="  գրել " FontWeight="Bold"/>
-                    <LineBreak/><Run Foreground="#FF930000" FontWeight="Bold"  Text="փոքրատառերով,  առանց   տառասխալների," />
+                    <LineBreak/><Run Foreground="#FFF7C900" FontWeight="Bold"  Text="փոքրատառերով,  առանց   տառասխալների," />
                     <Run Text="այլապես  ծրագիրը  դա  կդիտարկի" FontWeight="Bold"/>
                     <LineBreak/><Run Text="որպես   սխալ։" FontWeight="Bold"/>
                     <LineBreak/><Run Text=" Օրինակ՝" FontWeight="Bold"/>
@@ -77,7 +77,7 @@
                     <LineBreak/>
                     <LineBreak/><Run Text=" Եթե  փորձարկվողը  առաջին  իսկ  փորձից մոռացել է որոշ բառեր, կարող է փորձը "/>
                     <LineBreak/><Run Text="կրկնել  "/>
-                    <Run Text="/ առավելագույնը՝ 4 անգամ / " Foreground="#FF930000" FontWeight="Bold"/>
+                    <Run Text="/ առավելագույնը՝ 4 անգամ / " Foreground="#FFF7C900" FontWeight="Bold"/>
                     <Run Text=",  սեղմելով  (Տեսնել բառերը կրկին)   կոճակը"/>
                     <LineBreak/><Run Text="որի  արդյունքում   փորձարկվողի  գրած  բառերը  կջնջվեն  գրելու  դաշտից և կրկին "/>
                     <LineBreak/><Run Text="կհայտնվեն    10  բառերը:  Այսպես    փորձարկվողը     կրկնում   է    գործողությունը,"/>

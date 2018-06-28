@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Threading;
 
 namespace M.B.N.G.B.T.VisualMemoryTest
@@ -16,6 +17,9 @@ namespace M.B.N.G.B.T.VisualMemoryTest
         private Random rnd = new Random();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
+        private int[] arrAllSrageIntervalSecondViewPics = { 15, 30, 60, 35, 40, 45, 50, 00, 00, 30 };
+        private int[] arrAllSrageIntervalMinuteViewPics = { 0, 0, 0, 1, 1, 1, 1, 2, 2, 2 };
+
         private List<int> listThisStageRandomPicsPositionLeft { get; set; } = new List<int>() { 167, 285 };
         private List<int> listThisStageRandomPicsPositionTop { get; set; } = new List<int>() { 10, 10 };
         private Image[] arrAllPicsSubject = new Image[48];
@@ -25,6 +29,9 @@ namespace M.B.N.G.B.T.VisualMemoryTest
         public static byte picturesCount { get; set; } = 2;
         public static byte stage { get; set; } = 1;
 
+        private int second { get; set; } = 0;
+        private int minute { get; set; } = 0;
+
         public VisualMemoryTestRandomPicturesPage()
         {
             InitializeComponent();
@@ -33,22 +40,56 @@ namespace M.B.N.G.B.T.VisualMemoryTest
                                              Pic18,Pic19,Pic20,Pic21,Pic22,Pic23,Pic24,Pic25,Pic26,Pic27,Pic28,Pic29,Pic30,Pic31,Pic32,
                                              Pic33,Pic34,Pic35,Pic36,Pic37,Pic38,Pic39,Pic40,Pic41,Pic42,Pic43,Pic44,Pic45,Pic46,Pic47,Pic48};
 
+            minute = arrAllSrageIntervalMinuteViewPics[stage - 1];
+            second = arrAllSrageIntervalSecondViewPics[stage - 1];
+
             if (stage != 1)
                 IsInitializedListNewValues();
 
+            dispatcherTimer.Tick += new EventHandler(LabelTimer);
             listPicVisibility.Clear();
             PicRandomVisibility();
             StartStage.Content = $"{stage}/10";
+            dispatcherTimer.Start();
         }
 
+        private void LabelTimer(object sender, EventArgs e)
+        {
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+            if (second == 0 && minute != 0)
+            {
+                Timer.Content = $"{minute--}:00";
+                second = 60;
+            }
+            else
+            if (second <= 9)
+                Timer.Content = $"{minute}:0{second}";
+            else
+                Timer.Content = $"{minute}:{second}";
+
+            if ((stage == 1 && second == 7) || (stage == 2 && second == 15) || (stage > 2 && second == 30 && minute == 0))
+                Timer.Foreground = Brushes.Yellow;
+            else
+            if ((stage == 1 && second == 4) || (stage == 2 && second == 7) || (stage > 2 && second == 15 && minute == 0))
+                Timer.Foreground = Brushes.Red;
+
+            if (second == -1 && minute == 0)
+            {
+                dispatcherTimer.Stop();
+                NavigationService.Navigate(new VisualMemoryTestAllPicturesPage());
+            }
+            second--;
+        }
 
         private void Button_Exit_The_Test_And_View_Result(object sender, RoutedEventArgs e)
         {
+            dispatcherTimer.Stop();
             NavigationService.Navigate(new VisualMemoryTestResultPage());
         }
 
         private void Button_Start_Stage(object sender, RoutedEventArgs e)
         {
+            dispatcherTimer.Stop();
             NavigationService.Navigate(new VisualMemoryTestAllPicturesPage());
         }
 
