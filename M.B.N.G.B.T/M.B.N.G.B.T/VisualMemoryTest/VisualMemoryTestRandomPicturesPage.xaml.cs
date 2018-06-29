@@ -17,17 +17,17 @@ namespace M.B.N.G.B.T.VisualMemoryTest
         private Random rnd = new Random();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
-        private int[] arrAllSrageIntervalSecondViewPics = { 15, 30, 60, 35, 40, 45, 50, 00, 00, 30 };
-        private int[] arrAllSrageIntervalMinuteViewPics = { 0, 0, 0, 1, 1, 1, 1, 2, 2, 2 };
+        private int[] arrAllSrageIntervalSecondViewPics = { 15, 30, 60, 35, 45, 55, 00, 10, 20, 40 };
+        private int[] arrAllSrageIntervalMinuteViewPics = { 0, 0, 0, 1, 1, 1, 2, 2, 2, 2 };
 
         private List<int> listThisStageRandomPicsPositionLeft { get; set; } = new List<int>() { 167, 285 };
         private List<int> listThisStageRandomPicsPositionTop { get; set; } = new List<int>() { 10, 10 };
         private Image[] arrAllPicsSubject = new Image[48];
 
-        public static List<int> listPicVisibility { get; private set; } = new List<int>();
 
-        public static byte picturesCount { get; set; } = 2;
+        public static List<int> listPicVisibility { get; private set; } = new List<int>();
         public static byte stage { get; set; } = 1;
+        public static readonly byte[] picturesCountByStages = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
 
         private int second { get; set; } = 0;
         private int minute { get; set; } = 0;
@@ -35,6 +35,9 @@ namespace M.B.N.G.B.T.VisualMemoryTest
         public VisualMemoryTestRandomPicturesPage()
         {
             InitializeComponent();
+
+            if (stage > 10)
+                stage = 10;
 
             arrAllPicsSubject = new Image[] {Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,Pic7,Pic8,Pic9,Pic10,Pic11,Pic12,Pic13,Pic14,Pic15,Pic16,Pic17,
                                              Pic18,Pic19,Pic20,Pic21,Pic22,Pic23,Pic24,Pic25,Pic26,Pic27,Pic28,Pic29,Pic30,Pic31,Pic32,
@@ -45,7 +48,7 @@ namespace M.B.N.G.B.T.VisualMemoryTest
 
             if (stage != 1)
                 IsInitializedListNewValues();
-
+            
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
             listPicVisibility.Clear();
             PicRandomVisibility();
@@ -97,7 +100,7 @@ namespace M.B.N.G.B.T.VisualMemoryTest
         {
             int number = 0;
 
-            for (int i = 0; i < picturesCount; i++)
+            for (int i = 0; i < picturesCountByStages[stage - 1]; i++)
             {
                 number = rnd.Next(1, 49);
 

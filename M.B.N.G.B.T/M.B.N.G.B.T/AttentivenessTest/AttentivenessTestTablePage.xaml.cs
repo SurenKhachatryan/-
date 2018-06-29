@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 using System.Windows.Navigation;
 using System.Windows.Threading;
 using ClassLibrary;
@@ -25,6 +26,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
         private int countAbsentWords { get; set; } = 0;
         private int countWrongWords { get; set; } = 0;
         private int second { get; set; } = 0;
+        private int secondTimer { get; set; } = 61;
         private int secondForTextBox { get; set; } = 0;
 
         private string[] arrWords { get; set; } = { "մուկ", "պատ", "սպունգ", "մահճակալ", "սեղան", "տիկնիկ", "բառ" ,"վարունգ","կոստյում",
@@ -56,31 +58,69 @@ namespace M.B.N.G.B.T.AttentivenessTest
                 textBoxWords.IsEnabled = false;
                 buttonExitTheTestViewResult.IsEnabled = false;
             }
+            dispatcherTimer.Start();
         }
 
         private void LabelTimer(object sender, EventArgs e)
         {
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-            if (second == 10)
+            if (Timer.Visibility == Visibility.Hidden)
             {
-                if (LableInfo.Content != "Բառերը Գրել ներքևում տրված դաշտում, առանց տառասխալների և փոքրատառերով, այլապես դա կդիտարկվի որպես սխալ")
-                    LableInfo.Content = string.Empty;
+                if (second == 10)
+                {
+                    if (LableInfo.Content != "Բառերը Գրել ներքևում տրված դաշտում, առանց տառասխալների և փոքրատառերով, այլապես դա կդիտարկվի որպես սխալ")
+                        LableInfo.Content = string.Empty;
 
-                dispatcherTimer.Stop();
-                second = 0;
-            }
-            if (buttonExitTheTestViewResult.Visibility != Visibility.Visible)
-                dispatcherTimer.Stop();
-            else
-            if (secondForTextBox == 2 && !textBoxWords.IsEnabled && buttonExitTheTestViewResult.Visibility == Visibility.Visible)
-            {
-                textBoxWords.IsEnabled = true;
-                if (LableInfo.Content == "")
                     dispatcherTimer.Stop();
-
+                    second = 0;
+                }
+                if (buttonExitTheTestViewResult.Visibility != Visibility.Visible)
+                    dispatcherTimer.Stop();
+                else
+                if (secondForTextBox == 2 && !textBoxWords.IsEnabled && buttonExitTheTestViewResult.Visibility == Visibility.Visible)
+                {
+                    textBoxWords.IsEnabled = true;
+                    if (LableInfo.Content == "")
+                        dispatcherTimer.Stop();
+                    textBoxWords.Focus();
+                }
+                secondForTextBox++;
+                second++;
             }
-            secondForTextBox++;
-            second++;
+            else
+            {
+                if (secondTimer > 10)
+                    Timer.Content = $"{--secondTimer}";
+                else
+                    Timer.Content = $"0{--secondTimer}";
+
+                if (secondTimer <= 10)
+                    Timer.Foreground = Brushes.Red;
+                else
+                if (secondTimer > 10 && secondTimer <= 20)
+                    Timer.Foreground = Brushes.Yellow;
+
+                if (secondTimer == -1)
+                {
+                    textBoxWords.IsEnabled = true;
+                    textBoxWords.Focus();
+                    LabelWord.Visibility = Visibility.Collapsed;
+                    Timer.Visibility = Visibility.Hidden;
+                    Timer.Foreground = Brushes.Snow;
+                    Timer.Content = (secondTimer = 60);
+                    buttonSeeWord.Content = "Տեսնել բառերը կրկին";
+                    buttonExitTheTestViewResult.IsEnabled = true;
+                    dispatcherTimer.Stop();
+                    if (stage == 1)
+                        LableInfo.Content = "Բառերը Գրել ներքևում տրված դաշտում, առանց տառասխալների և փոքրատառերով, այլապես դա կդիտարկվի որպես սխալ";
+                    else
+                        LableInfo.Content = null;
+
+                    if (stage == 4)
+                        buttonSeeWord.Visibility = Visibility.Collapsed;
+                }
+            }
+
         }
 
         private void Button_Exit_The_Test_View_Result(object sender, RoutedEventArgs e)
@@ -155,7 +195,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
 
         private void Button_View_Word(object sender, RoutedEventArgs e)
         {
-            if (textBoxWords.IsEnabled)
+            if (LabelWord.Visibility == Visibility.Collapsed)
             {
                 textBoxWords.IsEnabled = false;
                 textBoxWords.Clear();
@@ -163,7 +203,11 @@ namespace M.B.N.G.B.T.AttentivenessTest
                 buttonSeeWord.Content = "Շարունակել";
                 LableTryAgein.Content = $"Փորձ {++stage}";
                 buttonExitTheTestViewResult.IsEnabled = false;
+                dispatcherTimer.Start();
+                Timer.Foreground = Brushes.Snow;
+                Timer.Content = (secondTimer = 60);
 
+                Timer.Visibility = Visibility.Visible;
                 if (stage > 1)
                     LableInfo.Content = null;
             }
@@ -172,8 +216,10 @@ namespace M.B.N.G.B.T.AttentivenessTest
                 textBoxWords.IsEnabled = true;
                 textBoxWords.Focus();
                 LabelWord.Visibility = Visibility.Collapsed;
+                Timer.Visibility = Visibility.Hidden;
                 buttonSeeWord.Content = "Տեսնել բառերը կրկին";
                 buttonExitTheTestViewResult.IsEnabled = true;
+                dispatcherTimer.Stop();
 
                 if (stage == 1)
                     LableInfo.Content = "Բառերը Գրել ներքևում տրված դաշտում, առանց տառասխալների և փոքրատառերով, այլապես դա կդիտարկվի որպես սխալ";

@@ -31,7 +31,8 @@
             <ColumnDefinition Width="187*"/>
             <ColumnDefinition Width="445*"/>
             <ColumnDefinition Width="300*"/>
-            <ColumnDefinition Width="228*"/>
+            <ColumnDefinition Width="152*"/>
+            <ColumnDefinition Width="76*"/>
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
 
@@ -57,7 +58,7 @@
             </WrapPanel>
         </Viewbox>
 
-        <Viewbox Grid.Column="4" Grid.Row="9" HorizontalAlignment="Right" >
+        <Viewbox Grid.Column="4" Grid.Row="9" HorizontalAlignment="Right" Grid.ColumnSpan="2" >
             <Button x:Name="exitTheTest" Click="Exit_The_Test" Content="Դուրս գալ թեստից" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="228"  >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -68,17 +69,20 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Margin="35,0" Grid.Row="5" Grid.ColumnSpan="4" Grid.Column="1"  VerticalAlignment="Bottom">
+        <Viewbox Margin="35,0" Grid.Row="5" Grid.ColumnSpan="5" Grid.Column="1"  VerticalAlignment="Bottom">
             <Label x:Name="LabelWord" Content="{x:Null}" Grid.Column="1" FontSize="30" Height="98" Foreground="White" FontWeight="Bold" FontFamily="Sylfaen" />
         </Viewbox>
 
-        <TextBox x:Name="textBoxWords" Grid.Row="7" Margin="15,24,15,25" Grid.ColumnSpan="4"  Text="{x:Null}"  TextWrapping="Wrap" FontSize="20" Foreground="White" FontWeight="Bold" FontFamily="Sylfaen"  Background="#FF36573F" BorderBrush="#FF162A1D" PreviewMouseDoubleClick="textBoxWords_PreviewMouseDoubleClick" PreviewMouseRightButtonUp="textBoxWords_PreviewMouseRightButtonUp" PreviewTextInput="textBoxWords_PreviewTextInput" PreviewKeyDown="textBoxWords_PreviewKeyDown" PreviewMouseLeftButtonUp="textBoxWords_PreviewMouseLeftButtonUp" Grid.Column="1"  />
+        <TextBox x:Name="textBoxWords" Grid.Row="7" Margin="15,24,15,25" Grid.ColumnSpan="5"  Text="{x:Null}"  TextWrapping="Wrap" FontSize="20" Foreground="White" FontWeight="Bold" FontFamily="Sylfaen"  Background="#FF36573F" BorderBrush="#FF162A1D" PreviewMouseDoubleClick="textBoxWords_PreviewMouseDoubleClick" PreviewMouseRightButtonUp="textBoxWords_PreviewMouseRightButtonUp" PreviewTextInput="textBoxWords_PreviewTextInput" PreviewKeyDown="textBoxWords_PreviewKeyDown" PreviewMouseLeftButtonUp="textBoxWords_PreviewMouseLeftButtonUp" Grid.Column="1"  />
 
         <Viewbox  Grid.Row="1" HorizontalAlignment="Left"  Grid.Column="1">
             <Label x:Name="LableTryAgein" Content="Փորձ 1"  FontSize="50" Foreground="White" Width="187" FontFamily="Sylfaen" FontWeight="Bold" />
         </Viewbox>
-
-        <Viewbox Grid.ColumnSpan="4" Margin="10,0,15,0" Grid.Row="3" Grid.Column="1"  VerticalAlignment="Bottom">
+        <Viewbox Grid.Column="5" Grid.Row="1" HorizontalAlignment="Right">
+            <Label x:Name="Timer" Content="60"  FontSize="50" Foreground="White" FontFamily="Sylfaen" FontWeight="Bold"  Width="76" Height="78"/>
+        </Viewbox>
+        
+        <Viewbox Grid.ColumnSpan="5" Margin="10,0,15,0" Grid.Row="3" Grid.Column="1"  VerticalAlignment="Bottom">
             <Label x:Name="LableInfo" Content="կարդացեք և փորձեք հիշել բառերը"  FontSize="45" Height="89" Foreground="White" FontFamily="Sylfaen" FontWeight="Bold"  />
         </Viewbox>
 

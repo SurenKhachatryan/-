@@ -20,13 +20,12 @@ namespace M.B.N.G.B.T.VisualMemoryTest
 
         private void Button_Start_Test(object sender, RoutedEventArgs e)
         {
-            VisualMemoryTestRandomPicturesPage.picturesCount = 2;
             VisualMemoryTestRandomPicturesPage.stage = 1;
             NavigationService.Navigate(new VisualMemoryTestRandomPicturesPage());
         }
         public void TestRuleCollapsed()
         {
-           NavigationService.Navigate(null);
+            NavigationService.Navigate(null);
         }
     }
 }

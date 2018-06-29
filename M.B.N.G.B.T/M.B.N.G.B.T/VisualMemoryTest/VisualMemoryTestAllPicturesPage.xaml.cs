@@ -59,9 +59,9 @@ namespace M.B.N.G.B.T.VisualMemoryTest
         {
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
 
-            if (picCountChackted == VisualMemoryTestRandomPicturesPage.picturesCount && picCountChackted != 20)
+            if (picCountChackted == VisualMemoryTestRandomPicturesPage.picturesCountByStages[VisualMemoryTestRandomPicturesPage.stage - 1] && picCountChackted != 20)
             {
-                VisualMemoryTestRandomPicturesPage.picturesCount += 2;
+                
                 VisualMemoryTestRandomPicturesPage.stage += 1;
                 NavigationService.Navigate(new VisualMemoryTestRandomPicturesPage());
                 dispatcherTimer.Stop();
@@ -86,7 +86,7 @@ namespace M.B.N.G.B.T.VisualMemoryTest
 
         private void IsenabledPics()
         {
-            if (picCountChackted == VisualMemoryTestRandomPicturesPage.picturesCount && picCountChackted != 20)
+            if (picCountChackted == VisualMemoryTestRandomPicturesPage.picturesCountByStages[VisualMemoryTestRandomPicturesPage.stage - 1] && picCountChackted != 20)
                 isEnabledPics = false;
         }
 
