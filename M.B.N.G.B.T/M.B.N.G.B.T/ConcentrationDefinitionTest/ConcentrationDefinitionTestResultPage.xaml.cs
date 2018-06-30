@@ -23,7 +23,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
             {
                 ViewboxResult1.Visibility = Visibility.Visible;
                 if (ConcentrationDefinitionTestTablePage.IsEmptyTextBox)
-                    labelInfo.Content = "Դուք ոչինչ չեք լրացրել,կարող եք թեստն անցնել կրկին";
+                    labelInfo.Content = "Դուք ոչինչ չեք լրացրել,կարող եք թեստն անցնել կրկին:";
                 else
                 if (ConcentrationDefinitionTestTablePage.CountBigNumbers > 1 && ConcentrationDefinitionTestTablePage.CountNumberOfEqualDigits == 1)
                     labelInfo.Content = "Տեքստում կան 40-ից մեծ թվեր և կրկնվող թիվ։ Հնարավոր է դուք թվերը չեք \nառանձնացրել ստորակետերով, խնդրում եմ ծանոթանալ կանոններին և \nթեստն անցնել սկզբից:";
