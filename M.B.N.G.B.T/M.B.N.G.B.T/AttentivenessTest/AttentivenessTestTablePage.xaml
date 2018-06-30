@@ -38,7 +38,7 @@
 
         <Viewbox Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left">
             <WrapPanel Width="632">
-                <Button  x:Name="buttonSeeWord" Click="Button_View_Word" Content="Սկսել թեստը"  FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="228" >
+                <Button  x:Name="buttonSeeWord" Click="Button_View_Word" Content="Շարունակել"  FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="228" >
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                             <GradientStop Color="Black" Offset="1"/>
