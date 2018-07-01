@@ -27,7 +27,7 @@ namespace M.B.N.G.B.T.Schulte_Test
 
         public static byte stage { get; set; } = 1;
 
-        private byte second { get; set; } = 0;
+        private byte Second { get; set; } = 0;
         private byte counterButtonClick { get; set; } = 0;
         private byte secondForBrushNullButtons { get; set; } = 0;
         private bool isEnabledButtons { get; set; } = true;
@@ -54,22 +54,22 @@ namespace M.B.N.G.B.T.Schulte_Test
         {
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
 
-            if (second != 40)
+            if (Second != 40)
             {
-                second++;
+                Second++;
 
-                if (second < 10)
-                    timer.Content = $"0{second}";
+                if (Second < 10)
+                    timer.Content = $"0{Second}";
                 else
-                    timer.Content = $"{second}";
+                    timer.Content = $"{Second}";
 
-                if (second == 30)
+                if (Second == 30)
                     timer.Foreground = Brushes.Yellow;
                 else
-                if (second == 35)
+                if (Second == 35)
                     timer.Foreground = Brushes.Red;
                 else
-                if (second == 40)
+                if (Second == 40)
                     timer.Foreground = Brushes.Black;
 
                 secondForBrushNullButtons++;
