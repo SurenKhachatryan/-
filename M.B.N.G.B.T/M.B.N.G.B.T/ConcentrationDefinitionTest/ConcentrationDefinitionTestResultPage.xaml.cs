@@ -63,9 +63,13 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 ViewBoxRectangles1.Visibility = Visibility.Visible;
                 ViewBoxRectangles2.Visibility = Visibility.Visible;
 
-                labelListNumbers.Content += $"\n {cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllRandomDigits)}";
-                labelRightNumbers.Content += $"\n {cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.arrAllRightNumbers)}";
-                LabelResult1.Content += $"\n {cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllRightNumbersUser)}";
+                labelListNumbers.Content += $"\n-{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllRandomDigits)}";
+                labelRightNumbers.Content += $"\n-{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.arrAllRightNumbers)}";
+                if (ConcentrationDefinitionTestTablePage.ArrAllRightNumbersUser.Length != 0)
+                    LabelResult1.Content += $"\n-{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllRightNumbersUser)}";
+                else
+                    LabelResult1.Content += $"\n-Դուք չեք գրել ոչ մի ճիշտ թիվ:";
+                
                 double finishResultOfPercent = (Convert.ToDouble(ConcentrationDefinitionTestTablePage.ArrAllRightNumbersUser.Length) / Convert.ToDouble(15)) * 100;
 
                 if (ConcentrationDefinitionTestTablePage.ArrAllAbsentNumbers.Length > 0 && ConcentrationDefinitionTestTablePage.ArrAllExtraNumbers.Length > 0)
@@ -77,9 +81,9 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                     LabelResult4.Visibility = Visibility.Visible;
                     RectangleResult4.Visibility = Visibility.Visible;
 
-                    LabelResult2.Content = $"Բաց թողած թվեր, որոնք դուք չեք նկատել \n {cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllAbsentNumbers)}";
-                    LabelResult3.Content = $"Թվեր, որոնք աղյուսակում կային \n {cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllExtraNumbers)}";
-                    LabelResult4.Content = $"Ուշադրության արդյունավետության ցուցանիշը \n {Convert.ToInt32(finishResultOfPercent)}%";
+                    LabelResult2.Content = $"Բաց թողած թվեր, որոնք դուք չեք նկատել \n-{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllAbsentNumbers)}";
+                    LabelResult3.Content = $"Թվեր, որոնք աղյուսակում կային \n-{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllExtraNumbers)}";
+                    LabelResult4.Content = $"Ուշադրության արդյունավետության ցուցանիշը \n-{Convert.ToInt32(finishResultOfPercent)}%";
                 }
                 else
                 if (ConcentrationDefinitionTestTablePage.ArrAllAbsentNumbers.Length > 0 && ConcentrationDefinitionTestTablePage.ArrAllExtraNumbers.Length == 0)
@@ -89,8 +93,8 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                     LabelResult3.Visibility = Visibility.Visible;
                     RectangleResult3.Visibility = Visibility.Visible;
 
-                    LabelResult2.Content = $"Բաց թողած թվեր, որոնք դուք չեք նկատել \n {cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllAbsentNumbers)}";
-                    LabelResult3.Content = $"Ուշադրության արդյունավետության ցուցանիշը \n { Convert.ToInt32(finishResultOfPercent)}%";
+                    LabelResult2.Content = $"Բաց թողած թվեր, որոնք դուք չեք նկատել \n-{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllAbsentNumbers)}";
+                    LabelResult3.Content = $"Ուշադրության արդյունավետության ցուցանիշը \n-{ Convert.ToInt32(finishResultOfPercent)}%";
                 }
                 else
                 if (ConcentrationDefinitionTestTablePage.ArrAllExtraNumbers.Length > 0 && ConcentrationDefinitionTestTablePage.ArrAllAbsentNumbers.Length == 0)
@@ -100,15 +104,15 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                     LabelResult3.Visibility = Visibility.Visible;
                     RectangleResult3.Visibility = Visibility.Visible;
 
-                    LabelResult2.Content = $"Թվեր, որոնք աղյուսակում կային \n {cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllExtraNumbers)}";
-                    LabelResult3.Content = $"Ուշադրության արդյունավետության ցուցանիշը \n {Convert.ToInt32(finishResultOfPercent)}%";
+                    LabelResult2.Content = $"Թվեր, որոնք աղյուսակում կային \n-{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllExtraNumbers)}";
+                    LabelResult3.Content = $"Ուշադրության արդյունավետության ցուցանիշը \n-{Convert.ToInt32(finishResultOfPercent)}%";
                 }
                 else
                 if (ConcentrationDefinitionTestTablePage.ArrAllAbsentNumbers.Length == 0 && ConcentrationDefinitionTestTablePage.ArrAllExtraNumbers.Length == 0)
                 {
                     LabelResult2.Visibility = Visibility.Visible;
                     RectangleResult2.Visibility = Visibility.Visible;
-                    LabelResult2.Content = $"Ուշադրության արդյունավետության ցուցանիշը \n { Convert.ToInt32(finishResultOfPercent)}%";
+                    LabelResult2.Content = $"Ուշադրության արդյունավետության ցուցանիշը \n-{ Convert.ToInt32(finishResultOfPercent)}%";
                 }
             }
         }
