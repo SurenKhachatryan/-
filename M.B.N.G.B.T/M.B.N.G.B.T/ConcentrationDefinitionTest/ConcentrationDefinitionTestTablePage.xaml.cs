@@ -144,7 +144,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                         textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1);
                 }
                 CountNumberOfEqualDigits = cl.GetCountNumberOfEqualDigits(cl.GetArrFiltringNumbersInTheText(textBox.Text));
-
+                LabelCountNumbers.Content = $"{cl.GetCountNumbersAfterSimbols(textBox.Text)}/15";
                 if (!IsBigNumbersInTextBox && !IsEmptyTextBox && CountNumberOfEqualDigits == 0)
                 {
                     dispatcherTimer.Stop();
