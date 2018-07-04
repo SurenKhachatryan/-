@@ -43,7 +43,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
         private int Index { get; set; } = 0;
-        private int second { get; set; } = 0;
+        private int Second { get; set; } = 0;
         private int minute { get; set; } = 0;
         private int secondCTRL { get; set; } = 0;
         private int repeatNumbersSecond { get; set; } = 0;
@@ -82,9 +82,9 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         {
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
 
-            if (second == 60)
+            if (Second == 60)
             {
-                second = 0;
+                Second = 0;
                 minute++;
                 timer.Foreground = Brushes.Yellow;
             }
@@ -102,15 +102,15 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                     repeatNumbersSecond++;
             }
 
-            if (minute == 1 && second == 15)
+            if (minute == 1 && Second == 15)
                 timer.Foreground = Brushes.Red;
 
-            if (second < 10)
-                timer.Content = $"{minute}:0{second}";
+            if (Second < 10)
+                timer.Content = $"{minute}:0{Second}";
             else
-                timer.Content = $"{minute}:{second}";
+                timer.Content = $"{minute}:{Second}";
 
-            if (minute == 1 && second == 30)
+            if (minute == 1 && Second == 30)
             {
                 int[] arr = cl.GetArrFiltringNumbersInTheText(textBox.Text);
                 IsEmptyTextBox = (textBox.Text == string.Empty) ? true : false;
@@ -165,7 +165,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 textBox.IsEnabled = true;
                 textBox.Focus();
             }
-            second++;
+            Second++;
             secondCTRL++;
         }
 
