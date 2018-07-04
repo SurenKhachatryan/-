@@ -42,7 +42,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
-        private int index { get; set; } = 0;
+        private int Index { get; set; } = 0;
         private int second { get; set; } = 0;
         private int minute { get; set; } = 0;
         private int secondCTRL { get; set; } = 0;
@@ -271,12 +271,12 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
             LabelCountNumbers.Content = $"{countNumbers}/15";
 
             if (e.Key == Key.Back && textBox.Text != string.Empty)
-                textBox.SelectionStart = (index - 1);
+                textBox.SelectionStart = (Index - 1);
         }
 
         private void textBox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            index = textBox.SelectionStart;
+            Index = textBox.SelectionStart;
             if (e.Key == Key.Space)
                 e.Handled = true;
 
