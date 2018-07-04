@@ -44,7 +44,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
 
         private int Index { get; set; } = 0;
         private int Second { get; set; } = 0;
-        private int minute { get; set; } = 0;
+        private int Minute { get; set; } = 0;
         private int secondCTRL { get; set; } = 0;
         private int repeatNumbersSecond { get; set; } = 0;
 
@@ -85,7 +85,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
             if (Second == 60)
             {
                 Second = 0;
-                minute++;
+                Minute++;
                 timer.Foreground = Brushes.Yellow;
             }
 
@@ -102,15 +102,15 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                     repeatNumbersSecond++;
             }
 
-            if (minute == 1 && Second == 15)
+            if (Minute == 1 && Second == 15)
                 timer.Foreground = Brushes.Red;
 
             if (Second < 10)
-                timer.Content = $"{minute}:0{Second}";
+                timer.Content = $"{Minute}:0{Second}";
             else
-                timer.Content = $"{minute}:{Second}";
+                timer.Content = $"{Minute}:{Second}";
 
-            if (minute == 1 && Second == 30)
+            if (Minute == 1 && Second == 30)
             {
                 int[] arr = cl.GetArrFiltringNumbersInTheText(textBox.Text);
                 IsEmptyTextBox = (textBox.Text == string.Empty) ? true : false;
