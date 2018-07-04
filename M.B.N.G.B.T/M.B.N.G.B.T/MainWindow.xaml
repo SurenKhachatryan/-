@@ -23,12 +23,12 @@
             <RowDefinition Height="9*"/>
             <RowDefinition Height="35*"/>
             <RowDefinition Height="9*"/>
-            <RowDefinition Height="35*"/>
+            <RowDefinition Height="44*"/>
             <RowDefinition Height="9*"/>
             <RowDefinition Height="51*"/>
-            <RowDefinition Height="9*"/>
+            <RowDefinition Height="10*"/>
             <RowDefinition Height="35*"/>
-            <RowDefinition Height="413*"/>
+            <RowDefinition Height="403*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -71,7 +71,7 @@
         </Viewbox>
 
         <Viewbox Grid.Row="9" Grid.Column="1" HorizontalAlignment="Left">
-            <Button x:Name="buttonKrepelinTest" Click="Button_Krepelin_Test" Content="Հաշվարկ ըստ Կրեպելինի" FontSize="17"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White"  Height="35"  Width="263" >
+            <Button x:Name="buttonKrepelinTest" Click="Button_Krepelin_Test" Content="Մտավոր Կարողության&#xD;&#xA; Գնահատման  Թեստ" FontSize="16"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White" Height="44" Width="263" >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
