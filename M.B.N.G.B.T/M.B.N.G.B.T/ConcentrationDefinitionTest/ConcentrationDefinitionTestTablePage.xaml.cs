@@ -45,8 +45,8 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         private int Index { get; set; } = 0;
         private int Second { get; set; } = 0;
         private int Minute { get; set; } = 0;
-        private int secondCTRL { get; set; } = 0;
-        private int repeatNumbersSecond { get; set; } = 0;
+        private int SecondCTRL { get; set; } = 0;
+        private int RepeatNumbersSecond { get; set; } = 0;
 
         public ConcentrationDefinitionTestTablePage()
         {
@@ -91,15 +91,15 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
 
             if (cl.SearchEqualNumbersInALineAfterAComma(textBox.Text))
             {
-                if (repeatNumbersSecond == 2)
+                if (RepeatNumbersSecond == 2)
                 {
                     if (cl.SearchBigNumberInArr(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40) && cl.SearchEqualNumbersInALineAfterAComma(textBox.Text))
                         LabelWarning.Content = "Տեքստում կա 40-ից մեծ թիվ և կրկնվող թիվ:";
                     else
                         LabelWarning.Content = "Տեքստում կա կրկնվող թիվ:";
                 }
-                if (repeatNumbersSecond != 2)
-                    repeatNumbersSecond++;
+                if (RepeatNumbersSecond != 2)
+                    RepeatNumbersSecond++;
             }
 
             if (Minute == 1 && Second == 15)
@@ -160,13 +160,13 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 }
             }
 
-            if (secondCTRL == 2)
+            if (SecondCTRL == 2)
             {
                 textBox.IsEnabled = true;
                 textBox.Focus();
             }
             Second++;
-            secondCTRL++;
+            SecondCTRL++;
         }
 
         private void Button_Finish_Test(object sender, RoutedEventArgs e)
@@ -253,18 +253,18 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
             bool repeatNumbers = cl.SearchEqualNumbersInALineAfterAComma(textBox.Text);
 
             if (repeatNumbers != true)
-                repeatNumbersSecond = 0;
+                RepeatNumbersSecond = 0;
 
             if (!bigNumbers && !repeatNumbers)
                 LabelWarning.Content = string.Empty;
             else
-            if (bigNumbers && repeatNumbers && repeatNumbersSecond == 2)
+            if (bigNumbers && repeatNumbers && RepeatNumbersSecond == 2)
                 LabelWarning.Content = "Տեքստում կա 40-ից մեծ թիվ և կրկնվող թիվ:";
             else
             if (bigNumbers)
                 LabelWarning.Content = "Տեքստում կա 40-ից մեծ թիվ:";
             else
-            if (repeatNumbers && repeatNumbersSecond == 2)
+            if (repeatNumbers && RepeatNumbersSecond == 2)
                 LabelWarning.Content = "Տեքստում կա կրկնվող թիվ:";
 
             textBox.Text = cl.DeleteExtraCommaInText(textBox.Text);
@@ -284,7 +284,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 || e.Key == Key.LeftShift || e.Key == Key.RightShift)
             {
                 textBox.IsEnabled = false;
-                secondCTRL = 0;
+                SecondCTRL = 0;
             }
         }
 
