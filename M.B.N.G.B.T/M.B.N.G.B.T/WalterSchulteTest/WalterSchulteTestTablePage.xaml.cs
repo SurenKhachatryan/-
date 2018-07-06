@@ -33,6 +33,7 @@ namespace M.B.N.G.B.T.WalterSchulteTest
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
         public static byte Stage { get; set; } = 1;
+        public static int[] ArrAllStageSecond { get; private set; } = new int[5];
 
         private byte Second { get; set; } = 0;
         private byte CounterButtonClick { get; set; } = 0;
@@ -43,6 +44,9 @@ namespace M.B.N.G.B.T.WalterSchulteTest
 
         public WalterSchulteTestTablePage()
         {
+            if (Stage == 1)
+                ArrAllStageSecond = new int[5];
+
             InitializeComponent();
             ChangeContentButtonRandom();
             startStage.Content = $"{Stage}/5";
@@ -57,63 +61,37 @@ namespace M.B.N.G.B.T.WalterSchulteTest
         private void LabelTimer(object sender, EventArgs e)
         {
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-
-            if (Second != 40)
+            if (Second == 300)
             {
-                Second++;
-
-                if (Second < 10)
-                    timer.Content = $"0{Second}";
-                else
-                    timer.Content = $"{Second}";
-
-                if (Second == 30)
-                    timer.Foreground = Brushes.Yellow;
-                else
-                if (Second == 35)
-                    timer.Foreground = Brushes.Red;
-                else
-                if (Second == 40)
-                    timer.Foreground = Brushes.Black;
-
-                secondForBrushNullButtons++;
-                if (secondForBrushNullButtons == 2 && DoorForChangeColorButtonBackground)
-                    BrushingButtonsNull();
-            }
-            else
-            {
-                IsEnabledButtons = false;
-                timer.Foreground = Brushes.Red;
-                listClickMistakesButtons = cl.SortingAndSerchInArrMissingNumbers(listClickButtons.ToArray(), 25);
-                BrushingButtonsRedAndNull(listClickMistakesButtons.ToArray(), 1);
+                NavigationService.Navigate(new WalterSchulteTestResultPage());
                 dispatcherTimer.Stop();
             }
+
+            if (Second < 10)
+                timer.Content = $"0{Second++}";
+            else
+                timer.Content = $"{Second++}";
+
+
+            if (secondForBrushNullButtons == 2 && DoorForChangeColorButtonBackground)
+                BrushingButtonsNull();
+            secondForBrushNullButtons++;
         }
+
         private void BrushingButtonsNull()
         {
-            BrushingButtonsRedAndNull(listClickMistakesButtons.ToArray(), 2);
+            BrushingButtonsColorDefult(listClickMistakesButtons.ToArray());
             secondForBrushNullButtons = 0;
         }
 
-        private void BrushingButtonsRedAndNull(int[] arr, byte brushRedandNull)
+        private void BrushingButtonsColorDefult(int[] arr)
         {
-
             for (int i = 0; i < arr.Length; i++)
             {
-                if (brushRedandNull == 1)
-                {
-                    if (i == IndexButton)
-                        arrAllButtons[IndexButton].Foreground = Brushes.Red;
-
-                    arrAllButtons[(arr[i] - 1)].Background = Brushes.Red;
-                }
-                else
-                {
-                    arrAllButtons[(arr[i] - 1)].Foreground = Brushes.Black;
-                    arrAllButtons[(arr[i] - 1)].Background = (Brush)new BrushConverter().ConvertFrom("#FF567962");
-                    DoorForChangeColorButtonBackground = false;
-                }
+                arrAllButtons[(arr[i] - 1)].Foreground = Brushes.Black;
+                arrAllButtons[(arr[i] - 1)].Background = Brushes.White;
             }
+            DoorForChangeColorButtonBackground = false;
         }
 
         private void ChangeContentButtonRandom()
@@ -139,6 +117,7 @@ namespace M.B.N.G.B.T.WalterSchulteTest
         {
             if (CounterButtonClick == 25)
             {
+                ArrAllStageSecond[Stage - 1] = Second;
                 Stage++;
                 dispatcherTimer.Stop();
                 if (Stage != 6)
