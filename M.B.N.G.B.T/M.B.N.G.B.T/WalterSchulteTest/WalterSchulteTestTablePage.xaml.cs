@@ -32,7 +32,7 @@ namespace M.B.N.G.B.T.WalterSchulteTest
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
-        public static byte stage { get; set; } = 1;
+        public static byte Stage { get; set; } = 1;
 
         private byte Second { get; set; } = 0;
         private byte CounterButtonClick { get; set; } = 0;
@@ -45,7 +45,7 @@ namespace M.B.N.G.B.T.WalterSchulteTest
         {
             InitializeComponent();
             ChangeContentButtonRandom();
-            startStage.Content = $"{stage}/5";
+            startStage.Content = $"{Stage}/5";
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
             dispatcherTimer.Start();
         }
@@ -139,9 +139,9 @@ namespace M.B.N.G.B.T.WalterSchulteTest
         {
             if (CounterButtonClick == 25)
             {
-                stage++;
+                Stage++;
                 dispatcherTimer.Stop();
-                if (stage != 6)
+                if (Stage != 6)
                     NavigationService.Navigate(new WalterSchulteTestTablePage());
                 else
                     NavigationService.Navigate(new WalterSchulteTestResultPage());
