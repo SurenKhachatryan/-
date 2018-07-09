@@ -14,18 +14,19 @@
 
     <Grid >
         <Grid.RowDefinitions>
-            <RowDefinition Height="66*"/>
-            <RowDefinition Height="161*"/>
-            <RowDefinition Height="438*"/>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="160*"/>
+            <RowDefinition Height="441*"/>
             <RowDefinition Height="36*"/>
-            <RowDefinition Height="79*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="62*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="66*"/>
             <ColumnDefinition Width="200*"/>
-            <ColumnDefinition Width="66*"/>
-            <ColumnDefinition Width="653*"/>
-            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="720*"/>
+            <ColumnDefinition Width="20*"/>
             <ColumnDefinition Width="28*"/>
             <ColumnDefinition Width="166*"/>
             <ColumnDefinition Width="71*"/>
@@ -40,7 +41,7 @@
         </Viewbox>
 
 
-        <Viewbox Grid.Column="3" Grid.RowSpan="2" Grid.Row="1">
+        <Viewbox Grid.Column="3" Grid.RowSpan="4" Grid.Row="1">
             <WrapPanel Width="525">
                 <Button x:Name="button1" Click="Button_Click1" Content="1" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
                 <Button x:Name="button2" Click="Button_Click1" Content="2" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>

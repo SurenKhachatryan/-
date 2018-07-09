@@ -35,7 +35,7 @@ namespace M.B.N.G.B.T.WalterSchulteTest
         public static byte Stage { get; set; } = 1;
         public static int[] ArrAllStageSecond { get; private set; } = new int[5];
 
-        private byte Second { get; set; } = 0;
+        private int Second { get; set; } = 0;
         private byte CounterButtonClick { get; set; } = 0;
         private byte secondForBrushNullButtons { get; set; } = 0;
         private bool IsEnabledButtons { get; set; } = true;
