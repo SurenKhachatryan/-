@@ -1,18 +1,11 @@
 ﻿using ClassLibrary;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 
 namespace M.B.N.G.B.T.WalterSchulteTest
@@ -38,7 +31,6 @@ namespace M.B.N.G.B.T.WalterSchulteTest
         private int Second { get; set; } = 0;
         private byte CounterButtonClick { get; set; } = 0;
         private byte secondForBrushNullButtons { get; set; } = 0;
-        private bool IsEnabledButtons { get; set; } = true;
         private bool DoorForChangeColorButtonBackground { get; set; } = false;
         private int IndexButton { get; set; } = 0;
 
@@ -53,9 +45,10 @@ namespace M.B.N.G.B.T.WalterSchulteTest
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
             dispatcherTimer.Start();
         }
-        private void Button_Exit_The_Test_View_Result(object sender, RoutedEventArgs e)
+
+        private void Button_Exit_The_Test(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new WalterSchulteTestResultPage());
+            NavigationService.Navigate(new WalterSchulteTestRulePage());
         }
 
         private void LabelTimer(object sender, EventArgs e)
@@ -74,14 +67,8 @@ namespace M.B.N.G.B.T.WalterSchulteTest
 
 
             if (secondForBrushNullButtons == 2 && DoorForChangeColorButtonBackground)
-                BrushingButtonsNull();
+                BrushingButtonsColorDefult(listClickMistakesButtons.ToArray());
             secondForBrushNullButtons++;
-        }
-
-        private void BrushingButtonsNull()
-        {
-            BrushingButtonsColorDefult(listClickMistakesButtons.ToArray());
-            secondForBrushNullButtons = 0;
         }
 
         private void BrushingButtonsColorDefult(int[] arr)
@@ -91,6 +78,7 @@ namespace M.B.N.G.B.T.WalterSchulteTest
                 arrAllButtons[(arr[i] - 1)].Foreground = Brushes.Black;
                 arrAllButtons[(arr[i] - 1)].Background = Brushes.White;
             }
+            secondForBrushNullButtons = 0;
             DoorForChangeColorButtonBackground = false;
         }
 
@@ -113,8 +101,25 @@ namespace M.B.N.G.B.T.WalterSchulteTest
             }
         }
 
-        private void FinalStage()
+        private void Button_Click1(object sender, RoutedEventArgs e)
         {
+            IndexButton = GetButtonIndex(((Button)sender).Name);
+
+            if (CounterButtonClick + 1 == Convert.ToByte(arrAllButtons[IndexButton].Content))
+            {
+                CounterButtonClick++;
+                BrushingButtonsColorDefult(listClickMistakesButtons.ToArray());
+                listClickButtons.Add(IndexButton + 1);
+            }
+            else
+            if (CounterButtonClick != Convert.ToByte(arrAllButtons[IndexButton].Content))
+            {
+                arrAllButtons[IndexButton].Background = Brushes.Red;
+                arrAllButtons[IndexButton].Foreground = Brushes.Red;
+                listClickMistakesButtons.Add(IndexButton + 1);
+                secondForBrushNullButtons = 0;
+                DoorForChangeColorButtonBackground = true;
+            }
             if (CounterButtonClick == 25)
             {
                 ArrAllStageSecond[Stage - 1] = Second;
@@ -127,30 +132,6 @@ namespace M.B.N.G.B.T.WalterSchulteTest
             }
         }
 
-        private void Button_Click1(object sender, RoutedEventArgs e)
-        {
-            if (IsEnabledButtons)
-            {
-                IndexButton = GetButtonIndex(((Button)sender).Name);
-                if (CounterButtonClick + 1 == Convert.ToByte(arrAllButtons[IndexButton].Content))
-                {
-                    CounterButtonClick++;
-                    BrushingButtonsNull();
-                    listClickButtons.Add(IndexButton + 1);
-                }
-                else
-                if (CounterButtonClick != Convert.ToByte(arrAllButtons[IndexButton].Content))
-                {
-                    arrAllButtons[IndexButton].Background = Brushes.Red;
-                    arrAllButtons[IndexButton].Foreground = Brushes.Red;
-                    listClickMistakesButtons.Add(IndexButton + 1);
-                    secondForBrushNullButtons = 0;
-                    DoorForChangeColorButtonBackground = true;
-                }
-                FinalStage();
-            }
-        }
-
         private int GetButtonIndex(string buttonName)
         {
             for (int i = 0; i < arrAllButtons.Length; i++)
@@ -159,14 +140,14 @@ namespace M.B.N.G.B.T.WalterSchulteTest
             return -1;
         }
 
-        private void button1_MouseEnter(object sender, MouseEventArgs e)
+        private void Button1_MouseEnter(object sender, MouseEventArgs e)
         {
             IndexButton = GetButtonIndex(((Button)sender).Name);
             if (arrAllButtons[IndexButton].Background == Brushes.Red)
                 arrAllButtons[IndexButton].Foreground = Brushes.Red;
         }
 
-        private void button1_MouseLeave(object sender, MouseEventArgs e)
+        private void Button1_MouseLeave(object sender, MouseEventArgs e)
         {
             IndexButton = GetButtonIndex(((Button)sender).Name);
             if (arrAllButtons[IndexButton].Background == Brushes.Red)

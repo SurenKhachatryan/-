@@ -33,7 +33,7 @@
         </Grid.ColumnDefinitions>
 
         <Viewbox Grid.Column="6" HorizontalAlignment="Right" Grid.Row="1">
-            <Label x:Name="timer" FontSize="103" Content="000" Foreground="White" FontFamily="Sylfaen" Height="161" Width="166"/>
+            <Label x:Name="timer" FontSize="103" Content=" 00" Foreground="White" FontFamily="Sylfaen" Height="161" Width="166"/>
         </Viewbox>
 
         <Viewbox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1">
@@ -43,36 +43,36 @@
 
         <Viewbox Grid.Column="3" Grid.RowSpan="4" Grid.Row="1">
             <WrapPanel Width="525">
-                <Button x:Name="button1" Click="Button_Click1" Content="1" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button2" Click="Button_Click1" Content="2" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button3" Click="Button_Click1" Content="3" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button4" Click="Button_Click1" Content="4" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button5" Click="Button_Click1" Content="5" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button6" Click="Button_Click1" Content="6" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button7" Click="Button_Click1" Content="7" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button8" Click="Button_Click1" Content="8" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button9" Click="Button_Click1" Content="9" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button10" Click="Button_Click1" Content="10" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button11" Click="Button_Click1" Content="11" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button12" Click="Button_Click1" Content="12" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button13" Click="Button_Click1" Content="13" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button14" Click="Button_Click1" Content="14" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button15" Click="Button_Click1" Content="15" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button16" Click="Button_Click1" Content="16" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button17" Click="Button_Click1" Content="17" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button18" Click="Button_Click1" Content="18" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button19" Click="Button_Click1" Content="19" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button20" Click="Button_Click1" Content="20" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button21" Click="Button_Click1" Content="21" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button22" Click="Button_Click1" Content="22" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button23" Click="Button_Click1" Content="23" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button24" Click="Button_Click1" Content="24" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
-                <Button x:Name="button25" Click="Button_Click1" Content="25" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="button1_MouseEnter" MouseLeave="button1_MouseLeave"/>
+                <Button x:Name="button1" Click="Button_Click1" Content="1" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button2" Click="Button_Click1" Content="2" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button3" Click="Button_Click1" Content="3" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button4" Click="Button_Click1" Content="4" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button5" Click="Button_Click1" Content="5" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button6" Click="Button_Click1" Content="6" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button7" Click="Button_Click1" Content="7" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button8" Click="Button_Click1" Content="8" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button9" Click="Button_Click1" Content="9" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button10" Click="Button_Click1" Content="10" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button11" Click="Button_Click1" Content="11" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button12" Click="Button_Click1" Content="12" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button13" Click="Button_Click1" Content="13" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button14" Click="Button_Click1" Content="14" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button15" Click="Button_Click1" Content="15" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button16" Click="Button_Click1" Content="16" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button17" Click="Button_Click1" Content="17" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button18" Click="Button_Click1" Content="18" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button19" Click="Button_Click1" Content="19" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button20" Click="Button_Click1" Content="20" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button21" Click="Button_Click1" Content="21" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button22" Click="Button_Click1" Content="22" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button23" Click="Button_Click1" Content="23" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button24" Click="Button_Click1" Content="24" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button25" Click="Button_Click1" Content="25" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
             </WrapPanel>
         </Viewbox>
 
         <Viewbox Grid.Column="5" Grid.Row="3" HorizontalAlignment="Right" Grid.ColumnSpan="2">
-            <Button Click="Button_Exit_The_Test_View_Result" Content="Դուրս գալ թեստից" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="194">
+            <Button Click="Button_Exit_The_Test" Content="Դուրս գալ թեստից" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="194">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
