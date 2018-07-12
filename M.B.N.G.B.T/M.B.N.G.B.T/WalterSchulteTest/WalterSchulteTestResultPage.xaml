@@ -14,17 +14,24 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="111*"/>
-            <RowDefinition Height="6*"/>
-            <RowDefinition Height="13*"/>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="159*"/>
+            <RowDefinition Height="448*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="78*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="849*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="779*"/>
             <ColumnDefinition Width="381*"/>
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right">
+        <Viewbox x:Name="ViewboxResult1" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Visibility="Hidden" >
+        <Label x:Name="labelInfo" Content="Դուք գերզանցել եք առավելագույն ժամանակի սահմանաը որը արդեն իսկ&#xD;&#xA;համարվում է վատ ցուցանիշ կարող եք թեստն անցնել սկբից" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1160" Height="159"/>
+        </Viewbox>
+       
+        <Viewbox Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right">
             <WrapPanel  Height="36"  Width="369">
                 <Button Margin="0,0,12,0" x:Name="buttonClicktryagain" Click="Button_Click_Try_Again" Content="Կրկին փորձել" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="172" >
                     <Button.Background>

@@ -539,5 +539,20 @@ namespace ClassLibrary
             ls.Sort();
             return ls.ToArray();
         }
+
+        public int GetSumElementsInArr(int[] arr)
+        {
+            try
+            {
+                int sum = 0;
+                for (int i = 0; i < arr.Length; i++)
+                    sum += arr[i];
+                return sum;
+            }
+            catch (Exception)
+            {
+                throw new ArgumentNullException();
+            }
+        }
     }
 }

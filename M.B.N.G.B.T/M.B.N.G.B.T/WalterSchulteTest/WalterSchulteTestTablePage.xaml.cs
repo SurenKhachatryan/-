@@ -27,6 +27,7 @@ namespace M.B.N.G.B.T.WalterSchulteTest
 
         public static byte Stage { get; set; } = 1;
         public static int[] ArrAllStageSecond { get; private set; } = new int[5];
+        public static int AllowableTime { get; private set; } = 0;
 
         private int Second { get; set; } = 0;
         private byte CounterButtonClick { get; set; } = 0;
@@ -49,6 +50,7 @@ namespace M.B.N.G.B.T.WalterSchulteTest
         private void Button_Exit_The_Test(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new WalterSchulteTestRulePage());
+            dispatcherTimer.Stop();
         }
 
         private void LabelTimer(object sender, EventArgs e)
@@ -56,6 +58,7 @@ namespace M.B.N.G.B.T.WalterSchulteTest
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
             if (Second == 300)
             {
+                AllowableTime = 300;
                 NavigationService.Navigate(new WalterSchulteTestResultPage());
                 dispatcherTimer.Stop();
             }
