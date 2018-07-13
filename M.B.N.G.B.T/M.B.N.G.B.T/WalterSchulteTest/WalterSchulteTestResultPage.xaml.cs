@@ -22,25 +22,55 @@ namespace M.B.N.G.B.T.WalterSchulteTest
     public partial class WalterSchulteTestResultPage : Page
     {
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
-        private int Efficiency { get; set; } = 0;
-        private int DegreeOfWorkability { get; set; } = 0;
-        private int MentalStability { get; set; } = 0;
+        private double Efficiency { get; set; } = 0;
+        private double DegreeOfWorkability { get; set; } = 0;
+        private double MentalStability { get; set; } = 0;
+        private double Appraisal { get; set; } = 0;
 
         public WalterSchulteTestResultPage()
         {
             InitializeComponent();
 
-            Efficiency = cl.GetSumElementsInArr(WalterSchulteTestTablePage.ArrAllStageSecond) / 5;
-            DegreeOfWorkability = WalterSchulteTestTablePage.ArrAllStageSecond[0] / Efficiency;
-            MentalStability = WalterSchulteTestTablePage.ArrAllStageSecond[3] / Efficiency;
-
             if (WalterSchulteTestTablePage.AllowableTime == 300)
-            {
                 ViewboxResult1.Visibility = Visibility.Visible;
-            }
             else
             {
+                Efficiency = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(cl.GetSumElementsInArr(WalterSchulteTestTablePage.ArrAllStageSecond)) / Convert.ToDouble(5), 1);
+                DegreeOfWorkability = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(WalterSchulteTestTablePage.ArrAllStageSecond[0]) / Efficiency, 1);
+                MentalStability = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(WalterSchulteTestTablePage.ArrAllStageSecond[3]) / Efficiency, 1);
 
+                if (Efficiency >= 56)
+                    Appraisal = 1;
+                else
+                if (Efficiency >= 46 && Efficiency <= 55)
+                    Appraisal = 2;
+                else
+                if (Efficiency >= 36 && Efficiency <= 45)
+                    Appraisal = 3;
+                else
+                if (Efficiency >= 31 && Efficiency <= 35)
+                    Appraisal = 4;
+                else
+                if (Efficiency <= 30)
+                    Appraisal = 5;
+
+                if (DegreeOfWorkability <= 1.0)
+                {
+
+                }
+                else
+                {
+
+                }
+
+                if (MentalStability <= 1.0)
+                {
+
+                }
+                else
+                {
+
+                }
             }
 
         }
