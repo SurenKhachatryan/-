@@ -25,7 +25,7 @@ namespace M.B.N.G.B.T.WalterSchulteTest
         private double Efficiency { get; set; } = 0;
         private double DegreeOfWorkability { get; set; } = 0;
         private double MentalStability { get; set; } = 0;
-        private double Appraisal { get; set; } = 0;
+        private int Appraisal { get; set; } = 0;
 
         public WalterSchulteTestResultPage()
         {
@@ -39,19 +39,19 @@ namespace M.B.N.G.B.T.WalterSchulteTest
                 DegreeOfWorkability = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(WalterSchulteTestTablePage.ArrAllStageSecond[0]) / Efficiency, 1);
                 MentalStability = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(WalterSchulteTestTablePage.ArrAllStageSecond[3]) / Efficiency, 1);
 
-                if (Efficiency >= 56)
+                if (Convert.ToInt16(Efficiency) >= 56)
                     Appraisal = 1;
                 else
-                if (Efficiency >= 46 && Efficiency <= 55)
+                if (Convert.ToInt16(Efficiency) >= 46 && Convert.ToInt16(Efficiency) <= 55)
                     Appraisal = 2;
                 else
-                if (Efficiency >= 36 && Efficiency <= 45)
+                if (Convert.ToInt16(Efficiency) >= 36 && Convert.ToInt16(Efficiency) <= 45)
                     Appraisal = 3;
                 else
-                if (Efficiency >= 31 && Efficiency <= 35)
+                if (Convert.ToInt16(Efficiency) >= 31 && Convert.ToInt16(Efficiency) <= 35)
                     Appraisal = 4;
                 else
-                if (Efficiency <= 30)
+                if (Convert.ToInt16(Efficiency) <= 30)
                     Appraisal = 5;
 
                 if (DegreeOfWorkability <= 1.0)
