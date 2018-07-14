@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:M.B.N.G.B.T.WalterSchulteTest"
+      xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
       mc:Ignorable="d" 
       d:DesignHeight="780" d:DesignWidth="1300"
       Title="WalterSchulteTestResultPage">
@@ -16,22 +17,31 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="59*"/>
             <RowDefinition Height="159*"/>
-            <RowDefinition Height="448*"/>
+            <RowDefinition Height="198*"/>
+            <RowDefinition Height="250*"/>
             <RowDefinition Height="36*"/>
             <RowDefinition Height="78*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="70*"/>
-            <ColumnDefinition Width="779*"/>
+            <ColumnDefinition Width="575*"/>
+            <ColumnDefinition Width="204*"/>
             <ColumnDefinition Width="381*"/>
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox x:Name="ViewboxResult1" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Visibility="Hidden" >
-        <Label x:Name="labelInfo" Content="Դուք գերզանցել եք առավելագույն ժամանակի սահմանաը որը արդեն իսկ&#xD;&#xA;համարվում է վատ ցուցանիշ կարող եք թեստն անցնել սկբից" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1160" Height="159"/>
+        <DVC:Chart Name="Diagramma" Title="Ճիշտ և Սխալ լուծված առաջադրանքների թիվը" Background="LightSteelBlue" Grid.Column="2" Margin="0,10,0,0" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <DVC:Chart.Series >
+                
+                <DVC:LineSeries Title="Հոգնածության կորագիծ"  IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
+            </DVC:Chart.Series>
+        </DVC:Chart>
+
+        <Viewbox x:Name="ViewboxResult1" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Visibility="Hidden" >
+            <Label x:Name="labelInfo" Content="Դուք գերզանցել եք առավելագույն ժամանակի սահմանաը որը արդեն իսկ&#xD;&#xA;համարվում է վատ ցուցանիշ կարող եք թեստն անցնել սկբից" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1160" Height="159"/>
         </Viewbox>
-       
-        <Viewbox Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right">
+
+        <Viewbox Grid.Row="4" Grid.Column="3" HorizontalAlignment="Right">
             <WrapPanel  Height="36"  Width="369">
                 <Button Margin="0,0,12,0" x:Name="buttonClicktryagain" Click="Button_Click_Try_Again" Content="Կրկին փորձել" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="172" >
                     <Button.Background>

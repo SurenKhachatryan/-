@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.DataVisualization.Charting;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -35,6 +36,16 @@ namespace M.B.N.G.B.T.WalterSchulteTest
                 ViewboxResult1.Visibility = Visibility.Visible;
             else
             {
+
+                ((LineSeries)Diagramma.Series[0]).ItemsSource = new KeyValuePair<int, int>[] {
+                    new KeyValuePair<int, int>(1, WalterSchulteTestTablePage.ArrAllStageSecond[0]),
+                    new KeyValuePair<int, int>(2, WalterSchulteTestTablePage.ArrAllStageSecond[1]),
+                    new KeyValuePair<int, int>(3, WalterSchulteTestTablePage.ArrAllStageSecond[2]),
+                    new KeyValuePair<int, int>(4, WalterSchulteTestTablePage.ArrAllStageSecond[3]),
+                    new KeyValuePair<int, int>(5, WalterSchulteTestTablePage.ArrAllStageSecond[4])
+                };
+
+
                 Efficiency = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(cl.GetSumElementsInArr(WalterSchulteTestTablePage.ArrAllStageSecond)) / Convert.ToDouble(5), 1);
                 DegreeOfWorkability = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(WalterSchulteTestTablePage.ArrAllStageSecond[0]) / Efficiency, 1);
                 MentalStability = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(WalterSchulteTestTablePage.ArrAllStageSecond[3]) / Efficiency, 1);
