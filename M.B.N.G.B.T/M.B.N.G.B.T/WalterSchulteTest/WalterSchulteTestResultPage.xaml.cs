@@ -36,8 +36,15 @@ namespace M.B.N.G.B.T.WalterSchulteTest
                 ViewboxResult1.Visibility = Visibility.Visible;
             else
             {
-
+                
                 ((LineSeries)Diagramma.Series[0]).ItemsSource = new KeyValuePair<int, int>[] {
+                    new KeyValuePair<int, int>(1, WalterSchulteTestTablePage.ArrAllStageSecond[0]),
+                    new KeyValuePair<int, int>(2, WalterSchulteTestTablePage.ArrAllStageSecond[1]),
+                    new KeyValuePair<int, int>(3, WalterSchulteTestTablePage.ArrAllStageSecond[2]),
+                    new KeyValuePair<int, int>(4, WalterSchulteTestTablePage.ArrAllStageSecond[3]),
+                    new KeyValuePair<int, int>(5, WalterSchulteTestTablePage.ArrAllStageSecond[4])
+                };
+                ((LineSeries)Diagramma1.Series[0]).ItemsSource = new KeyValuePair<int, int>[] {
                     new KeyValuePair<int, int>(1, WalterSchulteTestTablePage.ArrAllStageSecond[0]),
                     new KeyValuePair<int, int>(2, WalterSchulteTestTablePage.ArrAllStageSecond[1]),
                     new KeyValuePair<int, int>(3, WalterSchulteTestTablePage.ArrAllStageSecond[2]),

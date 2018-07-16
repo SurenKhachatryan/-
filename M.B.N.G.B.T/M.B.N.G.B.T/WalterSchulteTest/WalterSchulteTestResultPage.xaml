@@ -9,6 +9,23 @@
       d:DesignHeight="780" d:DesignWidth="1300"
       Title="WalterSchulteTestResultPage">
 
+    <!--<Page.Resources>
+        <Style x:Key="DataPointStyle1" TargetType="{x:Type DVC:LineDataPoint}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="DVC:LineDataPoint">
+                        <Grid>
+                            <Ellipse Fill="{TemplateBinding Background}"/>
+                            <Canvas>
+                                <TextBlock FontWeight="Bold" Text="{Binding Info}" Margin="15,0,0,0"/>
+                            </Canvas>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>-->
+
     <Page.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>
     </Page.Background>
@@ -30,10 +47,31 @@
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
 
+        <!--<DVC:Chart Name="diagram1" Margin="0,0,10,0" Title="Chart Title" Grid.RowSpan="2" Grid.Column="1" Grid.Row="1">
+            <DVC:LineSeries DependentValuePath="Y" IndependentValuePath="X" ItemsSource="{Binding Data}"  DataPointStyle="{StaticResource DataPointStyle1}">
+                <DVC:LineSeries.DependentRangeAxis>
+                    <DVC:LinearAxis Orientation="Y" Minimum="0" Maximum="80" Location="Left"/>
+                </DVC:LineSeries.DependentRangeAxis>
+                <DVC:LineSeries.IndependentAxis>
+                    <DVC:LinearAxis Orientation="X" Minimum="0" Maximum="5" Location="Bottom"/>
+                </DVC:LineSeries.IndependentAxis>
+            </DVC:LineSeries>
+        </DVC:Chart>-->
+
+        <DVC:Chart Name="Diagramma1" Title="Ճիշտ և Սխալ լուծված առաջադրանքների թիվը" Background="LightSteelBlue" Margin="60,10,0,0" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <DVC:LineSeries DependentValuePath="Y" IndependentValuePath="X" >
+                <DVC:LineSeries.DependentRangeAxis>
+                    <DVC:LinearAxis Orientation="Y" Minimum="0" Maximum="80" Location="Left"/>
+                </DVC:LineSeries.DependentRangeAxis>
+                <DVC:LineSeries.IndependentAxis>
+                    <DVC:LinearAxis Orientation="X" Minimum="0" Maximum="5" Location="Bottom"/>
+                </DVC:LineSeries.IndependentAxis>
+            </DVC:LineSeries>
+        </DVC:Chart>
+
         <DVC:Chart Name="Diagramma" Title="Ճիշտ և Սխալ լուծված առաջադրանքների թիվը" Background="LightSteelBlue" Grid.Column="2" Margin="0,10,0,0" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <DVC:Chart.Series >
-                
-                <DVC:LineSeries Title="Հոգնածության կորագիծ"  IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
+                <DVC:LineSeries Title="Հոգնածության կորագիծ" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
             </DVC:Chart.Series>
         </DVC:Chart>
 
