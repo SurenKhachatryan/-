@@ -29,7 +29,8 @@
             <ColumnDefinition Width="381*"/>
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
-        <Viewbox Grid.RowSpan="2" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="497">
+        
+        <Viewbox Name="ViewBoxDiagramma" Visibility="Hidden" Grid.RowSpan="2" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="497">
             <DVC:Chart Title="ժամանակի գրաֆիկ ըստ փուլերի" FontFamily="Sylfaen" Background="LightSteelBlue" Width="445" Height="357">
                 <DVC:LineSeries Name="Diagramma" DependentValuePath="Second" IndependentValuePath="Stage" Title="ժամանակ" FontFamily="Sylfaen" />
                 <DVC:Chart.Axes>

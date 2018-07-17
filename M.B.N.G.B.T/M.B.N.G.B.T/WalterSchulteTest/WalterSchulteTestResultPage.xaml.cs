@@ -48,7 +48,7 @@ namespace M.B.N.G.B.T.WalterSchulteTest
                 ViewboxResult1.Visibility = Visibility.Visible;
             else
             {
-
+                ViewBoxDiagramma.Visibility = Visibility.Visible;
                 Y.Maximum = cl.GetMaxNumberInArr(WalterSchulteTestTablePage.ArrAllStageSecond) + 5;
                 Diagramma.ItemsSource = new List<ToolkPoint>()
                 {
