@@ -21,6 +21,7 @@ namespace M.B.N.G.B.T.WalterSchulteTest
 
         private void Button_Start_Test(object sender, RoutedEventArgs e)
         {
+            WalterSchulteTestTablePage.Stage = 1;
             NavigationService.Navigate(new WalterSchulteTestTablePage());
         }
     }

@@ -554,5 +554,39 @@ namespace ClassLibrary
                 throw new ArgumentNullException();
             }
         }
+
+        public int GetMaxNumberInArr(int[] arr)
+        {
+            int temp = arr[0];
+            try
+            {
+                for (int i = 0; i < arr.Length; i++)
+                    if (temp < arr[i])
+                        temp = arr[i];
+
+                return temp;
+            }
+            catch (Exception)
+            {
+                throw new ArgumentNullException();
+            }
+        }
+
+        public int GetMinNumberInArr(int[] arr)
+        {
+            int temp = arr[0];
+            try
+            {
+                for (int i = 0; i < arr.Length; i++)
+                    if (temp > arr[i])
+                        temp = arr[i];
+
+                return temp;
+            }
+            catch (Exception)
+            {
+                throw new ArgumentNullException();
+            }
+        }
     }
 }

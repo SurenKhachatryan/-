@@ -28,6 +28,18 @@ namespace M.B.N.G.B.T.WalterSchulteTest
         private double MentalStability { get; set; } = 0;
         private int Appraisal { get; set; } = 0;
 
+        struct ToolkPoint
+        {
+            public int Second { get; set; }
+            public int Stage { get; set; }
+
+            public ToolkPoint(int second, int stage)
+            {
+                Stage = stage;
+                Second = second;
+            }
+        }
+
         public WalterSchulteTestResultPage()
         {
             InitializeComponent();
@@ -36,22 +48,16 @@ namespace M.B.N.G.B.T.WalterSchulteTest
                 ViewboxResult1.Visibility = Visibility.Visible;
             else
             {
-                
-                ((LineSeries)Diagramma.Series[0]).ItemsSource = new KeyValuePair<int, int>[] {
-                    new KeyValuePair<int, int>(1, WalterSchulteTestTablePage.ArrAllStageSecond[0]),
-                    new KeyValuePair<int, int>(2, WalterSchulteTestTablePage.ArrAllStageSecond[1]),
-                    new KeyValuePair<int, int>(3, WalterSchulteTestTablePage.ArrAllStageSecond[2]),
-                    new KeyValuePair<int, int>(4, WalterSchulteTestTablePage.ArrAllStageSecond[3]),
-                    new KeyValuePair<int, int>(5, WalterSchulteTestTablePage.ArrAllStageSecond[4])
-                };
-                ((LineSeries)Diagramma1.Series[0]).ItemsSource = new KeyValuePair<int, int>[] {
-                    new KeyValuePair<int, int>(1, WalterSchulteTestTablePage.ArrAllStageSecond[0]),
-                    new KeyValuePair<int, int>(2, WalterSchulteTestTablePage.ArrAllStageSecond[1]),
-                    new KeyValuePair<int, int>(3, WalterSchulteTestTablePage.ArrAllStageSecond[2]),
-                    new KeyValuePair<int, int>(4, WalterSchulteTestTablePage.ArrAllStageSecond[3]),
-                    new KeyValuePair<int, int>(5, WalterSchulteTestTablePage.ArrAllStageSecond[4])
-                };
 
+                Y.Maximum = cl.GetMaxNumberInArr(WalterSchulteTestTablePage.ArrAllStageSecond) + 5;
+                Diagramma.ItemsSource = new List<ToolkPoint>()
+                {
+                  new ToolkPoint(WalterSchulteTestTablePage.ArrAllStageSecond[0],1),
+                  new ToolkPoint(WalterSchulteTestTablePage.ArrAllStageSecond[1],2),
+                  new ToolkPoint(WalterSchulteTestTablePage.ArrAllStageSecond[2],3),
+                  new ToolkPoint(WalterSchulteTestTablePage.ArrAllStageSecond[3],4),
+                  new ToolkPoint(WalterSchulteTestTablePage.ArrAllStageSecond[4],5)
+                };
 
                 Efficiency = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(cl.GetSumElementsInArr(WalterSchulteTestTablePage.ArrAllStageSecond)) / Convert.ToDouble(5), 1);
                 DegreeOfWorkability = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(WalterSchulteTestTablePage.ArrAllStageSecond[0]) / Efficiency, 1);
