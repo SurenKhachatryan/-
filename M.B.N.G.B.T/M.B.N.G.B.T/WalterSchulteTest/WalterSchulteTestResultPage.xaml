@@ -16,23 +16,28 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="59*"/>
-            <RowDefinition Height="159*"/>
-            <RowDefinition Height="240*"/>
-            <RowDefinition Height="208*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="139*"/>
+            <RowDefinition Height="105*"/>
+            <RowDefinition Height="155*"/>
+            <RowDefinition Height="150*"/>
             <RowDefinition Height="36*"/>
             <RowDefinition Height="78*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="70*"/>
-            <ColumnDefinition Width="663*"/>
-            <ColumnDefinition Width="116*"/>
+            <ColumnDefinition Width="478*"/>
+            <ColumnDefinition Width="176*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="36*"/>
+            <ColumnDefinition Width="80*"/>
             <ColumnDefinition Width="381*"/>
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
-        
-        <Viewbox Name="ViewBoxDiagramma" Visibility="Hidden" Grid.RowSpan="2" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="497">
-            <DVC:Chart Title="ժամանակի գրաֆիկ ըստ փուլերի" FontFamily="Sylfaen" Background="LightSteelBlue" Width="445" Height="357">
-                <DVC:LineSeries Name="Diagramma" DependentValuePath="Second" IndependentValuePath="Stage" Title="ժամանակ" FontFamily="Sylfaen" />
+
+        <Viewbox Name="ViewBoxDiagramma" Visibility="Visible" Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="3" HorizontalAlignment="Right" Grid.RowSpan="3">
+            <DVC:Chart Title="ժամանակյին գրաֆիկ ըստ փուլերի" FontFamily="Sylfaen" Background="#FF6D9E17" Width="445" Height="357">
+                <DVC:LineSeries Name="Diagramma" DependentValuePath="Second" IndependentValuePath="Stage" Title="ժամանակ" FontFamily="Sylfaen" IsHitTestVisible="True" />
                 <DVC:Chart.Axes>
                     <DVC:LinearAxis Name="Y" Orientation="Y" Minimum="0"  Title="ժամանակ (վայրկյան)" FontFamily="Sylfaen"/>
                     <DVC:LinearAxis Orientation="X" Minimum="0.8" Maximum="5.2" Title="Փուլ" FontFamily="Sylfaen" ShowGridLines="True" />
@@ -40,11 +45,56 @@
             </DVC:Chart>
         </Viewbox>
 
-        <Viewbox x:Name="ViewboxResult1" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Visibility="Hidden" Width="1160" >
+        <Viewbox x:Name="ViewboxResult1" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="6" Visibility="Hidden" Grid.RowSpan="2" Margin="0,0,0,38" >
             <Label x:Name="labelInfo" Content="Դուք գերզանցել եք առավելագույն ժամանակի սահմանաը որը արդեն իսկ&#xD;&#xA;համարվում է վատ ցուցանիշ կարող եք թեստն անցնել սկբից" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1160" Height="159"/>
         </Viewbox>
 
-        <Viewbox Grid.Row="4" Grid.Column="3" HorizontalAlignment="Right" Width="369">
+        <Viewbox x:Name="ViewBoxTitile" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="1">
+            <Label Content="Արդյունքներ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35"/>
+        </Viewbox>
+
+        <Viewbox Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" >
+            <WrapPanel Width="654">
+                <TextBlock x:Name="TextBlockInfo" Foreground="Snow" FontFamily="Sylfaen" FontSize="25">
+                  <Run Text="Աշխատանքի արդյունավետության (ԱԱ)  բանաձևն  է՝"/>
+                  <LineBreak/><Run Text="ԱԱ = (T1 + T2 + T3 + T4 + T5)/5" Foreground="#FFF7C900"/><Run Text=" , որտեղ՝"/><Run Text=" Tn-ը" Foreground="#FFF7C900"/><Run Text=" աղյուսակի"/>
+                  <LineBreak/><Run Text="հետ աշխատելու ժամանակն է։ "/>
+                </TextBlock>
+                <Label x:Name="LabelAppraisa" Content=" Ձեր ԱԱ = " Foreground="#FFF7C900" FontFamily="Sylfaen" FontSize="25" Grid.Column="1" Width="653" Height="42"/>
+            </WrapPanel>
+        </Viewbox>
+
+        <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Left">
+            <WrapPanel  Width="787">
+                <Rectangle x:Name="RectebgleAppraisal1" StrokeThickness="3" Width="205" Height="62" Stroke="Black"/>
+                <Rectangle x:Name="RectebgleAppraisal2" StrokeThickness="3" Width="132" Height="62" Stroke="Black"/>
+                <Rectangle x:Name="RectebgleAppraisal3" StrokeThickness="3" Width="132" Height="62" Stroke="Black"/>
+                <Rectangle x:Name="RectebgleAppraisal4" StrokeThickness="3" Width="132" Height="62" Stroke="Black"/>
+                <Rectangle x:Name="RectebgleAppraisal5" StrokeThickness="3" Width="185" Height="62" Stroke="Black"/>
+                <Rectangle x:Name="RectebgleAppraisal6" StrokeThickness="3" Width="205" Height="62" Stroke="Black"/>
+                <Rectangle x:Name="RectebgleAppraisal7" StrokeThickness="3" Width="132" Height="62" Stroke="Black"/>
+                <Rectangle x:Name="RectebgleAppraisal8" StrokeThickness="3" Width="132" Height="62" Stroke="Black"/>
+                <Rectangle x:Name="RectebgleAppraisal9" StrokeThickness="3" Width="132" Height="62" Stroke="Black"/>
+                <Rectangle x:Name="RectebgleAppraisal10" StrokeThickness="3" Width="185" Height="62" Stroke="Black"/>
+            </WrapPanel>
+        </Viewbox>
+
+        <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Left">
+            <WrapPanel  Width="787">
+                <Label Content="  5 բալ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35" Width="205" Height="62"/>
+                <Label Content="  4 բալ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35" Width="132" Height="62"/>
+                <Label Content="  3 բալ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35" Width="132" Height="62"/>
+                <Label Content="  2 բալ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35" Width="132" Height="62"/>
+                <Label Content="  1 բալ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35" Width="185" Height="62"/>
+                <Label Content=" 30 կամ փոքր" Foreground="Snow" FontFamily="Sylfaen" FontSize="31" Width="205" Height="62"/>
+                <Label Content=" 31 - 35" Foreground="Snow" FontFamily="Sylfaen" FontSize="34" Width="132" Height="62"/>
+                <Label Content=" 36 - 45" Foreground="Snow" FontFamily="Sylfaen" FontSize="34" Width="132" Height="62"/>
+                <Label Content=" 46 - 55" Foreground="Snow" FontFamily="Sylfaen" FontSize="34" Width="132" Height="62"/>
+                <Label Content="56 կամ մեծ" Foreground="Snow" FontFamily="Sylfaen" FontSize="34" Width="185" Height="62"/>
+            </WrapPanel>
+        </Viewbox>
+
+        <Viewbox Grid.Row="6" Grid.Column="6" HorizontalAlignment="Right">
             <WrapPanel  Height="36"  Width="369">
                 <Button Margin="0,0,12,0" x:Name="buttonClicktryagain" Click="Button_Click_Try_Again" Content="Կրկին փորձել" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="172" >
                     <Button.Background>
@@ -64,6 +114,5 @@
                 </Button>
             </WrapPanel>
         </Viewbox>
-
     </Grid>
 </Page>

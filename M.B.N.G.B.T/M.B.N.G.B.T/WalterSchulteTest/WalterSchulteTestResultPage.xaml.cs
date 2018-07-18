@@ -26,12 +26,11 @@ namespace M.B.N.G.B.T.WalterSchulteTest
         private double Efficiency { get; set; } = 0;
         private double DegreeOfWorkability { get; set; } = 0;
         private double MentalStability { get; set; } = 0;
-        private int Appraisal { get; set; } = 0;
 
         struct ToolkPoint
         {
-            public int Second { get; set; }
-            public int Stage { get; set; }
+            public int Second { get; private set; }
+            public int Stage { get; private set; }
 
             public ToolkPoint(int second, int stage)
             {
@@ -50,6 +49,8 @@ namespace M.B.N.G.B.T.WalterSchulteTest
             {
                 ViewBoxDiagramma.Visibility = Visibility.Visible;
                 Y.Maximum = cl.GetMaxNumberInArr(WalterSchulteTestTablePage.ArrAllStageSecond) + 5;
+
+
                 Diagramma.ItemsSource = new List<ToolkPoint>()
                 {
                   new ToolkPoint(WalterSchulteTestTablePage.ArrAllStageSecond[0],1),
@@ -63,22 +64,54 @@ namespace M.B.N.G.B.T.WalterSchulteTest
                 DegreeOfWorkability = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(WalterSchulteTestTablePage.ArrAllStageSecond[0]) / Efficiency, 1);
                 MentalStability = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(WalterSchulteTestTablePage.ArrAllStageSecond[3]) / Efficiency, 1);
 
+                LabelAppraisa.Content += $"{Efficiency}";
+                for (int i = 0; i < WalterSchulteTestTablePage.ArrAllStageSecond.Length; i++)
+                {
+                    if (i == 0)
+                        LabelAppraisa.Content += " ((";
+                    if (i + 1 != WalterSchulteTestTablePage.ArrAllStageSecond.Length)
+                        LabelAppraisa.Content += $"{WalterSchulteTestTablePage.ArrAllStageSecond[i]} + ";
+                    else
+                        LabelAppraisa.Content += $"{WalterSchulteTestTablePage.ArrAllStageSecond[i]} )/5)";
+                }
+
                 if (Convert.ToInt16(Efficiency) >= 56)
-                    Appraisal = 1;
+                {
+                    RectebgleAppraisal10.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFFF3204"));
+                    RectebgleAppraisal5.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFFF3204"));
+                }
                 else
                 if (Convert.ToInt16(Efficiency) >= 46 && Convert.ToInt16(Efficiency) <= 55)
-                    Appraisal = 2;
+                {
+                    RectebgleAppraisal9.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFE08313"));
+                    RectebgleAppraisal4.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFE08313"));
+                }
                 else
                 if (Convert.ToInt16(Efficiency) >= 36 && Convert.ToInt16(Efficiency) <= 45)
-                    Appraisal = 3;
+                {
+                    RectebgleAppraisal8.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFDCAA00"));
+                    RectebgleAppraisal3.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFDCAA00"));
+                }
                 else
                 if (Convert.ToInt16(Efficiency) >= 31 && Convert.ToInt16(Efficiency) <= 35)
-                    Appraisal = 4;
+                {
+                    RectebgleAppraisal7.Fill = (Brush)(new BrushConverter().ConvertFrom("#FF6EA21F"));
+                    RectebgleAppraisal2.Fill = (Brush)(new BrushConverter().ConvertFrom("#FF6EA21F"));
+                }
                 else
                 if (Convert.ToInt16(Efficiency) <= 30)
-                    Appraisal = 5;
+                {
+                    RectebgleAppraisal6.Fill = Brushes.Green;
+                    RectebgleAppraisal1.Fill = Brushes.Green;
+                }
+
 
                 if (DegreeOfWorkability <= 1.0)
+                {
+
+                }
+                else
+                if (DegreeOfWorkability > 1.0 && DegreeOfWorkability < 1.5)
                 {
 
                 }
@@ -88,6 +121,11 @@ namespace M.B.N.G.B.T.WalterSchulteTest
                 }
 
                 if (MentalStability <= 1.0)
+                {
+
+                }
+                else
+                if (MentalStability > 1.0 && MentalStability < 1.5)
                 {
 
                 }
