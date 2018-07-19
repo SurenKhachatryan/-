@@ -17,13 +17,14 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="59*"/>
             <RowDefinition Height="58*"/>
-            <RowDefinition Height="139*"/>
+            <RowDefinition Height="81*"/>
+            <RowDefinition Height="58*"/>
             <RowDefinition Height="105*"/>
-            <RowDefinition Height="155*"/>
-            <RowDefinition Height="140*"/>
             <RowDefinition Height="10*"/>
+            <RowDefinition Height="146*"/>
+            <RowDefinition Height="150*"/>
             <RowDefinition Height="36*"/>
-            <RowDefinition Height="78*"/>
+            <RowDefinition Height="77*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="70*"/>
@@ -36,7 +37,7 @@
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox Name="ViewBoxDiagramma" Visibility="Visible" Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="3" HorizontalAlignment="Right" Grid.RowSpan="3">
+        <Viewbox x:Name="ViewBoxDiagramma" Visibility="Collapsed" Grid.Column="4" Grid.Row="2" HorizontalAlignment="Right" Grid.RowSpan="5"  Grid.ColumnSpan="3">
             <DVC:Chart Title="ժամանակյին գրաֆիկ ըստ փուլերի" FontFamily="Sylfaen" Background="#FF6D9E17" Width="445" Height="357">
                 <DVC:LineSeries Name="Diagramma" DependentValuePath="Second" IndependentValuePath="Stage" Title="ժամանակ" FontFamily="Sylfaen" IsHitTestVisible="True" />
                 <DVC:Chart.Axes>
@@ -46,18 +47,18 @@
             </DVC:Chart>
         </Viewbox>
 
-        <Viewbox x:Name="ViewboxResult1" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="6" Visibility="Hidden" Grid.RowSpan="2" Margin="0,0,0,38" >
-            <Label x:Name="labelInfo" Content="Դուք գերզանցել եք առավելագույն ժամանակի սահմանաը որը արդեն իսկ&#xD;&#xA;համարվում է վատ ցուցանիշ կարող եք թեստն անցնել սկբից" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1160" Height="159"/>
+        <Viewbox  x:Name="ViewboxlabelInfo" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="6" Visibility="Collapsed">
+            <Label Content="Դուք գերզանցել եք առավելագույն ժամանակի սահմանը, որն արդեն իսկ համարվում է վատ&#xD;&#xA;ցուցանիշ։ Կարող եք թեստն անցնել սկբից։" Foreground="Snow" FontFamily="Sylfaen" FontSize="25"  Width="1160"/>
         </Viewbox>
 
-        <Viewbox x:Name="ViewBoxTitile" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="1">
+        <Viewbox x:Name="ViewBoxTitile" Visibility="Collapsed" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="1">
             <Label Content="Արդյունքներ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35"/>
         </Viewbox>
 
-        <Viewbox x:Name="ViewboxTextBlockInfo1" Visibility="Visible" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" >
+        <Viewbox x:Name="ViewboxTextBlockInfo1" Visibility="Collapsed" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Grid.RowSpan="2" Grid.ColumnSpan="2">
             <WrapPanel Width="654">
                 <TextBlock Foreground="Snow" FontFamily="Sylfaen" FontSize="25">
-                  <Run Text="Աշխատանքի արդյունավետության (ԱԱ)" Foreground="#FFF7C900"/> <Run Text="  բանաձևն  է՝"/>
+                  <Run Text="Աշխատանքի արդյունավետության (ԱԱ)" Foreground="#FFF7C900" TextDecorations="Underline" FontWeight="Bold"/><Run Text="  բանաձևն  է՝"/>
                   <LineBreak/><Run Text="ԱԱ = (T1 + T2 + T3 + T4 + T5)/5" Foreground="#FFF7C900"/><Run Text=" , որտեղ՝"/><Run Text=" Tn-ը" Foreground="#FFF7C900"/><Run Text=" աղյուսակի"/>
                   <LineBreak/><Run Text="հետ աշխատելու ժամանակն է։ "/>
                 </TextBlock>
@@ -65,22 +66,22 @@
             </WrapPanel>
         </Viewbox>
 
-        <Viewbox x:Name="ViewBoxRectangles" Visibility="Visible" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Left">
+        <Viewbox x:Name="ViewBoxRectangles" Visibility="Collapsed" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Grid.ColumnSpan="2">
             <WrapPanel  Width="787">
-                <Rectangle x:Name="RectebgleAppraisal1" StrokeThickness="3" Width="205" Height="62" Stroke="Black"/>
-                <Rectangle x:Name="RectebgleAppraisal2" StrokeThickness="3" Width="132" Height="62" Stroke="Black"/>
-                <Rectangle x:Name="RectebgleAppraisal3" StrokeThickness="3" Width="132" Height="62" Stroke="Black"/>
-                <Rectangle x:Name="RectebgleAppraisal4" StrokeThickness="3" Width="132" Height="62" Stroke="Black"/>
-                <Rectangle x:Name="RectebgleAppraisal5" StrokeThickness="3" Width="185" Height="62" Stroke="Black"/>
-                <Rectangle x:Name="RectebgleAppraisal6" StrokeThickness="3" Width="205" Height="62" Stroke="Black"/>
-                <Rectangle x:Name="RectebgleAppraisal7" StrokeThickness="3" Width="132" Height="62" Stroke="Black"/>
-                <Rectangle x:Name="RectebgleAppraisal8" StrokeThickness="3" Width="132" Height="62" Stroke="Black"/>
-                <Rectangle x:Name="RectebgleAppraisal9" StrokeThickness="3" Width="132" Height="62" Stroke="Black"/>
-                <Rectangle x:Name="RectebgleAppraisal10" StrokeThickness="3" Width="185" Height="62" Stroke="Black"/>
+                <Rectangle x:Name="RectengleAppraisal1" StrokeThickness="3" Width="205" Height="62" Stroke="Black"/>
+                <Rectangle x:Name="RectengleAppraisal2" StrokeThickness="3" Width="132" Height="62" Stroke="Black"/>
+                <Rectangle x:Name="RectengleAppraisal3" StrokeThickness="3" Width="132" Height="62" Stroke="Black"/>
+                <Rectangle x:Name="RectengleAppraisal4" StrokeThickness="3" Width="132" Height="62" Stroke="Black"/>
+                <Rectangle x:Name="RectengleAppraisal5" StrokeThickness="3" Width="185" Height="62" Stroke="Black"/>
+                <Rectangle x:Name="RectengleAppraisal6" StrokeThickness="3" Width="205" Height="62" Stroke="Black"/>
+                <Rectangle x:Name="RectengleAppraisal7" StrokeThickness="3" Width="132" Height="62" Stroke="Black"/>
+                <Rectangle x:Name="RectengleAppraisal8" StrokeThickness="3" Width="132" Height="62" Stroke="Black"/>
+                <Rectangle x:Name="RectengleAppraisal9" StrokeThickness="3" Width="132" Height="62" Stroke="Black"/>
+                <Rectangle x:Name="RectengleAppraisal10" StrokeThickness="3" Width="185" Height="62" Stroke="Black"/>
             </WrapPanel>
         </Viewbox>
 
-        <Viewbox x:Name="ViewBoxLabels" Visibility="Visible" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Left">
+        <Viewbox x:Name="ViewBoxLabels" Visibility="Collapsed" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Grid.ColumnSpan="2">
             <WrapPanel  Width="787">
                 <Label Content="  5 բալ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35" Width="205" Height="62"/>
                 <Label Content="  4 բալ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35" Width="132" Height="62"/>
@@ -95,20 +96,26 @@
             </WrapPanel>
         </Viewbox>
 
-        <WrapPanel Grid.ColumnSpan="6" Grid.Row="4" Grid.RowSpan="4" Grid.Column="1" HorizontalAlignment="Left" Width="1160">
-            <TextBlock Foreground="Snow" FontFamily="Sylfaen" FontSize="25">
-                  <Run Text="Աշխատունակության  աստիճանի (Աա) " Foreground="#FFF7C900"/> <Run Text="հաշվման"/>
+        <Viewbox x:Name="ViewBoxLabelsAndTextBlocks" Visibility="Collapsed" Grid.Row="6" Grid.RowSpan="3" Grid.Column="1" HorizontalAlignment="Left" Grid.ColumnSpan="6">
+            <WrapPanel  Width="1160" Height="332">
+                <TextBlock Foreground="Snow" FontFamily="Sylfaen" FontSize="25">
+                  <Run Text="Աշխատունակության  աստիճանի (Աա) " Foreground="#FFF7C900" TextDecorations="Underline" FontWeight="Bold"/><Run Text="հաշվման"/>
                   <LineBreak/><Run Text="բանաձևն է՝ "/><Run Text="Աա = T1 / ԱԱ :" Foreground="#FFF7C900"/>
-            </TextBlock>
-            <Label x:Name="LabelApprais" Content="Ձեր Աա = Դուք առաջին փուլի վրա  առավել երկար&#xD;&#xA;ժամանակ եք ծախսել, քան միջին ցուցանիշն է։&#xD;&#xA;Աշխատունակության ցուցանիշը բարձր կլինի այն&#xD;&#xA;դեպքում, երբ ի սկզբանե պատրաստ լինեք հիմնական աշխատանքին։" Foreground="#FFF7C900" FontFamily="Sylfaen" FontSize="25" Grid.Column="1" Width="1159" Height="142"/>
-            <TextBlock Foreground="Snow" FontFamily="Sylfaen" FontSize="25" Height="38">
-                  <Run Text="Հոգեկան կայունության (ՀԿ) " Foreground="#FFF7C900"/> <Run Text="հաշվման բանաձևն է՝ "/><Run Text="Աա = T1 / ԱԱ :" Foreground="#FFF7C900"/>
-                  <LineBreak/><Run Text=""/>
-            </TextBlock>
-            <Label x:Name="LabelApprai" Content="Ձեր ՀԿ ցուցանիշը = 1,00 որը համարվում է ցածր ցուցանիշ։ Ձեր ՀԿ ցուցանիշը թույլ չի տալիս տվյալ&#xD;&#xA;հանձնարարությունը նույն տեմպով կատարել մինչև վերջ։" Foreground="#FFF7C900" FontFamily="Sylfaen" FontSize="25" Grid.Column="1" Width="1159" Height="96"/>
-        </WrapPanel>
+                </TextBlock>
+                <Label x:Name="LabelDegreeOfWorkability" Content="Ձեր Աա = " Foreground="#FFF7C900" FontFamily="Sylfaen" FontSize="25" Width="1159" Height="43"/>
+                <Label x:Name="LabelDegreeOfWorkabilityinfo" Visibility="Collapsed" Content="Դուք առաջին փուլի վրա  առավել երկար ժամանակ եք&#xD;&#xA;ծախսել, քան միջին ցուցանիշն է ։ Աշխատունակության ցուցանիշը բարձր կլինի այն դեպքում, երբ&#xD;&#xA;ի սկզբանե պատրաստ լինեք հիմնական աշխատանքին։" Foreground="Snow" FontFamily="Sylfaen" FontSize="25" Grid.Column="1" Width="1159" Height="108"/>
+                <TextBlock x:Name="TextBlockMentalStability1" Visibility="Collapsed" Foreground="Snow" FontFamily="Sylfaen" FontSize="25" Height="68">
+                  <Run Text="Հոգեկան կայունության (ՀԿ) " Foreground="#FFF7C900" TextDecorations="Underline" FontWeight="Bold"/> <Run Text="հաշվման բանաձևն է՝ "/>
+                  <LineBreak/><Run Text="Աա = T4 / ԱԱ :" Foreground="#FFF7C900"/>
+                </TextBlock>
+                <TextBlock x:Name="TextBlockMentalStability2" Visibility="Collapsed" Foreground="Snow" FontFamily="Sylfaen" FontSize="25" Height="38">
+                  <Run Text="Հոգեկան կայունության (ՀԿ) " Foreground="#FFF7C900"/> <Run Text="հաշվման բանաձևն է՝ "/><Run Text="Աա = T4 / ԱԱ :" Foreground="#FFF7C900"/>
+                </TextBlock>
+                <Label x:Name="LabelMentalStability" Content="Ձեր ՀԿ = " Foreground="#FFF7C900" FontFamily="Sylfaen" FontSize="25" Width="1158" Height="80"/>
+            </WrapPanel>
+        </Viewbox>
 
-        <Viewbox Grid.Row="7" Grid.Column="6" HorizontalAlignment="Right">
+        <Viewbox Grid.Row="8" Grid.Column="6" HorizontalAlignment="Right">
             <WrapPanel  Height="36"  Width="369">
                 <Button Margin="0,0,12,0" x:Name="buttonClicktryagain" Click="Button_Click_Try_Again" Content="Կրկին փորձել" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="172" >
                     <Button.Background>

@@ -1,19 +1,10 @@
 ﻿using ClassLibrary;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.DataVisualization.Charting;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace M.B.N.G.B.T.WalterSchulteTest
 {
@@ -43,14 +34,18 @@ namespace M.B.N.G.B.T.WalterSchulteTest
         {
             InitializeComponent();
 
-            if (WalterSchulteTestTablePage.AllowableTime == 300)
-                ViewboxResult1.Visibility = Visibility.Visible;
+            if (WalterSchulteTestTablePage.AllowableTime >= 300)
+                ViewboxlabelInfo.Visibility = Visibility.Visible;
             else
             {
                 ViewBoxDiagramma.Visibility = Visibility.Visible;
+                ViewBoxTitile.Visibility = Visibility.Visible;
+                ViewboxTextBlockInfo1.Visibility = Visibility.Visible;
+                ViewBoxRectangles.Visibility = Visibility.Visible;
+                ViewBoxLabels.Visibility = Visibility.Visible;
+                ViewBoxLabelsAndTextBlocks.Visibility = Visibility.Visible;
+
                 Y.Maximum = cl.GetMaxNumberInArr(WalterSchulteTestTablePage.ArrAllStageSecond) + 5;
-
-
                 Diagramma.ItemsSource = new List<ToolkPoint>()
                 {
                   new ToolkPoint(WalterSchulteTestTablePage.ArrAllStageSecond[0],1),
@@ -76,38 +71,37 @@ namespace M.B.N.G.B.T.WalterSchulteTest
                 }
 
                 if (Convert.ToInt16(Efficiency) >= 56)
-                    RectebgleAppraisal5.Fill = (RectebgleAppraisal10.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFFF3204")));
+                    RectengleAppraisal5.Fill = (RectengleAppraisal10.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFFF3204")));
                 else
                 if (Convert.ToInt16(Efficiency) >= 46 && Convert.ToInt16(Efficiency) <= 55)
-                    RectebgleAppraisal4.Fill = (RectebgleAppraisal9.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFE08313")));
+                    RectengleAppraisal4.Fill = (RectengleAppraisal9.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFE08313")));
                 else
                 if (Convert.ToInt16(Efficiency) >= 36 && Convert.ToInt16(Efficiency) <= 45)
-                    RectebgleAppraisal3.Fill = (RectebgleAppraisal8.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFDCAA00")));
+                    RectengleAppraisal3.Fill = (RectengleAppraisal8.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFDCAA00")));
                 else
                 if (Convert.ToInt16(Efficiency) >= 31 && Convert.ToInt16(Efficiency) <= 35)
-                    RectebgleAppraisal2.Fill = (RectebgleAppraisal7.Fill = (Brush)(new BrushConverter().ConvertFrom("#FF6EA21F")));
+                    RectengleAppraisal2.Fill = (RectengleAppraisal7.Fill = (Brush)(new BrushConverter().ConvertFrom("#FF6EA21F")));
                 else
                 if (Convert.ToInt16(Efficiency) <= 30)
-                    RectebgleAppraisal1.Fill = (RectebgleAppraisal6.Fill = Brushes.Green);
+                    RectengleAppraisal1.Fill = (RectengleAppraisal6.Fill = Brushes.Green);
 
 
                 if (DegreeOfWorkability <= 1.0)
                 {
-
+                    LabelDegreeOfWorkability.Content += $"{DegreeOfWorkability} ,որը համարվում է բարձր ցուցանիշ։";
+                    TextBlockMentalStability1.Visibility = Visibility.Visible;
                 }
                 else
                 {
-
+                    LabelDegreeOfWorkability.Content += $"{DegreeOfWorkability} ,որը համարվում է ցածր ցուցանիշ։";
+                    LabelDegreeOfWorkabilityinfo.Visibility = Visibility.Visible;
+                    TextBlockMentalStability2.Visibility = Visibility.Visible;
                 }
 
                 if (MentalStability <= 1.0)
-                {
-
-                }
+                    LabelMentalStability.Content += $"{MentalStability} ,որը համարվում է բարձր ցուցանիշ։";
                 else
-                {
-
-                }
+                    LabelMentalStability.Content += $"{MentalStability} , որը համարվում է ցածր ցուցանիշ։ Ձեր ՀԿ ցուցանիշը թույլ չի տալիս տվյալ\nհանձնարարությունը նույն տեմպով կատարել մինչև վերջ։";
             }
 
         }

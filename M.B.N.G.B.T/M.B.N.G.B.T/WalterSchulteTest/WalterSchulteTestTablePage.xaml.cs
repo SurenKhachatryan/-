@@ -40,6 +40,7 @@ namespace M.B.N.G.B.T.WalterSchulteTest
             if (Stage == 1)
                 ArrAllStageSecond = new int[5];
 
+            AllowableTime = 0;
             InitializeComponent();
             ChangeContentButtonRandom();
             startStage.Content = $"{Stage}/5";

@@ -139,18 +139,22 @@ namespace ClassLibrary
 
         public double DecreaseInNumbersAfterTheDecimalPoint(double number, int newLanghtAfterTheDecimalPoint)
         {
-            string tamp = string.Empty;
+            string temp = string.Empty;
             int index = (GetIndexFirstCommaInTheText(number.ToString()) + 1);
-
-            if ((number.ToString().Length - index) >= newLanghtAfterTheDecimalPoint)
-                for (int i = 0; tamp.Length != (newLanghtAfterTheDecimalPoint + index); i++)
-                {
-                    tamp += number.ToString()[i];
-                }
+            if (index != 0)
+            {
+                if ((number.ToString().Length - index) >= newLanghtAfterTheDecimalPoint)
+                    for (int i = 0; temp.Length != (newLanghtAfterTheDecimalPoint + index); i++)
+                    {
+                        temp += number.ToString()[i];
+                    }
+                else
+                    return number;
+            }
             else
-                return number;
+                temp = number.ToString();
 
-            return Convert.ToDouble(tamp);
+            return Convert.ToDouble(temp);
         }
 
         public int GetIndexFirstCommaInTheText(string text)
