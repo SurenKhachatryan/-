@@ -5,6 +5,7 @@ using M.B.N.G.B.T.AttentivenessTest;
 using M.B.N.G.B.T.TestEclecticAttention;
 using M.B.N.G.B.T.ConcentrationDefinitionTest;
 using M.B.N.G.B.T.WalterSchulteTest;
+using System.Windows.Input;
 
 namespace M.B.N.G.B.T
 {
@@ -46,6 +47,12 @@ namespace M.B.N.G.B.T
         private void Button_Test_Eclectic_Attention(object sender, RoutedEventArgs e)
         {
             Main.Content = new TestEclecticAttentionRulePage();
+        }
+        
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Tab)
+                e.Handled = true;
         }
     }
 }

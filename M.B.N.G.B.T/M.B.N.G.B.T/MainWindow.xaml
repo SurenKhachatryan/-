@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:M.B.N.G.B.T"
         mc:Ignorable="d"
-        Title="Մ․Բ․Ն․Գ․Բ․Թ․"  WindowState="Maximized" MinHeight="450" MinWidth="600"   Height="780" Width="1300" Foreground="{x:Null}" FontFamily="Segoe UI Black" BorderThickness="0" Opacity="0.995" >
+        Title="Մ․Բ․Ն․Գ․Բ․Թ․"  WindowState="Maximized" MinHeight="450" MinWidth="600"   Height="780" Width="1300" Foreground="{x:Null}" FontFamily="Segoe UI Black" BorderThickness="0" Opacity="0.995" PreviewKeyDown="Window_PreviewKeyDown" >
     <!--Height="600" Width="800"-->
     <Window.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,/Resources/board.jpg"/>
@@ -19,16 +19,16 @@
             <RowDefinition Height="20*"/>
             <RowDefinition Height="35*"/>
             <RowDefinition Height="9*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="8*"/>
             <RowDefinition Height="35*"/>
             <RowDefinition Height="9*"/>
-            <RowDefinition Height="35*"/>
+            <RowDefinition Height="50*"/>
             <RowDefinition Height="9*"/>
-            <RowDefinition Height="44*"/>
+            <RowDefinition Height="48*"/>
             <RowDefinition Height="9*"/>
-            <RowDefinition Height="51*"/>
-            <RowDefinition Height="10*"/>
             <RowDefinition Height="35*"/>
-            <RowDefinition Height="403*"/>
+            <RowDefinition Height="388*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -49,7 +49,7 @@
         </Viewbox>
 
         <Viewbox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left">
-            <Button x:Name="buttonSchulteTest" Click="Button_Schulte_Test" Content="Շուլտեի աղյուսակ" FontSize="17"  FontFamily="Sylfaen" Cursor="Hand"  Foreground="White"  Height="35"  Width="263" >
+            <Button  x:Name="buttonSchulteTest" Click="Button_Schulte_Test" Content="Ուշադրության  ծավալի&#xD;&#xA;       որոշման  թեստ" FontSize="17"  FontFamily="Sylfaen" Cursor="Hand"  Foreground="White"  Width="263" Height="49">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -71,7 +71,7 @@
         </Viewbox>
 
         <Viewbox Grid.Row="9" Grid.Column="1" HorizontalAlignment="Left">
-            <Button x:Name="buttonKrepelinTest" Click="Button_Krepelin_Test" Content="Մտավոր կարողության&#xD;&#xA; գնահատման  թեստ" FontSize="16"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White" Height="44" Width="263" >
+            <Button x:Name="buttonKrepelinTest" Click="Button_Krepelin_Test" Content="Մտավոր կարողության&#xA;   գնահատման  թեստ" FontSize="16"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White" Width="263" Height="50">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -81,8 +81,8 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Column="1" Grid.Row="11" HorizontalAlignment="Left">
-            <Button x:Name="buttonAttentivenessTest" Click="Button_Attentiveness_Test" Content="Կարճաժամկետ և երկարաժամկետ &#xD;&#xA;              հիշողության թեստ" FontSize="15"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White"  Height="51"  Width="263">
+        <Viewbox Grid.Row="11" Grid.Column="1" HorizontalAlignment="Left">
+            <Button x:Name="buttonAttentivenessTest" Click="Button_Attentiveness_Test" Content="Կարճաժամկետ և երկարաժամկետ &#xD;&#xA;              հիշողության թեստ" FontSize="15"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White"  Width="263"  Height="48">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -114,7 +114,7 @@
             </TextBlock>
         </Viewbox>
 
-        <Frame Name="Main"  RenderTransformOrigin="0,0" Grid.RowSpan="15" NavigationUIVisibility="Hidden" Grid.ColumnSpan="3"/>
+        <Frame Name="Main"  RenderTransformOrigin="0,0" Grid.RowSpan="15" NavigationUIVisibility="Hidden" Grid.ColumnSpan="3" />
 
     </Grid>
 
