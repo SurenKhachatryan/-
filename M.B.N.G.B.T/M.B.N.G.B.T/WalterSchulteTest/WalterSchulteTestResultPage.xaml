@@ -20,7 +20,8 @@
             <RowDefinition Height="139*"/>
             <RowDefinition Height="105*"/>
             <RowDefinition Height="155*"/>
-            <RowDefinition Height="150*"/>
+            <RowDefinition Height="140*"/>
+            <RowDefinition Height="10*"/>
             <RowDefinition Height="36*"/>
             <RowDefinition Height="78*"/>
         </Grid.RowDefinitions>
@@ -53,10 +54,10 @@
             <Label Content="Արդյունքներ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35"/>
         </Viewbox>
 
-        <Viewbox Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" >
+        <Viewbox x:Name="ViewboxTextBlockInfo1" Visibility="Visible" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" >
             <WrapPanel Width="654">
-                <TextBlock x:Name="TextBlockInfo" Foreground="Snow" FontFamily="Sylfaen" FontSize="25">
-                  <Run Text="Աշխատանքի արդյունավետության (ԱԱ)  բանաձևն  է՝"/>
+                <TextBlock Foreground="Snow" FontFamily="Sylfaen" FontSize="25">
+                  <Run Text="Աշխատանքի արդյունավետության (ԱԱ)" Foreground="#FFF7C900"/> <Run Text="  բանաձևն  է՝"/>
                   <LineBreak/><Run Text="ԱԱ = (T1 + T2 + T3 + T4 + T5)/5" Foreground="#FFF7C900"/><Run Text=" , որտեղ՝"/><Run Text=" Tn-ը" Foreground="#FFF7C900"/><Run Text=" աղյուսակի"/>
                   <LineBreak/><Run Text="հետ աշխատելու ժամանակն է։ "/>
                 </TextBlock>
@@ -64,7 +65,7 @@
             </WrapPanel>
         </Viewbox>
 
-        <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Left">
+        <Viewbox x:Name="ViewBoxRectangles" Visibility="Visible" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Left">
             <WrapPanel  Width="787">
                 <Rectangle x:Name="RectebgleAppraisal1" StrokeThickness="3" Width="205" Height="62" Stroke="Black"/>
                 <Rectangle x:Name="RectebgleAppraisal2" StrokeThickness="3" Width="132" Height="62" Stroke="Black"/>
@@ -79,7 +80,7 @@
             </WrapPanel>
         </Viewbox>
 
-        <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Left">
+        <Viewbox x:Name="ViewBoxLabels" Visibility="Visible" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Left">
             <WrapPanel  Width="787">
                 <Label Content="  5 բալ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35" Width="205" Height="62"/>
                 <Label Content="  4 բալ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35" Width="132" Height="62"/>
@@ -94,7 +95,20 @@
             </WrapPanel>
         </Viewbox>
 
-        <Viewbox Grid.Row="6" Grid.Column="6" HorizontalAlignment="Right">
+        <WrapPanel Grid.ColumnSpan="6" Grid.Row="4" Grid.RowSpan="4" Grid.Column="1" HorizontalAlignment="Left" Width="1160">
+            <TextBlock Foreground="Snow" FontFamily="Sylfaen" FontSize="25">
+                  <Run Text="Աշխատունակության  աստիճանի (Աա) " Foreground="#FFF7C900"/> <Run Text="հաշվման"/>
+                  <LineBreak/><Run Text="բանաձևն է՝ "/><Run Text="Աա = T1 / ԱԱ :" Foreground="#FFF7C900"/>
+            </TextBlock>
+            <Label x:Name="LabelApprais" Content="Ձեր Աա = Դուք առաջին փուլի վրա  առավել երկար&#xD;&#xA;ժամանակ եք ծախսել, քան միջին ցուցանիշն է։&#xD;&#xA;Աշխատունակության ցուցանիշը բարձր կլինի այն&#xD;&#xA;դեպքում, երբ ի սկզբանե պատրաստ լինեք հիմնական աշխատանքին։" Foreground="#FFF7C900" FontFamily="Sylfaen" FontSize="25" Grid.Column="1" Width="1159" Height="142"/>
+            <TextBlock Foreground="Snow" FontFamily="Sylfaen" FontSize="25" Height="38">
+                  <Run Text="Հոգեկան կայունության (ՀԿ) " Foreground="#FFF7C900"/> <Run Text="հաշվման բանաձևն է՝ "/><Run Text="Աա = T1 / ԱԱ :" Foreground="#FFF7C900"/>
+                  <LineBreak/><Run Text=""/>
+            </TextBlock>
+            <Label x:Name="LabelApprai" Content="Ձեր ՀԿ ցուցանիշը = 1,00 որը համարվում է ցածր ցուցանիշ։ Ձեր ՀԿ ցուցանիշը թույլ չի տալիս տվյալ&#xD;&#xA;հանձնարարությունը նույն տեմպով կատարել մինչև վերջ։" Foreground="#FFF7C900" FontFamily="Sylfaen" FontSize="25" Grid.Column="1" Width="1159" Height="96"/>
+        </WrapPanel>
+
+        <Viewbox Grid.Row="7" Grid.Column="6" HorizontalAlignment="Right">
             <WrapPanel  Height="36"  Width="369">
                 <Button Margin="0,0,12,0" x:Name="buttonClicktryagain" Click="Button_Click_Try_Again" Content="Կրկին փորձել" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="172" >
                     <Button.Background>

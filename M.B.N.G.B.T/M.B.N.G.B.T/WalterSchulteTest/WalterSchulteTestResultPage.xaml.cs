@@ -76,42 +76,22 @@ namespace M.B.N.G.B.T.WalterSchulteTest
                 }
 
                 if (Convert.ToInt16(Efficiency) >= 56)
-                {
-                    RectebgleAppraisal10.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFFF3204"));
-                    RectebgleAppraisal5.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFFF3204"));
-                }
+                    RectebgleAppraisal5.Fill = (RectebgleAppraisal10.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFFF3204")));
                 else
                 if (Convert.ToInt16(Efficiency) >= 46 && Convert.ToInt16(Efficiency) <= 55)
-                {
-                    RectebgleAppraisal9.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFE08313"));
-                    RectebgleAppraisal4.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFE08313"));
-                }
+                    RectebgleAppraisal4.Fill = (RectebgleAppraisal9.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFE08313")));
                 else
                 if (Convert.ToInt16(Efficiency) >= 36 && Convert.ToInt16(Efficiency) <= 45)
-                {
-                    RectebgleAppraisal8.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFDCAA00"));
-                    RectebgleAppraisal3.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFDCAA00"));
-                }
+                    RectebgleAppraisal3.Fill = (RectebgleAppraisal8.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFDCAA00")));
                 else
                 if (Convert.ToInt16(Efficiency) >= 31 && Convert.ToInt16(Efficiency) <= 35)
-                {
-                    RectebgleAppraisal7.Fill = (Brush)(new BrushConverter().ConvertFrom("#FF6EA21F"));
-                    RectebgleAppraisal2.Fill = (Brush)(new BrushConverter().ConvertFrom("#FF6EA21F"));
-                }
+                    RectebgleAppraisal2.Fill = (RectebgleAppraisal7.Fill = (Brush)(new BrushConverter().ConvertFrom("#FF6EA21F")));
                 else
                 if (Convert.ToInt16(Efficiency) <= 30)
-                {
-                    RectebgleAppraisal6.Fill = Brushes.Green;
-                    RectebgleAppraisal1.Fill = Brushes.Green;
-                }
+                    RectebgleAppraisal1.Fill = (RectebgleAppraisal6.Fill = Brushes.Green);
 
 
                 if (DegreeOfWorkability <= 1.0)
-                {
-
-                }
-                else
-                if (DegreeOfWorkability > 1.0 && DegreeOfWorkability < 1.5)
                 {
 
                 }
@@ -121,11 +101,6 @@ namespace M.B.N.G.B.T.WalterSchulteTest
                 }
 
                 if (MentalStability <= 1.0)
-                {
-
-                }
-                else
-                if (MentalStability > 1.0 && MentalStability < 1.5)
                 {
 
                 }
