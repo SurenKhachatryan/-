@@ -54,5 +54,10 @@ namespace M.B.N.G.B.T
             if (e.Key == Key.Tab)
                 e.Handled = true;
         }
+
+        private void Button_Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

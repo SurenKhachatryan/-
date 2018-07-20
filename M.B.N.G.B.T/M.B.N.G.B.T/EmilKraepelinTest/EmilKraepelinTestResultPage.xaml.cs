@@ -24,6 +24,18 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
     {
         ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
 
+        struct ToolkPoint
+        {
+            public int Second { get; private set; }
+            public int Stage { get; private set; }
+
+            public ToolkPoint(int second, int stage)
+            {
+                Stage = stage;
+                Second = second;
+            }
+        }
+
         public EmilKraepelinTestResultPage()
         {
             InitializeComponent();
@@ -60,37 +72,41 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
 
         private void DiagramDate()
         {
-            ((ColumnSeries)Diagramma.Series[0]).ItemsSource = new KeyValuePair<int, int>[] {
-             new KeyValuePair<int, int>(1, EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0]),
-             new KeyValuePair<int, int>(2, EmilKraepelinTestTablePage.ArrAllStageRightAnswers[1][0]),
-             new KeyValuePair<int, int>(3, EmilKraepelinTestTablePage.ArrAllStageRightAnswers[2][0]),
-             new KeyValuePair<int, int>(4, EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0]),
-             new KeyValuePair<int, int>(5, EmilKraepelinTestTablePage.ArrAllStageRightAnswers[4][0]),
-             new KeyValuePair<int, int>(6, EmilKraepelinTestTablePage.ArrAllStageRightAnswers[5][0]),
-             new KeyValuePair<int, int>(7, EmilKraepelinTestTablePage.ArrAllStageRightAnswers[6][0]),
-             new KeyValuePair<int, int>(8, EmilKraepelinTestTablePage.ArrAllStageRightAnswers[7][0])};
+            DiagrammaColumnSeries1.ItemsSource = new List<ToolkPoint>()
+            {
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0],1),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[1][0],2),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[2][0],3),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0],4),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[4][0],5),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[5][0],6),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[6][0],7),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[7][0],8)
+            };
 
-
-            ((ColumnSeries)Diagramma.Series[1]).ItemsSource = new KeyValuePair<int, int>[]{
-             new KeyValuePair<int, int>(1, EmilKraepelinTestTablePage.ArrAllStageWrongAnswers[0][0]),
-             new KeyValuePair<int, int>(2, EmilKraepelinTestTablePage.ArrAllStageWrongAnswers[1][0]),
-             new KeyValuePair<int, int>(3, EmilKraepelinTestTablePage.ArrAllStageWrongAnswers[2][0]),
-             new KeyValuePair<int, int>(4, EmilKraepelinTestTablePage.ArrAllStageWrongAnswers[3][0]),
-             new KeyValuePair<int, int>(5, EmilKraepelinTestTablePage.ArrAllStageWrongAnswers[4][0]),
-             new KeyValuePair<int, int>(6, EmilKraepelinTestTablePage.ArrAllStageWrongAnswers[5][0]),
-             new KeyValuePair<int, int>(7, EmilKraepelinTestTablePage.ArrAllStageWrongAnswers[6][0]),
-             new KeyValuePair<int, int>(8, EmilKraepelinTestTablePage.ArrAllStageWrongAnswers[7][0])};
-
-            ((LineSeries)Diagramma.Series[2]).ItemsSource = new KeyValuePair<int, int>[]{
-            new KeyValuePair<int, int>(1, EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0]),
-            new KeyValuePair<int, int>(2, EmilKraepelinTestTablePage.ArrAllStageRightAnswers[1][0]),
-            new KeyValuePair<int, int>(3, EmilKraepelinTestTablePage.ArrAllStageRightAnswers[2][0]),
-            new KeyValuePair<int, int>(4, EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0]),
-            new KeyValuePair<int, int>(5, EmilKraepelinTestTablePage.ArrAllStageRightAnswers[4][0]),
-            new KeyValuePair<int, int>(6, EmilKraepelinTestTablePage.ArrAllStageRightAnswers[5][0]),
-            new KeyValuePair<int, int>(7, EmilKraepelinTestTablePage.ArrAllStageRightAnswers[6][0]),
-            new KeyValuePair<int, int>(8, EmilKraepelinTestTablePage.ArrAllStageRightAnswers[7][0])};
-
+            DiagrammaColumnSeries2.ItemsSource = new List<ToolkPoint>()
+            {
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageWrongAnswers[0][0],1),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageWrongAnswers[1][0],2),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageWrongAnswers[2][0],3),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageWrongAnswers[3][0],4),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageWrongAnswers[4][0],5),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageWrongAnswers[5][0],6),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageWrongAnswers[6][0],7),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageWrongAnswers[7][0],8)
+            };
+            
+            DiagrammaLineSeries.ItemsSource = new List<ToolkPoint>()
+            {
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0],1),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[1][0],2),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[2][0],3),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0],4),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[4][0],5),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[5][0],6),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[6][0],7),
+               new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[7][0],8)
+            };
 
         }
     }

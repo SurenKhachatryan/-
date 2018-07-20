@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:M.B.N.G.B.T"
         mc:Ignorable="d"
-        Title="Մ․Բ․Ն․Գ․Բ․Թ․"  WindowState="Maximized" MinHeight="450" MinWidth="600"   Height="780" Width="1300" Foreground="{x:Null}" FontFamily="Segoe UI Black" BorderThickness="0" Opacity="0.995" PreviewKeyDown="Window_PreviewKeyDown" >
+        Title="Մ․Բ․Ն․Գ․Բ․Թ․"  WindowState="Maximized" MinHeight="450" MinWidth="600"   Height="780" Width="1300" Foreground="{x:Null}" FontFamily="Segoe UI Black" BorderThickness="0" Opacity="0.995" PreviewKeyDown="Window_PreviewKeyDown" WindowStyle="None" >
     <!--Height="600" Width="800"-->
     <Window.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,/Resources/board.jpg"/>
@@ -28,13 +28,17 @@
             <RowDefinition Height="48*"/>
             <RowDefinition Height="9*"/>
             <RowDefinition Height="35*"/>
-            <RowDefinition Height="388*"/>
+            <RowDefinition Height="310*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="42*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="32*"/>
-            <ColumnDefinition Width="266*"/>
-            <ColumnDefinition Width="998*"/>
+            <ColumnDefinition Width="265*"/>
+            <ColumnDefinition Width="835*"/>
+            <ColumnDefinition Width="124*"/>
+            <ColumnDefinition Width="36*"/>
         </Grid.ColumnDefinitions>
 
         <Viewbox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left">
@@ -103,7 +107,7 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Row="1" Margin="3,0,35,0"  Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Top">
+        <Viewbox Grid.Row="1" Margin="3,0,35,0"  Grid.Column="1" Grid.ColumnSpan="4" VerticalAlignment="Top">
             <TextBlock   Text="  Մարդու Բարձրագույն Նյարդային Գործունեության Բաղադրիչների Թեստավորում" FontFamily="Sylfaen" FontSize="24" Foreground="White" Height="35" Width="933">
                 <TextBlock.Background>
                     <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,0">
@@ -113,9 +117,18 @@
                 </TextBlock.Background>
             </TextBlock>
         </Viewbox>
-
-        <Frame Name="Main"  RenderTransformOrigin="0,0" Grid.RowSpan="15" NavigationUIVisibility="Hidden" Grid.ColumnSpan="3" />
+        <Viewbox Grid.Column="3" Grid.Row="15" HorizontalAlignment="Right">
+            <Button x:Name="button_Exit" IsEnabled="True" Click="Button_Exit_Click" Content="Ելք" FontSize="21"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White" Width="124">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
+        
+        <Frame Name="Main"  RenderTransformOrigin="0,0" Grid.RowSpan="17" NavigationUIVisibility="Hidden" Grid.ColumnSpan="5" />
 
     </Grid>
-
 </Window>
