@@ -31,7 +31,9 @@
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
 
-        <DVC:Chart Name="Diagramma" Title="Ճիշտ և Սխալ լուծված առաջադրանքների թիվը" Background="LightSteelBlue" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="1" Grid.RowSpan="3">
+        <Label Content="Արդյունքներ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35"/>
+        
+        <DVC:Chart Name="Diagramma" Title="Ճիշտ և Սխալ լուծված առաջադրանքների թիվը" Background="LightSteelBlue" Grid.ColumnSpan="3" Grid.Column="2" Grid.Row="3" Grid.RowSpan="2" Margin="10,10,147,0">
             <DVC:Chart.Series >
                 <DVC:ColumnSeries Title="ճիշտ պատասխաններ" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
                 <DVC:ColumnSeries Title="Սխալ պատասխաններ"  IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
