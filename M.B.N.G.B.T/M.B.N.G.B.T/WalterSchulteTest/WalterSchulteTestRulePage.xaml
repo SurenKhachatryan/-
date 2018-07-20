@@ -59,28 +59,26 @@
         <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4" Margin="0,0,0,42">
             <ScrollViewer  Width="1160" Height="459">
                 <TextBlock TextWrapping="Wrap"  Foreground="Snow" FontSize="30" FontFamily="Sylfaen">
-                 <Run Text="Շուլտեի աղյուսակի օգնությամբ կարելի է որոշել բարձրագույն նյարդային"/>
-                 <LineBreak/>
-                 <Run Text="գործունեության հետևյալ բաղադրիչնեը"/>
-                 <LineBreak/>
-                 <Run Text=" 1․  Հոգեբանական ռիթմը"/>
-                 <LineBreak/>
-                 <Run Text=" 2.  Հայացքի կողմնորոշիչ շարժումների զարգացումը"/>
-                 <LineBreak/>
-                 <Run Text=" 3.  Տեսողական գրգռիչների նկատմամբ ուշադրուքյան ծավալը։"/>
-                 <LineBreak/>
-                 <Run FontStyle="Oblique" Text="Անցկացման կարգը" TextDecorations="Underline" />
-                 <LineBreak/>
-                 <Run Text="Հետազոտվողին տրվում է 5*5 աղյուսակներ, ուր պատահական հերթականությամբ"/>
-                 <LineBreak/>
-                 <Run Text="գրված են 1-25 թվերն ըստ հերթականության։"/>
-                 <LineBreak/>
-                 <Run FontStyle="Oblique"  Text="Հրահանգավորում։" TextDecorations="Underline"/>
-                 <Run Text=" Մկնիկով նշել աղյուսակի բոլոր թվերն ըստ հերթականության,"/>
-                 <LineBreak/>
-                 <Run Text="որքան հնարավոր է արագ և առանց սխալների։ Հետազոտությունն անցկացվում է" />
-                 <LineBreak/>
-                 <Run Text="յուրաքանչյուր աղյուսակի համար։" />
+                 <Run Text="  Շուլտեի   աղյուսակ  օգնությամբ  կարելի  է  որոշել,   թե  որքանով   է   զարգացած"/>
+                 <LineBreak/><Run Text="տեսողական   գռգռիչների    նկատմամբ    ուշադրության    ծավալը " Foreground="#FFF7C900"/><Run Text=",   որի   շնորհիվ"/>
+                 <LineBreak/><Run Text="կարելի     է     որոշել     բարձրագույն     նյարդային     գործունեության     հետևյալ "/>
+                 <LineBreak/><Run Text="բաղադրիչները "/>
+                 <LineBreak/><Run Text="    1․Աշխատանքի արդյունավետությունը" Foreground="#FFF7C900"/>
+                 <LineBreak/><Run Text="    2․Աշխատունակության աստիճանը" Foreground="#FFF7C900"/>
+                 <LineBreak/><Run Text="    3․Հոգեկան կայունությունը" Foreground="#FFF7C900"/>
+                 <LineBreak/><Run Text="  Ծրագիրը   փորձարկվողին   տալիս   է   5 x 5  աղյուսակ ,  որում  գրված  են  խառը"/>
+                 <LineBreak/><Run Text="դասավորությամբ 1-25  թվերը :  Թեստը  կազմված  է  5  փուլից ։"/>
+                 <LineBreak/><Run Text="  Փորձարկվողը  պետք  է  նայի   աղյուսակի  մեջտեղում   գտնվող   կարմիր   կետին"/>
+                 <LineBreak/><Run Text="և  աչքերը   կետից   չհեռացնելով,   փորձի   գտնել   թվերն   ըստ   հերթականության" />
+                 <LineBreak/><Run Text="և  նշի  մկնիկի  օգնությամբ  որքան  հնարավոր  է  արագ,  իսկ  այդ  ընթացքում  աջ"/>
+                 <LineBreak/><Run Text="կողմում     տեղադրված      վայրկյանաչափը     կհաշվի    տվյալ    փուլն     անցնելու"/>
+                 <LineBreak/><Run Text="ժամանակը ։   Յուրաքանչյուր    փուլից    հետո ,   երբ   փորձարկվողը    կնշի   բոլոր"/>
+                 <LineBreak/><Run Text="թվերը  ,    ավտոմատ     կերպով     ծրագիրը      կփոխի     աղյուսակը     թվերի    այլ"/>
+                 <LineBreak/><Run Text="դասավորությամբ ։   Այս   նույն   գործընթացը   կկրկնվի   5   անգամ ,   ասել   է    թե՝"/>
+                 <LineBreak/><Run Text="հետազոտվողը  նույն  գործընթացը  կանցնի  5  փուլով ։   Վերջում     փորձարկվողը"/>
+                 <LineBreak/><Run Text="կարող   է   տեսնել   իր   արդյունքները ։ "/>
+                 <LineBreak/><Run Text="Խորհուրդ  է    տրվում   թեստն   անցնել   20   դյույմ-ից   մեծ   էկրանի  վրա ։  Թեստը" Foreground="#FFF7C900"/>
+                 <LineBreak/><Run Text="նախատեսված   է   12-ից   բարձր   տարիք   ունեցող   մարդկանց    համար։" Foreground="#FFF7C900"/>
                 </TextBlock>
             </ScrollViewer>
         </Viewbox>

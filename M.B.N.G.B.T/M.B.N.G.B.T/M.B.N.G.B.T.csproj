@@ -396,6 +396,8 @@
     <Resource Include="Resources\VisualMemoryTestResorces\TrueFalse\Yes.png" />
     <Resource Include="Resources\VisualMemoryTestResorces\TrueFalse\Yes2.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\WalterSchulteTest\dot.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

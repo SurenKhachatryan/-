@@ -109,7 +109,7 @@
                   <LineBreak/><Run Text="Աա = T4 / ԱԱ :" Foreground="#FFF7C900"/>
                 </TextBlock>
                 <TextBlock x:Name="TextBlockMentalStability2" Visibility="Collapsed" Foreground="Snow" FontFamily="Sylfaen" FontSize="25" Height="38">
-                  <Run Text="Հոգեկան կայունության (ՀԿ) " Foreground="#FFF7C900"/> <Run Text="հաշվման բանաձևն է՝ "/><Run Text="Աա = T4 / ԱԱ :" Foreground="#FFF7C900"/>
+                  <Run Text="Հոգեկան կայունության (ՀԿ) " Foreground="#FFF7C900" TextDecorations="Underline" FontWeight="Bold"/> <Run Text="հաշվման բանաձևն է՝ "/><Run Text="Աա = T4 / ԱԱ :" Foreground="#FFF7C900"/>
                 </TextBlock>
                 <Label x:Name="LabelMentalStability" Content="Ձեր ՀԿ = " Foreground="#FFF7C900" FontFamily="Sylfaen" FontSize="25" Width="1158" Height="80"/>
             </WrapPanel>

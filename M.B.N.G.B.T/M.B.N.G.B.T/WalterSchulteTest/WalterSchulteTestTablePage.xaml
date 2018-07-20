@@ -55,7 +55,11 @@
                 <Button x:Name="button10" Click="Button_Click1" Content="10" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
                 <Button x:Name="button11" Click="Button_Click1" Content="11" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
                 <Button x:Name="button12" Click="Button_Click1" Content="12" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
-                <Button x:Name="button13" Click="Button_Click1" Content="13" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
+                <Button x:Name="button13" Click="Button_Click1" Content="13" FontSize="80" BorderBrush="Snow" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave">
+                    <Button.Background>
+                        <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/WalterSchulteTest/dot.png"/>
+                    </Button.Background>
+                </Button>
                 <Button x:Name="button14" Click="Button_Click1" Content="14" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
                 <Button x:Name="button15" Click="Button_Click1" Content="15" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
                 <Button x:Name="button16" Click="Button_Click1" Content="16" FontSize="80" BorderBrush="Snow" Background="White" FontFamily="Sylfaen" FontWeight="Bold" Width="105" Height="96" MouseEnter="Button1_MouseEnter" MouseLeave="Button1_MouseLeave"/>
