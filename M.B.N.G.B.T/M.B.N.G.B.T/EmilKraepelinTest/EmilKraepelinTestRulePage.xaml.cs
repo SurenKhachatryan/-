@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace M.B.N.G.B.T.KrepelTest
+namespace M.B.N.G.B.T.EmilKraepelinTest
 {
     /// <summary>
-    /// Логика взаимодействия для KrepelTestRulePage.xaml
+    /// Логика взаимодействия для EmilKraepelinTestRulePage.xaml
     /// </summary>
-    public partial class KrepelinTestRulePage : Page
+    public partial class EmilKraepelinTestRulePage : Page
     {
-        public KrepelinTestRulePage()
+        public EmilKraepelinTestRulePage()
         {
             InitializeComponent();
         }
@@ -32,10 +32,8 @@ namespace M.B.N.G.B.T.KrepelTest
 
         private void Button_Start_Test(object sender, RoutedEventArgs e)
         {
-            KrepelinTestTablePage.stage = 1;
-            KrepelinTestTablePage.arrAllStageRightAnswers = new int[8][];
-            KrepelinTestTablePage.arrAllStageWrongAnswers = new int[8][];
-            NavigationService.Navigate(new KrepelinTestTablePage());
+            EmilKraepelinTestTablePage.stage = 1;
+            NavigationService.Navigate(new EmilKraepelinTestTablePage());
         }
 
         private void Image_ImageFailed(object sender, ExceptionRoutedEventArgs e)

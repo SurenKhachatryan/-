@@ -14,9 +14,9 @@ namespace M.B.N.G.B.T.WalterSchulteTest
     public partial class WalterSchulteTestResultPage : Page
     {
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
-        private double Efficiency { get; set; } = 0;
-        private double DegreeOfWorkability { get; set; } = 0;
-        private double MentalStability { get; set; } = 0;
+        private double efficiency = 0;
+        private double degreeOfWorkability = 0;
+        private double mentalStability = 0;
 
         struct ToolkPoint
         {
@@ -55,11 +55,11 @@ namespace M.B.N.G.B.T.WalterSchulteTest
                   new ToolkPoint(WalterSchulteTestTablePage.ArrAllStageSecond[4],5)
                 };
 
-                Efficiency = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(cl.GetSumElementsInArr(WalterSchulteTestTablePage.ArrAllStageSecond)) / Convert.ToDouble(5), 1);
-                DegreeOfWorkability = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(WalterSchulteTestTablePage.ArrAllStageSecond[0]) / Efficiency, 1);
-                MentalStability = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(WalterSchulteTestTablePage.ArrAllStageSecond[3]) / Efficiency, 1);
+                efficiency = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(cl.GetSumElementsInArr(WalterSchulteTestTablePage.ArrAllStageSecond)) / Convert.ToDouble(5), 1);
+                degreeOfWorkability = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(WalterSchulteTestTablePage.ArrAllStageSecond[0]) / efficiency, 1);
+                mentalStability = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(WalterSchulteTestTablePage.ArrAllStageSecond[3]) / efficiency, 1);
 
-                LabelAppraisa.Content += $"{Efficiency}";
+                LabelAppraisa.Content += $"{efficiency}";
                 for (int i = 0; i < WalterSchulteTestTablePage.ArrAllStageSecond.Length; i++)
                 {
                     if (i == 0)
@@ -70,38 +70,38 @@ namespace M.B.N.G.B.T.WalterSchulteTest
                         LabelAppraisa.Content += $"{WalterSchulteTestTablePage.ArrAllStageSecond[i]} )/5)";
                 }
 
-                if (Convert.ToInt16(Efficiency) >= 56)
+                if (Convert.ToInt16(efficiency) >= 56)
                     RectengleAppraisal5.Fill = (RectengleAppraisal10.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFFF3204")));
                 else
-                if (Convert.ToInt16(Efficiency) >= 46 && Convert.ToInt16(Efficiency) <= 55)
+                if (Convert.ToInt16(efficiency) >= 46 && Convert.ToInt16(efficiency) <= 55)
                     RectengleAppraisal4.Fill = (RectengleAppraisal9.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFE08313")));
                 else
-                if (Convert.ToInt16(Efficiency) >= 36 && Convert.ToInt16(Efficiency) <= 45)
+                if (Convert.ToInt16(efficiency) >= 36 && Convert.ToInt16(efficiency) <= 45)
                     RectengleAppraisal3.Fill = (RectengleAppraisal8.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFDCAA00")));
                 else
-                if (Convert.ToInt16(Efficiency) >= 31 && Convert.ToInt16(Efficiency) <= 35)
+                if (Convert.ToInt16(efficiency) >= 31 && Convert.ToInt16(efficiency) <= 35)
                     RectengleAppraisal2.Fill = (RectengleAppraisal7.Fill = (Brush)(new BrushConverter().ConvertFrom("#FF6EA21F")));
                 else
-                if (Convert.ToInt16(Efficiency) <= 30)
+                if (Convert.ToInt16(efficiency) <= 30)
                     RectengleAppraisal1.Fill = (RectengleAppraisal6.Fill = Brushes.Green);
 
 
-                if (DegreeOfWorkability <= 1.0)
+                if (degreeOfWorkability <= 1.0)
                 {
-                    LabelDegreeOfWorkability.Content += $"{DegreeOfWorkability} ,որը համարվում է բարձր ցուցանիշ։";
+                    LabelDegreeOfWorkability.Content += $"{degreeOfWorkability} ,որը համարվում է բարձր ցուցանիշ։";
                     TextBlockMentalStability1.Visibility = Visibility.Visible;
                 }
                 else
                 {
-                    LabelDegreeOfWorkability.Content += $"{DegreeOfWorkability} ,որը համարվում է ցածր ցուցանիշ։";
+                    LabelDegreeOfWorkability.Content += $"{degreeOfWorkability} ,որը համարվում է ցածր ցուցանիշ։";
                     LabelDegreeOfWorkabilityinfo.Visibility = Visibility.Visible;
                     TextBlockMentalStability2.Visibility = Visibility.Visible;
                 }
 
-                if (MentalStability <= 1.0)
-                    LabelMentalStability.Content += $"{MentalStability} ,որը համարվում է բարձր ցուցանիշ։";
+                if (mentalStability <= 1.0)
+                    LabelMentalStability.Content += $"{mentalStability} ,որը համարվում է բարձր ցուցանիշ։";
                 else
-                    LabelMentalStability.Content += $"{MentalStability} , որը համարվում է ցածր ցուցանիշ։ Ձեր ՀԿ ցուցանիշը թույլ չի տալիս տվյալ\nհանձնարարությունը նույն տեմպով կատարել մինչև վերջ։";
+                    LabelMentalStability.Content += $"{mentalStability} , որը համարվում է ցածր ցուցանիշ։ Ձեր ՀԿ ցուցանիշը թույլ չի տալիս տվյալ\nհանձնարարությունը նույն տեմպով կատարել մինչև վերջ։";
             }
 
         }

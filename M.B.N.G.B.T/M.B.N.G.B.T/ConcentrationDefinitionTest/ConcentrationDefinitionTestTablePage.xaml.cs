@@ -15,23 +15,29 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
     /// </summary>
     public partial class ConcentrationDefinitionTestTablePage : Page
     {
-        private List<int> lsRndDigite { get; set; } = new List<int>();
-        private Label[] arrAllLabels { get; set; } = new Label[25];
+        private List<int> lsRndDigite = new List<int>();
+        private Label[] arrAllLabels = new Label[25];
 
-        public static int[] arrAllDigitsInTextBox { get; private set; } = new int[0];
-        public static string TextBoxText { get; private set; } = string.Empty;
-        public static int[] arrAllRightNumbers { get; private set; } = new int[0];
+        private static int[] arrAllDigitsInTextBox = new int[0];
+        private static int[] arrAllRightNumbers = new int[0];
         private static int[] arrBigNumbers = new int[0];
         private static int[] arrAllRandomDigits = new int[0];
         private static int[] arrAllAbsentNumbers = new int[0];
         private static int[] arrAllExtraNumbers = new int[0];
         private static int[] arrAllRightNumbersUser = new int[0];
+        private static string textBoxText = string.Empty;
+        private static bool isEmptyTextBox = true;
+        private static bool isBigNumbersInTextBox = false;
+        private static int countBigNumbers = 0;
+        private static int countNumberOfEqualDigits = 0;
 
-        public static bool IsEmptyTextBox { get; private set; } = true;
-        public static bool IsBigNumbersInTextBox { get; private set; } = false;
-        public static int CountBigNumbers { get; private set; } = 0;
-        public static int CountNumberOfEqualDigits { get; private set; }
-
+        public static string TextBoxText { get { return textBoxText; } }
+        public static bool IsEmptyTextBox { get { return isEmptyTextBox; } }
+        public static bool IsBigNumbersInTextBox { get { return isBigNumbersInTextBox; } }
+        public static int CountBigNumbers { get { return countBigNumbers; } }
+        public static int CountNumberOfEqualDigits { get { return countNumberOfEqualDigits; } }
+        public static int[] ArrAllDigitsInTextBox { get { return arrAllDigitsInTextBox; } }
+        public static int[] ArrAllRightNumbers { get { return arrAllRightNumbers; } }
         public static int[] ArrBigNumbers { get { return arrBigNumbers; } }
         public static int[] ArrAllRandomDigits { get { return arrAllRandomDigits; } }
         public static int[] ArrAllAbsentNumbers { get { return arrAllAbsentNumbers; } }
@@ -42,11 +48,11 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
-        private int Index { get; set; } = 0;
-        private int Second { get; set; } = 0;
-        private int Minute { get; set; } = 0;
-        private int SecondCTRL { get; set; } = 0;
-        private int RepeatNumbersSecond { get; set; } = 0;
+        private int index = 0;
+        private int second = 0;
+        private int minute = 0;
+        private int secondCTRL = 0;
+        private int repeatNumbersSecond = 0;
 
         public ConcentrationDefinitionTestTablePage()
         {
@@ -58,9 +64,9 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
             arrAllAbsentNumbers = new int[0];
             arrAllExtraNumbers = new int[0];
             arrAllRightNumbersUser = new int[0];
-            IsEmptyTextBox = true;
-            IsBigNumbersInTextBox = false;
-            CountBigNumbers = 0;
+            isEmptyTextBox = true;
+            isBigNumbersInTextBox = false;
+            countBigNumbers = 0;
             arrBigNumbers = new int[0];
 
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
@@ -82,45 +88,45 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         {
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
 
-            if (Second == 60)
+            if (second == 60)
             {
-                Second = 0;
-                Minute++;
+                second = 0;
+                minute++;
                 timer.Foreground = Brushes.Yellow;
             }
 
             if (cl.SearchEqualNumbersInALineAfterAComma(textBox.Text))
             {
-                if (RepeatNumbersSecond == 2)
+                if (repeatNumbersSecond == 2)
                 {
                     if (cl.SearchBigNumberInArr(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40) && cl.SearchEqualNumbersInALineAfterAComma(textBox.Text))
                         LabelWarning.Content = "Տեքստում կա 40-ից մեծ թիվ և կրկնվող թիվ:";
                     else
                         LabelWarning.Content = "Տեքստում կա կրկնվող թիվ:";
                 }
-                if (RepeatNumbersSecond != 2)
-                    RepeatNumbersSecond++;
+                if (repeatNumbersSecond != 2)
+                    repeatNumbersSecond++;
             }
 
-            if (Minute == 1 && Second == 15)
+            if (minute == 1 && second == 15)
                 timer.Foreground = Brushes.Red;
 
-            if (Second < 10)
-                timer.Content = $"{Minute}:0{Second}";
+            if (second < 10)
+                timer.Content = $"{minute}:0{second}";
             else
-                timer.Content = $"{Minute}:{Second}";
+                timer.Content = $"{minute}:{second}";
 
-            if (Minute == 1 && Second == 30)
+            if (minute == 1 && second == 30)
             {
                 int[] arr = cl.GetArrFiltringNumbersInTheText(textBox.Text);
-                IsEmptyTextBox = (textBox.Text == string.Empty) ? true : false;
-                IsBigNumbersInTextBox = (cl.SearchBigNumberInArr(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40)) ? true : false;
-                CountBigNumbers = cl.GetCountAndArrBigNumbers(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40, out arrBigNumbers);
-                CountNumberOfEqualDigits = cl.GetCountNumberOfEqualDigits(arr);
+                isEmptyTextBox = (textBox.Text == string.Empty) ? true : false;
+                isBigNumbersInTextBox = (cl.SearchBigNumberInArr(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40)) ? true : false;
+                countBigNumbers = cl.GetCountAndArrBigNumbers(cl.GetArrFiltringNumbersInTheText(textBox.Text), 40, out arrBigNumbers);
+                countNumberOfEqualDigits = cl.GetCountNumberOfEqualDigits(arr);
 
-                if (!IsEmptyTextBox && Char.IsDigit(Convert.ToChar(textBox.Text[textBox.Text.Length - 1])) &&
+                if (!isEmptyTextBox && Char.IsDigit(Convert.ToChar(textBox.Text[textBox.Text.Length - 1])) &&
                     !Char.IsDigit(Convert.ToChar(textBox.Text[textBox.Text.Length - 2])) &&
-                    !IsBigNumbersInTextBox &&  textBox.Text.Length > 5 && CountNumberOfEqualDigits <= 1)
+                    !isBigNumbersInTextBox && textBox.Text.Length > 5 && countNumberOfEqualDigits <= 1)
                 {
                     int[] arrNew = cl.DeleteItmesInArr(arr, arr.Length - 1);
                     int temp = arr[arr.Length - 1];
@@ -143,9 +149,9 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                        !cl.SerchMatchingNumberInArr(arrAllRightNumbers, temp))
                         textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1);
                 }
-                CountNumberOfEqualDigits = cl.GetCountNumberOfEqualDigits(cl.GetArrFiltringNumbersInTheText(textBox.Text));
+                countNumberOfEqualDigits = cl.GetCountNumberOfEqualDigits(cl.GetArrFiltringNumbersInTheText(textBox.Text));
                 LabelCountNumbers.Content = $"{cl.GetCountNumbersAfterSimbols(textBox.Text)}/15";
-                if (!IsBigNumbersInTextBox && !IsEmptyTextBox && CountNumberOfEqualDigits == 0)
+                if (!isBigNumbersInTextBox && !isEmptyTextBox && countNumberOfEqualDigits == 0)
                 {
                     dispatcherTimer.Stop();
                     textBox.IsEnabled = false;
@@ -155,18 +161,18 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 }
                 else
                 {
-                    TextBoxText = textBox.Text;
+                    textBoxText = textBox.Text;
                     NavigationService.Navigate(new ConcentrationDefinitionTestResultPage());
                 }
             }
 
-            if (SecondCTRL == 2)
+            if (secondCTRL == 2)
             {
                 textBox.IsEnabled = true;
                 textBox.Focus();
             }
-            Second++;
-            SecondCTRL++;
+            second++;
+            secondCTRL++;
         }
 
         private void Button_Finish_Test(object sender, RoutedEventArgs e)
@@ -253,30 +259,30 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
             bool repeatNumbers = cl.SearchEqualNumbersInALineAfterAComma(textBox.Text);
 
             if (repeatNumbers != true)
-                RepeatNumbersSecond = 0;
+                repeatNumbersSecond = 0;
 
             if (!bigNumbers && !repeatNumbers)
                 LabelWarning.Content = string.Empty;
             else
-            if (bigNumbers && repeatNumbers && RepeatNumbersSecond == 2)
+            if (bigNumbers && repeatNumbers && repeatNumbersSecond == 2)
                 LabelWarning.Content = "Տեքստում կա 40-ից մեծ թիվ և կրկնվող թիվ:";
             else
             if (bigNumbers)
                 LabelWarning.Content = "Տեքստում կա 40-ից մեծ թիվ:";
             else
-            if (repeatNumbers && RepeatNumbersSecond == 2)
+            if (repeatNumbers && repeatNumbersSecond == 2)
                 LabelWarning.Content = "Տեքստում կա կրկնվող թիվ:";
 
             textBox.Text = cl.DeleteExtraCommaInText(textBox.Text);
             LabelCountNumbers.Content = $"{countNumbers}/15";
 
             if (e.Key == Key.Back && textBox.Text != string.Empty)
-                textBox.SelectionStart = (Index - 1);
+                textBox.SelectionStart = (index - 1);
         }
 
         private void textBox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            Index = textBox.SelectionStart;
+            index = textBox.SelectionStart;
             if (e.Key == Key.Space)
                 e.Handled = true;
 
@@ -284,7 +290,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 || e.Key == Key.LeftShift || e.Key == Key.RightShift)
             {
                 textBox.IsEnabled = false;
-                SecondCTRL = 0;
+                secondCTRL = 0;
             }
         }
 

@@ -64,7 +64,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 ViewBoxRectangles2.Visibility = Visibility.Visible;
 
                 labelListNumbers.Content += $"\n-{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllRandomDigits)}";
-                labelRightNumbers.Content += $"\n-{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.arrAllRightNumbers)}";
+                labelRightNumbers.Content += $"\n-{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllRightNumbers)}";
                 if (ConcentrationDefinitionTestTablePage.ArrAllRightNumbersUser.Length != 0)
                     LabelResult1.Content += $"\n-{cl.GetOneTextArrItemsSeparationCommas(ConcentrationDefinitionTestTablePage.ArrAllRightNumbersUser)}";
                 else

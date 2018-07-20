@@ -15,20 +15,27 @@ namespace M.B.N.G.B.T.TestEclecticAttention
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
-        private Label[] arrAllLabels { get; set; } = new Label[105];
-        private Label[] arrAllLabelsTrueNumbers { get; set; } = new Label[10];
-        private List<int> listAllLabelsContent { get; set; } = new List<int>();
+        private Label[] arrAllLabels = new Label[105];
+        private Label[] arrAllLabelsTrueNumbers = new Label[10];
+        private List<int> listAllLabelsContent = new List<int>();
 
-        public static List<int> listVibronicTrueNumbers { get; private set; } = new List<int>();
-        public static List<int> listVibronicFalseNumbers { get; private set; } = new List<int>();
-        public static List<int> listTrueNumbers { get; private set; } = new List<int>();
-        public static byte counterVibronicaFalseNumbers { get; private set; } = 0;
-        public static int second { get; private set; } = 0;
-        public static int chekedRadioButton { get; private set; } = 0;
+        private byte counterVibronicTrueNumbers = 0;
+        private int secondForBrushingLabels = 0;
 
-        private byte counterVibronicTrueNumbers { get; set; } = 0;
-        private int secondForBrushingLabels { get; set; } = 0;
+        private static List<int> listVibronicTrueNumbers = new List<int>();
+        private static List<int> listVibronicFalseNumbers = new List<int>();
+        private static List<int> listTrueNumbers = new List<int>();
+        private static byte counterVibronicaFalseNumbers = 0;
+        private static int second = 0;
+        private static int chekedRadioButton = 0;
 
+        public static List<int> ListVibronicTrueNumbers { get { return listVibronicTrueNumbers; } }
+        public static List<int> ListVibronicFalseNumbers { get { return listVibronicFalseNumbers; } }
+        public static List<int> ListTrueNumbers { get { return listTrueNumbers; } }
+        public static byte CounterVibronicaFalseNumbers { get { return counterVibronicaFalseNumbers; } }
+        public static int Second { get { return second; } }
+        public static int ChekedRadioButton { get { return chekedRadioButton; } }
+        
         public TestEclecticAttentionTablePage()
         {
             listVibronicTrueNumbers.Clear();

@@ -75,14 +75,14 @@
     <Compile Include="ConcentrationDefinitionTest\ConcentrationDefinitionTestTablePage.xaml.cs">
       <DependentUpon>ConcentrationDefinitionTestTablePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="KrepelinTest\KrepelTestResultPage.xaml.cs">
-      <DependentUpon>KrepelTestResultPage.xaml</DependentUpon>
+    <Compile Include="EmilKraepelinTest\EmilKraepelinTestResultPage.xaml.cs">
+      <DependentUpon>EmilKraepelinTestResultPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="KrepelinTest\KrepelTestRulePage.xaml.cs">
-      <DependentUpon>KrepelTestRulePage.xaml</DependentUpon>
+    <Compile Include="EmilKraepelinTest\EmilKraepelinTestRulePage.xaml.cs">
+      <DependentUpon>EmilKraepelinTestRulePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="KrepelinTest\KrepelTestTablePage.xaml.cs">
-      <DependentUpon>KrepelTestTablePage.xaml</DependentUpon>
+    <Compile Include="EmilKraepelinTest\EmilKraepelinTestTablePage.xaml.cs">
+      <DependentUpon>EmilKraepelinTestTablePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -133,6 +133,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="EmilKraepelinTest\EmilKraepelinTestResultPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmilKraepelinTest\EmilKraepelinTestRulePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmilKraepelinTest\EmilKraepelinTestTablePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TestEclecticAttention\TestEclecticAttentionResultPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -158,18 +170,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="VisualMemoryTest\VisualMemoryTestRulePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="KrepelinTest\KrepelTestResultPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="KrepelinTest\KrepelTestRulePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="KrepelinTest\KrepelTestTablePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

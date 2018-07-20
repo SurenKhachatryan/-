@@ -1,11 +1,11 @@
 ﻿using System.Windows;
+using System.Windows.Input;
 using M.B.N.G.B.T.VisualMemoryTest;
-using M.B.N.G.B.T.KrepelTest;
 using M.B.N.G.B.T.AttentivenessTest;
 using M.B.N.G.B.T.TestEclecticAttention;
 using M.B.N.G.B.T.ConcentrationDefinitionTest;
 using M.B.N.G.B.T.WalterSchulteTest;
-using System.Windows.Input;
+using M.B.N.G.B.T.EmilKraepelinTest;
 
 namespace M.B.N.G.B.T
 {
@@ -36,7 +36,7 @@ namespace M.B.N.G.B.T
 
         private void Button_Krepelin_Test(object sender, RoutedEventArgs e)
         {
-            Main.Content = new KrepelinTestRulePage();
+            Main.Content = new EmilKraepelinTestRulePage();
         }
 
         private void Button_Attentiveness_Test(object sender, RoutedEventArgs e)

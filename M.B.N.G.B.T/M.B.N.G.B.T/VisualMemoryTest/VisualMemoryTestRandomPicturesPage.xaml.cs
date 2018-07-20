@@ -20,17 +20,18 @@ namespace M.B.N.G.B.T.VisualMemoryTest
         private int[] arrAllSrageIntervalSecondViewPics = { 15, 30, 60, 35, 45, 55, 00, 10, 20, 40 };
         private int[] arrAllSrageIntervalMinuteViewPics = { 0, 0, 0, 1, 1, 1, 2, 2, 2, 2 };
 
-        private List<int> listThisStageRandomPicsPositionLeft { get; set; } = new List<int>() { 167, 285 };
-        private List<int> listThisStageRandomPicsPositionTop { get; set; } = new List<int>() { 10, 10 };
+        private List<int> listThisStageRandomPicsPositionLeft = new List<int>() { 167, 285 };
+        private List<int> listThisStageRandomPicsPositionTop = new List<int>() { 10, 10 };
         private Image[] arrAllPicsSubject = new Image[48];
+        
+        private static List<int> listPicVisibility = new List<int>();
 
-
-        public static List<int> listPicVisibility { get; private set; } = new List<int>();
+        public static List<int> ListPicVisibility { get { return listPicVisibility; } }
         public static byte stage { get; set; } = 1;
         public static readonly byte[] picturesCountByStages = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
 
-        private int second { get; set; } = 0;
-        private int minute { get; set; } = 0;
+        private int second = 0;
+        private int minute = 0;
 
         public VisualMemoryTestRandomPicturesPage()
         {
@@ -48,7 +49,7 @@ namespace M.B.N.G.B.T.VisualMemoryTest
 
             if (stage != 1)
                 IsInitializedListNewValues();
-            
+
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
             listPicVisibility.Clear();
             PicRandomVisibility();

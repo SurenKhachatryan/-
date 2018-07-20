@@ -13,7 +13,7 @@ namespace M.B.N.G.B.T.VisualMemoryTest
     /// </summary>
     public partial class VisualMemoryTestAllPicturesPage : Page
     {
-        private List<int> listCorrectSelectedPictures { get; set; } = new List<int>();
+        private List<int> listCorrectSelectedPictures = new List<int>();
         private Image[] arrAllPicsSubject = new Image[48];
         private Image[] arrAllPicsYes1 = new Image[48];
         private Image[] arrAllPicsYes2 = new Image[48];
@@ -22,10 +22,10 @@ namespace M.B.N.G.B.T.VisualMemoryTest
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
-        private int picCountChackted { get; set; } = 0;
-        private int second { get; set; } = 0;
-        private bool door { get; set; } = false;
-        private bool isEnabledPics { get; set; } = true;
+        private int picCountChackted = 0;
+        private int second = 0;
+        private bool door = false;
+        private bool isEnabledPics = true;
 
         public VisualMemoryTestAllPicturesPage()
         {
@@ -61,7 +61,7 @@ namespace M.B.N.G.B.T.VisualMemoryTest
 
             if (picCountChackted == VisualMemoryTestRandomPicturesPage.picturesCountByStages[VisualMemoryTestRandomPicturesPage.stage - 1] && picCountChackted != 20)
             {
-                
+
                 VisualMemoryTestRandomPicturesPage.stage += 1;
                 NavigationService.Navigate(new VisualMemoryTestRandomPicturesPage());
                 dispatcherTimer.Stop();
@@ -104,7 +104,7 @@ namespace M.B.N.G.B.T.VisualMemoryTest
                     }
                 }
                 second = 0;
-                if (cl.SerchMatchingNumberInArr(VisualMemoryTestRandomPicturesPage.listPicVisibility.ToArray(), (index + 1)))
+                if (cl.SerchMatchingNumberInArr(VisualMemoryTestRandomPicturesPage.ListPicVisibility.ToArray(), (index + 1)))
                 {
                     picCountChackted++;
                     listCorrectSelectedPictures.Add((index + 1));
@@ -126,9 +126,9 @@ namespace M.B.N.G.B.T.VisualMemoryTest
             int[] arr;
 
             if (listCorrectSelectedPictures.Count != 0)
-                arr = cl.GetArrayMissingNumbersInAnArray(VisualMemoryTestRandomPicturesPage.listPicVisibility.ToArray(), listCorrectSelectedPictures.ToArray());
+                arr = cl.GetArrayMissingNumbersInAnArray(VisualMemoryTestRandomPicturesPage.ListPicVisibility.ToArray(), listCorrectSelectedPictures.ToArray());
             else
-                arr = VisualMemoryTestRandomPicturesPage.listPicVisibility.ToArray();
+                arr = VisualMemoryTestRandomPicturesPage.ListPicVisibility.ToArray();
 
             for (int i = 0; i < arr.Length; i++)
                 arrAllPicsYes2[arr[i] - 1].Visibility = Visibility.Visible;

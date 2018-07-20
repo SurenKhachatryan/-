@@ -1,36 +1,51 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
+using System.Windows.Shapes;
 using System.Windows.Threading;
 
-namespace M.B.N.G.B.T.KrepelTest
+namespace M.B.N.G.B.T.EmilKraepelinTest
 {
     /// <summary>
-    /// Логика взаимодействия для KrepelTestTablePage.xaml
+    /// Логика взаимодействия для EmilKraepelinTestTablePage.xaml
     /// </summary>
-    public partial class KrepelinTestTablePage : Page
+    public partial class EmilKraepelinTestTablePage : Page
     {
         private Random rnd = new Random();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
-        private int second { get; set; } = 30;
-        private int labelFalse { get; set; } = 0;
-        private int labelTrue { get; set; } = 0;
-        private int buttonContent { get; set; }
-        private string _operator { get; set; } = "+";
+        private int second = 30;
+        private int labelFalse = 0;
+        private int labelTrue = 0;
+        private string _operator = "+";
+        private static int[][] arrAllStageRightAnswers = new int[8][];
+        private static int[][] arrAllStageWrongAnswers = new int[8][];
 
         public static int stage { get; set; } = 1;
-        public static int[][] arrAllStageRightAnswers { get; set; } = new int[8][];
-        public static int[][] arrAllStageWrongAnswers { get; set; } = new int[8][];
+        public static int[][] ArrAllStageRightAnswers { get { return arrAllStageRightAnswers; } }
+        public static int[][] ArrAllStageWrongAnswers { get { return arrAllStageWrongAnswers; } }
 
-        public KrepelinTestTablePage()
+        public EmilKraepelinTestTablePage()
         {
             InitializeComponent();
 
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
+
+            if (stage == 1)
+            {
+                arrAllStageRightAnswers = new int[8][];
+                arrAllStageWrongAnswers = new int[8][];
+            }
 
             LableStage.Content = $"Փուլ {stage}/8";
 
@@ -42,7 +57,6 @@ namespace M.B.N.G.B.T.KrepelTest
             Initializator();
             dispatcherTimer.Start();
         }
-
         private void Button_Exit_The_Test_View_Result(object sender, RoutedEventArgs e)
         {
             arrAllStageRightAnswers[stage - 1] = new int[1];
@@ -59,7 +73,7 @@ namespace M.B.N.G.B.T.KrepelTest
 
             dispatcherTimer.Stop();
 
-            NavigationService.Navigate(new KrepelinTestResultPage());
+            NavigationService.Navigate(new EmilKraepelinTestResultPage());
         }
 
         private void LabelTimer(object sender, EventArgs e)
@@ -97,12 +111,11 @@ namespace M.B.N.G.B.T.KrepelTest
                     if (stage != 8)
                     {
                         stage++;
-                        NavigationService.Navigate(new KrepelinTestTablePage());
+                        NavigationService.Navigate(new EmilKraepelinTestTablePage());
                     }
                     else
-                    {
-                        NavigationService.Navigate(new KrepelinTestResultPage());
-                    }
+                        NavigationService.Navigate(new EmilKraepelinTestResultPage());
+
                     dispatcherTimer.Stop();
                 }
                 timer2.Content = $"0{(second + 3)}";
@@ -113,9 +126,8 @@ namespace M.B.N.G.B.T.KrepelTest
         private void textBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             if ((!Char.IsDigit(e.Text, 0)) || textBox.Text.Length == 3)
-            {
                 e.Handled = true;
-            }
+
             if (Char.IsDigit(e.Text, 0))
             {
                 FinishStage(Convert.ToInt32(e.Text), _operator);
@@ -126,9 +138,7 @@ namespace M.B.N.G.B.T.KrepelTest
         private void Grid_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Space)
-            {
                 e.Handled = true;
-            }
         }
 
         private void Initializator()
@@ -151,7 +161,6 @@ namespace M.B.N.G.B.T.KrepelTest
 
             textBox.Text = "";
             textBox.Focus();
-            buttonContent = -1;
         }
 
         private void InitializatorLabelTrue()
@@ -188,54 +197,13 @@ namespace M.B.N.G.B.T.KrepelTest
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButtonsColection_Click(object sender, RoutedEventArgs e)
         {
-            FinishStage(0, _operator);
-        }
+            if (Convert.ToInt16(((Button)sender).Content) != 10)
+                FinishStage(Convert.ToInt16(((Button)sender).Content), _operator);
+            else
+                FinishStage(0, _operator);
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            FinishStage(1, _operator);
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            FinishStage(2, _operator);
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            FinishStage(3, _operator);
-        }
-
-        private void Button_Click_4(object sender, RoutedEventArgs e)
-        {
-            FinishStage(4, _operator);
-        }
-
-        private void Button_Click_5(object sender, RoutedEventArgs e)
-        {
-            FinishStage(5, _operator);
-        }
-
-        private void Button_Click_6(object sender, RoutedEventArgs e)
-        {
-            FinishStage(6, _operator);
-        }
-
-        private void Button_Click_7(object sender, RoutedEventArgs e)
-        {
-            FinishStage(7, _operator);
-        }
-
-        private void Button_Click_8(object sender, RoutedEventArgs e)
-        {
-            FinishStage(8, _operator);
-        }
-
-        private void Button_Click_9(object sender, RoutedEventArgs e)
-        {
-            FinishStage(9, _operator);
         }
 
         private void IsEnabledButtonsAndTextBox(bool bl)

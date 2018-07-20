@@ -12,14 +12,12 @@ namespace M.B.N.G.B.T.TestEclecticAttention
         public TestEclecticAttentionResultPage()
         {
             InitializeComponent();
-            if (TestEclecticAttentionTablePage.counterVibronicaFalseNumbers == 11)
-            {
+            if (TestEclecticAttentionTablePage.CounterVibronicaFalseNumbers == 11)
                 ViewboxResult1.Visibility = Visibility.Visible;
-            }
             else
             {
                 ViewboxResult2.Visibility = Visibility.Visible;
-                switch (TestEclecticAttentionTablePage.chekedRadioButton)
+                switch (TestEclecticAttentionTablePage.ChekedRadioButton)
                 {
                     case 1:
                         LabelResult2.Content = "Դուք աշխատել եք համակարգված ոճով։";
@@ -32,16 +30,16 @@ namespace M.B.N.G.B.T.TestEclecticAttention
                         break;
                 }
 
-                if (TestEclecticAttentionTablePage.second <= 100)
-                    LabelResult3.Content = $"Ձեր ցուցանիշն է - {TestEclecticAttentionTablePage.second} վրկ, որը համարվում է գերազանց ցուցանիշ։";
+                if (TestEclecticAttentionTablePage.Second <= 100)
+                    LabelResult3.Content = $"Ձեր ցուցանիշն է - {TestEclecticAttentionTablePage.Second} վրկ, որը համարվում է գերազանց ցուցանիշ։";
                 else
-                if (TestEclecticAttentionTablePage.second <= 190)
-                    LabelResult3.Content = $"Ձեր ցուցանիշն է - {TestEclecticAttentionTablePage.second} վրկ, որը համարվում է լավ ցուցանիշ։";
+                if (TestEclecticAttentionTablePage.Second <= 190)
+                    LabelResult3.Content = $"Ձեր ցուցանիշն է - {TestEclecticAttentionTablePage.Second} վրկ, որը համարվում է լավ ցուցանիշ։";
                 else
-                if (TestEclecticAttentionTablePage.second <= 211)
-                    LabelResult3.Content = $"Ձեր ցուցանիշ է - {TestEclecticAttentionTablePage.second} վրկ, որը համարվում է նորմալ ցուցանիշ։";
+                if (TestEclecticAttentionTablePage.Second <= 211)
+                    LabelResult3.Content = $"Ձեր ցուցանիշ է - {TestEclecticAttentionTablePage.Second} վրկ, որը համարվում է նորմալ ցուցանիշ։";
                 else
-                    LabelResult3.Content = $"Ձեր ցուցանիշը է - {TestEclecticAttentionTablePage.second} վրկ, որը համարվում է վատ ցուցանիշ, կարող եք \nկրկնել թեստը ։";
+                    LabelResult3.Content = $"Ձեր ցուցանիշը է - {TestEclecticAttentionTablePage.Second} վրկ, որը համարվում է վատ ցուցանիշ, կարող եք \nկրկնել թեստը ։";
             }
         }
 
