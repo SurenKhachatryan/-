@@ -51,7 +51,7 @@
             <Label Content="Դուք գերզանցել եք առավելագույն ժամանակի սահմանը, որն արդեն իսկ համարվում է վատ&#xD;&#xA;ցուցանիշ։ Կարող եք թեստն անցնել սկբից։" Foreground="Snow" FontFamily="Sylfaen" FontSize="25"  Width="1160"/>
         </Viewbox>
 
-        <Viewbox x:Name="ViewBoxTitile" Visibility="Collapsed" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="1">
+        <Viewbox Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="1">
             <Label Content="Արդյունքներ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35"/>
         </Viewbox>
 

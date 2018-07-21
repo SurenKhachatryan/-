@@ -39,7 +39,6 @@ namespace M.B.N.G.B.T.WalterSchulteTest
             else
             {
                 ViewBoxDiagramma.Visibility = Visibility.Visible;
-                ViewBoxTitile.Visibility = Visibility.Visible;
                 ViewboxTextBlockInfo1.Visibility = Visibility.Visible;
                 ViewBoxRectangles.Visibility = Visibility.Visible;
                 ViewBoxLabels.Visibility = Visibility.Visible;
