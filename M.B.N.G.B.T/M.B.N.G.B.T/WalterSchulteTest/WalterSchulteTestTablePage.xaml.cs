@@ -117,6 +117,7 @@ namespace M.B.N.G.B.T.WalterSchulteTest
                 counterButtonClick++;
                 BrushingButtonsColorDefult(listClickMistakesButtons.ToArray());
                 listClickButtons.Add(indexButton + 1);
+                LabelSearchNumber.Content = $"--> {(counterButtonClick + 1)}";
             }
             else
             if (counterButtonClick != Convert.ToByte(arrAllButtons[indexButton].Content))
