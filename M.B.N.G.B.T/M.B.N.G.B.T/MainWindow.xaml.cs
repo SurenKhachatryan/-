@@ -48,7 +48,12 @@ namespace M.B.N.G.B.T
         {
             Main.Content = new TestEclecticAttentionRulePage();
         }
-        
+
+        private void Button_Test_Raven_IQ(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Tab)

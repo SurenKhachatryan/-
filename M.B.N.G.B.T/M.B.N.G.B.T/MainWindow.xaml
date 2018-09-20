@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:M.B.N.G.B.T"
         mc:Ignorable="d"
-        Title="Մ․Բ․Ն․Գ․Բ․Թ․"  WindowState="Maximized" MinHeight="450" MinWidth="600"   Height="780" Width="1300" Foreground="{x:Null}" FontFamily="Segoe UI Black" BorderThickness="0" Opacity="0.995" PreviewKeyDown="Window_PreviewKeyDown" WindowStyle="None" >
+        Title="Մ․Բ․Ն․Գ․Բ․Թ․"  WindowState="Maximized" MinHeight="450" MinWidth="600"   Height="780" Width="1300" Foreground="{x:Null}" FontFamily="Segoe UI Black" BorderThickness="0" Opacity="0.995" PreviewKeyDown="Window_PreviewKeyDown" WindowStyle="SingleBorderWindow" >
     <!--Height="600" Width="800"-->
     <Window.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,/Resources/board.jpg"/>
@@ -28,7 +28,9 @@
             <RowDefinition Height="48*"/>
             <RowDefinition Height="9*"/>
             <RowDefinition Height="35*"/>
-            <RowDefinition Height="310*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="266*"/>
             <RowDefinition Height="36*"/>
             <RowDefinition Height="42*"/>
         </Grid.RowDefinitions>
@@ -41,8 +43,8 @@
             <ColumnDefinition Width="36*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left">
-            <Button x:Name="buttonVisualMemoryTest" Click="Button_Visual_Memory_Test" Content="Տեսողական հիշողության թեստ" FontSize="17"  FontFamily="Sylfaen" Foreground="White" Cursor="Hand"  Height="35"  Width="263">
+        <Viewbox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left">
+            <Button x:Name="buttonVisualMemoryTest" Click="Button_Visual_Memory_Test" Content="Տեսողական հիշողության թեստ" FontSize="17"  FontFamily="Sylfaen" Foreground="White" Cursor="Hand"  Height="35" Width="265">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -52,8 +54,8 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left">
-            <Button  x:Name="buttonSchulteTest" Click="Button_Schulte_Test" Content="Ուշադրության  ծավալի&#xD;&#xA;       որոշման  թեստ" FontSize="17"  FontFamily="Sylfaen" Cursor="Hand"  Foreground="White"  Width="263" Height="49">
+        <Viewbox Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left">
+            <Button  x:Name="buttonSchulteTest" Click="Button_Schulte_Test" Content="Ուշադրության  ծավալի&#xD;&#xA;       որոշման  թեստ" FontSize="17"  FontFamily="Sylfaen" Cursor="Hand"  Foreground="White" Height="49" Width="265">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -63,8 +65,8 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Row="7" Grid.Column="1" HorizontalAlignment="Left">
-            <Button x:Name="buttonVLMarshukTest" Click="Button_VLMarshuk_Test" Content="ՈՒշադրության որոշման թեստ" FontSize="17"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White"  Height="35"  Width="263" >
+        <Viewbox Grid.Column="1" Grid.Row="7" HorizontalAlignment="Left">
+            <Button x:Name="buttonVLMarshukTest" Click="Button_VLMarshuk_Test" Content="ՈՒշադրության որոշման թեստ" FontSize="17"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White"  Height="35" Width="265">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -74,8 +76,8 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Row="9" Grid.Column="1" HorizontalAlignment="Left">
-            <Button x:Name="buttonKrepelinTest" Click="Button_Krepelin_Test" Content="Մտավոր կարողության&#xA;   գնահատման  թեստ" FontSize="16"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White" Width="263" Height="50">
+        <Viewbox Grid.Column="1" Grid.Row="9" HorizontalAlignment="Left">
+            <Button x:Name="buttonKrepelinTest" Click="Button_Krepelin_Test" Content="Մտավոր կարողության&#xA;   գնահատման  թեստ" FontSize="16"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White" Height="50" Width="265">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -85,8 +87,8 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Row="11" Grid.Column="1" HorizontalAlignment="Left">
-            <Button x:Name="buttonAttentivenessTest" Click="Button_Attentiveness_Test" Content="Կարճաժամկետ և երկարաժամկետ &#xD;&#xA;              հիշողության թեստ" FontSize="15"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White"  Width="263"  Height="48">
+        <Viewbox Grid.Column="1" Grid.Row="11" HorizontalAlignment="Left">
+            <Button x:Name="buttonAttentivenessTest" Click="Button_Attentiveness_Test" Content="Կարճաժամկետ և երկարաժամկետ &#xD;&#xA;              հիշողության թեստ" FontSize="15"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White"  Height="48" Width="265">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -96,8 +98,19 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Row="13" Grid.Column="1" HorizontalAlignment="Left">
-            <Button x:Name="buttonTestEclecticAttention" IsEnabled="True" Click="Button_Test_Eclectic_Attention" Content="Ընտրողական ուշադրության թեստ" FontSize="16"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White"  Height="35"  Width="263">
+        <Viewbox  Grid.Column="1" Grid.Row="13" HorizontalAlignment="Left">
+            <Button x:Name="buttonTestEclecticAttention" IsEnabled="True" Click="Button_Test_Eclectic_Attention" Content="Ընտրողական ուշադրության թեստ" FontSize="16"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White"  Height="35" Width="265">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
+
+        <Viewbox Grid.Column="1" Grid.Row="15" HorizontalAlignment="Left">
+            <Button x:Name="buttonTestRavenIQ" IsEnabled="True" Click="Button_Test_Raven_IQ" Content="Ռավենի թեստ (IQ)" FontSize="17"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White"  Height="35" Width="265">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -117,7 +130,7 @@
                 </TextBlock.Background>
             </TextBlock>
         </Viewbox>
-        <Viewbox Grid.Column="3" Grid.Row="15" HorizontalAlignment="Right">
+        <Viewbox Grid.Column="3" Grid.Row="17" HorizontalAlignment="Right">
             <Button x:Name="button_Exit" IsEnabled="True" Click="Button_Exit_Click" Content="Ելք" FontSize="21"  FontFamily="Sylfaen" Cursor="Hand" Foreground="White" Width="124">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -127,7 +140,7 @@
                 </Button.Background>
             </Button>
         </Viewbox>
-        
+
         <Frame Name="Main"  RenderTransformOrigin="0,0" Grid.RowSpan="17" NavigationUIVisibility="Hidden" Grid.ColumnSpan="5" />
 
     </Grid>
