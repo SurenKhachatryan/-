@@ -141,7 +141,7 @@
             </Button>
         </Viewbox>
 
-        <Frame Name="Main"  RenderTransformOrigin="0,0" Grid.RowSpan="17" NavigationUIVisibility="Hidden" Grid.ColumnSpan="5" />
+        <Frame Name="Main"  RenderTransformOrigin="0,0" Grid.RowSpan="19" NavigationUIVisibility="Hidden" Grid.ColumnSpan="5" />
 
     </Grid>
 </Window>

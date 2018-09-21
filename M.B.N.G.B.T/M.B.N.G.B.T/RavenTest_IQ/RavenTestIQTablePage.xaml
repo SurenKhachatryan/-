@@ -1,0 +1,57 @@
+﻿<Page x:Class="M.B.N.G.B.T.RavenTest_IQ.RavenTestIQTablePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:M.B.N.G.B.T.RavenTest_IQ"
+      mc:Ignorable="d" 
+      d:DesignHeight="780" d:DesignWidth="1300"
+      Title="RavenTestIQTablePage">
+    <Page.Background>
+        <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>
+    </Page.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="26*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="193*"/>
+            <ColumnDefinition Width="99*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="476*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="292*"/>
+            <ColumnDefinition Width="70*"/>
+        </Grid.ColumnDefinitions>
+
+        <Viewbox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left">
+            <Button x:Name="buttonExitTheTest" Click="Button_Exit_The_Test" Content="Դուրս գալ թեստից" FontSize="20" Height="36" FontFamily="Sylfaen"  Foreground="White" Cursor="Hand"  Width="194">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FF0A260F" Offset="0.74"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Viewbox>
+        <Viewbox Grid.Row="1" Grid.Column="4">
+            <Image  Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Test_1/1_1.png"  Width="476" Height="303"/>
+        </Viewbox>
+        <Viewbox Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="3">
+            <WrapPanel Width="576" Height="240">
+                <Image Margin="5" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Test_1/1_2.png" Width="182" Height="108"/>
+                <Image Margin="5" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Test_1/1_3.png" Width="182" Height="108"/>
+                <Image Margin="5" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Test_1/1_4.png" Width="182" Height="108"/>
+                <Image Margin="5" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Test_1/1_5.png" Width="182" Height="108"/>
+                <Image Margin="5" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Test_1/1_6.png" Width="182" Height="108"/>
+                <Image Margin="5" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Test_1/1_7.png" Width="182" Height="108"/>
+            </WrapPanel>
+        </Viewbox>
+    </Grid>
+</Page>

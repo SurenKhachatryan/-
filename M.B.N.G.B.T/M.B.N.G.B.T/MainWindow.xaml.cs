@@ -6,6 +6,7 @@ using M.B.N.G.B.T.TestEclecticAttention;
 using M.B.N.G.B.T.ConcentrationDefinitionTest;
 using M.B.N.G.B.T.WalterSchulteTest;
 using M.B.N.G.B.T.EmilKraepelinTest;
+using M.B.N.G.B.T.RavenTest_IQ;
 
 namespace M.B.N.G.B.T
 {
@@ -51,7 +52,7 @@ namespace M.B.N.G.B.T
 
         private void Button_Test_Raven_IQ(object sender, RoutedEventArgs e)
         {
-
+            Main.Content = new RavenTestIQRulePage();
         }
 
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)

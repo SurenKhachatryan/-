@@ -89,6 +89,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="RavenTest_IQ\RavenTestIQResultPage.xaml.cs">
+      <DependentUpon>RavenTestIQResultPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RavenTest_IQ\RavenTestIQRulePage.xaml.cs">
+      <DependentUpon>RavenTestIQRulePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RavenTest_IQ\RavenTestIQTablePage.xaml.cs">
+      <DependentUpon>RavenTestIQTablePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TestEclecticAttention\TestEclecticAttentionResultPage.xaml.cs">
       <DependentUpon>TestEclecticAttentionResultPage.xaml</DependentUpon>
     </Compile>
@@ -142,6 +151,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EmilKraepelinTest\EmilKraepelinTestTablePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RavenTest_IQ\RavenTestIQResultPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RavenTest_IQ\RavenTestIQRulePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RavenTest_IQ\RavenTestIQTablePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -400,7 +421,6 @@
     <None Include="Resources\WalterSchulteTest\dot.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="RavenTest_IQ\" />
     <Folder Include="Resources\RavenTest_IQ\Test_10\" />
     <Folder Include="Resources\RavenTest_IQ\Test_11\" />
     <Folder Include="Resources\RavenTest_IQ\Test_12\" />
@@ -411,7 +431,6 @@
     <Folder Include="Resources\RavenTest_IQ\Test_17\" />
     <Folder Include="Resources\RavenTest_IQ\Test_18\" />
     <Folder Include="Resources\RavenTest_IQ\Test_19\" />
-    <Folder Include="Resources\RavenTest_IQ\Test_1\" />
     <Folder Include="Resources\RavenTest_IQ\Test_20\" />
     <Folder Include="Resources\RavenTest_IQ\Test_21\" />
     <Folder Include="Resources\RavenTest_IQ\Test_22\" />
@@ -461,6 +480,30 @@
     <Folder Include="Resources\RavenTest_IQ\Test_7\" />
     <Folder Include="Resources\RavenTest_IQ\Test_8\" />
     <Folder Include="Resources\RavenTest_IQ\Test_9\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RavenTest_IQ\Test_1\1_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RavenTest_IQ\Test_1\1_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RavenTest_IQ\Test_1\1_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RavenTest_IQ\Test_1\1_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RavenTest_IQ\Test_1\1_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Resources\RavenTest_IQ\Test_1\1_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RavenTest_IQ\Test_1\1_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RavenTest_IQ\Test_1\1_7.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
