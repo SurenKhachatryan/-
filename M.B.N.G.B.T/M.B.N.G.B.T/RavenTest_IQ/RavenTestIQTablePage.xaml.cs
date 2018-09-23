@@ -29,5 +29,10 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         {
             NavigationService.Navigate(new RavenTestIQRulePage());
         }
+
+        private void Pics_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
