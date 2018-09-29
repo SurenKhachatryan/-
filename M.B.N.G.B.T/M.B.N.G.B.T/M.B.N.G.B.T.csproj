@@ -420,7 +420,6 @@
   <ItemGroup>
     <None Include="Resources\WalterSchulteTest\dot.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\RavenTest_IQ\Level_1\Test_1\1_4.png" />
   </ItemGroup>
@@ -1896,6 +1895,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\RavenTest_IQ\Level_5\Test_60\60_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Static\BackSpase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Static\Next.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

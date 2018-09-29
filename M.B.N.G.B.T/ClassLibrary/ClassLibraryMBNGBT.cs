@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace ClassLibrary
 {
@@ -591,6 +592,14 @@ namespace ClassLibrary
             {
                 throw new ArgumentNullException();
             }
+        }
+
+        public int GetIndexNameInArr(Image[] arr, string text)
+        {
+            for (int i = 0; i < arr.Length; i++)
+                if (text == arr[i].Name)
+                    return i;
+            return -1;
         }
     }
 }
