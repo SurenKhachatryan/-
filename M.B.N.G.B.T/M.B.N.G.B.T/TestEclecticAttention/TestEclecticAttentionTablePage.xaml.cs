@@ -68,8 +68,8 @@ namespace M.B.N.G.B.T.TestEclecticAttention
         private void LabelNumberAll_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             secondForBrushingLabels = 0;
-            if (cl.SerchMatchingNumberInArr(listTrueNumbers.ToArray(), Convert.ToInt32(((Label)sender).Content))
-                && !cl.SerchMatchingNumberInArr(listVibronicTrueNumbers.ToArray(), Convert.ToInt32(((Label)sender).Content)))
+            if (cl.SearchMatchingNumberInArr(listTrueNumbers.ToArray(), Convert.ToInt32(((Label)sender).Content))
+                && !cl.SearchMatchingNumberInArr(listVibronicTrueNumbers.ToArray(), Convert.ToInt32(((Label)sender).Content)))
             {
                 listVibronicTrueNumbers.Add(Convert.ToInt32(((Label)sender).Content));
                 LabelVibronicTrueNumbers.Content = $"Ճիշտ {++counterVibronicTrueNumbers}/10";
@@ -146,7 +146,7 @@ namespace M.B.N.G.B.T.TestEclecticAttention
             for (int i = 0; i < arrAllLabels.Length; i++)
             {
                 temp = rnd.Next(100, 1000);
-                if (listAllLabelsContent.Count == 0 || !cl.SerchMatchingNumberInArr(listAllLabelsContent.ToArray(), temp))
+                if (listAllLabelsContent.Count == 0 || !cl.SearchMatchingNumberInArr(listAllLabelsContent.ToArray(), temp))
                 {
                     arrAllLabels[i].Content = temp;
                     listAllLabelsContent.Add(temp);
@@ -158,7 +158,7 @@ namespace M.B.N.G.B.T.TestEclecticAttention
             for (int i = 0; i < 10; i++)
             {
                 temp = (int)arrAllLabels[rnd.Next(1, 105)].Content;
-                if (!cl.SerchMatchingNumberInArr(listTrueNumbers.ToArray(), temp))
+                if (!cl.SearchMatchingNumberInArr(listTrueNumbers.ToArray(), temp))
                 {
                     listTrueNumbers.Add(temp);
                     arrAllLabelsTrueNumbers[i].Content = temp;

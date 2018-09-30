@@ -67,7 +67,7 @@ namespace ClassLibrary
             return ls.ToArray();
         }
 
-        public bool SerchMatchingNumberInArr(int[] arr, int a)
+        public bool SearchMatchingNumberInArr(int[] arr, int a)
         {
             for (int j = 0; j < arr.Length; j++)
                 if (arr[j] == a)
@@ -81,6 +81,18 @@ namespace ClassLibrary
             {
                 SortingArr(ref arr1);
                 SortingArr(ref arr2);
+                for (int i = 0; i < arr1.Length; i++)
+                    if (arr1[i] != arr2[i])
+                        return false;
+                return true;
+            }
+            return false;
+        }
+
+        public bool ArrItemsEqualswiThoutSorting(byte[] arr1, byte[] arr2)
+        {
+            if (arr1.Length == arr2.Length)
+            {
                 for (int i = 0; i < arr1.Length; i++)
                     if (arr1[i] != arr2[i])
                         return false;
@@ -120,6 +132,28 @@ namespace ClassLibrary
         {
             List<int> ls = new List<int>();
             int tamp = 0;
+
+            for (int i = 0; i < exactArray.Length; i++)
+            {
+                tamp = exactArray[i];
+                for (int j = 0; j < nonValidArray.Length; j++)
+                {
+                    if (exactArray[i] == nonValidArray[j])
+                    {
+                        j = nonValidArray.Length;
+                        tamp = 0;
+                    }
+                }
+                if (tamp != 0)
+                    ls.Add(tamp);
+            }
+            return ls.ToArray();
+        }
+
+        public byte[] GetArrayMissingNumbersInAnArray(byte[] exactArray, byte[] nonValidArray)
+        {
+            List<byte> ls = new List<byte>();
+            byte tamp = 0;
 
             for (int i = 0; i < exactArray.Length; i++)
             {
@@ -594,7 +628,7 @@ namespace ClassLibrary
             }
         }
 
-        public int GetIndexNameInArr(Image[] arr, string text)
+        public int GetIndexNameImageInArr(Image[] arr, string text) 
         {
             for (int i = 0; i < arr.Length; i++)
                 if (text == arr[i].Name)

@@ -104,7 +104,7 @@ namespace M.B.N.G.B.T.VisualMemoryTest
                     }
                 }
                 second = 0;
-                if (cl.SerchMatchingNumberInArr(VisualMemoryTestRandomPicturesPage.ListPicVisibility.ToArray(), (index + 1)))
+                if (cl.SearchMatchingNumberInArr(VisualMemoryTestRandomPicturesPage.ListPicVisibility.ToArray(), (index + 1)))
                 {
                     picCountChackted++;
                     listCorrectSelectedPictures.Add((index + 1));

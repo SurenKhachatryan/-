@@ -1,18 +1,10 @@
 ﻿using ClassLibrary;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace M.B.N.G.B.T.RavenTest_IQ
 {
@@ -26,13 +18,18 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         private Image[] arrPicAllTests = new Image[60];
         private Image[][] arrPicsAllTests = new Image[60][];
         private WrapPanel[] arrWarpPanelsPicsAllTests = new WrapPanel[60];
+        private static byte[] lsUserErrors = new byte[60];
         private byte[] arrOfResponsesOfTheUser = new byte[60];
-        private byte[] arrOfCorrectAnswers = new byte[]
-        { 4, 5, 1, 2, 6, 3, 6, 2, 1, 3, 4, 2, 5, 6, 1, 2, 1, 3, 5, 6, 4, 3, 4, 8, 5, 3, 2, 7, 8,4,
-         5, 1, 7, 1, 6, 2, 3, 4, 3, 8, 7, 6, 5, 4, 1, 2, 5, 6, 7, 6, 8, 2, 1, 5, 1, 3, 6, 2, 4, 5 };
+        public static readonly byte[] arrOfCorrectAnswers = new byte[] { 4, 5, 1, 2, 6, 3, 6, 2, 1, 3, 4, 2, 5, 6, 1, 2, 1, 3, 5, 6,
+                                                                         4, 3, 4, 8, 5, 3, 2, 7, 8, 4, 5, 7, 1, 1, 6, 2, 3, 4, 3, 8,
+                                                                         7, 6, 5, 4, 1, 2, 5, 6, 7, 6, 8, 2, 1, 5, 1, 3, 6, 2, 4, 5 };
 
-        private byte StartPage = 0;
+        private static bool isUserErrors = false;
+        private byte startPage = 0;
         private byte numberOfTestsPassed = 0;
+
+        public bool IsUserErrors { get { return isUserErrors; } }
+        public int MyProperty { get; set; }
 
         public RavenTestIQTablePage()
         {
@@ -46,45 +43,66 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             NavigationService.Navigate(new RavenTestIQRulePage());
         }
 
+        private void Button_View_Result(object sender, RoutedEventArgs e)
+        {
+            isUserErrors = cl.ArrItemsEqualswiThoutSorting(arrOfCorrectAnswers, arrOfResponsesOfTheUser);
+
+            if (!isUserErrors)
+                arrOfResponsesOfTheUser = cl.GetArrayMissingNumbersInAnArray(arrOfCorrectAnswers, arrOfResponsesOfTheUser);
+            else
+                arrOfResponsesOfTheUser = null;
+
+            NavigationService.Navigate(new RavenTestIQResultPage());
+        }
+
         private void Pics_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            if (StartPage + 1 != 60)
-                StartPage++;
-
-            arrOfResponsesOfTheUser[(StartPage - 1)] = (byte)(cl.GetIndexNameInArr(arrPicsAllTests[(StartPage - 1)], ((Image)sender).Name.ToString()) + 1);
-
-            CollapsedAllPicsAndVisiblityFirstTestPics();
-
-            if (StartPage > numberOfTestsPassed)
+            arrOfResponsesOfTheUser[startPage] = (byte)(cl.GetIndexNameImageInArr(arrPicsAllTests[startPage], ((Image)sender).Name.ToString()) + 1);
+            if ((startPage + 1) != 60)
+                startPage++;
+            if (startPage > numberOfTestsPassed)
                 numberOfTestsPassed++;
-            if (StartPage == 1)
-                buttonBackSpace.Visibility = Visibility.Visible;
-        }
-
-        private void Button_Backspace(object sender, RoutedEventArgs e)
-        {
-            StartPage--;
 
             CollapsedAllPicsAndVisiblityFirstTestPics();
+            VisiblityOrCollapsedButtonsBackSpaseAndNext("buttonNext");
 
-            if (StartPage == (numberOfTestsPassed - 1))
-                buttonNext.Visibility = Visibility.Visible;
-
-            if (StartPage == 0)
-                buttonBackSpace.Visibility = Visibility.Collapsed;
+            if (startPage == 59)
+                button_View_Result.Visibility = Visibility.Visible;
         }
 
-        private void Button_Next(object sender, RoutedEventArgs e)
+        private void Button_Backspace_And_Next(object sender, RoutedEventArgs e)
         {
-            StartPage++;
-
+            if (((Button)sender).Name == "buttonBackSpace")
+            {
+                startPage--;
+                VisiblityOrCollapsedButtonsBackSpaseAndNext("buttonBackSpace");
+            }
+            else
+                        if (((Button)sender).Name == "buttonNext")
+            {
+                startPage++;
+                VisiblityOrCollapsedButtonsBackSpaseAndNext("buttonNext");
+            }
             CollapsedAllPicsAndVisiblityFirstTestPics();
+        }
 
-            if (StartPage == numberOfTestsPassed)
-                buttonNext.Visibility = Visibility.Collapsed;
-
-            if (StartPage == 1)
-                buttonBackSpace.Visibility = Visibility.Visible;
+        private void VisiblityOrCollapsedButtonsBackSpaseAndNext(string buttonName)
+        {
+            if (buttonName == "buttonNext")
+            {
+                if (startPage == numberOfTestsPassed)
+                    buttonNext.Visibility = Visibility.Collapsed;
+                if (startPage == 1)
+                    buttonBackSpace.Visibility = Visibility.Visible;
+            }
+            else
+            if (buttonName == "buttonBackSpace")
+            {
+                if (startPage == (numberOfTestsPassed - 1))
+                    buttonNext.Visibility = Visibility.Visible;
+                if (startPage == 0)
+                    buttonBackSpace.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void CollapsedAllPicsAndVisiblityFirstTestPics()
@@ -94,9 +112,9 @@ namespace M.B.N.G.B.T.RavenTest_IQ
                 arrPicAllTests[i].Visibility = Visibility.Collapsed;
                 arrWarpPanelsPicsAllTests[i].Visibility = Visibility.Collapsed;
             }
-            LabelTest.Content = $"{(StartPage + 1)}/60";
-            arrPicAllTests[StartPage].Visibility = Visibility.Visible;
-            arrWarpPanelsPicsAllTests[StartPage].Visibility = Visibility.Visible;
+            LabelTest.Content = $"{(startPage + 1)}/60";
+            arrPicAllTests[startPage].Visibility = Visibility.Visible;
+            arrWarpPanelsPicsAllTests[startPage].Visibility = Visibility.Visible;
         }
 
         private void InitializerArrAllPics()

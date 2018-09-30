@@ -132,21 +132,21 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                     int temp = arr[arr.Length - 1];
                     arr[arr.Length - 1] = -1;
 
-                    if (temp == 4 && cl.SerchMatchingNumberInArr(arrAllRightNumbers, 40) && arr.Length >= 5)
+                    if (temp == 4 && cl.SearchMatchingNumberInArr(arrAllRightNumbers, 40) && arr.Length >= 5)
                         textBox.Text += "0";
                     else
-                    if (cl.SerchMatchingNumberInArr(arr, temp) &&
+                    if (cl.SearchMatchingNumberInArr(arr, temp) &&
                         (temp == 1 || temp == 2 || temp == 3))
                         textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1);
                     else
-                    if (!cl.SerchMatchingNumberInArr(arrAllRightNumbers, temp)
-                        && cl.SerchMatchingNumberInArr(arr, temp) &&
+                    if (!cl.SearchMatchingNumberInArr(arrAllRightNumbers, temp)
+                        && cl.SearchMatchingNumberInArr(arr, temp) &&
                         (temp == 1 || temp == 2 || temp == 3))
                         textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1);
                     else
                     if (cl.IsSortedNumbers(arrNew) &&
                         (temp == 1 || temp == 2 || temp == 3) &&
-                       !cl.SerchMatchingNumberInArr(arrAllRightNumbers, temp))
+                       !cl.SearchMatchingNumberInArr(arrAllRightNumbers, temp))
                         textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1);
                 }
                 countNumberOfEqualDigits = cl.GetCountNumberOfEqualDigits(cl.GetArrFiltringNumbersInTheText(textBox.Text));
@@ -199,7 +199,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
             for (int i = 0; i < 25; i++)
             {
                 temp = rnd.Next(1, 41);
-                if (lsRndDigite.Count == 0 || !cl.SerchMatchingNumberInArr(lsRndDigite.ToArray(), temp))
+                if (lsRndDigite.Count == 0 || !cl.SearchMatchingNumberInArr(lsRndDigite.ToArray(), temp))
                 {
                     lsRndDigite.Add(temp);
 

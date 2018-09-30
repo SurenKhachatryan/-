@@ -98,7 +98,7 @@ namespace M.B.N.G.B.T.WalterSchulteTest
             for (int i = 0; i < 25; i++)
             {
                 temp = rnd.Next(1, 26);
-                if (listRandomNumbers.Count == 0 || !cl.SerchMatchingNumberInArr(listRandomNumbers.ToArray(), temp))
+                if (listRandomNumbers.Count == 0 || !cl.SearchMatchingNumberInArr(listRandomNumbers.ToArray(), temp))
                 {
                     listRandomNumbers.Add(temp);
                     arrAllButtons[i].Content = temp;

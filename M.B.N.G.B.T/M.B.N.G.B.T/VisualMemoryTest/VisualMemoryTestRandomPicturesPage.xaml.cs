@@ -105,7 +105,7 @@ namespace M.B.N.G.B.T.VisualMemoryTest
             {
                 number = rnd.Next(1, 49);
 
-                if (listPicVisibility.Count == 0 || !cl.SerchMatchingNumberInArr(listPicVisibility.ToArray(), number))
+                if (listPicVisibility.Count == 0 || !cl.SearchMatchingNumberInArr(listPicVisibility.ToArray(), number))
                 {
                     listPicVisibility.Add(number);
                     arrAllPicsSubject[number - 1].Visibility = Visibility.Visible;
