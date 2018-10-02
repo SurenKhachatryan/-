@@ -1,10 +1,10 @@
 ﻿using ClassLibrary;
 using System;
-using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Navigation;
+using System.Windows.Threading;
 
 namespace M.B.N.G.B.T.RavenTest_IQ
 {
@@ -14,12 +14,15 @@ namespace M.B.N.G.B.T.RavenTest_IQ
     public partial class RavenTestIQTablePage : Page
     {
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
+        private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
         private Image[] arrPicAllTests = new Image[60];
         private Image[][] arrPicsAllTests = new Image[60][];
         private WrapPanel[] arrWarpPanelsPicsAllTests = new WrapPanel[60];
-        private static byte[] lsUserErrors = new byte[60];
-        private byte[] arrOfResponsesOfTheUser = new byte[60];
+        private Image[][] arrPics_PicChecked_6_And_8 = new Image[2][];
+        private byte[] lsUserErrorsTest = new byte[60];
+        private static byte[] arrOfResponsesOfTheUser = new byte[60];
+        private static byte[] arrUserErrorsPics = new byte[60];
         public static readonly byte[] arrOfCorrectAnswers = new byte[] { 4, 5, 1, 2, 6, 3, 6, 2, 1, 3, 4, 2, 5, 6, 1, 2, 1, 3, 5, 6,
                                                                          4, 3, 4, 8, 5, 3, 2, 7, 8, 4, 5, 7, 1, 1, 6, 2, 3, 4, 3, 8,
                                                                          7, 6, 5, 4, 1, 2, 5, 6, 7, 6, 8, 2, 1, 5, 1, 3, 6, 2, 4, 5 };
@@ -27,15 +30,21 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         private static bool isUserErrors = false;
         private byte startPage = 0;
         private byte numberOfTestsPassed = 0;
+        private short minute = 1;
+        private short second = 0;
 
-        public bool IsUserErrors { get { return isUserErrors; } }
-        public int MyProperty { get; set; }
+        public static bool IsUserErrors { get { return isUserErrors; } }
+        public static byte[] ArrOfResponsesOfTheUser { get { return arrOfResponsesOfTheUser; } }
+        public static byte[] MyProperty { get { return arrUserErrorsPics; } }
 
         public RavenTestIQTablePage()
         {
             InitializeComponent();
 
-            InitializerArrAllPics();
+            InitializerAllArrayAllPics();
+
+            dispatcherTimer.Tick += new EventHandler(LabelTimer);
+            dispatcherTimer.Start();
         }
 
         private void Button_Exit_The_Test(object sender, RoutedEventArgs e)
@@ -45,19 +54,62 @@ namespace M.B.N.G.B.T.RavenTest_IQ
 
         private void Button_View_Result(object sender, RoutedEventArgs e)
         {
+            FinishTest();
+            NavigationService.Navigate(new RavenTestIQResultPage());
+        }
+
+        private void FinishTest()
+        {
             isUserErrors = cl.ArrItemsEqualswiThoutSorting(arrOfCorrectAnswers, arrOfResponsesOfTheUser);
 
             if (!isUserErrors)
-                arrOfResponsesOfTheUser = cl.GetArrayMissingNumbersInAnArray(arrOfCorrectAnswers, arrOfResponsesOfTheUser);
+                arrOfResponsesOfTheUser = cl.GetArrayMissingNumbersAndIndexsInAnArray(arrOfCorrectAnswers, arrOfResponsesOfTheUser, out lsUserErrorsTest);
             else
+            {
                 arrOfResponsesOfTheUser = null;
+                lsUserErrorsTest = null;
+            }
+        }
 
-            NavigationService.Navigate(new RavenTestIQResultPage());
+        private void LabelTimer(object sender, EventArgs e)
+        {
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+
+            if (second == -1)
+            {
+                second = 59;
+                minute--;
+            }
+
+            if (minute >= 10)
+            {
+                if (second <= 9)
+                    labelTimer.Content = $"{minute}:0{second}";
+                else
+                    labelTimer.Content = $"{minute}:{second}";
+            }
+            else
+            {
+                if (second <= 9)
+                    labelTimer.Content = $"0{minute}:0{second}";
+                else
+                    labelTimer.Content = $"0{minute}:{second}";
+            }
+
+            if (minute <= 0 && second <= 0)
+            {
+                dispatcherTimer.Stop();
+                FinishTest();
+                NavigationService.Navigate(new RavenTestIQResultPage());
+            }
+            else
+                second--;
         }
 
         private void Pics_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             arrOfResponsesOfTheUser[startPage] = (byte)(cl.GetIndexNameImageInArr(arrPicsAllTests[startPage], ((Image)sender).Name.ToString()) + 1);
+
             if ((startPage + 1) != 60)
                 startPage++;
             if (startPage > numberOfTestsPassed)
@@ -68,6 +120,8 @@ namespace M.B.N.G.B.T.RavenTest_IQ
 
             if (startPage == 59)
                 button_View_Result.Visibility = Visibility.Visible;
+
+            HiddenAllPicsChecked_And_VisiblityThisCheched_PicChecked();
         }
 
         private void Button_Backspace_And_Next(object sender, RoutedEventArgs e)
@@ -78,11 +132,12 @@ namespace M.B.N.G.B.T.RavenTest_IQ
                 VisiblityOrCollapsedButtonsBackSpaseAndNext("buttonBackSpace");
             }
             else
-                        if (((Button)sender).Name == "buttonNext")
+            if (((Button)sender).Name == "buttonNext")
             {
                 startPage++;
                 VisiblityOrCollapsedButtonsBackSpaseAndNext("buttonNext");
             }
+            HiddenAllPicsChecked_And_VisiblityThisCheched_PicChecked();
             CollapsedAllPicsAndVisiblityFirstTestPics();
         }
 
@@ -117,8 +172,30 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             arrWarpPanelsPicsAllTests[startPage].Visibility = Visibility.Visible;
         }
 
-        private void InitializerArrAllPics()
+        private void HiddenAllPicsChecked_And_VisiblityThisCheched_PicChecked()
         {
+            HiddenAllPicsChecked();
+            if (arrOfResponsesOfTheUser[startPage] != 0)
+            {
+                if (startPage < 23 || startPage == 24)
+                    arrPics_PicChecked_6_And_8[0][(arrOfResponsesOfTheUser[startPage] - 1)].Visibility = Visibility.Visible;
+                else
+                    arrPics_PicChecked_6_And_8[1][(arrOfResponsesOfTheUser[startPage] - 1)].Visibility = Visibility.Visible;
+            }
+        }
+
+        private void HiddenAllPicsChecked()
+        {
+            for (int i = 0; i < arrPics_PicChecked_6_And_8.Length; i++)
+                for (int j = 0; j < arrPics_PicChecked_6_And_8[i].Length; j++)
+                    arrPics_PicChecked_6_And_8[i][j].Visibility = Visibility.Hidden;
+        }
+
+        private void InitializerAllArrayAllPics()
+        {
+            arrPics_PicChecked_6_And_8[0] = new Image[] { PicChecked_6_1, PicChecked_6_2, PicChecked_6_3, PicChecked_6_4, PicChecked_6_5, PicChecked_6_6 };
+            arrPics_PicChecked_6_And_8[1] = new Image[] { PicChecked_8_1, PicChecked_8_2, PicChecked_8_3, PicChecked_8_4, PicChecked_8_5, PicChecked_8_6, PicChecked_8_7, PicChecked_8_8 };
+
             arrWarpPanelsPicsAllTests = new WrapPanel[] { TestImages_1, TestImages_2, TestImages_3, TestImages_4, TestImages_5, TestImages_6,
                                                           TestImages_7, TestImages_8, TestImages_9, TestImages_10, TestImages_11, TestImages_12,
                                                           TestImages_13, TestImages_14, TestImages_15, TestImages_16, TestImages_17, TestImages_18,

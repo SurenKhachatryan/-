@@ -1902,5 +1902,11 @@
   <ItemGroup>
     <None Include="Resources\Static\Next.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Static\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Static\error.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -22,7 +22,8 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="70*"/>
-            <ColumnDefinition Width="193*"/>
+            <ColumnDefinition Width="153*"/>
+            <ColumnDefinition Width="40*"/>
             <ColumnDefinition Width="37*"/>
             <ColumnDefinition Width="62*"/>
             <ColumnDefinition Width="50*"/>
@@ -34,10 +35,14 @@
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox Grid.Column="9" Grid.Row="1" HorizontalAlignment="Right">
+        <Viewbox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left">
+            <Label x:Name="labelTimer" FontSize="59" Content="20:00" Foreground="White"  FontFamily="Sylfaen" Height="79" Width="153"/>
+        </Viewbox>
+        <Viewbox Grid.Column="10" Grid.Row="1" HorizontalAlignment="Right">
             <Label x:Name="LabelTest" FontSize="59" Content="1/60" Foreground="White"  FontFamily="Sylfaen" Width="147" Height="79"/>
         </Viewbox>
-        <Viewbox Grid.ColumnSpan="2" Grid.Column="8" Grid.Row="5" HorizontalAlignment="Right">
+
+        <Viewbox Grid.Column="9" Grid.Row="5" HorizontalAlignment="Right" Grid.ColumnSpan="2">
             <Button x:Name="button_View_Result" Visibility="Collapsed" Click="Button_View_Result" Content="Ավարտել թեստը" FontSize="20" Height="36" FontFamily="Sylfaen"  Foreground="White" Cursor="Hand"  Width="230">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -47,7 +52,8 @@
                 </Button.Background>
             </Button>
         </Viewbox>
-        <Viewbox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left">
+
+        <Viewbox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" Grid.ColumnSpan="2">
             <Button x:Name="buttonExitTheTest" Click="Button_Exit_The_Test" Content="Դուրս գալ թեստից" FontSize="20" Height="36" FontFamily="Sylfaen"  Foreground="White" Cursor="Hand"  Width="194">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -58,7 +64,7 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Column="3" Grid.Row="5">
+        <Viewbox Grid.Column="4" Grid.Row="5">
             <Button x:Name="buttonBackSpace" Visibility="Collapsed" Click="Button_Backspace_And_Next"  FontSize="20" Height="36" FontFamily="Sylfaen"  Foreground="White" Cursor="Hand"  Width="62">
                 <Button.Background>
                     <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Static/BackSpase.png"/>
@@ -66,7 +72,7 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Column="7" Grid.Row="5">
+        <Viewbox Grid.Column="8" Grid.Row="5">
             <Button x:Name="buttonNext" Visibility="Collapsed" Click="Button_Backspace_And_Next"  FontSize="20" Height="36" FontFamily="Sylfaen"  Foreground="White" Cursor="Hand"  Width="62">
                 <Button.Background>
                     <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Static/Next.png"/>
@@ -74,9 +80,9 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Row="1" Grid.Column="5" Grid.RowSpan="2">
+        <Viewbox Grid.Row="1" Grid.Column="6" Grid.RowSpan="2">
             <WrapPanel Width="476" Height="303">
-                <Image x:Name="Pic_1" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_1/Main_1.png" Visibility="Collapsed"/>
+                <Image x:Name="Pic_1" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_1/Main_1.png" Visibility="Visible"/>
                 <Image x:Name="Pic_2" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_2/Main_2.png" Visibility="Collapsed"/>
                 <Image x:Name="Pic_3" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_3/Main_3.png" Visibility="Collapsed"/>
                 <Image x:Name="Pic_4" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_4/Main_4.png" Visibility="Collapsed"/>
@@ -138,10 +144,10 @@
                 <Image x:Name="Pic_60" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_5/Test_60/Main_60.png" Visibility="Collapsed"/>
             </WrapPanel>
         </Viewbox>
-       
-        <Viewbox Grid.Column="4" Grid.Row="4" Grid.ColumnSpan="3">
+
+        <Viewbox Grid.Column="5" Grid.Row="4" Grid.ColumnSpan="3">
             <WrapPanel>
-                <WrapPanel x:Name="TestImages_1" Width="576" Height="240" Visibility="Collapsed">
+                <WrapPanel x:Name="TestImages_1" Width="576" Height="240" Visibility="Visible">
                     <Image x:Name="PicTest_1_1" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_1/1_1.png" Width="182"/>
                     <Image x:Name="PicTest_1_2" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_1/1_2.png" Width="182"/>
                     <Image x:Name="PicTest_1_3" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_1/1_3.png" Width="182"/>
@@ -754,5 +760,29 @@
                 </WrapPanel>
             </WrapPanel>
         </Viewbox>
+
+        <Viewbox Grid.ColumnSpan="3" Grid.Column="5" Grid.Row="4">
+            <WrapPanel Width="576" Height="240">
+                <Image x:Name="PicChecked_6_1" Visibility="Hidden" Margin="6,12,145,80" Source="pack://siteoforigin:,,,/Resources/Static/success.png" Width="42" Height="31"/>
+                <Image x:Name="PicChecked_6_2" Visibility="Hidden" Margin="6,12,145,80" Source="pack://siteoforigin:,,,/Resources/Static/success.png" Width="42" Height="31"/>
+                <Image x:Name="PicChecked_6_3" Visibility="Hidden" Margin="6,12,140,80" Source="pack://siteoforigin:,,,/Resources/Static/success.png" Width="42" Height="31"/>
+                <Image x:Name="PicChecked_6_4" Visibility="Hidden" Margin="6,12,145,0" Source="pack://siteoforigin:,,,/Resources/Static/success.png" Width="42" Height="31"/>
+                <Image x:Name="PicChecked_6_5" Visibility="Hidden" Margin="6,12,145,0" Source="pack://siteoforigin:,,,/Resources/Static/success.png" Width="42" Height="31"/>
+                <Image x:Name="PicChecked_6_6" Visibility="Hidden" Margin="6,12,140,0" Source="pack://siteoforigin:,,,/Resources/Static/success.png" Width="42" Height="31"/>
+            </WrapPanel>
+        </Viewbox>
+        <Viewbox Grid.ColumnSpan="3" Grid.Column="5" Grid.Row="4">
+            <WrapPanel Width="576" Height="240">
+                <Image x:Name="PicChecked_8_1" Visibility="Hidden" Margin="6,12,96,50" Source="pack://siteoforigin:,,,/Resources/Static/success.png" Width="42" Height="31"/>
+                <Image x:Name="PicChecked_8_2" Visibility="Hidden" Margin="6,12,96,50" Source="pack://siteoforigin:,,,/Resources/Static/success.png" Width="42" Height="31"/>
+                <Image x:Name="PicChecked_8_3" Visibility="Hidden" Margin="6,12,96,50" Source="pack://siteoforigin:,,,/Resources/Static/success.png" Width="42" Height="31"/>
+                <Image x:Name="PicChecked_8_4" Visibility="Hidden" Margin="6,12,96,50" Source="pack://siteoforigin:,,,/Resources/Static/success.png" Width="42" Height="31"/>
+                <Image x:Name="PicChecked_8_5" Visibility="Hidden" Margin="6,12,96,0" Source="pack://siteoforigin:,,,/Resources/Static/success.png" Width="42" Height="31"/>
+                <Image x:Name="PicChecked_8_6" Visibility="Hidden" Margin="6,12,96,0" Source="pack://siteoforigin:,,,/Resources/Static/success.png" Width="42" Height="31"/>
+                <Image x:Name="PicChecked_8_7" Visibility="Hidden" Margin="6,12,96,0" Source="pack://siteoforigin:,,,/Resources/Static/success.png" Width="42" Height="31"/>
+                <Image x:Name="PicChecked_8_8" Visibility="Hidden" Margin="6,12,96,0" Source="pack://siteoforigin:,,,/Resources/Static/success.png" Width="42" Height="31"/>
+            </WrapPanel>
+        </Viewbox>
+
     </Grid>
 </Page>

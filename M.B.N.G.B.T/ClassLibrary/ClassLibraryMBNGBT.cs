@@ -150,9 +150,10 @@ namespace ClassLibrary
             return ls.ToArray();
         }
 
-        public byte[] GetArrayMissingNumbersInAnArray(byte[] exactArray, byte[] nonValidArray)
+        public byte[] GetArrayMissingNumbersAndIndexsInAnArray(byte[] exactArray, byte[] nonValidArray, out byte[] arrIndexs)
         {
             List<byte> ls = new List<byte>();
+            List<byte> ls_1 = new List<byte>();
             byte tamp = 0;
 
             for (int i = 0; i < exactArray.Length; i++)
@@ -167,8 +168,13 @@ namespace ClassLibrary
                     }
                 }
                 if (tamp != 0)
+                {
                     ls.Add(tamp);
+                    ls_1.Add((byte)i);
+                }
+
             }
+            arrIndexs = ls_1.ToArray();
             return ls.ToArray();
         }
 
@@ -628,7 +634,7 @@ namespace ClassLibrary
             }
         }
 
-        public int GetIndexNameImageInArr(Image[] arr, string text) 
+        public int GetIndexNameImageInArr(Image[] arr, string text)
         {
             for (int i = 0; i < arr.Length; i++)
                 if (text == arr[i].Name)
