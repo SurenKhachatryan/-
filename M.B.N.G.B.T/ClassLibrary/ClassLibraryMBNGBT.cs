@@ -641,5 +641,14 @@ namespace ClassLibrary
                     return i;
             return -1;
         }
+
+        public int GetCountthisNumberInArr(byte[] arr, int number)
+        {
+            int counter = 0;
+            foreach (var item in arr)
+                if (number == item)
+                    counter++;
+            return counter;
+        }
     }
 }

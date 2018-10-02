@@ -26,20 +26,29 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         public static readonly byte[] arrOfCorrectAnswers = new byte[] { 4, 5, 1, 2, 6, 3, 6, 2, 1, 3, 4, 2, 5, 6, 1, 2, 1, 3, 5, 6,
                                                                          4, 3, 4, 8, 5, 3, 2, 7, 8, 4, 5, 7, 1, 1, 6, 2, 3, 4, 3, 8,
                                                                          7, 6, 5, 4, 1, 2, 5, 6, 7, 6, 8, 2, 1, 5, 1, 3, 6, 2, 4, 5 };
-
+        private static string finishTime = "00:00";
         private static bool isUserErrors = false;
+        private static byte countOfTestsNotPassed = 0;
         private byte startPage = 0;
         private byte numberOfTestsPassed = 0;
-        private short minute = 1;
+        private short minute = 20;
         private short second = 0;
 
         public static bool IsUserErrors { get { return isUserErrors; } }
         public static byte[] ArrOfResponsesOfTheUser { get { return arrOfResponsesOfTheUser; } }
-        public static byte[] MyProperty { get { return arrUserErrorsPics; } }
+        public static byte[] ArrUserErrorsPics { get { return arrUserErrorsPics; } }
+        public static string FinishTime { get { return finishTime; } }
+        public static byte CountOfTestsNotPassed { get { return countOfTestsNotPassed; } }
 
         public RavenTestIQTablePage()
         {
             InitializeComponent();
+
+            arrOfResponsesOfTheUser = new byte[60];
+            arrUserErrorsPics = new byte[60];
+            finishTime = "00:00";
+            isUserErrors = false;
+            countOfTestsNotPassed = 0;
 
             InitializerAllArrayAllPics();
 
@@ -60,6 +69,27 @@ namespace M.B.N.G.B.T.RavenTest_IQ
 
         private void FinishTest()
         {
+            if (minute != 0 || second != 0)
+            {
+                short newMinut = (short)(19 - minute);
+                short newSecond = (short)(59 - second);
+
+                if (newMinut >= 10 && newSecond >= 10)
+                    finishTime = $"{newMinut}:{newSecond}";
+                else
+                if (newMinut <= 9 && newSecond <= 9)
+                    finishTime = $"0{newMinut}:0{newSecond}";
+                else
+                if (newMinut >= 10 && newSecond <= 9)
+                    finishTime = $"{newMinut}:0{newSecond}";
+                else
+                if (newMinut <= 9 && newSecond >= 10)
+                    finishTime = $"0{newMinut}:{newSecond}";
+            }
+
+            if (finishTime == "00:00")
+                countOfTestsNotPassed = (byte)cl.GetCountthisNumberInArr(arrOfResponsesOfTheUser, 0);
+
             isUserErrors = cl.ArrItemsEqualswiThoutSorting(arrOfCorrectAnswers, arrOfResponsesOfTheUser);
 
             if (!isUserErrors)
