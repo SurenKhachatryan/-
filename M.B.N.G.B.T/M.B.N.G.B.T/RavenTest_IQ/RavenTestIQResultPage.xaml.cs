@@ -23,6 +23,8 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         private Image[] arrPicAllTests = new Image[60];
         private Image[][] arrPicsAllTests = new Image[60][];
         private WrapPanel[] arrWarpPanelsPicsAllTests = new WrapPanel[60];
+        private Image[][] arrPics_PicChecked_6_And_8 = new Image[2][];
+        private Image[][] arrPics_PicErrorChecked_6_And_8 = new Image[2][];
 
         public RavenTestIQResultPage()
         {
@@ -48,6 +50,12 @@ namespace M.B.N.G.B.T.RavenTest_IQ
 
         private void InitializerArrAllPics()
         {
+            arrPics_PicChecked_6_And_8[0] = new Image[] { PicChecked_6_1, PicChecked_6_2, PicChecked_6_3, PicChecked_6_4, PicChecked_6_5, PicChecked_6_6 };
+            arrPics_PicChecked_6_And_8[1] = new Image[] { PicChecked_8_1, PicChecked_8_2, PicChecked_8_3, PicChecked_8_4, PicChecked_8_5, PicChecked_8_6, PicChecked_8_7, PicChecked_8_8 };
+
+            arrPics_PicErrorChecked_6_And_8[0] = new Image[] { PicErrorChecked_6_1, PicErrorChecked_6_2, PicErrorChecked_6_3, PicErrorChecked_6_4, PicErrorChecked_6_5, PicErrorChecked_6_6 };
+            arrPics_PicErrorChecked_6_And_8[1] = new Image[] { PicErrorChecked_8_1, PicErrorChecked_8_2, PicErrorChecked_8_3, PicErrorChecked_8_4, PicErrorChecked_8_5, PicErrorChecked_8_6, PicErrorChecked_8_7, PicErrorChecked_8_8 };
+
             arrWarpPanelsPicsAllTests = new WrapPanel[] { TestImages_1, TestImages_2, TestImages_3, TestImages_4, TestImages_5, TestImages_6,
                                                           TestImages_7, TestImages_8, TestImages_9, TestImages_10, TestImages_11, TestImages_12,
                                                           TestImages_13, TestImages_14, TestImages_15, TestImages_16, TestImages_17, TestImages_18,

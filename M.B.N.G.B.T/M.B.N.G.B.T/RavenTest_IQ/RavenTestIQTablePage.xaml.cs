@@ -1,5 +1,6 @@
 ﻿using ClassLibrary;
 using System;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -15,6 +16,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
     {
         private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
+        private Thread trd;
 
         private Image[] arrPicAllTests = new Image[60];
         private Image[][] arrPicsAllTests = new Image[60][];
@@ -50,8 +52,9 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             isUserErrors = false;
             countOfTestsNotPassed = 0;
 
-            InitializerAllArrayAllPics();
-
+            trd = new Thread(InitializerAllArrayAllPics);
+            trd.Start();
+           
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
             dispatcherTimer.Start();
         }
@@ -236,17 +239,19 @@ namespace M.B.N.G.B.T.RavenTest_IQ
                                                           TestImages_43, TestImages_44, TestImages_45, TestImages_46, TestImages_47, TestImages_48,
                                                           TestImages_49, TestImages_50, TestImages_51, TestImages_52, TestImages_53, TestImages_54,
                                                           TestImages_55, TestImages_56, TestImages_57, TestImages_58, TestImages_59, TestImages_60 };
+            
 
             arrPicAllTests = new Image[] { Pic_1, Pic_2, Pic_3, Pic_4, Pic_5, Pic_6, Pic_7, Pic_8, Pic_9, Pic_10, Pic_11, Pic_12, Pic_13, Pic_14,
                                            Pic_15, Pic_16, Pic_17, Pic_18, Pic_19, Pic_20, Pic_21, Pic_22, Pic_23, Pic_24, Pic_25, Pic_26, Pic_27,
                                            Pic_28, Pic_29, Pic_30, Pic_31, Pic_32, Pic_33, Pic_34, Pic_35, Pic_36, Pic_37, Pic_38, Pic_39, Pic_40,
                                            Pic_41, Pic_42, Pic_43, Pic_44, Pic_45, Pic_46, Pic_47, Pic_48, Pic_49, Pic_50, Pic_51, Pic_52, Pic_53,
                                            Pic_54, Pic_55, Pic_56, Pic_57, Pic_58, Pic_59, Pic_60 };
-
+           
 
             arrPicsAllTests[0] = new Image[] { PicTest_1_1, PicTest_1_2, PicTest_1_3, PicTest_1_4, PicTest_1_5, PicTest_1_6 };
             arrPicsAllTests[1] = new Image[] { PicTest_2_1, PicTest_2_2, PicTest_2_3, PicTest_2_4, PicTest_2_5, PicTest_2_6 };
             arrPicsAllTests[2] = new Image[] { PicTest_3_1, PicTest_3_2, PicTest_3_3, PicTest_3_4, PicTest_3_5, PicTest_3_6 };
+            Thread.Sleep(300);
             arrPicsAllTests[3] = new Image[] { PicTest_4_1, PicTest_4_2, PicTest_4_3, PicTest_4_4, PicTest_4_5, PicTest_4_6 };
             arrPicsAllTests[4] = new Image[] { PicTest_5_1, PicTest_5_2, PicTest_5_3, PicTest_5_4, PicTest_5_5, PicTest_5_6 };
             arrPicsAllTests[5] = new Image[] { PicTest_6_1, PicTest_6_2, PicTest_6_3, PicTest_6_4, PicTest_6_5, PicTest_6_6 };
