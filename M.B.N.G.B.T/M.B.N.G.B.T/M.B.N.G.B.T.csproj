@@ -472,15 +472,6 @@
     <None Include="Resources\RavenTest_IQ\Level_1\Test_3\3_3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_3\3_4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_3\3_5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_3\3_6.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\RavenTest_IQ\Level_1\Test_3\Main_3.png" />
   </ItemGroup>
   <ItemGroup>

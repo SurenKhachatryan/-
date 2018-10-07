@@ -166,30 +166,30 @@
                 </WrapPanel>
 
                 <WrapPanel x:Name="TestImages_3" Width="576" Height="240" Visibility="Collapsed">
-                    <Image x:Name="PicTest_3_1" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_3/3_1.png" Width="178"/>
+                    <Image x:Name="PicTest_3_1" Margin="6,5,16,5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_3/3_1.png" Width="168"/>
                     <Image x:Name="PicTest_3_2" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_3/3_2.png" Width="178"/>
                     <Image x:Name="PicTest_3_3" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_3/3_3.png" Width="178"/>
-                    <Image x:Name="PicTest_3_4" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_3/3_4.png" Width="178"/>
-                    <Image x:Name="PicTest_3_5" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_3/3_5.png" Width="178"/>
-                    <Image x:Name="PicTest_3_6" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_3/3_6.png" Width="178"/>
+                    <Image x:Name="PicTest_3_4" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_3/3_2.png" Width="178"/>
+                    <Image x:Name="PicTest_3_5" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_3/3_2.png" Width="178"/>
+                    <Image x:Name="PicTest_3_6" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_3/3_2.png" Width="178"/>
                 </WrapPanel>
 
                 <WrapPanel x:Name="TestImages_4" Width="576" Height="240" Visibility="Collapsed">
-                    <Image x:Name="PicTest_4_1" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_4/4_1.png" Width="178"/>
-                    <Image x:Name="PicTest_4_2" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_4/4_2.png" Width="178"/>
-                    <Image x:Name="PicTest_4_3" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_4/4_3.png" Width="178"/>
-                    <Image x:Name="PicTest_4_4" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_4/4_4.png" Width="178"/>
-                    <Image x:Name="PicTest_4_5" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_4/4_5.png" Width="178"/>
-                    <Image x:Name="PicTest_4_6" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_4/4_6.png" Width="178"/>
+                    <Image x:Name="PicTest_4_1" Margin="5,5,15,5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_4/4_1.png" Width="169"/>
+                    <Image x:Name="PicTest_4_2" Margin="6,4,14,5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_4/4_2.png" Width="169"/>
+                    <Image x:Name="PicTest_4_3" Margin="6,5,5,5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_4/4_3.png" Width="169"/>
+                    <Image x:Name="PicTest_4_4" Margin="5,5,15,5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_4/4_4.png" Width="169"/>
+                    <Image x:Name="PicTest_4_5" Margin="5,5,15,5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_4/4_5.png" Width="169"/>
+                    <Image x:Name="PicTest_4_6" Margin="5,5,5,5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_4/4_6.png" Width="169"/>
                 </WrapPanel>
 
                 <WrapPanel x:Name="TestImages_5" Width="576" Height="240" Visibility="Collapsed">
-                    <Image x:Name="PicTest_5_1" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_5/5_1.png" Width="178"/>
-                    <Image x:Name="PicTest_5_2" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_5/5_2.png" Width="178"/>
+                    <Image x:Name="PicTest_5_1" Margin="6" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_5/5_1.png" Width="178"/>
+                    <Image x:Name="PicTest_5_2" Margin="6" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_5/5_2.png" Width="178"/>
                     <Image x:Name="PicTest_5_3" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_5/5_3.png" Width="178"/>
-                    <Image x:Name="PicTest_5_4" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_5/5_4.png" Width="178"/>
-                    <Image x:Name="PicTest_5_5" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_5/5_5.png" Width="178"/>
-                    <Image x:Name="PicTest_5_6" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_5/5_6.png" Width="178"/>
+                    <Image x:Name="PicTest_5_4" Margin="5,10" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_5/5_4.png" Width="178"/>
+                    <Image x:Name="PicTest_5_5" Margin="5,10" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_5/5_5.png" Width="178"/>
+                    <Image x:Name="PicTest_5_6" Margin="7,10" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_5/5_6.png" Width="178"/>
                 </WrapPanel>
 
                 <WrapPanel x:Name="TestImages_6" Width="576" Height="240" Visibility="Collapsed">

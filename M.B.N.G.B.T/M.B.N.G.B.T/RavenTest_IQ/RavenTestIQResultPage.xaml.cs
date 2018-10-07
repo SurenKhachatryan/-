@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,17 +21,26 @@ namespace M.B.N.G.B.T.RavenTest_IQ
     /// </summary>
     public partial class RavenTestIQResultPage : Page
     {
+        private Thread trd;
+
         private Image[] arrPicAllTests = new Image[60];
         private Image[][] arrPicsAllTests = new Image[60][];
         private WrapPanel[] arrWarpPanelsPicsAllTests = new WrapPanel[60];
         private Image[][] arrPics_PicChecked_6_And_8 = new Image[2][];
         private Image[][] arrPics_PicErrorChecked_6_And_8 = new Image[2][];
 
+        private byte startPage = 0;
+
         public RavenTestIQResultPage()
         {
             InitializeComponent();
+            LabelErrorTest.Content = $"1/{RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length}";
 
-            InitializerArrAllPics();
+            //trd = new Thread(InitializerAllArrayAllPics);
+            //trd.Start();
+            InitializerAllArrayAllPics();
+            CollapsedAllPicsAndVisiblityFirstTestPics();
+            HiddenAllPicsChecked_And_VisiblityThisCheched_PicChecked();
         }
 
         private void Button_Click_Try_Again(object sender, RoutedEventArgs e)
@@ -45,10 +55,82 @@ namespace M.B.N.G.B.T.RavenTest_IQ
 
         private void Button_Backspace_And_Next(object sender, RoutedEventArgs e)
         {
-
+            if (((Button)sender).Name == "buttonBackSpace")
+            {
+                startPage--;
+                VisiblityOrCollapsedButtonsBackSpaseAndNext("buttonBackSpace");
+            }
+            else
+            if (((Button)sender).Name == "buttonNext")
+            {
+                startPage++;
+                VisiblityOrCollapsedButtonsBackSpaseAndNext("buttonNext");
+            }
+            HiddenAllPicsChecked_And_VisiblityThisCheched_PicChecked();
+            CollapsedAllPicsAndVisiblityFirstTestPics();
         }
 
-        private void InitializerArrAllPics()
+        private void VisiblityOrCollapsedButtonsBackSpaseAndNext(string buttonName)
+        {
+            if (buttonName == "buttonNext")
+            {
+                if ((startPage + 1) >= RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length)
+                    buttonNext.Visibility = Visibility.Collapsed;
+                if (startPage != 0)
+                    buttonBackSpace.Visibility = Visibility.Visible;
+            }
+            else
+            if (buttonName == "buttonBackSpace")
+            {
+                if ((startPage + 1) < RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length)
+                    buttonNext.Visibility = Visibility.Visible;
+                if (startPage == 0)
+                    buttonBackSpace.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void CollapsedAllPicsAndVisiblityFirstTestPics()
+        {
+
+            for (int i = 0; i < arrPicAllTests.Length; i++)
+            {
+                arrPicAllTests[i].Visibility = Visibility.Collapsed;
+                arrWarpPanelsPicsAllTests[i].Visibility = Visibility.Collapsed;
+            }
+            LabelErrorTest.Content = $"{(startPage + 1)}/{RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length}";
+            arrPicAllTests[RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage]].Visibility = Visibility.Visible;
+            arrWarpPanelsPicsAllTests[RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage]].Visibility = Visibility.Visible;
+        }
+
+        private void HiddenAllPicsChecked_And_VisiblityThisCheched_PicChecked()
+        {
+            HiddenAllPicsChecked();
+
+            if (RavenTestIQTablePage.arrOfCorrectAnswersPics[RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage]] < 22 || RavenTestIQTablePage.arrOfCorrectAnswersPics[RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage]] == 23)
+            {
+                arrPics_PicChecked_6_And_8[0][RavenTestIQTablePage.arrOfCorrectAnswersPics[RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage]] - 1].Visibility = Visibility.Visible;
+                arrPics_PicErrorChecked_6_And_8[0][RavenTestIQTablePage.ArrOfIncorrectlySelectedUserPics[RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage]] - 1].Visibility = Visibility.Visible;
+            }
+            else
+            {
+                arrPics_PicChecked_6_And_8[1][RavenTestIQTablePage.arrOfCorrectAnswersPics[RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage]] - 1].Visibility = Visibility.Visible;
+                arrPics_PicErrorChecked_6_And_8[1][RavenTestIQTablePage.ArrOfIncorrectlySelectedUserPics[RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage]] - 1].Visibility = Visibility.Visible;
+            }
+        }
+
+        private void HiddenAllPicsChecked()
+        {
+            for (int i = 0; i < arrPics_PicChecked_6_And_8.Length; i++)
+            {
+                for (int j = 0; j < arrPics_PicChecked_6_And_8[i].Length; j++)
+                {
+                    arrPics_PicChecked_6_And_8[i][j].Visibility = Visibility.Hidden;
+                    arrPics_PicErrorChecked_6_And_8[i][j].Visibility = Visibility.Hidden;
+                }
+            }
+        }
+
+        private void InitializerAllArrayAllPics()
         {
             arrPics_PicChecked_6_And_8[0] = new Image[] { PicChecked_6_1, PicChecked_6_2, PicChecked_6_3, PicChecked_6_4, PicChecked_6_5, PicChecked_6_6 };
             arrPics_PicChecked_6_And_8[1] = new Image[] { PicChecked_8_1, PicChecked_8_2, PicChecked_8_3, PicChecked_8_4, PicChecked_8_5, PicChecked_8_6, PicChecked_8_7, PicChecked_8_8 };

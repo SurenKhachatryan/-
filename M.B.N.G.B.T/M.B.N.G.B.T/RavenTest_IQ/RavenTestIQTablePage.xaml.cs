@@ -22,12 +22,14 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         private Image[][] arrPicsAllTests = new Image[60][];
         private WrapPanel[] arrWarpPanelsPicsAllTests = new WrapPanel[60];
         private Image[][] arrPics_PicChecked_6_And_8 = new Image[2][];
-        private byte[] lsUserErrorsTest = new byte[60];
-        private static byte[] arrOfResponsesOfTheUser = new byte[60];
-        private static byte[] arrUserErrorsPics = new byte[60];
-        public static readonly byte[] arrOfCorrectAnswers = new byte[] { 4, 5, 1, 2, 6, 3, 6, 2, 1, 3, 4, 2, 5, 6, 1, 2, 1, 3, 5, 6,
-                                                                         4, 3, 4, 8, 5, 3, 2, 7, 8, 4, 5, 7, 1, 1, 6, 2, 3, 4, 3, 8,
-                                                                         7, 6, 5, 4, 1, 2, 5, 6, 7, 6, 8, 2, 1, 5, 1, 3, 6, 2, 4, 5 };
+        private static byte[] arrAllSelectedPicsByUser = new byte[60];
+        private static byte[] arrWrongSelectedUserAnswersByLevel = new byte[60];
+        private static byte[] arrOfIncorrectlySelectedUserPics = new byte[60];
+        public static readonly byte[] arrOfCorrectAnswersPics = new byte[] { 4, 5, 1, 2, 6, 3, 6, 2, 1, 3, 4, 2,
+                                                                             5, 6, 1, 2, 1, 3, 5, 6, 4, 3, 4, 8,
+                                                                             5, 3, 2, 7, 8, 4, 5, 7, 1, 1, 6, 2,
+                                                                             3, 4, 3, 8, 7, 6, 5, 4, 1, 2, 5, 6,
+                                                                             7, 6, 8, 2, 1, 5, 1, 3, 6, 2, 4, 5 };
         private static string finishTime = "00:00";
         private static bool isUserErrors = false;
         private static byte countOfTestsNotPassed = 0;
@@ -37,8 +39,9 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         private short second = 0;
 
         public static bool IsUserErrors { get { return isUserErrors; } }
-        public static byte[] ArrOfResponsesOfTheUser { get { return arrOfResponsesOfTheUser; } }
-        public static byte[] ArrUserErrorsPics { get { return arrUserErrorsPics; } }
+        public static byte[] ArrAllSelectedPicsByUser { get { return arrAllSelectedPicsByUser; } }
+        public static byte[] ArrWrongSelectedUserAnswersByLevel { get { return arrWrongSelectedUserAnswersByLevel; } }
+        public static byte[] ArrOfIncorrectlySelectedUserPics { get { return arrOfIncorrectlySelectedUserPics; } }
         public static string FinishTime { get { return finishTime; } }
         public static byte CountOfTestsNotPassed { get { return countOfTestsNotPassed; } }
 
@@ -46,15 +49,15 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         {
             InitializeComponent();
 
-            arrOfResponsesOfTheUser = new byte[60];
-            arrUserErrorsPics = new byte[60];
+            arrAllSelectedPicsByUser = new byte[60];
+            arrWrongSelectedUserAnswersByLevel = new byte[60];
             finishTime = "00:00";
             isUserErrors = false;
             countOfTestsNotPassed = 0;
 
             trd = new Thread(InitializerAllArrayAllPics);
             trd.Start();
-           
+
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
             dispatcherTimer.Start();
         }
@@ -91,16 +94,16 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             }
 
             if (finishTime == "00:00")
-                countOfTestsNotPassed = (byte)cl.GetCountthisNumberInArr(arrOfResponsesOfTheUser, 0);
+                countOfTestsNotPassed = (byte)cl.GetCountthisNumberInArr(arrAllSelectedPicsByUser, 0);
 
-            isUserErrors = cl.ArrItemsEqualswiThoutSorting(arrOfCorrectAnswers, arrOfResponsesOfTheUser);
+            isUserErrors = cl.ArrItemsEqualswiThoutSorting(arrOfCorrectAnswersPics, arrAllSelectedPicsByUser);
 
             if (!isUserErrors)
-                arrOfResponsesOfTheUser = cl.GetArrayMissingNumbersAndIndexsInAnArray(arrOfCorrectAnswers, arrOfResponsesOfTheUser, out lsUserErrorsTest);
+                arrOfIncorrectlySelectedUserPics = cl.GetArraysNon_validIndexsAndNumbers(arrOfCorrectAnswersPics, arrAllSelectedPicsByUser, out arrWrongSelectedUserAnswersByLevel);
             else
             {
-                arrOfResponsesOfTheUser = null;
-                lsUserErrorsTest = null;
+                arrOfIncorrectlySelectedUserPics = null;
+                arrWrongSelectedUserAnswersByLevel = null;
             }
         }
 
@@ -141,7 +144,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
 
         private void Pics_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            arrOfResponsesOfTheUser[startPage] = (byte)(cl.GetIndexNameImageInArr(arrPicsAllTests[startPage], ((Image)sender).Name.ToString()) + 1);
+            arrAllSelectedPicsByUser[startPage] = (byte)(cl.GetIndexNameImageInArr(arrPicsAllTests[startPage], ((Image)sender).Name.ToString()) + 1);
 
             if ((startPage + 1) != 60)
                 startPage++;
@@ -208,12 +211,12 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         private void HiddenAllPicsChecked_And_VisiblityThisCheched_PicChecked()
         {
             HiddenAllPicsChecked();
-            if (arrOfResponsesOfTheUser[startPage] != 0)
+            if (arrAllSelectedPicsByUser[startPage] != 0)
             {
                 if (startPage < 23 || startPage == 24)
-                    arrPics_PicChecked_6_And_8[0][(arrOfResponsesOfTheUser[startPage] - 1)].Visibility = Visibility.Visible;
+                    arrPics_PicChecked_6_And_8[0][(arrAllSelectedPicsByUser[startPage] - 1)].Visibility = Visibility.Visible;
                 else
-                    arrPics_PicChecked_6_And_8[1][(arrOfResponsesOfTheUser[startPage] - 1)].Visibility = Visibility.Visible;
+                    arrPics_PicChecked_6_And_8[1][(arrAllSelectedPicsByUser[startPage] - 1)].Visibility = Visibility.Visible;
             }
         }
 
@@ -226,6 +229,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
 
         private void InitializerAllArrayAllPics()
         {
+            //Thread.Sleep(1000);
             arrPics_PicChecked_6_And_8[0] = new Image[] { PicChecked_6_1, PicChecked_6_2, PicChecked_6_3, PicChecked_6_4, PicChecked_6_5, PicChecked_6_6 };
             arrPics_PicChecked_6_And_8[1] = new Image[] { PicChecked_8_1, PicChecked_8_2, PicChecked_8_3, PicChecked_8_4, PicChecked_8_5, PicChecked_8_6, PicChecked_8_7, PicChecked_8_8 };
 
@@ -239,25 +243,25 @@ namespace M.B.N.G.B.T.RavenTest_IQ
                                                           TestImages_43, TestImages_44, TestImages_45, TestImages_46, TestImages_47, TestImages_48,
                                                           TestImages_49, TestImages_50, TestImages_51, TestImages_52, TestImages_53, TestImages_54,
                                                           TestImages_55, TestImages_56, TestImages_57, TestImages_58, TestImages_59, TestImages_60 };
-            
+
 
             arrPicAllTests = new Image[] { Pic_1, Pic_2, Pic_3, Pic_4, Pic_5, Pic_6, Pic_7, Pic_8, Pic_9, Pic_10, Pic_11, Pic_12, Pic_13, Pic_14,
                                            Pic_15, Pic_16, Pic_17, Pic_18, Pic_19, Pic_20, Pic_21, Pic_22, Pic_23, Pic_24, Pic_25, Pic_26, Pic_27,
                                            Pic_28, Pic_29, Pic_30, Pic_31, Pic_32, Pic_33, Pic_34, Pic_35, Pic_36, Pic_37, Pic_38, Pic_39, Pic_40,
                                            Pic_41, Pic_42, Pic_43, Pic_44, Pic_45, Pic_46, Pic_47, Pic_48, Pic_49, Pic_50, Pic_51, Pic_52, Pic_53,
                                            Pic_54, Pic_55, Pic_56, Pic_57, Pic_58, Pic_59, Pic_60 };
-           
+
 
             arrPicsAllTests[0] = new Image[] { PicTest_1_1, PicTest_1_2, PicTest_1_3, PicTest_1_4, PicTest_1_5, PicTest_1_6 };
             arrPicsAllTests[1] = new Image[] { PicTest_2_1, PicTest_2_2, PicTest_2_3, PicTest_2_4, PicTest_2_5, PicTest_2_6 };
             arrPicsAllTests[2] = new Image[] { PicTest_3_1, PicTest_3_2, PicTest_3_3, PicTest_3_4, PicTest_3_5, PicTest_3_6 };
-            Thread.Sleep(300);
             arrPicsAllTests[3] = new Image[] { PicTest_4_1, PicTest_4_2, PicTest_4_3, PicTest_4_4, PicTest_4_5, PicTest_4_6 };
             arrPicsAllTests[4] = new Image[] { PicTest_5_1, PicTest_5_2, PicTest_5_3, PicTest_5_4, PicTest_5_5, PicTest_5_6 };
             arrPicsAllTests[5] = new Image[] { PicTest_6_1, PicTest_6_2, PicTest_6_3, PicTest_6_4, PicTest_6_5, PicTest_6_6 };
             arrPicsAllTests[6] = new Image[] { PicTest_7_1, PicTest_7_2, PicTest_7_3, PicTest_7_4, PicTest_7_5, PicTest_7_6 };
             arrPicsAllTests[7] = new Image[] { PicTest_8_1, PicTest_8_2, PicTest_8_3, PicTest_8_4, PicTest_8_5, PicTest_8_6 };
             arrPicsAllTests[8] = new Image[] { PicTest_9_1, PicTest_9_2, PicTest_9_3, PicTest_9_4, PicTest_9_5, PicTest_9_6 };
+            Thread.Sleep(1000);
             arrPicsAllTests[9] = new Image[] { PicTest_10_1, PicTest_10_2, PicTest_10_3, PicTest_10_4, PicTest_10_5, PicTest_10_6 };
             arrPicsAllTests[10] = new Image[] { PicTest_11_1, PicTest_11_2, PicTest_11_3, PicTest_11_4, PicTest_11_5, PicTest_11_6 };
             arrPicsAllTests[11] = new Image[] { PicTest_12_1, PicTest_12_2, PicTest_12_3, PicTest_12_4, PicTest_12_5, PicTest_12_6 };
@@ -271,6 +275,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             arrPicsAllTests[19] = new Image[] { PicTest_20_1, PicTest_20_2, PicTest_20_3, PicTest_20_4, PicTest_20_5, PicTest_20_6 };
             arrPicsAllTests[20] = new Image[] { PicTest_21_1, PicTest_21_2, PicTest_21_3, PicTest_21_4, PicTest_21_5, PicTest_21_6 };
             arrPicsAllTests[21] = new Image[] { PicTest_22_1, PicTest_22_2, PicTest_22_3, PicTest_22_4, PicTest_22_5, PicTest_22_6 };
+            Thread.Sleep(1000);
             arrPicsAllTests[22] = new Image[] { PicTest_23_1, PicTest_23_2, PicTest_23_3, PicTest_23_4, PicTest_23_5, PicTest_23_6 };
             arrPicsAllTests[23] = new Image[] { PicTest_24_1, PicTest_24_2, PicTest_24_3, PicTest_24_4, PicTest_24_5, PicTest_24_6, PicTest_24_7, PicTest_24_8 };
             arrPicsAllTests[24] = new Image[] { PicTest_25_1, PicTest_25_2, PicTest_25_3, PicTest_25_4, PicTest_25_5, PicTest_25_6 };
@@ -288,6 +293,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             arrPicsAllTests[36] = new Image[] { PicTest_37_1, PicTest_37_2, PicTest_37_3, PicTest_37_4, PicTest_37_5, PicTest_37_6, PicTest_37_7, PicTest_37_8 };
             arrPicsAllTests[37] = new Image[] { PicTest_38_1, PicTest_38_2, PicTest_38_3, PicTest_38_4, PicTest_38_5, PicTest_38_6, PicTest_38_7, PicTest_38_8 };
             arrPicsAllTests[38] = new Image[] { PicTest_39_1, PicTest_39_2, PicTest_39_3, PicTest_39_4, PicTest_39_5, PicTest_39_6, PicTest_39_7, PicTest_39_8 };
+            Thread.Sleep(1000);
             arrPicsAllTests[39] = new Image[] { PicTest_40_1, PicTest_40_2, PicTest_40_3, PicTest_40_4, PicTest_40_5, PicTest_40_6, PicTest_40_7, PicTest_40_8 };
             arrPicsAllTests[40] = new Image[] { PicTest_41_1, PicTest_41_2, PicTest_41_3, PicTest_41_4, PicTest_41_5, PicTest_41_6, PicTest_41_7, PicTest_41_8 };
             arrPicsAllTests[41] = new Image[] { PicTest_42_1, PicTest_42_2, PicTest_42_3, PicTest_42_4, PicTest_42_5, PicTest_42_6, PicTest_42_7, PicTest_42_8 };
@@ -300,6 +306,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             arrPicsAllTests[48] = new Image[] { PicTest_49_1, PicTest_49_2, PicTest_49_3, PicTest_49_4, PicTest_49_5, PicTest_49_6, PicTest_49_7, PicTest_49_8 };
             arrPicsAllTests[49] = new Image[] { PicTest_50_1, PicTest_50_2, PicTest_50_3, PicTest_50_4, PicTest_50_5, PicTest_50_6, PicTest_50_7, PicTest_50_8 };
             arrPicsAllTests[50] = new Image[] { PicTest_51_1, PicTest_51_2, PicTest_51_3, PicTest_51_4, PicTest_51_5, PicTest_51_6, PicTest_51_7, PicTest_51_8 };
+            Thread.Sleep(1000);
             arrPicsAllTests[51] = new Image[] { PicTest_52_1, PicTest_52_2, PicTest_52_3, PicTest_52_4, PicTest_52_5, PicTest_52_6, PicTest_52_7, PicTest_52_8 };
             arrPicsAllTests[52] = new Image[] { PicTest_53_1, PicTest_53_2, PicTest_53_3, PicTest_53_4, PicTest_53_5, PicTest_53_6, PicTest_53_7, PicTest_53_8 };
             arrPicsAllTests[53] = new Image[] { PicTest_54_1, PicTest_54_2, PicTest_54_3, PicTest_54_4, PicTest_54_5, PicTest_54_6, PicTest_54_7, PicTest_54_8 };

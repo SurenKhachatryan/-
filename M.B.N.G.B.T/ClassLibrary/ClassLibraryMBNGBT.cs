@@ -150,32 +150,70 @@ namespace ClassLibrary
             return ls.ToArray();
         }
 
-        public byte[] GetArrayMissingNumbersAndIndexsInAnArray(byte[] exactArray, byte[] nonValidArray, out byte[] arrIndexs)
+        /// <summary>
+        /// Сравнивает два массива только с одинаковыми длиноми и возвращает массивы неправильных индексов и чисел։
+        /// </summary>
+        /// <param name="correctArray"></param>
+        /// <param name="arrComparison"></param>
+        /// <param name="arrayIndexOfIncorrectNumbers"></param>
+        /// <returns></returns>
+        public int[] GetArraysNon_validIndexsAndNumbers(int[] correctArray, int[] arrComparison, out int[] arrayIndexOfIncorrectNumbers)
         {
-            List<byte> ls = new List<byte>();
-            List<byte> ls_1 = new List<byte>();
-            byte tamp = 0;
-
-            for (int i = 0; i < exactArray.Length; i++)
+            try
             {
-                tamp = exactArray[i];
-                for (int j = 0; j < nonValidArray.Length; j++)
+                if (correctArray.Length != arrComparison.Length)
+                    throw new Exception();
+
+                List<int> listIncorrectNumbers = new List<int>();
+                List<int> listIndexsIncorrectNumbers = new List<int>();
+                for (int i = 0; i < arrComparison.Length; i++)
                 {
-                    if (exactArray[i] == nonValidArray[j])
+                    if (correctArray[i] != arrComparison[i])
                     {
-                        j = nonValidArray.Length;
-                        tamp = 0;
+                        listIncorrectNumbers.Add(i);
+                        listIndexsIncorrectNumbers.Add(arrComparison[i]);
                     }
                 }
-                if (tamp != 0)
-                {
-                    ls.Add(tamp);
-                    ls_1.Add((byte)i);
-                }
-
+                arrayIndexOfIncorrectNumbers = listIncorrectNumbers.ToArray();
+                return listIndexsIncorrectNumbers.ToArray();
             }
-            arrIndexs = ls_1.ToArray();
-            return ls.ToArray();
+            catch (Exception)
+            {
+                throw new Exception("The lengths of the arrays are not equal - длины массивы не равны");
+            }
+        }
+
+        /// <summary>
+        /// Сравнивает два массива только с одинаковыми длиноми и возвращает массивы неправильных индексов и чисел։
+        /// </summary>
+        /// <param name="correctArray"></param>
+        /// <param name="arrComparison"></param>
+        /// <param name="arrayIndexOfIncorrectNumbers"></param>
+        /// <returns></returns>
+        public byte[] GetArraysNon_validIndexsAndNumbers(byte[] correctArray, byte[] arrComparison, out byte[] arrayIndexOfIncorrectNumbers)
+        {
+            try
+            {
+                if (correctArray.Length != arrComparison.Length)
+                    throw new Exception();
+
+                List<byte> listIncorrectNumbers = new List<byte>();
+                List<byte> listIndexsIncorrectNumbers = new List<byte>();
+                for (byte i = 0; i < arrComparison.Length; i++)
+                {
+                    if (correctArray[i] != arrComparison[i])
+                    {
+                        listIncorrectNumbers.Add(i);
+                        listIndexsIncorrectNumbers.Add(arrComparison[i]);
+                    }
+                }
+                arrayIndexOfIncorrectNumbers = listIncorrectNumbers.ToArray();
+                return listIndexsIncorrectNumbers.ToArray();
+            }
+            catch (Exception)
+            {
+                throw new Exception("The lengths of the arrays are not equal - длины массивы не равны");
+            }
         }
 
         public double DecreaseInNumbersAfterTheDecimalPoint(double number, int newLanghtAfterTheDecimalPoint)
