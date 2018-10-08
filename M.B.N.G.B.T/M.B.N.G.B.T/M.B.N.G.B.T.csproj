@@ -98,6 +98,9 @@
     <Compile Include="RavenTest_IQ\RavenTestIQTablePage.xaml.cs">
       <DependentUpon>RavenTestIQTablePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RavenTest_IQ\RavenTestIQViewUserErrorsPage.xaml.cs">
+      <DependentUpon>RavenTestIQViewUserErrorsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TestEclecticAttention\TestEclecticAttentionResultPage.xaml.cs">
       <DependentUpon>TestEclecticAttentionResultPage.xaml</DependentUpon>
     </Compile>
@@ -163,6 +166,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RavenTest_IQ\RavenTestIQTablePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RavenTest_IQ\RavenTestIQViewUserErrorsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

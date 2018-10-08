@@ -1,182 +1,64 @@
-﻿using ClassLibrary;
-using System;
-//using System.Threading;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 using System.Windows.Navigation;
-using System.Windows.Threading;
 
 namespace M.B.N.G.B.T.RavenTest_IQ
 {
     /// <summary>
-    /// Логика взаимодействия для RavenTestIQTablePage.xaml
+    /// Логика взаимодействия для RavenTestIQViewUserErrorsPage.xaml
     /// </summary>
-    public partial class RavenTestIQTablePage : Page
+    public partial class RavenTestIQViewUserErrorsPage : Page
     {
-        private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
-        private DispatcherTimer dispatcherTimer = new DispatcherTimer();
         //private Thread trd;
 
         private Image[] arrPicAllTests = new Image[60];
         private Image[][] arrPicsAllTests = new Image[60][];
         private WrapPanel[] arrWarpPanelsPicsAllTests = new WrapPanel[60];
         private Image[][] arrPics_PicChecked_6_And_8 = new Image[2][];
-        private static byte[] arrAllSelectedPicsByUser = new byte[60];
-        private static byte[] arrWrongSelectedUserAnswersByLevel = new byte[60];
-        private static byte[] arrOfIncorrectlySelectedUserPics = new byte[60];
-        public static readonly byte[] arrOfCorrectAnswersPics = new byte[] { 4, 5, 1, 2, 6, 3, 6, 2, 1, 3, 4, 2,
-                                                                             5, 6, 1, 2, 1, 3, 5, 6, 4, 3, 4, 8,
-                                                                             5, 3, 2, 7, 8, 4, 5, 7, 1, 1, 6, 2,
-                                                                             3, 4, 3, 8, 7, 6, 5, 4, 1, 2, 5, 6,
-                                                                             7, 6, 8, 2, 1, 5, 1, 3, 6, 2, 4, 5 };
-        private static string finishTime = "00:00";
-        private static bool isUserErrors = false;
-        private static byte countOfTestsNotPassed = 0;
+        private Image[][] arrPics_PicErrorChecked_6_And_8 = new Image[2][];
+
         private byte startPage = 0;
-        private byte numberOfTestsPassed = 0;
-        private short minute = 1;
-        private short second = 0;
 
-        public static bool IsUserErrors { get { return isUserErrors; } }
-        public static byte[] ArrAllSelectedPicsByUser { get { return arrAllSelectedPicsByUser; } }
-        public static byte[] ArrWrongSelectedUserAnswersByLevel { get { return arrWrongSelectedUserAnswersByLevel; } }
-        public static byte[] ArrOfIncorrectlySelectedUserPics { get { return arrOfIncorrectlySelectedUserPics; } }
-        public static string FinishTime { get { return finishTime; } }
-        public static byte CountOfTestsNotPassed { get { return countOfTestsNotPassed; } }
-
-        public RavenTestIQTablePage()
+        public RavenTestIQViewUserErrorsPage()
         {
             InitializeComponent();
+            LabelErrorTest.Content = $"1/{(RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length - RavenTestIQTablePage.CountOfTestsNotPassed)}";
 
-            arrAllSelectedPicsByUser = new byte[60];
-            arrWrongSelectedUserAnswersByLevel = new byte[60];
-            finishTime = "00:00";
-            isUserErrors = false;
-            countOfTestsNotPassed = 0;
+            if ((RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length - RavenTestIQTablePage.CountOfTestsNotPassed) > 1)
+                buttonNext.Visibility = Visibility.Visible;
 
             //trd = new Thread(InitializerAllArrayAllPics);
             //trd.Start();
             InitializerAllArrayAllPics();
-
-            dispatcherTimer.Tick += new EventHandler(LabelTimer);
-            dispatcherTimer.Start();
+            CollapsedAllPicsAndVisiblityFirstTestPics();
+            HiddenAllPicsChecked_And_VisiblityThisCheched_PicChecked();
         }
 
         /// <summary>
-        /// Этот метод из себя представляет событие Button который отвечет для выхода с класса
-        /// RavenTestIQTablePage если пользователь не захател прадолжить тест.
+        /// Этот метод из себя представляет событие кнопки , при помощи 
+        /// можно возвращается страница результатов.
         /// </summary>
-        private void Button_Exit_The_Test(object sender, RoutedEventArgs e)
+        private void button_Click_Backwards(object sender, RoutedEventArgs e)
         {
-            dispatcherTimer.Stop();
-            NavigationService.Navigate(new RavenTestIQRulePage());
-        }
-
-        /// <summary>
-        /// Этот метод из себя представляет событие Button (видеть результаты), кнопка
-        /// появляется в конце когда пользовател прашел все уровни․
-        /// </summary>
-        private void Button_View_Result(object sender, RoutedEventArgs e)
-        {
-            FinishTest();
-        }
-
-        /// <summary>
-        /// этот метод собирает информацию прохожденым пользователям все уровни и завершает все работы с классом "RavenTestIQTablePage"
-        /// и NavigationService.Navigate()-у дает новую ссылку "RavenTestIQResultPage"․
-        /// </summary>
-        private void FinishTest()
-        {
-            dispatcherTimer.Stop();
-            if (minute != 0 || second != 0)
-            {
-                short newMinut = (short)(19 - minute);
-                short newSecond = (short)(59 - second);
-
-                if (newMinut >= 10 && newSecond >= 10)
-                    finishTime = $"{newMinut}:{newSecond}";
-                else
-                if (newMinut <= 9 && newSecond <= 9)
-                    finishTime = $"0{newMinut}:0{newSecond}";
-                else
-                if (newMinut >= 10 && newSecond <= 9)
-                    finishTime = $"{newMinut}:0{newSecond}";
-                else
-                if (newMinut <= 9 && newSecond >= 10)
-                    finishTime = $"0{newMinut}:{newSecond}";
-            }
-
-            if (finishTime == "00:00")
-                countOfTestsNotPassed = (byte)cl.GetCountthisNumberInArr(arrAllSelectedPicsByUser, 0);
-
-            isUserErrors = cl.ArrItemsEqualswiThoutSorting(arrOfCorrectAnswersPics, arrAllSelectedPicsByUser);
-
-            if (!isUserErrors)
-                arrOfIncorrectlySelectedUserPics = cl.GetArraysNon_validIndexsAndNumbers(arrOfCorrectAnswersPics, arrAllSelectedPicsByUser, out arrWrongSelectedUserAnswersByLevel);
-            else
-            {
-                arrOfIncorrectlySelectedUserPics = null;
-                arrWrongSelectedUserAnswersByLevel = null;
-            }
             NavigationService.Navigate(new RavenTestIQResultPage());
         }
 
         /// <summary>
-        /// Этот метод из себя представляет событие каторый показывает время , пользователь должен успевать прайти вес 
-        /// тест в пределах этого времени.
+        /// Этот метод из себя представляет событие кнопки , при помощи 
+        /// можно возвращается меню правил
         /// </summary>
-        private void LabelTimer(object sender, EventArgs e)
+        private void Button_Click_Try_Again(object sender, RoutedEventArgs e)
         {
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-
-            if (second == -1)
-            {
-                second = 59;
-                minute--;
-            }
-
-            if (minute >= 10)
-            {
-                if (second <= 9)
-                    labelTimer.Content = $"{minute}:0{second}";
-                else
-                    labelTimer.Content = $"{minute}:{second}";
-            }
-            else
-            {
-                if (second <= 9)
-                    labelTimer.Content = $"0{minute}:0{second}";
-                else
-                    labelTimer.Content = $"0{minute}:{second}";
-            }
-
-            if (minute <= 0 && second <= 0)
-                FinishTest();
-            else
-                second--;
+            NavigationService.Navigate(new RavenTestIQRulePage());
         }
 
         /// <summary>
-        /// Этот метод из себя представляет событие принимает выбранный пользователем картинку ,
-        /// добавляет в массив выбранную картинку и пероматывает на следуйщий уровень.
+        /// Этот метод из себя представляет событие кнопки , при помощи 
+        /// можно возвращается на главный меню․
         /// </summary>
-        private void Pics_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        private void Button_Click_Exit_Main(object sender, RoutedEventArgs e)
         {
-            arrAllSelectedPicsByUser[startPage] = (byte)(cl.GetIndexNameImageInArr(arrPicsAllTests[startPage], ((Image)sender).Name.ToString()) + 1);
-
-            if ((startPage + 1) != 60)
-                startPage++;
-            if (startPage > numberOfTestsPassed)
-                numberOfTestsPassed++;
-
-            CollapsedAllPicsAndVisiblityFirstTestPics();
-            VisiblityOrCollapsedButtonsBackSpaseAndNext("buttonNext");
-
-            if (arrAllSelectedPicsByUser[59] != 0)
-                button_View_Result.Visibility = Visibility.Visible;
-
-            HiddenAllPicsChecked_And_VisiblityThisCheched_PicChecked();
+            NavigationService.Navigate(null);
         }
 
         /// <summary>
@@ -208,15 +90,15 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         {
             if (buttonName == "buttonNext")
             {
-                if (startPage == numberOfTestsPassed)
+                if ((startPage + 1) >= (RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length - RavenTestIQTablePage.CountOfTestsNotPassed))
                     buttonNext.Visibility = Visibility.Collapsed;
-                if (startPage == 1)
+                if (startPage != 0)
                     buttonBackSpace.Visibility = Visibility.Visible;
             }
             else
             if (buttonName == "buttonBackSpace")
             {
-                if (startPage == (numberOfTestsPassed - 1))
+                if ((startPage + 1) < (RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length - RavenTestIQTablePage.CountOfTestsNotPassed))
                     buttonNext.Visibility = Visibility.Visible;
                 if (startPage == 0)
                     buttonBackSpace.Visibility = Visibility.Collapsed;
@@ -229,39 +111,50 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         /// </summary>
         private void CollapsedAllPicsAndVisiblityFirstTestPics()
         {
+
             for (int i = 0; i < arrPicAllTests.Length; i++)
             {
                 arrPicAllTests[i].Visibility = Visibility.Collapsed;
                 arrWarpPanelsPicsAllTests[i].Visibility = Visibility.Collapsed;
             }
-            LabelTest.Content = $"{(startPage + 1)}/60";
-            arrPicAllTests[startPage].Visibility = Visibility.Visible;
-            arrWarpPanelsPicsAllTests[startPage].Visibility = Visibility.Visible;
+            LabelErrorTest.Content = $"{(startPage + 1)}/{RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length - RavenTestIQTablePage.CountOfTestsNotPassed}";
+            arrPicAllTests[RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage]].Visibility = Visibility.Visible;
+            arrWarpPanelsPicsAllTests[RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage]].Visibility = Visibility.Visible;
         }
 
         /// <summary>
-        /// Этот метод показывает ту картинку (PicChecked) которую выбрал пользователь
+        /// Этот метод показывает те картинки которую пользователь выбрал неправильно и
+        /// показывает правелный ответ (PicChecked и PicErrorChecked) 
         /// </summary>
         private void HiddenAllPicsChecked_And_VisiblityThisCheched_PicChecked()
         {
             HiddenAllPicsChecked();
-            if (arrAllSelectedPicsByUser[startPage] != 0)
+
+            if (RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage] < 23 || RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage] == 24)
             {
-                if (startPage < 23 || startPage == 24)
-                    arrPics_PicChecked_6_And_8[0][(arrAllSelectedPicsByUser[startPage] - 1)].Visibility = Visibility.Visible;
-                else
-                    arrPics_PicChecked_6_And_8[1][(arrAllSelectedPicsByUser[startPage] - 1)].Visibility = Visibility.Visible;
+                arrPics_PicChecked_6_And_8[0][(RavenTestIQTablePage.arrOfCorrectAnswersPics[RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage]] - 1)].Visibility = Visibility.Visible;
+                arrPics_PicErrorChecked_6_And_8[0][(RavenTestIQTablePage.ArrOfIncorrectlySelectedUserPics[startPage] - 1)].Visibility = Visibility.Visible;
+            }
+            else
+            {
+                arrPics_PicChecked_6_And_8[1][(RavenTestIQTablePage.arrOfCorrectAnswersPics[RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage]] - 1)].Visibility = Visibility.Visible;
+                arrPics_PicErrorChecked_6_And_8[1][(RavenTestIQTablePage.ArrOfIncorrectlySelectedUserPics[startPage] - 1)].Visibility = Visibility.Visible;
             }
         }
 
         /// <summary>
-        /// Этот метод скрывает все картинки (PicChecked)
+        /// Этот метод скрывает все картинки (PicChecked и PicErrorChecked) 
         /// </summary>
         private void HiddenAllPicsChecked()
         {
             for (int i = 0; i < arrPics_PicChecked_6_And_8.Length; i++)
+            {
                 for (int j = 0; j < arrPics_PicChecked_6_And_8[i].Length; j++)
+                {
                     arrPics_PicChecked_6_And_8[i][j].Visibility = Visibility.Hidden;
+                    arrPics_PicErrorChecked_6_And_8[i][j].Visibility = Visibility.Hidden;
+                }
+            }
         }
 
         /// <summary>
@@ -269,9 +162,11 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         /// </summary>
         private void InitializerAllArrayAllPics()
         {
-            //Thread.Sleep(1000);
             arrPics_PicChecked_6_And_8[0] = new Image[] { PicChecked_6_1, PicChecked_6_2, PicChecked_6_3, PicChecked_6_4, PicChecked_6_5, PicChecked_6_6 };
             arrPics_PicChecked_6_And_8[1] = new Image[] { PicChecked_8_1, PicChecked_8_2, PicChecked_8_3, PicChecked_8_4, PicChecked_8_5, PicChecked_8_6, PicChecked_8_7, PicChecked_8_8 };
+
+            arrPics_PicErrorChecked_6_And_8[0] = new Image[] { PicErrorChecked_6_1, PicErrorChecked_6_2, PicErrorChecked_6_3, PicErrorChecked_6_4, PicErrorChecked_6_5, PicErrorChecked_6_6 };
+            arrPics_PicErrorChecked_6_And_8[1] = new Image[] { PicErrorChecked_8_1, PicErrorChecked_8_2, PicErrorChecked_8_3, PicErrorChecked_8_4, PicErrorChecked_8_5, PicErrorChecked_8_6, PicErrorChecked_8_7, PicErrorChecked_8_8 };
 
             arrWarpPanelsPicsAllTests = new WrapPanel[] { TestImages_1, TestImages_2, TestImages_3, TestImages_4, TestImages_5, TestImages_6,
                                                           TestImages_7, TestImages_8, TestImages_9, TestImages_10, TestImages_11, TestImages_12,
@@ -283,7 +178,6 @@ namespace M.B.N.G.B.T.RavenTest_IQ
                                                           TestImages_43, TestImages_44, TestImages_45, TestImages_46, TestImages_47, TestImages_48,
                                                           TestImages_49, TestImages_50, TestImages_51, TestImages_52, TestImages_53, TestImages_54,
                                                           TestImages_55, TestImages_56, TestImages_57, TestImages_58, TestImages_59, TestImages_60 };
-
 
             arrPicAllTests = new Image[] { Pic_1, Pic_2, Pic_3, Pic_4, Pic_5, Pic_6, Pic_7, Pic_8, Pic_9, Pic_10, Pic_11, Pic_12, Pic_13, Pic_14,
                                            Pic_15, Pic_16, Pic_17, Pic_18, Pic_19, Pic_20, Pic_21, Pic_22, Pic_23, Pic_24, Pic_25, Pic_26, Pic_27,
