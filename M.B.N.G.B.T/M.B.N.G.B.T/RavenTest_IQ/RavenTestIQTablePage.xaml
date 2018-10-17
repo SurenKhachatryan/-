@@ -81,8 +81,8 @@
         </Viewbox>
 
         <Viewbox Grid.Row="1" Grid.Column="6" Grid.RowSpan="2">
-            <WrapPanel Width="476" Height="303">
-                <Image x:Name="Pic_1" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_1/Main_1.png" Visibility="Visible"/>
+            <WrapPanel>
+                <Image x:Name="Pic_1" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_1/Main_1.png" Visibility="Collapsed"/>
                 <Image x:Name="Pic_2" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_2/Main_2.png" Visibility="Collapsed"/>
                 <Image x:Name="Pic_3" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_3/Main_3.png" Visibility="Collapsed"/>
                 <Image x:Name="Pic_4" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_4/Main_4.png" Visibility="Collapsed"/>
@@ -147,7 +147,7 @@
 
         <Viewbox Grid.Column="5" Grid.Row="4" Grid.ColumnSpan="3">
             <WrapPanel>
-                <WrapPanel x:Name="TestImages_1" Width="576" Height="240" Visibility="Visible">
+                <WrapPanel x:Name="TestImages_1" Width="576" Height="240" Visibility="Collapsed">
                     <Image x:Name="PicTest_1_1" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_1/1_1.png" Width="178"/>
                     <Image x:Name="PicTest_1_2" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_1/1_2.png" Width="178"/>
                     <Image x:Name="PicTest_1_3" Margin="5" MouseLeftButtonUp="Pics_MouseLeftButtonUp" Source="pack://siteoforigin:,,,/Resources/RavenTest_IQ/Level_1/Test_1/1_3.png" Width="178"/>

@@ -35,7 +35,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         private static byte countOfTestsNotPassed = 0;
         private byte startPage = 0;
         private byte numberOfTestsPassed = 0;
-        private short minute = 1;
+        private short minute = 20;
         private short second = 0;
 
         public static bool IsUserErrors { get { return isUserErrors; } }
@@ -58,6 +58,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             //trd = new Thread(InitializerAllArrayAllPics);
             //trd.Start();
             InitializerAllArrayAllPics();
+            CollapsedAllPicsAndVisiblityFirstTestPics();
 
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
             dispatcherTimer.Start();
@@ -163,7 +164,8 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         /// </summary>
         private void Pics_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            arrAllSelectedPicsByUser[startPage] = (byte)(cl.GetIndexNameImageInArr(arrPicsAllTests[startPage], ((Image)sender).Name.ToString()) + 1);
+           
+            arrAllSelectedPicsByUser[startPage] = byte.Parse(((Image)sender).Name.ToString()[((Image)sender).Name.Length - 1].ToString());
 
             if ((startPage + 1) != 60)
                 startPage++;

@@ -49,6 +49,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         /// </summary>
         private void Button_Click_Try_Again(object sender, RoutedEventArgs e)
         {
+            RavenTestIQResultPage.ErorsPage = null;
             NavigationService.Navigate(new RavenTestIQRulePage());
         }
 
@@ -58,6 +59,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         /// </summary>
         private void Button_Click_Exit_Main(object sender, RoutedEventArgs e)
         {
+            RavenTestIQResultPage.ErorsPage = null;
             NavigationService.Navigate(null);
         }
 

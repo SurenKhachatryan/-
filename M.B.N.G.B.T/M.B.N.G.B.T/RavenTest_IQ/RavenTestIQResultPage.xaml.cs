@@ -20,6 +20,8 @@ namespace M.B.N.G.B.T.RavenTest_IQ
     /// </summary>
     public partial class RavenTestIQResultPage : Page
     {
+        public static object ErorsPage { get; set; }
+
         public RavenTestIQResultPage()
         {
             InitializeComponent();
@@ -27,17 +29,22 @@ namespace M.B.N.G.B.T.RavenTest_IQ
 
         private void Button_Click_View_Errors_User(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new RavenTestIQViewUserErrorsPage());
+            if (ErorsPage == null)
+                ErorsPage = new RavenTestIQViewUserErrorsPage();
+
+            NavigationService.Navigate(ErorsPage as RavenTestIQViewUserErrorsPage);
         }
 
         private void Button_Click_Try_Again(object sender, RoutedEventArgs e)
         {
-
+            ErorsPage = null;
+            NavigationService.Navigate(new RavenTestIQRulePage());
         }
 
         private void Button_Click_Exit_Main(object sender, RoutedEventArgs e)
         {
-
+            ErorsPage = null;
+            NavigationService.Navigate(null);
         }
     }
 }
