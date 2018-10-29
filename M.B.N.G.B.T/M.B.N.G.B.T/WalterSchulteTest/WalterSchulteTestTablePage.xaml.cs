@@ -53,7 +53,7 @@ namespace M.B.N.G.B.T.WalterSchulteTest
 
         private void Button_Exit_The_Test(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new WalterSchulteTestRulePage());
+            NavigationService.Navigate(null);
             dispatcherTimer.Stop();
         }
 

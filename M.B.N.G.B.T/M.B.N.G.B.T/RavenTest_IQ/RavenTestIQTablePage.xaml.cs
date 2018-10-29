@@ -30,7 +30,6 @@ namespace M.B.N.G.B.T.RavenTest_IQ
                                                                              5, 3, 2, 7, 8, 4, 5, 7, 1, 1, 6, 2,
                                                                              3, 4, 3, 8, 7, 6, 5, 4, 1, 2, 5, 6,
                                                                              7, 6, 8, 2, 1, 5, 1, 3, 6, 2, 4, 5 };
-        private static object ravenTestResultPage;
         private static string finishTime = "00:00";
         private static bool isUserErrors = false;
         private static byte countOfTestsNotPassed = 0;
@@ -39,7 +38,6 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         private short minute = 20;
         private short second = 0;
 
-        public static object RavenTestResultPage { get { return ravenTestResultPage; } }
         public static bool IsUserErrors { get { return isUserErrors; } }
         public static List<byte> ListAllSelectedPicsByUser { get { return listAllSelectedPicsByUser; } }
         public static byte[] ArrWrongSelectedUserAnswersByLevel { get { return arrWrongSelectedUserAnswersByLevel; } }
@@ -61,6 +59,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         {
             listAllSelectedPicsByUser = new List<byte>();
             arrWrongSelectedUserAnswersByLevel = new byte[1];
+            listOfIncorrectlySelectedUserPics = new List<byte>();
             finishTime = "00:00";
             isUserErrors = false;
             countOfTestsNotPassed = 0;
@@ -70,14 +69,11 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             second = 0;
             buttonNext.Visibility = Visibility.Collapsed;
             buttonBackSpace.Visibility = Visibility.Collapsed;
+            button_View_Result.Visibility = Visibility.Collapsed;
 
-            listPicAllTests = new List<Image>();
-            listPicsAllTests = new List<List<Image>>();
-            listWarpPanelsPicsAllTests = new List<WrapPanel>();
-            listPics_PicChecked_6_And_8 = new List<List<Image>>();
-            listOfIncorrectlySelectedUserPics = new List<byte>();
+            if (listPicAllTests.Count == 0)
+                InitializerAllArrayAllPics();
 
-            InitializerAllArrayAllPics();
             CollapsedAllPicsAndVisiblityFirstTestPics();
             HiddenAllPicsChecked();
 
@@ -92,7 +88,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         private void Button_Exit_The_Test(object sender, RoutedEventArgs e)
         {
             dispatcherTimer.Stop();
-            NavigationService.Navigate(new RavenTestIQRulePage());
+            NavigationService.Navigate(null);
         }
 
         /// <summary>
@@ -132,9 +128,9 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             if (finishTime == "00:00")
                 countOfTestsNotPassed = (byte)cl.GetCountthisNumberInArr(listAllSelectedPicsByUser.ToArray(), 0);
 
-            isUserErrors = cl.ArrItemsEqualswiThoutSorting(arrOfCorrectAnswersPics, listAllSelectedPicsByUser.ToArray());
+            isUserErrors = !cl.ArrItemsEqualswiThoutSorting(arrOfCorrectAnswersPics, listAllSelectedPicsByUser.ToArray());
 
-            if (!isUserErrors)
+            if (isUserErrors)
                 listOfIncorrectlySelectedUserPics = cl.GetArraysNon_validIndexsAndNumbers(arrOfCorrectAnswersPics, listAllSelectedPicsByUser.ToArray(), out arrWrongSelectedUserAnswersByLevel).ToList();
             else
             {
@@ -142,14 +138,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
                 arrWrongSelectedUserAnswersByLevel = null;
             }
 
-            if (ravenTestResultPage != null)
-                NavigationService.Navigate(RavenTestResultPage);
-            else
-            {
-                ravenTestResultPage = new RavenTestIQResultPage();
-                NavigationService.Navigate(RavenTestResultPage);
-            }
-
+            NavigationService.Navigate(new RavenTestIQResultPage());
         }
 
         /// <summary>
@@ -207,7 +196,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             CollapsedAllPicsAndVisiblityFirstTestPics();
             VisiblityOrCollapsedButtonsBackSpaseAndNext("buttonNext");
 
-            if (listAllSelectedPicsByUser.Count == 59)
+            if (listAllSelectedPicsByUser.Count == 60)
                 button_View_Result.Visibility = Visibility.Visible;
 
             HiddenAllPicsChecked_And_VisiblityThisCheched_PicChecked();
@@ -303,7 +292,6 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         /// </summary>
         private void InitializerAllArrayAllPics()
         {
-            //Thread.Sleep(1000);
             listPics_PicChecked_6_And_8.Add(new List<Image> { PicChecked_6_1, PicChecked_6_2, PicChecked_6_3, PicChecked_6_4, PicChecked_6_5, PicChecked_6_6 });
             listPics_PicChecked_6_And_8.Add(new List<Image> { PicChecked_8_1, PicChecked_8_2, PicChecked_8_3, PicChecked_8_4, PicChecked_8_5, PicChecked_8_6, PicChecked_8_7, PicChecked_8_8 });
 

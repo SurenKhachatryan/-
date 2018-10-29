@@ -62,7 +62,7 @@ namespace M.B.N.G.B.T.TestEclecticAttention
         private void Button_Exit_The_Test(object sender, RoutedEventArgs e)
         {
             dispatcherTimer.Stop();
-            NavigationService.Navigate(new TestEclecticAttentionRulePage());
+            NavigationService.Navigate(null);
         }
 
         private void LabelNumberAll_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -114,7 +114,7 @@ namespace M.B.N.G.B.T.TestEclecticAttention
             if (second == 999)
             {
                 dispatcherTimer.Stop();
-                NavigationService.Navigate(new TestEclecticAttentionRulePage());
+                NavigationService.Navigate(null);
             }
             if (secondForBrushingLabels == 2)
             {

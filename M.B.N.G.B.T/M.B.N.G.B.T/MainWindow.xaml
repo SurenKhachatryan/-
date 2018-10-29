@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:M.B.N.G.B.T"
         mc:Ignorable="d"
-        Title="Մ․Բ․Ն․Գ․Բ․Թ․"  WindowState="Maximized" MinHeight="450" MinWidth="600"   Height="780" Width="1300" Foreground="{x:Null}" FontFamily="Segoe UI Black" BorderThickness="0" Opacity="0.995" PreviewKeyDown="Window_PreviewKeyDown" WindowStyle="SingleBorderWindow" >
-    <!--Height="600" Width="800"-->
+        Title="Մ․Բ․Ն․Գ․Բ․Թ․" WindowStartupLocation="CenterScreen"  Height="550" Width="900" Foreground="{x:Null}" FontFamily="Segoe UI Black" BorderThickness="0" Opacity="0.995" PreviewKeyDown="Window_PreviewKeyDown" AllowsTransparency="True" WindowStyle="None" SnapsToDevicePixels="True" >
+   
     <Window.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,/Resources/board.jpg"/>
     </Window.Background>
@@ -140,8 +140,5 @@
                 </Button.Background>
             </Button>
         </Viewbox>
-
-        <Frame Name="Main"  RenderTransformOrigin="0,0" Grid.RowSpan="19" NavigationUIVisibility="Hidden" Grid.ColumnSpan="5" />
-
     </Grid>
 </Window>

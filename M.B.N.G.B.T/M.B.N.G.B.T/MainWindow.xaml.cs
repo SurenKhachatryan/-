@@ -19,40 +19,47 @@ namespace M.B.N.G.B.T
         {
             InitializeComponent();
         }
-
+        
         private void Button_Visual_Memory_Test(object sender, RoutedEventArgs e)
         {
-            Main.NavigationService.Navigate(new VisualMemoryTestRulePage());
+            new VisualMemoryTestRuleWindow().Show();
+            Close();
         }
 
         private void Button_Schulte_Test(object sender, RoutedEventArgs e)
         {
-            Main.Content = new WalterSchulteTestRulePage();
+            new WalterSchulteTestRuleWindow().Show();
+            Close();
         }
 
         private void Button_VLMarshuk_Test(object sender, RoutedEventArgs e)
         {
-            Main.Content = new ConcentrationDefinitionTestRulePage();
+            new ConcentrationDefinitionTestRuleWindow().Show();
+            Close();
         }
 
         private void Button_Krepelin_Test(object sender, RoutedEventArgs e)
         {
-            Main.Content = new EmilKraepelinTestRulePage();
+            new EmilKraepelinTestRuleWindow().Show();
+            Close();
         }
 
         private void Button_Attentiveness_Test(object sender, RoutedEventArgs e)
         {
-            Main.Content = new AttentivenessTestRulePage();
+            new AttentivenessTestRuleWindow().Show();
+            Close();
         }
 
         private void Button_Test_Eclectic_Attention(object sender, RoutedEventArgs e)
         {
-            Main.Content = new TestEclecticAttentionRulePage();
+            new TestEclecticAttentionRuleWindow().Show();
+            Close();
         }
 
         private void Button_Test_Raven_IQ(object sender, RoutedEventArgs e)
         {
-            Main.Content = new RavenTestIQRulePage();
+            new RavenTestIQRuleWindow().Show();
+            Close();
         }
 
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)

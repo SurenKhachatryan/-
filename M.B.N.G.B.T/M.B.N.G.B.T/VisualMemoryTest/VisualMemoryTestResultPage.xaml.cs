@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace M.B.N.G.B.T.VisualMemoryTest
@@ -17,12 +18,13 @@ namespace M.B.N.G.B.T.VisualMemoryTest
 
         private void Button_Click_Exit_Main(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(null);
+            Application.Current.Shutdown();
+            Process.Start(Application.ResourceAssembly.Location);
         }
 
         private void Button_Click_Try_Again(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new VisualMemoryTestRulePage());
+            NavigationService.Navigate(null);
         }
     }
 }

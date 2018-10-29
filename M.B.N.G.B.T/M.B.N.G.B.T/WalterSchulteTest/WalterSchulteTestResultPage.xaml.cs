@@ -1,6 +1,7 @@
 ﻿using ClassLibrary;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -107,12 +108,13 @@ namespace M.B.N.G.B.T.WalterSchulteTest
 
         private void Button_Click_Try_Again(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new WalterSchulteTestRulePage());
+            NavigationService.Navigate(null);
         }
 
         private void Button_Click_Exit_Main(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(null);
+            Application.Current.Shutdown();
+            Process.Start(Application.ResourceAssembly.Location);
         }
     }
 }

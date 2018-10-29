@@ -233,7 +233,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
 
         private void Exit_The_Test(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new AttentivenessTestRulePage());
+            NavigationService.Navigate(null);
             dispatcherTimer.Stop();
         }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
@@ -119,12 +120,13 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
 
         private void Button_Click_Try_Again(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new ConcentrationDefinitionTestRulePage());
+            NavigationService.Navigate(null);
         }
 
         private void Button_Click_Exit_Main(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(null);
+            Application.Current.Shutdown();
+            Process.Start(Application.ResourceAssembly.Location);
         }
     }
 }

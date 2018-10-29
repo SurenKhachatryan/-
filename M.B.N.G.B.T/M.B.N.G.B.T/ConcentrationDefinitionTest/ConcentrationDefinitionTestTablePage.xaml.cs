@@ -81,7 +81,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
         private void Button_Exit_The_Test(object sender, RoutedEventArgs e)
         {
             dispatcherTimer.Stop();
-            NavigationService.Navigate(new ConcentrationDefinitionTestRulePage());
+            NavigationService.Navigate(null);
         }
 
         private void LabelTimer(object sender, EventArgs e)

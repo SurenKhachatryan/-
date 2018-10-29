@@ -60,8 +60,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AttentivenessTest\AttentivenessTestRulePage.xaml.cs">
-      <DependentUpon>AttentivenessTestRulePage.xaml</DependentUpon>
+    <Compile Include="AttentivenessTest\AttentivenessTestRuleWindow.xaml.cs">
+      <DependentUpon>AttentivenessTestRuleWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="AttentivenessTest\AttentivenessTestTablePage.xaml.cs">
       <DependentUpon>AttentivenessTestTablePage.xaml</DependentUpon>
@@ -69,8 +69,8 @@
     <Compile Include="ConcentrationDefinitionTest\ConcentrationDefinitionTestResultPage.xaml.cs">
       <DependentUpon>ConcentrationDefinitionTestResultPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ConcentrationDefinitionTest\ConcentrationDefinitionTestRulePage.xaml.cs">
-      <DependentUpon>ConcentrationDefinitionTestRulePage.xaml</DependentUpon>
+    <Compile Include="ConcentrationDefinitionTest\ConcentrationDefinitionTestRuleWindow.xaml.cs">
+      <DependentUpon>ConcentrationDefinitionTestRuleWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ConcentrationDefinitionTest\ConcentrationDefinitionTestTablePage.xaml.cs">
       <DependentUpon>ConcentrationDefinitionTestTablePage.xaml</DependentUpon>
@@ -78,8 +78,8 @@
     <Compile Include="EmilKraepelinTest\EmilKraepelinTestResultPage.xaml.cs">
       <DependentUpon>EmilKraepelinTestResultPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EmilKraepelinTest\EmilKraepelinTestRulePage.xaml.cs">
-      <DependentUpon>EmilKraepelinTestRulePage.xaml</DependentUpon>
+    <Compile Include="EmilKraepelinTest\EmilKraepelinTestRuleWindow.xaml.cs">
+      <DependentUpon>EmilKraepelinTestRuleWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="EmilKraepelinTest\EmilKraepelinTestTablePage.xaml.cs">
       <DependentUpon>EmilKraepelinTestTablePage.xaml</DependentUpon>
@@ -93,8 +93,8 @@
     <Compile Include="RavenTest_IQ\RavenTestIQResultPage.xaml.cs">
       <DependentUpon>RavenTestIQResultPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RavenTest_IQ\RavenTestIQRulePage.xaml.cs">
-      <DependentUpon>RavenTestIQRulePage.xaml</DependentUpon>
+    <Compile Include="RavenTest_IQ\RavenTestIQRuleWindow.xaml.cs">
+      <DependentUpon>RavenTestIQRuleWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="RavenTest_IQ\RavenTestIQTablePage.xaml.cs">
       <DependentUpon>RavenTestIQTablePage.xaml</DependentUpon>
@@ -105,8 +105,8 @@
     <Compile Include="TestEclecticAttention\TestEclecticAttentionResultPage.xaml.cs">
       <DependentUpon>TestEclecticAttentionResultPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TestEclecticAttention\TestEclecticAttentionRulePage.xaml.cs">
-      <DependentUpon>TestEclecticAttentionRulePage.xaml</DependentUpon>
+    <Compile Include="TestEclecticAttention\TestEclecticAttentionRuleWindow.xaml.cs">
+      <DependentUpon>TestEclecticAttentionRuleWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="TestEclecticAttention\TestEclecticAttentionTablePage.xaml.cs">
       <DependentUpon>TestEclecticAttentionTablePage.xaml</DependentUpon>
@@ -117,16 +117,19 @@
     <Compile Include="VisualMemoryTest\VisualMemoryTestRandomPicturesPage.xaml.cs">
       <DependentUpon>VisualMemoryTestRandomPicturesPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VisualMemoryTest\VisualMemoryTestRuleWindow.xaml.cs">
+      <DependentUpon>VisualMemoryTestRuleWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WalterSchulteTest\WalterSchulteTestResultPage.xaml.cs">
       <DependentUpon>WalterSchulteTestResultPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WalterSchulteTest\WalterSchulteTestRulePage.xaml.cs">
-      <DependentUpon>WalterSchulteTestRulePage.xaml</DependentUpon>
+    <Compile Include="WalterSchulteTest\WalterSchulteTestRuleWindow.xaml.cs">
+      <DependentUpon>WalterSchulteTestRuleWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="WalterSchulteTest\WalterSchulteTestTablePage.xaml.cs">
       <DependentUpon>WalterSchulteTestTablePage.xaml</DependentUpon>
     </Compile>
-    <Page Include="AttentivenessTest\AttentivenessTestRulePage.xaml">
+    <Page Include="AttentivenessTest\AttentivenessTestRuleWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -138,7 +141,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ConcentrationDefinitionTest\ConcentrationDefinitionTestRulePage.xaml">
+    <Page Include="ConcentrationDefinitionTest\ConcentrationDefinitionTestRuleWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -150,7 +153,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EmilKraepelinTest\EmilKraepelinTestRulePage.xaml">
+    <Page Include="EmilKraepelinTest\EmilKraepelinTestRuleWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -162,7 +165,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RavenTest_IQ\RavenTestIQRulePage.xaml">
+    <Page Include="RavenTest_IQ\RavenTestIQRuleWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -178,7 +181,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TestEclecticAttention\TestEclecticAttentionRulePage.xaml">
+    <Page Include="TestEclecticAttention\TestEclecticAttentionRuleWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -198,10 +201,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VisualMemoryTest\VisualMemoryTestRulePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -213,18 +212,19 @@
     <Compile Include="VisualMemoryTest\VisualMemoryTestResultPage.xaml.cs">
       <DependentUpon>VisualMemoryTestResultPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VisualMemoryTest\VisualMemoryTestRulePage.xaml.cs">
-      <DependentUpon>VisualMemoryTestRulePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="VisualMemoryTest\VisualMemoryTestRuleWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WalterSchulteTest\WalterSchulteTestResultPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WalterSchulteTest\WalterSchulteTestRulePage.xaml">
+    <Page Include="WalterSchulteTest\WalterSchulteTestRuleWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
