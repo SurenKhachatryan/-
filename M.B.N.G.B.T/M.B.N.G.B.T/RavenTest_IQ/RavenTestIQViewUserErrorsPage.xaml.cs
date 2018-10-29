@@ -135,12 +135,12 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             if (RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage] < 23 || RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage] == 24)
             {
                 arrPics_PicChecked_6_And_8[0][(RavenTestIQTablePage.arrOfCorrectAnswersPics[RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage]] - 1)].Visibility = Visibility.Visible;
-                arrPics_PicErrorChecked_6_And_8[0][(RavenTestIQTablePage.ArrOfIncorrectlySelectedUserPics[startPage] - 1)].Visibility = Visibility.Visible;
+                arrPics_PicErrorChecked_6_And_8[0][(RavenTestIQTablePage.ListOfIncorrectlySelectedUserPics[startPage] - 1)].Visibility = Visibility.Visible;
             }
             else
             {
                 arrPics_PicChecked_6_And_8[1][(RavenTestIQTablePage.arrOfCorrectAnswersPics[RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage]] - 1)].Visibility = Visibility.Visible;
-                arrPics_PicErrorChecked_6_And_8[1][(RavenTestIQTablePage.ArrOfIncorrectlySelectedUserPics[startPage] - 1)].Visibility = Visibility.Visible;
+                arrPics_PicErrorChecked_6_And_8[1][(RavenTestIQTablePage.ListOfIncorrectlySelectedUserPics[startPage] - 1)].Visibility = Visibility.Visible;
             }
         }
 

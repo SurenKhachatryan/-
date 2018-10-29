@@ -89,6 +89,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="RavenTest_IQ\INewRavenIQTestTablePage.cs" />
     <Compile Include="RavenTest_IQ\RavenTestIQResultPage.xaml.cs">
       <DependentUpon>RavenTestIQResultPage.xaml</DependentUpon>
     </Compile>
