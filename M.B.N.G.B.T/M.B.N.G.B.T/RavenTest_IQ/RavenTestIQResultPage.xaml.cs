@@ -8,7 +8,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
     /// <summary>
     /// Логика взаимодействия для RavenTestIQResultPage.xaml
     /// </summary>
-    public partial class RavenTestIQResultPage : Page
+    public partial class RavenTestIQResultPage : Page, INewRavenTestIQResultPage
     {
         private static object ravenTestIQViewUserErrorsPage;
         public static object RavenTestIQViewUserErrorsPage { get { return ravenTestIQViewUserErrorsPage; } }
@@ -16,10 +16,25 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         public RavenTestIQResultPage()
         {
             InitializeComponent();
+            CreateNewResultPageForNewUser();
+        }
 
-            buttonClickViewErrorsUser.Visibility = Visibility.Visible;
+        /// <summary>
+        /// Этот метод обнулировает все данные в классе RavenTestIQResultPage и RavenTestIQViewUserErrorsPage
+        /// для нового пользователя (как новое окно)
+        /// </summary>
+        public void CreateNewResultPageForNewUser()
+        {
+            buttonClickViewErrorsUser.Visibility = Visibility.Hidden;
+
+            if (RavenTestIQTablePage.IsUserErrors)
+                buttonClickViewErrorsUser.Visibility = Visibility.Visible;
+
             if (ravenTestIQViewUserErrorsPage == null && RavenTestIQTablePage.IsUserErrors)
                 ravenTestIQViewUserErrorsPage = new RavenTestIQViewUserErrorsPage();
+            else
+            if (ravenTestIQViewUserErrorsPage != null && RavenTestIQTablePage.IsUserErrors)
+                ((INewRavenTestIQViewUserErrorsPage)ravenTestIQViewUserErrorsPage).CreateNewViewUserErrorsPageForNewUser();
         }
 
         private void Button_Click_View_Errors_User(object sender, RoutedEventArgs e)

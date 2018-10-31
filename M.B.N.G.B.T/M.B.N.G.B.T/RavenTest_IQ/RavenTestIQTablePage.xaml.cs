@@ -30,6 +30,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
                                                                              5, 3, 2, 7, 8, 4, 5, 7, 1, 1, 6, 2,
                                                                              3, 4, 3, 8, 7, 6, 5, 4, 1, 2, 5, 6,
                                                                              7, 6, 8, 2, 1, 5, 1, 3, 6, 2, 4, 5 };
+        private static object ravenTestIQResultPage;
         private static string finishTime = "00:00";
         private static bool isUserErrors = false;
         private static byte countOfTestsNotPassed = 0;
@@ -38,6 +39,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         private short minute = 20;
         private short second = 0;
 
+        public static object RavenTestIQResultPage { get { return ravenTestIQResultPage; } }
         public static bool IsUserErrors { get { return isUserErrors; } }
         public static List<byte> ListAllSelectedPicsByUser { get { return listAllSelectedPicsByUser; } }
         public static byte[] ArrWrongSelectedUserAnswersByLevel { get { return arrWrongSelectedUserAnswersByLevel; } }
@@ -48,6 +50,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         public RavenTestIQTablePage()
         {
             InitializeComponent();
+            dispatcherTimer.Tick += new EventHandler(LabelTimer);
             CreateNewPageTestRavenForNewUser();
         }
 
@@ -65,8 +68,12 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             countOfTestsNotPassed = 0;
             startPage = 0;
             numberOfTestsPassed = 0;
-            minute = 20;
-            second = 0;
+            labelTimer.Content = "20:00";
+            if (listPicAllTests.Count != 0)
+            {
+                minute = 20;
+                second = -1;
+            }
             buttonNext.Visibility = Visibility.Collapsed;
             buttonBackSpace.Visibility = Visibility.Collapsed;
             button_View_Result.Visibility = Visibility.Collapsed;
@@ -77,7 +84,6 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             CollapsedAllPicsAndVisiblityFirstTestPics();
             HiddenAllPicsChecked();
 
-            dispatcherTimer.Tick += new EventHandler(LabelTimer);
             dispatcherTimer.Start();
         }
 
@@ -128,17 +134,26 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             if (finishTime == "00:00")
                 countOfTestsNotPassed = (byte)cl.GetCountthisNumberInArr(listAllSelectedPicsByUser.ToArray(), 0);
 
-            isUserErrors = !cl.ArrItemsEqualswiThoutSorting(arrOfCorrectAnswersPics, listAllSelectedPicsByUser.ToArray());
+
+            if (listAllSelectedPicsByUser.Count != 0)
+                isUserErrors = !cl.ArrItemsEqualswiThoutSorting(cl.CopyPartOfArrayElements(arrOfCorrectAnswersPics, listAllSelectedPicsByUser.Count), listAllSelectedPicsByUser.ToArray());
+
 
             if (isUserErrors)
-                listOfIncorrectlySelectedUserPics = cl.GetArraysNon_validIndexsAndNumbers(arrOfCorrectAnswersPics, listAllSelectedPicsByUser.ToArray(), out arrWrongSelectedUserAnswersByLevel).ToList();
+                listOfIncorrectlySelectedUserPics = cl.GetArraysNon_validIndexsAndNumbers(cl.CopyPartOfArrayElements(arrOfCorrectAnswersPics, listAllSelectedPicsByUser.Count), listAllSelectedPicsByUser.ToArray(), out arrWrongSelectedUserAnswersByLevel).ToList();
             else
             {
                 listOfIncorrectlySelectedUserPics = null;
                 arrWrongSelectedUserAnswersByLevel = null;
             }
 
-            NavigationService.Navigate(new RavenTestIQResultPage());
+            if (ravenTestIQResultPage == null)
+                ravenTestIQResultPage = new RavenTestIQResultPage();
+            else
+            if (ravenTestIQResultPage != null)
+                ((INewRavenTestIQResultPage)ravenTestIQResultPage).CreateNewResultPageForNewUser();
+
+            NavigationService.Navigate(ravenTestIQResultPage);
         }
 
         /// <summary>

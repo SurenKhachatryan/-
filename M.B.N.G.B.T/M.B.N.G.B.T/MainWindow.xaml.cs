@@ -7,6 +7,8 @@ using M.B.N.G.B.T.ConcentrationDefinitionTest;
 using M.B.N.G.B.T.WalterSchulteTest;
 using M.B.N.G.B.T.EmilKraepelinTest;
 using M.B.N.G.B.T.RavenTest_IQ;
+using System.Diagnostics;
+using System.Threading;
 
 namespace M.B.N.G.B.T
 {
@@ -17,9 +19,18 @@ namespace M.B.N.G.B.T
     {
         public MainWindow()
         {
+            if (Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length > 1)
+                Thread.Sleep(500);
+
+            if (Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length > 1)
+            {
+                MessageBox.Show("Ծրագիրը արդեն բաց է։", "Մ․Բ․Ն․Գ․Բ․Թ․");
+                Close();
+            }
+
             InitializeComponent();
         }
-        
+
         private void Button_Visual_Memory_Test(object sender, RoutedEventArgs e)
         {
             new VisualMemoryTestRuleWindow().Show();

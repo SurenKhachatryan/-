@@ -32,7 +32,7 @@
         </Viewbox>
         <Viewbox Grid.Row="3" Grid.Column="3" HorizontalAlignment="Right" Grid.ColumnSpan="2">
             <WrapPanel  Height="36"  Width="554">
-                <Button x:Name="buttonClickViewErrorsUser" Margin="0,0,12,0" Click="Button_Click_View_Errors_User" Content="Տեսնել սխալները" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Grid.Column="10" Grid.Row="7" Height="36" Width="174">
+                <Button x:Name="buttonClickViewErrorsUser" Visibility="Hidden" Margin="0,0,12,0" Click="Button_Click_View_Errors_User" Content="Տեսնել սխալները" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Grid.Column="10" Grid.Row="7" Height="36" Width="174">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                             <GradientStop Color="Black" Offset="1"/>
@@ -48,6 +48,7 @@
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>
+                
                 <Button x:Name="buttonClickExitMain" Click="Button_Click_Exit_Main" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36"  Width="185" >
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">

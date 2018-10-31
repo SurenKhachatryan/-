@@ -688,5 +688,18 @@ namespace ClassLibrary
                     counter++;
             return counter;
         }
+        /// <summary>
+        /// скопировать часть элементов массива
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <param name="length"></param>
+        /// <returns></returns>
+        public byte[] CopyPartOfArrayElements(byte[] arr, int length)
+        {
+            List<byte> ls = new List<byte>();
+            for (int i = 0; i < length; i++)
+                ls.Add(arr[i]);
+            return ls.ToArray();
+        }
     }
 }

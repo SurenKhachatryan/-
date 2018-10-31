@@ -9,7 +9,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
     /// <summary>
     /// Логика взаимодействия для RavenTestIQViewUserErrorsPage.xaml
     /// </summary>
-    public partial class RavenTestIQViewUserErrorsPage : Page
+    public partial class RavenTestIQViewUserErrorsPage : Page , INewRavenTestIQViewUserErrorsPage
     {
 
         private List<Image> listPicAllTests = new List<Image>();
@@ -23,6 +23,18 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         public RavenTestIQViewUserErrorsPage()
         {
             InitializeComponent();
+            CreateNewViewUserErrorsPageForNewUser();
+        }
+
+        /// <summary>
+        /// Этот метод обнулировает все данные в классе RavenTestIQViewUserErrorsPage
+        /// для нового пользователя (как новое окно)
+        /// </summary>
+        public void CreateNewViewUserErrorsPageForNewUser()
+        {
+            buttonBackSpace.Visibility = Visibility.Hidden;
+            buttonNext.Visibility = Visibility.Hidden;
+            startPage = 0;
             LabelErrorTest.Content = $"1/{(RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length - RavenTestIQTablePage.CountOfTestsNotPassed)}";
 
             if ((RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length - RavenTestIQTablePage.CountOfTestsNotPassed) > 1)
@@ -41,7 +53,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         /// </summary>
         private void button_Click_Backwards(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new RavenTestIQResultPage());
+            NavigationService.Navigate(RavenTestIQTablePage.RavenTestIQResultPage as RavenTestIQResultPage);
         }
 
         /// <summary>

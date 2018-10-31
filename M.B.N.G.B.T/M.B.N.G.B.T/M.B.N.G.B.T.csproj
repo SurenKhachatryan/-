@@ -90,6 +90,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="RavenTest_IQ\INewRavenIQTestTablePage.cs" />
+    <Compile Include="RavenTest_IQ\INewRavenTestIQResultPage.cs" />
+    <Compile Include="RavenTest_IQ\INewRavenTestIQViewUserErrorsPage.cs" />
     <Compile Include="RavenTest_IQ\RavenTestIQResultPage.xaml.cs">
       <DependentUpon>RavenTestIQResultPage.xaml</DependentUpon>
     </Compile>
