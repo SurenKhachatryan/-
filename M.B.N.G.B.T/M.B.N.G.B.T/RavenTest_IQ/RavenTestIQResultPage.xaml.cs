@@ -10,6 +10,11 @@ namespace M.B.N.G.B.T.RavenTest_IQ
     /// </summary>
     public partial class RavenTestIQResultPage : Page, INewRavenTestIQResultPage
     {
+        public static byte[] arrIQAccordingToTheNorm = new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                                                                    62, 65, 65, 66, 67, 69, 70, 71, 72, 73, 75, 76, 77, 79, 80, 82, 83,
+                                                                    84, 86, 87, 88, 90, 91, 92, 94, 95, 96, 98, 99, 100, 102, 104, 106,
+                                                                    108, 110, 112, 114, 116, 118, 120, 122, 124, 126, 128, 130, 140};
+
         private static object ravenTestIQViewUserErrorsPage;
         public static object RavenTestIQViewUserErrorsPage { get { return ravenTestIQViewUserErrorsPage; } }
 
