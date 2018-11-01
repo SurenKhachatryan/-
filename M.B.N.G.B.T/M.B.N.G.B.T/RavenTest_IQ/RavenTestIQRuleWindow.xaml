@@ -11,26 +11,39 @@
     </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="57*"/>
-            <RowDefinition Height="80*"/>
-            <RowDefinition Height="28*"/>
-            <RowDefinition Height="459*"/>
-            <RowDefinition Height="42*"/>
-            <RowDefinition Height="36*"/>
-            <RowDefinition Height="78*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="265*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="45*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="70*"/>
-            <ColumnDefinition Width="185*"/>
-            <ColumnDefinition Width="789*"/>
-            <ColumnDefinition Width="185*"/>
-            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="114*"/>
+            <ColumnDefinition Width="245*"/>
+            <ColumnDefinition Width="241*"/>
+            <ColumnDefinition Width="114*"/>
+            <ColumnDefinition Width="43*"/>
         </Grid.ColumnDefinitions>
-        <Viewbox  VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="5">
+
+        <Viewbox Grid.Column="3" Grid.Row="5" Grid.RowSpan="2"  HorizontalAlignment="Right">
+            <WrapPanel Height="29" Grid.Column="3" Grid.Row="5" Grid.RowSpan="2" VerticalAlignment="Top">
+                <Label Content="Ձեր տարիքը *" FontSize="15" Foreground="Snow" FontFamily="Sylfaen" Width="107" Margin="0,0,5,0"/>
+                <Image x:Name="Pic_Left_Length" Source="pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Left_Length.png" Margin="0,5,2,0" Cursor="Hand" MouseLeftButtonUp="Pic_Left_Right_MouseLeftButtonUp" MouseEnter="Pic_Left_Right_MouseEnter" MouseLeave="Pic_Left_Right_MouseLeave"/>
+                <Image x:Name="Pic_Left" Source="pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Left.png" Margin="0,5,2,0" Cursor="Hand" MouseLeftButtonUp="Pic_Left_Right_MouseLeftButtonUp" MouseEnter="Pic_Left_Right_MouseEnter" MouseLeave="Pic_Left_Right_MouseLeave"/>
+                <Label x:Name="LabelAge" Content="14" FontSize="15" Foreground="Snow" Margin="0,0,2,0" FontFamily="Sylfaen"/>
+                <Image x:Name="Pic_Right" Source="pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Right.png" Margin="0,5,2,0" Cursor="Hand" MouseLeftButtonUp="Pic_Left_Right_MouseLeftButtonUp" MouseEnter="Pic_Left_Right_MouseEnter" MouseLeave="Pic_Left_Right_MouseLeave"/>
+                <Image x:Name="Pic_Right_Length" Source="pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Right_Lenght.png" Margin="0,5,0,0" Cursor="Hand" MouseLeftButtonUp="Pic_Left_Right_MouseLeftButtonUp" MouseEnter="Pic_Left_Right_MouseEnter" MouseLeave="Pic_Left_Right_MouseLeave"/>
+            </WrapPanel>
+        </Viewbox>
+        <Viewbox  VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="6">
             <Label Content="Ռավենի թեստ (IQ)" FontSize="48" Foreground="Snow"  FontFamily="Sylfaen"  Height="80" Width="429"/>
         </Viewbox>
 
-        <Viewbox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left">
+        <Viewbox Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left">
             <Button Click="Button_Exit_The_Main" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Width="185" Height="36" >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -41,7 +54,7 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Row="5" Grid.Column="3" HorizontalAlignment="Right" >
+        <Viewbox Grid.Row="6" Grid.Column="4" HorizontalAlignment="Right">
             <Button Click="Button_Start_Test" Content="Սկսել Թեստը" FontSize="20" Width="185" Height="36" FontFamily="Sylfaen"  Foreground="White" Cursor="Hand">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -52,7 +65,7 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3">
+        <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4">
             <ScrollViewer  Width="1160" Height="459">
                 <TextBlock TextWrapping="Wrap"  Foreground="Snow" FontSize="30" FontFamily="Sylfaen">
                   <Run Text=""/>
@@ -61,6 +74,6 @@
                 </TextBlock>
             </ScrollViewer>
         </Viewbox>
-        <Frame Name="Main"  RenderTransformOrigin="0,0" Grid.RowSpan="19" NavigationUIVisibility="Hidden" Grid.ColumnSpan="5" />
+        <Frame Name="Main"  RenderTransformOrigin="0,0" Grid.RowSpan="8" NavigationUIVisibility="Hidden" Grid.ColumnSpan="6" />
     </Grid>
 </Window>

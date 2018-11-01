@@ -1,5 +1,9 @@
 ﻿using System.Diagnostics;
 using System.Windows;
+using System.Windows.Input;
+using System.Windows.Controls;
+using System;
+using System.Windows.Media.Imaging;
 
 namespace M.B.N.G.B.T.RavenTest_IQ
 {
@@ -9,7 +13,9 @@ namespace M.B.N.G.B.T.RavenTest_IQ
     public partial class RavenTestIQRuleWindow : Window
     {
         private static object ravenTestIQTablePage;
+        public static byte age;
 
+        public static byte Age { get { return age; } }
         public static object RavenTestIQTablePage { get { return ravenTestIQTablePage; } }
         public RavenTestIQRuleWindow()
         {
@@ -30,6 +36,55 @@ namespace M.B.N.G.B.T.RavenTest_IQ
                 ((INewRavenIQTestTablePage)ravenTestIQTablePage).CreateNewPageTestRavenForNewUser();
 
             Main.NavigationService.Navigate(ravenTestIQTablePage);
+        }
+
+        private void Pic_Left_Right_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            age = Convert.ToByte(LabelAge.Content);
+
+            if (((Image)sender).Name == "Pic_Left" && age != 6)
+                --age;
+            else
+            if (((Image)sender).Name == "Pic_Right" && age != 99)
+                ++age;
+            else
+            if (((Image)sender).Name == "Pic_Left_Length" && (age - 10) >= 6)
+                age -= 10; 
+            else
+            if (((Image)sender).Name == "Pic_Right_Length" && (age + 10) <= 99)
+                age += 10;
+
+            LabelAge.Content = age;
+        }
+
+        private void Pic_Left_Right_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (((Image)sender).Name == "Pic_Right")
+                Pic_Right.Source = new BitmapImage(new Uri(@"pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Right_Color.png"));
+            else
+            if (((Image)sender).Name == "Pic_Left")
+                Pic_Left.Source = new BitmapImage(new Uri(@"pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Left_Color.png"));
+            else
+            if (((Image)sender).Name == "Pic_Right_Length")
+                Pic_Right_Length.Source = new BitmapImage(new Uri(@"pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Right_Lenght_Color.png"));
+            else
+            if (((Image)sender).Name == "Pic_Left_Length")
+                Pic_Left_Length.Source = new BitmapImage(new Uri(@"pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Left_Length_Color.png"));
+        }
+
+        private void Pic_Left_Right_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (((Image)sender).Name == "Pic_Right")
+                Pic_Right.Source = new BitmapImage(new Uri(@"pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Right.png"));
+            else
+            if (((Image)sender).Name == "Pic_Left")
+                Pic_Left.Source = new BitmapImage(new Uri(@"pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Left.png"));
+            else
+            if (((Image)sender).Name == "Pic_Right_Length")
+                Pic_Right_Length.Source = new BitmapImage(new Uri(@"pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Right_Lenght.png"));
+            else
+            if (((Image)sender).Name == "Pic_Left_Length")
+                Pic_Left_Length.Source = new BitmapImage(new Uri(@"pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Left_Length.png"));
         }
     }
 }

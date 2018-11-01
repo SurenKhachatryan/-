@@ -1909,5 +1909,29 @@
   <ItemGroup>
     <None Include="Resources\Static\error.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Static\Buttons Right and Left\Right_Color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Static\Buttons Right and Left\Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Static\Buttons Right and Left\Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Static\Buttons Right and Left\Left_Color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Static\Buttons Right and Left\Right_Lenght.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Static\Buttons Right and Left\Left_Length_Color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Static\Buttons Right and Left\Right_Lenght_Color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Static\Buttons Right and Left\Left_Length.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
