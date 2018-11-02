@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿using ClassLibrary;
+using System;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
@@ -10,12 +12,14 @@ namespace M.B.N.G.B.T.RavenTest_IQ
     /// </summary>
     public partial class RavenTestIQResultPage : Page, INewRavenTestIQResultPage
     {
-        public static readonly string[] arrIQ_16_30 = { "-", "-", "-", "-", "-", "-", "-", "-", "-", "55", "57", "58",
-                                                        "59", "61", "62", "64", "65", "66", "67", "69","70", "71",
-                                                        "72", "74", "75", "76", "77", "79", "80", "82","83", "84",
-                                                        "86", "87", "89", "90", "91", "92", "94", "95","96", "97",
-                                                        "99", "100", "102", "104", "106", "108", "110","112", "114",
-                                                        "116", "118", "120", "122", "124", "126", "128", "130", "130"};
+        ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
+
+        public static readonly byte[] arrIQ_16_30 = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 55, 57, 58,
+                                                      59, 61, 62, 64, 65, 66, 67, 69,70, 71,
+                                                      72, 74, 75, 76, 77, 79, 80, 82,83, 84,
+                                                      86, 87, 89, 90, 91, 92, 94, 95,96, 97,
+                                                      99, 100, 102, 104, 106, 108, 110, 112, 114,
+                                                      116, 118, 120, 122, 124, 126, 128, 130, 130};
 
         public static readonly byte[] arrIQ_13_5 = { 46, 47, 49, 50, 51, 52, 54, 55, 56, 57,
                                                      59, 60, 61, 62, 64, 65, 66, 67, 69, 70,
@@ -46,7 +50,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
                                                    75, 76, 77, 79, 80, 81, 83, 84, 85, 87,
                                                    88, 90, 91, 92, 93, 95, 96, 97, 99, 100,
                                                    102, 104, 106, 108, 110, 112, 114, 116,
-                                                   118, 120, 122, 124, 126, 128, 130, 132, 
+                                                   118, 120, 122, 124, 126, 128, 130, 132,
                                                    134, 136, 138, 140 };
 
         public static readonly byte[] arrIQ_11_5 = { 50, 51, 53, 54, 56, 57, 58, 60, 61, 62,
@@ -138,6 +142,87 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             else
             if (ravenTestIQViewUserErrorsPage != null && RavenTestIQTablePage.IsUserErrors)
                 ((INewRavenTestIQViewUserErrorsPage)ravenTestIQViewUserErrorsPage).CreateNewViewUserErrorsPageForNewUser();
+
+            InitializeLabels();
+        }
+
+        private void InitializeLabels()
+        {
+            int tempIQ = 0;
+            int rightAnswers = ((60 - RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length) - RavenTestIQTablePage.CountOfTestsNotPassed);
+
+            if (Convert.ToByte(RavenTestIQRuleWindow.Age) <= 13.5)
+            {
+                switch (RavenTestIQRuleWindow.Age)
+                {
+                    case "8":
+                        tempIQ = arrIQ_8[(rightAnswers - 1)];
+                        break;
+                    case "8,5":
+                        tempIQ = arrIQ_8_5[(rightAnswers - 1)];
+                        break;
+                    case "9":
+                        tempIQ = arrIQ_9[(rightAnswers - 1)];
+                        break;
+                    case "9,5":
+                        tempIQ = arrIQ_9_5[(rightAnswers - 1)];
+                        break;
+                    case "10":
+                        tempIQ = arrIQ_10[(rightAnswers - 1)];
+                        break;
+                    case "10,5":
+                        tempIQ = arrIQ_10_5[(rightAnswers - 1)];
+                        break;
+                    case "11":
+                        tempIQ = arrIQ_11[(rightAnswers - 1)];
+                        break;
+                    case "11,5":
+                        tempIQ = arrIQ_11_5[(rightAnswers - 1)];
+                        break;
+                    case "12":
+                        tempIQ = arrIQ_12[(rightAnswers - 1)];
+                        break;
+                    case "12,5":
+                        tempIQ = arrIQ_12_5[(rightAnswers - 1)];
+                        break;
+                    case "13":
+                        tempIQ = arrIQ_13[(rightAnswers - 1)];
+                        break;
+                    case "13,5":
+                        tempIQ = arrIQ_13_5[(rightAnswers - 1)];
+                        break;
+                }
+            }
+            else
+            if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 13.5 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 30)
+                tempIQ = arrIQ_16_30[(rightAnswers - 1)];
+            else
+            if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 30 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 35)
+                tempIQ = ((arrIQ_16_30[(rightAnswers - 1)] * 100) / 97);
+            else
+            if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 35 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 40)
+                tempIQ = ((arrIQ_16_30[(rightAnswers - 1)] * 100) / 93);
+            else
+            if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 40 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 45)
+                tempIQ = ((arrIQ_16_30[(rightAnswers - 1)] * 100) / 88);
+            else
+            if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 45 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 50)
+                tempIQ = ((arrIQ_16_30[(rightAnswers - 1)] * 100) / 82);
+            else
+            if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 50 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 55)
+                tempIQ = ((arrIQ_16_30[(rightAnswers - 1)] * 100) / 76);
+            else
+            if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 55 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 60 ||
+                Convert.ToByte(RavenTestIQRuleWindow.Age) > 60)
+                tempIQ = ((arrIQ_16_30[(rightAnswers - 1)] * 100) / 70);
+
+            labelRightAnswers.Content = $"Ճիշտ պատասխանների քանակը = {rightAnswers}";
+            labelPercent.Content = $"Տոկոս = {cl.DecreaseInNumbersAfterTheDecimalPoint(((Convert.ToDouble(60) - Convert.ToDouble(RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length) - Convert.ToDouble(RavenTestIQTablePage.CountOfTestsNotPassed))) * Convert.ToDouble(100) / Convert.ToDouble(60), 2)}%";
+            if (tempIQ == 0)
+                labelIQ.Content = $"IQ = -";
+            else
+               labelIQ.Content = $"IQ = {tempIQ}";
+            
         }
 
         private void Button_Click_View_Errors_User(object sender, RoutedEventArgs e)

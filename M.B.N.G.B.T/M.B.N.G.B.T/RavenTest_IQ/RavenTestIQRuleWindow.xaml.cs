@@ -13,9 +13,9 @@ namespace M.B.N.G.B.T.RavenTest_IQ
     public partial class RavenTestIQRuleWindow : Window
     {
         private static object ravenTestIQTablePage;
-        public static byte age;
+        private static string age;
 
-        public static byte Age { get { return age; } }
+        public static string Age { get { return age; } }
         public static object RavenTestIQTablePage { get { return ravenTestIQTablePage; } }
         public RavenTestIQRuleWindow()
         {
@@ -40,19 +40,8 @@ namespace M.B.N.G.B.T.RavenTest_IQ
 
         private void Pic_Left_Right_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            age = Convert.ToByte(LabelAge.Content);
-
-            if (((Image)sender).Name == "Pic_Left" && age != 6)
-                --age;
-            else
-            if (((Image)sender).Name == "Pic_Right" && age != 99)
-                ++age;
-            else
-            if (((Image)sender).Name == "Pic_Left_Length" && (age - 10) >= 6)
-                age -= 10; 
-            else
-            if (((Image)sender).Name == "Pic_Right_Length" && (age + 10) <= 99)
-                age += 10;
+            age = LabelAge.Content.ToString();
+            
 
             LabelAge.Content = age;
         }
