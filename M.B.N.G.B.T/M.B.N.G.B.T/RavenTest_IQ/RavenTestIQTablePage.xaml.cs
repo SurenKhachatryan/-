@@ -132,7 +132,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             }
 
             if (finishTime == "00:00")
-                countOfTestsNotPassed = (byte)cl.GetCountthisNumberInArr(listAllSelectedPicsByUser.ToArray(), 0);
+                countOfTestsNotPassed = Convert.ToByte(60 - listAllSelectedPicsByUser.Count);
 
 
             if (listAllSelectedPicsByUser.Count != 0)
@@ -186,7 +186,15 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             }
 
             if (minute <= 0 && second <= 0)
-                FinishTest();
+            {
+                if (listAllSelectedPicsByUser.Count != 0)
+                    FinishTest();
+                else
+                {
+                    NavigationService.Navigate(null);
+                    dispatcherTimer.Stop();
+                }
+            }
             else
                 second--;
         }

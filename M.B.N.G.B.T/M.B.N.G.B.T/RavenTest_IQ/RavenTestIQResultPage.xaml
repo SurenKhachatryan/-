@@ -13,35 +13,83 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="70*"/>
-            <ColumnDefinition Width="468*"/>
-            <ColumnDefinition Width="56*"/>
-            <ColumnDefinition Width="82*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="450*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="122*"/>
             <ColumnDefinition Width="87*"/>
-            <ColumnDefinition Width="467*"/>
+            <ColumnDefinition Width="117*"/>
+            <ColumnDefinition Width="263*"/>
+            <ColumnDefinition Width="87*"/>
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="24*"/>
-            <RowDefinition Height="28*"/>
-            <RowDefinition Height="79*"/>
-            <RowDefinition Height="202*"/>
-            <RowDefinition Height="18*"/>
-            <RowDefinition Height="39*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="137*"/>
+            <RowDefinition Height="72*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="229*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="78*"/>
         </Grid.RowDefinitions>
 
-        <Viewbox Grid.ColumnSpan="3" Grid.Column="2" Grid.Row="1">
+        <Viewbox Grid.ColumnSpan="3" Grid.Column="3" Grid.Row="1">
             <Label FontSize="36" Content="Արդյունքներ" Foreground="White"  FontFamily="Sylfaen" Height="56" Width="225"/>
         </Viewbox>
-        
-        <Viewbox Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="1">
-            <WrapPanel Width="524">
-                <Label x:Name="labelRightAnswers" FontSize="30" Content="Ճիշտ պատասխանների քանակը = -" Foreground="White" FontFamily="Sylfaen"/>
-                <Label x:Name="labelPercent" FontSize="30" Content="Տոկոս = -" Foreground="White" FontFamily="Sylfaen" Margin="0,0,310,0"/>
-                <Label x:Name="labelIQ" FontSize="30" Content="IQ = -" Foreground="White"  FontFamily="Sylfaen"/>
+
+        <Viewbox Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Left">
+            <WrapPanel  Width="466">
+                <Label FontSize="22" Content="IQ տոկոսային ցուցանիշ" Foreground="White" HorizontalContentAlignment="Center" FontFamily="Sylfaen" Width="465" Height="43"/>
+                <Label x:Name="IQ_Percent_1_1" FontSize="18" Content="95%  և բարձր" Foreground="White" BorderThickness="2,2,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="127"/>
+                <Label x:Name="IQ_Percent_1_2" FontSize="18" Content="Բարձր  զարգացած ինտելեկտ " Foreground="White" BorderThickness="2,2,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="338"/>
+                <Label x:Name="IQ_Percent_2_1" FontSize="18" Content="75-95%" Foreground="White" BorderThickness="2,0,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="127"/>
+                <Label x:Name="IQ_Percent_2_2" FontSize="18" Content="Առանձնահատուկ ինտելեկտ" Foreground="White" BorderThickness="2,0,2,2" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="338"/>
+                <Label x:Name="IQ_Percent_3_1" FontSize="18" Content="25-74%" Foreground="White" BorderThickness="2,0,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="127"/>
+                <Label x:Name="IQ_Percent_3_2" FontSize="18" Content="Միջին ինտելեկտ" Foreground="White" BorderThickness="2,0,2,2" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="338"/>
+                <Label x:Name="IQ_Percent_4_1" FontSize="18" Content="5-24%" Foreground="White" BorderThickness="2,0,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="127"/>
+                <Label x:Name="IQ_Percent_4_2" FontSize="18" Content="Միջինից ցածր ինտելեկտ" Foreground="White" BorderThickness="2,0,2,2" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="338"/>
+                <Label x:Name="IQ_Percent_5_1" FontSize="18" Content="5% և ցածր" Foreground="White" BorderThickness="2,0,2,2" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="127"/>
+                <Label x:Name="IQ_Percent_5_2" FontSize="18" Content="Թերի ինտելեկտուալ ունակություններ" Foreground="White" BorderThickness="2,0,2,2" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="338"/>
             </WrapPanel>
         </Viewbox>
-        
-        <Viewbox Grid.Row="4" Grid.Column="4" HorizontalAlignment="Right" Grid.ColumnSpan="2">
+
+        <Viewbox Grid.ColumnSpan="3" Grid.Column="5" Grid.Row="3" Grid.RowSpan="4" HorizontalAlignment="Right">
+            <WrapPanel  Width="466">
+                <Label FontSize="22" Content="IQ տարիքային ցուցանիշ" Foreground="White" HorizontalContentAlignment="Center" FontFamily="Sylfaen" Width="465" Height="43"/>
+                <Label x:Name="IQ_Age_1_1" FontSize="18" Content="140-ից բարձր" Foreground="White" BorderThickness="2,2,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="127"/>
+                <Label x:Name="IQ_Age_1_2" FontSize="18" Content="Առանձնահատուկ ինտելեկտ" Foreground="White" BorderThickness="2,2,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="338"/>
+                <Label x:Name="IQ_Age_2_1" FontSize="18" Content="121-140" Foreground="White" BorderThickness="2,0,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="127"/>
+                <Label x:Name="IQ_Age_2_2" FontSize="18" Content="Ինտելեկտի բարձր մակարդակ" Foreground="White" BorderThickness="2,0,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="338"/>
+                <Label x:Name="IQ_Age_3_1" FontSize="18" Content="111-120" Foreground="White" BorderThickness="2,0,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="127"/>
+                <Label x:Name="IQ_Age_3_2" FontSize="18" Content="Ինտելեկտի միջինից բարձր մակարդակ" Foreground="White" BorderThickness="2,0,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="338"/>
+                <Label x:Name="IQ_Age_4_1" FontSize="18" Content="91-110" Foreground="White" BorderThickness="2,0,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="127"/>
+                <Label x:Name="IQ_Age_4_2" FontSize="18" Content="Ինտելեկտի միջին մակարդակ" Foreground="White" BorderThickness="2,0,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="338"/>
+                <Label x:Name="IQ_Age_5_1" FontSize="18" Content="81-90" Foreground="White" BorderThickness="2,0,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="127"/>
+                <Label x:Name="IQ_Age_5_2" FontSize="18" Content="Ինտելեկտի միջինից ցածր մակարդակ" Foreground="White" BorderThickness="2,0,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="338"/>
+                <Label x:Name="IQ_Age_6_1" FontSize="18" Content="71-80" Foreground="White" BorderThickness="2,0,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="127"/>
+                <Label x:Name="IQ_Age_6_2" FontSize="18" Content="Ինտելեկտի ցածր մակարդակ " Foreground="White" BorderThickness="2,0,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="338"/>
+                <Label x:Name="IQ_Age_7_1" FontSize="18" Content="51-70" Foreground="White" BorderThickness="2,0,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="127"/>
+                <Label x:Name="IQ_Age_7_2" FontSize="18" Content="Թուլամտության ցածր աստիճան" Foreground="White" BorderThickness="2,0,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="338"/>
+                <Label x:Name="IQ_Age_8_1" FontSize="18" Content="21-50" Foreground="White" BorderThickness="2,0,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="127"/>
+                <Label x:Name="IQ_Age_8_2" FontSize="18" Content="Թուլամտության միջին աստիճան" Foreground="White" BorderThickness="2,0,2,1" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="338"/>
+                <Label x:Name="IQ_Age_9_1" FontSize="18" Content="0-20" Foreground="White" BorderThickness="2,0,2,2" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="127"/>
+                <Label x:Name="IQ_Age_9_2" FontSize="18" Content="Թուլամտության խորը աստիճան" Foreground="White" BorderThickness="2,0,2,2" BorderBrush="Black" FontFamily="Sylfaen" Height="37" Width="338"/>
+            </WrapPanel>
+        </Viewbox>
+
+        <Viewbox Grid.Row="2" Grid.ColumnSpan="6" Grid.Column="1" HorizontalAlignment="Left" Grid.RowSpan="2">
+            <WrapPanel Width="810">
+                <Label x:Name="labelPercent" FontSize="30" Content="Ինտելեկտի զարգացման տոկոսային ցուցանիշը = -" Foreground="White" FontFamily="Sylfaen" Width="809"/>
+                <Label x:Name="labelRightAnswers" FontSize="30" Content="Ճիշտ պատասխանների քանակը = -" Foreground="White" FontFamily="Sylfaen" Width="809"/>
+                <Label x:Name="labelAge" FontSize="30" Content="Փորձարկվողի տարիքը = -" Foreground="White"  FontFamily="Sylfaen" Width="806"/>
+                <Label x:Name="labelIQ" FontSize="30" Content="IQ = -" Foreground="White"  FontFamily="Sylfaen" Width="806"/>
+            </WrapPanel>
+        </Viewbox>
+
+        <Viewbox Grid.Row="8" Grid.Column="5" HorizontalAlignment="Right" Grid.ColumnSpan="4">
             <WrapPanel  Height="36"  Width="554">
                 <Button x:Name="buttonClickViewErrorsUser" Visibility="Hidden" Margin="0,0,12,0" Click="Button_Click_View_Errors_User" Content="Տեսնել սխալները" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Grid.Column="10" Grid.Row="7" Height="36" Width="174">
                     <Button.Background>

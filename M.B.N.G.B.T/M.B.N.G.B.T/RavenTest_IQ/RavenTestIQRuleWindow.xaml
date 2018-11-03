@@ -33,12 +33,13 @@
             <WrapPanel Height="29" Grid.Column="3" Grid.Row="5" Grid.RowSpan="2" VerticalAlignment="Top">
                 <Label Content="Ձեր տարիքը *" FontSize="15" Foreground="Snow" FontFamily="Sylfaen" Width="107" Margin="0,0,5,0"/>
                 <Image x:Name="Pic_Left_Length" Source="pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Left_Length.png" Margin="0,5,2,0" Cursor="Hand" MouseLeftButtonUp="Pic_Left_Right_MouseLeftButtonUp" MouseEnter="Pic_Left_Right_MouseEnter" MouseLeave="Pic_Left_Right_MouseLeave"/>
-                <Image x:Name="Pic_Left" Source="pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Left.png" Margin="0,5,2,0" Cursor="Hand" MouseLeftButtonUp="Pic_Left_Right_MouseLeftButtonUp" MouseEnter="Pic_Left_Right_MouseEnter" MouseLeave="Pic_Left_Right_MouseLeave"/>
-                <Label x:Name="LabelAge" Content="14" FontSize="15" Foreground="Snow" Margin="0,0,2,0" FontFamily="Sylfaen"/>
+                <Image x:Name="Pic_Left" Source="pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Left.png" Margin="0,5,0,0" Cursor="Hand" MouseLeftButtonUp="Pic_Left_Right_MouseLeftButtonUp" MouseEnter="Pic_Left_Right_MouseEnter" MouseLeave="Pic_Left_Right_MouseLeave"/>
+                <Label x:Name="LabelAge" Content="13,5" HorizontalContentAlignment="Center" Width="38" FontSize="15" Foreground="Snow" FontFamily="Sylfaen"/>
                 <Image x:Name="Pic_Right" Source="pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Right.png" Margin="0,5,2,0" Cursor="Hand" MouseLeftButtonUp="Pic_Left_Right_MouseLeftButtonUp" MouseEnter="Pic_Left_Right_MouseEnter" MouseLeave="Pic_Left_Right_MouseLeave"/>
                 <Image x:Name="Pic_Right_Length" Source="pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Right_Lenght.png" Margin="0,5,0,0" Cursor="Hand" MouseLeftButtonUp="Pic_Left_Right_MouseLeftButtonUp" MouseEnter="Pic_Left_Right_MouseEnter" MouseLeave="Pic_Left_Right_MouseLeave"/>
             </WrapPanel>
         </Viewbox>
+        
         <Viewbox  VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="6">
             <Label Content="Ռավենի թեստ (IQ)" FontSize="48" Foreground="Snow"  FontFamily="Sylfaen"  Height="80" Width="429"/>
         </Viewbox>

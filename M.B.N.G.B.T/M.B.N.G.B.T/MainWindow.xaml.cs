@@ -20,7 +20,7 @@ namespace M.B.N.G.B.T
         public MainWindow()
         {
             if (Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length > 1)
-                Thread.Sleep(500);
+                Thread.Sleep(800);
 
             if (Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length > 1)
             {
@@ -70,7 +70,6 @@ namespace M.B.N.G.B.T
 
         private void Button_Test_Raven_IQ(object sender, RoutedEventArgs e)
         {
-            // MessageBox.Show("  Ուրեմն, երեխեք ջան, պատմեմ լսեք: Շինարարությունը սկսել եինք, բայց բանը բանից անցավ , Սաշիկր Եկավ 50/50 փաթեթի պայմանները ներկայացրեց ու ստիպված շինարարներիս կրճատեցի, բայց էդ էլ չփրկեց: Անցավ 1 ամիս ֆինանսը պրծավ  ու արդեն շինարարներս ազատվեցին գործից, ու ըտենց շինարարութունը կանգնեց , մեկ էլ մի օր հանկարծ  Աստված մի դուռ բացեց: Հեղափոխություն, նոր Վարչապետ, ու էդպես կապ հաստատեցի Վարչապետի հետ, հանդիպեցինք, խոսեցինք, ներկայացրեցի իրավիճակը ու մեր շատ սիրելի Նիկոլ հոպարը հովանավորներ գտավ, ովքեր կֆինանսավորեն մեր պրոեկտը , էնպես որ շուտով աշխատանքները կշարունակվեն և ավարտին կհասցվեն:))))", "Ավելի բարեկարգ երևան");
             new RavenTestIQRuleWindow().Show();
             Close();
         }

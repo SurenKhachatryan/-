@@ -9,7 +9,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
     /// <summary>
     /// Логика взаимодействия для RavenTestIQViewUserErrorsPage.xaml
     /// </summary>
-    public partial class RavenTestIQViewUserErrorsPage : Page , INewRavenTestIQViewUserErrorsPage
+    public partial class RavenTestIQViewUserErrorsPage : Page, INewRavenTestIQViewUserErrorsPage
     {
 
         private List<Image> listPicAllTests = new List<Image>();
@@ -35,9 +35,10 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             buttonBackSpace.Visibility = Visibility.Hidden;
             buttonNext.Visibility = Visibility.Hidden;
             startPage = 0;
-            LabelErrorTest.Content = $"1/{(RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length - RavenTestIQTablePage.CountOfTestsNotPassed)}";
 
-            if ((RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length - RavenTestIQTablePage.CountOfTestsNotPassed) > 1)
+            LabelErrorTest.Content = $"1/{RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length}";
+
+            if (RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length > 1)
                 buttonNext.Visibility = Visibility.Visible;
 
             if (listPicAllTests.Count == 0)
@@ -104,7 +105,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         {
             if (buttonName == "buttonNext")
             {
-                if ((startPage + 1) >= (RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length - RavenTestIQTablePage.CountOfTestsNotPassed))
+                if ((startPage + 1) >= (RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length))
                     buttonNext.Visibility = Visibility.Collapsed;
                 if (startPage != 0)
                     buttonBackSpace.Visibility = Visibility.Visible;
@@ -112,7 +113,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             else
             if (buttonName == "buttonBackSpace")
             {
-                if ((startPage + 1) < (RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length - RavenTestIQTablePage.CountOfTestsNotPassed))
+                if ((startPage + 1) < (RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length))
                     buttonNext.Visibility = Visibility.Visible;
                 if (startPage == 0)
                     buttonBackSpace.Visibility = Visibility.Collapsed;
@@ -131,7 +132,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
                 listPicAllTests[i].Visibility = Visibility.Collapsed;
                 listWarpPanelsPicsAllTests[i].Visibility = Visibility.Collapsed;
             }
-            LabelErrorTest.Content = $"{(startPage + 1)}/{RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length - RavenTestIQTablePage.CountOfTestsNotPassed}";
+            LabelErrorTest.Content = $"{(startPage + 1)}/{RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length}";
             listPicAllTests[RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage]].Visibility = Visibility.Visible;
             listWarpPanelsPicsAllTests[RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel[startPage]].Visibility = Visibility.Visible;
         }

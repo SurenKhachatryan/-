@@ -12,14 +12,20 @@ namespace M.B.N.G.B.T.RavenTest_IQ
     /// </summary>
     public partial class RavenTestIQRuleWindow : Window
     {
+
+        private double startAge;
+
         private static object ravenTestIQTablePage;
-        private static string age;
+        private static string age = "16";
 
         public static string Age { get { return age; } }
         public static object RavenTestIQTablePage { get { return ravenTestIQTablePage; } }
+
         public RavenTestIQRuleWindow()
         {
             InitializeComponent();
+            LabelAge.Content = age;
+            startAge = Convert.ToDouble(age);
         }
 
         private void Button_Exit_The_Main(object sender, RoutedEventArgs e)
@@ -40,10 +46,23 @@ namespace M.B.N.G.B.T.RavenTest_IQ
 
         private void Pic_Left_Right_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            age = LabelAge.Content.ToString();
-            
-
-            LabelAge.Content = age;
+            if (((Image)sender).Name == "Pic_Left" && startAge != 8 && startAge <= 14)
+                LabelAge.Content = (age = (startAge = startAge - 0.5d).ToString());
+            else
+            if (((Image)sender).Name == "Pic_Right" && startAge <= 13.5)
+                LabelAge.Content = (age = (startAge = startAge + 0.5d).ToString());
+            else
+            if (((Image)sender).Name == "Pic_Left" && startAge != 8)
+                LabelAge.Content = (age = (Convert.ToInt16(--startAge)).ToString());
+            else
+            if (((Image)sender).Name == "Pic_Right" && startAge != 99)
+                LabelAge.Content = (age = (Convert.ToInt16(++startAge)).ToString());
+            else
+            if (((Image)sender).Name == "Pic_Left_Length" && (startAge - 10) >= 8)
+                LabelAge.Content = (age = Convert.ToInt16(startAge -= 10).ToString());
+            else
+            if (((Image)sender).Name == "Pic_Right_Length" && (startAge + 10) <= 99)
+                LabelAge.Content = (age = Convert.ToInt16(startAge += 10).ToString());
         }
 
         private void Pic_Left_Right_MouseEnter(object sender, MouseEventArgs e)

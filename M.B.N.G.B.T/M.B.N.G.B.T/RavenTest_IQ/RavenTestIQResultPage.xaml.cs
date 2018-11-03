@@ -3,6 +3,7 @@ using System;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Navigation;
 
 namespace M.B.N.G.B.T.RavenTest_IQ
@@ -117,6 +118,9 @@ namespace M.B.N.G.B.T.RavenTest_IQ
                                                   139, 140, 142, 143, 144, 146, 147, 148, 149,
                                                   151, 152, 153, 155 };
 
+        private int iQ = 0;
+        private double percent = 0;
+
         private static object ravenTestIQViewUserErrorsPage;
         public static object RavenTestIQViewUserErrorsPage { get { return ravenTestIQViewUserErrorsPage; } }
 
@@ -146,95 +150,196 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             InitializeLabels();
         }
 
+        /// <summary>
+        /// Этот метод обрабатывает результаты и инициализирует label-и
+        /// </summary>
         private void InitializeLabels()
         {
-            int tempIQ = 0;
-            int rightAnswers = ((60 - RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length) - RavenTestIQTablePage.CountOfTestsNotPassed);
+            int rightAnswers = (60 - RavenTestIQTablePage.CountOfTestsNotPassed);
 
-            if (Convert.ToByte(RavenTestIQRuleWindow.Age) <= 13.5)
+            if (RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel != null)
+                rightAnswers = (rightAnswers - RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length);
+            if (rightAnswers != 0)
             {
-                switch (RavenTestIQRuleWindow.Age)
+                if (Convert.ToDouble(RavenTestIQRuleWindow.Age) <= 13.5d)
                 {
-                    case "8":
-                        tempIQ = arrIQ_8[(rightAnswers - 1)];
-                        break;
-                    case "8,5":
-                        tempIQ = arrIQ_8_5[(rightAnswers - 1)];
-                        break;
-                    case "9":
-                        tempIQ = arrIQ_9[(rightAnswers - 1)];
-                        break;
-                    case "9,5":
-                        tempIQ = arrIQ_9_5[(rightAnswers - 1)];
-                        break;
-                    case "10":
-                        tempIQ = arrIQ_10[(rightAnswers - 1)];
-                        break;
-                    case "10,5":
-                        tempIQ = arrIQ_10_5[(rightAnswers - 1)];
-                        break;
-                    case "11":
-                        tempIQ = arrIQ_11[(rightAnswers - 1)];
-                        break;
-                    case "11,5":
-                        tempIQ = arrIQ_11_5[(rightAnswers - 1)];
-                        break;
-                    case "12":
-                        tempIQ = arrIQ_12[(rightAnswers - 1)];
-                        break;
-                    case "12,5":
-                        tempIQ = arrIQ_12_5[(rightAnswers - 1)];
-                        break;
-                    case "13":
-                        tempIQ = arrIQ_13[(rightAnswers - 1)];
-                        break;
-                    case "13,5":
-                        tempIQ = arrIQ_13_5[(rightAnswers - 1)];
-                        break;
+                    switch (RavenTestIQRuleWindow.Age)
+                    {
+                        case "8":
+                            iQ = arrIQ_8[(rightAnswers - 1)];
+                            break;
+                        case "8,5":
+                            iQ = arrIQ_8_5[(rightAnswers - 1)];
+                            break;
+                        case "9":
+                            iQ = arrIQ_9[(rightAnswers - 1)];
+                            break;
+                        case "9,5":
+                            iQ = arrIQ_9_5[(rightAnswers - 1)];
+                            break;
+                        case "10":
+                            iQ = arrIQ_10[(rightAnswers - 1)];
+                            break;
+                        case "10,5":
+                            iQ = arrIQ_10_5[(rightAnswers - 1)];
+                            break;
+                        case "11":
+                            iQ = arrIQ_11[(rightAnswers - 1)];
+                            break;
+                        case "11,5":
+                            iQ = arrIQ_11_5[(rightAnswers - 1)];
+                            break;
+                        case "12":
+                            iQ = arrIQ_12[(rightAnswers - 1)];
+                            break;
+                        case "12,5":
+                            iQ = arrIQ_12_5[(rightAnswers - 1)];
+                            break;
+                        case "13":
+                            iQ = arrIQ_13[(rightAnswers - 1)];
+                            break;
+                        case "13,5":
+                            iQ = arrIQ_13_5[(rightAnswers - 1)];
+                            break;
+                    }
                 }
+                else
+                if (Convert.ToDouble(RavenTestIQRuleWindow.Age) > 13.5d && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 30)
+                    iQ = arrIQ_16_30[(rightAnswers - 1)];
+                else
+                if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 30 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 35)
+                    iQ = ((arrIQ_16_30[(rightAnswers - 1)] * 100) / 97);
+                else
+                if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 35 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 40)
+                    iQ = ((arrIQ_16_30[(rightAnswers - 1)] * 100) / 93);
+                else
+                if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 40 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 45)
+                    iQ = ((arrIQ_16_30[(rightAnswers - 1)] * 100) / 88);
+                else
+                if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 45 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 50)
+                    iQ = ((arrIQ_16_30[(rightAnswers - 1)] * 100) / 82);
+                else
+                if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 50 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 55)
+                    iQ = ((arrIQ_16_30[(rightAnswers - 1)] * 100) / 76);
+                else
+                if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 55 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 60 ||
+                    Convert.ToByte(RavenTestIQRuleWindow.Age) > 60)
+                    iQ = ((arrIQ_16_30[(rightAnswers - 1)] * 100) / 70);
             }
+
+            percent = 100;
+            if (RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel != null)
+                percent = cl.DecreaseInNumbersAfterTheDecimalPoint(((Convert.ToDouble(60) - Convert.ToDouble(RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length) - Convert.ToDouble(RavenTestIQTablePage.CountOfTestsNotPassed))) * Convert.ToDouble(100) / Convert.ToDouble(60), 2);
             else
-            if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 13.5 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 30)
-                tempIQ = arrIQ_16_30[(rightAnswers - 1)];
-            else
-            if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 30 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 35)
-                tempIQ = ((arrIQ_16_30[(rightAnswers - 1)] * 100) / 97);
-            else
-            if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 35 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 40)
-                tempIQ = ((arrIQ_16_30[(rightAnswers - 1)] * 100) / 93);
-            else
-            if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 40 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 45)
-                tempIQ = ((arrIQ_16_30[(rightAnswers - 1)] * 100) / 88);
-            else
-            if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 45 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 50)
-                tempIQ = ((arrIQ_16_30[(rightAnswers - 1)] * 100) / 82);
-            else
-            if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 50 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 55)
-                tempIQ = ((arrIQ_16_30[(rightAnswers - 1)] * 100) / 76);
-            else
-            if (Convert.ToByte(RavenTestIQRuleWindow.Age) > 55 && Convert.ToByte(RavenTestIQRuleWindow.Age) <= 60 ||
-                Convert.ToByte(RavenTestIQRuleWindow.Age) > 60)
-                tempIQ = ((arrIQ_16_30[(rightAnswers - 1)] * 100) / 70);
+                       if (RavenTestIQTablePage.CountOfTestsNotPassed != 0)
+                percent = cl.DecreaseInNumbersAfterTheDecimalPoint(((Convert.ToDouble(60) - Convert.ToDouble(RavenTestIQTablePage.CountOfTestsNotPassed))) * Convert.ToDouble(100) / Convert.ToDouble(60), 2);
 
             labelRightAnswers.Content = $"Ճիշտ պատասխանների քանակը = {rightAnswers}";
-            labelPercent.Content = $"Տոկոս = {cl.DecreaseInNumbersAfterTheDecimalPoint(((Convert.ToDouble(60) - Convert.ToDouble(RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length) - Convert.ToDouble(RavenTestIQTablePage.CountOfTestsNotPassed))) * Convert.ToDouble(100) / Convert.ToDouble(60), 2)}%";
-            if (tempIQ == 0)
+            labelAge.Content = $"Փորձարկվողի տարիքը = {RavenTestIQRuleWindow.Age}";
+            labelPercent.Content = $"Ինտելեկտի զարգացման տոկոսային ցուցանիշը = {percent}%";
+
+            if (iQ == 0)
                 labelIQ.Content = $"IQ = -";
             else
-               labelIQ.Content = $"IQ = {tempIQ}";
-            
+                labelIQ.Content = $"IQ = {iQ}";
+            PaintLabelsBackground(Paint.paintNull);
+            PaintLabelsBackground(Paint.paintColor);
         }
 
+        enum Paint
+        {
+            paintNull,
+            paintColor
+        }
+
+        /// <summary>
+        /// этот метод красит или удаляет краску background labels
+        /// </summary>
+        private void PaintLabelsBackground(Paint br)
+        {
+            if (br == Paint.paintColor)
+            {
+                if (iQ > 140)
+                    IQ_Age_1_1.Background = (IQ_Age_1_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FF008118")));
+                else
+                if (iQ >= 121 && iQ <= 140)
+                    IQ_Age_2_1.Background = (IQ_Age_2_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FF32A208")));
+                else
+                if (iQ >= 111 && iQ <= 120)
+                    IQ_Age_3_1.Background = (IQ_Age_3_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FF60BF01")));
+                else
+                if (iQ >= 91 && iQ <= 110)
+                    IQ_Age_4_1.Background = (IQ_Age_4_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFA2B20A")));
+                else
+                if (iQ >= 81 && iQ <= 90)
+                    IQ_Age_5_1.Background = (IQ_Age_5_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFB8A009")));
+                else
+                if (iQ >= 71 && iQ <= 80)
+                    IQ_Age_6_1.Background = (IQ_Age_6_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFCF7406")));
+                else
+                if (iQ >= 51 && iQ <= 70)
+                    IQ_Age_7_1.Background = (IQ_Age_7_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFFF5C10")));
+                else
+                if (iQ >= 21 && iQ <= 50 || iQ == 0)
+                    IQ_Age_8_1.Background = (IQ_Age_8_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFF7390F")));
+                else
+                if (iQ >= 0 && iQ <= 20)
+                    IQ_Age_9_1.Background = (IQ_Age_9_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFFF0505")));
+
+                if (percent > 95)
+                    IQ_Percent_1_1.Background = (IQ_Percent_1_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FF008118")));
+                else
+                if (percent >= 75 && percent <= 95)
+                    IQ_Percent_2_1.Background = (IQ_Percent_2_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FF60BF01")));
+                else
+                if (percent >= 25 && percent <= 74)
+                    IQ_Percent_3_1.Background = (IQ_Percent_3_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFB8A009")));
+                else
+                if (percent > 5 && percent <= 24)
+                    IQ_Percent_4_1.Background = (IQ_Percent_4_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFFF5C10")));
+                else
+                if (percent <= 5)
+                    IQ_Percent_5_1.Background = (IQ_Percent_5_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFFF0505")));
+            }
+            else
+            if (br == Paint.paintNull)
+            {
+                IQ_Age_1_1.Background = (IQ_Age_1_2.Background = null);
+                IQ_Age_2_1.Background = (IQ_Age_2_2.Background = null);
+                IQ_Age_3_1.Background = (IQ_Age_3_2.Background = null);
+                IQ_Age_4_1.Background = (IQ_Age_4_2.Background = null);
+                IQ_Age_5_1.Background = (IQ_Age_5_2.Background = null);
+                IQ_Age_6_1.Background = (IQ_Age_6_2.Background = null);
+                IQ_Age_7_1.Background = (IQ_Age_7_2.Background = null);
+                IQ_Age_8_1.Background = (IQ_Age_8_2.Background = null);
+                IQ_Age_9_1.Background = (IQ_Age_9_2.Background = null);
+                IQ_Percent_1_1.Background = (IQ_Percent_1_2.Background = null);
+                IQ_Percent_2_1.Background = (IQ_Percent_2_2.Background = null);
+                IQ_Percent_3_1.Background = (IQ_Percent_3_2.Background = null);
+                IQ_Percent_4_1.Background = (IQ_Percent_4_2.Background = null);
+                IQ_Percent_5_1.Background = (IQ_Percent_5_2.Background = null);
+            }
+        }
+
+        /// <summary>
+        /// переходит на страницу Ошибок пользователя
+        /// </summary>
         private void Button_Click_View_Errors_User(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(RavenTestIQViewUserErrorsPage as RavenTestIQViewUserErrorsPage);
         }
 
+        /// <summary>
+        /// возвращается на страницу правил
+        /// </summary>
         private void Button_Click_Try_Again(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(null);
         }
 
+        /// <summary>
+        /// выходит из теста и возвращается на главное меню выбор тестов
+        /// </summary>
         private void Button_Click_Exit_Main(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
