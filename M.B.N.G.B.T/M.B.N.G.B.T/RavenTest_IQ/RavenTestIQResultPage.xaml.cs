@@ -120,6 +120,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
 
         private int iQ = 0;
         private double percent = 0;
+        private int rightAnswers = 0;
 
         private static object ravenTestIQViewUserErrorsPage;
         public static object RavenTestIQViewUserErrorsPage { get { return ravenTestIQViewUserErrorsPage; } }
@@ -155,7 +156,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         /// </summary>
         private void InitializeLabels()
         {
-            int rightAnswers = (60 - RavenTestIQTablePage.CountOfTestsNotPassed);
+            rightAnswers = (60 - RavenTestIQTablePage.CountOfTestsNotPassed);
 
             if (RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel != null)
                 rightAnswers = (rightAnswers - RavenTestIQTablePage.ArrWrongSelectedUserAnswersByLevel.Length);
@@ -280,10 +281,10 @@ namespace M.B.N.G.B.T.RavenTest_IQ
                 if (iQ >= 51 && iQ <= 70)
                     IQ_Age_7_1.Background = (IQ_Age_7_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFFF5C10")));
                 else
-                if (iQ >= 21 && iQ <= 50 || iQ == 0)
+                if (iQ >= 21 && iQ <= 50 || iQ == 0 && rightAnswers != 0)
                     IQ_Age_8_1.Background = (IQ_Age_8_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFF7390F")));
                 else
-                if (iQ >= 0 && iQ <= 20)
+                if (iQ >= 0 && iQ <= 20 && rightAnswers == 0)
                     IQ_Age_9_1.Background = (IQ_Age_9_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFFF0505")));
 
                 if (percent > 95)

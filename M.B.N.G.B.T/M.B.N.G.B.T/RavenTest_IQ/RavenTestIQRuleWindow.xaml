@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:M.B.N.G.B.T.RavenTest_IQ"
         mc:Ignorable="d"
-        Title="Ռավենի թեստ (IQ)" Height="450" Width="800" WindowState="Maximized">
+        Title="Ռավենի թեստ (IQ)" Height="450" Width="800" WindowState="Maximized" WindowStyle="None" AllowsTransparency="True">
     <Window.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>
     </Window.Background>
@@ -31,7 +31,7 @@
 
         <Viewbox Grid.Column="3" Grid.Row="5" Grid.RowSpan="2"  HorizontalAlignment="Right">
             <WrapPanel Height="29" Grid.Column="3" Grid.Row="5" Grid.RowSpan="2" VerticalAlignment="Top">
-                <Label Content="Ձեր տարիքը *" FontSize="15" Foreground="Snow" FontFamily="Sylfaen" Width="107" Margin="0,0,5,0"/>
+                <Label Content="Ձեր տարիքը *" FontSize="15" Foreground="#FFF7C900" FontFamily="Sylfaen" Width="107" Margin="0,0,5,0"/>
                 <Image x:Name="Pic_Left_Length" Source="pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Left_Length.png" Margin="0,5,2,0" Cursor="Hand" MouseLeftButtonUp="Pic_Left_Right_MouseLeftButtonUp" MouseEnter="Pic_Left_Right_MouseEnter" MouseLeave="Pic_Left_Right_MouseLeave"/>
                 <Image x:Name="Pic_Left" Source="pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Left.png" Margin="0,5,0,0" Cursor="Hand" MouseLeftButtonUp="Pic_Left_Right_MouseLeftButtonUp" MouseEnter="Pic_Left_Right_MouseEnter" MouseLeave="Pic_Left_Right_MouseLeave"/>
                 <Label x:Name="LabelAge" Content="13,5" HorizontalContentAlignment="Center" Width="38" FontSize="15" Foreground="Snow" FontFamily="Sylfaen"/>
@@ -39,7 +39,7 @@
                 <Image x:Name="Pic_Right_Length" Source="pack://siteoforigin:,,,/Resources/Static/Buttons Right and Left/Right_Lenght.png" Margin="0,5,0,0" Cursor="Hand" MouseLeftButtonUp="Pic_Left_Right_MouseLeftButtonUp" MouseEnter="Pic_Left_Right_MouseEnter" MouseLeave="Pic_Left_Right_MouseLeave"/>
             </WrapPanel>
         </Viewbox>
-        
+
         <Viewbox  VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="6">
             <Label Content="Ռավենի թեստ (IQ)" FontSize="48" Foreground="Snow"  FontFamily="Sylfaen"  Height="80" Width="429"/>
         </Viewbox>
@@ -69,9 +69,22 @@
         <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4">
             <ScrollViewer  Width="1160" Height="459">
                 <TextBlock TextWrapping="Wrap"  Foreground="Snow" FontSize="30" FontFamily="Sylfaen">
-                  <Run Text=""/>
+                  <Run Text=" Թեստը  կազմված  է  60  փուլից: Յուրաքանչյուր  փուլում  փորձարկվողին  տրվում"/>
+                  <LineBreak/><Run Text="է  նկար, որում  պակասում  է  մասնիկ  և  նկարների  ցանկ: Փորձարկվողի  խնդիրն"/>
+                  <LineBreak/><Run Text="է  գտնել  այդ  նկարներից  այն  նկարը,  որը  տրամաբանորեն  հենց  այն   մասնիկն"/>
+                  <LineBreak/><Run Text="է,  որը  բացակայում  է  տրված  նկարում  և  նշել  մկնիկի  օգնուրյամբ:"/>
                   <LineBreak/>
-                  <Run Text=""/>
+                  <LineBreak/><Run Text=" Փորձարկվողն  ունի  20  րոպե  60  փուլերն  անցնելու  համար: Եթե  փորձարկվողը"/>
+                  <LineBreak/><Run Text="հասել  է  որևէ   փուլ   և   տրված   ժամանակը   ավարտին   է  մոտեցել,   ավտոմատ"/>
+                  <LineBreak/><Run Text="կերպով  թեստն  ավարտվում  է, բացվում  է  արդյունքների  էջ,  որտեղ  և  կարող  է"/>
+                  <LineBreak/><Run Text="տեսնել իր արդյունքները:"/>
+                  <LineBreak/>
+                  <LineBreak/><Run Text=" Սխալներ  ունենալու  դեպքում  փորձարկվողը  կարող   է  դիտել  դրանք, սեղմելով"/>
+                  <LineBreak/><Run Text="(Տեսնել սխալները) կոճակը  արդյունքների էջում: "/>
+                  <LineBreak/>
+                  <LineBreak/><Run Text="Պարտադիր  պայման" FontWeight="Bold" TextDecorations="Underline" Foreground="#FFF7C900"/>
+                              <Run Text=" -  Փորձարկվողը   մինչ   թեստը   սկսելը   պետք    է   նշի   իր" Foreground="#FFF7C900"/>
+                  <LineBreak/><Run Text="տարիքը,  հստակ  IQ ստանալու համար։" Foreground="#FFF7C900"/>
                 </TextBlock>
             </ScrollViewer>
         </Viewbox>

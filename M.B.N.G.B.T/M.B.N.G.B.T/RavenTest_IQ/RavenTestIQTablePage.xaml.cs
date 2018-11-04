@@ -31,7 +31,6 @@ namespace M.B.N.G.B.T.RavenTest_IQ
                                                                              3, 4, 3, 8, 7, 6, 5, 4, 1, 2, 5, 6,
                                                                              7, 6, 8, 2, 1, 5, 1, 3, 6, 2, 4, 5 };
         private static object ravenTestIQResultPage;
-        private static string finishTime = "00:00";
         private static bool isUserErrors = false;
         private static byte countOfTestsNotPassed = 0;
         private byte startPage = 0;
@@ -44,7 +43,6 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         public static List<byte> ListAllSelectedPicsByUser { get { return listAllSelectedPicsByUser; } }
         public static byte[] ArrWrongSelectedUserAnswersByLevel { get { return arrWrongSelectedUserAnswersByLevel; } }
         public static List<byte> ListOfIncorrectlySelectedUserPics { get { return listOfIncorrectlySelectedUserPics; } }
-        public static string FinishTime { get { return finishTime; } }
         public static byte CountOfTestsNotPassed { get { return countOfTestsNotPassed; } }
 
         public RavenTestIQTablePage()
@@ -63,7 +61,6 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             listAllSelectedPicsByUser = new List<byte>();
             arrWrongSelectedUserAnswersByLevel = new byte[1];
             listOfIncorrectlySelectedUserPics = new List<byte>();
-            finishTime = "00:00";
             isUserErrors = false;
             countOfTestsNotPassed = 0;
             startPage = 0;
@@ -113,32 +110,13 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         private void FinishTest()
         {
             dispatcherTimer.Stop();
-            if (minute != 0 || second != 0)
-            {
-                short newMinut = (short)(19 - minute);
-                short newSecond = (short)(59 - second);
-
-                if (newMinut >= 10 && newSecond >= 10)
-                    finishTime = $"{newMinut}:{newSecond}";
-                else
-                if (newMinut <= 9 && newSecond <= 9)
-                    finishTime = $"0{newMinut}:0{newSecond}";
-                else
-                if (newMinut >= 10 && newSecond <= 9)
-                    finishTime = $"{newMinut}:0{newSecond}";
-                else
-                if (newMinut <= 9 && newSecond >= 10)
-                    finishTime = $"0{newMinut}:{newSecond}";
-            }
-
-            if (finishTime == "00:00")
-                countOfTestsNotPassed = Convert.ToByte(60 - listAllSelectedPicsByUser.Count);
-
 
             if (listAllSelectedPicsByUser.Count != 0)
+            {
                 isUserErrors = !cl.ArrItemsEqualswiThoutSorting(cl.CopyPartOfArrayElements(arrOfCorrectAnswersPics, listAllSelectedPicsByUser.Count), listAllSelectedPicsByUser.ToArray());
-
-
+                countOfTestsNotPassed = Convert.ToByte(60 - listAllSelectedPicsByUser.Count);
+            }
+            
             if (isUserErrors)
                 listOfIncorrectlySelectedUserPics = cl.GetArraysNon_validIndexsAndNumbers(cl.CopyPartOfArrayElements(arrOfCorrectAnswersPics, listAllSelectedPicsByUser.Count), listAllSelectedPicsByUser.ToArray(), out arrWrongSelectedUserAnswersByLevel).ToList();
             else
