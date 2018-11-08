@@ -15,11 +15,11 @@ namespace M.B.N.G.B.T.RavenTest_IQ
 
         private double startAge;
 
-        private static object ravenTestIQTablePage;
+        private static RavenTestIQTablePage ravenTestIQTablePage;
         private static string age = "16";
 
         public static string Age { get { return age; } }
-        public static object RavenTestIQTablePage { get { return ravenTestIQTablePage; } }
+        public static RavenTestIQTablePage RavenTestIQTablePage { get { return ravenTestIQTablePage; } }
 
         public RavenTestIQRuleWindow()
         {

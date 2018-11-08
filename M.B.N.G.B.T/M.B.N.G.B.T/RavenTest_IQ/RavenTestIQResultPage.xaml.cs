@@ -13,7 +13,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
     /// </summary>
     public partial class RavenTestIQResultPage : Page, INewRavenTestIQResultPage
     {
-        ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
+        private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
 
         public static readonly byte[] arrIQ_16_30 = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 55, 57, 58,
                                                       59, 61, 62, 64, 65, 66, 67, 69,70, 71,
@@ -122,8 +122,8 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         private double percent = 0;
         private int rightAnswers = 0;
 
-        private static object ravenTestIQViewUserErrorsPage;
-        public static object RavenTestIQViewUserErrorsPage { get { return ravenTestIQViewUserErrorsPage; } }
+        private static RavenTestIQViewUserErrorsPage ravenTestIQViewUserErrorsPage;
+        public static RavenTestIQViewUserErrorsPage RavenTestIQViewUserErrorsPage { get { return ravenTestIQViewUserErrorsPage; } }
 
         public RavenTestIQResultPage()
         {
@@ -256,9 +256,9 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         /// <summary>
         /// этот метод красит или удаляет краску background labels
         /// </summary>
-        private void PaintLabelsBackground(Paint br)
+        private void PaintLabelsBackground(Paint pt)
         {
-            if (br == Paint.paintColor)
+            if (pt == Paint.paintColor)
             {
                 if (iQ > 140)
                     IQ_Age_1_1.Background = (IQ_Age_1_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FF008118")));
@@ -303,7 +303,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
                     IQ_Percent_5_1.Background = (IQ_Percent_5_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFFF0505")));
             }
             else
-            if (br == Paint.paintNull)
+            if (pt == Paint.paintNull)
             {
                 IQ_Age_1_1.Background = (IQ_Age_1_2.Background = null);
                 IQ_Age_2_1.Background = (IQ_Age_2_2.Background = null);
@@ -327,7 +327,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         /// </summary>
         private void Button_Click_View_Errors_User(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(RavenTestIQViewUserErrorsPage as RavenTestIQViewUserErrorsPage);
+            NavigationService.Navigate(RavenTestIQViewUserErrorsPage);
         }
 
         /// <summary>

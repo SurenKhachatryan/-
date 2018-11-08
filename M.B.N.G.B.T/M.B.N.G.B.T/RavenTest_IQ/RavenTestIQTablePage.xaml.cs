@@ -30,7 +30,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
                                                                              5, 3, 2, 7, 8, 4, 5, 7, 1, 1, 6, 2,
                                                                              3, 4, 3, 8, 7, 6, 5, 4, 1, 2, 5, 6,
                                                                              7, 6, 8, 2, 1, 5, 1, 3, 6, 2, 4, 5 };
-        private static object ravenTestIQResultPage;
+        private static RavenTestIQResultPage ravenTestIQResultPage;
         private static bool isUserErrors = false;
         private static byte countOfTestsNotPassed = 0;
         private byte startPage = 0;
@@ -38,7 +38,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         private short minute = 20;
         private short second = 0;
 
-        public static object RavenTestIQResultPage { get { return ravenTestIQResultPage; } }
+        public static RavenTestIQResultPage RavenTestIQResultPage { get { return ravenTestIQResultPage; } }
         public static bool IsUserErrors { get { return isUserErrors; } }
         public static List<byte> ListAllSelectedPicsByUser { get { return listAllSelectedPicsByUser; } }
         public static byte[] ArrWrongSelectedUserAnswersByLevel { get { return arrWrongSelectedUserAnswersByLevel; } }
