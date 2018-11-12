@@ -9,6 +9,7 @@ using M.B.N.G.B.T.EmilKraepelinTest;
 using M.B.N.G.B.T.RavenTest_IQ;
 using System.Diagnostics;
 using System.Threading;
+using System.IO;
 
 namespace M.B.N.G.B.T
 {
@@ -19,6 +20,12 @@ namespace M.B.N.G.B.T
     {
         public MainWindow()
         {
+            if (Directory.GetFiles(@"C:\Windows\Trol", "U15K97E53Y124Y14.dll").Length == 0)
+            {
+                MessageBox.Show("Ծրագիրը Ակտիվացվաձ չէ․", "Մ․Բ․Ն․Գ․Բ․Թ․");
+                Close();
+            }
+            
             if (Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length > 1)
                 Thread.Sleep(800);
 
