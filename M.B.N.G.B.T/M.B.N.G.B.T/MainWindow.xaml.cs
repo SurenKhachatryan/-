@@ -22,7 +22,7 @@ namespace M.B.N.G.B.T
         {
             if (Directory.GetFiles(@"C:\Windows\Trol", "U15K97E53Y124Y14.dll").Length == 0)
             {
-                MessageBox.Show("Ծրագիրը Ակտիվացվաձ չէ․", "Մ․Բ․Ն․Գ․Բ․Թ․");
+                MessageBox.Show("Ծրագիրն ակտիվացվաձ չէ․", "Մ․Բ․Ն․Գ․Բ․Թ․");
                 Close();
             }
             
