@@ -23,12 +23,12 @@ namespace M.B.N.G.B.T
         {
             try
             {
-                if (Directory.GetFiles(@"C:\Windows\Trol", "U15K97E53Y124Y14.dll").Length ==0)
+                if (Directory.GetFiles(@"C:\Windows\Trol", "U15K97E53Y124Y14.dll").Length == 0)
                     throw new Exception();
             }
             catch (Exception)
             {
-                MessageBox.Show("Ծրագիրն ակտիվացվաձ չէ․", "Մ․Բ․Ն․Գ․Բ․Թ․");
+                new MyMessageBox().Show();
                 Close();
             }
 
