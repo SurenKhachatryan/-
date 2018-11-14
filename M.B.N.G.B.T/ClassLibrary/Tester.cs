@@ -33,22 +33,22 @@ namespace ClassLibrary
 
         public static bool IsKey(string Text)
         {
-            string str1 = string.Empty;
-            string str2 = string.Empty;
+            string str = string.Empty;
+
+            if (Text.Length != keyUP.Length)
+                return false;
 
             for (int i = 0; i < keyUP.Length; i++)
             {
-                if (Text.Length == keyUP.Length)
-                {
-                    str1 += Convert.ToChar(keyUP[i]).ToString();
-                    str2 += Convert.ToChar(keyDown[i]).ToString();
-                }
+                if (Text[i] == keyUP[i])
+                    str += Convert.ToChar(keyUP[i]).ToString();
+                else
+                if (Text[i] == keyDown[i])
+                    str += Convert.ToChar(keyDown[i]).ToString();
                 else
                     return false;
-
             }
-
-            if (str1 == Text || str2 == Text)
+            if (str == Text)
                 return true;
 
             return false;
