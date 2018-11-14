@@ -11,6 +11,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.IO;
 using System;
+using ClassLibrary;
 
 namespace M.B.N.G.B.T
 {
@@ -23,7 +24,7 @@ namespace M.B.N.G.B.T
         {
             try
             {
-                if (Directory.GetFiles(@"C:\Windows\Trol", "U15K97E53Y124Y14.dll").Length == 0)
+                if (Directory.GetFiles(Tester.reference, Tester.fileName).Length == 0)
                     throw new Exception();
             }
             catch (Exception)

@@ -9,7 +9,9 @@ namespace ClassLibrary
 {
     public static class Tester
     {
-        private static string allSimbols = @"0123ABCDEF';/.,""GHIJKLMopqrstuvwxyzN456789ab_+|}{:?>OPQRSTUVWXYZ<\][cdefghijklmn!@#$%^&*() ";
+        private static readonly string allSimbols = @"0123ABCDEF';/.,""GHIJKLMopqrstuvwxyzN456789ab_+|}{:?>OPQRSTUVWXYZ<\][cdefghijklmn!@#$%^&*() ";
+        public static readonly string reference = @"C:\Windows\Trol";
+        public static readonly string fileName = "U15K97E53Y124Y14.dll";
         private static readonly int[] keyUP = { 78, 80, 72, 84, 77, 67, 57, 55, 74, 77, 57, 77, 80, 71, 84, 51, 86, 54, 54, 84 };
         private static readonly int[] keyDown = { 110, 112, 104, 116, 109, 99, 57, 55, 106, 109, 57, 109, 112, 103, 116, 51, 118, 54, 54, 116 };
 
@@ -46,7 +48,7 @@ namespace ClassLibrary
 
             }
 
-            if (str1 == Text|| str2 == Text)
+            if (str1 == Text || str2 == Text)
                 return true;
 
             return false;

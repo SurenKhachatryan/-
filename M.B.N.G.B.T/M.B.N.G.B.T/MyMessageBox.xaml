@@ -27,12 +27,13 @@
         <WrapPanel Grid.Row="2" Grid.ColumnSpan="3">
             <TextBox x:Name="textBox_1" HorizontalContentAlignment="Center" Height="30" Margin="22,0,0,0" TextWrapping="Wrap" FontSize="20" Width="82" MaxLines="1" MaxLength="5" KeyUp="tableBox_1_KeyUp"/>
             <Label Content="-" HorizontalContentAlignment="Center" FontSize="20" Height="38" Width="20" FontFamily="Sylfaen" />
-            <TextBox x:Name="textBox_2" HorizontalContentAlignment="Center" Height="30"  TextWrapping="Wrap" FontSize="20" Width="82" MaxLines="1" MaxLength="5" KeyUp="tableBox_1_KeyUp"/>
+            <TextBox x:Name="textBox_2" HorizontalContentAlignment="Center" Height="30"  TextWrapping="Wrap" FontSize="20" Width="82" MaxLines="1" MaxLength="5" KeyUp="tableBox_1_KeyUp" />
             <Label Content="-" HorizontalContentAlignment="Center" FontSize="20" Height="38" Width="20" FontFamily="Sylfaen"/>
-            <TextBox x:Name="textBox_3" HorizontalContentAlignment="Center" Height="30"  TextWrapping="Wrap" FontSize="20" Width="82" MaxLength="5" MaxLines="1" KeyUp="tableBox_1_KeyUp"/>
+            <TextBox x:Name="textBox_3" HorizontalContentAlignment="Center" Height="30"  TextWrapping="Wrap" FontSize="20" Width="82" MaxLength="5" MaxLines="1" KeyUp="tableBox_1_KeyUp" />
             <Label Content="-" HorizontalContentAlignment="Center" FontSize="20" Height="38" Width="20" FontFamily="Sylfaen"/>
-            <TextBox x:Name="textBox_4" HorizontalContentAlignment="Center" Height="30"  TextWrapping="Wrap" FontSize="20" Width="82" MaxLength="5" MaxLines="1" KeyUp="tableBox_1_KeyUp"/>
+            <TextBox x:Name="textBox_4" HorizontalContentAlignment="Center" Height="30"  TextWrapping="Wrap" FontSize="20" Width="82" MaxLength="5" MaxLines="1" KeyUp="tableBox_1_KeyUp" />
         </WrapPanel>
+        
 
         <WrapPanel Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right" Width="125">
             <Button x:Name="activation_Button" Content="Ակտիվացնել" Margin="0,0,5,0" Width="81" Height="24" Background="#FF0AB4C5" IsEnabled="False" Click="Activation_Button_Click"/>
