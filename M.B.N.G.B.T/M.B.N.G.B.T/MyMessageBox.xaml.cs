@@ -65,5 +65,11 @@ namespace M.B.N.G.B.T
             if (textBox_2.IsFocused && e.Key == Key.Back && textBox_2.Text.Length == 0)
                 textBox_1.Focus();
         }
+
+        private void textBox_1_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+                e.Handled = true;
+        }
     }
 }

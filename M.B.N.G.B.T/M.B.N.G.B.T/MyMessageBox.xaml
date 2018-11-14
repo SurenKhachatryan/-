@@ -25,13 +25,13 @@
         <Label Content="ՄԲՆԳԲԹ - Ծրագրի ակտիվացում" HorizontalContentAlignment="Center" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Top" Height="35" Width="432" FontFamily="Sylfaen" Grid.ColumnSpan="3" Background="#FF0AB4C5"/>
 
         <WrapPanel Grid.Row="2" Grid.ColumnSpan="3">
-            <TextBox x:Name="textBox_1" HorizontalContentAlignment="Center" Height="30" Margin="22,0,0,0" TextWrapping="Wrap" FontSize="20" Width="82" MaxLines="1" MaxLength="5" KeyUp="tableBox_1_KeyUp"/>
+            <TextBox x:Name="textBox_1" HorizontalContentAlignment="Center" Height="30" Margin="22,0,0,0" TextWrapping="Wrap" FontSize="20" Width="82" MaxLines="1" MaxLength="5" KeyUp="tableBox_1_KeyUp" PreviewKeyDown="textBox_1_PreviewKeyDown"/>
             <Label Content="-" HorizontalContentAlignment="Center" FontSize="20" Height="38" Width="20" FontFamily="Sylfaen" />
-            <TextBox x:Name="textBox_2" HorizontalContentAlignment="Center" Height="30"  TextWrapping="Wrap" FontSize="20" Width="82" MaxLines="1" MaxLength="5" KeyUp="tableBox_1_KeyUp" />
+            <TextBox x:Name="textBox_2" HorizontalContentAlignment="Center" Height="30"  TextWrapping="Wrap" FontSize="20" Width="82" MaxLines="1" MaxLength="5" KeyUp="tableBox_1_KeyUp" PreviewKeyDown="textBox_1_PreviewKeyDown"/>
             <Label Content="-" HorizontalContentAlignment="Center" FontSize="20" Height="38" Width="20" FontFamily="Sylfaen"/>
-            <TextBox x:Name="textBox_3" HorizontalContentAlignment="Center" Height="30"  TextWrapping="Wrap" FontSize="20" Width="82" MaxLength="5" MaxLines="1" KeyUp="tableBox_1_KeyUp" />
+            <TextBox x:Name="textBox_3" HorizontalContentAlignment="Center" Height="30"  TextWrapping="Wrap" FontSize="20" Width="82" MaxLength="5" MaxLines="1" KeyUp="tableBox_1_KeyUp" PreviewKeyDown="textBox_1_PreviewKeyDown"/>
             <Label Content="-" HorizontalContentAlignment="Center" FontSize="20" Height="38" Width="20" FontFamily="Sylfaen"/>
-            <TextBox x:Name="textBox_4" HorizontalContentAlignment="Center" Height="30"  TextWrapping="Wrap" FontSize="20" Width="82" MaxLength="5" MaxLines="1" KeyUp="tableBox_1_KeyUp" />
+            <TextBox x:Name="textBox_4" HorizontalContentAlignment="Center" Height="30"  TextWrapping="Wrap" FontSize="20" Width="82" MaxLength="5" MaxLines="1" KeyUp="tableBox_1_KeyUp" PreviewKeyDown="textBox_1_PreviewKeyDown"/>
         </WrapPanel>
         
 
