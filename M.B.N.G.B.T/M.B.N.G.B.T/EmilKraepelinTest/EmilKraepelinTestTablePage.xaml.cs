@@ -20,10 +20,17 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
         private int labelFalse = 0;
         private int labelTrue = 0;
         private string _operator = "+";
+        private int labelFalsetemp = 0;
+        private static bool isZeroLabelFalseAndTrue = false;
+        private static bool isIncreasedErrors = false;
+        private static bool isSeriousness = false;
         private static int[][] arrAllStageRightAnswers = new int[8][];
         private static int[][] arrAllStageWrongAnswers = new int[8][];
 
         public static int stage { get; set; } = 1;
+        public static bool IsZeroLabelFalseAndTrue { get { return isZeroLabelFalseAndTrue; } }
+        public static bool IsIncreasedErrors { get { return isIncreasedErrors; } }
+        public static bool IsSeriousness { get { return isSeriousness; } }
         public static int[][] ArrAllStageRightAnswers { get { return arrAllStageRightAnswers; } }
         public static int[][] ArrAllStageWrongAnswers { get { return arrAllStageWrongAnswers; } }
 
@@ -37,6 +44,9 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
             {
                 arrAllStageRightAnswers = new int[8][];
                 arrAllStageWrongAnswers = new int[8][];
+                isZeroLabelFalseAndTrue = false;
+                isIncreasedErrors = false;
+                isSeriousness = false;
             }
 
             LableStage.Content = $"Փուլ {stage}/8";
@@ -72,6 +82,13 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
         private void LabelTimer(object sender, EventArgs e)
         {
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+            if ((labelFalsetemp + 4) <= labelFalse)
+            {
+                dispatcherTimer.Stop();
+                isSeriousness = true;
+                NavigationService.Navigate(new EmilKraepelinTestWarningPage());
+            }
+            else
             if (second >= 0)
             {
                 if (second == 10)
@@ -84,6 +101,14 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                 else
                     timer1.Content = $"0{second}";
                 second--;
+
+                if (labelFalse == 0 && labelTrue == 0 && second == -1)
+                {
+                    dispatcherTimer.Stop();
+                    isZeroLabelFalseAndTrue = true;
+                    NavigationService.Navigate(new EmilKraepelinTestWarningPage());
+                }
+                else
                 if (second == -1 && stage != 8)
                 {
                     timer2.Visibility = Visibility.Visible;
@@ -114,6 +139,7 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                 timer2.Content = $"0{(second + 3)}";
                 second--;
             }
+            labelFalsetemp = labelFalse;
         }
 
         private void Initializator()
@@ -134,7 +160,7 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
             textBox.Text = "";
             textBox.Focus();
         }
-        
+
         private void FinishStage(int Number, string _operator)
         {
             switch (_operator)
@@ -168,6 +194,13 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                 labelFalse++;
                 lebleFalse.Content = $"Սխալ - {labelFalse}";
                 Initializator();
+            }
+
+            if (labelFalse > 37)
+            {
+                dispatcherTimer.Stop();
+                isIncreasedErrors = true;
+                NavigationService.Navigate(new EmilKraepelinTestWarningPage());
             }
         }
 

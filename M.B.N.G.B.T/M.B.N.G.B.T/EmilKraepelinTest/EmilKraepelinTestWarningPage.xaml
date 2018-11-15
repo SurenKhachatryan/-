@@ -11,27 +11,39 @@
     <Page.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>
     </Page.Background>
+
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="36*"/>
-            <RowDefinition Height="32*"/>
-            <RowDefinition Height="316*"/>
-            <RowDefinition Height="21*"/>
-            <RowDefinition Height="45*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="15*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="341*"/>
-            <ColumnDefinition Width="133*"/>
-            <ColumnDefinition Width="71*"/>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="303*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="91*"/>
             <ColumnDefinition Width="212*"/>
             <ColumnDefinition Width="43*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox Grid.Row="1" Grid.Column="1">
-            <Label Content="Արդյունքներ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35" />
+        <Viewbox  Grid.Row="1" Grid.Column="2">
+            <Label Content="Զգուշացում" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="18" />
         </Viewbox>
 
-        <Viewbox Grid.Row="3" HorizontalAlignment="Right" Grid.Column="3">
+        <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4" HorizontalAlignment="Left" Width="716">
+            <WrapPanel Width="716">
+                <Label x:Name="Label_1" Visibility="Collapsed" Content="Դուք գերազանցել եք սխալների թույլատրելի սահմանը։ Կարող եք թեստն անցնել կրկին։" Foreground="Snow" FontFamily="Sylfaen" FontSize="16"/>
+                <Label x:Name="Label_2" Visibility="Collapsed" Content="Դուք չեք կատարել ոչ մի գործողություն փուլի ընդացքում։ Կարող եք թեստն անցնել կրկին։" Foreground="Snow" FontFamily="Sylfaen" FontSize="16"/>
+                <Label x:Name="Label_3" Visibility="Collapsed" Content="Խնդրում ենք թեստին մոտենալ ամենայն լրջությամբ։ Կարող եք թեստն անցնել կրկին։" Foreground="Snow" FontFamily="Sylfaen" FontSize="16"/>
+            </WrapPanel>
+        </Viewbox>
+
+        <Viewbox Grid.Row="5" HorizontalAlignment="Right" Grid.Column="4" Width="211">
             <WrapPanel Height="36" Width="362">
                 <Button Margin="0,0,5,0" x:Name="buttonClicktryagain" Click="Button_Click_Try_Again" Content="Կրկին փորձել" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="172" >
                     <Button.Background>

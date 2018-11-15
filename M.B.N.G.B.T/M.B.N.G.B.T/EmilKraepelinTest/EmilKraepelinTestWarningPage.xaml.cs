@@ -13,6 +13,15 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
         public EmilKraepelinTestWarningPage()
         {
             InitializeComponent();
+            if (EmilKraepelinTestTablePage.IsIncreasedErrors)
+                Label_1.Visibility = Visibility.Visible;
+            else
+            if (EmilKraepelinTestTablePage.IsZeroLabelFalseAndTrue)
+                Label_2.Visibility = Visibility.Visible;
+            else
+            if (EmilKraepelinTestTablePage.IsSeriousness)
+                Label_3.Visibility = Visibility.Visible;
+         
         }
 
         private void Button_Click_Try_Again(object sender, RoutedEventArgs e)
