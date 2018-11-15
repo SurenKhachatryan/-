@@ -51,6 +51,7 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
             else
                 label1.Content = "K-աշխ․ = 0";
         }
+
         private void Button_Click_Try_Again(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(null);

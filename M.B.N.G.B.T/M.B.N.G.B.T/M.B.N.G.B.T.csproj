@@ -108,6 +108,9 @@
     <Compile Include="EmilKraepelinTest\EmilKraepelinTestTablePage.xaml.cs">
       <DependentUpon>EmilKraepelinTestTablePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EmilKraepelinTest\EmilKraepelinTestWarningPage.xaml.cs">
+      <DependentUpon>EmilKraepelinTestWarningPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyMessageBox.xaml.cs">
       <DependentUpon>MyMessageBox.xaml</DependentUpon>
     </Compile>
@@ -187,6 +190,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EmilKraepelinTest\EmilKraepelinTestTablePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmilKraepelinTest\EmilKraepelinTestWarningPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

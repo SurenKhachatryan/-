@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:M.B.N.G.B.T.EmilKraepelinTest"
         mc:Ignorable="d"
-        Title="Մտավոր կարողության գնահատման թեստ" Height="450" Width="800" WindowStyle="None" AllowsTransparency="True" WindowState="Maximized">
-   
+        Title="Մտավոր կարողության գնահատման թեստ" Height="450" Width="800" WindowState="Normal" AllowsTransparency="False">
+
     <Window.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>
     </Window.Background>
-   
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="57*"/>

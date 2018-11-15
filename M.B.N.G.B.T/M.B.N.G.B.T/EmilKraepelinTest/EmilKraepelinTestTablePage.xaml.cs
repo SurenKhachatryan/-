@@ -44,11 +44,12 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
             if (stage % 2 != 0)
                 _Operator.Content = (_operator = "+");
             else
-                _Operator.Content = (_operator = " -");
+                _Operator.Content = (_operator = "-");
 
             Initializator();
             dispatcherTimer.Start();
         }
+
         private void Button_Exit_The_Test_View_Result(object sender, RoutedEventArgs e)
         {
             arrAllStageRightAnswers[stage - 1] = new int[1];
@@ -86,7 +87,7 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                 if (second == -1 && stage != 8)
                 {
                     timer2.Visibility = Visibility.Visible;
-                    IsEnabledButtonsAndTextBox(false);
+                    wrapPanelButtons.IsEnabled = false;
                     timer2.Content = $"0{(second + 4)}";
                 }
             }
@@ -115,6 +116,69 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
             }
         }
 
+        private void Initializator()
+        {
+            int temp = 0;
+            LableCalculatingDown.Content = $"{rnd.Next(1, 10)}";
+            if (_operator == "-")
+            {
+                do
+                {
+                    temp = rnd.Next(1, 21);
+                    LableCalculatingUp.Content = $"{temp}";
+                } while (((Convert.ToInt32(LableCalculatingUp.Content) - Convert.ToInt32(LableCalculatingDown.Content)) % 10) < 1);
+            }
+            else
+                LableCalculatingUp.Content = $"{rnd.Next(1, 10)}";
+
+            textBox.Text = "";
+            textBox.Focus();
+        }
+        
+        private void FinishStage(int Number, string _operator)
+        {
+            switch (_operator)
+            {
+                case "+":
+                    if (Number == ((Convert.ToInt32(LableCalculatingUp.Content) + Convert.ToInt32(LableCalculatingDown.Content)) % 10))
+                        InitializatorLabelTrueAndFalse(true);
+                    else
+                        InitializatorLabelTrueAndFalse(false);
+                    break;
+
+                case "-":
+                    if (Number == ((Convert.ToInt32(LableCalculatingUp.Content) - Convert.ToInt32(LableCalculatingDown.Content)) % 10))
+                        InitializatorLabelTrueAndFalse(true);
+                    else
+                        InitializatorLabelTrueAndFalse(false);
+                    break;
+            }
+        }
+
+        private void InitializatorLabelTrueAndFalse(bool bl)
+        {
+            if (bl)
+            {
+                labelTrue++;
+                lebleTrue.Content = $"Ճիշտ - {labelTrue}";
+                Initializator();
+            }
+            else
+            {
+                labelFalse++;
+                lebleFalse.Content = $"Սխալ - {labelFalse}";
+                Initializator();
+            }
+        }
+
+        private void ButtonsColection_Click(object sender, RoutedEventArgs e)
+        {
+            if (Convert.ToInt16(((Button)sender).Content) != 10)
+                FinishStage(Convert.ToInt16(((Button)sender).Content), _operator);
+            else
+                FinishStage(0, _operator);
+        }
+
         private void textBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             if ((!Char.IsDigit(e.Text, 0)) || textBox.Text.Length == 3)
@@ -131,86 +195,6 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
         {
             if (e.Key == Key.Space)
                 e.Handled = true;
-        }
-
-        private void Initializator()
-        {
-            int temp = 0;
-            LableCalculatingDown.Content = $" {rnd.Next(1, 10)}";
-            if (_operator == " -")
-            {
-                do
-                {
-                    temp = rnd.Next(1, 21);
-                    if (temp < 10)
-                        LableCalculatingUp.Content = $" {temp}";
-                    else
-                        LableCalculatingUp.Content = $"{temp}";
-                } while (((Convert.ToInt32(LableCalculatingUp.Content) - Convert.ToInt32(LableCalculatingDown.Content)) % 10) < 1);
-            }
-            else
-                LableCalculatingUp.Content = $" {rnd.Next(1, 10)}";
-
-            textBox.Text = "";
-            textBox.Focus();
-        }
-
-        private void InitializatorLabelTrue()
-        {
-            labelTrue++;
-            lebleTrue.Content = $"Ճիշտ - {labelTrue}";
-            Initializator();
-        }
-
-        private void InitializatorLabelFalse()
-        {
-            labelFalse++;
-            lebleFalse.Content = $"Սխալ - {labelFalse}";
-            Initializator();
-        }
-
-        private void FinishStage(int Number, string _operator)
-        {
-            switch (_operator)
-            {
-                case "+":
-                    if (Number == ((Convert.ToInt32(LableCalculatingUp.Content) + Convert.ToInt32(LableCalculatingDown.Content)) % 10))
-                        InitializatorLabelTrue();
-                    else
-                        InitializatorLabelFalse();
-                    break;
-
-                case " -":
-                    if (Number == ((Convert.ToInt32(LableCalculatingUp.Content) - Convert.ToInt32(LableCalculatingDown.Content)) % 10))
-                        InitializatorLabelTrue();
-                    else
-                        InitializatorLabelFalse();
-                    break;
-            }
-        }
-
-        private void ButtonsColection_Click(object sender, RoutedEventArgs e)
-        {
-            if (Convert.ToInt16(((Button)sender).Content) != 10)
-                FinishStage(Convert.ToInt16(((Button)sender).Content), _operator);
-            else
-                FinishStage(0, _operator);
-
-        }
-
-        private void IsEnabledButtonsAndTextBox(bool bl)
-        {
-            button0.IsEnabled = bl;
-            button1.IsEnabled = bl;
-            button2.IsEnabled = bl;
-            button3.IsEnabled = bl;
-            button4.IsEnabled = bl;
-            button5.IsEnabled = bl;
-            button6.IsEnabled = bl;
-            button7.IsEnabled = bl;
-            button8.IsEnabled = bl;
-            button9.IsEnabled = bl;
-            textBox.IsEnabled = bl;
         }
     }
 }

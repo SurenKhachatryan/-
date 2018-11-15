@@ -7,91 +7,65 @@
       mc:Ignorable="d" 
       d:DesignHeight="780" d:DesignWidth="1300"
       Title="EmilKraepelinTestTablePage">
+
     <Page.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>
     </Page.Background>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="63*"/>
-            <RowDefinition Height="108*"/>
-            <RowDefinition Height="94*"/>
-            <RowDefinition Height="19*"/>
-            <RowDefinition Height="44*"/>
-            <RowDefinition Height="52*"/>
-            <RowDefinition Height="131*"/>
-            <RowDefinition Height="81*"/>
+            <RowDefinition Height="107*"/>
+            <RowDefinition Height="95*"/>
+            <RowDefinition Height="63*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="130*"/>
+            <RowDefinition Height="88*"/>
             <RowDefinition Height="74*"/>
             <RowDefinition Height="36*"/>
             <RowDefinition Height="78*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="70*"/>
-            <ColumnDefinition Width="92*"/>
-            <ColumnDefinition Width="28*"/>
-            <ColumnDefinition Width="94*"/>
-            <ColumnDefinition Width="66*"/>
-            <ColumnDefinition Width="47*"/>
-            <ColumnDefinition Width="6*"/>
-            <ColumnDefinition Width="61*"/>
-            <ColumnDefinition Width="8*"/>
-            <ColumnDefinition Width="4*"/>
-            <ColumnDefinition Width="104*"/>
-            <ColumnDefinition Width="69*"/>
-            <ColumnDefinition Width="7*"/>
-            <ColumnDefinition Width="52*"/>
-            <ColumnDefinition Width="87*"/>
-            <ColumnDefinition Width="51*"/>
-            <ColumnDefinition Width="4*"/>
-            <ColumnDefinition Width="115*"/>
-            <ColumnDefinition Width="157*"/>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="130*"/>
+            <ColumnDefinition Width="224*"/>
+            <ColumnDefinition Width="261*"/>
+            <ColumnDefinition Width="83*"/>
+            <ColumnDefinition Width="74*"/>
             <ColumnDefinition Width="112*"/>
             <ColumnDefinition Width="66*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left">
-            <Label x:Name="timer1" Content="30" FontSize="70" Foreground="White" Height="93" Width="92" FontFamily="Sylfaen" />
+        <Viewbox Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Grid.RowSpan="2">
+            <WrapPanel Width="280">
+                <Label x:Name="LableStage" Content="Փուլ 1/8" FontSize="70" Foreground="White" Height="108" FontFamily="Sylfaen"  Width="280" />
+                <Label x:Name="timer1" Content="30" HorizontalContentAlignment="Left" FontSize="70" Foreground="White" Height="93" Width="92" FontFamily="Sylfaen" />
+                <Label x:Name="timer2" Content="03" HorizontalContentAlignment="Center" Visibility="Hidden" FontSize="70" Foreground="#FF03FF03"  Height="93" Width="188" FontFamily="Sylfaen" />
+            </WrapPanel>
         </Viewbox>
 
-        <Viewbox Grid.Row="2" Grid.Column="3" HorizontalAlignment="Left" >
-            <Label x:Name="timer2" Content="03" Visibility="Collapsed" FontSize="70" Foreground="#FF03FF03"  Height="93" Width="92" FontFamily="Sylfaen" />
+        <Viewbox Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="5" HorizontalAlignment="Right">
+            <WrapPanel Width="754">
+                <Label x:Name="lebleTrue" Content="Ճիշտ - 0" FontSize="70" Foreground="White" Height="108" FontFamily="Sylfaen"  Width="370" />
+                <Label x:Name="lebleFalse" Content="Սխալ - 0" FontSize="70" Foreground="White" Height="108" FontFamily="Sylfaen"  Width="384" />
+            </WrapPanel>
         </Viewbox>
 
-        <Viewbox Grid.ColumnSpan="6" Grid.Row="1" Grid.Column="10">
-            <Label x:Name="lebleTrue" Content="Ճիշտ - 0" FontSize="70" Foreground="White" Height="108" FontFamily="Sylfaen"  Width="370" />
+        <Viewbox Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="3">
+            <WrapPanel>
+                <Label x:Name="LableCalculatingUp" HorizontalContentAlignment="Center" Content="80" FontSize="100" Foreground="White" Width="123" FontFamily="Sylfaen" Height="122" />
+                <Label x:Name="_Operator" Content="-" HorizontalContentAlignment="Center" FontSize="100" Foreground="White"  Height="118" FontFamily="Kristen ITC" Width="77"/>
+                <Label x:Name="LableCalculatingDown" HorizontalContentAlignment="Center" Content="80" FontSize="100" Foreground="White" Width="123" FontFamily="Sylfaen" Height="122"/>
+                <Label Content="=" FontSize="100" Foreground="White" HorizontalContentAlignment="Center" Height="118" FontFamily="Kristen ITC"  Width="61"/>
+                <Label Content="?" FontSize="100" Foreground="White" HorizontalContentAlignment="Center" Height="119" FontFamily="Sylfaen"  Width="71"/>
+                <TextBox x:Name="textBox"  BorderThickness="0" HorizontalAlignment="Right" Height="129" FontSize="100" Foreground="White" TextWrapping="Wrap" FontFamily="Kristen ITC" Width="0" CaretBrush="White" PreviewTextInput="textBox_PreviewTextInput"/>
+            </WrapPanel>
         </Viewbox>
 
-        <Viewbox Grid.Column="17" Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Right">
-            <Label x:Name="lebleFalse" Content="Սխալ - 0" FontSize="70" Foreground="White" Height="108" FontFamily="Sylfaen"  Width="384" />
-        </Viewbox>
-
-        <Viewbox Grid.Row="6" Grid.Column="7" Grid.ColumnSpan="2">
-            <Label x:Name="_Operator" Content="+" FontSize="100" Foreground="White"  Height="131" FontFamily="Kristen ITC"  Width="69" />
-        </Viewbox>
-
-        <Viewbox Grid.Row="6" Grid.Column="11">
-            <Label Content="=" FontSize="100" Foreground="White"  Height="131" FontFamily="Kristen ITC"  Width="69" />
-        </Viewbox>
-
-        <Viewbox Grid.Row="6" Grid.Column="13">
-            <Label Content="?" FontSize="100" Foreground="White"  Height="131" FontFamily="Sylfaen"  Width="52" />
-        </Viewbox>
-
-        <Viewbox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left"  Grid.ColumnSpan="4">
-            <Label x:Name="LableStage" Content="Փուլ 1/8" FontSize="70" Foreground="White" Height="108" FontFamily="Sylfaen"  Width="280" />
-        </Viewbox>
-
-        <TextBox x:Name="textBox"  BorderThickness="0" HorizontalAlignment="Right" Height="129" FontSize="100" Foreground="White"  Margin="0,0,2,0" TextWrapping="Wrap" FontFamily="Kristen ITC" Text="{x:Null}" VerticalAlignment="Top" Width="0" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" CaretBrush="White" PreviewTextInput="textBox_PreviewTextInput" Grid.Row="6" Grid.Column="12"/>
-
-        <Viewbox Grid.Row="6" Grid.ColumnSpan="3" Grid.Column="8">
-            <Label x:Name="LableCalculatingDown" Content="80" FontSize="100" Foreground="White"  Height="131" FontFamily="Sylfaen"  Width="113" />
-        </Viewbox>
-
-        <Viewbox Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="2">
-            <Label x:Name="LableCalculatingUp" Content="80" FontSize="100" Foreground="White"  Width="113" Height="131" FontFamily="Sylfaen" />
-        </Viewbox>
-
-        <Viewbox Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="7" HorizontalAlignment="Left">
-            <Button x:Name="buttonClickResult" Click="Button_Exit_The_Test_View_Result" Content="Ավարտել թեստը և տեսնել արդյունքները" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand"  Width="394" Height="36">
+        <Viewbox Grid.ColumnSpan="2" Grid.Column="7" Grid.Row="8" HorizontalAlignment="Right">
+            <Button x:Name="button_Exit_the_Test" Click="Button_Exit_The_Test_View_Result" Content="Դուրս գալ թեստից" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="186">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -101,18 +75,18 @@
             </Button>
         </Viewbox>
 
-        <Viewbox Grid.Row="5" Grid.Column="18" Grid.RowSpan="3" HorizontalAlignment="Right">
-            <WrapPanel Height="262" Width="156" >
-                <Button x:Name="button7" Content="7"  FontSize="45" FontWeight="Bold" Height="70" Width="52" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
-                <Button x:Name="button8" Content="8"  FontSize="45" FontWeight="Bold" Height="70" Width="52" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
-                <Button x:Name="button9" Content="9"  FontSize="45" FontWeight="Bold" Height="70" Width="52" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
-                <Button x:Name="button4" Content="4"  FontSize="45" FontWeight="Bold" Height="70" Width="52" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
-                <Button x:Name="button5" Content="5"  FontSize="45" FontWeight="Bold" Height="70" Width="52" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
-                <Button x:Name="button6" Content="6"  FontSize="45" FontWeight="Bold" Height="70" Width="52" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
-                <Button x:Name="button1" Content="1"  FontSize="45" FontWeight="Bold" Height="70" Width="52" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
-                <Button x:Name="button2" Content="2"  FontSize="45" FontWeight="Bold" Height="70" Width="52" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
-                <Button x:Name="button3" Content="3"  FontSize="45" FontWeight="Bold" Height="70" Width="52" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
-                <Button x:Name="button0" Content="0"  FontSize="40" FontWeight="Bold" Height="52" Width="104" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
+        <Viewbox Grid.Row="4" Grid.Column="6" HorizontalAlignment="Right" Grid.RowSpan="3" Grid.ColumnSpan="2">
+            <WrapPanel x:Name="wrapPanelButtons" Height="262" Width="156" >
+                <Button Content="7" FontSize="45" FontWeight="Bold" Height="70" Width="52" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
+                <Button Content="8" FontSize="45" FontWeight="Bold" Height="70" Width="52" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
+                <Button Content="9" FontSize="45" FontWeight="Bold" Height="70" Width="52" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
+                <Button Content="4" FontSize="45" FontWeight="Bold" Height="70" Width="52" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
+                <Button Content="5" FontSize="45" FontWeight="Bold" Height="70" Width="52" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
+                <Button Content="6" FontSize="45" FontWeight="Bold" Height="70" Width="52" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
+                <Button Content="1" FontSize="45" FontWeight="Bold" Height="70" Width="52" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
+                <Button Content="2" FontSize="45" FontWeight="Bold" Height="70" Width="52" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
+                <Button Content="3" FontSize="45" FontWeight="Bold" Height="70" Width="52" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
+                <Button Content="0" FontSize="40" FontWeight="Bold" Height="52" Width="104" FontFamily="Sylfaen" Click="ButtonsColection_Click"/>
             </WrapPanel>
         </Viewbox>
     </Grid>
