@@ -35,7 +35,7 @@
             <Label Content="Զգուշացում" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="18" />
         </Viewbox>
 
-        <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4" HorizontalAlignment="Left" Width="716">
+        <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4" HorizontalAlignment="Left">
             <WrapPanel Width="716">
                 <Label x:Name="Label_1" Visibility="Collapsed" Content="Դուք գերազանցել եք սխալների թույլատրելի սահմանը։ Կարող եք թեստն անցնել կրկին։" Foreground="Snow" FontFamily="Sylfaen" FontSize="16"/>
                 <Label x:Name="Label_2" Visibility="Collapsed" Content="Դուք չեք կատարել ոչ մի գործողություն փուլի ընդացքում։ Կարող եք թեստն անցնել կրկին։" Foreground="Snow" FontFamily="Sylfaen" FontSize="16"/>
@@ -43,7 +43,7 @@
             </WrapPanel>
         </Viewbox>
 
-        <Viewbox Grid.Row="5" HorizontalAlignment="Right" Grid.Column="4" Width="211">
+        <Viewbox Grid.Row="5" HorizontalAlignment="Right" Grid.Column="4">
             <WrapPanel Height="36" Width="362">
                 <Button Margin="0,0,5,0" x:Name="buttonClicktryagain" Click="Button_Click_Try_Again" Content="Կրկին փորձել" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="172" >
                     <Button.Background>

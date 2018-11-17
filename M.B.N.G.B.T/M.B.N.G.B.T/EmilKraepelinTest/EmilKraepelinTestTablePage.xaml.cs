@@ -81,8 +81,19 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
 
         private void LabelTimer(object sender, EventArgs e)
         {
+            textBox.Focus();
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-            if ((labelFalsetemp + 4) <= labelFalse)
+
+            if ((labelFalsetemp + 4) <= labelFalse ||
+                (labelFalse >= 12 && labelTrue <= 2 && second >= 22) ||
+                (labelFalse >= 18 && labelTrue <= 5 && second >= 19) ||
+                (labelFalse >= 23 && labelTrue <= 7 && second >= 15) ||
+                (labelFalse >= 27 && labelTrue <= 8 && second >= 12 ||
+                (labelFalse >= 30 && labelTrue <= 10 && second >= 10)) ||
+                (labelFalse >= 33 && labelTrue <= 12 && second <= 7) ||
+                (labelFalse >= 18 && labelTrue <= 3) ||
+                (labelFalse >= 25 && labelTrue <= 4) ||
+                (labelFalse >= 29 && labelTrue <= 7))
             {
                 dispatcherTimer.Stop();
                 isSeriousness = true;
@@ -145,17 +156,23 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
         private void Initializator()
         {
             int temp = 0;
-            LableCalculatingDown.Content = $"{rnd.Next(1, 10)}";
-            if (_operator == "-")
+            int tempLabelUp = Convert.ToInt32(LableCalculatingUp.Content);
+            int tempLabelDown = Convert.ToInt32(LableCalculatingDown.Content);
+            do
             {
-                do
+                LableCalculatingDown.Content = $"{rnd.Next(1, 10)}";
+                if (_operator == "-")
                 {
-                    temp = rnd.Next(1, 21);
-                    LableCalculatingUp.Content = $"{temp}";
-                } while (((Convert.ToInt32(LableCalculatingUp.Content) - Convert.ToInt32(LableCalculatingDown.Content)) % 10) < 1);
+                    do
+                    {
+                        temp = rnd.Next(1, 21);
+                        LableCalculatingUp.Content = $"{temp}";
+                    } while (((Convert.ToInt32(LableCalculatingUp.Content) - Convert.ToInt32(LableCalculatingDown.Content)) % 10) < 1);
+                }
+                else
+                    LableCalculatingUp.Content = $"{rnd.Next(1, 10)}";
             }
-            else
-                LableCalculatingUp.Content = $"{rnd.Next(1, 10)}";
+            while (tempLabelDown == (Convert.ToInt32(LableCalculatingDown.Content)) || tempLabelUp == (Convert.ToInt32(LableCalculatingUp.Content)));
 
             textBox.Text = "";
             textBox.Focus();

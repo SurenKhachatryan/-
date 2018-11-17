@@ -13,6 +13,7 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
         public EmilKraepelinTestWarningPage()
         {
             InitializeComponent();
+
             if (EmilKraepelinTestTablePage.IsIncreasedErrors)
                 Label_1.Visibility = Visibility.Visible;
             else
