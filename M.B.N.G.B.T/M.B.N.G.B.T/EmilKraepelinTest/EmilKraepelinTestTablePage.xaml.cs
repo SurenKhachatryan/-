@@ -164,7 +164,7 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
             int tempLabelDown = Convert.ToInt32(LableCalculatingDown.Content);
             do
             {
-                LableCalculatingDown.Content = $"{rnd.Next(1, 10)}";
+                LableCalculatingDown.Content = $"{rnd.Next(1, 11)}";
                 if (_operator == "-")
                 {
                     do
@@ -174,7 +174,7 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                     } while (((Convert.ToInt32(LableCalculatingUp.Content) - Convert.ToInt32(LableCalculatingDown.Content)) % 10) < 1);
                 }
                 else
-                    LableCalculatingUp.Content = $"{rnd.Next(1, 10)}";
+                    LableCalculatingUp.Content = $"{rnd.Next(1, 11)}";
             }
             while (tempLabelDown == (Convert.ToInt32(LableCalculatingDown.Content)) || tempLabelUp == (Convert.ToInt32(LableCalculatingUp.Content)));
 

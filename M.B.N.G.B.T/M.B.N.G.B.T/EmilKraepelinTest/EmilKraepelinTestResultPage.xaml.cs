@@ -54,13 +54,13 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                 label1.Content = "K(աշխ.) = 0";
 
             double tamp_1 = (Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[4][0]) +
-                           Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[5][0]) +
-                           Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[6][0]) +
-                           Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[7][0]) +
-                           Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0]) +
-                           Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[1][0]) +
-                           Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[2][0]) +
-                           Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0])) / 8;
+                             Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[5][0]) +
+                             Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[6][0]) +
+                             Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[7][0]) +
+                             Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0]) +
+                             Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[1][0]) +
+                             Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[2][0]) +
+                             Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0])) / 8;
 
             if (Convert.ToInt16(tamp_1) < 6)
                 LabelAppraisal_5_1.Background = (LabelAppraisal_5_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFFF3204")));

@@ -41,7 +41,6 @@ namespace M.B.N.G.B.T.WalterSchulteTest
             {
                 ViewBoxDiagramma.Visibility = Visibility.Visible;
                 ViewboxTextBlockInfo1.Visibility = Visibility.Visible;
-                ViewBoxRectangles.Visibility = Visibility.Visible;
                 ViewBoxLabels.Visibility = Visibility.Visible;
                 ViewBoxLabelsAndTextBlocks.Visibility = Visibility.Visible;
 
@@ -71,19 +70,19 @@ namespace M.B.N.G.B.T.WalterSchulteTest
                 }
 
                 if (Convert.ToInt16(efficiency) >= 56)
-                    RectengleAppraisal5.Fill = (RectengleAppraisal10.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFFF3204")));
+                    LabelAppraisal_5_1.Background = (LabelAppraisal_5_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFFF3204")));
                 else
                 if (Convert.ToInt16(efficiency) >= 46 && Convert.ToInt16(efficiency) <= 55)
-                    RectengleAppraisal4.Fill = (RectengleAppraisal9.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFE08313")));
+                    LabelAppraisal_4_1.Background = (LabelAppraisal_4_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFE08313")));
                 else
                 if (Convert.ToInt16(efficiency) >= 36 && Convert.ToInt16(efficiency) <= 45)
-                    RectengleAppraisal3.Fill = (RectengleAppraisal8.Fill = (Brush)(new BrushConverter().ConvertFrom("#FFDCAA00")));
+                    LabelAppraisal_3_1.Background = (LabelAppraisal_3_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFDCAA00")));
                 else
                 if (Convert.ToInt16(efficiency) >= 31 && Convert.ToInt16(efficiency) <= 35)
-                    RectengleAppraisal2.Fill = (RectengleAppraisal7.Fill = (Brush)(new BrushConverter().ConvertFrom("#FF6EA21F")));
+                    LabelAppraisal_2_1.Background = (LabelAppraisal_2_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FF6EA21F")));
                 else
                 if (Convert.ToInt16(efficiency) <= 30)
-                    RectengleAppraisal1.Fill = (RectengleAppraisal6.Fill = Brushes.Green);
+                    LabelAppraisal_1_1.Background = (LabelAppraisal_1_2.Background = Brushes.Green);
 
 
                 if (degreeOfWorkability <= 1.0)
