@@ -15,19 +15,19 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="31*"/>
-            <RowDefinition Height="28*"/>
-            <RowDefinition Height="4*"/>
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="157*"/>
-            <RowDefinition Height="88*"/>
-            <RowDefinition Height="18*"/>
-            <RowDefinition Height="39*"/>
+            <RowDefinition Height="62*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="315*"/>
+            <RowDefinition Height="176*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="78*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="70*"/>
-            <ColumnDefinition Width="237*"/>
-            <ColumnDefinition Width="230*"/>
+            <ColumnDefinition Width="267*"/>
+            <ColumnDefinition Width="200*"/>
             <ColumnDefinition Width="115*"/>
             <ColumnDefinition Width="117*"/>
             <ColumnDefinition Width="98*"/>
@@ -39,7 +39,7 @@
             <Label Content="Արդյունքներ" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="35" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="2" />
         </Viewbox>
 
-        <Viewbox Grid.ColumnSpan="3" Grid.Column="4" Grid.Row="3" HorizontalAlignment="Right" Grid.RowSpan="2">
+        <Viewbox Grid.ColumnSpan="3" Grid.Column="4" Grid.Row="2" HorizontalAlignment="Right" Grid.RowSpan="3" Margin="0,8,0,0">
             <DVC:Chart Title="Ճիշտ և Սխալ լուծված առաջադրանքների թիվը" FontFamily="Sylfaen" Background="#FF6D9E17" Width="578" Height="364">
                 <DVC:ColumnSeries Name="DiagrammaColumnSeries1" DependentValuePath="Second" IndependentValuePath="Stage" Title="ճիշտ պատասխաններ" FontFamily="Sylfaen" IsHitTestVisible="True" />
                 <DVC:ColumnSeries Name="DiagrammaColumnSeries2" DependentValuePath="Second" IndependentValuePath="Stage" Title="Սխալ պատասխաններ" FontFamily="Sylfaen" IsHitTestVisible="True" />
@@ -51,8 +51,12 @@
             </DVC:Chart>
         </Viewbox>
 
-        <Viewbox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3">
-            <Label x:Name="label1" Content="K-աշխ․ = " FontSize="30" Foreground="White" FontWeight="Bold"  Width="237" Height="50"/>
+        <Viewbox Grid.Row="3" Grid.Column="1"  HorizontalAlignment="Left">
+            <WrapPanel Width="278">
+                <Image Source="pack://siteoforigin:,,,/Resources/Static/Help.png" Height="40" Cursor="Help" ToolTipService.ShowDuration="40000" 
+                   ToolTip="         Աշխատունակության գործակիցը, հաշվվում է բանաձևով: &#xD;&#xA;                                                 K(աշխ.) = Տ2/Տ1 &#xD;&#xA;&#xD;&#xA;Որտեղ` Տ2 - վերջին չորս տողերում ճիշտ պատասխանների թիվն է:  &#xD;&#xA;              S1 - առաջին չորս տողերում ճիշտ պատասխանների թիվն է:"/>
+                <Label x:Name="label1" Content="K(աշխ.) = " FontSize="30" Foreground="White" FontWeight="Bold"  Width="237" Height="50"/>
+            </WrapPanel>
         </Viewbox>
 
         <Viewbox Grid.Row="6" Grid.Column="6" HorizontalAlignment="Right">
@@ -76,5 +80,5 @@
             </WrapPanel>
         </Viewbox>
     </Grid>
-    
+
 </Page>

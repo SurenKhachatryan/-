@@ -44,12 +44,12 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0]));
 
                 if (tamp.ToString().Length > 4)
-                    label1.Content = $"K-աշխ․ = {cl.DecreaseInNumbersAfterTheDecimalPoint(tamp, 2)}";
+                    label1.Content = $"K(աշխ.) = {cl.DecreaseInNumbersAfterTheDecimalPoint(tamp, 2)}";
                 else
-                    label1.Content = $"K-աշխ․ = {tamp}";
+                    label1.Content = $"K(աշխ.) = {tamp}";
             }
             else
-                label1.Content = "K-աշխ․ = 0";
+                label1.Content = "K(աշխ.) = 0";
         }
 
         private void Button_Click_Try_Again(object sender, RoutedEventArgs e)
