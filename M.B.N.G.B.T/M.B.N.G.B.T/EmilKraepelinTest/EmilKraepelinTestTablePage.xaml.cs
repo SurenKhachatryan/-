@@ -17,10 +17,10 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
         private int second = 30;
-        private int labelFalse = 0;
-        private int labelTrue = 0;
+        private int labelWrongAnswerTemp = 0;
+        private int labelWrongAnswer = 0;
+        private int labelRightAnswer = 0;
         private string _operator = "+";
-        private int labelFalsetemp = 0;
         private static bool isZeroLabelFalseAndTrue = false;
         private static bool isIncreasedErrors = false;
         private static bool isSeriousness = false;
@@ -65,8 +65,8 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
             arrAllStageRightAnswers[stage - 1] = new int[1];
             arrAllStageWrongAnswers[stage - 1] = new int[1];
 
-            arrAllStageRightAnswers[stage - 1][0] = labelTrue;
-            arrAllStageWrongAnswers[stage - 1][0] = labelFalse;
+            arrAllStageRightAnswers[stage - 1][0] = labelRightAnswer;
+            arrAllStageWrongAnswers[stage - 1][0] = labelWrongAnswer;
 
             for (int i = stage; i < 8; i++)
             {
@@ -81,19 +81,21 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
 
         private void LabelTimer(object sender, EventArgs e)
         {
-            textBox.Focus();
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
 
-            if ((labelFalsetemp + 4) <= labelFalse ||
-                (labelFalse >= 12 && labelTrue <= 2 && second >= 22) ||
-                (labelFalse >= 18 && labelTrue <= 5 && second >= 19) ||
-                (labelFalse >= 23 && labelTrue <= 7 && second >= 15) ||
-                (labelFalse >= 27 && labelTrue <= 8 && second >= 12 ||
-                (labelFalse >= 30 && labelTrue <= 10 && second >= 10)) ||
-                (labelFalse >= 33 && labelTrue <= 12 && second <= 7) ||
-                (labelFalse >= 18 && labelTrue <= 3) ||
-                (labelFalse >= 25 && labelTrue <= 4) ||
-                (labelFalse >= 29 && labelTrue <= 7))
+            if (second <= 0)
+                textBox.IsEnabled = false;
+
+            if ((labelWrongAnswerTemp + 4) <= labelWrongAnswer ||
+                (labelWrongAnswer >= 12 && labelRightAnswer <= 2 && second >= 22) ||
+                (labelWrongAnswer >= 18 && labelRightAnswer <= 5 && second >= 19) ||
+                (labelWrongAnswer >= 23 && labelRightAnswer <= 7 && second >= 15) ||
+                (labelWrongAnswer >= 27 && labelRightAnswer <= 8 && second >= 12 ||
+                (labelWrongAnswer >= 30 && labelRightAnswer <= 10 && second >= 10)) ||
+                (labelWrongAnswer >= 33 && labelRightAnswer <= 12 && second <= 7) ||
+                (labelWrongAnswer >= 18 && labelRightAnswer <= 3) ||
+                (labelWrongAnswer >= 25 && labelRightAnswer <= 4) ||
+                (labelWrongAnswer >= 29 && labelRightAnswer <= 7))
             {
                 dispatcherTimer.Stop();
                 isSeriousness = true;
@@ -113,7 +115,7 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                     timer1.Content = $"0{second}";
                 second--;
 
-                if (labelFalse == 0 && labelTrue == 0 && second == -1)
+                if (labelWrongAnswer == 0 && labelRightAnswer == 0 && second == -1)
                 {
                     dispatcherTimer.Stop();
                     isZeroLabelFalseAndTrue = true;
@@ -134,8 +136,8 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                     arrAllStageRightAnswers[stage - 1] = new int[1];
                     arrAllStageWrongAnswers[stage - 1] = new int[1];
 
-                    arrAllStageRightAnswers[stage - 1][0] = labelTrue;
-                    arrAllStageWrongAnswers[stage - 1][0] = labelFalse;
+                    arrAllStageRightAnswers[stage - 1][0] = labelRightAnswer;
+                    arrAllStageWrongAnswers[stage - 1][0] = labelWrongAnswer;
 
                     if (stage != 8)
                     {
@@ -150,7 +152,9 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                 timer2.Content = $"0{(second + 3)}";
                 second--;
             }
-            labelFalsetemp = labelFalse;
+            labelWrongAnswerTemp = labelWrongAnswer;
+            if (!timer2.IsVisible)
+                textBox.Focus();
         }
 
         private void Initializator()
@@ -202,18 +206,18 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
         {
             if (bl)
             {
-                labelTrue++;
-                lebleTrue.Content = $"Ճիշտ - {labelTrue}";
+                labelRightAnswer++;
+                lebleTrue.Content = $"Ճիշտ - {labelRightAnswer}";
                 Initializator();
             }
             else
             {
-                labelFalse++;
-                lebleFalse.Content = $"Սխալ - {labelFalse}";
+                labelWrongAnswer++;
+                lebleFalse.Content = $"Սխալ - {labelWrongAnswer}";
                 Initializator();
             }
 
-            if (labelFalse > 37)
+            if (labelWrongAnswer > 37)
             {
                 dispatcherTimer.Stop();
                 isIncreasedErrors = true;

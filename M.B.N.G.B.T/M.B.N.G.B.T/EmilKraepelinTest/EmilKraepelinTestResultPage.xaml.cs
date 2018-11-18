@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Navigation;
 
 namespace M.B.N.G.B.T.EmilKraepelinTest
@@ -34,14 +35,15 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
 
             if (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0] != 0)
             {
-                double tamp = (Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[4][0])
-               + Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[5][0]) +
-               Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[6][0]) +
-               Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[7][0])) /
-               (Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0]) +
-               Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[1][0]) +
-               Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[2][0]) +
-               Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0]));
+                double tamp = (Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[4][0]) +
+                               Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[5][0]) +
+                               Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[6][0]) +
+                               Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[7][0]))
+                                                                /
+                              (Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0]) +
+                               Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[1][0]) +
+                               Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[2][0]) +
+                               Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0]));
 
                 if (tamp.ToString().Length > 4)
                     label1.Content = $"K(աշխ.) = {cl.DecreaseInNumbersAfterTheDecimalPoint(tamp, 2)}";
@@ -50,6 +52,30 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
             }
             else
                 label1.Content = "K(աշխ.) = 0";
+
+            double tamp_1 = (Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[4][0]) +
+                           Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[5][0]) +
+                           Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[6][0]) +
+                           Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[7][0]) +
+                           Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0]) +
+                           Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[1][0]) +
+                           Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[2][0]) +
+                           Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0])) / 8;
+
+            if (Convert.ToInt16(tamp_1) < 6)
+                LabelAppraisal_5_1.Background = (LabelAppraisal_5_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFFF3204")));
+            else
+            if (Convert.ToInt16(tamp_1) >= 6 && Convert.ToInt16(tamp_1) < 12)
+                LabelAppraisal_4_1.Background = (LabelAppraisal_4_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFE08313")));
+            else
+            if (Convert.ToInt16(tamp_1) >= 12 && Convert.ToInt16(tamp_1) < 20)
+                LabelAppraisal_3_1.Background = (LabelAppraisal_3_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFDCAA00")));
+            else
+            if (Convert.ToInt16(tamp_1) >= 20 && Convert.ToInt16(tamp_1) < 23)
+                LabelAppraisal_2_1.Background = (LabelAppraisal_2_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FF6EA21F")));
+            else
+            if (Convert.ToInt16(tamp_1) <= 23)
+                LabelAppraisal_1_1.Background = (LabelAppraisal_1_2.Background = Brushes.Green);
         }
 
         private void Button_Click_Try_Again(object sender, RoutedEventArgs e)
@@ -88,7 +114,7 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageWrongAnswers[6][0],7),
                new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageWrongAnswers[7][0],8)
             };
-            
+
             DiagrammaLineSeries.ItemsSource = new List<ToolkPoint>()
             {
                new ToolkPoint(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0],1),
