@@ -48,7 +48,7 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                 isIncreasedErrors = false;
                 isSeriousness = false;
             }
-
+            
             LableStage.Content = $"Փուլ {stage}/8";
 
             if (stage % 2 != 0)

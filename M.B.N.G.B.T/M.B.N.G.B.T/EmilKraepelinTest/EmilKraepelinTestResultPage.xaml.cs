@@ -14,7 +14,10 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
     /// </summary>
     public partial class EmilKraepelinTestResultPage : Page
     {
-        ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
+        private ClassLibraryMBNGBT cl = new ClassLibraryMBNGBT();
+
+        private double powerFactorTemp = 0.0d;
+        private int tampLaborProductivityIndicatorTemp = 0;
 
         struct ToolkPoint
         {
@@ -35,46 +38,74 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
 
             if (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0] != 0)
             {
-                double tamp = (Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[4][0]) +
-                               Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[5][0]) +
-                               Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[6][0]) +
-                               Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[7][0]))
-                                                                /
-                              (Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0]) +
-                               Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[1][0]) +
-                               Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[2][0]) +
-                               Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0]));
+                powerFactorTemp = (Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[4][0]) +
+                                   Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[5][0]) +
+                                   Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[6][0]) +
+                                   Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[7][0]))
+                                                               /
+                                  (Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0]) +
+                                   Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[1][0]) +
+                                   Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[2][0]) +
+                                   Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0]));
 
-                if (tamp.ToString().Length > 4)
-                    label1.Content = $"K(աշխ.) = {cl.DecreaseInNumbersAfterTheDecimalPoint(tamp, 2)}";
+                if (powerFactorTemp.ToString().Length > 4)
+                    labelPowerFactor.Content += $"{cl.DecreaseInNumbersAfterTheDecimalPoint(powerFactorTemp, 2)}";
                 else
-                    label1.Content = $"K(աշխ.) = {tamp}";
+                    labelPowerFactor.Content += $"{powerFactorTemp}";
             }
             else
-                label1.Content = "K(աշխ.) = 0";
+                labelPowerFactor.Content += "0";
 
-            double tamp_1 = (Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[4][0]) +
-                             Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[5][0]) +
-                             Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[6][0]) +
-                             Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[7][0]) +
-                             Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0]) +
-                             Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[1][0]) +
-                             Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[2][0]) +
-                             Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0])) / 8;
+            labelPowerFactorСalculation.Content = $"({Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[4][0]) + Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[5][0]) + Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[6][0]) + Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[7][0])}"
+                                                     + " / " +
+                                                   $"{ Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0]) + Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[1][0]) + Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[2][0]) + Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0])})";
 
-            if (Convert.ToInt16(tamp_1) < 6)
+            if (powerFactorTemp <= 1.5d && powerFactorTemp >= 0.96d)
+                labelResultPowerFactor_1.Visibility = Visibility.Visible;
+            else
+              if (powerFactorTemp > 1.5d)
+                labelResultPowerFactor_2.Visibility = Visibility.Visible;
+            else
+              if (powerFactorTemp < 0.96d && powerFactorTemp != 0.0d)
+                labelResultPowerFactor_3.Visibility = Visibility.Visible;
+            else
+              if (powerFactorTemp == 0.0d)
+                labelResultPowerFactor_4.Visibility = Visibility.Visible;
+
+
+
+            tampLaborProductivityIndicatorTemp = (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[4][0] +
+                                                  EmilKraepelinTestTablePage.ArrAllStageRightAnswers[5][0] +
+                                                  EmilKraepelinTestTablePage.ArrAllStageRightAnswers[6][0] +
+                                                  EmilKraepelinTestTablePage.ArrAllStageRightAnswers[7][0] +
+                                                  EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0] +
+                                                  EmilKraepelinTestTablePage.ArrAllStageRightAnswers[1][0] +
+                                                  EmilKraepelinTestTablePage.ArrAllStageRightAnswers[2][0] +
+                                                  EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0]) / 8;
+
+            labelLaborProductivityIndicator.Content += $"{tampLaborProductivityIndicatorTemp}";
+            labelLaborProductivityIndicatorСalculation.Content = $"({EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0]}" +
+                                                                 $" + {EmilKraepelinTestTablePage.ArrAllStageRightAnswers[1][0]}" +
+                                                                 $" + {EmilKraepelinTestTablePage.ArrAllStageRightAnswers[2][0]}" +
+                                                                 $" + {EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0]}" +
+                                                                 $" + {EmilKraepelinTestTablePage.ArrAllStageRightAnswers[4][0]}" +
+                                                                 $" + {EmilKraepelinTestTablePage.ArrAllStageRightAnswers[5][0]}" +
+                                                                 $" + {EmilKraepelinTestTablePage.ArrAllStageRightAnswers[6][0]}" +
+                                                                 $" + {EmilKraepelinTestTablePage.ArrAllStageRightAnswers[7][0]}) / 8";
+
+            if (tampLaborProductivityIndicatorTemp < 6)
                 LabelAppraisal_5_1.Background = (LabelAppraisal_5_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFFF3204")));
             else
-            if (Convert.ToInt16(tamp_1) >= 6 && Convert.ToInt16(tamp_1) < 12)
+            if (tampLaborProductivityIndicatorTemp >= 6 && tampLaborProductivityIndicatorTemp < 12)
                 LabelAppraisal_4_1.Background = (LabelAppraisal_4_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFE08313")));
             else
-            if (Convert.ToInt16(tamp_1) >= 12 && Convert.ToInt16(tamp_1) < 20)
+            if (tampLaborProductivityIndicatorTemp >= 12 && tampLaborProductivityIndicatorTemp < 20)
                 LabelAppraisal_3_1.Background = (LabelAppraisal_3_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FFDCAA00")));
             else
-            if (Convert.ToInt16(tamp_1) >= 20 && Convert.ToInt16(tamp_1) < 23)
+            if (tampLaborProductivityIndicatorTemp >= 20 && tampLaborProductivityIndicatorTemp < 23)
                 LabelAppraisal_2_1.Background = (LabelAppraisal_2_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FF6EA21F")));
             else
-            if (Convert.ToInt16(tamp_1) <= 23)
+            if (tampLaborProductivityIndicatorTemp <= 23)
                 LabelAppraisal_1_1.Background = (LabelAppraisal_1_2.Background = Brushes.Green);
         }
 
