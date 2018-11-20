@@ -60,10 +60,10 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                                                      + " / " +
                                                    $"{ Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0]) + Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[1][0]) + Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[2][0]) + Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0])})";
 
-            if (powerFactorTemp <= 1.5d && powerFactorTemp >= 0.96d)
+            if (powerFactorTemp <= 1.15d && powerFactorTemp >= 0.85d)
                 labelResultPowerFactor_1.Visibility = Visibility.Visible;
             else
-              if (powerFactorTemp > 1.5d)
+              if (powerFactorTemp > 1.15d)
                 labelResultPowerFactor_2.Visibility = Visibility.Visible;
             else
               if (powerFactorTemp < 0.96d && powerFactorTemp != 0.0d)

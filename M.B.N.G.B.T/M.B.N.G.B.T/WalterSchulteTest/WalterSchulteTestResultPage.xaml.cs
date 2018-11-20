@@ -41,7 +41,6 @@ namespace M.B.N.G.B.T.WalterSchulteTest
             {
                 ViewBoxDiagramma.Visibility = Visibility.Visible;
                 ViewboxTextBlockInfo1.Visibility = Visibility.Visible;
-                ViewBoxLabels.Visibility = Visibility.Visible;
                 ViewBoxLabelsAndTextBlocks.Visibility = Visibility.Visible;
 
                 Y.Maximum = cl.GetMaxNumberInArr(WalterSchulteTestTablePage.ArrAllStageSecond) + 5;
@@ -58,15 +57,15 @@ namespace M.B.N.G.B.T.WalterSchulteTest
                 degreeOfWorkability = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(WalterSchulteTestTablePage.ArrAllStageSecond[0]) / efficiency, 1);
                 mentalStability = cl.DecreaseInNumbersAfterTheDecimalPoint(Convert.ToDouble(WalterSchulteTestTablePage.ArrAllStageSecond[3]) / efficiency, 1);
 
-                LabelAppraisa.Content += $"{efficiency}";
+                labelAppraisa.Content += $"{efficiency}";
                 for (int i = 0; i < WalterSchulteTestTablePage.ArrAllStageSecond.Length; i++)
                 {
                     if (i == 0)
-                        LabelAppraisa.Content += " ((";
+                        labelAppraisaСalculation.Content += " ((";
                     if (i + 1 != WalterSchulteTestTablePage.ArrAllStageSecond.Length)
-                        LabelAppraisa.Content += $"{WalterSchulteTestTablePage.ArrAllStageSecond[i]} + ";
+                        labelAppraisaСalculation.Content += $"{WalterSchulteTestTablePage.ArrAllStageSecond[i]} + ";
                     else
-                        LabelAppraisa.Content += $"{WalterSchulteTestTablePage.ArrAllStageSecond[i]} )/5)";
+                        labelAppraisaСalculation.Content += $"{WalterSchulteTestTablePage.ArrAllStageSecond[i]} ) / 5)";
                 }
 
                 if (Convert.ToInt16(efficiency) >= 56)

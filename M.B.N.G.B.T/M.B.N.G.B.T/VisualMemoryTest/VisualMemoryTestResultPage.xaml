@@ -13,32 +13,54 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="31*"/>
-            <RowDefinition Height="28*"/>
-            <RowDefinition Height="16*"/>
+            <RowDefinition Height="62*"/>
+            <RowDefinition Height="56*"/>
             <RowDefinition Height="32*"/>
-            <RowDefinition Height="226*"/>
-            <RowDefinition Height="18*"/>
-            <RowDefinition Height="39*"/>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="217*"/>
+            <RowDefinition Height="145*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="78*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="70*"/>
-            <ColumnDefinition Width="472*"/>
-            <ColumnDefinition Width="216*"/>
-            <ColumnDefinition Width="91*"/>
-            <ColumnDefinition Width="233*"/>
-            <ColumnDefinition Width="148*"/>
-            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="236*"/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="52*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="74*"/>
+            <ColumnDefinition Width="35*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox Grid.Column="2" Grid.Row="1">
+        <Viewbox Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2">
             <Label Content="Արդյունքներ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35" />
         </Viewbox>
 
-        <Viewbox Grid.Row="5" Grid.Column="4" HorizontalAlignment="Right" Grid.ColumnSpan="2">
-            <WrapPanel  Height="36"  Width="381">
-                <Button Margin="12,0" x:Name="buttonClickExitMain" Click="Button_Click_Exit_Main" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36"  Width="185" >
+        <Viewbox Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left">
+            <Label  x:Name="LabelPercent" Content="Ձեր տեսողական հիշողության զարգացվածության ցուցանիշը - " Foreground="White" FontSize="30" FontFamily="Sylfaen" Height="61" Width="1012"/>
+        </Viewbox>
+
+        <Viewbox Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Left">
+            <WrapPanel Width="558">
+                <Label x:Name="labelPercent_5_1" Content="90 - 100%" BorderThickness="2,2,1,1" BorderBrush="Black" HorizontalContentAlignment="Center" Foreground="Snow" FontFamily="Sylfaen" FontSize="25" Height="43" Width="126" />
+                <Label x:Name="labelPercent_5_2" Content="Գերազանց տեսողական հիշողություն" BorderThickness="1,2,2,1" BorderBrush="Black" Foreground="Snow" FontFamily="Sylfaen" FontSize="24" Height="43" Width="431"/>
+                <Label x:Name="labelPercent_4_1" Content="70 - 80%" BorderThickness="2,0,1,1" BorderBrush="Black" HorizontalContentAlignment="Center" Foreground="Snow" FontFamily="Sylfaen" FontSize="25" Height="43" Width="126"/>
+                <Label x:Name="labelPercent_4_2" Content="Բարձր մակարդակ" BorderThickness="1,0,2,1" BorderBrush="Black" Foreground="Snow" FontFamily="Sylfaen" FontSize="24" Height="43" Width="431"/>
+                <Label x:Name="labelPercent_3_1" Content="50 - 60%" BorderThickness="2,0,1,1" BorderBrush="Black" HorizontalContentAlignment="Center" Foreground="Snow" FontFamily="Sylfaen" FontSize="25" Height="43" Width="126"/>
+                <Label x:Name="labelPercent_3_2" Content="Միջինից բարձր մակարդակ" BorderThickness="1,0,2,1" BorderBrush="Black" Foreground="Snow" FontFamily="Sylfaen" FontSize="24" Height="43" Width="431"/>
+                <Label x:Name="labelPercent_2_1" Content="30 - 40%" BorderThickness="2,0,1,1" BorderBrush="Black" HorizontalContentAlignment="Center" Foreground="Snow" FontFamily="Sylfaen" FontSize="25" Height="43" Width="126"/>
+                <Label x:Name="labelPercent_2_2" Content="Միջինից ցածր մակարդակ" BorderThickness="1,0,2,1" BorderBrush="Black" Foreground="Snow" FontFamily="Sylfaen" FontSize="24" Height="43" Width="431"/>
+                <Label x:Name="labelPercent_1_1" Content="0 - 20%" BorderThickness="2,0,1,2" BorderBrush="Black" HorizontalContentAlignment="Center" Foreground="Snow" FontFamily="Sylfaen" FontSize="25" Height="43" Width="126"/>
+                <Label x:Name="labelPercent_1_2" Content="Ցածր մակարդակ" BorderThickness="1,0,2,2" BorderBrush="Black" Foreground="Snow" FontFamily="Sylfaen" FontSize="24" Height="43" Width="431"/>
+            </WrapPanel>
+        </Viewbox>
+
+        <Viewbox Grid.Row="7" Grid.Column="5" HorizontalAlignment="Right" Grid.ColumnSpan="2">
+            <WrapPanel  Height="36"  Width="363">
+                <Button Margin="0,0,5,0"  x:Name="buttonClicktryagain" Click="Button_Click_Try_Again" Content="Կրկին փորձել" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="172" >
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                             <GradientStop Color="Black" Offset="1"/>
@@ -46,7 +68,7 @@
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>
-                <Button  x:Name="buttonClicktryagain" Click="Button_Click_Try_Again" Content="Կրկին փորձել" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="172" >
+                <Button x:Name="buttonClickExitMain" Click="Button_Click_Exit_Main" Content="Գլխավոր էջ" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36"  Width="185" >
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                             <GradientStop Color="Black" Offset="1"/>
@@ -56,10 +78,5 @@
                 </Button>
             </WrapPanel>
         </Viewbox>
-
-        <Viewbox Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left">
-            <Label  x:Name="LabelPercent" Content="Ձեր տեսողական հիշողության զարգացվածության ցուցանիշը - 0%" Foreground="White" FontSize="30" FontFamily="Sylfaen" Height="61" Width="1012"/>
-        </Viewbox>
-
     </Grid>
 </Page>

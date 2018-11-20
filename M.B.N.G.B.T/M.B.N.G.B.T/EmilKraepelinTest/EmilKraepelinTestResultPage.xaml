@@ -69,16 +69,16 @@
                     <Label x:Name="labelLaborProductivityIndicator" Content="ԱԱ = " FontSize="30" Foreground="#FFF7C900" FontWeight="Bold"  Width="126" Height="50" FontFamily="Sylfaen"/>
                     <Label x:Name="labelLaborProductivityIndicatorСalculation" FontSize="22" Foreground="#FFF7C900" FontWeight="Bold"  Width="395" Height="50" FontFamily="Sylfaen"/>
                     <WrapPanel Margin="25,0,0,0" Width="536">
-                        <Label x:Name="LabelAppraisal_1_1" Content="5 բալ" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="28" Width="134" Height="50" BorderThickness="2,2,1,1" BorderBrush="Black"/>
-                        <Label x:Name="LabelAppraisal_2_1" Content="4 բալ" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="28" Width="88" Height="50" BorderThickness="0,2,1,1" BorderBrush="Black"/>
-                        <Label x:Name="LabelAppraisal_3_1" Content="3 բալ" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="28" Width="88" Height="50" BorderThickness="0,2,1,1" BorderBrush="Black"/>
+                        <Label x:Name="LabelAppraisal_5_1" Content="1 բալ" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="28" Width="146" Height="50" BorderThickness="2,2,1,1" BorderBrush="Black"/>
                         <Label x:Name="LabelAppraisal_4_1" Content="2 բալ" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="28" Width="80" Height="50" BorderThickness="0,2,1,1" BorderBrush="Black"/>
-                        <Label x:Name="LabelAppraisal_5_1" Content="1 բալ" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="28" Width="146" Height="50" BorderThickness="0,2,2,1" BorderBrush="Black"/>
-                        <Label x:Name="LabelAppraisal_1_2" Content="23 կամ մեծ" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="24" Width="134" Height="50" BorderThickness="2,1,1,2" BorderBrush="Black"/>
-                        <Label x:Name="LabelAppraisal_2_2" Content="20 - 22" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="27" Width="88" Height="50" BorderThickness="0,1,1,2" BorderBrush="Black"/>
-                        <Label x:Name="LabelAppraisal_3_2" Content="12 - 19" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="27" Width="88" Height="50" BorderThickness="0,1,1,2" BorderBrush="Black"/>
-                        <Label x:Name="LabelAppraisal_4_2" Content="6 - 11" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="27" Width="80" Height="50" BorderThickness="0,1,1,2" BorderBrush="Black"/>
-                        <Label x:Name="LabelAppraisal_5_2" Content="5 կամ փոքր" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="25" Width="146" Height="50" BorderThickness="0,1,2,2" BorderBrush="Black"/>
+                        <Label x:Name="LabelAppraisal_3_1" Content="3 բալ" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="28" Width="88" Height="50" BorderThickness="0,2,1,1" BorderBrush="Black"/>
+                        <Label x:Name="LabelAppraisal_2_1" Content="4 բալ" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="28" Width="88" Height="50" BorderThickness="0,2,1,1" BorderBrush="Black"/>
+                        <Label x:Name="LabelAppraisal_1_1" Content="5 բալ" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="28" Width="134" Height="50" BorderThickness="0,2,2,1" BorderBrush="Black"/>
+                        <Label x:Name="LabelAppraisal_5_2" Content="5 կամ փոքր" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="24.4" Width="146" Height="50" BorderThickness="2,0,1,2" BorderBrush="Black"/>
+                        <Label x:Name="LabelAppraisal_4_2" Content="6 - 11" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="27" Width="80" Height="50" BorderThickness="0,0,1,2" BorderBrush="Black"/>
+                        <Label x:Name="LabelAppraisal_3_2" Content="12 - 19" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="27" Width="88" Height="50" BorderThickness="0,0,1,2" BorderBrush="Black"/>
+                        <Label x:Name="LabelAppraisal_2_2" Content="20 - 22" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="27" Width="88" Height="50" BorderThickness="0,0,1,2" BorderBrush="Black"/>
+                        <Label x:Name="LabelAppraisal_1_2" Content="23 կամ մեծ" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="24" Width="134" Height="50" BorderThickness="0,0,2,2" BorderBrush="Black"/>
                     </WrapPanel>
                 </WrapPanel>
             </WrapPanel>

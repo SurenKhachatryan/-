@@ -7,9 +7,11 @@
       mc:Ignorable="d" 
       d:DesignHeight="780" d:DesignWidth="1300"
       Title="ConcentrationDefinitionTestResultPage">
+
     <Page.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>
     </Page.Background>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="57*"/>
@@ -25,57 +27,34 @@
             <ColumnDefinition Width="65*"/>
             <ColumnDefinition Width="441*"/>
             <ColumnDefinition Width="284*"/>
-            <ColumnDefinition Width="71*"/>
-            <ColumnDefinition Width="369*"/>
+            <ColumnDefinition Width="77*"/>
+            <ColumnDefinition Width="363*"/>
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox x:Name="ViewboxResult1" Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Visibility="Hidden"  >
+        <Viewbox x:Name="ViewboxResult1" Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Visibility="Hidden">
             <Label x:Name="labelInfo" Content="" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="159"/>
         </Viewbox>
 
-        <Viewbox x:Name="ViewboxTextBoxText1" Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="3" Visibility="Hidden" HorizontalAlignment="Left" >
-            <Label x:Name="labelTextBoxText1" Content="" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" />
+        <Viewbox x:Name="ViewboxTextBoxText1" Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="3" Visibility="Hidden" HorizontalAlignment="Left">
+            <Label x:Name="labelTextBoxText1" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" />
         </Viewbox>
 
-        <Viewbox Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="1" Grid.Column="1" x:Name="ViewBoxLabels2" Visibility="Hidden">
-            <WrapPanel  Width="1165">
-                <Label x:Name="labelListNumbers" Content="Աղյուսակի թվերը" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="87"/>
-                <Label x:Name="labelRightNumbers" Content="Աղյուսակում բացակայող թվերը" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="89"/>
-            </WrapPanel>
-        </Viewbox>
-
-        <Viewbox Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="1" Grid.Column="1" x:Name="ViewBoxRectangles2" Visibility="Hidden">
-            <WrapPanel   Width="1165">
-                <Rectangle Fill="{x:Null}"  Width="1165" Height="87" Stroke="Black" StrokeThickness="3"/>
-                <Rectangle Fill="{x:Null}"  Width="1165" Height="89" Stroke="Black" StrokeThickness="3"/>
-            </WrapPanel>
-        </Viewbox>
-        
-        <Viewbox x:Name="LabelTitleResult" Grid.Column="2" Grid.Row="3" Visibility="Hidden">
-            <Label Content="Արդյունքներ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35" />
-        </Viewbox>
-        
-        <Viewbox x:Name="ViewBoxLabels1" Visibility="Hidden" Grid.ColumnSpan="4" Grid.Row="4" Grid.Column="1"  VerticalAlignment="Top">
-            <WrapPanel  Width="1165">
-                <Label x:Name="LabelResult1" Content="Ճիշտ թվերը" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="89"/>
-                <Label x:Name="LabelResult2" Content="" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="89" Visibility="Hidden" />
-                <Label x:Name="LabelResult3" Content="" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="89" Visibility="Hidden" />
-                <Label x:Name="LabelResult4" Content="" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="89"  Visibility="Hidden"/>
-            </WrapPanel>
-        </Viewbox>
-        <Viewbox Grid.ColumnSpan="4" Grid.Row="4" Grid.Column="1" x:Name="ViewBoxRectangles1" Visibility="Hidden" VerticalAlignment="Top">
-            <WrapPanel  Width="1165">
-                <Rectangle x:Name="RectangleResult1" Fill="{x:Null}" Stroke="Black" Width="1165" Height="89" StrokeThickness="3"/>
-                <Rectangle x:Name="RectangleResult2" Fill="{x:Null}" Stroke="Black" Width="1165" Height="89" StrokeThickness="3" Visibility="Hidden"/>
-                <Rectangle x:Name="RectangleResult3" Fill="{x:Null}" Stroke="Black" Width="1165" Height="89" StrokeThickness="3" Visibility="Hidden"/>
-                <Rectangle x:Name="RectangleResult4" Fill="{x:Null}" Stroke="Black" Width="1165" Height="89" StrokeThickness="3" Visibility="Hidden"/>
+        <Viewbox x:Name="ViewBoxLabels" Visibility="Hidden" Grid.ColumnSpan="4" Grid.Row="2" Grid.Column="1" Grid.RowSpan="3">
+            <WrapPanel Width="1165">
+                <Label x:Name="labelListNumbers" BorderBrush="Black" BorderThickness="2,2,2,1" Content="Աղյուսակի թվերը" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="87"/>
+                <Label x:Name="labelRightNumbers" BorderBrush="Black" BorderThickness="2,0,2,2"  Content="Աղյուսակում բացակայող թվերը" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="89"/>
+                <Label Content="Արդյունքներ" HorizontalContentAlignment="Center" Foreground="Snow" FontFamily="Sylfaen" FontSize="35" Height="60" Width="1165"/>
+                <Label x:Name="LabelResult1" BorderBrush="Black" BorderThickness="2,2,2,1" Content="Ճիշտ թվերը" Foreground="Snow" FontFamily="Sylfaen" FontSize="31"  Width="1165" Height="89"/>
+                <Label x:Name="LabelResult2" BorderBrush="Black" BorderThickness="2,0,2,1" Foreground="Snow" FontFamily="Sylfaen" FontSize="31" Width="1165" Height="89" Visibility="Hidden"/>
+                <Label x:Name="LabelResult3" BorderBrush="Black" BorderThickness="2,0,2,1" Foreground="Snow" FontFamily="Sylfaen" FontSize="31" Width="1165" Height="89" Visibility="Hidden"/>
+                <Label x:Name="LabelResult4" BorderBrush="Black" BorderThickness="2,0,2,2" Foreground="Snow" FontFamily="Sylfaen" FontSize="31" Width="1165" Height="89" Visibility="Hidden"/>
             </WrapPanel>
         </Viewbox>
 
         <Viewbox Grid.Row="6" Grid.Column="4" HorizontalAlignment="Right">
-            <WrapPanel  Height="36"  Width="369">
-                <Button Margin="0,0,12,0" x:Name="buttonClicktryagain" Click="Button_Click_Try_Again" Content="Կրկին փորձել" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="172" >
+            <WrapPanel  Height="36"  Width="362">
+                <Button Margin="0,0,5,0" x:Name="buttonClicktryagain" Click="Button_Click_Try_Again" Content="Կրկին փորձել" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="172" >
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                             <GradientStop Color="Black" Offset="1"/>
