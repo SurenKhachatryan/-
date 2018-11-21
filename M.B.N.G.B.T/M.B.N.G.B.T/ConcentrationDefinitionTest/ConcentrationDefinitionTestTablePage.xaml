@@ -49,62 +49,34 @@
         <Viewbox Grid.Column="9" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Right">
             <Label x:Name="timer" FontSize="100" Content="0:00" Foreground="White" FontFamily="Sylfaen"  Height="126"  Width="202" />
         </Viewbox>
+  
         <Viewbox Grid.Row="1" Grid.Column="6" Grid.RowSpan="8">
             <WrapPanel Width="520" >
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-                <Rectangle Fill="{x:Null}"  Height="96" Width="104" Stroke="Snow"/>
-            </WrapPanel>
-        </Viewbox>
-        <Viewbox Grid.Row="1" Grid.Column="6" Grid.RowSpan="8">
-            <WrapPanel Width="520" >
-                <Label x:Name="Label1" Content=" 1" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label2" Content=" 2" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label3" Content=" 3" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label4" Content=" 4" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label5" Content=" 5" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label6" Content=" 6" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label7" Content=" 7" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label8" Content=" 8" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label9" Content=" 9" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label10" Content="10" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label11" Content="11" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label12" Content="12" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label13" Content="13" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label14" Content="14" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label15" Content="15" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label16" Content="16" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label17" Content="17" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label18" Content="18" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label19" Content="19" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label20" Content="20" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label21" Content="21" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label22" Content="22" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label23" Content="23" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label24" Content="24" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
-                <Label x:Name="Label25" Content="25" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold"/>
+                <Label x:Name="Label1" Content="1" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="2,2,1,1"/>
+                <Label x:Name="Label2" Content="2" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,2,1,1"/>
+                <Label x:Name="Label3" Content="3" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,2,1,1"/>
+                <Label x:Name="Label4" Content="4" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,2,1,1"/>
+                <Label x:Name="Label5" Content="5" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,2,2,1"/>
+                <Label x:Name="Label6" Content="6" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="2,0,1,1"/>
+                <Label x:Name="Label7" Content="7" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,0,1,1"/>
+                <Label x:Name="Label8" Content="8" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,0,1,1"/>
+                <Label x:Name="Label9" Content="9" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,0,1,1"/>
+                <Label x:Name="Label10" Content="10" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,0,2,1"/>
+                <Label x:Name="Label11" Content="11" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="2,0,1,1"/>
+                <Label x:Name="Label12" Content="12" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,0,1,1"/>
+                <Label x:Name="Label13" Content="13" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,0,1,1"/>
+                <Label x:Name="Label14" Content="14" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,0,1,1"/>
+                <Label x:Name="Label15" Content="15" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,0,2,1"/>
+                <Label x:Name="Label16" Content="16" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="2,0,1,1"/>
+                <Label x:Name="Label17" Content="17" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,0,1,1"/>
+                <Label x:Name="Label18" Content="18" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,0,1,1"/>
+                <Label x:Name="Label19" Content="19" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,0,1,1"/>
+                <Label x:Name="Label20" Content="20" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,0,2,1"/>
+                <Label x:Name="Label21" Content="21" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="2,0,1,2"/>
+                <Label x:Name="Label22" Content="22" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,0,1,2"/>
+                <Label x:Name="Label23" Content="23" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,0,1,2"/>
+                <Label x:Name="Label24" Content="24" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,0,1,2"/>
+                <Label x:Name="Label25" Content="25" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="80" Height="96" Width="104" FontWeight="Bold" BorderBrush="Snow" BorderThickness="0,0,2,2"/>
             </WrapPanel>
         </Viewbox>
 

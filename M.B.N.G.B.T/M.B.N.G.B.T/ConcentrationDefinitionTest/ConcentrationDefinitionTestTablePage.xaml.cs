@@ -202,11 +202,7 @@ namespace M.B.N.G.B.T.ConcentrationDefinitionTest
                 if (lsRndDigite.Count == 0 || !cl.SearchMatchingNumberInArr(lsRndDigite.ToArray(), temp))
                 {
                     lsRndDigite.Add(temp);
-
-                    if (temp >= 10)
-                        arrAllLabels[i].Content = temp;
-                    else
-                        arrAllLabels[i].Content = $" {temp}";
+                    arrAllLabels[i].Content = temp;
                 }
                 else
                     i--;
