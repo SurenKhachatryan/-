@@ -42,7 +42,7 @@
         </Viewbox>
         
         <Viewbox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left">
-            <Label x:Name="LabelSearchNumber" FontSize="77" Content="--> 1" Foreground="White" FontFamily="Sylfaen" Width="200" Height="131"/>
+            <Label x:Name="LabelSearchNumber" FontSize="76" Content="--> 1" Foreground="White" FontFamily="Sylfaen" Width="200" Height="131"/>
         </Viewbox>
         
         <Viewbox Grid.Column="3" Grid.RowSpan="5" Grid.Row="1">

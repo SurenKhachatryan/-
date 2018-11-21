@@ -40,8 +40,7 @@ namespace M.B.N.G.B.T.WalterSchulteTest
             else
             {
                 ViewBoxDiagramma.Visibility = Visibility.Visible;
-                ViewboxTextBlockInfo1.Visibility = Visibility.Visible;
-                ViewBoxLabelsAndTextBlocks.Visibility = Visibility.Visible;
+                ViewBoxAllWrapPanels.Visibility = Visibility.Visible;
 
                 Y.Maximum = cl.GetMaxNumberInArr(WalterSchulteTestTablePage.ArrAllStageSecond) + 5;
                 Diagramma.ItemsSource = new List<ToolkPoint>()
@@ -84,22 +83,21 @@ namespace M.B.N.G.B.T.WalterSchulteTest
                     LabelAppraisal_1_1.Background = (LabelAppraisal_1_2.Background = Brushes.Green);
 
 
+                LabelDegreeOfWorkability.Content += $"{degreeOfWorkability}";
+                LabelDegreeOfWorkabilityCalculation.Content = $"({WalterSchulteTestTablePage.ArrAllStageSecond[0]} / {efficiency})";
+                LabelMentalStability.Content += $"{mentalStability}";
+                LabelMentalStabilityCalculation.Content = $"({WalterSchulteTestTablePage.ArrAllStageSecond[3]} / {efficiency})";
+
                 if (degreeOfWorkability <= 1.0)
-                {
-                    LabelDegreeOfWorkability.Content += $"{degreeOfWorkability} ,որը համարվում է բարձր ցուցանիշ։";
-                    TextBlockMentalStability1.Visibility = Visibility.Visible;
-                }
+                    LabelDegreeOfWorkabilityResult.Content = "Այն  համարվում  է  բարձր  ցուցանիշ։";
                 else
-                {
-                    LabelDegreeOfWorkability.Content += $"{degreeOfWorkability} ,որը համարվում է ցածր ցուցանիշ։";
-                    LabelDegreeOfWorkabilityinfo.Visibility = Visibility.Visible;
-                    TextBlockMentalStability2.Visibility = Visibility.Visible;
-                }
+                    LabelDegreeOfWorkabilityResult.Content = "Այն համարվում է ցածր ցուցանիշ։ Դուք առաջին փուլի\nվրա  առավել երկար ժամանակ եք ծախսել, քան  միջին\nցուցանիշն է։  Աշխատունակության  ցուցանիշը  բարձր\nկլինի այն դեպքում, երբ  ի սկզբանե  պատրաստ  լինեք\nհիմնական  աշխատանքին։";
+
 
                 if (mentalStability <= 1.0)
-                    LabelMentalStability.Content += $"{mentalStability} ,որը համարվում է բարձր ցուցանիշ։";
+                    LabelMentalStabilityResult.Content += "Այն  համարվում  է  բարձր  ցուցանիշ։";
                 else
-                    LabelMentalStability.Content += $"{mentalStability} , որը համարվում է ցածր ցուցանիշ։ Ձեր ՀԿ ցուցանիշը թույլ չի տալիս տվյալ\nհանձնարարությունը նույն տեմպով կատարել մինչև վերջ։";
+                    LabelMentalStabilityResult.Content += "Այն   համարվում   է   ցածր    ցուցանիշ։   Ձեր   Հոգեկան\nկայունության (ՀԿ)  ցուցանիշը   թույլ  չի  տալիս  տվյալ\nհանձնարարությունը  նույն  տեմպով   կատարել  մինչև\nվերջ։";
             }
 
         }
