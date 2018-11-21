@@ -37,8 +37,8 @@
 
         <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4" HorizontalAlignment="Left">
             <WrapPanel Width="716">
-                <Label x:Name="Label_1" Visibility="Collapsed" Content="Դուք գերազանցել եք սխալների թույլատրելի սահմանը։ Կարող եք թեստն անցնել կրկին։" Foreground="Snow" FontFamily="Sylfaen" FontSize="16"/>
-                <Label x:Name="Label_2" Visibility="Collapsed" Content="Դուք չեք կատարել ոչ մի գործողություն փուլի ընդացքում։ Կարող եք թեստն անցնել կրկին։" Foreground="Snow" FontFamily="Sylfaen" FontSize="16"/>
+                <Label x:Name="Label_1" Visibility="Collapsed" Content="Դուք գերազանցել եք սխալների թուլատրելի սահմանը։ Կարող եք թեստն անցնել կրկին։" Foreground="Snow" FontFamily="Sylfaen" FontSize="16"/>
+                <Label x:Name="Label_2" Visibility="Collapsed" Content="Դուք չեք կատարել ոչ մի գործողություն փուլի ընթացքում։ Կարող եք թեստն անցնել կրկին։" Foreground="Snow" FontFamily="Sylfaen" FontSize="16"/>
                 <Label x:Name="Label_3" Visibility="Collapsed" Content="Խնդրում ենք թեստին մոտենալ ամենայն լրջությամբ։ Կարող եք թեստն անցնել կրկին։" Foreground="Snow" FontFamily="Sylfaen" FontSize="16"/>
             </WrapPanel>
         </Viewbox>

@@ -34,8 +34,14 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
         public EmilKraepelinTestResultPage()
         {
             InitializeComponent();
-            DiagramDate();
 
+            DiagramDate();
+            initializerPowerFactor();
+            InitializerLaborProductivityIndicator();
+        }
+
+        private void initializerPowerFactor()
+        {
             if (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0] != 0)
             {
                 powerFactorTemp = (Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[4][0]) +
@@ -63,17 +69,18 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
             if (powerFactorTemp <= 1.15d && powerFactorTemp >= 0.85d)
                 labelResultPowerFactor_1.Visibility = Visibility.Visible;
             else
-              if (powerFactorTemp > 1.15d)
+            if (powerFactorTemp > 1.15d)
                 labelResultPowerFactor_2.Visibility = Visibility.Visible;
             else
-              if (powerFactorTemp < 0.96d && powerFactorTemp != 0.0d)
+            if (powerFactorTemp < 0.96d && powerFactorTemp != 0.0d)
                 labelResultPowerFactor_3.Visibility = Visibility.Visible;
             else
-              if (powerFactorTemp == 0.0d)
+            if (powerFactorTemp == 0.0d)
                 labelResultPowerFactor_4.Visibility = Visibility.Visible;
+        }
 
-
-
+        private void InitializerLaborProductivityIndicator()
+        {
             tampLaborProductivityIndicatorTemp = (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[4][0] +
                                                   EmilKraepelinTestTablePage.ArrAllStageRightAnswers[5][0] +
                                                   EmilKraepelinTestTablePage.ArrAllStageRightAnswers[6][0] +
@@ -107,6 +114,66 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
             else
             if (tampLaborProductivityIndicatorTemp <= 23)
                 LabelAppraisal_1_1.Background = (LabelAppraisal_1_2.Background = Brushes.Green);
+
+            if (IsHesitation())
+                labelLaborProductivityIndicatorResult_1.Visibility = Visibility.Visible;
+            if (IsBig_7_and_8_Colums())
+                labelLaborProductivityIndicatorResult_2.Visibility = Visibility.Visible;
+        }
+
+        private bool IsBig_7_and_8_Colums()
+        {
+            bool bl = false;
+            if (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[6][0] != 0 ||
+                EmilKraepelinTestTablePage.ArrAllStageRightAnswers[7][0] != 0)
+                bl = false;
+            else
+            if ((EmilKraepelinTestTablePage.ArrAllStageRightAnswers[6][0] +
+                EmilKraepelinTestTablePage.ArrAllStageRightAnswers[7][0])
+                                             >
+                (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0] +
+                EmilKraepelinTestTablePage.ArrAllStageRightAnswers[1][0] +
+                EmilKraepelinTestTablePage.ArrAllStageRightAnswers[2][0] +
+                EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0] +
+                EmilKraepelinTestTablePage.ArrAllStageRightAnswers[4][0] +
+                EmilKraepelinTestTablePage.ArrAllStageRightAnswers[5][0]))
+                bl = true;
+
+            return bl;
+        }
+
+        /// <summary>
+        /// Проверяет есть ли серьезные калибания между стобцами
+        /// </summary>
+        /// <returns></returns>
+        private bool IsHesitation()
+        {
+            bool bl = false;
+            int temp = 0;
+
+            for (int i = 0; i < EmilKraepelinTestTablePage.ArrAllStageRightAnswers.Length - 1; i++)
+            {
+                if (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0] >= 10)
+                    temp = EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0] / 5;
+                else
+                    temp = 2;
+
+                if (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0] <
+                    EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i + 1][0])
+                {
+                    temp += EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0];
+                    if (temp <= EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i + 1][0])
+                        return true;
+                }
+                else
+                {
+                    temp -= EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0];
+                    if (temp >= EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i + 1][0])
+                        return true;
+                }
+            }
+
+            return bl;
         }
 
         private void Button_Click_Try_Again(object sender, RoutedEventArgs e)

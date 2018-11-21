@@ -52,7 +52,7 @@
             <Label Content="Արդյունքներ" Foreground="Snow" FontFamily="Sylfaen" FontSize="35"/>
         </Viewbox>
 
-        <Viewbox x:Name="ViewBoxAllWrapPanels" Visibility="Collapsed" Grid.Row="2" Grid.RowSpan="4" Grid.Column="1" HorizontalAlignment="Left" Grid.ColumnSpan="2">
+        <Viewbox x:Name="ViewBoxAllWrapPanels" Visibility="Visible" Grid.Row="2" Grid.RowSpan="4" Grid.Column="1" HorizontalAlignment="Left" Grid.ColumnSpan="2" VerticalAlignment="Top">
             <WrapPanel Width="654" Height="585">
 
                 <WrapPanel>

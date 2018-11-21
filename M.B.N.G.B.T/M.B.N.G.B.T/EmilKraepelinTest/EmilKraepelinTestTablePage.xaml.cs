@@ -48,7 +48,7 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                 isIncreasedErrors = false;
                 isSeriousness = false;
             }
-            
+
             LableStage.Content = $"Փուլ {stage}/8";
 
             if (stage % 2 != 0)
@@ -227,10 +227,7 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
 
         private void ButtonsColection_Click(object sender, RoutedEventArgs e)
         {
-            if (Convert.ToInt16(((Button)sender).Content) != 10)
-                FinishStage(Convert.ToInt16(((Button)sender).Content), _operator);
-            else
-                FinishStage(0, _operator);
+            FinishStage(Convert.ToInt16(((Button)sender).Content), _operator);
         }
 
         private void textBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
