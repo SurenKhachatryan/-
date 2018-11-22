@@ -66,13 +66,13 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                                                      + " / " +
                                                    $"{ Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0]) + Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[1][0]) + Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[2][0]) + Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0])})";
 
-            if (powerFactorTemp <= 1.15d && powerFactorTemp >= 0.85d)
+            if (powerFactorTemp <= 1.09d && powerFactorTemp >= 0.91d)
                 labelResultPowerFactor_1.Visibility = Visibility.Visible;
             else
-            if (powerFactorTemp > 1.15d)
+            if (powerFactorTemp > 1.09d)
                 labelResultPowerFactor_2.Visibility = Visibility.Visible;
             else
-            if (powerFactorTemp < 0.96d && powerFactorTemp != 0.0d)
+            if (powerFactorTemp < 0.91d && powerFactorTemp != 0.0d)
                 labelResultPowerFactor_3.Visibility = Visibility.Visible;
             else
             if (powerFactorTemp == 0.0d)
@@ -155,7 +155,10 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
             {
                 if (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0] >= 10)
                     temp = EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0] / 5;
+                if (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0] <= 5)
+                    temp = 1;
                 else
+                if (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0] < 10)
                     temp = 2;
 
                 if (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0] <

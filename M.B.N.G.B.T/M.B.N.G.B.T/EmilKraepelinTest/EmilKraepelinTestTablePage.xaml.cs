@@ -60,23 +60,10 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
             dispatcherTimer.Start();
         }
 
-        private void Button_Exit_The_Test_View_Result(object sender, RoutedEventArgs e)
+        private void Button_Exit_The_Test(object sender, RoutedEventArgs e)
         {
-            arrAllStageRightAnswers[stage - 1] = new int[1];
-            arrAllStageWrongAnswers[stage - 1] = new int[1];
-
-            arrAllStageRightAnswers[stage - 1][0] = labelRightAnswer;
-            arrAllStageWrongAnswers[stage - 1][0] = labelWrongAnswer;
-
-            for (int i = stage; i < 8; i++)
-            {
-                arrAllStageRightAnswers[i] = new int[1];
-                arrAllStageWrongAnswers[i] = new int[1];
-            }
-
             dispatcherTimer.Stop();
-
-            NavigationService.Navigate(new EmilKraepelinTestResultPage());
+            NavigationService.Navigate(null);
         }
 
         private void LabelTimer(object sender, EventArgs e)

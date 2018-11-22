@@ -65,7 +65,7 @@
         </Viewbox>
 
         <Viewbox Grid.ColumnSpan="2" Grid.Column="7" Grid.Row="8" HorizontalAlignment="Right">
-            <Button x:Name="button_Exit_the_Test" Click="Button_Exit_The_Test_View_Result" Content="Դուրս գալ թեստից" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="186">
+            <Button x:Name="button_Exit_the_Test" Click="Button_Exit_The_Test" Content="Դուրս գալ թեստից" FontSize="20"  FontFamily="Sylfaen"  Foreground="White" Cursor="Hand" Height="36" Width="186">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>

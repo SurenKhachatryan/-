@@ -97,7 +97,7 @@
                         <Label x:Name="LabelAppraisal_2_2" Content="20 - 22" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="27" Width="88" Height="50" BorderThickness="0,0,1,2" BorderBrush="Black"/>
                         <Label x:Name="LabelAppraisal_1_2" Content="23 կամ մեծ" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="24" Width="134" Height="50" BorderThickness="0,0,2,2" BorderBrush="Black"/>
                     </WrapPanel>
-                    <Label x:Name="labelLaborProductivityIndicatorResult_1" Visibility="Collapsed" FontSize="19" Foreground="Snow" FontFamily="Sylfaen">
+                    <Label x:Name="labelLaborProductivityIndicatorResult_1" Visibility="Collapsed">
                         <Label.Content>
                             <TextBlock Foreground="Snow" FontFamily="Sylfaen" FontSize="20">
                                <Image Source="pack://siteoforigin:,,,/Resources/Static/Help.png" Height="40" Cursor="Help" ToolTipService.ShowDuration="40000">

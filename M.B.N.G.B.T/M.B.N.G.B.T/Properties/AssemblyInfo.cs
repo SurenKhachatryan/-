@@ -8,9 +8,9 @@ using System.Windows;
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
 [assembly: AssemblyTitle("M.B.N.G.B.T")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Մարդու Բարձրագույն Նյարդային Գործունեության Բաղադրիչների Թեստավորում")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Սուրեն Խաչատրյան")]
 [assembly: AssemblyProduct("M.B.N.G.B.T")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("Հայերեն")]
