@@ -41,6 +41,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             progress.Visibility = Visibility.Visible;
             await Task.Delay(1000);
             ravenTestIQTablePage = new RavenTestIQTablePage();
+            await Task.Delay(2000);
             progress.Visibility = Visibility.Hidden;
             button_Start_Test.Visibility = Visibility.Visible;
         }
