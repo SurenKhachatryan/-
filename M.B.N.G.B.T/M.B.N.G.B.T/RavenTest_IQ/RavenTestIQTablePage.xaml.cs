@@ -49,7 +49,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         {
             InitializeComponent();
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
-            CreateNewPageTestRavenForNewUserAndSrartTimer();
+            CreateNewPageTestRavenoForNewUserAndStopTimer();
         }
 
         /// <summary>

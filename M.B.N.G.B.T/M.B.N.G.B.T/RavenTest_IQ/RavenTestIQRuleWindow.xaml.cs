@@ -4,6 +4,7 @@ using System.Windows.Input;
 using System.Windows.Controls;
 using System;
 using System.Windows.Media.Imaging;
+using System.Threading.Tasks;
 
 namespace M.B.N.G.B.T.RavenTest_IQ
 {
@@ -26,8 +27,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             InitializeComponent();
             LabelAge.Content = age;
             startAge = Convert.ToDouble(age);
-            ravenTestIQTablePage = new RavenTestIQTablePage();
-            ((INewRavenIQTestTablePage)ravenTestIQTablePage).CreateNewPageTestRavenoForNewUserAndStopTimer();
+            Loaded += LoadImagesTablePageInList;
         }
 
         private void Button_Exit_The_Main(object sender, RoutedEventArgs e)
@@ -36,9 +36,22 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             Process.Start(Application.ResourceAssembly.Location);
         }
 
+        async void LoadImagesTablePageInList(object sender, RoutedEventArgs e)
+        {
+            progress.Visibility = Visibility.Visible;
+            await Task.Delay(1000);
+            ravenTestIQTablePage = new RavenTestIQTablePage();
+            progress.Visibility = Visibility.Hidden;
+            button_Start_Test.Visibility = Visibility.Visible;
+        }
+
         private void Button_Start_Test(object sender, RoutedEventArgs e)
         {
-            ((INewRavenIQTestTablePage)ravenTestIQTablePage).CreateNewPageTestRavenForNewUserAndSrartTimer();
+            if (ravenTestIQTablePage == null)
+                ravenTestIQTablePage = new RavenTestIQTablePage();
+            else
+                ((INewRavenIQTestTablePage)ravenTestIQTablePage).CreateNewPageTestRavenForNewUserAndSrartTimer();
+
             Main.NavigationService.Navigate(ravenTestIQTablePage);
         }
 

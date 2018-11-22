@@ -18,7 +18,9 @@
             <RowDefinition Height="16*"/>
             <RowDefinition Height="8*"/>
             <RowDefinition Height="21*"/>
-            <RowDefinition Height="45*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="11*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="43*"/>
@@ -56,7 +58,7 @@
         </Viewbox>
 
         <Viewbox Grid.Row="6" Grid.Column="4" HorizontalAlignment="Right">
-            <Button Click="Button_Start_Test" Content="Սկսել Թեստը" FontSize="20" Width="185" Height="36" FontFamily="Sylfaen"  Foreground="White" Cursor="Hand">
+            <Button x:Name="button_Start_Test" Click="Button_Start_Test" Visibility="Hidden" Content="Սկսել Թեստը" FontSize="20" Width="185" Height="36" FontFamily="Sylfaen"  Foreground="White" Cursor="Hand">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -66,6 +68,8 @@
             </Button>
         </Viewbox>
 
+        <ProgressBar Name="progress" Grid.Row="8" IsIndeterminate="True" Visibility="Hidden" Grid.Column="4" HorizontalAlignment="Right" Width="114" />
+        
         <Viewbox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4">
             <ScrollViewer  Width="1160" Height="459">
                 <TextBlock TextWrapping="Wrap"  Foreground="Snow" FontSize="30" FontFamily="Sylfaen">
@@ -88,6 +92,6 @@
                 </TextBlock>
             </ScrollViewer>
         </Viewbox>
-        <Frame Name="Main"  RenderTransformOrigin="0,0" Grid.RowSpan="8" NavigationUIVisibility="Hidden" Grid.ColumnSpan="6" />
+        <Frame Name="Main"  RenderTransformOrigin="0,0" Grid.RowSpan="10" NavigationUIVisibility="Hidden" Grid.ColumnSpan="6" />
     </Grid>
 </Window>

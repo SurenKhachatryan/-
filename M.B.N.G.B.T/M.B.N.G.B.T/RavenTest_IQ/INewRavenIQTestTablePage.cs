@@ -4,7 +4,7 @@
     {
         /// <summary>
         /// Этот метод обнулировает все данные в классе RavenTestIQTablePage для нового пользователя
-        /// (как новое окно)
+        /// (как новое окно) и включает Таймер
         /// </summary>
         void CreateNewPageTestRavenForNewUserAndSrartTimer();
         /// <summary>
