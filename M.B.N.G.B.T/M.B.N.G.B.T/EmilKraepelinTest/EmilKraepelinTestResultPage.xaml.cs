@@ -66,13 +66,13 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                                                      + " / " +
                                                    $"{ Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[0][0]) + Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[1][0]) + Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[2][0]) + Convert.ToDouble(EmilKraepelinTestTablePage.ArrAllStageRightAnswers[3][0])})";
 
-            if (powerFactorTemp <= 1.09d && powerFactorTemp >= 0.91d)
+            if (powerFactorTemp <= 1.06d && powerFactorTemp >= 0.94d)
                 labelResultPowerFactor_1.Visibility = Visibility.Visible;
             else
-            if (powerFactorTemp > 1.09d)
+            if (powerFactorTemp > 1.06d)
                 labelResultPowerFactor_2.Visibility = Visibility.Visible;
             else
-            if (powerFactorTemp < 0.91d && powerFactorTemp != 0.0d)
+            if (powerFactorTemp < 0.94d && powerFactorTemp != 0.0d)
                 labelResultPowerFactor_3.Visibility = Visibility.Visible;
             else
             if (powerFactorTemp == 0.0d)
@@ -115,8 +115,15 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
             if (tampLaborProductivityIndicatorTemp <= 23)
                 LabelAppraisal_1_1.Background = (LabelAppraisal_1_2.Background = Brushes.Green);
 
-            if (IsHesitation())
+            int counter;
+            bool bl = IsHesitation(out counter);
+
+            if (bl && counter > 2)
                 labelLaborProductivityIndicatorResult_1.Visibility = Visibility.Visible;
+            else
+            if (bl && counter <= 2)
+                labelLaborProductivityIndicatorResult_3.Visibility = Visibility.Visible;
+
             if (IsBig_7_and_8_Colums())
                 labelLaborProductivityIndicatorResult_2.Visibility = Visibility.Visible;
         }
@@ -146,33 +153,47 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
         /// Проверяет есть ли серьезные калибания между стобцами
         /// </summary>
         /// <returns></returns>
-        private bool IsHesitation()
+        private bool IsHesitation(out int counter)
         {
             bool bl = false;
             int temp = 0;
+            counter = 0;
 
             for (int i = 0; i < EmilKraepelinTestTablePage.ArrAllStageRightAnswers.Length - 1; i++)
             {
-                if (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0] >= 10)
-                    temp = EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0] / 5;
-                if (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0] <= 5)
+                if (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0] <= 6)
                     temp = 1;
                 else
-                if (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0] < 10)
+                if (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0] <= 13)
                     temp = 2;
+                else
+                if (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0] <= 20)
+                    temp = 3;
+                else
+                if (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0] <= 27)
+                    temp = 4;
+                else
+                if (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0] > 27)
+                    temp = 5;
 
                 if (EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0] <
                     EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i + 1][0])
                 {
                     temp += EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0];
                     if (temp <= EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i + 1][0])
-                        return true;
+                    {
+                        bl = true;
+                        counter++;
+                    }
                 }
                 else
                 {
-                    temp -= EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0];
+                    temp = EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i][0] - temp;
                     if (temp >= EmilKraepelinTestTablePage.ArrAllStageRightAnswers[i + 1][0])
-                        return true;
+                    {
+                        bl = true;
+                        counter++;
+                    }
                 }
             }
 

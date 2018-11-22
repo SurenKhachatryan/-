@@ -26,6 +26,8 @@ namespace M.B.N.G.B.T.RavenTest_IQ
             InitializeComponent();
             LabelAge.Content = age;
             startAge = Convert.ToDouble(age);
+            ravenTestIQTablePage = new RavenTestIQTablePage();
+            ((INewRavenIQTestTablePage)ravenTestIQTablePage).CreateNewPageTestRavenoForNewUserAndStopTimer();
         }
 
         private void Button_Exit_The_Main(object sender, RoutedEventArgs e)
@@ -36,11 +38,7 @@ namespace M.B.N.G.B.T.RavenTest_IQ
 
         private void Button_Start_Test(object sender, RoutedEventArgs e)
         {
-            if (ravenTestIQTablePage == null)
-                ravenTestIQTablePage = new RavenTestIQTablePage();
-            else
-                ((INewRavenIQTestTablePage)ravenTestIQTablePage).CreateNewPageTestRavenForNewUser();
-
+            ((INewRavenIQTestTablePage)ravenTestIQTablePage).CreateNewPageTestRavenForNewUserAndSrartTimer();
             Main.NavigationService.Navigate(ravenTestIQTablePage);
         }
 

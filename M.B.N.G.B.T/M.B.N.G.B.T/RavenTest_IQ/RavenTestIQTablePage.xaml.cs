@@ -49,14 +49,24 @@ namespace M.B.N.G.B.T.RavenTest_IQ
         {
             InitializeComponent();
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
-            CreateNewPageTestRavenForNewUser();
+            CreateNewPageTestRavenForNewUserAndSrartTimer();
         }
 
         /// <summary>
         /// Этот метод обнулировает все данные в классе RavenTestIQTablePage для нового пользователя
-        /// (как новое окно)
+        /// (как новое окно) и отключает Таймер
         /// </summary>
-        public void CreateNewPageTestRavenForNewUser()
+        public void CreateNewPageTestRavenoForNewUserAndStopTimer()
+        {
+            CreateNewPageTestRavenForNewUserAndSrartTimer();
+            dispatcherTimer.Stop();
+        }
+
+        /// <summary>
+        /// Этот метод обнулировает все данные в классе RavenTestIQTablePage для нового пользователя
+        /// (как новое окно) и включает Таймер
+        /// </summary>
+        public void CreateNewPageTestRavenForNewUserAndSrartTimer()
         {
             listAllSelectedPicsByUser = new List<byte>();
             arrWrongSelectedUserAnswersByLevel = new byte[1];

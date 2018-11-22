@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:M.B.N.G.B.T.EmilKraepelinTest"
       mc:Ignorable="d" 
       d:DesignHeight="780" d:DesignWidth="1300"
-      Title="EmilKraepelinTestTablePage">
+      Title="EmilKraepelinTestTablePage" PreviewKeyDown="Page_PreviewKeyDown">
 
     <Page.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Doska.png"/>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -39,7 +40,7 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
             InitializeComponent();
 
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
-
+            
             if (stage == 1)
             {
                 arrAllStageRightAnswers = new int[8][];
@@ -66,13 +67,8 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
             NavigationService.Navigate(null);
         }
 
-        private void LabelTimer(object sender, EventArgs e)
+        private void IsIrrationality()
         {
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-
-            if (second <= 0)
-                textBox.IsEnabled = false;
-
             if ((labelWrongAnswerTemp + 4) <= labelWrongAnswer ||
                 (labelWrongAnswer >= 12 && labelRightAnswer <= 2 && second >= 22) ||
                 (labelWrongAnswer >= 18 && labelRightAnswer <= 5 && second >= 19) ||
@@ -89,6 +85,21 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                 NavigationService.Navigate(new EmilKraepelinTestWarningPage());
             }
             else
+            if (labelWrongAnswer == 0 && labelRightAnswer == 0 && second == -1)
+            {
+                dispatcherTimer.Stop();
+                isZeroLabelFalseAndTrue = true;
+                NavigationService.Navigate(new EmilKraepelinTestWarningPage());
+            }
+        }
+
+        private void LabelTimer(object sender, EventArgs e)
+        {
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+
+            if (second <= 0)
+                textBox.IsEnabled = false;
+            
             if (second >= 0)
             {
                 if (second == 10)
@@ -101,14 +112,7 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                 else
                     timer1.Content = $"0{second}";
                 second--;
-
-                if (labelWrongAnswer == 0 && labelRightAnswer == 0 && second == -1)
-                {
-                    dispatcherTimer.Stop();
-                    isZeroLabelFalseAndTrue = true;
-                    NavigationService.Navigate(new EmilKraepelinTestWarningPage());
-                }
-                else
+                IsIrrationality();
                 if (second == -1 && stage != 8)
                 {
                     timer2.Visibility = Visibility.Visible;
@@ -140,8 +144,6 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                 second--;
             }
             labelWrongAnswerTemp = labelWrongAnswer;
-            if (!timer2.IsVisible)
-                textBox.Focus();
         }
 
         private void Initializator()
@@ -232,6 +234,12 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
         private void Grid_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Space)
+                e.Handled = true;
+        }
+
+        private void Page_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Tab)
                 e.Handled = true;
         }
     }

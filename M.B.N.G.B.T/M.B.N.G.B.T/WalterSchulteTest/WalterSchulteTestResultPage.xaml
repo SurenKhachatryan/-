@@ -65,7 +65,7 @@
                             </TextBlock>
                         </Image.ToolTip>
                     </Image>
-                    <Label x:Name="labelAppraisa" Content="ԱԱ = " Foreground="#FFF7C900" FontFamily="Sylfaen" FontSize="30" Grid.Column="1" Width="144" Height="50"/>
+                    <Label x:Name="labelAppraisa" Content="ԱԱ = " Foreground="#FFF7C900" FontFamily="Sylfaen" FontSize="30" Grid.Column="1" Height="50"/>
                     <Label x:Name="labelAppraisaСalculation" FontSize="22" Foreground="#FFF7C900" FontWeight="Bold"  Width="470" Height="50" FontFamily="Sylfaen"/>
                     <WrapPanel Width="630" Margin="24,5,0,0">
                         <Label x:Name="LabelAppraisal_5_1" Content="1 բալ" HorizontalContentAlignment="Center" Foreground="Snow" FontFamily="Sylfaen" FontSize="29" Width="159" Height="50" BorderThickness="2,2,1,1" BorderBrush="Black"/>
@@ -90,7 +90,7 @@
                             </TextBlock>
                         </Image.ToolTip>
                     </Image>
-                    <Label x:Name="LabelDegreeOfWorkability" Content="Աա = " Foreground="#FFF7C900" FontFamily="Sylfaen" FontSize="30" Width="142" Height="50"/>
+                    <Label x:Name="LabelDegreeOfWorkability" Content="Աա = " Foreground="#FFF7C900" FontFamily="Sylfaen" FontSize="30" Height="50"/>
                     <Label x:Name="LabelDegreeOfWorkabilityCalculation" Foreground="#FFF7C900" FontFamily="Sylfaen" FontSize="22" Width="464" Height="50"/>
                     <Label x:Name="LabelDegreeOfWorkabilityResult" Margin="24,0,0,0" Foreground="Snow" FontFamily="Sylfaen" FontSize="24" Grid.Column="1" Width="621"/>
                 </WrapPanel>
@@ -104,7 +104,7 @@
                             </TextBlock>
                         </Image.ToolTip>
                     </Image>
-                    <Label x:Name="LabelMentalStability" Content="ՀԿ = " Foreground="#FFF7C900" FontFamily="Sylfaen" FontSize="30" Width="132" Height="50"/>
+                    <Label x:Name="LabelMentalStability" Content="ՀԿ = " Foreground="#FFF7C900" FontFamily="Sylfaen" FontSize="30" Height="50"/>
                     <Label x:Name="LabelMentalStabilityCalculation" Foreground="#FFF7C900" FontFamily="Sylfaen" FontSize="22" Width="479" Height="50"/>
                     <Label x:Name="LabelMentalStabilityResult" Margin="24,0,0,0" Foreground="Snow" FontFamily="Sylfaen" FontSize="24" Grid.Column="1" Width="621"/>
                 </WrapPanel>

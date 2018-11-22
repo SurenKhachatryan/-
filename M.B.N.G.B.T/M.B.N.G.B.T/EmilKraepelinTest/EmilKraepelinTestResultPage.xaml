@@ -65,7 +65,7 @@
                             </TextBlock>
                         </Image.ToolTip>
                     </Image>
-                    <Label x:Name="labelPowerFactor" Content="K(աշխ.) = " FontSize="30" Foreground="#FFF7C900" FontWeight="Bold"  Width="208" Height="50" FontFamily="Sylfaen"/>
+                    <Label x:Name="labelPowerFactor" Content="K(աշխ.) = " FontSize="30" Foreground="#FFF7C900" FontWeight="Bold" Height="50" FontFamily="Sylfaen"/>
                     <Label x:Name="labelPowerFactorСalculation" FontSize="22" Foreground="#FFF7C900" FontWeight="Bold"  Width="312" Height="50" FontFamily="Sylfaen"/>
                     <Label x:Name="labelResultPowerFactor_1" Visibility="Collapsed" Content="Գործնականորեն հոգնածության բացակայություն։" FontSize="18" Foreground="White" FontFamily="Sylfaen" Margin="25,0,0,0" Width="536"/>
                     <Label x:Name="labelResultPowerFactor_2" Visibility="Collapsed" Content="Աշխատունակության աստիճանական  աճ, կամքի ուժի լարում։" FontSize="18" Foreground="White" FontFamily="Sylfaen" Margin="25,0,0,0" Width="536"/>
@@ -83,7 +83,7 @@
                             </TextBlock>
                         </Image.ToolTip>
                     </Image>
-                    <Label x:Name="labelLaborProductivityIndicator" Content="ԱԱ = " FontSize="30" Foreground="#FFF7C900" FontWeight="Bold"  Width="126" Height="50" FontFamily="Sylfaen"/>
+                    <Label x:Name="labelLaborProductivityIndicator" Content="ԱԱ = " FontSize="30" Foreground="#FFF7C900" FontWeight="Bold" Height="50" FontFamily="Sylfaen"/>
                     <Label x:Name="labelLaborProductivityIndicatorСalculation" FontSize="22" Foreground="#FFF7C900" FontWeight="Bold"  Width="395" Height="50" FontFamily="Sylfaen"/>
                     <WrapPanel Margin="25,0,0,0" Width="538">
                         <Label x:Name="LabelAppraisal_5_1" Content="1 բալ" Foreground="Snow" HorizontalContentAlignment="Center" FontFamily="Sylfaen" FontSize="28" Width="146" Height="50" BorderThickness="2,2,1,1" BorderBrush="Black"/>
@@ -103,16 +103,18 @@
                                <Image Source="pack://siteoforigin:,,,/Resources/Static/Help.png" Height="40" Cursor="Help" ToolTipService.ShowDuration="40000">
                                  <Image.ToolTip>
                                    <TextBlock Foreground="Black" FontFamily="Sylfaen" FontSize="23">
-                                       <Run Text="Գլխուղեղը  գումարման  գործողությունից  անմիջապես"/>
-                                       <LineBreak/><Run Text="հանման գործողության  դանդաղ  է  անցում կատարում:"/>
+                                                   <Run Text="Գլխուղեղը  գումարման  գործողությունից  անմիջապես"/>
+                                       <LineBreak/><Run Text="հանման  գործողության  (կամ  հակառակը)  դանդաղ  է"/>
+                                       <LineBreak/><Run Text="անցում  կատարում:"/>
                                    </TextBlock>
                                   </Image.ToolTip>
                                 </Image>
                                 <Run Text=" Ձեր   մոտ    գրանցվել   է     դժվարադրդունակության"/>
-                                <LineBreak/><Run Text="    ախտանիշ  և  տատանվող   ուշադրություն։"/>
+                                <LineBreak/><Run Text="    ախտանիշ  և  տատանվող   ուշադրություն։"/>             
                             </TextBlock>
                         </Label.Content>
                     </Label>
+                    <Label x:Name="labelLaborProductivityIndicatorResult_3" Visibility="Collapsed" Content="Ձեր   մոտ   գրանցվել   է  տատանվող   ուշադրություն։" Margin="24,10,0,0" FontSize="20" Foreground="Snow" FontFamily="Sylfaen"/>
                     <Label x:Name="labelLaborProductivityIndicatorResult_2" Visibility="Collapsed" Content="Ձեր   մոտ   գրանցվել   է   սկզբունքային   և   արդյունավետ &#xD;&#xA;աշխատունակություն։" Margin="24,10,0,0" FontSize="20" Foreground="Snow" FontFamily="Sylfaen"/>
                 </WrapPanel>
             </WrapPanel>
