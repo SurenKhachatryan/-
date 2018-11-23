@@ -121,7 +121,7 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
             if (bl && counter > 2)
                 labelLaborProductivityIndicatorResult_1.Visibility = Visibility.Visible;
             else
-            if (bl && counter <= 2)
+            if (bl && counter <= 2 && counter != 0)
                 labelLaborProductivityIndicatorResult_3.Visibility = Visibility.Visible;
 
             if (IsBig_7_and_8_Colums())

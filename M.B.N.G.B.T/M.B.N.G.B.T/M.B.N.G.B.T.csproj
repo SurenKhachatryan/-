@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Man-04.ico</ApplicationIcon>
+    <ApplicationIcon>Main_1.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -454,12 +454,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Bloknot.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Man-04.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\KrepelinTest\Diagram.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\VisualMemoryTestResorces\TrueFalse\No.png" />
@@ -1986,6 +1980,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Static\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Main_1.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
