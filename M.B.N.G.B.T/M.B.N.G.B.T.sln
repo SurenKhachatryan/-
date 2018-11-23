@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M.B.N.G.B.T", "M.B.N.G.B.T\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{11391D7F-F19C-4CC9-907D-9CC524EA1760}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "M.B.N.G.B.T.Setup", "M.B.N.G.B.T.Setup\M.B.N.G.B.T.Setup.vdproj", "{95AC86AB-92A0-4E94-928B-D31873251326}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{11391D7F-F19C-4CC9-907D-9CC524EA1760}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11391D7F-F19C-4CC9-907D-9CC524EA1760}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11391D7F-F19C-4CC9-907D-9CC524EA1760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95AC86AB-92A0-4E94-928B-D31873251326}.Debug|Any CPU.ActiveCfg = Debug
+		{95AC86AB-92A0-4E94-928B-D31873251326}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

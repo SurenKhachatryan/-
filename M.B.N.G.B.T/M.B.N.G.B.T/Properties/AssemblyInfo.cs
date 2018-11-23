@@ -10,7 +10,7 @@ using System.Windows;
 [assembly: AssemblyTitle("M.B.N.G.B.T")]
 [assembly: AssemblyDescription("Մարդու Բարձրագույն Նյարդային Գործունեության Բաղադրիչների Թեստավորում")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Սուրեն Խաչատրյան")]
+[assembly: AssemblyCompany("Նախագծի հեղինակ՝ Գայանե Մհերյան։  Ծրագրավորող՝  Սուրեն Խաչատրյան։")]
 [assembly: AssemblyProduct("M.B.N.G.B.T")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("Հայերեն")]
