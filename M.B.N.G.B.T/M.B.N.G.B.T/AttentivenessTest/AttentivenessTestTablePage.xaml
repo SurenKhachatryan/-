@@ -73,7 +73,7 @@
             <Label x:Name="LabelWord" Content="{x:Null}" Grid.Column="1" FontSize="30" Height="98" Foreground="White" FontWeight="Bold" FontFamily="Sylfaen" />
         </Viewbox>
 
-        <TextBox x:Name="textBoxWords" Grid.Row="7" Margin="15,24,15,25" Grid.ColumnSpan="5"  Text="{x:Null}"  TextWrapping="Wrap" FontSize="20" Foreground="White" FontWeight="Bold" FontFamily="Sylfaen"  Background="#FF36573F" BorderBrush="#FF162A1D" PreviewMouseDoubleClick="textBoxWords_PreviewMouseDoubleClick" PreviewMouseRightButtonUp="textBoxWords_PreviewMouseRightButtonUp" PreviewTextInput="textBoxWords_PreviewTextInput" PreviewKeyDown="textBoxWords_PreviewKeyDown" PreviewMouseLeftButtonUp="textBoxWords_PreviewMouseLeftButtonUp" Grid.Column="1"  />
+        <TextBox x:Name="textBoxWords" Grid.Row="7" Margin="15,24,15,25" Grid.ColumnSpan="5"  Text="{x:Null}"  TextWrapping="Wrap" FontSize="20" Foreground="Snow" FontWeight="Bold" FontFamily="Sylfaen"  Background="#FF36573F" BorderBrush="#FF162A1D" PreviewMouseDoubleClick="textBoxWords_PreviewMouseDoubleClick" PreviewMouseRightButtonUp="textBoxWords_PreviewMouseRightButtonUp" PreviewTextInput="textBoxWords_PreviewTextInput" PreviewKeyDown="textBoxWords_PreviewKeyDown" PreviewMouseLeftButtonUp="textBoxWords_PreviewMouseLeftButtonUp" Grid.Column="1"  />
 
         <Viewbox  Grid.Row="1" HorizontalAlignment="Left"  Grid.Column="1">
             <Label x:Name="LableTryAgein" Content="Փորձ 1"  FontSize="50" Foreground="White" Width="187" FontFamily="Sylfaen" FontWeight="Bold" />

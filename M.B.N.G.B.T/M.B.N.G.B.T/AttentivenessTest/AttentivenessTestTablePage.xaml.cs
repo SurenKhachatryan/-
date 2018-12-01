@@ -56,7 +56,9 @@ namespace M.B.N.G.B.T.AttentivenessTest
                     LabelWord.Content += $" , {arrRandomWords[i]}";
 
                 textBoxWords.IsEnabled = false;
+                textBoxWords.Foreground = Brushes.Black;
                 buttonExitTheTestViewResult.IsEnabled = false;
+                buttonExitTheTestViewResult.Foreground = Brushes.Black;
             }
             dispatcherTimer.Start();
         }
@@ -80,6 +82,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
                 if (secondForTextBox == 2 && !textBoxWords.IsEnabled && buttonExitTheTestViewResult.Visibility == Visibility.Visible)
                 {
                     textBoxWords.IsEnabled = true;
+                    textBoxWords.Foreground = Brushes.Snow;
                     if (LableInfo.Content == "")
                         dispatcherTimer.Stop();
                     textBoxWords.Focus();
@@ -103,6 +106,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
                 if (secondTimer == -1)
                 {
                     textBoxWords.IsEnabled = true;
+                    textBoxWords.Foreground = Brushes.Snow;
                     textBoxWords.Focus();
                     LabelWord.Visibility = Visibility.Collapsed;
                     Timer.Visibility = Visibility.Hidden;
@@ -110,6 +114,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
                     Timer.Content = (secondTimer = 60);
                     buttonSeeWord.Content = "Տեսնել բառերը կրկին";
                     buttonExitTheTestViewResult.IsEnabled = true;
+                    buttonExitTheTestViewResult.Foreground = Brushes.Snow;
                     dispatcherTimer.Stop();
                     if (stage == 1)
                         LableInfo.Content = "Բառերը Գրել ներքևում տրված դաշտում, առանց տառասխալների և փոքրատառերով, այլապես դա կդիտարկվի որպես սխալ";
@@ -142,6 +147,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
                             buttonSeeWord.Visibility = Visibility.Collapsed;
                             LabelWord.Visibility = Visibility.Visible;
                             textBoxWords.IsEnabled = false;
+                            textBoxWords.Foreground = Brushes.Black;
                         }
                         if (countAbsentWords <= 1 && stage < 3)
                             LableInfo.Content = $"Ձեր կարճաժամկետ հիշողությունը գերազանց է";
@@ -172,6 +178,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
                     buttonSeeWord.Visibility = Visibility.Collapsed;
                     LabelWord.Visibility = Visibility.Visible;
                     textBoxWords.IsEnabled = false;
+                    textBoxWords.Foreground = Brushes.Black;
                 }
             }
             else
@@ -187,6 +194,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
                     buttonExitTheTestViewResult.Visibility = Visibility.Collapsed;
                     buttonSeeWord.Visibility = Visibility.Collapsed;
                     textBoxWords.IsEnabled = false;
+                    textBoxWords.Foreground = Brushes.Black;
                 }
             }
             if (buttonExitTheTestViewResult.Visibility == Visibility.Visible)
@@ -203,6 +211,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
                 buttonSeeWord.Content = "Շարունակել";
                 LableTryAgein.Content = $"Փորձ {++stage}";
                 buttonExitTheTestViewResult.IsEnabled = false;
+                buttonExitTheTestViewResult.Foreground = Brushes.Black;
                 dispatcherTimer.Start();
                 Timer.Foreground = Brushes.Snow;
                 Timer.Content = (secondTimer = 60);
@@ -214,11 +223,13 @@ namespace M.B.N.G.B.T.AttentivenessTest
             else
             {
                 textBoxWords.IsEnabled = true;
+                textBoxWords.Foreground = Brushes.Snow;
                 textBoxWords.Focus();
                 LabelWord.Visibility = Visibility.Collapsed;
                 Timer.Visibility = Visibility.Hidden;
                 buttonSeeWord.Content = "Տեսնել բառերը կրկին";
                 buttonExitTheTestViewResult.IsEnabled = true;
+                buttonExitTheTestViewResult.Foreground = Brushes.Snow;
                 dispatcherTimer.Stop();
 
                 if (stage == 1)
@@ -262,6 +273,7 @@ namespace M.B.N.G.B.T.AttentivenessTest
             if (e.Key == Key.LeftCtrl || e.Key == Key.RightCtrl || e.Key == Key.LeftShift || e.Key == Key.RightShift)
             {
                 textBoxWords.IsEnabled = false;
+                textBoxWords.Foreground = Brushes.Black;
                 secondForTextBox = 0;
                 dispatcherTimer.Start();
             }
