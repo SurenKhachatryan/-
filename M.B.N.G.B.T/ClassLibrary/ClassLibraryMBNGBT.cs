@@ -219,7 +219,7 @@ namespace ClassLibrary
         public double DecreaseInNumbersAfterTheDecimalPoint(double number, int newLanghtAfterTheDecimalPoint)
         {
             string temp = string.Empty;
-            int index = (GetIndexFirstCommaInTheText(number.ToString()) + 1);
+            int index = (GetIndexFirstСommaAndPointInTheText(number.ToString()) + 1);
             if (index != 0)
             {
                 if ((number.ToString().Length - index) >= newLanghtAfterTheDecimalPoint)
@@ -236,11 +236,11 @@ namespace ClassLibrary
             return Convert.ToDouble(temp);
         }
 
-        public int GetIndexFirstCommaInTheText(string text)
+        public int GetIndexFirstСommaAndPointInTheText(string text)
         {
             for (int i = 0; i < text.Length; i++)
             {
-                if (text[i] == ',')
+                if (text[i] == ',' || text[i] == '.')
                     return i;
             }
             return -1;
