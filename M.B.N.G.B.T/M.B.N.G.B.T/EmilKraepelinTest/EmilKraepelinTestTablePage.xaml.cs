@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -40,7 +39,7 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
             InitializeComponent();
 
             dispatcherTimer.Tick += new EventHandler(LabelTimer);
-            
+
             if (stage == 1)
             {
                 arrAllStageRightAnswers = new int[8][];
@@ -49,6 +48,8 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                 isIncreasedErrors = false;
                 isSeriousness = false;
             }
+
+            WrapPanelExercises.Visibility = Visibility.Visible;
 
             LableStage.Content = $"Փուլ {stage}/8";
 
@@ -99,7 +100,7 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
 
             if (second <= 0)
                 textBox.IsEnabled = false;
-            
+
             if (second >= 0)
             {
                 if (second == 10)
@@ -116,6 +117,7 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                 if (second == -1 && stage != 8)
                 {
                     timer2.Visibility = Visibility.Visible;
+                    WrapPanelExercises.Visibility = Visibility.Collapsed;
                     wrapPanelButtons.IsEnabled = false;
                     timer2.Content = $"0{(second + 4)}";
                 }
@@ -136,7 +138,11 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
                         NavigationService.Navigate(new EmilKraepelinTestTablePage());
                     }
                     else
+                    {
+                        WrapPanelExercises.Visibility = Visibility.Collapsed;
                         NavigationService.Navigate(new EmilKraepelinTestResultPage());
+                    }
+
 
                     dispatcherTimer.Stop();
                 }

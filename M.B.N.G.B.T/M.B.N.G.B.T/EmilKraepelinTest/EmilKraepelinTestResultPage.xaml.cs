@@ -112,7 +112,7 @@ namespace M.B.N.G.B.T.EmilKraepelinTest
             if (tampLaborProductivityIndicatorTemp >= 20 && tampLaborProductivityIndicatorTemp < 23)
                 LabelAppraisal_2_1.Background = (LabelAppraisal_2_2.Background = (Brush)(new BrushConverter().ConvertFrom("#FF6EA21F")));
             else
-            if (tampLaborProductivityIndicatorTemp <= 23)
+            if (tampLaborProductivityIndicatorTemp >= 23)
                 LabelAppraisal_1_1.Background = (LabelAppraisal_1_2.Background = Brushes.Green);
 
             int counter;

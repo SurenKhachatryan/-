@@ -54,7 +54,7 @@
         </Viewbox>
 
         <Viewbox Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="3">
-            <WrapPanel>
+            <WrapPanel x:Name="WrapPanelExercises">
                 <Label x:Name="LableCalculatingUp" HorizontalContentAlignment="Center" Content="80" FontSize="100" Foreground="White" Width="123" FontFamily="Sylfaen" Height="122" />
                 <Label x:Name="_Operator" Content="-" HorizontalContentAlignment="Center" FontSize="100" Foreground="White"  Height="118" FontFamily="Kristen ITC" Width="77"/>
                 <Label x:Name="LableCalculatingDown" HorizontalContentAlignment="Center" Content="80" FontSize="100" Foreground="White" Width="123" FontFamily="Sylfaen" Height="122"/>
