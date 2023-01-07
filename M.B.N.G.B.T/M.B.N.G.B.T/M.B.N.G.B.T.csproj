@@ -64,7 +64,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="system.windows.controls.datavisualization.toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="system.windows.controls.datavisualization.toolkit">
+      <HintPath>..\WPFToolKit\system.windows.controls.datavisualization.toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -77,7 +79,9 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="WPFToolkit">
+      <HintPath>..\WPFToolKit\WPFToolkit.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -297,154 +301,254 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\board.jpg" />
+    <None Include="Resources\board.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Doska.png" />
+    <None Include="Resources\Doska.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\1.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\2.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\3.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\3.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\4.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\4.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\5.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\5.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\6.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\6.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\7.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\7.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\8.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\8.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\9.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\9.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\10.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\10.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\11.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\11.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\12.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\12.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\13.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\13.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\14.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\14.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\15.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\15.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\16.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\16.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\17.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\17.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\18.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\18.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\19.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\19.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\20.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\20.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\21.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\21.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\22.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\22.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\23.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\23.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\24.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\24.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\25.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\25.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\26.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\26.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\27.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\27.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\28.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\28.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\29.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\29.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\30.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\30.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\31.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\31.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\32.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\32.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\33.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\33.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\34.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\34.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\35.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\35.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\36.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\36.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\37.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\37.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\38.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\38.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\39.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\39.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\40.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\40.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\41.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\41.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\42.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\42.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\43.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\43.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\44.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\44.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\45.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\45.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\46.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\46.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\47.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\47.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VisualMemoryTestResorces\48.gif" />
+    <None Include="Resources\VisualMemoryTestResorces\48.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
@@ -453,1518 +557,2530 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Bloknot.png" />
+    <None Include="Resources\Bloknot.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\VisualMemoryTestResorces\TrueFalse\No.png" />
-    <Resource Include="Resources\VisualMemoryTestResorces\TrueFalse\Yes.png" />
-    <Resource Include="Resources\VisualMemoryTestResorces\TrueFalse\Yes2.png" />
+    <Resource Include="Resources\VisualMemoryTestResorces\TrueFalse\No.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\VisualMemoryTestResorces\TrueFalse\Yes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\VisualMemoryTestResorces\TrueFalse\Yes2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\WalterSchulteTest\dot.png" />
+    <None Include="Resources\WalterSchulteTest\dot.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_1\1_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_1\1_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_1\1_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_1\1_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_1\1_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_1\1_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_1\Main_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_1\Main_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_1\1_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_1\1_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_1\1_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_1\1_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_1\1_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_1\1_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_2\2_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_2\2_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_2\2_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_2\2_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_2\2_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_2\2_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_2\2_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_2\2_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_2\2_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_2\2_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_2\2_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_2\2_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_2\Main_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_2\Main_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_3\3_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_3\3_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_3\3_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_3\3_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_3\3_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_3\3_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_3\Main_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_3\Main_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_4\4_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_4\4_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_4\4_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_4\4_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_4\4_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_4\4_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_4\4_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_4\4_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_4\4_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_4\4_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_4\4_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_4\4_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_4\Main_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_4\Main_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_5\5_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_5\5_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_5\5_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_5\5_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_5\5_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_5\5_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_5\5_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_5\5_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_5\5_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_5\5_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_5\5_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_5\5_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_5\Main_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_5\Main_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_6\6_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_6\6_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_6\6_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_6\6_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_6\6_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_6\6_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_6\6_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_6\6_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_6\6_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_6\6_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_6\6_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_6\6_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_6\Main_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_6\Main_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_7\7_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_7\7_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_7\7_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_7\7_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_7\7_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_7\7_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_7\7_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_7\7_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_7\7_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_7\7_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_7\Main_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_7\Main_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_7\7_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_7\7_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_8\8_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_8\8_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_8\8_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_8\8_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_8\8_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_8\8_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_8\8_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_8\8_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_8\Main_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_8\Main_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_8\8_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_8\8_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_8\8_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_8\8_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_9\9_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_9\9_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_9\9_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_9\9_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_9\9_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_9\9_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_9\9_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_9\9_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_9\9_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_9\9_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_9\9_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_9\9_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_9\Main_9.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_9\Main_9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_10\10_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_10\10_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_10\10_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_10\10_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_10\10_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_10\10_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_10\10_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_10\10_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_10\10_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_10\10_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_10\10_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_10\10_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_10\Main_10.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_10\Main_10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_11\Main_11.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_11\Main_11.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_11\11_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_11\11_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_11\11_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_11\11_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_11\11_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_11\11_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_11\11_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_11\11_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_11\11_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_11\11_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_11\11_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_11\11_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_12\12_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_12\12_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_12\12_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_12\12_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_12\12_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_12\12_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_12\12_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_12\12_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_12\Main_12.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_12\Main_12.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_12\12_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_12\12_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_1\Test_12\12_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_1\Test_12\12_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_13\Main_13.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_13\Main_13.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_13\13_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_13\13_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_13\13_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_13\13_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_13\13_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_13\13_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_13\13_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_13\13_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_13\13_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_13\13_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_13\13_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_13\13_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_14\14_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_14\14_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_14\14_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_14\14_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_14\14_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_14\14_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_14\14_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_14\14_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_14\14_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_14\14_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_14\14_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_14\14_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_14\Main_14.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_14\Main_14.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_15\15_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_15\15_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_15\15_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_15\15_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_15\15_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_15\15_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_15\15_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_15\15_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_15\Main_15.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_15\Main_15.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_15\15_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_15\15_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_15\15_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_15\15_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_16\16_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_16\16_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_16\16_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_16\16_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_16\16_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_16\16_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_16\16_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_16\16_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_16\Main_16.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_16\Main_16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_16\16_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_16\16_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_16\16_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_16\16_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_17\17_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_17\17_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_17\17_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_17\17_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_17\Main_17.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_17\Main_17.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_17\17_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_17\17_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_17\17_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_17\17_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_17\17_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_17\17_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_17\17_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_17\17_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_18\18_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_18\18_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_18\18_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_18\18_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_18\18_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_18\18_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_18\18_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_18\18_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_18\Main_18.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_18\Main_18.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_18\18_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_18\18_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_18\18_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_18\18_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_19\19_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_19\19_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_19\Main_19.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_19\Main_19.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_19\19_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_19\19_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_19\19_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_19\19_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_19\19_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_19\19_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_19\19_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_19\19_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_19\19_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_19\19_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_20\20_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_20\20_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_20\20_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_20\20_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_20\20_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_20\20_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_20\Main_20.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_20\Main_20.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_20\20_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_20\20_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_20\20_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_20\20_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_20\20_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_20\20_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_21\21_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_21\21_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_21\21_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_21\21_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_21\21_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_21\21_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_21\21_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_21\21_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_21\Main_21.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_21\Main_21.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_21\21_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_21\21_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_21\21_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_21\21_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_22\22_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_22\22_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_22\22_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_22\22_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_22\22_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_22\22_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_22\22_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_22\22_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_22\Main_22.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_22\Main_22.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_22\22_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_22\22_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_22\22_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_22\22_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_23\23_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_23\23_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_23\23_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_23\23_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_23\23_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_23\23_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_23\23_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_23\23_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_23\Main_23.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_23\Main_23.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_23\23_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_23\23_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_23\23_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_23\23_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_24\24_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_24\24_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_24\24_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_24\24_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_24\24_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_24\24_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_24\24_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_24\24_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_24\24_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_24\24_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_24\24_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_24\24_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_24\24_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_24\24_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_24\Main_24.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_24\Main_24.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_2\Test_24\24_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_2\Test_24\24_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_25\25_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_25\25_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_25\25_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_25\25_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_25\25_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_25\25_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_25\25_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_25\25_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_25\25_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_25\25_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_25\25_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_25\25_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_25\Main_25.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_25\Main_25.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_26\26_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_26\26_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_26\26_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_26\26_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_26\26_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_26\26_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_26\Main_26.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_26\Main_26.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_26\26_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_26\26_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_26\26_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_26\26_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_26\26_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_26\26_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_26\26_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_26\26_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_26\26_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_26\26_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_27\27_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_27\27_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_27\27_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_27\27_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_27\27_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_27\27_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_27\27_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_27\27_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_27\27_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_27\27_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_27\27_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_27\27_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_27\Main_27.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_27\Main_27.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_27\27_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_27\27_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_27\27_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_27\27_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_28\28_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_28\28_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_28\28_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_28\28_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_28\28_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_28\28_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_28\28_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_28\28_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_28\28_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_28\28_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_28\28_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_28\28_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_28\28_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_28\28_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_28\28_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_28\28_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_28\Main_28.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_28\Main_28.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_29\29_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_29\29_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_29\29_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_29\29_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_29\29_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_29\29_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_29\29_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_29\29_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_29\29_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_29\29_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_29\29_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_29\29_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_29\Main_29.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_29\Main_29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_29\29_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_29\29_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_29\29_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_29\29_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_30\30_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_30\30_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_30\30_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_30\30_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_30\30_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_30\30_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_30\30_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_30\30_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_30\30_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_30\30_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_30\30_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_30\30_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_30\Main_30.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_30\Main_30.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_30\30_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_30\30_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_30\30_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_30\30_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_31\31_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_31\31_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_31\31_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_31\31_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_31\31_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_31\31_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_31\31_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_31\31_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_31\31_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_31\31_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_31\31_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_31\31_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_31\31_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_31\31_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_31\Main_31.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_31\Main_31.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_31\31_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_31\31_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_32\32_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_32\32_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_32\32_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_32\32_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_32\32_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_32\32_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_32\32_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_32\32_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_32\32_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_32\32_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_32\32_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_32\32_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_32\32_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_32\32_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_32\Main_32.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_32\Main_32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_32\32_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_32\32_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_33\33_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_33\33_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_33\33_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_33\33_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_33\33_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_33\33_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_33\33_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_33\33_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_33\33_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_33\33_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_33\33_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_33\33_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_33\33_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_33\33_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_33\Main_33.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_33\Main_33.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_33\33_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_33\33_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_34\34_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_34\34_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_34\34_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_34\34_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_34\34_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_34\34_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_34\34_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_34\34_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_34\34_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_34\34_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_34\34_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_34\34_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_34\34_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_34\34_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_34\Main_34.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_34\Main_34.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_34\34_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_34\34_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_35\35_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_35\35_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_35\35_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_35\35_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_35\35_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_35\35_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_35\35_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_35\35_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_35\35_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_35\35_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_35\35_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_35\35_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_35\35_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_35\35_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_35\Main_35.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_35\Main_35.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_35\35_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_35\35_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_36\36_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_36\36_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_36\36_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_36\36_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_36\36_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_36\36_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_36\36_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_36\36_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_36\36_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_36\36_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_36\36_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_36\36_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_36\36_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_36\36_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_36\Main_36.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_36\Main_36.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_3\Test_36\36_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_3\Test_36\36_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_37\37_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_37\37_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_37\Main_37.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_37\Main_37.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_37\37_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_37\37_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_37\37_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_37\37_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_37\37_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_37\37_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_37\37_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_37\37_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_37\37_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_37\37_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_37\37_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_37\37_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_37\37_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_37\37_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_38\38_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_38\38_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_38\38_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_38\38_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_38\38_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_38\38_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_38\38_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_38\38_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_38\38_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_38\38_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_38\38_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_38\38_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_38\Main_38.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_38\Main_38.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_38\38_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_38\38_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_38\38_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_38\38_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_39\39_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_39\39_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_39\39_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_39\39_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_39\39_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_39\39_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_39\39_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_39\39_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_39\39_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_39\39_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_39\39_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_39\39_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_39\39_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_39\39_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_39\39_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_39\39_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_39\Main_39.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_39\Main_39.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_40\40_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_40\40_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_40\40_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_40\40_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_40\40_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_40\40_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_40\40_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_40\40_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_40\40_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_40\40_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_40\40_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_40\40_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_40\40_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_40\40_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_40\40_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_40\40_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_40\Main_40.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_40\Main_40.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_41\41_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_41\41_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_41\41_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_41\41_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_41\41_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_41\41_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_41\41_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_41\41_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_41\41_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_41\41_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_41\41_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_41\41_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_41\41_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_41\41_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_41\41_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_41\41_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_41\Main_41.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_41\Main_41.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_42\42_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_42\42_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_42\42_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_42\42_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_42\42_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_42\42_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_42\42_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_42\42_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_42\42_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_42\42_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_42\42_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_42\42_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_42\42_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_42\42_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_42\42_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_42\42_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_42\Main_42.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_42\Main_42.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_43\43_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_43\43_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_43\43_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_43\43_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_43\43_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_43\43_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_43\43_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_43\43_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_43\43_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_43\43_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_43\43_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_43\43_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_43\43_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_43\43_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_43\Main_43.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_43\Main_43.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_43\43_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_43\43_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_44\44_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_44\44_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_44\44_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_44\44_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_44\44_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_44\44_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_44\44_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_44\44_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_44\44_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_44\44_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_44\44_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_44\44_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_44\44_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_44\44_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_44\Main_44.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_44\Main_44.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_44\44_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_44\44_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_45\45_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_45\45_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_45\45_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_45\45_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_45\45_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_45\45_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_45\45_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_45\45_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_45\45_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_45\45_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_45\45_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_45\45_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_45\45_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_45\45_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_45\Main_45.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_45\Main_45.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_45\45_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_45\45_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_46\46_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_46\46_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_46\46_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_46\46_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_46\46_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_46\46_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_46\46_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_46\46_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_46\46_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_46\46_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_46\46_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_46\46_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_46\46_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_46\46_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_46\Main_46.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_46\Main_46.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_46\46_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_46\46_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_47\47_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_47\47_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_47\47_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_47\47_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_47\47_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_47\47_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_47\47_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_47\47_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_47\47_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_47\47_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_47\47_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_47\47_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_47\47_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_47\47_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_47\Main_47.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_47\Main_47.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_47\47_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_47\47_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_48\48_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_48\48_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_48\48_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_48\48_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_48\48_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_48\48_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_48\48_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_48\48_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_48\48_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_48\48_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_48\48_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_48\48_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_48\48_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_48\48_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_48\Main_48.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_48\Main_48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_4\Test_48\48_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_4\Test_48\48_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_49\49_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_49\49_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_49\49_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_49\49_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_49\49_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_49\49_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_49\49_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_49\49_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_49\49_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_49\49_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_49\49_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_49\49_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_49\Main_49.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_49\Main_49.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_49\49_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_49\49_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_49\49_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_49\49_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_50\50_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_50\50_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_50\50_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_50\50_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_50\50_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_50\50_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_50\50_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_50\50_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_50\50_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_50\50_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_50\50_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_50\50_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_50\50_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_50\50_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_50\Main_50.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_50\Main_50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_50\50_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_50\50_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_51\51_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_51\51_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_51\51_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_51\51_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_51\51_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_51\51_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_51\51_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_51\51_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_51\51_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_51\51_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_51\51_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_51\51_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_51\Main_51.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_51\Main_51.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_51\51_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_51\51_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_51\51_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_51\51_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_52\52_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_52\52_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_52\52_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_52\52_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_52\52_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_52\52_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_52\52_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_52\52_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_52\52_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_52\52_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_52\Main_52.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_52\Main_52.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_52\52_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_52\52_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_52\52_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_52\52_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_52\52_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_52\52_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_53\53_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_53\53_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_53\53_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_53\53_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_53\53_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_53\53_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_53\53_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_53\53_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_53\Main_53.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_53\Main_53.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_53\53_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_53\53_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_53\53_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_53\53_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_53\53_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_53\53_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_53\53_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_53\53_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_54\54_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_54\54_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_54\54_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_54\54_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_54\54_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_54\54_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_54\54_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_54\54_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_54\54_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_54\54_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_54\54_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_54\54_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_54\54_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_54\54_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_54\Main_54.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_54\Main_54.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_54\54_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_54\54_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_55\55_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_55\55_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_55\55_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_55\55_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_55\55_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_55\55_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_55\55_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_55\55_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_55\Main_55.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_55\Main_55.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_55\55_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_55\55_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_55\55_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_55\55_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_55\55_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_55\55_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_55\55_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_55\55_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_56\56_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_56\56_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_56\56_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_56\56_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_56\56_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_56\56_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_56\Main_56.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_56\Main_56.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_56\56_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_56\56_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_56\56_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_56\56_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_56\56_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_56\56_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_56\56_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_56\56_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_56\56_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_56\56_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_57\57_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_57\57_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_57\57_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_57\57_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_57\57_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_57\57_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_57\57_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_57\57_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_57\57_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_57\57_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_57\Main_57.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_57\Main_57.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_57\57_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_57\57_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_57\57_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_57\57_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_57\57_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_57\57_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_58\58_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_58\58_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_58\58_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_58\58_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_58\58_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_58\58_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_58\58_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_58\58_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_58\58_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_58\58_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_58\58_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_58\58_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_58\Main_58.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_58\Main_58.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_58\58_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_58\58_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_58\58_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_58\58_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_59\59_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_59\59_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_59\59_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_59\59_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_59\59_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_59\59_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_59\59_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_59\59_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_59\59_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_59\59_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_59\59_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_59\59_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_59\59_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_59\59_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_59\Main_59.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_59\Main_59.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_59\59_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_59\59_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_60\60_4.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_60\60_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_60\60_5.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_60\60_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_60\60_6.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_60\60_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_60\60_7.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_60\60_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_60\60_8.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_60\60_8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_60\Main_60.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_60\Main_60.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_60\60_1.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_60\60_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_60\60_2.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_60\60_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RavenTest_IQ\Level_5\Test_60\60_3.png" />
+    <None Include="Resources\RavenTest_IQ\Level_5\Test_60\60_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Static\BackSpase.png" />
+    <None Include="Resources\Static\BackSpase.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Static\Next.png" />
+    <None Include="Resources\Static\Next.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Static\success.png" />
+    <None Include="Resources\Static\success.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Static\error.png" />
+    <None Include="Resources\Static\error.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Static\Buttons Right and Left\Right_Color.png" />
+    <None Include="Resources\Static\Buttons Right and Left\Right_Color.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Static\Buttons Right and Left\Right.png" />
+    <None Include="Resources\Static\Buttons Right and Left\Right.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Static\Buttons Right and Left\Left.png" />
+    <None Include="Resources\Static\Buttons Right and Left\Left.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Static\Buttons Right and Left\Left_Color.png" />
+    <None Include="Resources\Static\Buttons Right and Left\Left_Color.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Static\Buttons Right and Left\Right_Lenght.png" />
+    <None Include="Resources\Static\Buttons Right and Left\Right_Lenght.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Static\Buttons Right and Left\Left_Length_Color.png" />
+    <None Include="Resources\Static\Buttons Right and Left\Left_Length_Color.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Static\Buttons Right and Left\Right_Lenght_Color.png" />
+    <None Include="Resources\Static\Buttons Right and Left\Right_Lenght_Color.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Static\Buttons Right and Left\Left_Length.png" />
+    <None Include="Resources\Static\Buttons Right and Left\Left_Length.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
@@ -1979,7 +3095,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Static\Help.png" />
+    <None Include="Resources\Static\Help.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Main.ico" />
